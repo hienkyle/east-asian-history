@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 1 · Joseon Korea</title>
+<meta name="description" content="Study guide for Unit 1: Joseon Korea, the Confucian state (1392–1800). Based on Ebrey & Walthall, Modern East Asia from 1600, Ch. 15.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;600;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7f2; --paper:#fffdf9; --fg:#1f1d1a; --muted:#6b645a; --line:#e6dfd3;
+  --accent:#a23b2a; --accent-soft:#f6e4de; --ink:#2c5d8a; --ink-soft:#e2ecf5;
+  --gold:#a8822e; --gold-soft:#f5ecd6; --green:#3f6b4a; --green-soft:#e3eee5;
+  --shadow:0 1px 2px rgba(60,40,20,.06),0 4px 16px rgba(60,40,20,.06);
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --kr:"Noto Serif KR","Apple SD Gothic Neo","Malgun Gothic",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+    --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+    --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+  --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+  --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+img{max-width:100%;display:block}
+.sans{font-family:var(--sans)}
+
+/* progress bar */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:50}
+
+/* layout */
+.shell{display:grid;grid-template-columns:1fr;max-width:1180px;margin:0 auto;padding:0 16px}
+@media (min-width:1040px){.shell{grid-template-columns:240px minmax(0,1fr);gap:56px;padding:0 32px}}
+main{max-width:760px;min-width:0;padding-bottom:80px}
+
+/* toc */
+nav.toc{display:none}
+@media (min-width:1040px){
+  nav.toc{display:block;position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;padding:40px 0 24px;font-family:var(--sans);font-size:.88rem}
+}
+.toc .back{display:inline-block;margin-bottom:18px;color:var(--muted);text-decoration:none}
+.toc .back:hover{color:var(--accent)}
+.toc h2{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:700}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+.toc li a{display:block;padding:5px 10px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none;line-height:1.35}
+.toc li a:hover{color:var(--fg)}
+.toc li a.active{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+.toc .tools{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.btn{font:600 .82rem var(--sans);border:1px solid var(--line);background:var(--paper);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.mobile-toc{margin:0 0 8px}
+@media (min-width:1040px){.mobile-toc{display:none}}
+.mobile-toc summary{font:600 .9rem var(--sans);cursor:pointer;padding:10px 14px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.mobile-toc ol{font-family:var(--sans);font-size:.92rem;margin:8px 0 0;padding-left:22px}
+.mobile-toc li{margin:4px 0}
+
+/* hero */
+header.hero{padding:48px 0 24px}
+.eyebrow{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em}
+h1 .kr{font-family:var(--kr);font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+.dek{font-size:1.2rem;color:var(--muted);margin:0 0 20px;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--sans);font-size:.85rem}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.chip b{color:var(--fg)}
+
+/* sections */
+section.unit{padding-top:36px;margin-top:36px;border-top:1px solid var(--line)}
+section.unit:first-of-type{border-top:none;margin-top:8px}
+.sec-num{font:700 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:1.85rem;line-height:1.2;margin:4px 0 6px}
+.pages{font:.82rem var(--sans);color:var(--muted);margin:0 0 18px}
+h3{font:700 1.08rem var(--sans);margin:28px 0 8px}
+p{margin:0 0 14px}
+ul.tight{margin:0 0 14px;padding-left:20px}
+ul.tight li{margin:4px 0}
+.cite{font:.78rem var(--sans);color:var(--muted);white-space:nowrap}
+p.cite{white-space:normal}
+
+/* glossary links */
+a.term{color:inherit;text-decoration:underline dotted var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:help}
+a.term:hover{color:var(--accent)}
+#tip{position:absolute;z-index:60;max-width:320px;background:var(--fg);color:var(--bg);font:.88rem/1.45 var(--sans);padding:10px 12px;border-radius:8px;box-shadow:var(--shadow);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
+#tip.on{opacity:1;transform:none}
+#tip b{display:block;margin-bottom:2px}
+
+/* callouts */
+.callout{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.callout .label{font:700 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.callout.ink{border-left-color:var(--ink)} .callout.ink .label{color:var(--ink)}
+.callout.gold{border-left-color:var(--gold)} .callout.gold .label{color:var(--gold)}
+.callout.green{border-left-color:var(--green)} .callout.green .label{color:var(--green)}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+.bigq{font-size:1.35rem;line-height:1.35;font-style:italic;margin:4px 0 0}
+
+/* glance grid */
+.grid{display:grid;gap:12px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.card h4{font:700 1rem var(--sans);margin:0 0 4px}
+.card .sub{font:.8rem var(--sans);color:var(--muted);margin-bottom:6px}
+.card p,.card ul{font-size:.95rem;margin:0}
+.card ul{padding-left:18px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .n{font:700 1.9rem/1 var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .l{font:.86rem/1.35 var(--sans);color:var(--muted);margin-top:6px}
+
+/* glossary */
+dl.gloss{margin:12px 0 0}
+.gloss .row{display:grid;grid-template-columns:1fr;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+@media (min-width:640px){.gloss .row{grid-template-columns:180px 1fr;gap:16px}}
+.gloss dt{font:700 .98rem var(--sans)}
+.gloss dt small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.gloss dd{margin:0;font-size:.96rem}
+.gloss .needs{display:block;font:.78rem var(--sans);color:var(--muted);margin-top:3px}
+.gloss .row:target{background:var(--gold-soft);border-radius:8px;padding-left:10px;padding-right:10px}
+.gloss-group{font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:22px 0 2px}
+
+/* timeline */
+.timeline{position:relative;margin:18px 0 18px 6px;padding-left:26px;border-left:2px solid var(--line)}
+.timeline .ev{position:relative;margin:0 0 14px}
+.timeline .ev::before{content:"";position:absolute;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline .ev.major::before{background:var(--accent)}
+.timeline .yr{font:700 .92rem var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline .tx{font-size:.97rem}
+
+/* figures */
+figure{margin:20px 0}
+figure img{border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+figcaption{font:.84rem/1.45 var(--sans);color:var(--muted);margin-top:8px}
+figcaption b{color:var(--fg)}
+.side{display:grid;gap:20px;align-items:start}
+@media (min-width:700px){.side{grid-template-columns:minmax(0,1fr) 260px}.side.left{grid-template-columns:260px minmax(0,1fr)}}
+.side figure{margin:0}
+.zoomable{cursor:zoom-in}
+#lightbox{position:fixed;inset:0;background:rgba(10,8,6,.88);display:none;align-items:center;justify-content:center;z-index:80;padding:16px;cursor:zoom-out}
+#lightbox.on{display:flex}
+#lightbox img{max-height:92vh;max-width:96vw;width:auto;border-radius:6px}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font:.92rem/1.45 var(--sans)}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--bg);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+tbody tr:last-child td{border-bottom:none}
+td.yr{font-weight:700;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.k{font-weight:600;white-space:nowrap}
+
+/* strata */
+.strata{display:grid;gap:6px;margin:16px 0}
+.stratum{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;border-radius:10px;padding:10px 14px;font-family:var(--sans)}
+@media (max-width:520px){.stratum{grid-template-columns:1fr;gap:2px}}
+.stratum b{font-size:1rem}
+.stratum span{font-size:.9rem}
+.s1{background:var(--accent-soft)} .s2{background:var(--gold-soft)} .s3{background:var(--green-soft)} .s4{background:var(--ink-soft)}
+
+/* versus */
+.versus{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;align-items:stretch}
+@media (min-width:600px){.versus{grid-template-columns:1fr auto 1fr}}
+.versus .vs{align-self:center;justify-self:center;font:700 .9rem var(--sans);color:var(--muted)}
+.versus .card .big{font:700 1.3rem var(--sans);color:var(--accent)}
+.versus .card:last-child .big{color:var(--ink)}
+
+/* bars */
+.bars{margin:16px 0;display:grid;gap:16px}
+.barset h4{font:700 .9rem var(--sans);margin:0 0 6px}
+.bar{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;font:.88rem var(--sans);margin:5px 0}
+.bar .track{background:var(--line);border-radius:6px;height:26px;overflow:hidden}
+.bar .fill{height:100%;width:0;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-weight:700;font-size:.82rem;white-space:nowrap;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.bar .fill.ink{background:var(--ink)}
+:root[data-theme="dark"] .bar .fill{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bar .fill{color:#16140f}}
+
+/* hangul animation */
+.hangul-demo{display:grid;gap:18px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
+@media (min-width:600px){.hangul-demo{grid-template-columns:1fr 1fr}}
+.jamo-row{font-family:var(--sans);font-size:.9rem}
+.jamo-row .kr{font-family:var(--kr);font-size:1.5rem;letter-spacing:.2em}
+.stage{position:relative;height:150px;width:100%;max-width:300px;margin:0 auto}
+.stage .j{position:absolute;font-family:var(--kr);font-weight:600;font-size:48px;line-height:1;transition:all .9s cubic-bezier(.3,.7,.2,1);color:var(--fg)}
+.stage .j .tag{display:block;font:600 11px var(--sans);text-align:center;color:var(--muted);margin-top:4px;transition:opacity .4s}
+.stage .plus{position:absolute;top:44px;font:400 28px var(--sans);color:var(--muted);transition:opacity .4s}
+.stage .result{position:absolute;left:50%;top:18px;transform:translateX(-50%) scale(.6);font-family:var(--kr);font-weight:600;font-size:96px;line-height:1;opacity:0;color:var(--accent);transition:all .6s}
+.stage .j1{left:0;top:30px}.stage .j2{left:105px;top:30px}.stage .j3{left:210px;top:30px}
+.stage .p1{left:62px}.stage .p2{left:167px}
+.stage.built .j1{left:88px;top:6px;font-size:44px}
+.stage.built .j2{left:146px;top:6px;font-size:44px}
+.stage.built .j3{left:110px;top:62px;font-size:44px}
+.stage.built .tag,.stage.built .plus{opacity:0}
+.stage.done .j{opacity:0}
+.stage.done .result{opacity:1;transform:translateX(-50%) scale(1)}
+.demo-ctrl{text-align:center;margin-top:8px}
+
+/* factions svg */
+.tree{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:16px 0}
+.tree svg{width:100%;height:auto;display:block}
+.tree .node rect{fill:var(--bg);stroke:var(--line)}
+.tree .node.root rect{fill:var(--accent-soft);stroke:var(--accent)}
+.tree text{font-family:var(--sans);fill:var(--fg);font-size:14px}
+.tree text.small{font-size:11px;fill:var(--muted);paint-order:stroke;stroke:var(--paper);stroke-width:5px;stroke-linejoin:round}
+.tree .edge{stroke:var(--muted);stroke-width:1.5;fill:none}
+.tree .edge.ext{stroke-dasharray:5 4}
+.legend{font:.8rem var(--sans);color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;padding:4px 6px 0}
+
+/* quotes */
+blockquote{margin:16px 0;padding:6px 0 6px 18px;border-left:3px solid var(--gold);font-style:italic;font-size:1.08rem}
+blockquote footer{font:normal .84rem var(--sans);color:var(--muted);margin-top:6px}
+
+/* self check */
+details.q{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 16px}
+details.q summary{cursor:pointer;padding:12px 0;font-weight:600;list-style:none;display:flex;gap:10px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::before{content:"+";font:700 1.1rem var(--sans);color:var(--accent);width:14px;flex:none}
+details.q[open] summary::before{content:"–"}
+details.q .a{padding:0 0 14px 24px;font-size:.96rem}
+details.q .a ul{margin:0;padding-left:18px}
+
+/* flashcards */
+.fc-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.fc{perspective:1000px;height:220px;cursor:pointer;margin:0 auto;max-width:520px}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc.flip .fc-inner{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid var(--line)}
+.fc-front{background:var(--accent-soft)}
+.fc-front .t{font:700 1.6rem var(--sans)}
+.fc-front .h{font:.82rem var(--sans);color:var(--muted);margin-top:8px}
+.fc-back{background:var(--bg);transform:rotateY(180deg);font-size:.98rem;overflow:auto}
+.fc-ctrl{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px;font:.88rem var(--sans);color:var(--muted);flex-wrap:wrap}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* sources */
+.sources li{margin:6px 0;font-size:.94rem}
+footer.end{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font:.85rem var(--sans);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer.end a{color:var(--muted)}
+
+@media print{
+  nav.toc,.mobile-toc,#progress,.demo-ctrl,.fc-wrap,.btn{display:none!important}
+  .shell{display:block} body{background:#fff;color:#000}
+  .reveal{opacity:1;transform:none}
+  details.q{border:none} details.q .a{display:block}
+  section.unit{break-inside:auto}
+}
+</style>
+</head>
+<body class="no-js">
+<div id="progress"></div>
+<div id="tip" role="tooltip"></div>
+<div id="lightbox" aria-hidden="true"><img alt=""></div>
+
+<div class="shell">
+<nav class="toc" aria-label="Contents">
+  <a class="back" href="index.html">← All units</a>
+  <h2>Contents</h2>
+  <ol id="toc-list">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#terms">Key terms first</a></li>
+    <li><a href="#founding">1 · From Goryeo to Joseon</a></li>
+    <li><a href="#early-kings">2 · Early kings &amp; hangul</a></li>
+    <li><a href="#state">3 · Kings, officials, society</a></li>
+    <li><a href="#confucian">4 · Neo-Confucian debate</a></li>
+    <li><a href="#factions">5 · Factions</a></li>
+    <li><a href="#imjin">6 · Hideyoshi's invasion</a></li>
+    <li><a href="#manchu">7 · Between Ming and Manchu</a></li>
+    <li><a href="#palace">8 · Palace politics</a></li>
+    <li><a href="#economy">9 · Economy &amp; slavery</a></li>
+    <li><a href="#culture">10 · Literature &amp; arts</a></li>
+    <li><a href="#learning">11 · Northern &amp; Western Learning</a></li>
+    <li><a href="#family">12 · Family &amp; women</a></li>
+    <li><a href="#conclusion">13 · 1392 vs. 1800</a></li>
+    <li><a href="#review">Review kit</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+  <div class="tools">
+    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+    <button class="btn" type="button" onclick="window.print()">Print</button>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <p class="eyebrow">Unit 1 · Study guide</p>
+  <h1>Joseon Korea <span class="kr">조선</span></h1>
+  <p class="dek">The Confucian state, 1392–1800</p>
+  <div class="meta">
+    <span class="chip"><b>Reading:</b> Ebrey &amp; Walthall, Ch. 15, pp. 247–264</span>
+    <span class="chip"><b>Also:</b> Making Comparisons, pp. 264 &amp; 304</span>
+    <span class="chip"><b>Next:</b> Unit 2 · The Qing (Ch. 16)</span>
+  </div>
+</header>
+
+<details class="mobile-toc">
+  <summary>Contents</summary>
+  <ol id="mtoc"></ol>
+</details>
+
+<!-- OVERVIEW -->
+<section class="unit" id="overview">
+  <div class="sec-num">Overview</div>
+  <h2>The chapter in one paragraph</h2>
+  <p>The Joseon (JOE-son) dynasty ruled Korea from 1392 to 1910; this unit covers it up to 1800. The textbook frames the period as one of <strong>"extensive Confucianization"</strong>: Korea copied Chinese statecraft and the <a class="term" href="#g-exams">examination system</a> more closely, the hereditary <a class="term" href="#g-yangban">yangban</a> elite had to devote itself to education to win office, and <a class="term" href="#g-confucianism">Confucian</a> norms reached into family life, so that women largely lost the right to inherit. The dynasty survived invasions by the Japanese and the <a class="term" href="#g-manchus">Manchus</a>, and by the 1700s showed economic growth, social change, and new cultural openness. <span class="cite">p. 247</span></p>
+
+  <div class="callout">
+    <div class="label">The big question</div>
+    <p class="bigq">Given its flawed government and many crises, why did the dynasty last so long?</p>
+  </div>
+
+  <h3>Questions historians ask <span class="cite">p. 247</span></h3>
+  <div class="grid g3">
+    <div class="card"><h4>Politics</h4><ul><li>Why was factionalism so bitter and bloody?</li><li>Did officials' power save Korea from tyranny, or weaken it?</li></ul></div>
+    <div class="card"><h4>The world</h4><ul><li>Did Joseon benefit from ties with Ming China?</li><li>Why couldn't it repel Hideyoshi?</li><li>How did it respond to Christianity?</li></ul></div>
+    <div class="card"><h4>Society</h4><ul><li>Why did commerce lag behind China and Japan?</li><li>Why was so much labor unfree?</li></ul></div>
+  </div>
+
+  <div class="callout ink">
+    <div class="label">How to use this guide</div>
+    <p>Dotted-underlined words are defined in <a href="#terms">Key terms</a>: hover or tap to see the definition. Page numbers refer to the textbook. Pronunciations follow the textbook: Joseon (JOE-son), yangban (YANG-bahn), Sejong (SAY-jong), Goryeo (GO-riyo).</p>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Before you read</div>
+  <h2>Key terms first</h2>
+  <p class="pages">Ordered so each term only relies on terms above it. "Builds on" shows what to know first.</p>
+
+  <div class="gloss-group">Ideas</div>
+  <dl class="gloss">
+    <div class="row" id="g-classical"><dt>Classical Chinese</dt><dd>The written language of educated East Asians, unrelated to the Korean that people spoke. Yangban boys had to learn thousands of Chinese characters to take the exams. <span class="cite">p. 252</span></dd></div>
+    <div class="row" id="g-filial"><dt>Filial piety</dt><dd>Reverence for parents; a key Confucian virtue, expressed through rites honoring ancestors. <span class="cite">p. 304</span></dd></div>
+    <div class="row" id="g-confucianism"><dt>Confucianism</dt><dd>The tradition based on the Chinese classics, stressing virtues such as filial piety and loyalty to the ruler. Joseon kings found that stress useful for winning conformity to their authority. <span class="cite">p. 250</span><span class="needs">Builds on: classical Chinese, filial piety</span></dd></div>
+    <div class="row" id="g-zhuxi"><dt>Zhu Xi <small>1130–1200</small></dt><dd>Song-dynasty Chinese philosopher. His commentaries on the Confucian classics became required reading for China's civil service exams, and he set out rules and rites for family life. <span class="cite">p. 304</span></dd></div>
+    <div class="row" id="g-li"><dt>Principle <small>i (Korean) · li (Chinese)</small></dt><dd>An invisible underlying pattern that makes each thing what it is and links all things. <span class="cite">pp. 251, 304</span></dd></div>
+    <div class="row" id="g-qi"><dt>Psychophysical force <small>ki (Korean) · qi (Chinese)</small></dt><dd>What gives things their physical form and makes them different from each other; also translated "ether," "physical force," or "matter." For Zhu Xi, neither principle nor force could exist without the other. <span class="cite">pp. 251, 304</span></dd></div>
+    <div class="row" id="g-neo"><dt>Neo-Confucianism</dt><dd>A philosophical system, developed in Song China, that sought one unifying explanation of the universe, the physical world, and human nature, using principle and psychophysical force. Joseon yangban used it to oppose Buddhism and to order social relations. <span class="cite">p. 304</span><span class="needs">Builds on: Confucianism, Zhu Xi, principle, psychophysical force</span></dd></div>
+    <div class="row" id="g-orthodoxy"><dt>Orthodoxy / heterodox</dt><dd>Orthodoxy: the officially approved version of a teaching (in Joseon, Zhu Xi's). Heterodox: a teaching condemned as straying from it, as Yi Toegye condemned Wang Yangming. <span class="cite">p. 251</span><span class="needs">Builds on: Neo-Confucianism</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Government</div>
+  <dl class="gloss">
+    <div class="row" id="g-exams"><dt>Civil service examinations</dt><dd>Exams on the Confucian classics used to pick men with literary educations to run the government. In early Joseon they became the main route to high office: birth alone was no longer enough. <span class="cite">pp. 250, 252</span><span class="needs">Builds on: classical Chinese, Confucianism</span></dd></div>
+    <div class="row" id="g-remonstrance"><dt>Remonstrance</dt><dd>Officials' formal criticism of the king's decisions. With "obstruction and remonstrance," Joseon officials limited kings' theoretically absolute power. <span class="cite">p. 250</span></dd></div>
+    <div class="row" id="g-faction"><dt>Faction · purge</dt><dd>A faction is a group of officials bound by personal ties (family, marriage, school, teacher) competing for power. A purge is the removal, exile, or execution of a rival faction's members. Permanent factions began in 1575. <span class="cite">p. 252</span></dd></div>
+    <div class="row" id="g-corvee"><dt>Corvée</dt><dd>Labor owed to the state as a form of tax. Early Joseon taxes were paid in kind (goods) or by physical labor; King Taejong called up 100,000 corvée laborers to build the capital. <span class="cite">pp. 248, 257</span></dd></div>
+    <div class="row" id="g-granary"><dt>Ever-normal granaries</dt><dd>A Chinese system adopted by King Sejo: the state bought grain when cheap and sold it when dear, to keep prices stable. <span class="cite">p. 249</span></dd></div>
+    <div class="row" id="g-tribute"><dt>Tributary system</dt><dd>China's way of handling foreign relations: rulers of countries such as Korea, Ryukyu, and Vietnam sent envoys to the emperor's court. In return, the emperor had a moral obligation to defend loyal tributaries, which is why the Ming sent troops in 1592. <span class="cite">p. 254; Ch. 16</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">People &amp; society</div>
+  <dl class="gloss">
+    <div class="row" id="g-yangban"><dt>Yangban <small>YANG-bahn</small></dt><dd>Korea's hereditary aristocrats, who kept a near monopoly on high office throughout Joseon. Over time they split into a national office-holding elite and rural yangban with no hope of office. <span class="cite">pp. 250–251</span><span class="needs">Builds on: civil service examinations</span></dd></div>
+    <div class="row" id="g-concubine"><dt>Concubine · seoeol</dt><dd>A concubine was a man's secondary partner, ranked below his primary wife. Sons of concubines (<em>seoeol</em>) were barred from the civil service exams. <span class="cite">pp. 250, 304, 363</span></dd></div>
+    <div class="row" id="g-hyangni"><dt>Hyangni <small>HYANG-ni</small></dt><dd>Clerks in local administration. The yangban banned their promotion into the central bureaucracy. <span class="cite">p. 250</span></dd></div>
+    <div class="row" id="g-jungin"><dt>Jungin <small>JOONG-in · "middle people"</small></dt><dd>A new hereditary class of clerks, legal specialists, accountants, interpreters, and similar technical experts who could not rise to regular office but kept these posts for their own families. <span class="cite">p. 251</span><span class="needs">Builds on: yangban</span></dd></div>
+    <div class="row" id="g-patri"><dt>Patrilineal · matrilineal</dt><dd>Patrilineal: kinship and property traced through the father's line. Matrilineal: through the mother's line. Goryeo traced kinship through both; Joseon became more patrilineal. <span class="cite">pp. 261, 264</span></dd></div>
+    <div class="row" id="g-mudang"><dt>Mudang</dt><dd>Shamans, usually women, hired to contact the spirits of dead parents and other spirits. <span class="cite">p. 262</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Neighbors</div>
+  <dl class="gloss">
+    <div class="row" id="g-wako"><dt>Wakō</dt><dd>Japanese pirates who raided the Korean coast; Sejong defeated them on Tsushima Island. <span class="cite">p. 248</span></dd></div>
+    <div class="row" id="g-manchus"><dt>Jurchens · Manchus</dt><dd>Tribal peoples of Manchuria, north of Korea. In the 1590s Nurhaci united the Jurchens and renamed them Manchus; they founded the Qing dynasty and conquered China in 1644. <span class="cite">p. 254</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Culture</div>
+  <dl class="gloss">
+    <div class="row" id="g-hangul"><dt>Hangul <small>HAN-gul</small></dt><dd>The Korean alphabet invented under King Sejong in 1443, "the first and only one of its kind in East Asia." It let people who knew no Chinese, including women, read and write. <span class="cite">pp. 248, 262</span><span class="needs">Builds on: classical Chinese</span></dd></div>
+    <div class="row" id="g-sijo"><dt>Sijo · gasa <small>SHE-joe · GA-sa</small></dt><dd>Korean poetic forms: the short sijo, its longer version (saseol sijo), and the still longer lyrical gasa. They used alliteration and cadence, not rhyme. <span class="cite">pp. 258–259</span></dd></div>
+    <div class="row" id="g-pansori"><dt>Pansori <small>PAN-sori</small></dt><dd>A sung chant performed with a drummer, which spread in the countryside in the 1700s; many songs mocked the yangban. <span class="cite">p. 260</span></dd></div>
+    <div class="row" id="g-northern"><dt>Northern Learning</dt><dd>An 18th-century reform school urging Korea to drop its prejudice against the Manchus and learn from Qing China to improve the economy. <span class="cite">p. 260</span><span class="needs">Builds on: Manchus</span></dd></div>
+    <div class="row" id="g-western"><dt>Western Learning</dt><dd>Koreans' term for European ideas that arrived through Chinese-language books, lumping Catholic theology together with Western science. <span class="cite">p. 260</span></dd></div>
+  </dl>
+</section>
+
+<!-- 1 FOUNDING -->
+<section class="unit reveal" id="founding">
+  <div class="sec-num">Part 1</div>
+  <h2>From Goryeo to Joseon</h2>
+  <p class="pages">pp. 247–248 · Background before 1600</p>
+
+  <p>After a period of Mongol domination, the Goryeo (GO-riyo) dynasty revived in the mid-1300s. King Gongmin strengthened the military, expanded tax revenue, and promoted Confucianism. After his assassination, Confucian reformers allied with General <strong>Yi Seonggye</strong> (E SUNG-geh), who became the power behind the throne. Reforms reclaimed land grants, cancelled tax exemptions for favored yangban, and carried out a national land survey.</p>
+
+  <div class="timeline">
+    <div class="ev"><div class="yr">1389</div><div class="tx">Yi Seonggye eliminates his principal rival.</div></div>
+    <div class="ev major"><div class="yr">1392</div><div class="tx">Yi declares a new dynasty, Joseon, and rules as <strong>King Taejo</strong> (r. 1392–1398). The name was the one Chinese sources used for the ancient Korean state.</div></div>
+  </div>
+
+  <div class="callout gold">
+    <div class="label">Key point</div>
+    <p>The founding was "in essence a coup from within": relatively bloodless, and most great Goryeo families survived to lead in Joseon. <span class="cite">p. 248</span></p>
+  </div>
+
+  <div class="side">
+    <div>
+      <h3>Geography</h3>
+      <ul class="tight">
+        <li><strong>Capital:</strong> Hanyang (Seoul), built by King Taejong with corvée labor.</li>
+        <li><strong>North:</strong> Sejong pushed the border to the Yalu and Tumen rivers, sending thousands of southern Koreans to settle lands held by Jurchens.</li>
+        <li><strong>Local rule:</strong> for the first time, magistrates in all ~300 districts were appointed by the central government.</li>
+        <li><strong>Watch for later:</strong> Busan and Tongnae (1592 landing; Japanese trade enclave after 1609), Pyeongyang, Hwaseong (Suwon), Tsushima.</li>
+      </ul>
+      <p class="cite">pp. 248, 250 · Textbook map: Map 15.1, p. 250</p>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit1/map-joseon.png" alt="Map of Joseon Korea with Hanyang (Seoul) as capital, Pyeongyang, Hwaseong, Busan and Tongnae, the Yalu and Tumen rivers, Tsushima and Jeju" loading="lazy">
+      <figcaption>Joseon and its neighbors. Modern coastlines; provinces not shown. Click to enlarge.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2 EARLY KINGS -->
+<section class="unit reveal" id="early-kings">
+  <div class="sec-num">Part 2</div>
+  <h2>Three strong early kings</h2>
+  <p class="pages">pp. 248–249</p>
+
+  <div class="grid g3">
+    <div class="card">
+      <h4>Taejong</h4>
+      <div class="sub">Builder</div>
+      <ul><li>Built Hanyang with corvée labor</li><li>Strengthened the armed forces</li><li>Seized Buddhist temple lands</li><li>Created a sound fiscal base</li></ul>
+    </div>
+    <div class="card">
+      <h4>Sejong <span class="sub">r. 1418–1450</span></h4>
+      <div class="sub">"Far outshone any of his successors"</div>
+      <ul><li>Defeated <a class="term" href="#g-wako">Wakō</a> pirates on Tsushima</li><li>Northern border to Yalu &amp; Tumen</li><li>Banned cruel punishments; appeals in death cases</li><li>Hall of Worthies (1420); hangul (1443)</li><li>Sundials, water clock, rain gauge (1442)</li></ul>
+    </div>
+    <div class="card">
+      <h4>Sejo <span class="sub">r. 1455–1468</span></h4>
+      <div class="sub">Usurper and reformer</div>
+      <ul><li>Took the throne from his 12-year-old nephew</li><li>Five Guards Command (1466)</li><li><a class="term" href="#g-granary">Ever-normal granaries</a></li><li>Ordered the law code, <em>Grand Institutes for Governing the State</em></li><li>Patronized Buddhism; abolished the Hall of Worthies</li></ul>
+    </div>
+  </div>
+  <p>Sejong's rain gauge came two centuries before Europe's first. Sejo's bypassing of the state council and his favor to Buddhism tarnished his reputation and helped Confucian officials regain power later. <span class="cite">pp. 248–249</span></p>
+
+  <h3 id="hangul">Hangul: an alphabet for everyone (1443)</h3>
+  <div class="side left">
+    <figure>
+      <img class="zoomable" src="assets/unit1/hunminjeongeum-haerye.jpg" alt="Opening page of the Hunminjeongeum Haerye, columns of Chinese characters with new Korean letters at left" loading="lazy">
+      <figcaption><b>Hunminjeongeum Haerye</b> (1446), the book that presented the new script. The explanation is in classical Chinese; the new letters appear in the left columns.</figcaption>
+    </figure>
+    <div>
+      <p>Sejong had the Hall of Worthies create an alphabet to spread learning beyond the elite. The yangban saw it would break their hold on knowledge and opposed it. <span class="cite">p. 248</span></p>
+      <p><strong>Why it matters:</strong> hangul made a vernacular literature possible, readable by people who knew no Chinese, including women. Women wrote poetry in hangul, and Lady Hyegyeong wrote her memoirs in it. As with Japan's kana, women predominated among early users. <span class="cite">pp. 258–259, 262, 264</span></p>
+    </div>
+  </div>
+
+  <div class="hangul-demo">
+    <div>
+      <div class="jamo-row">Some consonants <span class="kr">ㄱ ㄴ ㄷ ㅁ ㅅ</span></div>
+      <div class="jamo-row">Some vowels <span class="kr">ㅏ ㅓ ㅗ ㅜ ㅣ</span></div>
+      <p class="sans" style="font-size:.9rem;color:var(--muted);margin:10px 0 0">Letters stack into syllable blocks. The demo builds 한, the first syllable of "hangul." The textbook's Figure 15.1 shows the full chart.</p>
+    </div>
+    <div>
+      <div class="stage" id="stage" aria-label="Animation: ㅎ plus ㅏ plus ㄴ combine into the syllable 한">
+        <div class="j j1">ㅎ<span class="tag">h</span></div><div class="plus p1">+</div>
+        <div class="j j2">ㅏ<span class="tag">a</span></div><div class="plus p2">+</div>
+        <div class="j j3">ㄴ<span class="tag">n</span></div>
+        <div class="result">한</div>
+      </div>
+      <div class="demo-ctrl"><button class="btn" id="build" type="button">▶ Build the syllable</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 STATE -->
+<section class="unit reveal" id="state">
+  <div class="sec-num">Part 3</div>
+  <h2>Kings, officials, and the social order</h2>
+  <p class="pages">pp. 249–252, 257</p>
+
+  <p>Early Joseon saw three trends that seem to clash: kings extended central control; committed Neo-Confucians limited the power of the king, military men, and aristocrats; and the yangban kept their dominance. <span class="cite">p. 249</span></p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">~30</div><div class="l">men passed the exams per year, so most yangban who studied never held office</div></div>
+    <div class="stat"><div class="n">~300</div><div class="l">local districts, each with a magistrate sent from the capital</div></div>
+    <div class="stat"><div class="n">1506</div><div class="l">high officials depose King Yeonsangun</div></div>
+  </div>
+
+  <h3>The exams opened office, but yangban kept the advantage</h3>
+  <ul class="tight">
+    <li>Most officials still came from old yangban families, who could best afford education.</li>
+    <li>Yangban barred <a class="term" href="#g-hyangni">hyangni</a> from promotion and barred <a class="term" href="#g-concubine">sons of concubines</a> from the exams.</li>
+    <li>Material culture: yangban boys played dice "promotion games" in which a player could be promoted, cashiered, or poisoned, learning both the offices and the role of chance. <span class="cite">p. 252</span></li>
+  </ul>
+
+  <h3>Officials versus kings</h3>
+  <p>Officials, mostly from families older and more prestigious than the royal Yi clan, checked kings through <a class="term" href="#g-remonstrance">remonstrance</a>.</p>
+  <ul class="tight">
+    <li><strong>Yeonsangun</strong> purged literati in 1504, cancelled the royal lectures, and was deposed in 1506.</li>
+    <li><strong>Jo Gwangjo</strong>, a censor under King Jungjong, pushed a "recommendation" exam (1515) that his friends passed; in 1519 the king purged the censors and executed him. Students saw a martyr; he can also be seen as a politician "playing the moral card." <span class="cite">pp. 250–251</span></li>
+  </ul>
+
+  <h3>A layered, hereditary society</h3>
+  <div class="strata">
+    <div class="stratum s1"><b>Yangban</b><span>Office-holding aristocrats; split into ~two dozen top national families and rural yangban, some indistinguishable from farmers but legally distinct.</span></div>
+    <div class="stratum s2"><b>Jungin</b><span>"Middle people": interpreters, clerks, accountants, legal specialists. Hereditary.</span></div>
+    <div class="stratum s3"><b>Commoners</b><span>Farmers paid tax in kind or labor and owed military service; merchants limited to licensed shops and peddlers.</span></div>
+    <div class="stratum s4"><b>Slaves</b><span>State and private; about 30% of the population until 1750.</span></div>
+  </div>
+  <p class="cite">pp. 250–251, 257 · Simplified: the textbook does not present these groups as a formal pyramid.</p>
+</section>
+
+<!-- 4 CONFUCIAN -->
+<section class="unit reveal" id="confucian">
+  <div class="sec-num">Part 4</div>
+  <h2>Which comes first: principle or force?</h2>
+  <p class="pages">pp. 250–251, 304</p>
+  <p>By the late 1500s, scholars famous for virtue held high office and debated the metaphysics of <a class="term" href="#g-zhuxi">Zhu Xi</a>.</p>
+
+  <div class="versus">
+    <div class="card"><div class="big">Yi Toegye</div><div class="sub">E TWAE-geh</div><p><a class="term" href="#g-li">Principle</a> comes first, because it contains all the elements of pure virtue.</p></div>
+    <div class="vs">vs.</div>
+    <div class="card"><div class="big">Yi Yulgok</div><div class="sub">E YULE-gok · younger</div><p><a class="term" href="#g-qi">Psychophysical force</a> comes first, because without it the mind would not exist at all.</p></div>
+  </div>
+
+  <ul class="tight">
+    <li><strong>Wang Yangming</strong>, Zhu Xi's main challenger in China, said everyone can find moral truth by looking within. Toegye condemned him as <a class="term" href="#g-orthodoxy">heterodox</a>; that set the tone for the rest of the dynasty, and Wang's admirers kept quiet.</li>
+    <li>Korean Confucians respected Ming China but did not see Confucian civilization as uniquely Chinese. The most zealous wanted Korea to follow the classics <em>more</em> closely than the Ming did. <span class="cite">p. 250</span></li>
+    <li>By the 1700s, positions in the principle–force debate lined up with factions and were used to justify purges. <span class="cite">p. 304</span></li>
+  </ul>
+</section>
+
+<!-- 5 FACTIONS -->
+<section class="unit reveal" id="factions">
+  <div class="sec-num">Part 5</div>
+  <h2>Factions become hereditary</h2>
+  <p class="pages">pp. 252–256</p>
+  <p>Personal ties always shaped politics, but no permanent <a class="term" href="#g-faction">factions</a> existed until 1575, when two men competed for a key post in the Ministry of Personnel. The sides were named for where members lived in the capital, not for regions. Officials defended factions as moral men banding together against the immoral. <span class="cite">pp. 252–253</span></p>
+
+  <div class="tree">
+    <svg viewBox="0 0 680 300" role="img" aria-label="Faction tree: officials split in 1575 into Easterners and Westerners. Easterners split around 1589 to 1591 into Northerners and Southerners. Westerners split after 1659 into Patriarchs and Disciples. Northerners later split into Great and Small Northerners.">
+      <path class="edge" d="M340 48 C340 80 170 70 170 104"/>
+      <path class="edge" d="M340 48 C340 80 510 70 510 104"/>
+      <path class="edge ext" d="M170 138 C170 172 90 166 90 196"/>
+      <path class="edge ext" d="M170 138 C170 172 250 166 250 196"/>
+      <path class="edge" d="M510 138 C510 172 430 166 430 196"/>
+      <path class="edge" d="M510 138 C510 172 590 166 590 196"/>
+      <path class="edge" d="M90 230 L90 252"/>
+      <g class="node root"><rect x="265" y="14" width="150" height="34" rx="8"/><text x="340" y="36" text-anchor="middle" font-weight="700">Officials, 1575</text></g>
+      <g class="node"><rect x="105" y="104" width="130" height="34" rx="8"/><text x="170" y="126" text-anchor="middle" font-weight="700">Easterners</text></g>
+      <g class="node"><rect x="445" y="104" width="130" height="34" rx="8"/><text x="510" y="126" text-anchor="middle" font-weight="700">Westerners</text></g>
+      <text class="small" x="170" y="176" text-anchor="middle">c. 1589–1591</text>
+      <text class="small" x="510" y="176" text-anchor="middle">after 1659 mourning dispute</text>
+      <g class="node"><rect x="30" y="196" width="120" height="34" rx="8"/><text x="90" y="218" text-anchor="middle">Northerners</text></g>
+      <g class="node"><rect x="190" y="196" width="120" height="34" rx="8"/><text x="250" y="218" text-anchor="middle">Southerners</text></g>
+      <g class="node"><rect x="370" y="196" width="120" height="34" rx="8"/><text x="430" y="218" text-anchor="middle">Patriarchs</text></g>
+      <g class="node"><rect x="530" y="196" width="120" height="34" rx="8"/><text x="590" y="218" text-anchor="middle">Disciples</text></g>
+      <text class="small" x="90" y="268" text-anchor="middle">Great &amp; Small</text>
+      <text class="small" x="90" y="282" text-anchor="middle">Northerners</text>
+      <text class="small" x="430" y="250" text-anchor="middle">Song Siyeol's group</text>
+      <text class="small" x="250" y="250" text-anchor="middle">mostly Toegye's followers*</text>
+    </svg>
+    <div class="legend"><span>── from the textbook</span><span>- - - from the Encyclopedia of Korean Culture*</span></div>
+  </div>
+  <p class="cite" style="white-space:normal">*The textbook names Northerners and Southerners without explaining their origin. The split (moderates vs. hardliners over punishing Westerner leader Jeong Cheol after the 1589 purge) comes from the Encyclopedia of Korean Culture, entries "Namin" and "Bugin." See <a href="#sources">Sources</a>.</p>
+
+  <div class="callout">
+    <div class="label">Cause and effect</div>
+    <p>King Seonjo (r. 1567–1608) disliked factions but kept switching favor. In 1589 he executed more than 70 Easterner officials. In 1591 he rejected a Westerner envoy's warning that Hideyoshi was preparing to invade, and did nothing to prepare. <span class="cite">pp. 253–254</span></p>
+  </div>
+</section>
+
+<!-- 6 IMJIN -->
+<section class="unit reveal" id="imjin">
+  <div class="sec-num">Part 6</div>
+  <h2>Hideyoshi invades, 1592–1598</h2>
+  <p class="pages">pp. 251–254</p>
+
+  <h3>Why was Korea unprepared?</h3>
+  <div class="grid g3">
+    <div class="card"><h4>Hollow army</h4><p>Yangban and rich commoners bribed clerks to be listed as exempt students; commanders let men off duty for bribes or cloth tax. In 1582 Yi Yulgok proposed a 100,000-man army; the court did nothing, leaving three walled towns (Busan, Tongnae, Kimhae) as the defense.</p></div>
+    <div class="card"><h4>Factions</h4><p>Seonjo ignored the 1591 warning because it came from a Westerner.</p></div>
+    <div class="card"><h4>Japan's experience</h4><p>Near-constant civil war since the Ōnin War (1467) gave Hideyoshi samurai and foot soldiers with muskets and cannon.</p></div>
+  </div>
+
+  <figure>
+    <img class="zoomable" src="assets/unit1/map-invasions.png" alt="Map: Hideyoshi's armies cross from Japan to Busan in 1592 and march to Hanyang and Pyeongyang; Ming relief forces come toward Pyeongyang; Manchu invasions of 1627 and 1636 come from Shenyang" loading="lazy">
+    <figcaption>Routes are schematic. Red: Hideyoshi, 1592. Blue: Ming relief, 1592–93. Dashed: Manchu invasions, 1627 &amp; 1636 (Part 7).</figcaption>
+  </figure>
+
+  <div class="timeline">
+    <div class="ev major"><div class="yr">1592</div><div class="tx">Seonjo refuses Hideyoshi free passage to attack the Ming. Japan takes Seoul in <strong>3 weeks</strong>, Pyeongyang in 2 months.</div></div>
+    <div class="ev"><div class="yr">Feb 1593</div><div class="tx">Under the <a class="term" href="#g-tribute">tributary system</a>, Ming troops arrive (7 months after the invasion), win at Pyeongyang, then lose badly north of Seoul and negotiate a truce.</div></div>
+    <div class="ev"><div class="yr">1597</div><div class="tx">Hideyoshi, angered by Chinese terms, renews the war.</div></div>
+    <div class="ev major"><div class="yr">1598</div><div class="tx">Hideyoshi dies; Japanese forces withdraw.</div></div>
+    <div class="ev"><div class="yr">1609</div><div class="tx">Treaty with Tokugawa Japan. Trade limited to a walled Japanese enclave at Tongnae, through the Sō family of Tsushima.</div></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">~2 million</div><div class="l">Korean lives lost</div></div>
+    <div class="stat"><div class="n">~100 yrs</div><div class="l">for farm output to recover to pre-1592 levels</div></div>
+  </div>
+
+  <h3>The one bright spot: Admiral Yi Sunsin</h3>
+  <div class="side">
+    <div>
+      <p>Admiral Yi Sunsin's (E SOON-shin) navy won repeated victories. His command ship was shaped like a turtle with a dragon's head:</p>
+      <ul class="tight">
+        <li><strong>Iron cladding</strong>, unprecedented at the time</li>
+        <li><strong>Iron spikes</strong> hidden under straw mats to stop boarders</li>
+        <li><strong>Ten oars a side</strong> to escape pursuit</li>
+        <li><strong>Cannon</strong> (6 ports below, 22 above, each side) firing shells of gunpowder and iron splinters</li>
+      </ul>
+      <p>The record that Yi's 12 ships destroyed 400 in one month is, in the textbook's words, "undoubtedly exaggerated." <span class="cite">p. 254</span></p>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit1/turtle-ship-1795.jpg" alt="Woodblock print of a turtle ship with a dragon head at the bow and oars along the side" loading="lazy">
+      <figcaption><b>Turtle ship</b>, woodblock from the <em>Collected Works of Admiral Yi</em> (1795): drawn two centuries after the war.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 7 MANCHU -->
+<section class="unit reveal" id="manchu">
+  <div class="sec-num">Part 7</div>
+  <h2>Caught between Ming and Manchu</h2>
+  <p class="pages">pp. 253–255</p>
+
+  <div class="tablewrap"><table>
+    <thead><tr><th>Year</th><th>What happened</th></tr></thead>
+    <tbody>
+      <tr><td class="yr">1590s</td><td>Nurhaci unites the Jurchens and renames them <a class="term" href="#g-manchus">Manchus</a>.</td></tr>
+      <tr><td class="yr">to 1623</td><td>King Gwanghaegun, a concubine's son, tries to stay neutral; with Great Northerner support he has rival prince Yeongchang killed.</td></tr>
+      <tr><td class="yr">1623</td><td>Westerner coup puts <strong>Injo</strong> on the throne, purges the Northerners (out of high office for two centuries), and backs the Ming.</td></tr>
+      <tr><td class="yr">1627</td><td>30,000 Manchus invade and impose a treaty.</td></tr>
+      <tr><td class="yr">1636</td><td>120,000 Manchus invade; beacons fail, so Injo learns only two days before they reach Hanyang. Joseon breaks with the Ming and becomes a Qing tributary.</td></tr>
+      <tr><td class="yr">1644</td><td>Manchus conquer China. Most yangban despise them and stay loyal to the Ming's memory.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout ink">
+    <div class="label">Why leave Korea independent but conquer China?</div>
+    <p>Like the Mongols, the Manchus did not see Korea as much of a prize. They wanted tribute for their campaigns, then had too much territory to run, and Joseon proved a nonthreatening vassal. <span class="cite">p. 255</span></p>
+  </div>
+
+  <h3>Biography: Jeong Myeongsu, the interpreter <span class="cite">p. 253</span></h3>
+  <div class="timeline">
+    <div class="ev"><div class="yr">1619</div><div class="tx">A lowly soldier captured by the Manchus; learns their language and wins their trust.</div></div>
+    <div class="ev"><div class="yr">1636</div><div class="tx">Both courts seek his help; Joseon offers thousands of ounces of silver for aid in peace talks.</div></div>
+    <div class="ev"><div class="yr">Next 8 yrs</div><div class="tx">Go-between for the Qing ruler and the Korean crown prince held at the Shenyang Residence; profits from trade and from ransoming captives. Made a minister-without-portfolio.</div></div>
+    <div class="ev"><div class="yr">1650</div><div class="tx">Falls from power after the Manchu leader Dorgon dies and a new Korean king takes the throne.</div></div>
+  </div>
+  <p>Like the <a class="term" href="#g-jungin">jungin</a>, he rose through a specialist skill rather than birth.</p>
+</section>
+
+<!-- 8 PALACE -->
+<section class="unit reveal" id="palace">
+  <div class="sec-num">Part 8</div>
+  <h2>Palace politics, 1659–1800</h2>
+  <p class="pages">pp. 255–259</p>
+
+  <ul class="tight">
+    <li><strong>1659 mourning dispute:</strong> how long should the royal family mourn King Hyojong? Song Siyeol (Westerner) argued for less; Southerners said this questioned Hyojong's legitimacy. Westerners split into Patriarchs and Disciples.</li>
+    <li><strong>Sukjong</strong> (r. 1674–1720) switched sides almost on whim: Southerners in (1689), then purged (1694).</li>
+    <li><strong>Yeongjo</strong> tried a coalition cabinet of moderates in 1727. Radical Disciples rebelled in 1728; he crushed them but learned the danger of threatening yangban interests.</li>
+  </ul>
+
+  <h3>The tragedy of Crown Prince Sado</h3>
+  <blockquote>"...in his father's presence, the prince grew inarticulate and hesitant out of fear and nervousness."
+    <footer>Lady Hyegyeong, Sado's wife, Memoir of 1805, written in hangul (Documents, p. 258)</footer></blockquote>
+
+  <div class="side">
+    <div class="timeline">
+      <div class="ev"><div class="yr">1749</div><div class="tx">Yeongjo makes 15-year-old Sado prince regent. Fear of his father's ridicule pushes him "over the edge of sanity"; he kills palace staff.</div></div>
+      <div class="ev major"><div class="yr">1762</div><div class="tx">Yeongjo has Sado locked in a rice chest; he starves after eight days. The court splits between the king's backers (mostly Patriarchs) and Sado's sympathizers (mostly Southerners).</div></div>
+      <div class="ev"><div class="yr">1776</div><div class="tx">Sado's son becomes <strong>King Jeongjo</strong>: builds a Royal Library, bans free import of "subversive" Chinese books, survives seven assassination plots.</div></div>
+      <div class="ev major"><div class="yr">1795</div><div class="tx">Jeongjo leads <strong>6,000 men</strong> to his father's tomb, officially for his mother's 70th birthday.</div></div>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit1/hwaseong-procession-1795.jpg" alt="Panel of a folding screen showing a royal procession crossing the Han River on a bridge of boats" loading="lazy" style="max-height:520px;width:auto;margin:0 auto">
+      <figcaption><b>Royal Procession to Hwaseong</b> (1795), one screen panel: the escort crosses the Han River on a bridge of boats. The textbook shows the same procession on p. 256.</figcaption>
+    </figure>
+  </div>
+
+  <div class="callout gold">
+    <div class="label">Primary source · Lady Hyegyeong's Memoirs</div>
+    <p>Written in four parts (1795, 1801, 1802, 1805); her uncle and brother were executed in 1776 and 1801. She explains Sado's illness as the result of his father's coldness and constant criticism. Textbook questions: How does she understand her husband's illness? What made it possible for the prince to keep killing people? <span class="cite">pp. 258–259</span></p>
+  </div>
+</section>
+
+<!-- 9 ECONOMY -->
+<section class="unit reveal" id="economy">
+  <div class="sec-num">Part 9</div>
+  <h2>Slow but real commercial growth</h2>
+  <p class="pages">pp. 257–258</p>
+
+  <p>Early Joseon's economy was mostly agrarian. Taxes came in kind or <a class="term" href="#g-corvee">labor</a>, most artisans were slaves, and commerce was limited to licensed monopoly merchants in the capital plus peddlers and fifth-day markets in the countryside.</p>
+
+  <h3>What changed after the invasions</h3>
+  <ul class="tight">
+    <li><strong>Tax reform:</strong> villages that could no longer make their "tribute tax" goods paid illegal tribute merchants to buy them, which expanded private trade. The state replaced the tax with an extra land tax in grain; by 1708 it covered the country and more than doubled landowners' burden, spurring unlicensed merchants.</li>
+    <li><strong>Military service</strong> was extended to private slaves for the first time.</li>
+    <li><strong>Money:</strong> Kim Yuk brought back Chinese coins (1650); cash accepted for taxes from 1654, the first money in about a century. Minting stopped in 1697 (inflation), causing 33 years of deflation, and resumed in 1731.</li>
+    <li><strong>Farming:</strong> ending fallowing, irrigating dry fields, and transplanting rice seedlings.</li>
+    <li><strong>Markets:</strong> Seoul reached about 200,000 people. In the 1740s unlicensed traders stopped being prosecuted; the 1791 "joint-sales" policy kept monopolies for only six Seoul shops.</li>
+  </ul>
+
+  <div class="stats">
+    <div class="stat"><div class="n" data-count="14">14M</div><div class="l">people by 1810, up 40% from 1650</div></div>
+    <div class="stat"><div class="n">1654</div><div class="l">coins accepted for taxes</div></div>
+    <div class="stat"><div class="n">⅓ lower</div><div class="l">farm yields in 1900 than Japan and China c. 1880</div></div>
+  </div>
+
+  <h3>Slavery shrinks as commerce grows</h3>
+  <div class="bars" id="bars">
+    <div class="barset">
+      <h4>Slaves as share of the population</h4>
+      <div class="bar"><span>1750</span><div class="track"><div class="fill" data-w="30">~30%</div></div></div>
+      <div class="bar"><span>1790</span><div class="track"><div class="fill" data-w="10">&lt;10%</div></div></div>
+    </div>
+    <div class="barset">
+      <h4>Official (state) slaves</h4>
+      <div class="bar"><span>1590</span><div class="track"><div class="fill ink" data-w="100">350,000</div></div></div>
+      <div class="bar"><span>1801</span><div class="track"><div class="fill ink" data-w="17.1">60,000</div></div></div>
+    </div>
+  </div>
+  <p class="cite">Bars drawn to scale within each chart. pp. 257–258</p>
+
+  <div class="grid g3">
+    <div class="card"><h4>1 · A small push</h4><p>In 1730 Yeongjo re-adopted the <a class="term" href="#g-patri">matrilineal</a> rule for children of mixed slave–commoner marriages.</p></div>
+    <div class="card"><h4>2 · The main cause</h4><p>Runaways. Instead of paying to chase them, landlords rented land to the growing number of landless peasants.</p></div>
+    <div class="card"><h4>3 · Hired labor</h4><p>The government replaced official slaves with hired commoners.</p></div>
+  </div>
+  <div class="callout">
+    <div class="label">Nuance</div>
+    <p>Freedom did not mean prosperity: escaped slaves now paid rent, interest on grain loans, and the commoner military cloth tax. The textbook returns to this in Making Comparisons: Slavery (p. 380).</p>
+  </div>
+</section>
+
+<!-- 10 CULTURE -->
+<section class="unit reveal" id="culture">
+  <div class="sec-num">Part 10</div>
+  <h2>A flowering of literature and art</h2>
+  <p class="pages">pp. 255, 258–260</p>
+  <p>Economic and social change brought "a new openness to cultural variety and innovative thinking." <span class="cite">p. 258</span></p>
+
+  <div class="side">
+    <div>
+      <div class="grid g2" style="margin-top:0">
+        <div class="card"><h4>Poetry</h4><p>Men wrote in Chinese, women in Korean with hangul. Forms: <a class="term" href="#g-sijo">sijo</a>, saseol sijo, gasa.</p></div>
+        <div class="card"><h4><em>Chunhyang</em></h4><p>The most popular tale: a courtesan's daughter refuses a cruel governor; her husband returns as secret inspector and rescues her.</p></div>
+        <div class="card"><h4><em>Nine Cloud Dream</em></h4><p>By Kim Manjung (1637–1692): a monk dreams a life of worldly success, then wakes to its emptiness.</p></div>
+        <div class="card"><h4>Popular culture</h4><p>Masked plays and <a class="term" href="#g-pansori">pansori</a> satirized the yangban.</p></div>
+      </div>
+      <p style="margin-top:12px">Fiction: men wrote in classical Chinese, women in Korean; many stories center on women. Political writing includes <em>The True History of Queen Inhyeon</em> and Lady Hyegyeong's memoirs.</p>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit1/jeong-seon-geumgang-jeondo.jpg" alt="Ink painting of the Diamond Mountains: a dense mass of pointed white peaks with forested slopes" loading="lazy">
+      <figcaption><b>Jeong Seon, <em>Geumgang jeondo</em></b> (1734), the Diamond Mountains. The textbook (p. 255) notes the "touch of animistic spirits in the swaying mountains" in his work.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 11 LEARNING -->
+<section class="unit reveal" id="learning">
+  <div class="sec-num">Part 11</div>
+  <h2>New ideas: Northern and Western Learning</h2>
+  <p class="pages">pp. 260–262</p>
+
+  <h3><a class="term" href="#g-northern">Northern Learning</a>: learn from the Qing</h3>
+  <p>Mostly from the minority Southerner or Northerner factions.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Hong Daeyong</h4><div class="sub">Beijing trip, 1765</div><p>Studied Western astronomy and math; denied China was the world's only center; criticized yangban contempt for manual labor.</p></div>
+    <div class="card"><h4>Pak Jiwon</h4><div class="sub">Tribute mission, 1780</div><p>Satirized yangban (<em>The Yangban</em>); urged ending discrimination against concubines' sons, freeing official slaves, copying Qing carts and boats.</p></div>
+    <div class="card"><h4>Pak Jega</h4><div class="sub"><em>Northern Learning</em>, 1788</div><p>Proposed inviting missionaries to teach science (1786); urged putting able merchants in office and expanding Qing trade.</p></div>
+  </div>
+  <div class="callout gold"><div class="label">Impact</div><p>Little effect on policy: anti-Manchu prejudice and the Confucian bias against merchants ran too deep.</p></div>
+
+  <h3><a class="term" href="#g-western">Western Learning</a>: Christianity arrives through books</h3>
+  <p>No Westerners were allowed into Korea in this period, so Christianity came through Chinese-language books such as Matteo Ricci's. <span class="cite">pp. 260, 262</span></p>
+  <div class="timeline">
+    <div class="ev"><div class="yr">1600s</div><div class="tx">Ricci's books on theology and science reach Korea from China.</div></div>
+    <div class="ev"><div class="yr">1653</div><div class="tx">Joseon adopts the Western calendar, nine years after the Qing.</div></div>
+    <div class="ev"><div class="yr">1720s</div><div class="tx">Scholars reject heaven and hell and the "selfish" focus on individual salvation. The pope's 1715 condemnation of Chinese ancestral rites draws attention.</div></div>
+    <div class="ev major"><div class="yr">1784</div><div class="tx">Yi Seunghun brings texts home from China; the first congregation meets at the house of the jungin Kim Beomu, later Korea's first Christian martyr.</div></div>
+    <div class="ev"><div class="yr">1791</div><div class="tx">Two Catholics burn ancestral tablets and refuse to recant; Jeongjo has them beheaded.</div></div>
+    <div class="ev"><div class="yr">1794</div><div class="tx">The first missionary, Chinese priest Zhou Wenmo, is discovered and executed. Jeongjo's toleration backfires.</div></div>
+  </div>
+  <p>The ancestral-tablet issue was explosive because it struck at <a class="term" href="#g-filial">filial piety</a>, the center of Confucian family ethics.</p>
+</section>
+
+<!-- 12 FAMILY -->
+<section class="unit reveal" id="family">
+  <div class="sec-num">Part 12</div>
+  <h2>Confucianizing the Korean family</h2>
+  <p class="pages">pp. 247, 261–264</p>
+  <p>Because Korea's family system differed so much from China's, matching the classics required far more radical change in Korea than it ever had in China. <span class="cite">p. 261</span></p>
+
+  <div class="tablewrap"><table>
+    <thead><tr><th></th><th>Goryeo</th><th>Joseon, by the 1700s</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Married couple lives</td><td>often with wife's family</td><td>with husband's family</td></tr>
+      <tr><td class="k">Daughters inherit</td><td>equal shares</td><td>largely lost; nephews adopted as heirs</td></tr>
+      <tr><td class="k">Widows</td><td>remarry freely</td><td>remarriage declines (1474 law barred their sons from exams)</td></tr>
+      <tr><td class="k">Funerals</td><td>Buddhist; cremation, ~100 days' mourning</td><td>Confucian ancestor rites</td></tr>
+      <tr><td class="k">Genealogies</td><td>women listed with brothers by birth order</td><td>listed after brothers; in husband's records only as "daughter of"</td></tr>
+    </tbody>
+  </table></div>
+
+  <ul class="tight">
+    <li><strong>Why it spread:</strong> rural yangban with no hope of office used strict family ritual to prove their status; moral tracts in hangul spread the norms. Buddhist burial took ~300 years to vanish at the lowest levels.</li>
+    <li><strong>Still different from China:</strong> Korea discriminated against younger sons and especially concubines' sons; Chinese law gave brothers equal shares. <span class="cite">p. 262</span></li>
+    <li><strong>Women as agents:</strong> older women chose spouses for their children and supervised daughters-in-law; women kept religious practices men frowned on: household gods, dreams, <a class="term" href="#g-mudang">mudang</a>, Buddhist belief. <span class="cite">p. 262</span></li>
+  </ul>
+
+  <h3>Making Comparisons: women in China, Korea, and Japan <span class="cite">p. 264</span></h3>
+  <div class="grid g2">
+    <div class="card"><h4>Shared</h4><ul><li>Men could take concubines and divorce; women could not divorce</li><li>Girls didn't attend school with boys</li><li>Historians see women's status declining over time</li></ul></div>
+    <div class="card"><h4>Korea's path</h4><ul><li>Became more <a class="term" href="#g-patri">patrilineal</a> through yangban Confucian zeal</li><li>Hangul gave women a written voice</li><li>Widow chastity, but no footbinding</li></ul></div>
+  </div>
+</section>
+
+<!-- 13 CONCLUSION -->
+<section class="unit reveal" id="conclusion">
+  <div class="sec-num">Part 13</div>
+  <h2>Korea in 1800 vs. 1392</h2>
+  <p class="pages">pp. 262–263</p>
+  <div class="grid g2">
+    <div class="card"><h4>Unchanged</h4><ul><li>Same dynasty, unified kingdom</li><li>Kings still competing with entrenched yangban</li><li>Food, houses, clothing distinctly Korean</li></ul></div>
+    <div class="card"><h4>Transformed</h4><ul><li>Buddhism sidelined; family Confucianized</li><li>Coins circulate, more trade; slavery much reduced</li><li>Yangban split; hereditary factions</li><li>More leaders developing ideas in original ways</li></ul></div>
+  </div>
+  <div class="callout">
+    <div class="label">Back to the big question: why did Joseon last?</div>
+    <p>Threads from the chapter: the <a class="term" href="#g-tribute">tributary</a> tie (the Ming rescue of 1592–98; the Qing's choice to leave Joseon autonomous); the yangban's stake in the system and their moral check on kings; and a founding that was a "coup from within," in which the great families survived.</p>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="unit reveal" id="review">
+  <div class="sec-num">Review kit</div>
+  <h2>Test yourself</h2>
+
+  <h3>Flashcards</h3>
+  <div class="fc-wrap">
+    <div class="fc" id="fc" tabindex="0" role="button" aria-label="Flashcard: press to flip">
+      <div class="fc-inner">
+        <div class="fc-face fc-front"><div class="t" id="fc-term"></div><div class="h">Tap or press space to flip</div></div>
+        <div class="fc-face fc-back"><div id="fc-def"></div></div>
+      </div>
+    </div>
+    <div class="fc-ctrl">
+      <button class="btn" id="fc-prev" type="button">← Prev</button>
+      <span id="fc-count"></span>
+      <button class="btn" id="fc-next" type="button">Next →</button>
+      <button class="btn" id="fc-shuffle" type="button">Shuffle</button>
+    </div>
+  </div>
+
+  <h3>Who's who</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Person</th><th>Why they matter</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Yi Seonggye (Taejo)</td><td>General who founded Joseon in 1392</td></tr>
+      <tr><td class="k">Sejong</td><td>Hangul, science, northern border, legal reform</td></tr>
+      <tr><td class="k">Sejo</td><td>Usurped the throne; military and fiscal reformer</td></tr>
+      <tr><td class="k">Jo Gwangjo</td><td>Censor executed 1519; Confucian martyr or political operator</td></tr>
+      <tr><td class="k">Yi Toegye / Yi Yulgok</td><td>Principle vs. psychophysical force debate</td></tr>
+      <tr><td class="k">Seonjo</td><td>King during factional split and Hideyoshi's invasion</td></tr>
+      <tr><td class="k">Toyotomi Hideyoshi</td><td>Japanese ruler who invaded 1592 and 1597</td></tr>
+      <tr><td class="k">Yi Sunsin</td><td>Admiral; turtle ship</td></tr>
+      <tr><td class="k">Nurhaci</td><td>United the Jurchens as Manchus</td></tr>
+      <tr><td class="k">Gwanghaegun / Injo</td><td>Neutrality, then pro-Ming coup and Manchu invasions</td></tr>
+      <tr><td class="k">Jeong Myeongsu</td><td>Interpreter and power broker between courts</td></tr>
+      <tr><td class="k">Song Siyeol</td><td>Westerner leader in the 1659 mourning dispute; Patriarchs</td></tr>
+      <tr><td class="k">Yeongjo</td><td>Coalition cabinet; had his son Sado killed (1762)</td></tr>
+      <tr><td class="k">Lady Hyegyeong</td><td>Sado's wife; memoirs in hangul</td></tr>
+      <tr><td class="k">Jeongjo</td><td>Sado's son; 1795 procession; persecuted Catholics</td></tr>
+      <tr><td class="k">Hong Daeyong · Pak Jiwon · Pak Jega</td><td>Northern Learning</td></tr>
+      <tr><td class="k">Yi Seunghun</td><td>Brought Catholic texts home in 1784</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Key dates</h3>
+  <div class="tablewrap"><table>
+    <tbody>
+      <tr><td class="yr">1392</td><td>Joseon founded</td></tr>
+      <tr><td class="yr">1443</td><td>Hangul created</td></tr>
+      <tr><td class="yr">1506</td><td>Yeonsangun deposed by officials</td></tr>
+      <tr><td class="yr">1575</td><td>Permanent factions begin</td></tr>
+      <tr><td class="yr">1592–98</td><td>Hideyoshi's invasions</td></tr>
+      <tr><td class="yr">1609</td><td>Relations with Japan restored</td></tr>
+      <tr><td class="yr">1623</td><td>Westerner coup; Injo enthroned</td></tr>
+      <tr><td class="yr">1627, 1636</td><td>Manchu invasions; Joseon becomes Qing tributary</td></tr>
+      <tr><td class="yr">1659</td><td>Mourning dispute</td></tr>
+      <tr><td class="yr">1708</td><td>New land tax covers the whole country</td></tr>
+      <tr><td class="yr">1750–1790</td><td>Slaves fall from ~30% to &lt;10%</td></tr>
+      <tr><td class="yr">1762</td><td>Death of Crown Prince Sado</td></tr>
+      <tr><td class="yr">1784</td><td>First Korean Catholic congregation</td></tr>
+      <tr><td class="yr">1795</td><td>Jeongjo's procession to Hwaseong</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Discussion questions</h3>
+  <p class="cite" style="white-space:normal">Open each for points the chapter gives you to work with.</p>
+  <details class="q"><summary>Given its flawed government and many crises, why did the dynasty last so long?</summary>
+    <div class="a"><ul><li>Tributary ties: the Ming saved Joseon in 1592–98; the Qing left it autonomous.</li><li>The yangban had a stake in the system and checked royal excess.</li><li>A "coup from within": the great families survived the founding.</li></ul></div></details>
+  <details class="q"><summary>Did the moral authority of officials save Korea from tyranny, or weaken it?</summary>
+    <div class="a"><ul><li>For: officials deposed Yeonsangun; remonstrance limited kings (p. 250).</li><li>Against: moral claims fueled bitter, hereditary factions; Jo Gwangjo may have been "playing the moral card"; faction blocked the 1591 warning.</li></ul></div></details>
+  <details class="q"><summary>Why couldn't Joseon repel Hideyoshi, despite Yi Sunsin's victories?</summary>
+    <div class="a"><ul><li>The land army had hollowed out through bribery and exemptions.</li><li>Factionalism led Seonjo to ignore the 1591 warning.</li><li>Japan had a century of battle experience and firearms; naval wins did not stop the landings.</li></ul></div></details>
+  <details class="q"><summary>Why was so much labor unfree, and why did that change in the 1700s?</summary>
+    <div class="a"><ul><li>Early Joseon: artisans were mostly slaves; indebted peasants commended land to yangban and became slaves to escape tax and military service (p. 251).</li><li>1700s: commercialization, runaways, landlords renting to landless peasants, hired labor replacing state slaves.</li></ul></div></details>
+  <details class="q"><summary>Why did Northern Learning have so little effect on policy?</summary>
+    <div class="a"><ul><li>Most yangban despised the Manchus and stayed loyal to the Ming's memory.</li><li>The Confucian bias against merchants was entrenched.</li><li>Its thinkers came mostly from minority factions.</li></ul></div></details>
+  <details class="q"><summary>Was Confucianization a gain or a loss for Korean women?</summary>
+    <div class="a"><ul><li>Loss: inheritance, residence with own family, and remarriage rights eroded; names dropped from genealogies.</li><li>Counterpoints: hangul gave women a literary voice; older women held household power; women kept their own religious life. The textbook warns against assuming women were simply submissive.</li></ul></div></details>
+  <details class="q"><summary>Why did the Joseon court try to win over Jeong Myeongsu, and why didn't yangban learn Manchu themselves?</summary>
+    <div class="a"><p>These are the textbook's own Biography questions (p. 253). Consider his access to the Manchu ruler, and yangban contempt for the Manchus and for specialist skills associated with the jungin.</p></div></details>
+</section>
+
+<!-- SOURCES -->
+<section class="unit" id="sources">
+  <div class="sec-num">Resources</div>
+  <h2>Sources and further reading</h2>
+  <ul class="sources">
+    <li><strong>Main text:</strong> Patricia Buckley Ebrey &amp; Anne Walthall, <em>Modern East Asia from 1600: A Cultural, Social, and Political History</em>, 3rd ed. (Cengage, 2013), Ch. 15, pp. 247–264; Making Comparisons boxes, pp. 264, 304.</li>
+    <li><strong>Primary source:</strong> <em>The Memoirs of Lady Hyegyŏng</em>, trans. JaHyun Kim Haboush (University of California Press, 1996): the translation excerpted on p. 258.</li>
+    <li><strong>Factions:</strong> Encyclopedia of Korean Culture (Academy of Korean Studies), <a href="https://encykorea.aks.ac.kr/Article/E0012113">"Namin" (Southerners)</a> and <a href="https://encykorea.aks.ac.kr/Article/E0024701">"Bugin" (Northerners)</a>, by Kim Seong-woo. In Korean.</li>
+  </ul>
+  <h3>Image credits</h3>
+  <ul class="sources">
+    <li>Maps: drawn for this course on <a href="https://www.naturalearthdata.com/">Natural Earth</a> base data (public domain). Routes are schematic.</li>
+    <li><em>Hunminjeongeum Haerye</em> (1446): public domain, <a href="https://commons.wikimedia.org/wiki/File:Hunminjeongum.jpg">Wikimedia Commons</a>, from Korea's Cultural Heritage Administration.</li>
+    <li>Turtle ship, woodblock from <em>Yi Chungmugong jeonseo</em> (1795): public domain, National Diet Library, <a href="https://commons.wikimedia.org/wiki/File:Geobukseon1.jpg">Wikimedia Commons</a>.</li>
+    <li>Royal Procession to Hwaseong, screen panel (1795), attributed to Kim Deuksin: public domain, <a href="https://commons.wikimedia.org/wiki/File:Painting_of_the_Royal_Procession_to_Hwaseong_on_Eight-panel_Folding_Screen_part1.jpg">Wikimedia Commons</a> (Google Arts &amp; Culture).</li>
+    <li>Jeong Seon, <em>Geumgang jeondo</em> (1734): public domain, <a href="https://commons.wikimedia.org/wiki/File:Jeong_Seon-Geumgangjeondo.jpg">Wikimedia Commons</a>.</li>
+  </ul>
+  <p class="cite" style="white-space:normal">Image titles and dates come from each image's catalog record, not from the textbook.</p>
+
+  <footer class="end">
+    <a href="index.html">← All units</a>
+    <span>Next: Unit 2 · The Qing: A Manchu Empire (Ch. 16)</span>
+  </footer>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var root=document.documentElement;
+
+  // theme toggle
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  var tb=document.getElementById('theme-btn');
+  if(tb)tb.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+
+  // mobile toc copy
+  var mt=document.getElementById('mtoc');
+  document.querySelectorAll('#toc-list a').forEach(function(a){var li=document.createElement('li');var c=a.cloneNode(true);c.addEventListener('click',function(){mt.parentNode.removeAttribute('open')});li.appendChild(c);mt.appendChild(li);});
+
+  // progress + scrollspy
+  var bar=document.getElementById('progress');
+  var links=[].slice.call(document.querySelectorAll('#toc-list a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
+    var cur=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*0.3)cur=i});
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur)});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal + bars
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.06});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var bio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});bio.unobserve(e.target)}})},{threshold:0.4});
+  var bars=document.getElementById('bars');if(bars)bio.observe(bars);
+
+  // glossary tooltips
+  var tip=document.getElementById('tip');
+  function show(a){
+    var row=document.querySelector(a.getAttribute('href'));if(!row)return;
+    var dt=row.querySelector('dt'),dd=row.querySelector('dd').cloneNode(true);
+    dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    tip.innerHTML='';var b=document.createElement('b');b.textContent=dt.firstChild.textContent.trim();tip.appendChild(b);tip.appendChild(document.createTextNode(dd.textContent.trim()));
+    var r=a.getBoundingClientRect();tip.classList.add('on');
+    var w=tip.offsetWidth,left=Math.min(Math.max(8,r.left+scrollX+r.width/2-w/2),scrollX+document.documentElement.clientWidth-w-8);
+    var top=r.top+scrollY-tip.offsetHeight-8;if(r.top<tip.offsetHeight+16)top=r.bottom+scrollY+8;
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function hide(){tip.classList.remove('on')}
+  document.querySelectorAll('a.term').forEach(function(a){
+    a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('mouseleave',hide);
+    a.addEventListener('focus',function(){show(a)});a.addEventListener('blur',hide);
+    a.addEventListener('click',function(ev){if(matchMedia('(hover: none)').matches&&!a.dataset.shown){ev.preventDefault();document.querySelectorAll('a.term').forEach(function(x){delete x.dataset.shown});a.dataset.shown=1;show(a);}});
+  });
+  addEventListener('scroll',hide,{passive:true});
+
+  // hangul demo
+  var stage=document.getElementById('stage'),build=document.getElementById('build'),timers=[];
+  function run(){timers.forEach(clearTimeout);stage.classList.remove('built','done');void stage.offsetWidth;
+    timers.push(setTimeout(function(){stage.classList.add('built')},150));
+    timers.push(setTimeout(function(){stage.classList.add('done')},1500));
+    build.textContent='↺ Replay';}
+  build.addEventListener('click',run);
+  var hio=new IntersectionObserver(function(es){if(es[0].isIntersecting){run();hio.disconnect()}},{threshold:0.7});hio.observe(stage);
+
+  // lightbox
+  var lb=document.getElementById('lightbox'),lbi=lb.querySelector('img');
+  document.querySelectorAll('img.zoomable').forEach(function(img){img.addEventListener('click',function(){lbi.src=img.src;lbi.alt=img.alt;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  // flashcards from glossary
+  var cards=[].slice.call(document.querySelectorAll('.gloss .row')).map(function(r){
+    var dd=r.querySelector('dd').cloneNode(true);dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    return{t:r.querySelector('dt').firstChild.textContent.trim(),d:dd.textContent.trim()};});
+  var i=0,fc=document.getElementById('fc');
+  function render(){fc.classList.remove('flip');document.getElementById('fc-term').textContent=cards[i].t;document.getElementById('fc-def').textContent=cards[i].d;document.getElementById('fc-count').textContent=(i+1)+' / '+cards.length;}
+  fc.addEventListener('click',function(){fc.classList.toggle('flip')});
+  fc.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();fc.classList.toggle('flip')}else if(e.key==='ArrowRight'){i=(i+1)%cards.length;render()}else if(e.key==='ArrowLeft'){i=(i-1+cards.length)%cards.length;render()}});
+  document.getElementById('fc-next').addEventListener('click',function(){i=(i+1)%cards.length;render()});
+  document.getElementById('fc-prev').addEventListener('click',function(){i=(i-1+cards.length)%cards.length;render()});
+  document.getElementById('fc-shuffle').addEventListener('click',function(){for(var k=cards.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=cards[k];cards[k]=cards[j];cards[j]=t}i=0;render()});
+  render();
+})();
+</script>
+</body>
+</html>
