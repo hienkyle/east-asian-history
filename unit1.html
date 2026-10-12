@@ -136,10 +136,11 @@ dl.gloss{margin:12px 0 0}
 .gloss .row:target{background:var(--gold-soft);border-radius:8px;padding-left:10px;padding-right:10px}
 .gloss-group{font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:22px 0 2px}
 
-/* timeline */
-.timeline{position:relative;margin:18px 0 18px 6px;padding-left:26px;border-left:2px solid var(--line)}
-.timeline .ev{position:relative;margin:0 0 14px}
-.timeline .ev::before{content:"";position:absolute;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+/* timeline: equal rows so nodes sit at even intervals; the axis runs dot to dot */
+.timeline{position:relative;margin:18px 0 18px 6px;padding-left:26px;display:grid;grid-auto-rows:1fr;row-gap:14px}
+.timeline .ev{position:relative;margin:0}
+.timeline .ev::before{content:"";position:absolute;z-index:1;box-sizing:border-box;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline .ev:not(:last-child)::after{content:"";position:absolute;z-index:0;left:-28px;top:13px;width:2px;height:calc(100% + 14px);background:var(--line)}
 .timeline .ev.major::before{background:var(--accent)}
 .timeline .yr{font:700 .92rem var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
 .timeline .tx{font-size:.97rem}
