@@ -7,16 +7,17 @@
 <meta name="description" content="Study guide for Unit 1: Joseon Korea, the Confucian state (1392–1800). Based on Ebrey & Walthall, Modern East Asia from 1600, Ch. 15.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;600;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#faf7f2; --paper:#fffdf9; --fg:#1f1d1a; --muted:#6b645a; --line:#e6dfd3;
   --accent:#a23b2a; --accent-soft:#f6e4de; --ink:#2c5d8a; --ink-soft:#e2ecf5;
   --gold:#a8822e; --gold-soft:#f5ecd6; --green:#3f6b4a; --green-soft:#e3eee5;
   --shadow:0 1px 2px rgba(60,40,20,.06),0 4px 16px rgba(60,40,20,.06);
-  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --kr:"Noto Serif KR","Apple SD Gothic Neo","Malgun Gothic",serif;
+  --serif:"Source Serif 4","Noto Serif KR",Georgia,"Times New Roman",serif;
+  /* one typeface across the page; Noto Serif KR only supplies Korean glyphs */
+  --sans:var(--serif);
+  --kr:var(--serif);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
@@ -251,13 +252,43 @@ details.q .a ul{margin:0;padding-left:18px}
 .reveal.in{opacity:1;transform:none}
 .no-js .reveal{opacity:1;transform:none}
 
+
+/* floating tools: key-term notes + return to top */
+.fab-stack{position:fixed;right:16px;bottom:16px;z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab{font:600 .9rem var(--serif);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);color:var(--fg);border-radius:999px;padding:10px 16px;box-shadow:var(--shadow);cursor:pointer}
+.fab:hover{border-color:var(--accent);color:var(--accent)}
+.fab.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.fab.primary:hover{filter:brightness(1.08);color:#fff}
+:root[data-theme="dark"] .fab.primary{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fab.primary{color:#16140f}}
+#totop{opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s,transform .25s}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#notes.open + .fab-stack #totop{opacity:0;pointer-events:none}
+#notes [hidden]{display:none!important}
+#notes{position:fixed;right:16px;bottom:76px;z-index:75;width:min(380px,calc(100vw - 32px));max-height:min(70vh,620px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.18);opacity:0;transform:translateY(12px) scale(.98);transform-origin:bottom right;pointer-events:none;transition:opacity .2s,transform .2s}
+#notes.open{opacity:1;transform:none;pointer-events:auto}
+#notes header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px 8px;border-bottom:1px solid var(--line)}
+#notes header h2{font-size:1.05rem;margin:0}
+#notes header p{margin:2px 0 0;font-size:.78rem;color:var(--muted)}
+#notes .x{border:none;background:none;font-size:1.4rem;line-height:1;color:var(--muted);cursor:pointer;padding:4px 6px}
+#notes .x:hover{color:var(--accent)}
+#notes input{margin:10px 16px 6px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:.9rem var(--serif)}
+#notes input:focus{outline:2px solid var(--accent);outline-offset:-1px}
+#notes .list{overflow:auto;padding:0 16px 14px}
+#notes .grp{font:700 .7rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:12px 0 2px}
+#notes .item{display:block;padding:7px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:.88rem;line-height:1.4}
+#notes .item:hover b{color:var(--accent)}
+#notes .item b{display:block;font-size:.92rem}
+#notes .empty{color:var(--muted);font-size:.88rem;padding:10px 0}
+@media (max-width:520px){#notes{right:8px;left:8px;width:auto;bottom:72px}.fab .lbl-long{display:none}}
+
 /* sources */
 .sources li{margin:6px 0;font-size:.94rem}
 footer.end{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font:.85rem var(--sans);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer.end a{color:var(--muted)}
 
 @media print{
-  nav.toc,.mobile-toc,#progress,.demo-ctrl,.fc-wrap,.btn{display:none!important}
+  nav.toc,.mobile-toc,#progress,.demo-ctrl,.fc-wrap,.btn,.fab-stack,#notes{display:none!important}
   .shell{display:block} body{background:#fff;color:#000}
   .reveal{opacity:1;transform:none}
   details.q{border:none} details.q .a{display:block}
@@ -269,6 +300,20 @@ footer.end a{color:var(--muted)}
 <div id="progress"></div>
 <div id="tip" role="tooltip"></div>
 <div id="lightbox" aria-hidden="true"><img alt=""></div>
+
+
+<aside id="notes" role="dialog" aria-modal="false" aria-labelledby="notes-title" aria-hidden="true">
+  <header>
+    <div><h2 id="notes-title">Key terms · quick notes</h2><p>Short versions. Tap a term for the full entry.</p></div>
+    <button class="x" id="notes-close" type="button" aria-label="Close key terms">×</button>
+  </header>
+  <input id="notes-search" type="search" placeholder="Filter terms…" aria-label="Filter key terms">
+  <div class="list" id="notes-list"></div>
+</aside>
+<div class="fab-stack">
+  <button class="fab" id="totop" type="button" aria-label="Return to top">↑ <span class="lbl-long">Return to top</span></button>
+  <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
+</div>
 
 <div class="shell">
 <nav class="toc" aria-label="Contents">
@@ -348,49 +393,49 @@ footer.end a{color:var(--muted)}
 
   <div class="gloss-group">Ideas</div>
   <dl class="gloss">
-    <div class="row" id="g-classical"><dt>Classical Chinese</dt><dd>The written language of educated East Asians, unrelated to the Korean that people spoke. Yangban boys had to learn thousands of Chinese characters to take the exams. <span class="cite">p. 252</span></dd></div>
-    <div class="row" id="g-filial"><dt>Filial piety</dt><dd>Reverence for parents; a key Confucian virtue, expressed through rites honoring ancestors. <span class="cite">p. 304</span></dd></div>
-    <div class="row" id="g-confucianism"><dt>Confucianism</dt><dd>The tradition based on the Chinese classics, stressing virtues such as filial piety and loyalty to the ruler. Joseon kings found that stress useful for winning conformity to their authority. <span class="cite">p. 250</span><span class="needs">Builds on: classical Chinese, filial piety</span></dd></div>
-    <div class="row" id="g-zhuxi"><dt>Zhu Xi <small>1130–1200</small></dt><dd>Song-dynasty Chinese philosopher. His commentaries on the Confucian classics became required reading for China's civil service exams, and he set out rules and rites for family life. <span class="cite">p. 304</span></dd></div>
-    <div class="row" id="g-li"><dt>Principle <small>i (Korean) · li (Chinese)</small></dt><dd>An invisible underlying pattern that makes each thing what it is and links all things. <span class="cite">pp. 251, 304</span></dd></div>
-    <div class="row" id="g-qi"><dt>Psychophysical force <small>ki (Korean) · qi (Chinese)</small></dt><dd>What gives things their physical form and makes them different from each other; also translated "ether," "physical force," or "matter." For Zhu Xi, neither principle nor force could exist without the other. <span class="cite">pp. 251, 304</span></dd></div>
-    <div class="row" id="g-neo"><dt>Neo-Confucianism</dt><dd>A philosophical system, developed in Song China, that sought one unifying explanation of the universe, the physical world, and human nature, using principle and psychophysical force. Joseon yangban used it to oppose Buddhism and to order social relations. <span class="cite">p. 304</span><span class="needs">Builds on: Confucianism, Zhu Xi, principle, psychophysical force</span></dd></div>
-    <div class="row" id="g-orthodoxy"><dt>Orthodoxy / heterodox</dt><dd>Orthodoxy: the officially approved version of a teaching (in Joseon, Zhu Xi's). Heterodox: a teaching condemned as straying from it, as Yi Toegye condemned Wang Yangming. <span class="cite">p. 251</span><span class="needs">Builds on: Neo-Confucianism</span></dd></div>
+    <div class="row" id="g-classical" data-short="Written language of East Asia's educated; unrelated to spoken Korean."><dt>Classical Chinese</dt><dd>The written language of educated East Asians, unrelated to the Korean that people spoke. Yangban boys had to learn thousands of Chinese characters to take the exams. <span class="cite">p. 252</span></dd></div>
+    <div class="row" id="g-filial" data-short="Reverence for parents and ancestors."><dt>Filial piety</dt><dd>Reverence for parents; a key Confucian virtue, expressed through rites honoring ancestors. <span class="cite">p. 304</span></dd></div>
+    <div class="row" id="g-confucianism" data-short="Tradition based on the Chinese classics; stresses filial piety and loyalty to the ruler."><dt>Confucianism</dt><dd>The tradition based on the Chinese classics, stressing virtues such as filial piety and loyalty to the ruler. Joseon kings found that stress useful for winning conformity to their authority. <span class="cite">p. 250</span><span class="needs">Builds on: classical Chinese, filial piety</span></dd></div>
+    <div class="row" id="g-zhuxi" data-short="Song Chinese philosopher (1130–1200); his commentaries became exam orthodoxy."><dt>Zhu Xi <small>1130–1200</small></dt><dd>Song-dynasty Chinese philosopher. His commentaries on the Confucian classics became required reading for China's civil service exams, and he set out rules and rites for family life. <span class="cite">p. 304</span></dd></div>
+    <div class="row" id="g-li" data-short="Principle: the invisible pattern that makes each thing what it is."><dt>Principle <small>i (Korean) · li (Chinese)</small></dt><dd>An invisible underlying pattern that makes each thing what it is and links all things. <span class="cite">pp. 251, 304</span></dd></div>
+    <div class="row" id="g-qi" data-short="Psychophysical force: what gives things physical form."><dt>Psychophysical force <small>ki (Korean) · qi (Chinese)</small></dt><dd>What gives things their physical form and makes them different from each other; also translated "ether," "physical force," or "matter." For Zhu Xi, neither principle nor force could exist without the other. <span class="cite">pp. 251, 304</span></dd></div>
+    <div class="row" id="g-neo" data-short="Song-era system explaining the universe through principle and force."><dt>Neo-Confucianism</dt><dd>A philosophical system, developed in Song China, that sought one unifying explanation of the universe, the physical world, and human nature, using principle and psychophysical force. Joseon yangban used it to oppose Buddhism and to order social relations. <span class="cite">p. 304</span><span class="needs">Builds on: Confucianism, Zhu Xi, principle, psychophysical force</span></dd></div>
+    <div class="row" id="g-orthodoxy" data-short="Orthodox = officially approved teaching; heterodox = condemned as straying."><dt>Orthodoxy / heterodox</dt><dd>Orthodoxy: the officially approved version of a teaching (in Joseon, Zhu Xi's). Heterodox: a teaching condemned as straying from it, as Yi Toegye condemned Wang Yangming. <span class="cite">p. 251</span><span class="needs">Builds on: Neo-Confucianism</span></dd></div>
   </dl>
 
   <div class="gloss-group">Government</div>
   <dl class="gloss">
-    <div class="row" id="g-exams"><dt>Civil service examinations</dt><dd>Exams on the Confucian classics used to pick men with literary educations to run the government. In early Joseon they became the main route to high office: birth alone was no longer enough. <span class="cite">pp. 250, 252</span><span class="needs">Builds on: classical Chinese, Confucianism</span></dd></div>
-    <div class="row" id="g-remonstrance"><dt>Remonstrance</dt><dd>Officials' formal criticism of the king's decisions. With "obstruction and remonstrance," Joseon officials limited kings' theoretically absolute power. <span class="cite">p. 250</span></dd></div>
-    <div class="row" id="g-faction"><dt>Faction · purge</dt><dd>A faction is a group of officials bound by personal ties (family, marriage, school, teacher) competing for power. A purge is the removal, exile, or execution of a rival faction's members. Permanent factions began in 1575. <span class="cite">p. 252</span></dd></div>
-    <div class="row" id="g-corvee"><dt>Corvée</dt><dd>Labor owed to the state as a form of tax. Early Joseon taxes were paid in kind (goods) or by physical labor; King Taejong called up 100,000 corvée laborers to build the capital. <span class="cite">pp. 248, 257</span></dd></div>
-    <div class="row" id="g-granary"><dt>Ever-normal granaries</dt><dd>A Chinese system adopted by King Sejo: the state bought grain when cheap and sold it when dear, to keep prices stable. <span class="cite">p. 249</span></dd></div>
-    <div class="row" id="g-tribute"><dt>Tributary system</dt><dd>China's way of handling foreign relations: rulers of countries such as Korea, Ryukyu, and Vietnam sent envoys to the emperor's court. In return, the emperor had a moral obligation to defend loyal tributaries, which is why the Ming sent troops in 1592. <span class="cite">p. 254; Ch. 16</span></dd></div>
+    <div class="row" id="g-exams" data-short="Tests on the Confucian classics; main route to high office in Joseon."><dt>Civil service examinations</dt><dd>Exams on the Confucian classics used to pick men with literary educations to run the government. In early Joseon they became the main route to high office: birth alone was no longer enough. <span class="cite">pp. 250, 252</span><span class="needs">Builds on: classical Chinese, Confucianism</span></dd></div>
+    <div class="row" id="g-remonstrance" data-short="Officials' formal criticism of the king."><dt>Remonstrance</dt><dd>Officials' formal criticism of the king's decisions. With "obstruction and remonstrance," Joseon officials limited kings' theoretically absolute power. <span class="cite">p. 250</span></dd></div>
+    <div class="row" id="g-faction" data-short="Faction = rival group of officials; purge = removing a faction by force."><dt>Faction · purge</dt><dd>A faction is a group of officials bound by personal ties (family, marriage, school, teacher) competing for power. A purge is the removal, exile, or execution of a rival faction's members. Permanent factions began in 1575. <span class="cite">p. 252</span></dd></div>
+    <div class="row" id="g-corvee" data-short="Labor owed to the state as tax."><dt>Corvée</dt><dd>Labor owed to the state as a form of tax. Early Joseon taxes were paid in kind (goods) or by physical labor; King Taejong called up 100,000 corvée laborers to build the capital. <span class="cite">pp. 248, 257</span></dd></div>
+    <div class="row" id="g-granary" data-short="State buys grain cheap, sells it dear, to steady prices."><dt>Ever-normal granaries</dt><dd>A Chinese system adopted by King Sejo: the state bought grain when cheap and sold it when dear, to keep prices stable. <span class="cite">p. 249</span></dd></div>
+    <div class="row" id="g-tribute" data-short="Envoys to China's emperor; in return, China should defend loyal tributaries."><dt>Tributary system</dt><dd>China's way of handling foreign relations: rulers of countries such as Korea, Ryukyu, and Vietnam sent envoys to the emperor's court. In return, the emperor had a moral obligation to defend loyal tributaries, which is why the Ming sent troops in 1592. <span class="cite">p. 254; Ch. 16</span></dd></div>
   </dl>
 
   <div class="gloss-group">People &amp; society</div>
   <dl class="gloss">
-    <div class="row" id="g-yangban"><dt>Yangban <small>YANG-bahn</small></dt><dd>Korea's hereditary aristocrats, who kept a near monopoly on high office throughout Joseon. Over time they split into a national office-holding elite and rural yangban with no hope of office. <span class="cite">pp. 250–251</span><span class="needs">Builds on: civil service examinations</span></dd></div>
-    <div class="row" id="g-concubine"><dt>Concubine · seoeol</dt><dd>A concubine was a man's secondary partner, ranked below his primary wife. Sons of concubines (<em>seoeol</em>) were barred from the civil service exams. <span class="cite">pp. 250, 304, 363</span></dd></div>
-    <div class="row" id="g-hyangni"><dt>Hyangni <small>HYANG-ni</small></dt><dd>Clerks in local administration. The yangban banned their promotion into the central bureaucracy. <span class="cite">p. 250</span></dd></div>
-    <div class="row" id="g-jungin"><dt>Jungin <small>JOONG-in · "middle people"</small></dt><dd>A new hereditary class of clerks, legal specialists, accountants, interpreters, and similar technical experts who could not rise to regular office but kept these posts for their own families. <span class="cite">p. 251</span><span class="needs">Builds on: yangban</span></dd></div>
-    <div class="row" id="g-patri"><dt>Patrilineal · matrilineal</dt><dd>Patrilineal: kinship and property traced through the father's line. Matrilineal: through the mother's line. Goryeo traced kinship through both; Joseon became more patrilineal. <span class="cite">pp. 261, 264</span></dd></div>
-    <div class="row" id="g-mudang"><dt>Mudang</dt><dd>Shamans, usually women, hired to contact the spirits of dead parents and other spirits. <span class="cite">p. 262</span></dd></div>
+    <div class="row" id="g-yangban" data-short="Korea's hereditary aristocracy, near-monopoly on high office."><dt>Yangban <small>YANG-bahn</small></dt><dd>Korea's hereditary aristocrats, who kept a near monopoly on high office throughout Joseon. Over time they split into a national office-holding elite and rural yangban with no hope of office. <span class="cite">pp. 250–251</span><span class="needs">Builds on: civil service examinations</span></dd></div>
+    <div class="row" id="g-concubine" data-short="Secondary partner below the primary wife; her sons (seoeol) were barred from exams."><dt>Concubine · seoeol</dt><dd>A concubine was a man's secondary partner, ranked below his primary wife. Sons of concubines (<em>seoeol</em>) were barred from the civil service exams. <span class="cite">pp. 250, 304, 363</span></dd></div>
+    <div class="row" id="g-hyangni" data-short="Local clerks, barred from central office."><dt>Hyangni <small>HYANG-ni</small></dt><dd>Clerks in local administration. The yangban banned their promotion into the central bureaucracy. <span class="cite">p. 250</span></dd></div>
+    <div class="row" id="g-jungin" data-short="&quot;Middle people&quot;: hereditary technical specialists (interpreters, clerks)."><dt>Jungin <small>JOONG-in · "middle people"</small></dt><dd>A new hereditary class of clerks, legal specialists, accountants, interpreters, and similar technical experts who could not rise to regular office but kept these posts for their own families. <span class="cite">p. 251</span><span class="needs">Builds on: yangban</span></dd></div>
+    <div class="row" id="g-patri" data-short="Kinship traced through the father's (or the mother's) line."><dt>Patrilineal · matrilineal</dt><dd>Patrilineal: kinship and property traced through the father's line. Matrilineal: through the mother's line. Goryeo traced kinship through both; Joseon became more patrilineal. <span class="cite">pp. 261, 264</span></dd></div>
+    <div class="row" id="g-mudang" data-short="Shamans, usually women, who contacted spirits."><dt>Mudang</dt><dd>Shamans, usually women, hired to contact the spirits of dead parents and other spirits. <span class="cite">p. 262</span></dd></div>
   </dl>
 
   <div class="gloss-group">Neighbors</div>
   <dl class="gloss">
-    <div class="row" id="g-wako"><dt>Wakō</dt><dd>Japanese pirates who raided the Korean coast; Sejong defeated them on Tsushima Island. <span class="cite">p. 248</span></dd></div>
-    <div class="row" id="g-manchus"><dt>Jurchens · Manchus</dt><dd>Tribal peoples of Manchuria, north of Korea. In the 1590s Nurhaci united the Jurchens and renamed them Manchus; they founded the Qing dynasty and conquered China in 1644. <span class="cite">p. 254</span></dd></div>
+    <div class="row" id="g-wako" data-short="Japanese pirates raiding Korea."><dt>Wakō</dt><dd>Japanese pirates who raided the Korean coast; Sejong defeated them on Tsushima Island. <span class="cite">p. 248</span></dd></div>
+    <div class="row" id="g-manchus" data-short="Manchurian peoples united by Nurhaci; founded the Qing."><dt>Jurchens · Manchus</dt><dd>Tribal peoples of Manchuria, north of Korea. In the 1590s Nurhaci united the Jurchens and renamed them Manchus; they founded the Qing dynasty and conquered China in 1644. <span class="cite">p. 254</span></dd></div>
   </dl>
 
   <div class="gloss-group">Culture</div>
   <dl class="gloss">
-    <div class="row" id="g-hangul"><dt>Hangul <small>HAN-gul</small></dt><dd>The Korean alphabet invented under King Sejong in 1443, "the first and only one of its kind in East Asia." It let people who knew no Chinese, including women, read and write. <span class="cite">pp. 248, 262</span><span class="needs">Builds on: classical Chinese</span></dd></div>
-    <div class="row" id="g-sijo"><dt>Sijo · gasa <small>SHE-joe · GA-sa</small></dt><dd>Korean poetic forms: the short sijo, its longer version (saseol sijo), and the still longer lyrical gasa. They used alliteration and cadence, not rhyme. <span class="cite">pp. 258–259</span></dd></div>
-    <div class="row" id="g-pansori"><dt>Pansori <small>PAN-sori</small></dt><dd>A sung chant performed with a drummer, which spread in the countryside in the 1700s; many songs mocked the yangban. <span class="cite">p. 260</span></dd></div>
-    <div class="row" id="g-northern"><dt>Northern Learning</dt><dd>An 18th-century reform school urging Korea to drop its prejudice against the Manchus and learn from Qing China to improve the economy. <span class="cite">p. 260</span><span class="needs">Builds on: Manchus</span></dd></div>
-    <div class="row" id="g-western"><dt>Western Learning</dt><dd>Koreans' term for European ideas that arrived through Chinese-language books, lumping Catholic theology together with Western science. <span class="cite">p. 260</span></dd></div>
+    <div class="row" id="g-hangul" data-short="Korean alphabet, 1443; let non-Chinese readers, including women, write."><dt>Hangul <small>HAN-gul</small></dt><dd>The Korean alphabet invented under King Sejong in 1443, "the first and only one of its kind in East Asia." It let people who knew no Chinese, including women, read and write. <span class="cite">pp. 248, 262</span><span class="needs">Builds on: classical Chinese</span></dd></div>
+    <div class="row" id="g-sijo" data-short="Korean poem forms, short (sijo) to long (gasa)."><dt>Sijo · gasa <small>SHE-joe · GA-sa</small></dt><dd>Korean poetic forms: the short sijo, its longer version (saseol sijo), and the still longer lyrical gasa. They used alliteration and cadence, not rhyme. <span class="cite">pp. 258–259</span></dd></div>
+    <div class="row" id="g-pansori" data-short="Sung chant with a drummer; often mocked yangban."><dt>Pansori <small>PAN-sori</small></dt><dd>A sung chant performed with a drummer, which spread in the countryside in the 1700s; many songs mocked the yangban. <span class="cite">p. 260</span></dd></div>
+    <div class="row" id="g-northern" data-short="18th-c. call to learn from Qing China."><dt>Northern Learning</dt><dd>An 18th-century reform school urging Korea to drop its prejudice against the Manchus and learn from Qing China to improve the economy. <span class="cite">p. 260</span><span class="needs">Builds on: Manchus</span></dd></div>
+    <div class="row" id="g-western" data-short="European theology and science via Chinese books."><dt>Western Learning</dt><dd>Koreans' term for European ideas that arrived through Chinese-language books, lumping Catholic theology together with Western science. <span class="cite">p. 260</span></dd></div>
   </dl>
 </section>
 
@@ -1012,6 +1057,41 @@ footer.end a{color:var(--muted)}
     a.addEventListener('click',function(ev){if(matchMedia('(hover: none)').matches&&!a.dataset.shown){ev.preventDefault();document.querySelectorAll('a.term').forEach(function(x){delete x.dataset.shown});a.dataset.shown=1;show(a);}});
   });
   addEventListener('scroll',hide,{passive:true});
+
+
+  // key-term notes widget (short versions of the Key terms section)
+  var notes=document.getElementById('notes'),nb=document.getElementById('notes-btn'),nl=document.getElementById('notes-list'),ns=document.getElementById('notes-search');
+  document.querySelectorAll('#terms .gloss-group').forEach(function(g){
+    var dl=g.nextElementSibling,h=document.createElement('div');h.className='grp';h.textContent=g.textContent;nl.appendChild(h);
+    dl.querySelectorAll('.row').forEach(function(r){
+      var a=document.createElement('a');a.className='item';a.href='#'+r.id;
+      var b=document.createElement('b');b.textContent=r.querySelector('dt').firstChild.textContent.trim();
+      a.appendChild(b);a.appendChild(document.createTextNode(r.dataset.short));
+      a.addEventListener('click',function(){if(innerWidth<700)toggleNotes(false)});
+      nl.appendChild(a);
+    });
+  });
+  var empty=document.createElement('div');empty.className='empty';empty.textContent='No matching terms.';empty.hidden=true;nl.appendChild(empty);
+  function toggleNotes(open){
+    if(open===undefined)open=!notes.classList.contains('open');
+    notes.classList.toggle('open',open);notes.setAttribute('aria-hidden',!open);nb.setAttribute('aria-expanded',open);
+    if(open)setTimeout(function(){ns.focus({preventScroll:true})},50);
+  }
+  nb.addEventListener('click',function(){toggleNotes()});
+  document.getElementById('notes-close').addEventListener('click',function(){toggleNotes(false);nb.focus()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&notes.classList.contains('open')){toggleNotes(false);nb.focus()}});
+  ns.addEventListener('input',function(){
+    var q=ns.value.trim().toLowerCase(),any=false;
+    nl.querySelectorAll('.item').forEach(function(a){var m=!q||a.textContent.toLowerCase().indexOf(q)>-1;a.hidden=!m;if(m)any=true});
+    nl.querySelectorAll('.grp').forEach(function(g){var n=g.nextElementSibling,vis=false;while(n&&n.classList.contains('item')){if(!n.hidden)vis=true;n=n.nextElementSibling}g.hidden=!vis});
+    empty.hidden=any;
+  });
+
+  // return to top
+  var tt=document.getElementById('totop');
+  tt.addEventListener('click',function(){scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  function ttShow(){tt.classList.toggle('show',scrollY>600)}
+  addEventListener('scroll',ttShow,{passive:true});ttShow();
 
   // hangul demo
   var stage=document.getElementById('stage'),build=document.getElementById('build'),timers=[];
