@@ -1,9 +1,7 @@
-# Modern East Asia Since 1600 — Lecture Slides
+# Modern East Asia Since 1600 — Study Guides
 
-Slides built with [reveal.js](https://revealjs.com), hosted on GitHub Pages.
+Study guides based on Ebrey & Walthall, *Modern East Asia from 1600* (3rd ed.), hosted on GitHub Pages.
 
-- `index.html` — course homepage listing all 19 lectures
-- `units/lecture-XX/index.html` — one folder per lecture deck (images in `images/`)
-- `units/_template/` — starting point for new decks
-
-Press **S** in a deck for speaker notes, **F** for full screen, **Esc** for slide overview.
+- `index.html` — course homepage listing all units
+- `unit{n}.html` — one study guide per unit
+- `assets/unit{n}/` — images and maps used by each guide
