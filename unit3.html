@@ -466,6 +466,12 @@ nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
 .pair .pivot span{font-size:1rem;padding:6px 11px}
 @media (min-width:640px){.pair>.pivot{background-size:84% 2px}}
 
+
+/* discussion questions: expand / collapse all */
+.q-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}
+.q-tools .btn[disabled]{opacity:.45;cursor:default;border-color:var(--line);color:var(--muted)}
+.q-tools .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.q-tools{display:none!important}}
 </style>
 </head>
 <body class="no-js">
@@ -1275,6 +1281,10 @@ nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
 
   <h3>Discussion questions</h3>
   <p class="cite" style="white-space:normal">Open each for points the chapter gives you to work with.</p>
+  <div class="q-tools" role="group" aria-label="Discussion questions">
+    <button class="btn" id="q-expand" type="button">Expand all</button>
+    <button class="btn" id="q-collapse" type="button">Collapse all</button>
+  </div>
   <details class="q"><summary>What set the Tokugawa apart from earlier military regimes?</summary>
     <div class="a"><ul><li>Primogeniture: loyalty to office, not person.</li><li>Sankin kōtai and hostages answered the failures of Kamakura and Ashikaga.</li><li>A real bureaucracy, and ideology (deified Ieyasu, way of heaven) turning power into authority.</li></ul></div></details>
   <details class="q"><summary>Did restricting foreign contact isolate Japan?</summary>
@@ -1496,6 +1506,17 @@ nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
   document.getElementById('fc-prev').addEventListener('click',function(){i=(i-1+cards.length)%cards.length;render()});
   document.getElementById('fc-shuffle').addEventListener('click',function(){for(var k=cards.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=cards[k];cards[k]=cards[j];cards[j]=t}i=0;render()});
   render();
+})();
+</script>
+<script>
+(function(){
+  var qs=[].slice.call(document.querySelectorAll('details.q')),ex=document.getElementById('q-expand'),co=document.getElementById('q-collapse');
+  if(!qs.length||!ex||!co)return;
+  function sync(){var n=qs.filter(function(d){return d.open}).length;ex.disabled=n===qs.length;co.disabled=n===0;}
+  ex.addEventListener('click',function(){qs.forEach(function(d){d.open=true});sync();});
+  co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
+  qs.forEach(function(d){d.addEventListener('toggle',sync)});
+  sync();
 })();
 </script>
 </body>

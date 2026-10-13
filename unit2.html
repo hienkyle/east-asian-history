@@ -355,6 +355,12 @@ h1 .zh{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;verti
 .tree .edge.love{stroke:var(--accent);stroke-width:2}
 .tree .edge.wed{stroke:var(--ink);stroke-width:2}
 @media (max-width:600px){.mapbox .rl{font-size:28px}.mapbox .cl{font-size:22px}.mapbox .tl{font-size:20px}.mapbox .pt text{opacity:0;transition:opacity .4s}.mapbox .pt.hot text{opacity:1}.mapbox text{stroke-width:6px}}
+
+/* discussion questions: expand / collapse all */
+.q-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}
+.q-tools .btn[disabled]{opacity:.45;cursor:default;border-color:var(--line);color:var(--muted)}
+.q-tools .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.q-tools{display:none!important}}
 </style>
 </head>
 <body class="no-js">
@@ -1145,6 +1151,10 @@ h1 .zh{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;verti
 
   <h3>Discussion questions</h3>
   <p class="cite" style="white-space:normal">Open each for points the chapter gives you to work with.</p>
+  <div class="q-tools" role="group" aria-label="Discussion questions">
+    <button class="btn" id="q-expand" type="button">Expand all</button>
+    <button class="btn" id="q-collapse" type="button">Collapse all</button>
+  </div>
   <details class="q"><summary>How did the Manchus hold a multiethnic empire together?</summary>
     <div class="a"><ul><li>Spoke each people's idiom: Confucian sage to Chinese, cakravartin and Lamaist patron to Tibetans and Mongols, documents in four languages.</li><li>Light rule in Tibet and Xinjiang (no queue, own religious leaders).</li><li>A loyal, privileged banner elite garrisoned across China.</li><li>Military edge: guns against bows on the steppe.</li></ul></div></details>
   <details class="q"><summary>Why did the Ming fall and the Qing succeed?</summary>
@@ -1346,6 +1356,17 @@ h1 .zh{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;verti
   document.getElementById('fc-prev').addEventListener('click',function(){i=(i-1+cards.length)%cards.length;render()});
   document.getElementById('fc-shuffle').addEventListener('click',function(){for(var k=cards.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=cards[k];cards[k]=cards[j];cards[j]=t}i=0;render()});
   render();
+})();
+</script>
+<script>
+(function(){
+  var qs=[].slice.call(document.querySelectorAll('details.q')),ex=document.getElementById('q-expand'),co=document.getElementById('q-collapse');
+  if(!qs.length||!ex||!co)return;
+  function sync(){var n=qs.filter(function(d){return d.open}).length;ex.disabled=n===qs.length;co.disabled=n===0;}
+  ex.addEventListener('click',function(){qs.forEach(function(d){d.open=true});sync();});
+  co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
+  qs.forEach(function(d){d.addEventListener('toggle',sync)});
+  sync();
 })();
 </script>
 </body>
