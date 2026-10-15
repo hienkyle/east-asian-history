@@ -1,0 +1,1523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 5 · The Western Challenge</title>
+<meta name="description" content="Study guide for Unit 5: the Western challenge in East Asia, the Opium Wars, Perry and the Harris treaty, and the Ganghwa Treaty (1793–1882). Based on Ebrey &amp; Walthall, Modern East Asia from 1600, pp. 306–313 with chapter passages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7f2; --paper:#fffdf9; --fg:#1f1d1a; --muted:#6b645a; --line:#e6dfd3;
+  --accent:#a23b2a; --accent-soft:#f6e4de; --ink:#2c5d8a; --ink-soft:#e2ecf5;
+  --gold:#a8822e; --gold-soft:#f5ecd6; --green:#3f6b4a; --green-soft:#e3eee5;
+  --shadow:0 1px 2px rgba(60,40,20,.06),0 4px 16px rgba(60,40,20,.06);
+  --serif:"Source Serif 4","Noto Serif JP",Georgia,"Times New Roman",serif;
+  /* one typeface across the page; Noto Serif JP only supplies Japanese glyphs */
+  --sans:var(--serif);
+  --kr:var(--serif);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+    --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+    --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+  --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+  --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+img{max-width:100%;display:block}
+.sans{font-family:var(--sans)}
+
+/* progress bar */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:50}
+
+/* layout */
+.shell{display:grid;grid-template-columns:1fr;max-width:1180px;margin:0 auto;padding:0 16px}
+@media (min-width:1040px){.shell{grid-template-columns:240px minmax(0,1fr);gap:56px;padding:0 32px}}
+main{max-width:760px;min-width:0;padding-bottom:80px}
+
+/* toc */
+nav.toc{display:none}
+@media (min-width:1040px){
+  nav.toc{display:block;position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;padding:40px 0 24px;font-family:var(--sans);font-size:.88rem}
+}
+.toc .back{display:inline-block;margin-bottom:18px;color:var(--muted);text-decoration:none}
+.toc .back:hover{color:var(--accent)}
+.toc h2{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:700}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+.toc li a{display:block;padding:5px 10px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none;line-height:1.35}
+.toc li a:hover{color:var(--fg)}
+.toc li a.active{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+.toc .tools{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.btn{font:600 .82rem var(--sans);border:1px solid var(--line);background:var(--paper);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.mobile-toc{margin:0 0 8px}
+@media (min-width:1040px){.mobile-toc{display:none}}
+.mobile-toc summary{font:600 .9rem var(--sans);cursor:pointer;padding:10px 14px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.mobile-toc ol{font-family:var(--sans);font-size:.92rem;margin:8px 0 0;padding-left:22px}
+.mobile-toc li{margin:4px 0}
+
+/* hero */
+header.hero{padding:48px 0 24px}
+.eyebrow{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em}
+h1 .kr{font-family:var(--kr);font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+.dek{font-size:1.2rem;color:var(--muted);margin:0 0 20px;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--sans);font-size:.85rem}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.chip b{color:var(--fg)}
+
+/* sections */
+section.unit{padding-top:36px;margin-top:36px;border-top:1px solid var(--line)}
+section.unit:first-of-type{border-top:none;margin-top:8px}
+.sec-num{font:700 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:1.85rem;line-height:1.2;margin:4px 0 6px}
+.pages{font:.82rem var(--sans);color:var(--muted);margin:0 0 18px}
+h3{font:700 1.08rem var(--sans);margin:28px 0 8px}
+p{margin:0 0 14px}
+ul.tight{margin:0 0 14px;padding-left:20px}
+ul.tight li{margin:4px 0}
+.cite{font:.78rem var(--sans);color:var(--muted);white-space:nowrap}
+p.cite{white-space:normal}
+
+/* glossary links */
+a.term{color:inherit;text-decoration:underline dotted var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:help}
+a.term:hover{color:var(--accent)}
+#tip{position:absolute;z-index:60;max-width:320px;background:var(--fg);color:var(--bg);font:.88rem/1.45 var(--sans);padding:10px 12px;border-radius:8px;box-shadow:var(--shadow);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
+#tip.on{opacity:1;transform:none}
+#tip b{display:block;margin-bottom:2px}
+
+/* callouts */
+.callout{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.callout .label{font:700 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.callout.ink{border-left-color:var(--ink)} .callout.ink .label{color:var(--ink)}
+.callout.gold{border-left-color:var(--gold)} .callout.gold .label{color:var(--gold)}
+.callout.green{border-left-color:var(--green)} .callout.green .label{color:var(--green)}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+.bigq{font-size:1.35rem;line-height:1.35;font-style:italic;margin:4px 0 0}
+
+/* glance grid */
+.grid{display:grid;gap:12px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.card h4{font:700 1rem var(--sans);margin:0 0 4px}
+.card .sub{font:.8rem var(--sans);color:var(--muted);margin-bottom:6px}
+.card p,.card ul{font-size:.95rem;margin:0}
+.card ul{padding-left:18px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .n{font:700 1.9rem/1 var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .l{font:.86rem/1.35 var(--sans);color:var(--muted);margin-top:6px}
+
+/* glossary */
+dl.gloss{margin:12px 0 0}
+.gloss .row{display:grid;grid-template-columns:1fr;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+@media (min-width:640px){.gloss .row{grid-template-columns:180px 1fr;gap:16px}}
+.gloss dt{font:700 .98rem var(--sans)}
+.gloss dt small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.gloss dd{margin:0;font-size:.96rem}
+.gloss .needs{display:block;font:.78rem var(--sans);color:var(--muted);margin-top:3px}
+.gloss .row:target{background:var(--gold-soft);border-radius:8px;padding-left:10px;padding-right:10px}
+.gloss-group{font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:22px 0 2px}
+
+/* timeline: equal rows so nodes sit at even intervals; the axis runs dot to dot */
+.timeline{position:relative;margin:18px 0 18px 6px;padding-left:26px;display:grid;grid-auto-rows:1fr;row-gap:14px}
+.timeline .ev{position:relative;margin:0}
+.timeline .ev::before{content:"";position:absolute;z-index:1;box-sizing:border-box;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline .ev:not(:last-child)::after{content:"";position:absolute;z-index:0;left:-28px;top:13px;width:2px;height:calc(100% + 14px);background:var(--line)}
+.timeline .ev.major::before{background:var(--accent)}
+.timeline .yr{font:700 .92rem var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline .tx{font-size:.97rem}
+
+/* figures */
+figure{margin:20px 0}
+figure img{border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+figcaption{font:.84rem/1.45 var(--sans);color:var(--muted);margin-top:8px}
+figcaption b{color:var(--fg)}
+.side{display:grid;gap:20px;align-items:start}
+@media (min-width:700px){.side{grid-template-columns:minmax(0,1fr) 260px}.side.left{grid-template-columns:260px minmax(0,1fr)}}
+.side figure{margin:0}
+.zoomable{cursor:zoom-in}
+#lightbox{position:fixed;inset:0;background:rgba(10,8,6,.88);display:none;align-items:center;justify-content:center;z-index:80;padding:16px;cursor:zoom-out}
+#lightbox.on{display:flex}
+#lightbox img{max-height:92vh;max-width:96vw;width:auto;border-radius:6px}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font:.92rem/1.45 var(--sans)}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--bg);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+tbody tr:last-child td{border-bottom:none}
+td.yr{font-weight:700;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.k{font-weight:600;white-space:nowrap}
+
+/* versus */
+.versus{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;align-items:stretch}
+@media (min-width:600px){.versus{grid-template-columns:1fr auto 1fr}}
+.versus .vs{align-self:center;justify-self:center;font:700 .9rem var(--sans);color:var(--muted)}
+.versus .card .big{font:700 1.3rem var(--sans);color:var(--accent)}
+.versus .card:last-child .big{color:var(--ink)}
+
+/* bars */
+.bars{margin:16px 0;display:grid;gap:16px}
+.barset h4{font:700 .9rem var(--sans);margin:0 0 6px}
+.bar{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;font:.88rem var(--sans);margin:5px 0}
+.bar .track{background:var(--line);border-radius:6px;height:26px;overflow:hidden}
+.bar .fill{height:100%;width:0;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-weight:700;font-size:.82rem;white-space:nowrap;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.bar .fill.ink{background:var(--ink)}
+:root[data-theme="dark"] .bar .fill{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bar .fill{color:#16140f}}
+
+/* factions svg */
+.tree{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:16px 0}
+.tree svg{width:100%;height:auto;display:block}
+.tree .node rect{fill:var(--bg);stroke:var(--line)}
+.tree .node.root rect{fill:var(--accent-soft);stroke:var(--accent)}
+.tree text{font-family:var(--sans);fill:var(--fg);font-size:14px}
+.tree text.small{font-size:11px;fill:var(--muted);paint-order:stroke;stroke:var(--paper);stroke-width:5px;stroke-linejoin:round}
+.tree .edge{stroke:var(--muted);stroke-width:1.5;fill:none}
+.tree .edge.ext{stroke-dasharray:5 4}
+.legend{font:.8rem var(--sans);color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;padding:4px 6px 0}
+
+/* quotes */
+blockquote{margin:16px 0;padding:6px 0 6px 18px;border-left:3px solid var(--gold);font-style:italic;font-size:1.08rem}
+blockquote footer{font:normal .84rem var(--sans);color:var(--muted);margin-top:6px}
+
+/* self check */
+details.q{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 16px}
+details.q summary{cursor:pointer;padding:12px 0;font-weight:600;list-style:none;display:flex;gap:10px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::before{content:"+";font:700 1.1rem var(--sans);color:var(--accent);width:14px;flex:none}
+details.q[open] summary::before{content:"–"}
+details.q .a{padding:0 0 14px 24px;font-size:.96rem}
+details.q .a ul{margin:0;padding-left:18px}
+
+/* flashcards */
+.fc-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.fc{perspective:1000px;height:220px;cursor:pointer;margin:0 auto;max-width:520px}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc.flip .fc-inner{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid var(--line)}
+.fc-front{background:var(--accent-soft)}
+.fc-front .t{font:700 1.6rem var(--sans)}
+.fc-front .h{font:.82rem var(--sans);color:var(--muted);margin-top:8px}
+.fc-back{background:var(--bg);transform:rotateY(180deg);font-size:.98rem;overflow:auto}
+.fc-ctrl{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px;font:.88rem var(--sans);color:var(--muted);flex-wrap:wrap}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+
+/* floating tools: key-term notes + return to top */
+.fab-stack{position:fixed;right:16px;bottom:16px;z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab{font:600 .9rem var(--serif);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);color:var(--fg);border-radius:999px;padding:10px 16px;box-shadow:var(--shadow);cursor:pointer}
+.fab:hover{border-color:var(--accent);color:var(--accent)}
+.fab.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.fab.primary:hover{filter:brightness(1.08);color:#fff}
+:root[data-theme="dark"] .fab.primary{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fab.primary{color:#16140f}}
+#totop{opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s,transform .25s}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#notes.open + .fab-stack #totop{opacity:0;pointer-events:none}
+#notes [hidden]{display:none!important}
+#notes{position:fixed;right:16px;bottom:76px;z-index:75;width:min(380px,calc(100vw - 32px));max-height:min(70vh,620px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.18);opacity:0;transform:translateY(12px) scale(.98);transform-origin:bottom right;pointer-events:none;transition:opacity .2s,transform .2s}
+#notes.open{opacity:1;transform:none;pointer-events:auto}
+#notes header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px 8px;border-bottom:1px solid var(--line)}
+#notes header h2{font-size:1.05rem;margin:0}
+#notes header p{margin:2px 0 0;font-size:.78rem;color:var(--muted)}
+#notes .x{border:none;background:none;font-size:1.4rem;line-height:1;color:var(--muted);cursor:pointer;padding:4px 6px}
+#notes .x:hover{color:var(--accent)}
+#notes input{margin:10px 16px 6px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:.9rem var(--serif)}
+#notes input:focus{outline:2px solid var(--accent);outline-offset:-1px}
+#notes .list{overflow:auto;padding:0 16px 14px}
+#notes .grp{font:700 .7rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:12px 0 2px}
+#notes .item{display:block;padding:7px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:.88rem;line-height:1.4}
+#notes .item:hover b{color:var(--accent)}
+#notes .item b{display:block;font-size:.92rem}
+#notes .empty{color:var(--muted);font-size:.88rem;padding:10px 0}
+@media (max-width:520px){#notes{right:8px;left:8px;width:auto;bottom:72px}.fab .lbl-long{display:none}}
+
+/* sources */
+.sources li{margin:6px 0;font-size:.94rem}
+footer.end{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font:.85rem var(--sans);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer.end a{color:var(--muted)}
+
+@media print{
+  nav.toc,.mobile-toc,#progress,.demo-ctrl,.fc-wrap,.btn,.fab-stack,#notes{display:none!important}
+  .shell{display:block} body{background:#fff;color:#000}
+  .reveal{opacity:1;transform:none}
+  details.q{border:none} details.q .a{display:block}
+  section.unit{break-inside:auto}
+}
+
+/* ---- unit 3 additions ---- */
+:root{--plum:#7a4f8f;--plum-soft:#efe5f3;--sea:#d7e3e7;--land:#ece5d8;--land-line:#bdb19c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--plum:#c39ad6;--plum-soft:#2c2232;--sea:#17222a;--land:#2a261f;--land-line:#4a4338}}
+:root[data-theme="dark"]{--plum:#c39ad6;--plum-soft:#2c2232;--sea:#17222a;--land:#2a261f;--land-line:#4a4338}
+h1 .ja{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+
+/* status hierarchy */
+.status{display:grid;gap:10px;margin:16px 0;grid-template-columns:1fr}
+@media (min-width:640px){.status{grid-template-columns:1.25fr 1fr 1fr}}
+.status .col{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.status .col h4{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.status .col.core h4{color:var(--accent)} .status .col.mid h4{color:var(--ink)} .status .col.out h4{color:var(--plum)}
+.tier{display:block;width:100%;text-align:left;font:600 .95rem var(--serif);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0;cursor:pointer;opacity:0;transform:translateX(-8px);transition:opacity .45s,transform .45s,border-color .2s,background .2s}
+.status.in .tier{opacity:1;transform:none}
+.tier small{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
+.core .tier:nth-child(2){margin-left:0}.core .tier:nth-child(3){margin-left:6%}.core .tier:nth-child(4){margin-left:12%}.core .tier:nth-child(5){margin-left:18%}
+.core .tier{width:auto}
+.tier:hover,.tier[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.mid .tier:hover,.mid .tier[aria-pressed="true"]{border-color:var(--ink);background:var(--ink-soft)}
+.out .tier:hover,.out .tier[aria-pressed="true"]{border-color:var(--plum);background:var(--plum-soft)}
+.status-cap{min-height:3.4em;margin:4px 0 16px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 8px 8px 0;font-size:.96rem}
+
+/* military class ladder */
+.mil{display:grid;gap:8px;margin:16px 0}
+.mil .r{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+@media (max-width:560px){.mil .r{grid-template-columns:1fr;gap:2px}}
+.mil .r b{font-size:1rem}
+.mil .r b small{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
+.mil .r p{margin:0;font-size:.94rem}
+.mil .r.top{border-left:4px solid var(--accent)} .mil .r.fu{border-left:4px solid var(--gold)} .mil .r.to{border-left:4px solid var(--ink)} .mil .r.ha{border-left:4px solid var(--green)}
+
+/* generic svg panel */
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:18px 0;box-shadow:var(--shadow)}
+.panel svg{width:100%;height:auto;display:block}
+.panel text{font-family:var(--serif);fill:var(--fg)}
+.panel .small{font-size:12px;fill:var(--muted)}
+.panel .box{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.panel .box.acc{fill:var(--accent-soft);stroke:var(--accent)}
+.panel .box.ink{fill:var(--ink-soft);stroke:var(--ink)}
+.panel .box.gold{fill:var(--gold-soft);stroke:var(--gold)}
+.panel .box.green{fill:var(--green-soft);stroke:var(--green)}
+.panel .road{fill:none;stroke:var(--line);stroke-width:10;stroke-linecap:round}
+.panel .roadline{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:6 8;opacity:.7}
+.ctrl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.ctrl .step{font:600 .82rem var(--serif);border:1px solid var(--line);background:var(--bg);color:var(--muted);padding:6px 11px;border-radius:999px;cursor:pointer}
+.ctrl .step:hover{color:var(--fg);border-color:var(--accent)}
+.ctrl .step[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .ctrl .step[aria-pressed="true"]{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ctrl .step[aria-pressed="true"]{color:#16140f}}
+.cap{min-height:4.4em;margin-top:10px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--bg);border-radius:0 8px 8px 0;font-size:.96rem}
+.cap b{display:block;font-size:1rem}
+
+/* sankin kotai */
+#sk .who{transition:transform 1.6s cubic-bezier(.45,.05,.3,1)}
+#sk .lord circle{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+#sk .fam circle{fill:var(--gold);stroke:var(--paper);stroke-width:2}
+#sk .ret circle{fill:var(--muted);stroke:var(--paper);stroke-width:1.5}
+#sk .lbl{font-size:12.5px}
+#sk .cost{font-size:12px;fill:var(--accent);opacity:0;transition:opacity .4s}
+#sk.moving .cost{opacity:1}
+#sk .coin{fill:var(--gold);opacity:0}
+#sk.moving .coin{animation:coin 1.6s ease-out}
+@keyframes coin{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(-26px)}}
+
+/* map of foreign contact */
+.mapbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:18px 0;box-shadow:var(--shadow)}
+.mapgrid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:720px){.mapgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:start}}
+.mapbox svg{width:100%;height:auto;display:block;border-radius:8px;background:var(--sea)}
+.mapbox .land{fill:var(--land);stroke:var(--land-line);stroke-width:.7}
+.mapbox text{font-family:var(--serif);fill:var(--fg);paint-order:stroke;stroke:var(--sea);stroke-width:4px;stroke-linejoin:round}
+.mapbox .cl{font-size:12px}
+.mapbox .rl{font-size:13px;font-weight:700;letter-spacing:.1em;fill:var(--muted)}
+.mapbox .city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.5}
+.mapbox .win{cursor:pointer}
+.mapbox .win circle.halo{fill:var(--accent);opacity:.18;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+.mapbox .win circle.core{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+.mapbox .win.on circle.core{fill:var(--ink)}
+.mapbox .win.on text{font-weight:700}
+.mapbox .route{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:5 6;opacity:.25;transition:opacity .3s}
+.mapbox .route.on{opacity:1;animation:dash 1.4s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-22}}
+@keyframes halo{0%{transform:scale(.6);opacity:.35}100%{transform:scale(2.2);opacity:0}}
+.windows{display:grid;gap:8px}
+.windows button{text-align:left;font:inherit;font-size:.94rem;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;color:var(--fg)}
+.windows button b{display:block;font-size:1rem}
+.windows button span{color:var(--muted);font-size:.86rem}
+.windows button[aria-pressed="true"]{border-left-color:var(--accent);background:var(--accent-soft)}
+.windows .detail{font-size:.95rem;padding:10px 12px;border-radius:10px;background:var(--paper);border:1px dashed var(--line)}
+
+/* flows (cycle, credit) */
+.panel .arrow{fill:none;stroke:var(--muted);stroke-width:1.6;marker-end:url(#ah)}
+.panel .pulse{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-dasharray:14 400;animation:run 3.2s linear infinite}
+.panel .pulse.g{stroke:var(--gold)}
+.panel .pulse.i{stroke:var(--ink)}
+@keyframes run{from{stroke-dashoffset:0}to{stroke-dashoffset:-414}}
+
+/* share bars */
+.share{margin:14px 0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.share h4{font:700 .95rem var(--serif);margin:0 0 10px}
+.share .row{display:grid;grid-template-columns:150px 1fr 70px;gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+@media (max-width:520px){.share .row{grid-template-columns:96px 1fr 58px}}
+.share .track{background:var(--line);height:20px;border-radius:5px;overflow:hidden}
+.share .fill{height:100%;width:0;background:var(--accent);border-radius:5px;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.share .fill.ink{background:var(--ink)} .share .fill.gold{background:var(--gold)} .share .fill.green{background:var(--green)}
+.share .v{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.share .note{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+/* thinkers board */
+.think{display:grid;gap:12px;margin:16px 0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.think .card{border-top:4px solid var(--line)}
+.think .card.a{border-top-color:var(--accent)} .think .card.b{border-top-color:var(--ink)} .think .card.c{border-top-color:var(--gold)} .think .card.d{border-top-color:var(--green)} .think .card.e{border-top-color:var(--plum)}
+.think .who{font:700 .98rem var(--serif);margin:10px 0 2px}
+.think .who:first-of-type{margin-top:4px}
+.think .card p{font-size:.92rem}
+.think .vs{display:inline-block;font:700 .72rem var(--serif);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+
+/* li / qi / xin */
+.lqx{display:grid;gap:10px;grid-template-columns:1fr;margin:16px 0}
+@media (min-width:620px){.lqx{grid-template-columns:1fr auto 1fr auto 1fr;align-items:center}}
+.lqx .card{text-align:center}
+.lqx .card .big{font:700 1.5rem var(--serif);color:var(--accent)}
+.lqx .op{font:700 1.2rem var(--serif);color:var(--muted);text-align:center}
+
+/* cause chain */
+.chain{list-style:none;padding:0;margin:14px 0;display:grid;gap:0}
+.chain li{position:relative;padding:10px 14px 10px 46px;background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:18px;font-size:.95rem}
+.chain li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);color:var(--muted);font-weight:700}
+.chain li .n{position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .8rem/24px var(--serif);text-align:center}
+.chain li:last-child{background:var(--accent-soft);border-color:var(--accent)}
+
+/* inheritance bars */
+.inh .row{grid-template-columns:170px 1fr 92px}
+@media (max-width:520px){.inh .row{grid-template-columns:100px 1fr 70px}}
+
+.wide{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.wide svg{min-width:600px}.wide::after{content:"← swipe to see the whole diagram →";display:block;font-size:.78rem;color:var(--muted);text-align:center;margin-top:4px}}
+/* ---- unit 3 · revision 2 ---- */
+.fn{font-weight:700;color:var(--accent);letter-spacing:.02em}
+figure.fig{margin:18px 0}
+table caption{caption-side:top;text-align:left;padding:10px 12px;font:.86rem/1.4 var(--serif);color:var(--muted);border-bottom:1px solid var(--line);background:var(--bg)}
+table caption b{color:var(--fg)}
+.lqx-fig figcaption{margin-top:0}
+
+/* sticky contents bar on small screens */
+@media (max-width:1039px){
+  html{scroll-padding-top:72px}
+  .mobile-toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:45;margin:0 -16px 8px;padding:8px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .mobile-toc summary{display:flex;align-items:center;gap:10px;list-style:none}
+  .mobile-toc summary::-webkit-details-marker{display:none}
+  .mobile-toc summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:transform .2s}
+  .mobile-toc[open] summary::after{transform:rotate(180deg)}
+  .mobile-toc .lbl{color:var(--muted);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;flex:none}
+  .mobile-toc .cur{color:var(--accent);font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobile-toc ol{max-height:min(60vh,460px);overflow-y:auto;overscroll-behavior:contain;list-style:none;padding:6px 0;margin:8px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+  .mobile-toc li{margin:0}
+  .mobile-toc li a{display:block;padding:7px 14px;border-left:3px solid transparent;color:var(--muted);text-decoration:none}
+  .mobile-toc li a.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft);font-weight:700}
+}
+nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
+
+/* status order: ranked column vs unranked groups */
+.status .col .hint{font-size:.76rem;color:var(--muted);margin:-4px 0 6px}
+.status .tier{width:100%;margin-left:0!important}
+.status .core{counter-reset:rk}
+.status .core .tier{display:flex;align-items:center;gap:10px}
+.status .core .tier::before{counter-increment:rk;content:counter(rk);flex:none;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .74rem/20px var(--serif);text-align:center}
+
+/* contrast pair with a pivot word */
+.contrast{display:grid;grid-template-columns:1fr;margin:18px 0;align-items:stretch}
+@media (min-width:640px){.contrast{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}}
+.contrast .cside{border-radius:12px;padding:16px 18px;border:1px solid var(--line);min-width:0}
+.contrast .cside.a{background:var(--ink-soft);border-color:var(--ink)}
+.contrast .cside.b{background:var(--accent-soft);border-color:var(--accent)}
+.contrast .cside .big{font:700 1.35rem var(--serif);margin-bottom:6px}
+.contrast .cside.a .big{color:var(--ink)} .contrast .cside.b .big{color:var(--accent)}
+.contrast .cside ul{margin:0;padding-left:20px}
+.contrast .cside li{margin:6px 0}
+.pivot{display:flex;align-items:center;justify-content:center;min-height:58px;background:linear-gradient(var(--line),var(--line)) center/76% 2px no-repeat}
+@media (min-width:640px){.contrast>.pivot{background-size:2px 84%}}
+.pivot span{font:italic 700 1.25rem/1 var(--serif);color:var(--fg);background:var(--bg);border:2px solid var(--fg);border-radius:999px;padding:8px 14px;box-shadow:var(--shadow)}
+
+/* paired change/strain rows */
+.pairs{margin:18px 0;display:grid;gap:14px}
+.pairs .head{display:none}
+@media (min-width:640px){.pairs .head{display:grid;grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);font:700 1.35rem var(--serif)}.pairs .head .a{color:var(--green)}.pairs .head .b{color:var(--accent)}}
+.pair{display:grid;grid-template-columns:1fr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+@media (min-width:640px){.pair{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}.pair .area{grid-column:1/-1}}
+.pair .area{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 2px 8px}
+.pair .c{border-radius:10px;padding:10px 12px;font-size:.96rem;min-width:0}
+.pair .c b.tag{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+@media (min-width:640px){.pair .c b.tag{display:none}}
+.pair .c.a{background:var(--green-soft);border-left:4px solid var(--green)} .pair .c.a b.tag{color:var(--green)}
+.pair .c.b{background:var(--accent-soft);border-left:4px solid var(--accent)} .pair .c.b b.tag{color:var(--accent)}
+.pair .pivot{min-height:44px}
+.pair .pivot span{font-size:1rem;padding:6px 11px}
+@media (min-width:640px){.pair>.pivot{background-size:84% 2px}}
+
+
+/* discussion questions: expand / collapse all */
+.q-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}
+.q-tools .btn[disabled]{opacity:.45;cursor:default;border-color:var(--line);color:var(--muted)}
+.q-tools .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.q-tools{display:none!important}}
+
+/* ---- unit 4 additions ---- */
+.note-l{font:.84rem/1.45 var(--serif);color:var(--muted);margin:-6px 0 16px}
+
+/* world trade map */
+.wmap svg{background:var(--sea)}
+.wmap .land{fill:var(--land);stroke:var(--land-line);stroke-width:.6}
+.wmap .route{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:6 6;opacity:.16;transition:opacity .35s}
+.wmap .route.pt{stroke:var(--accent)} .wmap .route.sp{stroke:var(--gold)} .wmap .route.nl{stroke:var(--ink)} .wmap .route.ag{stroke:var(--green);stroke-width:3.2}
+.wmap .route.ret{stroke-dasharray:2 6}
+.wmap .rt.on .route{opacity:1;animation:wdash 1.3s linear infinite}
+@keyframes wdash{to{stroke-dashoffset:-24}}
+.wmap .pl circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.2}
+.wmap .pl text{font-size:10.5px;paint-order:stroke;stroke:var(--sea);stroke-width:3.5px;stroke-linejoin:round;fill:var(--fg)}
+.wmap .pl.dim{opacity:.35;transition:opacity .3s}
+.wmap .ocean{font-size:11px;letter-spacing:.18em;fill:var(--muted);opacity:.7;stroke:none}
+.wmap .edge{font-size:10px;fill:var(--muted);font-style:italic}
+.wmap text{font-family:var(--serif)}
+#wctrl .step[data-r="pt"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+#wctrl .step[data-r="sp"][aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+#wctrl .step[data-r="nl"][aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+#wctrl .step[data-r="ag"][aria-pressed="true"]{background:var(--green);border-color:var(--green)}
+#wcap{border-left-color:var(--accent)}
+#wcap.sp{border-left-color:var(--gold)} #wcap.nl{border-left-color:var(--ink)} #wcap.ag{border-left-color:var(--green)}
+
+/* stats count-up */
+#silverstats .stat{opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+#silverstats.in .stat{opacity:1;transform:none}
+#silverstats.in .stat:nth-child(2){transition-delay:.12s}#silverstats.in .stat:nth-child(3){transition-delay:.24s}#silverstats.in .stat:nth-child(4){transition-delay:.36s}
+
+/* swimlanes */
+#lanes .lane{fill:var(--bg);stroke:var(--line)}
+#lanes .lname{font:700 13px var(--serif);fill:var(--fg)}
+#lanes .tick{stroke:var(--line)}
+#lanes .tl{font:11px var(--serif);fill:var(--muted)}
+#lanes .ban{fill:var(--gold);opacity:.28}
+#lanes .ev{cursor:pointer}
+#lanes .ev circle{stroke:var(--paper);stroke-width:2;transition:r .2s}
+#lanes .ev.c circle{fill:var(--ink)} #lanes .ev.r circle{fill:var(--accent)}
+#lanes .ev:hover circle,#lanes .ev.on circle{r:8}
+#lanes .ev.on circle{stroke:var(--fg)}
+#lanes .ev:focus{outline:none}
+#lanes .ev:focus-visible circle{stroke:var(--fg);stroke-width:3}
+#lanes-cap{border-left-color:var(--ink)}
+
+/* kinship bands */
+#kin text{font-family:var(--serif);fill:var(--fg);font-size:13px}
+#kin .small{font-size:11.5px;fill:var(--muted)}
+#kin .bl{font-size:12px;fill:var(--fg);paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#kin .bandp{fill:var(--accent-soft);stroke:var(--accent)}
+#kin .s-bi{stop-color:var(--ink-soft)} #kin .s-pa2{stop-color:var(--accent-soft)}
+.legend .sw{display:inline-block;width:14px;height:10px;border-radius:3px;vertical-align:middle;margin-right:2px}
+.legend .sw.bi{background:var(--ink-soft);border:1px solid var(--ink)} .legend .sw.pa{background:var(--accent-soft);border:1px solid var(--accent)}
+#kin rect{transform-origin:100px center;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+#kin.in rect{transform:none}
+#kin.in rect:nth-of-type(2){transition-delay:.15s}#kin.in rect:nth-of-type(3){transition-delay:.3s}
+.no-js #kin rect{transform:none}
+@media (prefers-reduced-motion:reduce){#kin rect{transform:none}}
+
+figure.tall img{max-height:560px;width:auto;margin:0 auto}
+figure.tall figcaption{max-width:620px;margin-left:auto;margin-right:auto}
+
+/* ---- unit 5 additions ---- */
+/* tea-opium-silver triangle */
+#tri text{font-family:var(--serif);fill:var(--fg)}
+#tri .nd{fill:var(--paper);stroke:var(--line);stroke-width:1.5}
+#tri .nd.br{stroke:var(--ink)} #tri .nd.in{stroke:var(--gold)} #tri .nd.cn{stroke:var(--accent)}
+#tri .lane{fill:none;stroke:var(--line);stroke-width:2}
+#tri .lbl{font-size:13px;font-weight:600}
+#tri .lbl.tea{fill:var(--green)} #tri .lbl.op{fill:var(--gold)} #tri .lbl.ag{fill:var(--muted)}
+#tri .flow{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-dasharray:10 16;opacity:0;transition:opacity .4s}
+#tri .flow.on{opacity:1;animation:flow 1.6s linear infinite}
+#tri .flow.tea{stroke:var(--green)} #tri .flow.op{stroke:var(--gold)} #tri .flow.ag{stroke:var(--muted)}
+#tri .tag{opacity:0;transition:opacity .4s} #tri .tag.on{opacity:1}
+@keyframes flow{to{stroke-dashoffset:-26}}
+@media (prefers-reduced-motion:reduce){#tri .flow.on{animation:none}}
+
+/* MFN demo */
+.mfn{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:12px 0}
+.mfn .pw{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:118px}
+.mfn .pw h4{font:700 .95rem var(--serif);margin:0 0 6px}
+.mfn .pw h4 small{display:block;font-weight:400;font-size:.76rem;color:var(--muted)}
+.mfn .chip2{display:block;font-size:.8rem;line-height:1.3;border-radius:6px;padding:4px 7px;margin:4px 0;background:var(--accent-soft);border:1px solid var(--accent);opacity:0;transform:translateY(-6px);transition:opacity .35s,transform .35s}
+.mfn .chip2.on{opacity:1;transform:none}
+.mfn .chip2.auto{background:var(--ink-soft);border-color:var(--ink)}
+.mfn-ctrl{display:flex;flex-wrap:wrap;gap:6px}
+.mfn-leg{font-size:.8rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.mfn-leg i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:4px}
+
+/* treaty-port map */
+#pmap .port{cursor:pointer;opacity:.18;transition:opacity .35s}
+#pmap .port.on{opacity:1}
+#pmap .port circle.core{stroke:var(--paper);stroke-width:1.5}
+#pmap .port.c1 circle.core,#pmap .port.c3 circle.core{fill:var(--accent)}
+#pmap .port.c2 circle.core,#pmap .port.c4 circle.core{fill:var(--ink)}
+#pmap .port.c5 circle.core{fill:var(--green)}
+#pmap .port.c6 circle.core{fill:var(--gold)}
+#pmap .port.on circle.halo{fill:currentColor;opacity:.2;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+#pmap .port.c1,#pmap .port.c3{color:var(--accent)} #pmap .port.c2,#pmap .port.c4{color:var(--ink)} #pmap .port.c5{color:var(--green)} #pmap .port.c6{color:var(--gold)}
+#pmap .port circle.halo{fill:none}
+#pmap .port text{font-size:11.5px}
+#pmap .cap-city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.5}
+#pmap .cap-city text{font-size:11px;font-style:italic;fill:var(--muted)}
+#pmap .sea{font-size:12px;font-style:italic;fill:var(--muted);letter-spacing:.08em}
+#pmap .ctry{font-size:14px;font-weight:700;letter-spacing:.2em;fill:var(--muted);opacity:.75}
+@media (prefers-reduced-motion:reduce){#pmap .port.on circle.halo{animation:none}}
+.pkey{font-size:.82rem;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.pkey i{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:0;margin-right:5px}
+
+/* side-by-side figure pair */
+.pair-fig{display:grid;gap:16px;grid-template-columns:1fr;margin:20px 0}
+@media (min-width:640px){.pair-fig{grid-template-columns:1fr 1fr}}
+.pair-fig figure{margin:0}
+figure.port img{width:100%;margin:0 auto}
+
+/* ---- unit 5 · revision 2 ---- */
+/* keep every image's aspect ratio (width/height attributes otherwise fix the height) */
+figure img{height:auto}
+figure.tall img{width:auto;max-width:100%}
+figure.port{max-width:320px;margin-inline:auto}
+/* justified running text */
+main p,main li,.gloss dd,.card p,.callout p,.cap{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyphens:manual}
+/* room for the pivot word */
+@media (min-width:640px){.contrast{grid-template-columns:minmax(0,1fr) 124px minmax(0,1fr)}}
+.contrast li,.versus p,.think .card p,.pair .c,.chain li{text-align:left;hyphens:manual}
+#drain .row{grid-template-columns:130px 1fr 104px}
+@media (max-width:520px){#drain .row{grid-template-columns:96px 1fr 88px}}
+#opium .side{margin-bottom:18px}
+</style>
+</head>
+<body class="no-js">
+<div id="progress"></div>
+<div id="tip" role="tooltip"></div>
+<div id="lightbox" aria-hidden="true"><img alt=""></div>
+
+<aside id="notes" role="dialog" aria-modal="false" aria-labelledby="notes-title" aria-hidden="true">
+  <header>
+    <div><h2 id="notes-title">Key terms · quick notes</h2><p>Short versions. Tap a term for the full entry.</p></div>
+    <button class="x" id="notes-close" type="button" aria-label="Close key terms">×</button>
+  </header>
+  <input id="notes-search" type="search" placeholder="Filter terms…" aria-label="Filter key terms">
+  <div class="list" id="notes-list"></div>
+</aside>
+<div class="fab-stack">
+  <button class="fab" id="totop" type="button" aria-label="Return to top">↑ <span class="lbl-long">Return to top</span></button>
+  <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
+</div>
+
+<div class="shell">
+<nav class="toc" aria-label="Contents">
+  <a class="back" href="index.html">← All units</a>
+  <h2>Contents</h2>
+  <ol id="toc-list">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#terms">Key terms first</a></li>
+    <li><a href="#steam">1 · A new kind of empire</a></li>
+    <li><a href="#opium">2 · Tea, opium &amp; silver</a></li>
+    <li><a href="#war">3 · The Opium War</a></li>
+    <li><a href="#treaties">4 · The unequal treaty system</a></li>
+    <li><a href="#arrow">5 · The Second Opium War</a></li>
+    <li><a href="#japan">6 · Japan: Perry &amp; Harris</a></li>
+    <li><a href="#korea">7 · Korea: the Ganghwa Treaty</a></li>
+    <li><a href="#ports">8 · Treaty ports, compared</a></li>
+    <li><a href="#wider">9 · The wider world</a></li>
+    <li><a href="#review">Review kit</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+  <div class="tools">
+    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <p class="eyebrow">Unit 5 · Study guide · Comparative</p>
+  <h1>The Western Challenge <span class="ja" lang="zh-Hant">不平等條約</span></h1>
+  <p class="dek">Opium, gunboats, and the unequal treaties across China, Japan, and Korea, 1793–1882</p>
+  <div class="meta">
+    <span class="chip"><b>Reading:</b> Ebrey &amp; Walthall, Connections: "Western Imperialism (1800–1900)," pp. 306–313</span>
+    <span class="chip"><b>Plus:</b> Ch. 18, pp. 315–318, 321–322 · Ch. 19, pp. 338–340 · Ch. 21, pp. 369–374</span>
+    <span class="chip"><b>Before:</b> <a href="unit4.html">Unit 4 · Europe Arrives</a></span>
+    <span class="chip"><b>Next:</b> Unit 6 · The Qing in Crisis</span>
+  </div>
+</header>
+
+<details class="mobile-toc">
+  <summary><span class="lbl">Contents</span><span class="cur" id="mtoc-cur">Overview</span></summary>
+  <ol id="mtoc"></ol>
+</details>
+
+<!-- OVERVIEW -->
+<section class="unit" id="overview">
+  <div class="sec-num">Overview</div>
+  <h2>The unit in one paragraph</h2>
+  <p class="pages">pp. 306–313 and chapter passages</p>
+  <p>In the 1800s Europeans came back to East Asia with <a class="term" href="#g-industrial">steam power</a>, modern guns, and states that wanted colonies and markets. Britain paid for Chinese tea with Indian <a class="term" href="#g-opium">opium</a>; when China tried to stop the drug, Britain won the <b>Opium War</b> (1839–1842) and imposed the first <a class="term" href="#g-unequal">unequal treaty</a>. Within forty years every East Asian state had signed one: Japan with the United States (1854, 1858), and Korea with Japan (1876). Instead of colonies, the West built a <b>treaty-port system</b> resting on <a class="term" href="#g-extra">extraterritoriality</a> and the <a class="term" href="#g-mfn">most favored nation clause</a>. The three countries met the same threat in very different ways. <span class="cite">pp. 306–308, 313</span></p>
+
+  <div class="callout ink">
+    <div class="label">Questions to keep in mind</div>
+    <ul class="tight">
+      <li>What made nineteenth-century Western imperialism different from European contact before 1800?</li>
+      <li>Why did the opium trade lead to war, and why did China lose so badly?</li>
+      <li>What made a treaty "unequal," and how did one treaty's privileges spread to every power?</li>
+      <li>Why did news of China's defeat shake Japan but not Korea?</li>
+      <li>How did Japan go from signing unequal treaties to imposing one on Korea?</li>
+    </ul>
+  </div>
+
+  <h3>Timeline at a glance</h3>
+  <figure class="fig">
+  <div class="timeline">
+    <div class="ev"><div class="yr">1793</div><div class="tx">Macartney mission to Beijing fails</div></div>
+    <div class="ev"><div class="yr">1825</div><div class="tx">Japan orders all foreign ships but the Dutch driven off</div></div>
+    <div class="ev"><div class="yr">1839</div><div class="tx">Lin Zexu destroys the opium stocks at Guangzhou</div></div>
+    <div class="ev major"><div class="yr">1842</div><div class="tx">Treaty of Nanjing: five ports, Hong Kong, an indemnity</div></div>
+    <div class="ev"><div class="yr">1844</div><div class="tx">U.S. treaty with China adds extraterritoriality</div></div>
+    <div class="ev major"><div class="yr">1853–54</div><div class="tx">Perry's ships at Edo Bay; Kanagawa treaty</div></div>
+    <div class="ev"><div class="yr">1856–60</div><div class="tx">Second Opium War (Arrow War)</div></div>
+    <div class="ev major"><div class="yr">1858</div><div class="tx">Treaties of Tianjin; Harris commercial treaty with Japan</div></div>
+    <div class="ev"><div class="yr">1860</div><div class="tx">British and French troops take Beijing, burn the summer palace</div></div>
+    <div class="ev"><div class="yr">1866</div><div class="tx">French raid Ganghwa Island; <i>General Sherman</i> burned</div></div>
+    <div class="ev"><div class="yr">1871</div><div class="tx">U.S. marines land on Ganghwa Island</div></div>
+    <div class="ev major"><div class="yr">1876</div><div class="tx">Ganghwa Treaty: Japan opens Korea</div></div>
+    <div class="ev"><div class="yr">1882</div><div class="tx">Korea's first treaty with a Western power (U.S.)</div></div>
+    <div class="ev"><div class="yr">1899</div><div class="tx">Japan frees itself of extraterritoriality</div></div>
+  </div>
+  <figcaption><span class="fn">Figure 1.</span> Key events, 1793–1899. Filled dots mark the main treaties. Dates from pp. 306–313, 317, 321, 338–339, 370–374.</figcaption>
+  </figure>
+</section>
+
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Start here</div>
+  <h2>Key terms first</h2>
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-mfn">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
+
+  <h3 class="gloss-group">Empire and its ideas</h3>
+  <dl class="gloss">
+    <div class="row" id="g-industrial" data-short="Coal-fired steam engines and new weapons that let Europe project force thousands of miles."><dt>Industrial revolution · steam power</dt><dd>The shift to machine industry that freed Europe from relying on farm products. It produced coal-fueled steamships, better weapons, and states able to command men and resources far from home. <span class="cite">p. 306</span></dd></div>
+    <div class="row" id="g-sovereignty" data-short="A state's full authority over its own territory and people, including its laws and courts."><dt>Sovereignty</dt><dd>A state's full authority over its own territory, people, laws, and courts. The new European focus on nationhood demanded clear boundaries and sovereignty, so every piece of land had to "belong somewhere." <span class="cite">p. 306</span></dd></div>
+    <div class="row" id="g-greatpower" data-short="Rank as a leading nation; after 1815 it seemed to require colonies, spurring rivalry."><dt>Great Power status</dt><dd>Recognition as one of the leading nations. After Napoleon's defeat in 1815 it seemed to require colonies, so competition among European states drove imperialism. <span class="cite">p. 306</span></dd></div>
+    <div class="row" id="g-socdar" data-short="Spencer's idea that nations, like species, survive only by winning the struggle; used to justify conquest."><dt>Social Darwinism</dt><dd>The idea, developed by Herbert Spencer and others from Darwin, that nations as well as species face extinction unless they win a ceaseless competition. It gave Westerners a new justification for their sense of racial superiority. <span class="cite">p. 313</span><span class="needs">Builds on: Great Power status</span></dd></div>
+    <div class="row" id="g-tribute" data-short="Qing rules for foreign relations: other rulers sent missions and rituals acknowledging the emperor's superiority."><dt>Tribute system</dt><dd>The rules, largely inherited from the Ming, by which the Qing dealt with foreign states: rulers sent missions and performed rituals that affirmed the emperor's superiority. Korea was a Chinese tributary. <span class="cite">pp. 306–307, 315, 371</span></dd></div>
+    <div class="row" id="g-kowtow" data-short="Kneeling and touching the head to the ground before the emperor; British envoys refused it."><dt>Kowtow</dt><dd>Kneeling and bowing the head to the ground before the emperor, one of the tribute rituals. The British envoy of 1816 refused it, so the emperor would not see him. <span class="cite">p. 307</span><span class="needs">Builds on: tribute system</span></dd></div>
+    <div class="row" id="g-indemnity" data-short="Money a defeated state is forced to pay the victor to compensate for its losses."><dt>Indemnity</dt><dd>Compensation for the victor's losses, forced on the loser of a war. Burma paid one in the 1820s; China paid them after each defeat. <span class="cite">pp. 307, 317</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">China's trade and the Opium War</h3>
+  <dl class="gloss">
+    <div class="row" id="g-eic" data-short="British trading company that ruled Bengal and held a monopoly on Britain's China trade until 1834."><dt>British East India Company</dt><dd>The chartered British trading company that took over much of India, grew opium in Bengal, and held a monopoly on Britain's China trade until 1834. Abolished after the 1857 Indian Rebellion. <span class="cite">pp. 306–308, 315–316</span></dd></div>
+    <div class="row" id="g-canton" data-short="Before 1842, Europeans could trade only at Guangzhou (Canton), only through licensed Chinese merchants."><dt>Canton system</dt><dd>The Qing rule that Europeans could trade only at Guangzhou (Canton) and only through licensed Chinese merchants. See <a href="unit4.html">Unit 4</a>. <span class="cite">p. 315</span></dd></div>
+    <div class="row" id="g-cohong" data-short="The guild of licensed Chinese merchants responsible to the court for foreign trade at Guangzhou."><dt>Cohong</dt><dd>The merchant guild responsible to the Qing court for managing foreign trade at Guangzhou. British traders wanted its monopoly ended; the Treaty of Nanjing abolished it. <span class="cite">p. 308</span><span class="needs">Builds on: Canton system</span></dd></div>
+    <div class="row" id="g-opium" data-short="Addictive drug from poppy sap; smoked recreationally; China banned it in 1800 and 1813."><dt>Opium</dt><dd>A drug made from poppy sap, long used in China as medicine. Once people smoked pure sap in pipes it became an addictive recreational drug. China banned its import and production in 1800 and its smoking in 1813. <span class="cite">pp. 315–316</span></dd></div>
+    <div class="row" id="g-cash" data-short="China's copper coins; farmers earned cash but owed taxes counted in silver."><dt>Cash</dt><dd>China's everyday copper coins. Farmers were paid in cash, but their taxes were assessed in silver, so they had to buy silver with cash to pay. <span class="cite">p. 317</span></dd></div>
+    <div class="row" id="g-drain" data-short="Opium imports reversed the silver flow; as silver grew scarce, taxes cost farmers nearly twice as much cash."><dt>Silver drain</dt><dd>The outflow of silver from China to pay for opium, rising from about 2 million ounces a year in the 1820s to about 9 million in the 1830s. Silver grew dearer: one ounce cost 1,500 cash in 1800 but 2,700 in 1830, hurting taxpayers. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: opium, cash</span></dd></div>
+    <div class="row" id="g-commissioner" data-short="An official sent by the emperor with special powers for one task, like Lin Zexu in 1839."><dt>Imperial commissioner</dt><dd>An official sent by the emperor with special powers for a single task. Lin Zexu went to Guangzhou as imperial commissioner in 1839 to suppress the drug trade. <span class="cite">p. 308</span></dd></div>
+    <div class="row" id="g-freetrade" data-short="The British belief that 'civilized' nations traded freely and kept relations through envoys and treaties."><dt>"Free trade" and "normal" relations</dt><dd>The British view that all "civilized" nations practiced free trade and handled relations through envoys and treaties. By this standard China was out of step with the modern world. <span class="cite">p. 317</span></dd></div>
+    <div class="row" id="g-matchlock" data-short="An old gun fired by lighting each powder charge by hand; most Qing soldiers had only swords, spears, and arrows."><dt>Matchlock musket</dt><dd>An old firearm in which each load of gunpowder had to be ignited by hand. The minority of Qing soldiers with firearms had these; the British had rifles. <span class="cite">p. 318</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The treaty system</h3>
+  <dl class="gloss">
+    <div class="row" id="g-unequal" data-short="A treaty forced at gunpoint that gave privileges to the foreign power but none in return."><dt>Unequal treaty</dt><dd>A treaty, usually concluded at gunpoint, that gave benefits to the foreign power but not to the East Asian state, which got no matching privileges abroad. The 1842 Treaty of Nanjing was the first. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: sovereignty, indemnity</span></dd></div>
+    <div class="row" id="g-port" data-short="A city opened by treaty to foreign residence and trade."><dt>Treaty port</dt><dd>A city opened by treaty to foreign residence and trade: five in China in 1842, more after 1858. Japan and Korea later had to open their own. <span class="cite">pp. 308, 317, 339, 373</span></dd></div>
+    <div class="row" id="g-tariff" data-short="An import tax set by treaty at a low rate (5% in China), so the country could not raise it."><dt>Fixed tariff</dt><dd>An import tax set by treaty instead of by the country itself: 5 percent in China after 1842. Japan's 1858 treaty also forced low tariffs on imports, while Japanese exports faced steep U.S. tariffs. <span class="cite">pp. 317, 339</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-extra" data-short="Foreigners answered only to their own country's laws and courts, even in disputes with locals."><dt>Extraterritoriality</dt><dd>The privilege that foreigners were subject only to their own country's laws, judges, courts, and prisons, even in disputes with local people. First granted to Americans in China (1844). An infringement on sovereignty. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: sovereignty</span></dd></div>
+    <div class="row" id="g-mfn" data-short="Any privilege granted to one power automatically went to every power holding this clause."><dt>Most favored nation clause</dt><dd>A treaty clause by which a power automatically received any privilege the country later granted to any other power. With extraterritoriality, it was a hallmark of the unequal treaty system. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-multi" data-short="Historian Akira Iriye's term: through MFN, all the powers shared each other's gains."><dt>Multilateral imperialism</dt><dd>Historian Akira Iriye's term for the way, through the most favored nation clause, every Western power shared in whatever privileges any one of them won. <span class="cite">p. 308</span><span class="needs">Builds on: most favored nation clause</span></dd></div>
+    <div class="row" id="g-envoy" data-short="A foreign ambassador living in the capital; the Qing saw them as little better than spies."><dt>Resident ambassador</dt><dd>A foreign diplomat stationed permanently in the capital. The Qing resisted them, seeing them as little better than spies, until forced to accept them in 1858–1860. <span class="cite">pp. 309, 321</span></dd></div>
+    <div class="row" id="g-transit" data-short="A tax on goods moving inside China; after 1858 capped at 2.5% for foreign goods."><dt>Transit tariff</dt><dd>A tax on goods moving within China. The 1858 treaties capped it at 2.5 percent for foreign goods. <span class="cite">p. 321</span><span class="needs">Builds on: fixed tariff</span></dd></div>
+    <div class="row" id="g-arrow" data-short="The British and French name for the Second Opium War (1856–60), after a ship used as a pretext."><dt>Arrow War</dt><dd>The British and French name for the Second Opium War, from the name of a ship that gave Britain a pretext for war. It ended with the Treaties of Tianjin and the occupation of Beijing. <span class="cite">pp. 307, 321</span></dd></div>
+    <div class="row" id="g-sphere" data-short="An area of China where one power's officials and traders dominated, without making it a colony."><dt>Sphere of influence</dt><dd>A region where one power's officials and traders dominated without making it a colony. Late in the century the powers carved these out along China's coast and up the Yangzi. <span class="cite">p. 311</span></dd></div>
+    <div class="row" id="g-opendoor" data-short="U.S. call for spheres of influence not to shut out Americans."><dt>Open Door</dt><dd>U.S. Secretary of State John Hay's call for the powers not to use their spheres of influence to exclude Americans. The powers agreed, with reservations. <span class="cite">p. 311</span><span class="needs">Builds on: sphere of influence</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Japan</h3>
+  <dl class="gloss">
+    <div class="row" id="g-tozama" data-short="'Outside' daimyo whose ancestors were not Tokugawa allies, like Satsuma and Chōshū."><dt>Tozama domain</dt><dd>An "outside" domain, whose lord's family had not been a Tokugawa ally before 1600, such as Satsuma. See <a href="unit3.html">Unit 3</a>. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-expel" data-short="1825 order: drive off every foreign ship except the Dutch; Japan's first truly isolationist policy."><dt>1825 expulsion order</dt><dd>After British ships raided coastal villages, the shogunate ordered all foreign ships, except the Dutch at Nagasaki, driven off without hesitation. It was Japan's first truly isolationist policy; it was relaxed in 1842. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-shinron" data-short="Aizawa Seishisai's 1825 'New Theses': foreigners spread Christianity to conquer from within."><dt><i>Shinron</i> <small>New Theses</small></dt><dd>An 1825 treatise by the Mito scholar Aizawa Seishisai. It warned that trade drained precious metals and that traders spread Christianity to win over commoners and "conquer from within." It shaped later nationalist thought. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-kokutai" data-short="Japan's 'unique spiritual essence,' rooted in a monarch descended from the sun goddess."><dt><i>Kokutai</i></dt><dd>Japan's unique spiritual essence. Mito scholars held Japan superior to all countries because its monarch descended from the sun goddess; Aizawa wanted the masses taught this essence. <span class="cite">p. 338</span><span class="needs">Builds on: Shinron</span></dd></div>
+    <div class="row" id="g-kanagawa" data-short="1854 friendship treaty: Shimoda and Hakodate open to U.S. ships, a U.S. consul, MFN."><dt>Kanagawa treaty</dt><dd>The 1854 friendship treaty Perry obtained. It opened Shimoda and Hakodate to American ships for coal and supplies, promised fair treatment of shipwrecked sailors, allowed a U.S. consul at Shimoda, and gave most favored nation treatment. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: most favored nation clause</span></dd></div>
+    <div class="row" id="g-consul" data-short="An official stationed abroad to look after his country's trade and citizens."><dt>Consul</dt><dd>An official stationed in a foreign country to look after his nation's trade and citizens. Townsend Harris, the first U.S. consul in Japan, arrived at Shimoda in 1856. <span class="cite">p. 339</span></dd></div>
+    <div class="row" id="g-harris" data-short="1858 commercial treaty: diplomats, six cities opened, low tariffs, extraterritoriality."><dt>Harris treaty</dt><dd>The 1858 commercial treaty Townsend Harris won by pointing to China's fate. It exchanged diplomats, opened six cities to foreign residence and trade, imposed low tariffs, and granted extraterritoriality. Similar treaties followed with four European powers. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: treaty port, fixed tariff, extraterritoriality</span></dd></div>
+    <div class="row" id="g-kawaraban" data-short="Cheap broadsheets that spread news and gossip about Perry and the treaties."><dt><i>Kawaraban</i></dt><dd>Broadsheets, sold anonymously in cities, that reported news and gossip on the treaty negotiations. With letters and diaries they helped create a new public political realm. <span class="cite">p. 340</span></dd></div>
+    <div class="row" id="g-sonno" data-short="'Revere the monarch, expel the barbarian': Yoshida Shōin's slogan against the treaties."><dt><i>Sonnō jōi</i></dt><dd>"Revere the monarch and expel the barbarian": Yoshida Shōin's slogan. The monarch should share in policy, and foreigners must be driven off. <span class="cite">p. 340</span></dd></div>
+    <div class="row" id="g-fukoku" data-short="'Rich country, strong army': Yokoi Shōnan's slogan for engaging with the West."><dt><i>Fukoku kyōhei</i></dt><dd>"Rich country, strong army," a slogan from the Chinese classics popularized by Yokoi Shōnan for those who wanted to open Japan and gain Western knowledge and tools. <span class="cite">p. 340</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Korea</h3>
+  <dl class="gloss">
+    <div class="row" id="g-daewongun" data-short="Gojong's father and regent from 1864; domestic reform plus a refusal of all treaties."><dt>Daewongun</dt><dd>The father of King Gojong, who took the throne at twelve in 1864. He governed behind the king, combining domestic reform with isolationism: he rejected every foreign request for a treaty to avoid China's and Japan's fate. Forced into retirement in 1874. <span class="cite">pp. 369–370, 372</span></dd></div>
+    <div class="row" id="g-sherman" data-short="1866: a U.S.-flagged ship forcing its way toward Pyeongyang was burned and its crew killed."><dt><i>General Sherman</i> incident</dt><dd>In 1866 a ship under the U.S. flag sailed up the Daedong River near Pyeongyang demanding trade. Local people burned it and killed its crew; the U.S. used this as a reason for its 1871 attack. <span class="cite">p. 370</span></dd></div>
+    <div class="row" id="g-ganghwa-is" data-short="Island whose forts guarded the entrance to Seoul; attacked by France (1866), the U.S. (1871), and Japan (1875)."><dt>Ganghwa Island</dt><dd>An island whose forts guarded the entrance to Seoul. French troops landed there in 1866, U.S. marines in 1871, and Japanese troops in 1875. <span class="cite">pp. 309, 370, 373</span></dd></div>
+    <div class="row" id="g-ganghwa" data-short="1876: Korea's first modern treaty; opened Busan and two more ports to Japan, with extraterritoriality."><dt>Ganghwa Treaty</dt><dd>Korea's first modern treaty, forced by Japan in 1876. It opened Busan and two more ports to Japanese trade and imposed extraterritoriality. Japan gained the same privileges Westerners held in Japan. <span class="cite">pp. 311, 373</span><span class="needs">Builds on: unequal treaty, extraterritoriality</span></dd></div>
+    <div class="row" id="g-strategy" data-short="Huang Zunxian's 1880 advice that Korea sign treaties with all Western powers for protection."><dt>"Strategy for Korea"</dt><dd>A recommendation sent to King Gojong in 1880 by Huang Zunxian, a Chinese official in Tokyo, arguing that Korea should sign treaties with all the Western powers for self-protection. <span class="cite">p. 373</span></dd></div>
+    <div class="row" id="g-selfgov" data-short="Korea's 1882 claim to be both 'self-governing' and China's tributary."><dt>"Self-governing" tributary</dt><dd>The compromise in the 1882 U.S.–Korea treaty: King Gojong wrote to President Arthur that Korea was both self-governing and a Chinese tributary. The U.S. treated Korea as sovereign; Korea and China treated tribute as intact. <span class="cite">p. 374</span><span class="needs">Builds on: tribute system, sovereignty</span></dd></div>
+  </dl>
+</section>
+
+<!-- 1 STEAM -->
+<section class="unit reveal" id="steam">
+  <div class="sec-num">Part 1</div>
+  <h2>A new kind of empire</h2>
+  <p class="pages">pp. 306–307, 313</p>
+  <p>Before 1800 Europeans in Asia mostly held trading posts; Spain's Philippines was the only colony (see <a href="unit4.html">Unit 4</a>). In the nineteenth century trading companies were followed by government officials, who regulated and taxed trade, then ran whole territories, and finally drilled local troops into uniformed battalions. Trading posts from India to Indonesia became colonies.</p>
+
+  <figure class="fig">
+  <div class="contrast">
+    <div class="cside a"><div class="big">1500s–1700s</div><ul>
+      <li>Fragile wooden sailing ships</li>
+      <li>Latecomers to existing Asian trade</li>
+      <li>Scattered trading posts</li>
+      <li>Enlightenment admiration for China and Confucian reason</li>
+    </ul></div>
+    <div class="pivot"><span>became</span></div>
+    <div class="cside b"><div class="big">1800s</div><ul>
+      <li>Coal-fired steamships and modern weapons</li>
+      <li>States ruling territory and drilling native troops</li>
+      <li>Colonies, needed for <a class="term" href="#g-greatpower">Great Power status</a></li>
+      <li>Disdain for "godless heathens"; racial line between whites and everyone else</li>
+    </ul></div>
+  </div>
+  <figcaption><span class="fn">Figure 2.</span> What changed in European expansion. Based on pp. 265, 306.</figcaption>
+  </figure>
+
+  <h3>Why the change? <span class="cite">pp. 306, 313</span></h3>
+  <ul class="tight">
+    <li><b>Industry.</b> The <a class="term" href="#g-industrial">industrial revolution</a> gave Europe steam engines, better guns, and states that could command men and resources.</li>
+    <li><b>Nationalism.</b> The Napoleonic Wars spread a sense of nationhood that demanded clear borders and <a class="term" href="#g-sovereignty">sovereignty</a>. Small states like Vietnam, the Ryukyus, and Korea could no longer sit in a half-independent place under China's protection.</li>
+    <li><b>Rivalry.</b> Peace in Europe after 1815 freed nations to compete abroad.</li>
+    <li><b>Ideology.</b> Later in the century <a class="term" href="#g-socdar">Social Darwinism</a> taught that weak nations naturally fell to the strong. Some used it to justify exploitation; others felt a duty to "civilize." Kipling's poem "The White Man's Burden" (1899) voiced this second view.</li>
+  </ul>
+
+  <h3>Two missions, no deal <span class="cite">pp. 306–307</span></h3>
+  <p>Britain sent <b>Lord Macartney</b> to Beijing in <b>1793</b> to remove limits on the number, destination, and schedule of its ships. Because trade controls kept order, reduced smuggling, and affirmed the emperor's superiority, he failed. A second mission in <b>1816</b> refused the <a class="term" href="#g-kowtow">kowtow</a>, and the emperor would not see the envoy. Meanwhile Britain seized Singapore (1819) to guard its route between India and China, and British ships began to appear off Japan.</p>
+  <div class="callout gold">
+    <div class="label">Remember</div>
+    <p>For the Qing, trade rules were part of the <a class="term" href="#g-tribute">tribute system</a> and social order. For Britain, they were "unnecessary restrictions." This clash of assumptions runs through the whole unit.</p>
+  </div>
+</section>
+
+<!-- 2 OPIUM -->
+<section class="unit reveal" id="opium">
+  <div class="sec-num">Part 2</div>
+  <h2>Tea, opium, and silver</h2>
+  <p class="pages">pp. 308, 315–317</p>
+  <p>By 1750 Britain imported well over 2 million pounds of Chinese tea a year. China wanted few British goods, so Britain paid in <b>silver</b>. The answer the British found was <a class="term" href="#g-opium">opium</a>, grown in Bengal under a monopoly of the <a class="term" href="#g-eic">East India Company</a>. After 1761 the trade balance began to tilt in Britain's favor. <span class="cite">pp. 308, 315</span></p>
+
+  <figure class="panel">
+    <div class="wide">
+    <svg id="tri" viewBox="0 0 700 330" role="img" aria-labelledby="tri-t"><title id="tri-t">How opium paid for tea: flows between Britain, India, and China</title>
+      <path class="lane" d="M140 90 Q350 20 560 90"/><path class="lane" d="M560 130 Q470 250 370 270"/><path class="lane" d="M330 270 Q230 250 140 130"/>
+      <path class="flow tea" data-s="a b" d="M560 90 Q350 20 140 90"/>
+      <path class="flow ag" data-s="a" d="M140 104 Q350 34 560 104"/>
+      <path class="flow op" data-s="b" d="M370 270 Q470 250 560 130"/>
+      <path class="flow ag" data-s="b" d="M560 144 Q470 264 384 282"/>
+      <path class="flow ag" data-s="b" d="M330 284 Q220 262 140 144"/>
+      <rect class="nd br" x="40" y="80" width="150" height="58" rx="10"/><text x="115" y="106" text-anchor="middle" font-weight="700">Britain</text><text x="115" y="125" text-anchor="middle" font-size="12" fill="currentColor" class="small">wants tea</text>
+      <rect class="nd cn" x="510" y="80" width="150" height="58" rx="10"/><text x="585" y="106" text-anchor="middle" font-weight="700">China</text><text x="585" y="125" text-anchor="middle" font-size="12" class="small">Guangzhou</text>
+      <rect class="nd in" x="275" y="255" width="150" height="58" rx="10"/><text x="350" y="281" text-anchor="middle" font-weight="700">Bengal, India</text><text x="350" y="300" text-anchor="middle" font-size="12" class="small">East India Co.</text>
+      <text class="lbl tea" x="350" y="40" text-anchor="middle">tea</text>
+      <text class="lbl ag tag" data-s="a" x="350" y="88" text-anchor="middle">silver</text>
+      <text class="lbl op tag" data-s="b" x="480" y="206" text-anchor="end">opium (smuggled)</text>
+      <text class="lbl ag tag" data-s="b" x="92" y="196" text-anchor="middle">silver surplus pays for</text>
+      <text class="lbl ag tag" data-s="b" x="92" y="212" text-anchor="middle">Company + rule of Bengal</text>
+    </svg>
+    </div>
+    <div class="ctrl" id="tri-ctrl">
+      <button class="step" type="button" data-s="a" aria-pressed="true">Before: c. 1750</button>
+      <button class="step" type="button" data-s="b" aria-pressed="false">After: 1761 → 1830s</button>
+    </div>
+    <div class="cap" id="tri-cap"></div>
+    <figcaption><span class="fn">Figure 3.</span> How opium paid for tea. Choose a period to watch the flows. Based on pp. 308, 315–316.</figcaption>
+  </figure>
+
+  <h3>How the drug spread <span class="cite">pp. 315–317</span></h3>
+  <p>China banned opium imports and production in 1800 and smoking in 1813, so the Company stopped carrying the drug itself. Licensed private traders, American as well as British, brought it to ships anchored off the coast; Chinese smugglers carried it ashore through chains of middlemen. A price war among traders made opium cheaper, which spread addiction. An 1831 inquiry found members of the imperial clan, high officials, and bannermen among the addicts.</p>
+
+  <div class="side">
+    <div>
+      <figure class="share" id="drain">
+        <h4>The silver drain, in the textbook's numbers</h4>
+        <div class="row"><span>Opium, 1810</span><div class="track"><div class="fill gold" data-w="11"></div></div><span class="v">4,500 chests</span></div>
+        <div class="row"><span>Opium, 1838</span><div class="track"><div class="fill gold" data-w="100"></div></div><span class="v">40,000</span></div>
+        <div class="row"><span>Silver out, 1820s</span><div class="track"><div class="fill" data-w="22"></div></div><span class="v">2 M oz/yr</span></div>
+        <div class="row"><span>Silver out, 1830s</span><div class="track"><div class="fill" data-w="100"></div></div><span class="v">9 M oz/yr</span></div>
+        <div class="row"><span>1 oz silver, 1800</span><div class="track"><div class="fill ink" data-w="56"></div></div><span class="v">1,500 cash</span></div>
+        <div class="row"><span>1 oz silver, 1830</span><div class="track"><div class="fill ink" data-w="100"></div></div><span class="v">2,700 cash</span></div>
+        <p class="note">Bars are scaled within each pair. 40,000 chests was enough for about 2 million addicts.</p>
+        <figcaption><span class="fn">Figure 4.</span> Opium in, silver out, and what it cost a taxpayer. Data from pp. 316–317.</figcaption>
+      </figure>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit5/patna-opium-stacking-room.jpg" alt="Lithograph of a vast warehouse with tall racks full of round opium balls, and workers on ladders" loading="lazy" width="1200" height="971">
+      <figcaption><span class="fn">Figure 5.</span> The stacking room of the opium factory at Patna, Bengal. Lithograph after W. S. Sherwill, c. 1850. Wellcome Collection, public domain.</figcaption>
+    </figure>
+  </div>
+  <p>Why did the <a class="term" href="#g-drain">silver drain</a> hurt ordinary people? Farmers were paid in copper <a class="term" href="#g-cash">cash</a> but taxed in silver. As silver left China it grew scarce and dear, so the same tax cost almost twice as much cash. <span class="cite">p. 317</span></p>
+
+  <h3>The debate at court <span class="cite">p. 317</span></h3>
+  <div class="versus">
+    <div class="card"><div class="big">Legalize and tax it</div><p>Taxes would ease the revenue shortfall, and higher prices might deter some users.</p></div>
+    <div class="vs">vs.</div>
+    <div class="card"><div class="big">Stamp it out</div><p>An evil like opium had to be stopped. Lin Zexu urged going after importers and sellers, not users: otherwise the Qing would have no soldiers and no funds for an army.</p></div>
+  </div>
+  <p>Lin's passion and reputation for honesty won. In late 1838 the Daoguang emperor gave him the job.</p>
+</section>
+
+<!-- 3 WAR -->
+<section class="unit reveal" id="war">
+  <div class="sec-num">Part 3</div>
+  <h2>The Opium War, 1839–1842</h2>
+  <p class="pages">pp. 308, 316–318</p>
+  <div class="side left">
+    <figure class="port">
+      <img class="zoomable" src="assets/unit5/lin-zexu-lam-qua.jpg" alt="Oil portrait of Lin Zexu in a dark robe and official's hat" loading="lazy" width="800" height="949">
+      <figcaption><span class="fn">Figure 6.</span> Lin Zexu (1785–1850†). Portrait attributed to Lam Qua, 19th c. Public domain, Wikimedia Commons.</figcaption>
+    </figure>
+    <div>
+      <p>As <a class="term" href="#g-commissioner">imperial commissioner</a>, Lin moved fast in 1839. He arrested some 1,700 Chinese dealers and seized 70,000 pipes. He demanded the foreigners' opium, offering tea in exchange, and wrote to <b>Queen Victoria</b> asking for the same right to suppress drugs that her officials had at home.</p>
+      <p>When the merchants refused, he stopped all trade and besieged their enclave. After six weeks they gave up about 2.6 million pounds of opium (some 20,000 chests). Five hundred laborers spent twenty-two days mixing it with salt and lime and washing it into the sea. <span class="cite">pp. 308, 317</span></p>
+    </div>
+  </div>
+  <p>To the British superintendent of trade, this was an insult and cause for war; the merchants, angry at losing property without payment, appealed to Parliament. <span class="cite">pp. 308, 317</span></p>
+
+  <h3>The campaign <span class="cite">pp. 308, 317</span></h3>
+  <ol class="chain">
+    <li><span class="n">1</span><b>1840:</b> A force of 42 ships from India, many leased from the opium firm Jardine, Matheson, avoids Lin's strong defenses at Guangzhou, blockades the river, and sails north.</li>
+    <li><span class="n">2</span><b>Ningbo and Tianjin:</b> With the fleet near Tianjin, the closest port to Beijing, the Qing negotiate.</li>
+    <li><span class="n">3</span><b>Preliminary deal:</b> Hong Kong, an indemnity, wider trade, and direct contact with officials. Both governments are outraged. The emperor had already exiled Lin; now the negotiator is treated as a criminal.</li>
+    <li><span class="n">4</span><b>1841–1842:</b> A larger British force takes Guangzhou, Shanghai, and other ports, then sails up the Yangzi to Nanjing. Dozens of Qing officers kill themselves rather than face defeat.</li>
+    <li><span class="n">5</span><b>1842:</b> The Qing capitulate: the Treaty of Nanjing.</li>
+  </ol>
+
+  <figure>
+    <img class="zoomable" src="assets/unit5/nemesis-anson-bay-1841.jpg" alt="Painting of an iron steamship firing on Chinese war junks, one exploding, with smoke filling the sky" loading="lazy" width="1040" height="681">
+    <figcaption><span class="fn">Figure 7.</span> The East India Company iron steamship <i>Nemesis</i> and British boats destroying Chinese war junks in Anson's Bay, 7 January 1841. Aquatint after Edward Duncan, 1843. Public domain, Wikimedia Commons.</figcaption>
+  </figure>
+
+  <h3>Why the Qing lost <span class="cite">p. 318</span></h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 1.</span> <b>Military technology in the Opium War</b> (p. 318)</caption>
+    <thead><tr><th></th><th>Qing</th><th>British</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Navy</td><td>None</td><td>Large men-of-war plus shallow-draft steamships that could sail up rivers</td></tr>
+      <tr><td class="k">Tactics</td><td>Fixed coastal forts</td><td>Land troops anywhere, pillage, re-embark, strike a new target</td></tr>
+      <tr><td class="k">Infantry arms</td><td>Swords, spears, clubs, arrows; a few <a class="term" href="#g-matchlock">matchlock muskets</a></td><td>Rifles</td></tr>
+      <tr><td class="k">One day in 1841</td><td colspan="2">A single steam warship with long-range guns destroyed nine war junks, five forts, two military stations, and a shore battery.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">
+    <div class="label">A face in the defeat</div>
+    <p>The Manchu bannerman <b>Guancheng</b> returned home to Zhapu in 1842 to find that its garrison had fallen to the British; many defenders had killed themselves and their families. Though ill, he wrote and printed an account of their heroism to win help for survivors and honor for the dead. <span class="cite">p. 319</span></p>
+  </div>
+  <p>The defeat was a first: a Western power had never before claimed victory in battle in East Asia. It sent shock waves through Japan but not Korea, which heard of it only through official channels in Beijing. <span class="cite">p. 308</span></p>
+</section>
+
+<!-- 4 TREATIES -->
+<section class="unit reveal" id="treaties">
+  <div class="sec-num">Part 4</div>
+  <h2>The unequal treaty system</h2>
+  <p class="pages">pp. 308, 317–318</p>
+  <p>Signed at gunpoint, the 1842 <b>Treaty of Nanjing</b> gave benefits to Britain but none to China. That made it <a class="term" href="#g-unequal">unequal</a>. A supplementary British treaty followed a year later, then treaties with the United States (1844) and France. Together they set the pattern.</p>
+
+  <figure>
+    <img class="zoomable" src="assets/unit5/treaty-of-nanking-signing-1842.jpg" alt="Wide engraving of British officers in red coats and Qing officials seated around a table in a ship's cabin" loading="lazy" width="1400" height="525">
+    <figcaption><span class="fn">Figure 8.</span> <i>The Signing of the Treaty of Nanking</i>, 29 August 1842†. Engraving by John Burnet after Captain John Platt, published 1846. Public domain, Wikimedia Commons.</figcaption>
+  </figure>
+
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 2.</span> <b>The first treaty settlement, 1842–1844</b> (pp. 308, 317)</caption>
+    <thead><tr><th>Term</th><th>What it meant</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Five treaty ports</td><td>Guangzhou, Xiamen (Amoy), Fuzhou, Ningbo, and Shanghai† opened to British residence and trade; the <a class="term" href="#g-cohong">Cohong</a> abolished</td></tr>
+      <tr><td class="k">Hong Kong</td><td>Ceded to Britain</td></tr>
+      <tr><td class="k">Indemnity</td><td>21 million silver dollars for Britain's war costs</td></tr>
+      <tr><td class="k">Fixed tariff</td><td>Import duties set at 5 percent</td></tr>
+      <tr><td class="k">Most favored nation</td><td>Britain automatically got any privilege China gave another power</td></tr>
+      <tr><td class="k">Extraterritoriality</td><td>From the 1844 U.S. treaty (which also allowed churches and hospitals): foreigners answered only to their own laws and courts</td></tr>
+    </tbody>
+  </table></div>
+  <p class="cite">† Port names: MIT Visualizing Cultures, "The First Opium War." The textbook gives the number, not the names. Signing date: Encyclopaedia Britannica, "Treaty of Nanjing."</p>
+
+  <h3>Watch the most favored nation clause work</h3>
+  <p>Because China enjoyed no such rights abroad, <a class="term" href="#g-mfn">most favored nation</a> status and <a class="term" href="#g-extra">extraterritoriality</a> became the hallmarks of the system. Historian Akira Iriye called the result <a class="term" href="#g-multi">multilateral imperialism</a>. <span class="cite">p. 308</span></p>
+  <figure class="panel" id="mfnfig">
+    <div class="mfn-ctrl ctrl" id="mfn-ctrl">
+      <button class="step" type="button" data-k="tar" data-to="br">Britain wins a 5% tariff (1843)</button>
+      <button class="step" type="button" data-k="ext" data-to="us">U.S. wins extraterritoriality (1844)</button>
+      <button class="step" type="button" data-k="ch" data-to="us">U.S. wins the right to build churches (1844)</button>
+      <button class="step" type="button" data-k="reset">Reset</button>
+    </div>
+    <div class="mfn" id="mfn">
+      <div class="pw" data-p="br"><h4>Britain <small>Nanjing 1842</small></h4></div>
+      <div class="pw" data-p="us"><h4>United States <small>1844 treaty</small></h4></div>
+      <div class="pw" data-p="fr"><h4>France <small>treaty after 1842</small></h4></div>
+      <div class="pw" data-p="ot"><h4>Later signers <small>any power with MFN</small></h4></div>
+    </div>
+    <div class="mfn-leg"><span><i style="background:var(--accent-soft);border:1px solid var(--accent)"></i>won by treaty</span><span><i style="background:var(--ink-soft);border:1px solid var(--ink)"></i>gained automatically through MFN</span></div>
+    <div class="cap" id="mfn-cap"><b>Pick a concession above.</b>One power wins a privilege; see who else gets it.</div>
+    <figcaption><span class="fn">Figure 9.</span> How one treaty's gain became every power's gain. Simplified from pp. 308, 317.</figcaption>
+  </figure>
+
+  <h3>An uneasy peace <span class="cite">p. 318</span></h3>
+  <p>The Qing court split between a peace faction, led by the Manchu chancellor Mujangga, and Chinese degree holders who backed Lin and wanted stronger resistance. The emperor who succeeded Daoguang in 1850 dismissed Mujangga and recalled Lin. The court kept finding excuses not to receive foreign diplomats and fell short on the commercial clauses, which set up the next war.</p>
+</section>
+
+<!-- 5 ARROW -->
+<section class="unit reveal" id="arrow">
+  <div class="sec-num">Part 5</div>
+  <h2>The Second Opium War, 1856–1860</h2>
+  <p class="pages">pp. 309, 321–322</p>
+  <p>Britain and France both wanted the treaties renegotiated. Claiming China had not carried out the 1842 terms, they repeated the Opium War's swift coastal attacks. Britain called it the <a class="term" href="#g-arrow">Arrow War</a>.</p>
+  <ol class="chain">
+    <li><span class="n">1</span><b>End of 1857:</b> Guangzhou is captured and its governor-general seized; the city is held for three years.</li>
+    <li><span class="n">2</span><b>Mid-1858:</b> British and French ships take the forts at Tianjin. Threatened with a march on Beijing, the Manchu negotiator concedes: the <b>Treaties of Tianjin</b>, with the U.S. and Russia also gaining.</li>
+    <li><span class="n">3</span><b>A year later:</b> Returning to ratify, the British insist on sailing up the Beihe River toward Beijing; Qing forces drive them back.</li>
+    <li><span class="n">4</span><b>1860:</b> A new expedition of 11,000 British and 6,700 French soldiers charges into Beijing. They loot and burn the summer palace, a complex of some 200 buildings over 10 square miles. The Russian envoy talks the court into accepting terms.</li>
+  </ol>
+
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 3.</span> <b>What the powers gained, 1858–1860</b> (pp. 309, 321–322)</caption>
+    <thead><tr><th>Term</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td class="k">New treaty ports</td><td>Ten in 1858 (Ch. 18), plus Tianjin in 1860†: eleven in all, the figure given in Connections</td></tr>
+      <tr><td class="k">The interior</td><td>Foreign vessels on the Yangzi; foreigners, including missionaries, free to travel; tolerance for converts</td></tr>
+      <tr><td class="k">Diplomats</td><td><a class="term" href="#g-envoy">Resident ambassadors</a> in Beijing</td></tr>
+      <tr><td class="k">Taxes</td><td>Low tariffs; a <a class="term" href="#g-transit">transit tariff</a> of no more than 2.5%</td></tr>
+      <tr><td class="k">Opium</td><td>Imports legalized</td></tr>
+      <tr><td class="k">Indemnity</td><td>4 + 2 million ounces of silver (Britain, France), raised in 1860 to 16 million</td></tr>
+      <tr><td class="k">Territory</td><td>Kowloon peninsula to Britain; Russia takes eastern Manchuria's coast down to Vladivostok (1858–60)</td></tr>
+    </tbody>
+  </table></div>
+  <p class="cite">† Tianjin's opening in the 1860 Convention of Beijing: Academy of Chinese Studies, "Conventions of Peking."</p>
+
+  <figure>
+    <img class="zoomable" src="assets/unit5/yuanmingyuan-xieqiqu-ohlmer.jpg" alt="Photograph of the ruined stone facade of a European-style palace building, roofless, with rubble in front" loading="lazy" width="1280" height="941">
+    <figcaption><span class="fn">Figure 10.</span> Ruins of the European-style Xieqiqu pavilion in the summer palace (Yuanmingyuan), burned in 1860. Photograph by Ernst Ohlmer, 1872–73. Public domain, Wikimedia Commons.</figcaption>
+  </figure>
+  <div class="callout green">
+    <div class="label">Turning point</div>
+    <p>Having won so much through the treaties, the Western powers after 1860 increasingly saw propping up the weak Qing dynasty as in their own interest. That story continues in Unit 6. <span class="cite">p. 322</span></p>
+  </div>
+</section>
+
+<!-- 6 JAPAN -->
+<section class="unit reveal" id="japan">
+  <div class="sec-num">Part 6</div>
+  <h2>Japan: from exclusion to Perry and Harris</h2>
+  <p class="pages">pp. 309, 338–340</p>
+
+  <h3>Closing the door <span class="cite">p. 338</span></h3>
+  <ul class="tight">
+    <li><b>Russia</b> came first: Laxman at Nagasaki (1793), raids on Sakhalin and the Kurils (1806–07).</li>
+    <li><b>Britain</b> was the bigger threat: the warship <i>Phaeton</i> forced its way into Nagasaki bay (1808), and whalers raided villages in Mito and in the <a class="term" href="#g-tozama">tozama</a> domain of Satsuma (1824).</li>
+    <li>The shogunate answered with the <a class="term" href="#g-expel">1825 expulsion order</a>. That year Aizawa Seishisai wrote <a class="term" href="#g-shinron"><i>Shinron</i></a>, warning that traders brought Christianity to "conquer from within."</li>
+    <li>News of China's defeat in the Opium War pushed the shogunate to adopt some Western military technology and, in 1842, to supply ships in need before sending them away.</li>
+  </ul>
+
+  <h3>The black ships <span class="cite">pp. 309, 339</span></h3>
+  <div class="side">
+    <div>
+      <p>Earlier U.S. tries had failed: the <i>Morrison</i> (1837) and Commodore Biddle (1846). The U.S. now wanted coal for steamer routes to Shanghai and water and fuel for its whalers.</p>
+      <p>On <b>July 8, 1853</b>, Commodore <b>Matthew C. Perry</b> sailed four ships into Edo Bay. Ignoring the exclusion order, he would not move until officials accepted a letter from President Fillmore. He paraded his men, opened his gunports, and said he would return. In 1854 he came back with six ships, and the intimidated shogunate signed the <a class="term" href="#g-kanagawa">Kanagawa treaty</a>. Japan made all the concessions.</p>
+      <p>Perry's gifts showed off the Industrial Revolution: a Morse telegraph and a quarter-size steam locomotive with track.</p>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit5/perry-kawaraban-1854.jpg" alt="Japanese broadsheet showing three American officers with exaggerated features beside columns of Japanese text" loading="lazy" width="1400" height="1046">
+      <figcaption><span class="fn">Figure 11.</span> A Japanese broadsheet (<a class="term" href="#g-kawaraban">kawaraban</a>) with portraits of Perry and his officers and the text of his statement, c. 1854. Library of Congress, public domain.</figcaption>
+    </figure>
+  </div>
+  <p>The shogunate chose tiny, isolated Shimoda for the U.S. consul to keep him far from Edo. A woodblock print reproduced in the textbook gives an American official a large nose and a red mouth with gaping teeth, the features of demons. <span class="cite">pp. 339–340</span></p>
+
+  <h3>The Harris treaty, 1858 <span class="cite">pp. 309, 339</span></h3>
+  <div class="side left">
+    <figure class="port">
+      <img class="zoomable" src="assets/unit5/townsend-harris-bogle-1855.jpg" alt="Oil portrait of a seated middle-aged man in a dark coat and patterned vest" loading="lazy" width="700" height="959">
+      <figcaption><span class="fn">Figure 12.</span> Townsend Harris. Oil portrait by James Bogle, 1855. Public domain, Wikimedia Commons.</figcaption>
+    </figure>
+    <div>
+      <p><b>Townsend Harris</b>, a failed businessman in the China trade, arrived as the first U.S. <a class="term" href="#g-consul">consul</a> in 1856, to the alarm of officials who never expected a foreigner to live on Japan's soil. He bullied his way to Edo and pointed to what gunboats had done to China. Fearing the same, officials signed his treaty on <b>July 29, 1858</b>.</p>
+      <p>Japan soon signed similar treaties with the Netherlands, Britain, France, and Russia.</p>
+    </div>
+  </div>
+
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 4.</span> <b>Japan's two treaties with the United States</b> (pp. 309, 339)</caption>
+    <thead><tr><th></th><th>Kanagawa treaty, 1854</th><th>Harris treaty, 1858</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Kind</td><td>Friendship</td><td>Commercial</td></tr>
+      <tr><td class="k">Ports</td><td>Shimoda, Hakodate (supplies, coal)</td><td>Six cities opened to residence and trade†: Kanagawa, Nagasaki, Niigata, Hyogo; Edo and Osaka for residence</td></tr>
+      <tr><td class="k">Diplomats</td><td>A U.S. consul at Shimoda</td><td>Exchange of diplomatic representatives</td></tr>
+      <tr><td class="k">Tariffs</td><td>—</td><td>Low tariffs on imports; Japanese exports faced steep U.S. tariffs</td></tr>
+      <tr><td class="k">Extraterritoriality</td><td>—</td><td>Yes</td></tr>
+          </tbody>
+  </table></div>
+  <p class="cite">† City names: Article III of the treaty text (University of Texas, HIST 341 materials). The textbook gives the number six.</p>
+
+  <h3>The great debate <span class="cite">pp. 339–340</span></h3>
+  <p>Shaken, the shogunate gave up its 250-year monopoly on foreign policy. It asked leading daimyo for advice (1854) and asked the monarch <b>Kōmei</b> to approve the Harris treaty (1858). Kōmei refused and demanded expulsion. Signing anyway was called treason, and news spread through letters, diaries, and <a class="term" href="#g-kawaraban">kawaraban</a>.</p>
+  <div class="think">
+    <div class="card b"><span class="vs">Engage</span>
+      <div class="who">Sakuma Shōzan</div><p>Get Western military technology and science, joined to Japan's Confucian ethics; only trade brings the tools to compete.</p>
+      <div class="who">Yokoi Shōnan</div><p>Popularized <a class="term" href="#g-fukoku"><i>fukoku kyōhei</i></a>, "rich country, strong army."</p>
+      <p><i>Both were killed by anti-foreign assassins.</i></p></div>
+    <div class="card a"><span class="vs">Resist</span>
+      <div class="who">Tokugawa Nariaki</div><p>Trade would cost precious metals for trifles and spread Christianity. Fight, even if defeat is certain, to revive the martial spirit.</p>
+      <div class="who">Yoshida Shōin</div><p>Taught <a class="term" href="#g-sonno"><i>sonnō jōi</i></a>: the monarch should share in policy and the barbarians must go.</p></div>
+  </div>
+  <p>How this split brought down the shogunate is the subject of Unit 7.</p>
+</section>
+
+<!-- 7 KOREA -->
+<section class="unit reveal" id="korea">
+  <div class="sec-num">Part 7</div>
+  <h2>Korea: isolation and the Ganghwa Treaty</h2>
+  <p class="pages">pp. 309, 311, 369–374</p>
+  <p>Korean diplomats in Beijing heard of the Opium War, but not how bad it was. Wei Yuan's <i>Illustrated Essay of the Maritime Nations</i>, with its advice on defense, reached Korea in 1845 and was ignored. Real responses waited until 1864, when twelve-year-old <b>King Gojong</b> took the throne with his father, the <a class="term" href="#g-daewongun">Daewongun</a>, behind him. <span class="cite">p. 369</span></p>
+  <p>The Daewongun rejected every request for a treaty to avoid the unequal treaty system forced on China and Japan. Almost all Confucian scholars backed him: "Defend Confucian correctness against foreign perversity." <span class="cite">p. 370</span></p>
+
+  <h3>Military pressure from the West <span class="cite">pp. 309, 370–371</span></h3>
+  <ol class="chain">
+    <li><span class="n">1</span><b>1866:</b> Suspecting a plot when Catholics offered to mediate with Russia, the Daewongun begins a persecution that cuts Korean Catholics from 20,000 to 8,000 by 1871. French troops land on <a class="term" href="#g-ganghwa-is">Ganghwa Island</a> in revenge and are forced out.</li>
+    <li><span class="n">2</span><b>1866:</b> The <a class="term" href="#g-sherman"><i>General Sherman</i></a> is burned near Pyeongyang. Korea builds forts, warships, and even a steamboat (1867), which fails its trial.</li>
+    <li><span class="n">3</span><b>1868:</b> German adventurer Ernst Oppert tries to dig up the bones of the Daewongun's father to hold for ransom.</li>
+    <li><span class="n">4</span><b>1871:</b> U.S. marines land on Ganghwa, killing dozens of defenders, and demand a treaty. When they withdraw, the Daewongun declares victory: anyone who urges peace is a traitor.</li>
+  </ol>
+  <div class="callout ink">
+    <div class="label">Why the foreigners pushed so hard</div>
+    <p>Under the <a class="term" href="#g-tribute">tribute system</a> no one could say who was responsible for Korea's foreign relations. The powers wanted to know whether Korea's king could sign treaties or whether they must deal with China. The Qing dodged responsibility, knowing that if Korea broke a treaty, the power would demand compensation from China. <span class="cite">p. 371</span></p>
+  </div>
+
+  <h3>Japan opens Korea <span class="cite">pp. 371–373</span></h3>
+  <p>In 1868 the new Meiji government sent a note in its emperor's name asking for a treaty. The Daewongun would not even accept it: there was only one legitimate emperor, the Qing. The insult nearly led to a Japanese invasion in 1873.</p>
+  <p>Once Queen Min's faction persuaded Gojong to rule for himself (1874), Korea softened. Japan seized the chance: in 1875 it sent a survey ship up the coast expecting the shore batteries to fire. They did. Japan landed troops on Ganghwa Island and threatened war unless Gojong signed.</p>
+  <div class="pair-fig">
+    <figure>
+      <img class="zoomable" src="assets/unit5/unyo-ganghwa-1875.jpg" alt="Colorful Japanese print of soldiers with a rising-sun flag storming a smoking Korean fort" loading="lazy" width="1400" height="694">
+      <figcaption><span class="fn">Figure 13.</span> <i>Soldiers of the Warship Un'yō Fighting at Ganghwa, Korea</i> (title translated from the print's cartouche). Japanese woodblock print, Meiji era; artist and date not recorded. Public domain, Wikimedia Commons.</figcaption>
+    </figure>
+    <figure>
+      <img class="zoomable" src="assets/unit5/ganghwa-treaty-1876.jpg" alt="Japanese print of Korean and Japanese delegations seated at a long table inside a hall, with musicians outside" loading="lazy" width="960" height="637">
+      <figcaption><span class="fn">Figure 14.</span> Japanese and Korean delegates at the signing of the Ganghwa Treaty, 1876. Japanese newspaper print, c. 1880. Public domain, Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+  <p>The <a class="term" href="#g-ganghwa">Ganghwa Treaty</a> of 1876 was Korea's first modern treaty and carried most of the unequal-treaty provisions. Gojong thought Japan would just trade. In fact he had opened the door to foreign interference. <span class="cite">p. 373</span></p>
+
+  <h3>Treaties with the West, through China <span class="cite">pp. 373–374</span></h3>
+  <p>Li Hongzhang, who ran Qing relations with Korea, knew China could not hold Korea by force, so he used the powers' rivalries to check Russia and Japan. Following Huang Zunxian's <a class="term" href="#g-strategy">"Strategy for Korea,"</a> Gojong opened Incheon and Wonsan to Japan. In <b>May 1882</b> he signed a treaty with Commodore <b>Robert Shufeldt</b> of the U.S. Navy, negotiated by Li, with extraterritoriality and most favored nation status; similar treaties followed. Shufeldt refused a clause calling Korea a Chinese tributary, so Gojong sent a letter instead, calling Korea <a class="term" href="#g-selfgov">"self-governing" and a tributary</a>.</p>
+</section>
+
+<!-- 8 PORTS -->
+<section class="unit reveal" id="ports">
+  <div class="sec-num">Part 8</div>
+  <h2>The treaty-port system, compared</h2>
+  <p class="pages">pp. 308–309, 313, 317, 321, 339, 373</p>
+  <p>The map shows where each wave of treaties opened the region. Choose a wave, or tap a port.</p>
+  <figure class="mapbox">
+    <div class="wide"><svg id="pmap" viewBox="0 0 760 612" role="img" aria-labelledby="pmap-t"><title id="pmap-t">Map of treaty ports opened in China, Japan, and Korea, 1842–1883</title><path class="land" d="M287 620L290 622L296 626L299 627L301 628L305 627L307 623L309 624L310 627L308 631L311 632L314 632L308 632L304 632L300 632L296 632L293 632L298 632L301 632L306 632L309 632L313 632L316 632L320 632L323 632L327 632L330 632L335 632L338 632L335 632L338 632L341 632L344 632L341 632L338 632L335 632L331 632L327 632L321 632L315 632L312 632L308 632L305 632L300 632L297 632L294 632L289 632L285 632L282 632L278 632L284 632L281 632L278 632L275 632L271 632L268 632L265 632L262 632L265 632L268 632L271 632L274 632L276 631L276 628L277 626L277 623L279 622L281 621L284 621L286 620ZM698 -20L703 -20L707 -20L711 -20L717 -20L723 -20L726 -20L730 -20L734 -20L730 -20L727 -20L724 -20L721 -20L717 -20L710 -20L707 -20L704 -20L696 -20L699 -20L702 -20L705 -20L707 -18L710 -18L712 -17L713 -13L714 -9L713 -5L712 -3L711 -1L711 -5L710 -8L710 -11L708 -13L704 -13L700 -14L698 -15L696 -16L693 -15L692 -13L691 -10L690 -8L688 -2L687 0L685 2L683 0L682 -4L681 -10L681 -16L684 -20L687 -20L682 -20L685 -20L688 -20L684 -20L680 -20L683 -20L687 -20L690 -20L694 -20L697 -20L693 -20L690 -20L694 -20L697 -20ZM719 43L722 43L731 46L733 47L736 47L739 46L743 42L748 38L746 44L743 48L743 51L744 53L745 55L746 57L747 61L749 62L752 61L754 59L757 59L755 60L753 61L751 64L748 64L745 65L743 66L740 68L737 68L734 69L728 68L726 69L721 71L717 74L714 77L711 81L710 83L709 86L709 89L707 91L705 90L701 88L694 85L686 80L681 78L673 78L665 83L661 79L659 78L656 78L653 80L652 82L654 86L656 88L659 88L663 91L667 94L666 96L663 96L659 95L657 96L655 98L654 100L653 102L651 103L649 104L647 103L646 101L646 98L648 95L647 89L644 86L643 84L643 80L643 77L645 75L648 74L650 73L652 71L654 69L655 67L654 64L653 61L655 60L657 61L661 63L664 63L668 64L671 63L673 59L673 56L673 53L676 47L677 45L678 39L679 37L679 34L680 29L679 24L677 21L676 19L677 15L680 13L682 12L684 13L687 15L692 20L697 27L701 30L704 33L708 36L713 39L715 40L717 42L719 43ZM669 105L674 104L673 108L673 111L673 117L673 120L674 122L675 124L677 125L680 129L682 134L683 137L684 139L684 142L684 145L684 149L682 154L681 157L679 159L677 160L676 163L675 167L675 170L674 172L672 173L667 174L664 178L664 182L664 185L665 188L666 193L665 201L664 204L663 206L661 207L660 210L658 215L658 218L657 220L657 223L658 225L660 230L663 233L658 234L655 238L654 240L654 243L653 245L649 247L647 248L645 250L643 251L643 248L643 244L644 241L647 238L648 236L646 234L643 234L642 237L639 240L640 242L641 244L640 246L638 244L636 242L632 243L630 244L629 247L629 250L629 253L627 255L625 258L623 257L623 252L625 249L624 247L622 246L619 247L618 249L616 251L615 253L613 255L612 258L608 257L605 257L599 257L595 257L590 259L594 256L593 254L591 255L589 253L588 256L587 254L586 251L587 248L584 249L581 254L580 256L582 259L586 261L587 263L586 265L580 266L576 268L575 270L571 277L568 282L564 283L560 282L558 280L556 276L554 274L553 272L554 268L553 265L556 263L558 261L559 259L558 257L555 257L552 258L550 257L547 255L543 254L541 255L537 256L533 258L531 260L526 261L522 262L519 263L517 264L513 264L509 266L506 266L504 265L502 264L499 267L498 271L497 273L497 276L490 271L484 271L481 273L478 272L476 271L473 272L473 266L474 264L478 263L482 262L485 259L487 258L489 257L491 255L493 254L495 251L497 250L499 249L502 246L506 242L507 240L512 238L516 237L520 239L522 238L525 238L529 238L532 238L536 237L538 236L541 235L549 234L554 232L556 233L555 236L557 237L562 237L564 238L566 237L568 235L570 234L572 232L570 229L571 224L573 221L575 220L577 218L581 214L583 210L584 205L584 199L586 195L593 193L595 192L592 197L590 199L588 200L589 203L589 206L591 209L594 209L598 206L606 202L610 200L614 199L618 195L620 193L621 191L623 189L624 186L632 181L634 179L635 175L636 172L637 170L638 168L640 165L641 163L642 161L644 156L644 153L646 152L647 149L647 144L646 139L644 138L642 139L641 137L644 136L645 133L646 130L645 127L645 124L645 121L647 119L650 118L652 114L652 110L653 108L655 109L657 108L658 110L659 116L661 117L663 115L667 116L669 114L670 111L669 108L667 109L661 110L662 104L663 102L666 102L669 105ZM539 266L541 267L544 267L544 271L545 273L546 276L542 278L539 281L538 283L537 285L536 287L535 289L531 284L529 283L526 283L518 286L518 289L516 293L514 294L513 298L511 300L507 300L507 297L505 296L503 294L503 290L504 288L502 287L501 285L496 287L499 284L501 283L504 280L506 279L507 277L508 275L509 272L512 270L514 272L516 274L519 273L522 272L524 271L525 269L524 266L529 265L531 264L536 265L539 266ZM478 281L481 282L483 281L486 280L488 281L489 283L487 286L485 288L489 289L492 289L491 292L493 293L492 295L494 296L489 304L488 307L487 310L486 312L485 315L484 320L484 325L481 331L478 330L476 331L477 334L473 337L469 339L470 337L471 334L471 331L469 328L470 326L471 324L468 324L467 327L466 329L467 332L468 334L467 336L462 334L460 333L459 331L461 330L462 326L461 324L460 322L460 318L460 315L462 314L464 312L465 310L467 307L468 303L465 302L467 301L466 298L464 296L463 292L461 291L458 292L459 294L459 298L462 298L463 300L462 302L460 301L457 300L455 301L453 303L452 299L450 297L450 293L452 295L453 297L456 298L455 295L452 293L450 290L448 289L449 287L453 287L454 284L457 283L458 281L461 281L463 280L464 278L465 276L469 274L472 274L474 275L475 277L476 279L478 281ZM285 530L284 532L283 535L283 538L283 541L282 543L280 545L279 543L279 540L278 537L275 534L273 533L272 531L270 527L269 522L268 520L267 518L268 516L269 512L268 509L269 506L278 488L280 484L282 482L283 480L284 477L286 475L292 472L294 470L297 470L298 472L301 473L303 476L301 478L300 481L301 484L299 492L297 495L296 502L295 506L294 511L293 517L292 520L291 522L288 526L285 530ZM93 589L94 592L95 594L95 597L93 598L88 605L87 607L86 612L85 616L84 619L81 619L79 621L77 623L76 625L72 625L70 628L68 629L65 628L60 627L58 626L56 625L51 622L51 617L50 615L50 606L51 604L53 602L55 601L58 598L60 596L62 594L63 591L65 592L67 591L69 589L74 590L78 589L80 588L83 588L87 590L87 587L89 586L90 588L93 589ZM539 261L537 262L535 260L538 260ZM303 614L301 616L301 613L303 611L304 613ZM295 603L295 606L292 604L295 603ZM303 581L304 578L303 581ZM302 571L301 573L301 570ZM780 15L780 18L780 21L780 24L780 30L780 33L777 36L778 34L779 32L780 30L780 26L780 21L780 18L780 14L780 17L780 12L780 15ZM774 51L772 50L776 48L777 50L774 51ZM764 34L767 36L771 35L770 37L766 39L763 39L758 43L756 47L752 49L752 53L749 51L750 48L754 45L756 42L758 40L762 34ZM348 487L346 490L344 489L346 488L348 485ZM340 492L337 492L338 489L341 490L340 492ZM369 482L366 482L366 479L369 481ZM423 438L421 439L420 441L417 443L416 446L414 447L414 450L411 451L413 446L413 443L417 441L416 439L418 438L420 437L422 435L423 433L424 435L423 438ZM437 414L435 411L437 412ZM446 403L444 405L442 403L440 402L442 401L446 399L448 398L450 396L449 398L448 400L446 402ZM468 357L464 356L463 354L465 352L468 354L468 357ZM474 353L474 349L475 345L476 348L475 350L474 353ZM431 299L433 300L435 301L434 303L432 304L430 303L431 299ZM458 312L456 313L456 310L456 307L459 305L460 309L458 312ZM463 308L461 307L463 305L464 307ZM520 222L517 221L519 219L520 221ZM615 185L612 185L614 182L613 179L617 175L617 178L619 180L617 183L615 185ZM636 89L635 87L636 85L637 88ZM666 15L664 12L666 14ZM671 20L668 19L669 17L671 19ZM550 265L548 267L545 266L546 264L548 261L550 260L549 263L550 265ZM438 298L437 296L439 292L440 294L439 296L438 298ZM446 289L445 291L446 287L448 286L447 288ZM442 269L441 265L443 267L442 269ZM444 264L442 263L443 260L446 256L446 260L444 262ZM499 273L502 274L499 275L498 273ZM432 254L430 255L428 253L429 251L431 249L432 254ZM419 254L418 256L417 254L415 253L416 251L419 252ZM386 289L383 288L384 286L386 284L393 282L397 283L397 286L393 288L391 289L386 289ZM384 263L382 262L384 260L387 260L386 262L384 263ZM390 187L390 190L388 189L387 186L390 187ZM301 329L295 327L291 325L289 323L291 322L294 323L295 325L300 327L301 329ZM310 363L307 362L304 362L303 359L306 359L309 361L310 363ZM263 465L261 466L261 463L262 461L263 463ZM83 564L86 564L86 567L84 566L81 566L83 564ZM30 561L28 564L28 561ZM20 572L17 570L20 570ZM451 325L452 322L451 325ZM388 215L386 216L386 213L388 215ZM290 406L287 406L289 403L290 406ZM144 525L141 524L144 525ZM129 553L128 551L129 549L129 553ZM152 539L149 539L150 537L153 536L152 539ZM383 255L381 254L380 252L383 253ZM-20 -20L-13 -20L-6 -20L-2 -20L1 -20L-5 -20L-12 -20L-20 -20L-13 -20L-7 -20L-3 -20L3 -20L6 -20L13 -20L18 -20L24 -20L27 -20L23 -20L18 -20L12 -20L7 -20L13 -20L16 -20L22 -20L31 -20L36 -20L39 -20L45 -20L50 -20L64 -20L76 -20L85 -20L97 -20L102 -20L106 -20L110 -20L113 -20L116 -20L113 -20L117 -20L120 -20L126 -20L129 -20L126 -20L130 -20L134 -20L138 -20L141 -20L144 -20L149 -20L145 -20L142 -20L135 -20L126 -20L123 -20L128 -20L132 -20L136 -20L140 -20L144 -20L147 -20L132 -20L118 -20L111 -20L101 -20L93 -20L83 -20L80 -20L73 -20L67 -20L58 -20L42 -20L34 -20L24 -20L15 -20L4 -20L-6 -20L-12 -20L-16 -20L-11 -20L-6 -20L1 -20L4 -20L9 -20L21 -20L26 -20L33 -20L38 -20L41 -20L45 -20L49 -20L59 -20L63 -20L69 -20L73 -20L84 -20L91 -20L83 -20L78 -20L71 -20L74 -20L78 -20L81 -20L93 -20L96 -20L101 -20L105 -20L99 -20L103 -20L110 -20L117 -20L122 -20L129 -20L132 -20L136 -20L139 -20L136 -20L142 -20L138 -20L135 -20L139 -20L146 -20L140 -20L137 -20L141 -20L144 -20L148 -20L143 -20L149 -20L153 -20L168 -20L177 -20L199 -20L215 -20L237 -20L245 -20L242 -20L237 -20L246 -20L255 -20L261 -20L265 -20L277 -20L285 -20L292 -20L299 -20L302 -20L305 -20L309 -20L314 -20L317 -20L314 -20L323 -20L326 -20L329 -20L332 -20L335 -20L330 -20L338 -20L341 -20L349 -20L352 -20L357 -20L373 -20L376 -20L382 -20L385 -20L390 -20L396 -20L400 -20L413 -20L417 -20L421 -20L429 -20L432 -20L435 -20L438 -20L434 -20L429 -20L437 -20L441 -20L433 -20L430 -20L426 -20L439 -20L442 -20L445 -20L442 -20L436 -20L427 -20L422 -20L414 -20L419 -20L425 -20L435 -20L438 -20L441 -20L446 -20L441 -20L436 -20L440 -20L444 -20L451 -20L456 -20L461 -20L466 -20L469 -20L472 -20L475 -20L478 -20L483 -20L486 -20L490 -20L495 -20L498 -20L505 -20L508 -20L515 -20L521 -20L526 -20L534 -20L545 -20L551 -20L558 -20L562 -20L568 -20L572 -20L578 -20L591 -20L595 -20L601 -20L604 -20L607 -20L610 -20L614 -20L610 -20L606 -20L609 -20L612 -20L618 -20L621 -20L627 -20L631 -20L639 -20L646 -20L640 -20L637 -20L634 -20L639 -20L643 -20L646 -20L650 -20L639 -20L635 -20L630 -20L636 -20L655 -20L659 -20L667 -20L664 -20L658 -20L661 -20L671 -20L675 -20L685 -20L713 -20L716 -20L728 -20L733 -20L745 -20L750 -20L755 -20L762 -20L765 -20L750 -20L745 -20L739 -20L733 -20L729 -20L725 -20L728 -20L731 -20L742 -20L771 -20L776 -20L771 -20L768 -20L762 -20L756 -20L749 -20L746 -20L743 -20L756 -20L761 -20L767 -20L777 -20L780 -20L775 -20L770 -20L765 -20L761 -20L757 -20L752 -20L731 -20L724 -20L720 -20L713 -20L707 -20L695 -20L690 -20L684 -20L679 -20L676 -20L672 -20L665 -20L661 -20L655 -20L646 -20L643 -20L639 -20L635 -20L630 -20L626 -20L621 -20L612 -20L609 -20L602 -20L596 -20L593 -20L589 -20L585 -20L579 -20L573 -20L565 -20L561 -20L556 -20L559 -20L567 -20L575 -20L581 -20L584 -20L587 -20L592 -20L596 -20L599 -20L602 -20L599 -20L595 -20L598 -20L601 -20L605 -20L601 -20L595 -20L603 -20L607 -20L613 -20L617 -20L614 -20L617 -20L621 -20L629 -20L633 -20L640 -20L643 -20L649 -20L653 -20L659 -20L665 -20L669 -20L672 -20L668 -20L663 -20L667 -20L670 -20L673 -20L670 -20L667 -20L664 -20L659 -20L656 -20L653 -20L650 -20L646 -20L641 -20L637 -20L634 -20L630 -20L627 -20L619 -20L615 -17L614 -12L612 -10L610 -6L604 2L602 4L597 8L592 14L585 19L584 21L581 23L579 27L575 30L574 33L570 35L568 37L561 46L560 48L556 52L553 56L549 58L545 61L535 67L532 69L526 72L519 73L516 75L514 74L513 72L510 73L507 71L503 70L500 71L500 63L498 62L495 65L493 66L492 64L494 62L490 62L485 68L482 72L480 75L478 76L475 76L470 75L472 79L470 83L468 84L465 84L462 86L459 88L457 90L455 93L454 95L451 97L450 100L451 104L452 106L451 110L451 115L450 117L443 119L442 121L439 125L436 126L434 128L431 129L430 131L428 133L425 134L420 135L417 136L415 138L410 141L409 143L409 146L409 150L406 152L408 155L412 156L414 157L417 161L420 163L423 164L424 166L430 177L434 184L438 189L443 198L445 203L445 206L446 210L445 212L445 216L444 219L444 222L445 225L447 226L448 228L446 234L445 238L443 242L441 245L438 246L433 247L430 246L428 247L426 249L427 251L425 252L423 251L420 251L419 249L416 250L413 250L411 252L413 254L411 256L409 253L406 255L408 258L406 261L402 259L404 257L400 258L397 262L395 261L392 263L391 265L390 262L386 259L385 257L388 256L390 255L391 253L389 254L388 251L386 248L387 244L388 242L389 239L391 237L389 235L391 233L394 232L394 229L392 228L393 226L391 224L391 221L390 219L390 216L390 213L389 211L387 212L384 211L383 209L384 207L387 205L389 204L391 203L393 205L396 207L398 206L397 204L395 202L394 200L395 197L393 195L392 191L391 189L392 187L387 184L384 185L383 187L381 184L376 182L374 183L372 185L370 187L367 185L363 184L361 183L365 180L361 179L357 179L355 178L359 176L359 173L361 170L367 166L370 166L369 164L364 163L369 152L368 149L364 145L358 143L357 141L356 144L354 145L354 142L350 139L349 136L347 138L344 140L337 140L335 139L334 141L330 141L328 142L324 143L322 145L310 150L308 153L306 155L304 157L301 159L299 158L297 160L295 162L291 163L289 164L287 163L287 160L290 159L298 156L297 154L298 152L301 150L295 150L292 150L291 148L290 146L293 145L295 144L294 141L295 139L300 137L302 135L304 133L308 128L309 125L307 122L301 117L301 114L300 116L296 117L288 116L285 119L282 121L281 123L275 131L263 136L258 138L254 142L253 144L252 146L251 149L248 154L245 155L242 155L237 156L234 157L231 154L229 153L225 154L224 156L221 162L220 166L221 172L224 174L228 177L238 179L241 178L246 180L248 183L248 186L249 188L247 189L246 193L246 196L247 198L249 199L252 201L256 201L261 200L264 198L269 193L272 190L271 188L280 185L286 187L289 190L292 191L295 192L297 193L301 194L304 193L306 192L307 194L310 195L313 195L315 194L317 195L315 197L315 200L312 202L314 204L313 206L310 208L308 207L307 205L303 205L298 208L293 210L288 212L286 213L283 212L281 213L283 214L282 217L279 219L279 223L276 224L273 225L273 222L271 221L269 222L268 224L269 226L271 227L267 230L266 232L264 233L263 235L261 236L259 239L257 241L255 242L254 247L251 249L250 253L251 255L254 255L258 259L262 261L265 262L270 264L271 266L272 268L274 275L275 278L276 280L278 283L280 289L283 294L283 298L282 300L285 304L291 307L293 309L293 312L294 314L298 316L301 319L301 324L298 324L292 320L288 321L284 320L281 316L279 315L276 315L269 318L267 319L270 319L273 318L275 317L280 318L281 321L284 323L286 324L289 326L292 329L298 333L300 336L301 338L302 342L300 343L295 343L293 345L291 347L285 350L284 352L283 354L278 354L275 354L271 356L273 357L275 356L278 359L283 359L288 356L291 356L293 357L298 363L300 364L303 365L306 365L302 367L298 372L296 373L298 374L301 371L303 374L302 382L300 380L297 380L294 381L298 385L297 387L297 390L295 392L295 396L296 399L297 401L295 400L292 403L289 400L287 401L286 404L284 407L281 407L282 409L279 414L277 417L278 420L276 423L275 425L273 427L271 428L269 433L268 435L268 438L265 440L264 438L263 436L262 434L260 437L258 435L259 438L261 439L262 441L263 443L264 445L262 446L260 448L258 450L256 452L253 452L251 451L252 454L255 454L257 453L259 455L258 460L257 462L259 466L256 466L252 465L250 466L252 469L251 471L247 471L245 473L246 476L244 478L241 479L242 482L240 484L236 485L232 484L228 486L227 488L225 489L228 490L229 493L226 496L225 498L222 500L221 502L218 502L217 507L215 505L213 506L211 508L207 506L206 511L204 512L202 513L203 515L201 516L200 521L197 522L195 521L194 523L191 524L187 526L185 525L183 524L181 526L178 527L175 525L173 526L171 528L169 529L166 530L166 527L163 528L162 530L163 532L160 531L158 530L157 533L158 535L157 537L155 536L153 535L150 535L152 533L149 530L147 527L145 524L144 522L144 519L141 520L139 523L141 526L142 528L144 530L143 535L144 537L143 539L141 540L138 542L135 539L133 541L133 545L131 546L129 545L127 547L125 549L123 548L122 546L121 544L121 548L120 550L118 549L116 548L114 547L113 549L111 550L109 552L106 554L102 554L99 555L96 555L95 557L91 558L88 560L87 562L85 561L84 559L83 562L80 566L79 568L83 570L82 573L86 577L85 579L83 582L78 583L75 582L74 580L75 578L73 577L72 575L72 571L70 569L70 565L71 561L72 559L75 558L75 555L71 554L68 551L67 554L65 556L61 556L59 555L58 552L54 552L51 550L49 548L47 546L47 550L48 552L46 553L45 551L43 554L39 554L37 555L34 555L32 557L29 559L27 560L26 562L26 565L22 568L20 566L18 567L14 567L14 571L10 577L11 580L10 582L8 584L3 589L0 590L-4 598L-4 601L-4 605L-5 609L-7 610L-5 617L-4 620L-2 623L1 627L3 628L5 629L8 632L14 632L18 632L21 632L26 632L29 632L33 632L36 632L39 632L42 632L46 632L49 632L52 632L55 632L59 632L62 632L65 632L62 632L58 632L54 632L51 632L48 632L43 632L40 632L35 632L30 632L26 632L23 632L20 632L17 632L14 632L9 632L14 632L11 632L3 632L10 632L7 632L4 632L-1 632L2 632L-9 632L-13 632L-17 632L-20 632L-17 632L-20 632L-20 623L-20 618L-20 615L-20 608L-20 605L-20 608L-20 612L-20 607L-20 603L-20 606L-20 602L-20 598L-20 595L-20 592L-20 589L-20 592L-20 587L-20 580L-20 583L-20 586L-20 583L-20 580L-20 576L-20 579L-20 582L-20 578L-20 573L-20 569L-20 562L-20 555L-20 551L-20 546L-20 540L-20 537L-20 532L-20 528L-20 524L-20 527L-20 530L-20 527L-20 520L-20 515L-20 511L-20 508L-20 512L-20 515L-20 518L-20 521L-20 524L-20 527L-20 530L-20 534L-20 538L-20 543L-20 546L-20 543L-20 540L-20 543L-20 539L-20 533L-20 537L-20 540L-20 544L-20 548L-20 544L-20 537L-20 543L-20 546L-20 550L-20 547L-20 543L-20 547L-20 552L-20 544L-20 541L-20 548L-20 551L-20 548L-20 543L-20 539L-20 535L-20 538L-20 541L-20 544L-20 548L-20 552L-20 555L-20 558L-20 561L-20 564L-20 567L-20 572L-20 575L-20 580L-20 585L-20 589L-20 594L-20 591L-20 595L-20 598L-20 609L-20 612L-20 619L-20 625L-20 628L-20 632L-20 628L-20 621L-20 617L-20 613L-20 608L-20 611L-20 607L-20 603L-20 600L-20 595L-20 587L-20 576L-20 570L-20 567L-20 564L-20 558L-20 554L-20 551L-20 546L-20 540L-20 537L-20 542L-20 546L-20 549L-20 554L-20 561L-20 567L-20 572L-20 564L-20 555L-20 551L-20 547L-20 544L-20 539L-20 535L-20 531L-20 525L-20 522L-20 519L-20 522L-20 526L-20 520L-20 517L-20 513L-20 508L-20 504L-20 507L-20 502L-20 498L-20 494L-20 490L-20 481L-20 477L-20 473L-20 467L-20 463L-20 466L-20 469L-20 472L-20 468L-20 471L-20 468L-20 465L-20 462L-20 459L-20 455L-20 452L-20 449L-20 445L-20 438L-20 435L-20 431L-20 428L-20 431L-20 434L-20 437L-20 440L-20 437L-20 434L-20 430L-20 427L-20 423L-20 419L-20 416L-20 412L-20 405L-20 398L-20 391L-20 388L-20 385L-20 382L-20 377L-20 373L-20 370L-20 365L-20 361L-20 358L-20 362L-20 356L-20 353L-20 357L-20 360L-20 363L-20 366L-20 369L-20 372L-20 376L-20 379L-20 386L-20 390L-20 393L-20 398L-20 405L-20 409L-20 412L-20 416L-20 419L-20 423L-20 426L-20 431L-20 434L-20 438L-20 441L-20 444L-20 451L-20 454L-20 457L-20 462L-20 466L-20 469L-20 474L-20 477L-20 481L-20 478L-20 472L-20 467L-20 464L-20 459L-20 454L-20 451L-20 455L-20 458L-20 464L-20 467L-20 472L-20 475L-20 478L-20 483L-20 486L-20 491L-20 497L-20 493L-20 490L-20 486L-20 482L-20 475L-20 470L-20 467L-20 464L-20 458L-20 455L-20 452L-20 448L-20 445L-20 448L-20 451L-20 458L-20 461L-20 475L-20 482L-20 488L-20 491L-20 495L-20 499L-20 503L-20 507L-20 512L-20 516L-20 522L-20 526L-20 529L-20 532L-20 537L-20 542L-20 545L-20 549L-20 555L-20 560L-20 564L-20 571L-20 578L-20 575L-20 581L-20 586L-20 590L-20 593L-20 596L-20 602L-20 606L-20 611L-20 614L-20 617L-20 621L-20 631L-20 624L-20 619L-20 615L-20 612L-20 601L-20 597L-20 593L-20 589L-20 583L-20 580L-20 577L-20 572L-20 567L-20 559L-20 555L-20 551L-20 546L-20 543L-20 539L-20 535L-20 530L-20 526L-20 521L-20 517L-20 514L-20 508L-20 505L-20 500L-20 497L-20 494L-20 488L-20 484L-20 480L-20 477L-20 474L-20 469L-20 461L-20 455L-20 452L-20 440L-20 436L-20 433L-20 429L-20 425L-20 421L-20 414L-20 407L-20 404L-20 396L-20 391L-20 377L-20 374L-20 379L-20 391L-20 400L-20 405L-20 410L-20 413L-20 407L-20 402L-20 399L-20 395L-20 392L-20 386L-20 383L-20 379L-20 376L-20 373L-20 367L-20 363L-20 366L-20 371L-20 376L-20 381L-20 385L-20 390L-20 394L-20 398L-20 403L-20 407L-20 410L-20 415L-20 421L-20 424L-20 429L-20 438L-20 441L-20 453L-20 460L-20 466L-20 473L-20 488L-20 492L-20 495L-20 500L-20 503L-20 511L-20 515L-20 522L-20 526L-20 529L-20 535L-20 542L-20 549L-20 553L-20 559L-20 562L-20 565L-20 569L-20 572L-20 576L-20 580L-20 586L-20 594L-20 598L-20 610L-20 616L-20 619L-20 622L-20 625L-20 629L-20 632L-20 629L-20 623L-20 618L-20 612L-20 608L-20 605L-20 602L-20 594L-20 589L-20 586L-20 580L-20 574L-20 571L-20 564L-20 571L-20 558L-20 546L-20 540L-20 536L-20 530L-20 525L-20 522L-20 519L-20 516L-20 511L-20 504L-20 499L-20 488L-20 482L-20 479L-20 471L-20 467L-20 463L-20 457L-20 449L-20 446L-20 442L-20 439L-20 436L-20 433L-20 427L-20 421L-20 416L-20 413L-20 410L-20 405L-20 401L-20 396L-20 392L-20 387L-20 384L-20 377L-20 371L-20 367L-20 363L-20 360L-20 354L-20 349L-20 346L-20 343L-20 338L-20 330L-20 324L-20 315L-20 312L-20 306L-20 296L-20 290L-20 286L-20 280L-20 276L-20 273L-20 269L-20 254L-20 234L-20 231L-20 228L-20 232L-20 235L-20 239L-20 243L-20 246L-20 243L-20 240L-20 243L-20 246L-20 242L-20 238L-20 234L-20 230L-20 225L-20 221L-20 218L-20 215L-20 210L-20 206L-20 211L-20 208L-20 205L-20 202L-20 206L-20 202L-20 207L-20 204L-20 200L-20 196L-20 199L-20 203L-20 207L-20 210L-20 207L-20 203L-20 207L-20 210L-20 215L-20 219L-20 223L-20 226L-20 229L-20 232L-20 235L-20 239L-20 242L-20 248L-20 252L-20 256L-20 260L-20 264L-20 267L-20 271L-20 275L-20 278L-20 281L-20 286L-20 289L-20 292L-20 298L-20 301L-20 305L-20 308L-20 314L-20 318L-20 321L-20 325L-20 328L-20 332L-20 335L-20 338L-20 341L-20 345L-20 353L-20 356L-20 353L-20 344L-20 341L-20 338L-20 335L-20 331L-20 327L-20 321L-20 317L-20 312L-20 307L-20 304L-20 300L-20 296L-20 299L-20 302L-20 307L-20 310L-20 314L-20 317L-20 320L-20 324L-20 328L-20 331L-20 335L-20 338L-20 341L-20 344L-20 341L-20 335L-20 332L-20 329L-20 326L-20 329L-20 332L-20 329L-20 333L-20 336L-20 333L-20 338L-20 333L-20 329L-20 326L-20 320L-20 313L-20 303L-20 298L-20 295L-20 291L-20 286L-20 283L-20 275L-20 271L-20 266L-20 262L-20 259L-20 253L-20 250L-20 244L-20 241L-20 236L-20 230L-20 227L-20 223L-20 220L-20 217L-20 212L-20 208L-20 212L-20 208L-20 213L-20 219L-20 222L-20 226L-20 222L-20 216L-20 213L-20 208L-20 215L-20 220L-20 223L-20 219L-20 215L-20 212L-20 208L-20 211L-20 208L-20 204L-20 201L-20 198L-20 195L-20 190L-20 187L-20 184L-20 180L-20 177L-20 173L-20 169L-20 172L-20 169L-20 166L-20 161L-20 158L-20 153L-20 149L-20 146L-20 139L-20 136L-20 131L-20 127L-20 124L-20 127L-20 124L-20 121L-20 118L-20 115L-20 111L-20 108L-20 111L-20 106L-20 100L-20 97L-20 93L-20 90L-20 93L-20 97L-20 104L-20 107L-20 111L-20 115L-20 111L-20 114L-20 111L-20 108L-20 104L-20 97L-20 93L-20 87L-20 82L-20 76L-20 72L-20 67L-20 61L-20 58L-20 51L-20 48L-20 39L-20 36L-20 29L-20 25L-20 21L-20 18L-20 15L-20 12L-20 8L-20 5L-20 0L-20 -5L-20 -9L-20 -12L-20 -16L-20 -20L-20 -16L-20 -9L-20 -5L-20 -2L-20 -5L-20 -8L-20 -5L-20 -2L-20 3L-20 7L-20 13L-20 16L-20 13L-20 16L-20 19L-20 22L-20 25L-20 29L-20 33L-20 36L-20 33L-20 30L-20 25L-20 20L-20 15L-20 9L-20 6L-20 1L-20 -2L-20 -6L-20 -9L-20 -12L-20 -15L-20 -18L-20 -15L-20 -18L-20 -14L-20 -11L-20 -8L-20 -2L-20 3L-20 6L-20 9L-20 15L-20 18L-20 23L-20 26L-20 23L-20 27L-20 31L-20 34L-20 37L-20 46L-20 50L-20 57L-20 62L-20 67L-20 74L-20 80L-20 83L-20 86L-20 90L-20 94L-20 97L-20 101L-20 108L-20 112L-20 117L-20 120L-20 123L-20 130L-20 133L-20 130L-20 127L-20 124L-20 120L-20 117L-20 113L-20 117L-20 114L-20 118L-20 121L-20 124L-20 127L-20 130L-20 133L-20 130L-20 133L-20 136L-20 131L-20 134L-20 137L-20 134L-20 131L-20 127L-20 124L-20 128L-20 133L-20 140L-20 144L-20 147L-20 150L-20 155L-20 151L-20 155L-20 158L-20 161L-20 164L-20 169L-20 173L-20 176L-20 182L-20 185L-20 188L-20 184L-20 181L-20 184L-20 188L-20 191L-20 194L-20 191L-20 195L-20 204L-20 207L-20 212L-20 216L-20 211L-20 214L-20 211L-20 207L-20 203L-20 206L-20 210L-20 207L-20 202L-20 199L-20 195L-20 192L-20 189L-20 186L-20 183L-20 177L-20 174L-20 177L-20 180L-20 177L-20 173L-20 170L-20 173L-20 170L-20 166L-20 163L-20 160L-20 157L-20 153L-20 146L-20 143L-20 140L-20 135L-20 131L-20 128L-20 125L-20 122L-20 118L-20 115L-20 111L-20 108L-20 104L-20 101L-20 95L-20 92L-20 89L-20 85L-20 82L-20 79L-20 76L-20 73L-20 69L-20 65L-20 59L-20 56L-20 53L-20 50L-20 47L-20 41L-20 38L-20 32L-20 29L-20 23L-20 18L-20 15L-20 19L-20 23L-20 26L-20 23L-20 20L-20 17L-20 12L-20 9L-20 5L-20 8L-20 11L-20 14L-20 17L-20 22L-20 25L-20 29L-20 36L-20 40L-20 45L-20 52L-20 55L-20 59L-20 64L-20 71L-20 75L-20 79L-20 85L-20 89L-20 92L-20 95L-20 99L-20 102L-20 108L-20 112L-20 117L-20 121L-20 128L-20 131L-20 134L-20 138L-20 130L-20 127L-20 124L-20 129L-20 133L-20 139L-20 142L-20 145L-20 148L-20 155L-20 159L-20 163L-20 170L-20 176L-20 179L-20 183L-20 180L-20 177L-20 174L-20 170L-20 167L-20 164L-20 160L-20 155L-20 151L-20 144L-20 139L-20 136L-20 131L-20 127L-20 123L-20 119L-20 116L-20 110L-20 107L-20 104L-20 95L-20 92L-20 89L-20 84L-20 81L-20 78L-20 74L-20 71L-20 66L-20 63L-20 60L-20 56L-20 49L-20 46L-20 43L-20 38L-20 42L-20 47L-20 50L-20 53L-20 58L-20 62L-20 65L-20 60L-20 57L-20 64L-20 70L-20 77L-20 80L-20 83L-20 87L-20 92L-20 96L-20 103L-20 106L-20 109L-20 112L-20 116L-20 120L-20 129L-20 134L-20 139L-20 147L-20 157L-20 161L-20 164L-20 168L-20 171L-20 174L-20 177L-20 181L-20 184L-20 188L-20 191L-20 195L-20 199L-20 205L-20 209L-20 212L-20 215L-20 218L-20 221L-20 224L-20 219L-20 215L-20 212L-20 207L-20 199L-20 204L-20 201L-20 204L-20 200L-20 194L-20 190L-20 187L-20 184L-20 177L-20 174L-20 171L-20 166L-20 163L-20 159L-20 162L-20 165L-20 162L-20 159L-20 156L-20 153L-20 150L-20 146L-20 140L-20 133L-20 130L-20 122L-20 119L-20 115L-20 111L-20 107L-20 101L-20 97L-20 94L-20 88L-20 84L-20 81L-20 78L-20 73L-20 70L-20 67L-20 64L-20 60L-20 57L-20 54L-20 51L-20 54L-20 57L-20 60L-20 55L-20 45L-20 33L-20 30L-20 19L-20 15L-20 11L-20 14L-20 21L-20 14L-20 10L-20 7L-20 4L-20 -5L-20 -8L-20 -12L-20 -16L-20 -20Z"/><text class="ctry" x="120" y="250">CHINA</text><text class="ctry" x="345" y="105">KOREA</text><text class="ctry" x="650" y="320">JAPAN</text><text class="ctry" x="395" y="30">MANCHURIA</text><text class="sea" x="320" y="250">Yellow Sea</text><text class="sea" x="330" y="440">East China Sea</text><text class="sea" x="480" y="150">Sea of Japan</text><text class="sea" x="650" y="420">Pacific Ocean</text><text class="sea" x="150" y="600">South China Sea</text><text class="sea" x="160" y="330">Yangzi →</text><g class="cap-city"><circle cx="197.6" cy="138.2" r="2.6"/><text x="189.6" y="134.2" text-anchor="end">Beijing</text></g><g class="cap-city"><circle cx="398.6" cy="191.0" r="2.6"/><text x="406.6" y="191.0" text-anchor="start">Seoul</text></g><g class="cap-city"><circle cx="565.6" cy="249.0" r="2.6"/><text x="567.6" y="241.0" text-anchor="middle">Kyoto</text></g><g class="cap-city"><circle cx="143.4" cy="539.2" r="2.6"/><text x="135.4" y="549.2" text-anchor="end">Macao</text></g><g class="cap-city"><circle cx="492.1" cy="65.7" r="2.6"/><text x="500.1" y="69.7" text-anchor="start">Vladivostok</text></g><g class="port c1" data-g="c1" data-n="Guangzhou" tabindex="0" role="button" aria-label="Guangzhou"><circle class="halo" cx="137.9" cy="518.1" r="5"/><circle class="core" cx="137.9" cy="518.1" r="4.2"/><text x="129.9" y="522.1" text-anchor="end">Guangzhou</text></g><g class="port c1" data-g="c1" data-n="Xiamen" tabindex="0" role="button" aria-label="Xiamen (Amoy)"><circle class="halo" cx="229.7" cy="487.5" r="5"/><circle class="core" cx="229.7" cy="487.5" r="4.2"/><text x="237.7" y="491.5" text-anchor="start">Xiamen (Amoy)</text></g><g class="port c1" data-g="c1" data-n="Fuzhou" tabindex="0" role="button" aria-label="Fuzhou"><circle class="halo" cx="252.7" cy="451.5" r="5"/><circle class="core" cx="252.7" cy="451.5" r="4.2"/><text x="260.7" y="455.5" text-anchor="start">Fuzhou</text></g><g class="port c1" data-g="c1" data-n="Ningbo" tabindex="0" role="button" aria-label="Ningbo"><circle class="halo" cx="295.4" cy="365.4" r="5"/><circle class="core" cx="295.4" cy="365.4" r="4.2"/><text x="303.4" y="373.4" text-anchor="start">Ningbo</text></g><g class="port c1" data-g="c1" data-n="Shanghai" tabindex="0" role="button" aria-label="Shanghai"><circle class="halo" cx="293.9" cy="334.6" r="5"/><circle class="core" cx="293.9" cy="334.6" r="4.2"/><text x="301.9" y="334.6" text-anchor="start">Shanghai</text></g><g class="port c1" data-g="c1" data-n="Hong Kong" tabindex="0" role="button" aria-label="Hong Kong"><circle class="halo" cx="155.0" cy="537.4" r="5"/><circle class="core" cx="155.0" cy="537.4" r="4.2"/><text x="163.0" y="549.4" text-anchor="start">Hong Kong</text></g><g class="port c3" data-g="c3" data-n="Niuzhuang" tabindex="0" role="button" aria-label="Niuzhuang"><circle class="halo" cx="308.4" cy="120.8" r="5"/><circle class="core" cx="308.4" cy="120.8" r="4.2"/><text x="316.4" y="124.8" text-anchor="start">Niuzhuang</text></g><g class="port c3" data-g="c3" data-n="Dengzhou" tabindex="0" role="button" aria-label="Dengzhou"><circle class="halo" cx="292.6" cy="191.9" r="5"/><circle class="core" cx="292.6" cy="191.9" r="4.2"/><text x="284.6" y="195.9" text-anchor="end">Dengzhou</text></g><g class="port c3" data-g="c3" data-n="Tainan" tabindex="0" role="button" aria-label="Tainan"><circle class="halo" cx="269.8" cy="521.1" r="5"/><circle class="core" cx="269.8" cy="521.1" r="4.2"/><text x="277.8" y="531.1" text-anchor="start">Tainan</text></g><g class="port c3" data-g="c3" data-n="Tamsui" tabindex="0" role="button" aria-label="Tamsui"><circle class="halo" cx="293.4" cy="471.9" r="5"/><circle class="core" cx="293.4" cy="471.9" r="4.2"/><text x="301.4" y="473.9" text-anchor="start">Tamsui</text></g><g class="port c3" data-g="c3" data-n="Shantou" tabindex="0" role="button" aria-label="Shantou"><circle class="halo" cx="202.9" cy="513.1" r="5"/><circle class="core" cx="202.9" cy="513.1" r="4.2"/><text x="196.9" y="505.1" text-anchor="end">Shantou</text></g><g class="port c3" data-g="c3" data-n="Qiongzhou" tabindex="0" role="button" aria-label="Qiongzhou"><circle class="halo" cx="82.3" cy="589.0" r="5"/><circle class="core" cx="82.3" cy="589.0" r="4.2"/><text x="90.3" y="593.0" text-anchor="start">Qiongzhou</text></g><g class="port c3" data-g="c3" data-n="Zhenjiang" tabindex="0" role="button" aria-label="Zhenjiang"><circle class="halo" cx="255.6" cy="312.6" r="5"/><circle class="core" cx="255.6" cy="312.6" r="4.2"/><text x="257.6" y="303.6" text-anchor="middle">Zhenjiang</text></g><g class="port c3" data-g="c3" data-n="Nanjing" tabindex="0" role="button" aria-label="Nanjing"><circle class="halo" cx="242.8" cy="315.8" r="5"/><circle class="core" cx="242.8" cy="315.8" r="4.2"/><text x="234.8" y="321.8" text-anchor="end">Nanjing</text></g><g class="port c3" data-g="c3" data-n="Jiujiang" tabindex="0" role="button" aria-label="Jiujiang"><circle class="halo" cx="190.0" cy="369.3" r="5"/><circle class="core" cx="190.0" cy="369.3" r="4.2"/><text x="190.0" y="385.3" text-anchor="middle">Jiujiang</text></g><g class="port c3" data-g="c3" data-n="Hankou" tabindex="0" role="button" aria-label="Hankou"><circle class="halo" cx="157.1" cy="349.3" r="5"/><circle class="core" cx="157.1" cy="349.3" r="4.2"/><text x="149.1" y="353.3" text-anchor="end">Hankou</text></g><g class="port c3" data-g="c3" data-n="Tianjin" tabindex="0" role="button" aria-label="Tianjin"><circle class="halo" cx="212.8" cy="155.6" r="5"/><circle class="core" cx="212.8" cy="155.6" r="4.2"/><text x="220.8" y="163.6" text-anchor="start">Tianjin</text></g><g class="port c2" data-g="c2" data-n="Shimoda" tabindex="0" role="button" aria-label="Shimoda"><circle class="halo" cx="626.0" cy="256.5" r="5"/><circle class="core" cx="626.0" cy="256.5" r="4.2"/><text x="634.0" y="268.5" text-anchor="start">Shimoda</text></g><g class="port c2" data-g="c2" data-n="Hakodate" tabindex="0" role="button" aria-label="Hakodate"><circle class="halo" cx="659.9" cy="95.8" r="5"/><circle class="core" cx="659.9" cy="95.8" r="4.2"/><text x="667.9" y="99.8" text-anchor="start">Hakodate</text></g><g class="port c4" data-g="c4" data-n="Kanagawa" tabindex="0" role="button" aria-label="Kanagawa"><circle class="halo" cx="639.2" cy="239.2" r="5"/><circle class="core" cx="639.2" cy="239.2" r="4.2"/><text x="647.2" y="249.2" text-anchor="start">Kanagawa</text></g><g class="port c4" data-g="c4" data-n="Edo" tabindex="0" role="button" aria-label="Edo"><circle class="halo" cx="641.6" cy="233.8" r="5"/><circle class="core" cx="641.6" cy="233.8" r="4.2"/><text x="649.6" y="229.8" text-anchor="start">Edo</text></g><g class="port c4" data-g="c4" data-n="Nagasaki" tabindex="0" role="button" aria-label="Nagasaki"><circle class="halo" cx="453.5" cy="300.2" r="5"/><circle class="core" cx="453.5" cy="300.2" r="4.2"/><text x="445.5" y="310.2" text-anchor="end">Nagasaki</text></g><g class="port c4" data-g="c4" data-n="Niigata" tabindex="0" role="button" aria-label="Niigata"><circle class="halo" cx="627.8" cy="183.1" r="5"/><circle class="core" cx="627.8" cy="183.1" r="4.2"/><text x="619.8" y="179.1" text-anchor="end">Niigata</text></g><g class="port c4" data-g="c4" data-n="Hyogo" tabindex="0" role="button" aria-label="Hyogo"><circle class="halo" cx="554.6" cy="256.2" r="5"/><circle class="core" cx="554.6" cy="256.2" r="4.2"/><text x="546.6" y="268.2" text-anchor="end">Hyogo</text></g><g class="port c4" data-g="c4" data-n="Osaka" tabindex="0" role="button" aria-label="Osaka"><circle class="halo" cx="560.5" cy="256.2" r="5"/><circle class="core" cx="560.5" cy="256.2" r="4.2"/><text x="564.5" y="272.2" text-anchor="start">Osaka</text></g><g class="port c5" data-g="c5" data-n="Busan" tabindex="0" role="button" aria-label="Busan"><circle class="halo" cx="437.8" cy="246.9" r="5"/><circle class="core" cx="437.8" cy="246.9" r="4.2"/><text x="445.8" y="256.9" text-anchor="start">Busan</text></g><g class="port c5" data-g="c5" data-n="Wonsan" tabindex="0" role="button" aria-label="Wonsan"><circle class="halo" cx="407.4" cy="155.2" r="5"/><circle class="core" cx="407.4" cy="155.2" r="4.2"/><text x="415.4" y="159.2" text-anchor="start">Wonsan</text></g><g class="port c5" data-g="c5" data-n="Incheon" tabindex="0" role="button" aria-label="Incheon"><circle class="halo" cx="391.8" cy="193.2" r="5"/><circle class="core" cx="391.8" cy="193.2" r="4.2"/><text x="383.8" y="205.2" text-anchor="end">Incheon</text></g><g class="port c6" data-g="c6" data-n="Ganghwa" tabindex="0" role="button" aria-label="Ganghwa Is."><circle class="halo" cx="388.6" cy="187.6" r="5"/><circle class="core" cx="388.6" cy="187.6" r="4.2"/><text x="380.6" y="183.6" text-anchor="end">Ganghwa Is.</text></g><g class="port c6" data-g="c6" data-n="Pyeongyang" tabindex="0" role="button" aria-label="Pyeongyang"><circle class="halo" cx="375.2" cy="158.1" r="5"/><circle class="core" cx="375.2" cy="158.1" r="4.2"/><text x="367.2" y="162.1" text-anchor="end">Pyeongyang</text></g></svg></div>
+    <div class="ctrl" id="pctrl">
+      <button class="step" type="button" data-g="c1">China 1842</button>
+      <button class="step" type="button" data-g="c2">Japan 1854</button>
+      <button class="step" type="button" data-g="c3">China 1858–60</button>
+      <button class="step" type="button" data-g="c4">Japan 1858</button>
+      <button class="step" type="button" data-g="c5">Korea 1876–</button>
+      <button class="step" type="button" data-g="c6">Korean incidents</button>
+      <button class="step" type="button" data-g="all">All</button>
+    </div>
+    <div class="cap" id="pcap"></div>
+    <figcaption><span class="fn">Figure 15.</span> Treaty ports in East Asia, 1842–1883. Port names for China 1842 and 1858, and Japan 1858, from outside sources† (see Sources); the textbook gives their numbers. Coastlines: Natural Earth 1:50m (public domain).</figcaption>
+  </figure>
+
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 5.</span> <b>Three countries, one system</b></caption>
+    <thead><tr><th></th><th>China</th><th>Japan</th><th>Korea</th></tr></thead>
+    <tbody>
+      <tr><td class="k">First treaty</td><td>Nanjing, 1842</td><td>Kanagawa, 1854</td><td>Ganghwa, 1876</td></tr>
+      <tr><td class="k">Opened by</td><td>Britain, after a war</td><td>U.S., by a show of force</td><td>Japan, by a staged clash</td></tr>
+      <tr><td class="k">Commercial treaty</td><td>1842–44; expanded 1858–60</td><td>Harris treaty, 1858</td><td>U.S. treaty, 1882</td></tr>
+      <tr><td class="k">How news of the West arrived</td><td>Direct, in battle</td><td>Dutch reports, Opium War news, broadsheets</td><td>Official channels in Beijing; China's defeat hidden</td></tr>
+      <tr><td class="k">Early response</td><td>Fight, then delay compliance</td><td>Yield, then bitter debate</td><td>Fight off raids; refuse all treaties until 1876</td></tr>
+    </tbody>
+  </table></div>
+  <p class="cite">Compiled from pp. 308–309, 317–318, 338–340, 369–374.</p>
+  <p>Unlike in the rest of the world, the West in East Asia mostly did not take colonies (Hong Kong and Macao were the exceptions). It imposed unequal treaties instead. <span class="cite">p. 313</span></p>
+</section>
+
+<!-- 9 WIDER -->
+<section class="unit reveal" id="wider">
+  <div class="sec-num">Part 9</div>
+  <h2>The wider world of imperialism</h2>
+  <p class="pages">pp. 309–313</p>
+  <div class="grid g2">
+    <div class="card"><h4>Missionaries</h4><p>Unlike the Jesuits, British and American Protestants, as often women as men, refused to compromise with local customs and caused international incidents. They also built hospitals, schools, and orphanages, educated women, opposed concubinage and footbinding, and taught Western science. <span class="cite">pp. 309–310</span></p></div>
+    <div class="card"><h4>Speed</h4><p>The Suez Canal (1869) halved travel time between Europe and East Asia, and telegraph cables made communication nearly instant. <span class="cite">p. 310</span></p></div>
+    <div class="card"><h4>Migration</h4><p>Chinese and Indian laborers and merchants spread across Southeast Asia and the Americas. Chinese abroad were brutally exploited because their government seemed too weak to protect them; Western countries then passed exclusion laws. <span class="cite">pp. 310, 313</span></p></div>
+    <div class="card"><h4>Fighting back by diplomacy</h4><p>China and Japan sent missions abroad from the 1860s to revise the treaties and study their rivals; Korea sent study missions in the early 1880s. <span class="cite">p. 310</span></p></div>
+  </div>
+
+  <h3>Japan changes sides <span class="cite">pp. 310–311, 313</span></h3>
+  <ol class="chain">
+    <li><span class="n">1</span><b>1871:</b> Japan proposes an unequal treaty with China; rejected.</li>
+    <li><span class="n">2</span><b>1874:</b> A military expedition to Taiwan avenges murdered Ryukyuan fishermen; the Qing pay an indemnity.</li>
+    <li><span class="n">3</span><b>1876:</b> Japan imposes on Korea the same privileges Westerners hold in Japan.</li>
+    <li><span class="n">4</span><b>1899:</b> After writing Western-style legal codes and building a modern army, Japan ends most favored nation treatment and extraterritoriality at home.</li>
+  </ol>
+</section>
+
+<!-- REVIEW -->
+<section class="unit reveal" id="review">
+  <div class="sec-num">Review kit</div>
+  <h2>Test yourself</h2>
+
+  <h3>Flashcards</h3>
+  <div class="fc-wrap">
+    <div class="fc" id="fc" tabindex="0" role="button" aria-label="Flashcard: press to flip">
+      <div class="fc-inner">
+        <div class="fc-face fc-front"><div class="t" id="fc-term"></div><div class="h">Tap or press space to flip</div></div>
+        <div class="fc-face fc-back"><div id="fc-def"></div></div>
+      </div>
+    </div>
+    <div class="fc-ctrl">
+      <button class="btn" id="fc-prev" type="button">← Prev</button>
+      <span id="fc-count"></span>
+      <button class="btn" id="fc-next" type="button">Next →</button>
+      <button class="btn" id="fc-shuffle" type="button">Shuffle</button>
+    </div>
+  </div>
+
+  <h3>Who's who</h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 6.</span> <b>Who's who</b></caption>
+    <thead><tr><th>Person</th><th>Why they matter</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Lord Macartney</td><td>Failed British mission to Beijing, 1793</td></tr>
+      <tr><td class="k">Daoguang emperor</td><td>Qing ruler (r. 1821–1850); sent Lin, then exiled him</td></tr>
+      <tr><td class="k">Lin Zexu</td><td>Imperial commissioner who destroyed the opium, 1839</td></tr>
+      <tr><td class="k">Lord Napier</td><td>British trade supervisor who tried to bypass the Cohong, 1834</td></tr>
+      <tr><td class="k">Mujangga</td><td>Manchu chancellor of the peace faction</td></tr>
+      <tr><td class="k">Guancheng</td><td>Bannerman who honored Zhapu's dead, 1842</td></tr>
+      <tr><td class="k">Akira Iriye</td><td>Historian who coined "multilateral imperialism"</td></tr>
+      <tr><td class="k">Aizawa Seishisai</td><td>Mito scholar; <i>Shinron</i>, 1825</td></tr>
+      <tr><td class="k">Matthew C. Perry</td><td>U.S. commodore; Edo Bay 1853, Kanagawa treaty 1854</td></tr>
+      <tr><td class="k">Townsend Harris</td><td>First U.S. consul; commercial treaty, 1858</td></tr>
+      <tr><td class="k">Kōmei</td><td>Japanese monarch who rejected the Harris treaty</td></tr>
+      <tr><td class="k">Tokugawa Nariaki · Yoshida Shōin</td><td>Opponents of the treaties; <i>sonnō jōi</i></td></tr>
+      <tr><td class="k">Sakuma Shōzan · Yokoi Shōnan</td><td>Advocates of engagement; <i>fukoku kyōhei</i></td></tr>
+      <tr><td class="k">Daewongun</td><td>Korean regent; reform at home, no treaties abroad</td></tr>
+      <tr><td class="k">King Gojong · Queen Min</td><td>Ruled after 1874; signed the Ganghwa Treaty</td></tr>
+      <tr><td class="k">Huang Zunxian</td><td>Wrote "Strategy for Korea," 1880</td></tr>
+      <tr><td class="k">Li Hongzhang</td><td>Ran Qing policy toward Korea; arranged the U.S. treaty</td></tr>
+      <tr><td class="k">Robert Shufeldt</td><td>Signed the 1882 U.S.–Korea treaty</td></tr>
+      <tr><td class="k">Herbert Spencer</td><td>Developed Social Darwinism</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Key dates</h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 7.</span> <b>Key dates</b></caption>
+    <tbody>
+      <tr><td class="yr">1793 · 1816</td><td>British missions to Beijing fail</td></tr>
+      <tr><td class="yr">1800 · 1813</td><td>Qing ban opium imports; then smoking</td></tr>
+      <tr><td class="yr">1825</td><td>Japan's expulsion order; <i>Shinron</i></td></tr>
+      <tr><td class="yr">1834</td><td>East India Company's China monopoly ends</td></tr>
+      <tr><td class="yr">1839</td><td>Lin Zexu at Guangzhou</td></tr>
+      <tr><td class="yr">1842</td><td>Treaty of Nanjing</td></tr>
+      <tr><td class="yr">1844</td><td>U.S. treaty with China: extraterritoriality</td></tr>
+      <tr><td class="yr">1853 · 1854</td><td>Perry arrives; Kanagawa treaty</td></tr>
+      <tr><td class="yr">1856–60</td><td>Second Opium War</td></tr>
+      <tr><td class="yr">1858</td><td>Treaties of Tianjin; Harris treaty</td></tr>
+      <tr><td class="yr">1860</td><td>Beijing occupied; summer palace burned</td></tr>
+      <tr><td class="yr">1864</td><td>Gojong on the throne; Daewongun in power</td></tr>
+      <tr><td class="yr">1866 · 1871</td><td>French and U.S. attacks on Ganghwa</td></tr>
+      <tr><td class="yr">1876</td><td>Ganghwa Treaty</td></tr>
+      <tr><td class="yr">1882</td><td>U.S.–Korea treaty</td></tr>
+      <tr><td class="yr">1899</td><td>Japan ends extraterritoriality</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Discussion questions</h3>
+  <p class="cite" style="white-space:normal">Open each for points the reading gives you to work with.</p>
+  <div class="q-tools" role="group" aria-label="Discussion questions">
+    <button class="btn" id="q-expand" type="button">Expand all</button>
+    <button class="btn" id="q-collapse" type="button">Collapse all</button>
+  </div>
+  <details class="q"><summary>Was the Opium War about opium, or about trade and diplomacy?</summary>
+    <div class="a"><ul><li>Opium: Lin's seizure was the trigger, and opium firms supplied ships.</li><li>Trade: British merchants wanted the Cohong gone and ports farther north.</li><li>Diplomacy: Britain saw China as out of step with "normal" relations through envoys and treaties.</li></ul></div></details>
+  <details class="q"><summary>What made the treaties "unequal"?</summary>
+    <div class="a"><ul><li>Signed at gunpoint; benefits went one way.</li><li>Extraterritoriality and fixed tariffs limited sovereignty.</li><li>The East Asian states got no matching rights abroad.</li></ul></div></details>
+  <details class="q"><summary>Why was the most favored nation clause so damaging?</summary>
+    <div class="a"><ul><li>Every new concession to one power went to all of them.</li><li>China could not bargain powers against each other.</li><li>It turned many separate treaties into one system: "multilateral imperialism."</li></ul></div></details>
+  <details class="q"><summary>Why did Japan sign without a war, while China and Korea fought?</summary>
+    <div class="a"><ul><li>Japan had heard what happened to China; Harris used that fear directly.</li><li>Korea heard only filtered news from Beijing.</li><li>China's court still saw foreigners within the tribute order.</li></ul></div></details>
+  <details class="q"><summary>Is it fair to call the 1876 Ganghwa Treaty an "unequal treaty" when Japan, not a Western power, imposed it?</summary>
+    <div class="a"><ul><li>It copied the Western model: ports, extraterritoriality.</li><li>Japan was copying the West's claim that imperialism civilized others.</li><li>Consider what the book means by "mimic" on p. 310.</li></ul></div></details>
+  <details class="q"><summary>Did the treaty system make the West the actor and East Asia merely the reactor?</summary>
+    <div class="a"><ul><li>The book raises this question about China on p. 314.</li><li>Look at choices made in Asia: Lin's policy, Japan's debate, the Daewongun's isolation, Li Hongzhang's Korea policy.</li></ul></div></details>
+</section>
+
+<!-- SOURCES -->
+<section class="unit" id="sources">
+  <div class="sec-num">Resources</div>
+  <h2>Sources and further reading</h2>
+  <ul class="sources">
+    <li><strong>Main text:</strong> Patricia Buckley Ebrey &amp; Anne Walthall, <em>Modern East Asia from 1600: A Cultural, Social, and Political History</em>, 3rd ed. (Cengage, 2013): Connections: "Western Imperialism (1800–1900)," pp. 306–313; Ch. 18, pp. 314–319, 321–322 (the Opium War, the Second Opium War); Ch. 19, pp. 338–340 (Foreign Affairs, 1793–1858); Ch. 21, pp. 369–374 (Attempts at Reform and External Pressure).</li>
+    <li><strong>Outside facts (marked †):</strong> MIT Visualizing Cultures, <a href="https://visualizingcultures.mit.edu/opium_wars_01/ow1_essay04.html">"The First Opium War: The Treaty of Nanking"</a> (the five ports); Academy of Chinese Studies, <a href="https://chiculture.org.hk/en/photo-story/1207">"Treaties of Tientsin"</a> and <a href="https://chiculture.org.hk/en/photo-story/1215">"Conventions of Peking"</a> (1858 and 1860 ports); <a href="https://laits.utexas.edu/~mr56267/HIST_341_materials/Pages/Harris_Treaty.html">Text of the Harris Treaty, 1858</a>, Article III (University of Texas course materials); Encyclopaedia Britannica, <a href="https://www.britannica.com/biography/Lin-Zexu">"Lin Zexu"</a> (his dates) and <a href="https://www.britannica.com/event/Treaty-of-Nanjing">"Treaty of Nanjing"</a> (signing date).</li>
+    <li><strong>Explore further:</strong> <a href="https://visualizingcultures.mit.edu/">MIT Visualizing Cultures</a>, especially "The First Opium War," "Black Ships &amp; Samurai," and "The Rise &amp; Fall of the Canton Trade System"; the U.S. Office of the Historian's short essays on <a href="https://history.state.gov/milestones/1830-1860/opening-to-japan">the opening of Japan</a> and <a href="https://history.state.gov/milestones/1830-1860/china-1">the first Opium War and the Treaty of Wangxia</a>.</li>
+  </ul>
+  <h3>Image credits</h3>
+  <ul class="sources">
+    <li>After W. S. Sherwill, <em>The Stacking Room, Opium Factory at Patna</em>, lithograph, c. 1850: public domain, Wellcome Collection via <a href="https://commons.wikimedia.org/wiki/File:A_busy_stacking_room_in_the_opium_factory_at_Patna,_India._L_Wellcome_V0019154.jpg">Wikimedia Commons</a>.</li>
+    <li>Attributed to Lam Qua, <em>Portrait of Lin Zexu</em>, 19th c.: public domain, <a href="https://commons.wikimedia.org/wiki/File:Portrait_of_Lin_Zexu.jpeg">Wikimedia Commons</a>.</li>
+    <li>After Edward Duncan, <em>The Nemesis destroying Chinese war junks in Anson's Bay</em>, 1843: public domain, <a href="https://commons.wikimedia.org/wiki/File:Destroying_Chinese_war_junks,_by_E._Duncan_(1843).jpg">Wikimedia Commons</a>.</li>
+    <li>John Burnet after John Platt, <em>The Signing of the Treaty of Nanking</em>, 1846: public domain, <a href="https://commons.wikimedia.org/wiki/File:The_Signing_of_the_Treaty_of_Nanking.jpg">Wikimedia Commons</a>.</li>
+    <li>Ernst Ohlmer, <em>Xieqiqu Ruins of the Yuanmingyuan</em>, 1872–73: public domain, <a href="https://commons.wikimedia.org/wiki/File:Xieqiqu_Ruins_of_the_Yuanmingyuan,_Ernst_Ohlmer,_1870%27s.jpg">Wikimedia Commons</a>.</li>
+    <li><em>Gasshūkoku suishi teitoku kōjōgaki</em> (Oral statement by the American naval commander), c. 1854: public domain, Library of Congress via <a href="https://commons.wikimedia.org/wiki/File:Gasshukoku_suishi_teitoku_k%C5%8Dj%C5%8Dgaki_(Oral_statement_by_the_American_Navy_admiral).png">Wikimedia Commons</a>.</li>
+    <li>James Bogle, <em>Townsend Harris</em>, 1855: public domain, <a href="https://commons.wikimedia.org/wiki/File:Townsend_Harris_Portrait_by_James_Bogle_1855.png">Wikimedia Commons</a>.</li>
+    <li><em>Un'yō-kan heishi Chōsen Kōka sen no zu</em>, Meiji-era woodblock print: public domain, <a href="https://commons.wikimedia.org/wiki/File:UnyoBattle.jpg">Wikimedia Commons</a>.</li>
+    <li>Signing of the Ganghwa Treaty, Japanese print, c. 1880: public domain, <a href="https://commons.wikimedia.org/wiki/File:GanghwaTreaty.jpg">Wikimedia Commons</a>.</li>
+    <li>Treaty-port map: drawn for this course on <a href="https://www.naturalearthdata.com/">Natural Earth</a> 1:50m land data (public domain).</li>
+  </ul>
+  <p class="cite" style="white-space:normal">Image titles and dates come from each image's catalog record, not from the textbook.</p>
+
+  <footer class="end">
+    <a href="index.html">← All units</a>
+    <span>Next: Unit 6 · The Qing in Crisis</span>
+  </footer>
+</section>
+</main>
+
+</div>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var root=document.documentElement;
+
+  // theme toggle
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  var tb=document.getElementById('theme-btn');
+  if(tb)tb.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+
+  // mobile toc copy
+  var mt=document.getElementById('mtoc');
+  document.querySelectorAll('#toc-list a').forEach(function(a){var li=document.createElement('li');var c=a.cloneNode(true);c.addEventListener('click',function(){mt.parentNode.removeAttribute('open')});li.appendChild(c);mt.appendChild(li);});
+
+  // progress + scrollspy
+  var bar=document.getElementById('progress');
+  var links=[].slice.call(document.querySelectorAll('#toc-list a'));
+  var mlinks=[].slice.call(document.querySelectorAll('#mtoc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var mcur=document.getElementById('mtoc-cur'),tocNav=document.querySelector('nav.toc'),last=-1;
+  function keepVisible(box,el){if(!box||!el||box.scrollHeight<=box.clientHeight)return;var bt=box.getBoundingClientRect(),et=el.getBoundingClientRect();if(et.top<bt.top+8)box.scrollTop-=bt.top+8-et.top;else if(et.bottom>bt.bottom-8)box.scrollTop+=et.bottom-bt.bottom+8;}
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
+    var cur=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*0.3)cur=i});
+    if(cur===last)return;last=cur;
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur)});
+    mlinks.forEach(function(a,i){a.classList.toggle('active',i===cur);if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    if(mcur)mcur.textContent=links[cur].textContent;
+    keepVisible(tocNav,links[cur]);keepVisible(document.getElementById('mtoc'),mlinks[cur]);
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  mt.parentNode.addEventListener('toggle',function(){if(mt.parentNode.open&&last>-1)keepVisible(mt,mlinks[last])});
+
+  // reveal + bars
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.06});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var bio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});bio.unobserve(e.target)}})},{threshold:0.4});
+  var bars=document.getElementById('bars');if(bars)bio.observe(bars);
+
+  // glossary tooltips
+  var tip=document.getElementById('tip');
+  function show(a){
+    var row=document.querySelector(a.getAttribute('href'));if(!row)return;
+    var dt=row.querySelector('dt'),dd=row.querySelector('dd').cloneNode(true);
+    dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    tip.innerHTML='';var b=document.createElement('b');b.textContent=dt.firstChild.textContent.trim();tip.appendChild(b);tip.appendChild(document.createTextNode(dd.textContent.trim()));
+    var r=a.getBoundingClientRect();tip.classList.add('on');
+    var w=tip.offsetWidth,left=Math.min(Math.max(8,r.left+scrollX+r.width/2-w/2),scrollX+document.documentElement.clientWidth-w-8);
+    var top=r.top+scrollY-tip.offsetHeight-8;if(r.top<tip.offsetHeight+16)top=r.bottom+scrollY+8;
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function hide(){tip.classList.remove('on')}
+  document.querySelectorAll('a.term').forEach(function(a){
+    a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('mouseleave',hide);
+    a.addEventListener('focus',function(){show(a)});a.addEventListener('blur',hide);
+    a.addEventListener('click',function(ev){if(matchMedia('(hover: none)').matches&&!a.dataset.shown){ev.preventDefault();document.querySelectorAll('a.term').forEach(function(x){delete x.dataset.shown});a.dataset.shown=1;show(a);}});
+  });
+  addEventListener('scroll',hide,{passive:true});
+
+
+  // key-term notes widget (short versions of the Key terms section)
+  var notes=document.getElementById('notes'),nb=document.getElementById('notes-btn'),nl=document.getElementById('notes-list'),ns=document.getElementById('notes-search');
+  document.querySelectorAll('#terms .gloss-group').forEach(function(g){
+    var dl=g.nextElementSibling,h=document.createElement('div');h.className='grp';h.textContent=g.textContent;nl.appendChild(h);
+    dl.querySelectorAll('.row').forEach(function(r){
+      var a=document.createElement('a');a.className='item';a.href='#'+r.id;
+      var b=document.createElement('b');b.textContent=r.querySelector('dt').firstChild.textContent.trim();
+      a.appendChild(b);a.appendChild(document.createTextNode(r.dataset.short));
+      a.addEventListener('click',function(){if(innerWidth<700)toggleNotes(false)});
+      nl.appendChild(a);
+    });
+  });
+  var empty=document.createElement('div');empty.className='empty';empty.textContent='No matching terms.';empty.hidden=true;nl.appendChild(empty);
+  function toggleNotes(open){
+    if(open===undefined)open=!notes.classList.contains('open');
+    notes.classList.toggle('open',open);notes.setAttribute('aria-hidden',!open);nb.setAttribute('aria-expanded',open);
+    if(open)setTimeout(function(){ns.focus({preventScroll:true})},50);
+  }
+  nb.addEventListener('click',function(){toggleNotes()});
+  document.getElementById('notes-close').addEventListener('click',function(){toggleNotes(false);nb.focus()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&notes.classList.contains('open')){toggleNotes(false);nb.focus()}});
+  ns.addEventListener('input',function(){
+    var q=ns.value.trim().toLowerCase(),any=false;
+    nl.querySelectorAll('.item').forEach(function(a){var m=!q||a.textContent.toLowerCase().indexOf(q)>-1;a.hidden=!m;if(m)any=true});
+    nl.querySelectorAll('.grp').forEach(function(g){var n=g.nextElementSibling,vis=false;while(n&&n.classList.contains('item')){if(!n.hidden)vis=true;n=n.nextElementSibling}g.hidden=!vis});
+    empty.hidden=any;
+  });
+
+  // return to top
+  var tt=document.getElementById('totop');
+  tt.addEventListener('click',function(){scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  function ttShow(){tt.classList.toggle('show',scrollY>600)}
+  addEventListener('scroll',ttShow,{passive:true});ttShow();
+
+
+
+  
+  // ---- unit 5 additions ----
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function capSet(el,title,text){el.innerHTML='';var b=document.createElement('b');b.textContent=title;el.appendChild(b);el.appendChild(document.createTextNode(text));}
+
+  // silver-drain bars
+  var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});sio.unobserve(e.target)}})},{threshold:0.35});
+  document.querySelectorAll('.share').forEach(function(b){sio.observe(b)});
+
+  // tea-opium-silver triangle
+  var TRI={
+    a:['c. 1750 · ','Britain imports over 2 million pounds of tea a year. China wants little Britain makes, so Britain pays in silver, and the trade balance runs against it. (p. 308)'],
+    b:['After 1761 · ','The East India Company lets Bengal opium be smuggled into China and buys tea for home. The trade turns in Britain’s favor; the leftover silver pays for the Company and the British rule of Bengal. By the 1830s about 9 million ounces of silver a year leave China. (pp. 308, 317)']
+  };
+  var tri=document.getElementById('tri');
+  if(tri){
+    var tb2=[].slice.call(document.querySelectorAll('#tri-ctrl .step')),tcap=document.getElementById('tri-cap'),tt2=null;
+    function triSet(k){
+      tb2.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.s===k)});
+      tri.querySelectorAll('[data-s]').forEach(function(n){n.classList.toggle('on',n.dataset.s.split(' ').indexOf(k)>-1)});
+      capSet(tcap,TRI[k][0],TRI[k][1]);
+    }
+    tb2.forEach(function(b){b.addEventListener('click',function(){clearInterval(tt2);triSet(b.dataset.s)})});
+    triSet('a');
+    if(!RM){var tk='a';var tio=new IntersectionObserver(function(es){if(es[0].isIntersecting){tt2=setInterval(function(){tk=tk==='a'?'b':'a';triSet(tk)},7000);tio.disconnect()}},{threshold:0.5});tio.observe(tri);}
+  }
+
+  // most favored nation demo
+  var MFN={
+    tar:{t:'Fixed 5% tariff',from:'br',cap:['Britain wins a fixed tariff. ','The supplementary treaty a year after Nanjing fixes low tariffs on British imports. With the most favored nation clause, every power that signs with China enjoys the same rate. (pp. 308, 317)']},
+    ext:{t:'Extraterritoriality',from:'us',cap:['The U.S. wins extraterritoriality. ','Americans in China answer only to American laws, judges, courts, and prisons. "The British automatically participated," as did the other powers with treaties. (p. 308)']},
+    ch:{t:'Churches & hospitals',from:'us',cap:['The U.S. wins the right to build churches and hospitals. ','Granted in the 1844 treaty; through the clause, it spreads to every power with MFN. China receives nothing comparable abroad. (p. 308)']}
+  };
+  var mfn=document.getElementById('mfn');
+  if(mfn){
+    var mcap=document.getElementById('mfn-cap'),timers=[];
+    function clearT(){timers.forEach(clearTimeout);timers=[]}
+    function grant(k){
+      var d=MFN[k];
+      if(mfn.querySelector('.chip2[data-k="'+k+'"]'))return capSet(mcap,d.cap[0],d.cap[1]);
+      var order=['br','us','fr','ot'].filter(function(p){return p!==d.from});order.unshift(d.from);
+      order.forEach(function(p,i){
+        var c=document.createElement('span');c.className='chip2'+(i?' auto':'');c.dataset.k=k;c.textContent=d.t+(i?' (via MFN)':'');
+        mfn.querySelector('[data-p="'+p+'"]').appendChild(c);
+        timers.push(setTimeout(function(){c.classList.add('on')},RM?0:120+i*520));
+      });
+      capSet(mcap,d.cap[0],d.cap[1]);
+    }
+    document.querySelectorAll('#mfn-ctrl .step').forEach(function(b){b.addEventListener('click',function(){
+      if(b.dataset.k==='reset'){clearT();mfn.querySelectorAll('.chip2').forEach(function(c){c.remove()});capSet(mcap,'Pick a concession above.','One power wins a privilege; see who else gets it.');return}
+      grant(b.dataset.k);
+    })});
+  }
+
+  // treaty-port map
+  var PG={
+    c1:['China, 1842 · Treaty of Nanjing. ','Five ports opened to British residence and trade, and Hong Kong ceded. Before this, Europeans could trade only at Guangzhou. (pp. 308, 317) Port names †'],
+    c2:['Japan, 1854 · Kanagawa treaty. ','Shimoda and Hakodate open to American ships for coal and supplies; a U.S. consul may live at isolated Shimoda. (p. 339)'],
+    c3:['China, 1858–60 · Treaties of Tianjin, Convention of Beijing. ','Ten new ports in 1858, reaching up the Yangzi to Hankou and north to Manchuria and Taiwan, plus Tianjin in 1860. (pp. 309, 321) Port names †'],
+    c4:['Japan, 1858 · Harris treaty. ','Six cities open to foreign residence and trade, "just as the Chinese treaty ports had earlier been opened." Edo and Osaka were opened for residence only. (p. 339) City names †'],
+    c5:['Korea, 1876 onward · Ganghwa Treaty. ','Busan opens to Japanese trade; Incheon and Wonsan follow. The 1882 U.S. treaty brings in the Western powers. (p. 373)'],
+    c6:['Korea, 1866–1875 · Incidents. ','The General Sherman is burned near Pyeongyang (1866). France (1866), the U.S. (1871), and Japan (1875) land troops on Ganghwa Island. (pp. 370, 373)'],
+    all:['All waves. ','In about forty years the treaty-port system reached every East Asian state. Colors match the buttons: red and blue for China and Japan, green for Korea. (pp. 308–309, 313)']
+  };
+  var NOTE={'Hong Kong':'Hong Kong: ceded to Britain in 1842. (p. 317)','Tianjin':'Tianjin: the closest port to Beijing; opened in 1860†. (p. 308)','Shimoda':'Shimoda: chosen to keep the U.S. consul far from Edo. (p. 339)','Hankou':'Hankou: far up the Yangzi, opened when foreign ships won the right to sail the river. (p. 309)','Busan':'Busan: the first port opened by the Ganghwa Treaty. (p. 373)','Ganghwa':'Ganghwa Island: forts guarding the entrance to Seoul. (p. 309)','Pyeongyang':'Pyeongyang: the General Sherman was burned on the Daedong River nearby. (p. 370)'};
+  var pm=document.getElementById('pmap');
+  if(pm){
+    var pb=[].slice.call(document.querySelectorAll('#pctrl .step')),pts=[].slice.call(pm.querySelectorAll('.port')),pcap=document.getElementById('pcap'),pt=null;
+    function pSet(g){
+      pb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.g===g)});
+      pts.forEach(function(p){p.classList.toggle('on',g==='all'||p.dataset.g===g)});
+      capSet(pcap,PG[g][0],PG[g][1]);
+    }
+    pb.forEach(function(b){b.addEventListener('click',function(){clearInterval(pt);pSet(b.dataset.g)})});
+    pts.forEach(function(p){
+      function pick(){clearInterval(pt);pSet(p.dataset.g);if(NOTE[p.dataset.n])capSet(pcap,PG[p.dataset.g][0],NOTE[p.dataset.n]);}
+      p.addEventListener('click',pick);p.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();pick()}});
+    });
+    pSet('c1');
+    if(!RM){var order=['c1','c2','c3','c4','c6','c5','all'],pk=0;var pio=new IntersectionObserver(function(es){if(es[0].isIntersecting){pt=setInterval(function(){pk=(pk+1)%order.length;pSet(order[pk]);if(pk===order.length-1)clearInterval(pt)},5500);pio.disconnect()}},{threshold:0.5});pio.observe(pm);}
+  }
+
+  // lightbox
+  var lb=document.getElementById('lightbox'),lbi=lb.querySelector('img');
+  document.querySelectorAll('img.zoomable').forEach(function(img){img.addEventListener('click',function(){lbi.src=img.src;lbi.alt=img.alt;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  // flashcards from glossary
+  var cards=[].slice.call(document.querySelectorAll('.gloss .row')).map(function(r){
+    var dd=r.querySelector('dd').cloneNode(true);dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    return{t:r.querySelector('dt').firstChild.textContent.trim(),d:dd.textContent.trim()};});
+  var i=0,fc=document.getElementById('fc');
+  function render(){fc.classList.remove('flip');document.getElementById('fc-term').textContent=cards[i].t;document.getElementById('fc-def').textContent=cards[i].d;document.getElementById('fc-count').textContent=(i+1)+' / '+cards.length;}
+  fc.addEventListener('click',function(){fc.classList.toggle('flip')});
+  fc.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();fc.classList.toggle('flip')}else if(e.key==='ArrowRight'){i=(i+1)%cards.length;render()}else if(e.key==='ArrowLeft'){i=(i-1+cards.length)%cards.length;render()}});
+  document.getElementById('fc-next').addEventListener('click',function(){i=(i+1)%cards.length;render()});
+  document.getElementById('fc-prev').addEventListener('click',function(){i=(i-1+cards.length)%cards.length;render()});
+  document.getElementById('fc-shuffle').addEventListener('click',function(){for(var k=cards.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=cards[k];cards[k]=cards[j];cards[j]=t}i=0;render()});
+  render();
+})();
+</script>
+<script>
+(function(){
+  var qs=[].slice.call(document.querySelectorAll('details.q')),ex=document.getElementById('q-expand'),co=document.getElementById('q-collapse');
+  if(!qs.length||!ex||!co)return;
+  function sync(){var n=qs.filter(function(d){return d.open}).length;ex.disabled=n===qs.length;co.disabled=n===0;}
+  ex.addEventListener('click',function(){qs.forEach(function(d){d.open=true});sync();});
+  co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
+  qs.forEach(function(d){d.addEventListener('toggle',sync)});
+  sync();
+})();
+</script>
+</body>
+</html>
