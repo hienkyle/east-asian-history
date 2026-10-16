@@ -1,0 +1,1545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 7 · The Fall of the Tokugawa</title>
+<meta name="description" content="Study guide for Unit 7: the fall of the Tokugawa shogunate, 1800–1868: domestic discontent, foreign ships and the unequal treaties, debates over the foreign threat, radical samurai, and the collapse of 1858–1867. Based on Ebrey &amp; Walthall, Modern East Asia from 1600, Ch. 19, pp. 333–346.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7f2; --paper:#fffdf9; --fg:#1f1d1a; --muted:#6b645a; --line:#e6dfd3;
+  --accent:#a23b2a; --accent-soft:#f6e4de; --ink:#2c5d8a; --ink-soft:#e2ecf5;
+  --gold:#a8822e; --gold-soft:#f5ecd6; --green:#3f6b4a; --green-soft:#e3eee5;
+  --shadow:0 1px 2px rgba(60,40,20,.06),0 4px 16px rgba(60,40,20,.06);
+  --serif:"Source Serif 4","Noto Serif JP",Georgia,"Times New Roman",serif;
+  /* one typeface across the page; Noto Serif JP only supplies Japanese glyphs */
+  --sans:var(--serif);
+  --kr:var(--serif);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+    --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+    --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+  --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+  --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+img{max-width:100%;display:block}
+.sans{font-family:var(--sans)}
+
+/* progress bar */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:50}
+
+/* layout */
+.shell{display:grid;grid-template-columns:1fr;max-width:1180px;margin:0 auto;padding:0 16px}
+@media (min-width:1040px){.shell{grid-template-columns:240px minmax(0,1fr);gap:56px;padding:0 32px}}
+main{max-width:760px;min-width:0;padding-bottom:80px}
+
+/* toc */
+nav.toc{display:none}
+@media (min-width:1040px){
+  nav.toc{display:block;position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;padding:40px 0 24px;font-family:var(--sans);font-size:.88rem}
+}
+.toc .back{display:inline-block;margin-bottom:18px;color:var(--muted);text-decoration:none}
+.toc .back:hover{color:var(--accent)}
+.toc h2{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:700}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+.toc li a{display:block;padding:5px 10px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none;line-height:1.35}
+.toc li a:hover{color:var(--fg)}
+.toc li a.active{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+.toc .tools{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.btn{font:600 .82rem var(--sans);border:1px solid var(--line);background:var(--paper);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.mobile-toc{margin:0 0 8px}
+@media (min-width:1040px){.mobile-toc{display:none}}
+.mobile-toc summary{font:600 .9rem var(--sans);cursor:pointer;padding:10px 14px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.mobile-toc ol{font-family:var(--sans);font-size:.92rem;margin:8px 0 0;padding-left:22px}
+.mobile-toc li{margin:4px 0}
+
+/* hero */
+header.hero{padding:48px 0 24px}
+.eyebrow{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em}
+h1 .kr{font-family:var(--kr);font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+.dek{font-size:1.2rem;color:var(--muted);margin:0 0 20px;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--sans);font-size:.85rem}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.chip b{color:var(--fg)}
+
+/* sections */
+section.unit{padding-top:36px;margin-top:36px;border-top:1px solid var(--line)}
+section.unit:first-of-type{border-top:none;margin-top:8px}
+.sec-num{font:700 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:1.85rem;line-height:1.2;margin:4px 0 6px}
+.pages{font:.82rem var(--sans);color:var(--muted);margin:0 0 18px}
+h3{font:700 1.08rem var(--sans);margin:28px 0 8px}
+p{margin:0 0 14px}
+ul.tight{margin:0 0 14px;padding-left:20px}
+ul.tight li{margin:4px 0}
+.cite{font:.78rem var(--sans);color:var(--muted);white-space:nowrap}
+p.cite{white-space:normal}
+
+/* glossary links */
+a.term{color:inherit;text-decoration:underline dotted var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:help}
+a.term:hover{color:var(--accent)}
+#tip{position:absolute;z-index:60;max-width:320px;background:var(--fg);color:var(--bg);font:.88rem/1.45 var(--sans);padding:10px 12px;border-radius:8px;box-shadow:var(--shadow);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
+#tip.on{opacity:1;transform:none}
+#tip b{display:block;margin-bottom:2px}
+
+/* callouts */
+.callout{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.callout .label{font:700 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.callout.ink{border-left-color:var(--ink)} .callout.ink .label{color:var(--ink)}
+.callout.gold{border-left-color:var(--gold)} .callout.gold .label{color:var(--gold)}
+.callout.green{border-left-color:var(--green)} .callout.green .label{color:var(--green)}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+.bigq{font-size:1.35rem;line-height:1.35;font-style:italic;margin:4px 0 0}
+
+/* glance grid */
+.grid{display:grid;gap:12px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.card h4{font:700 1rem var(--sans);margin:0 0 4px}
+.card .sub{font:.8rem var(--sans);color:var(--muted);margin-bottom:6px}
+.card p,.card ul{font-size:.95rem;margin:0}
+.card ul{padding-left:18px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .n{font:700 1.9rem/1 var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .l{font:.86rem/1.35 var(--sans);color:var(--muted);margin-top:6px}
+
+/* glossary */
+dl.gloss{margin:12px 0 0}
+.gloss .row{display:grid;grid-template-columns:1fr;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+@media (min-width:640px){.gloss .row{grid-template-columns:180px 1fr;gap:16px}}
+.gloss dt{font:700 .98rem var(--sans)}
+.gloss dt small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.gloss dd{margin:0;font-size:.96rem}
+.gloss .needs{display:block;font:.78rem var(--sans);color:var(--muted);margin-top:3px}
+.gloss .row:target{background:var(--gold-soft);border-radius:8px;padding-left:10px;padding-right:10px}
+.gloss-group{font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:22px 0 2px}
+
+/* timeline: equal rows so nodes sit at even intervals; the axis runs dot to dot */
+.timeline{position:relative;margin:18px 0 18px 6px;padding-left:26px;display:grid;grid-auto-rows:1fr;row-gap:14px}
+.timeline .ev{position:relative;margin:0}
+.timeline .ev::before{content:"";position:absolute;z-index:1;box-sizing:border-box;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline .ev:not(:last-child)::after{content:"";position:absolute;z-index:0;left:-28px;top:13px;width:2px;height:calc(100% + 14px);background:var(--line)}
+.timeline .ev.major::before{background:var(--accent)}
+.timeline .yr{font:700 .92rem var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline .tx{font-size:.97rem}
+
+/* figures */
+figure{margin:20px 0}
+figure img{border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+figcaption{font:.84rem/1.45 var(--sans);color:var(--muted);margin-top:8px}
+figcaption b{color:var(--fg)}
+.side{display:grid;gap:20px;align-items:start}
+@media (min-width:700px){.side{grid-template-columns:minmax(0,1fr) 260px}.side.left{grid-template-columns:260px minmax(0,1fr)}}
+.side figure{margin:0}
+.zoomable{cursor:zoom-in}
+#lightbox{position:fixed;inset:0;background:rgba(10,8,6,.88);display:none;align-items:center;justify-content:center;z-index:80;padding:16px;cursor:zoom-out}
+#lightbox.on{display:flex}
+#lightbox img{max-height:92vh;max-width:96vw;width:auto;border-radius:6px}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font:.92rem/1.45 var(--sans)}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--bg);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+tbody tr:last-child td{border-bottom:none}
+td.yr{font-weight:700;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.k{font-weight:600;white-space:nowrap}
+
+/* versus */
+.versus{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;align-items:stretch}
+@media (min-width:600px){.versus{grid-template-columns:1fr auto 1fr}}
+.versus .vs{align-self:center;justify-self:center;font:700 .9rem var(--sans);color:var(--muted)}
+.versus .card .big{font:700 1.3rem var(--sans);color:var(--accent)}
+.versus .card:last-child .big{color:var(--ink)}
+
+/* bars */
+.bars{margin:16px 0;display:grid;gap:16px}
+.barset h4{font:700 .9rem var(--sans);margin:0 0 6px}
+.bar{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;font:.88rem var(--sans);margin:5px 0}
+.bar .track{background:var(--line);border-radius:6px;height:26px;overflow:hidden}
+.bar .fill{height:100%;width:0;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-weight:700;font-size:.82rem;white-space:nowrap;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.bar .fill.ink{background:var(--ink)}
+:root[data-theme="dark"] .bar .fill{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bar .fill{color:#16140f}}
+
+/* factions svg */
+.tree{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:16px 0}
+.tree svg{width:100%;height:auto;display:block}
+.tree .node rect{fill:var(--bg);stroke:var(--line)}
+.tree .node.root rect{fill:var(--accent-soft);stroke:var(--accent)}
+.tree text{font-family:var(--sans);fill:var(--fg);font-size:14px}
+.tree text.small{font-size:11px;fill:var(--muted);paint-order:stroke;stroke:var(--paper);stroke-width:5px;stroke-linejoin:round}
+.tree .edge{stroke:var(--muted);stroke-width:1.5;fill:none}
+.tree .edge.ext{stroke-dasharray:5 4}
+.legend{font:.8rem var(--sans);color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;padding:4px 6px 0}
+
+/* quotes */
+blockquote{margin:16px 0;padding:6px 0 6px 18px;border-left:3px solid var(--gold);font-style:italic;font-size:1.08rem}
+blockquote footer{font:normal .84rem var(--sans);color:var(--muted);margin-top:6px}
+
+/* self check */
+details.q{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 16px}
+details.q summary{cursor:pointer;padding:12px 0;font-weight:600;list-style:none;display:flex;gap:10px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::before{content:"+";font:700 1.1rem var(--sans);color:var(--accent);width:14px;flex:none}
+details.q[open] summary::before{content:"–"}
+details.q .a{padding:0 0 14px 24px;font-size:.96rem}
+details.q .a ul{margin:0;padding-left:18px}
+
+/* flashcards */
+.fc-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.fc{perspective:1000px;height:220px;cursor:pointer;margin:0 auto;max-width:520px}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc.flip .fc-inner{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid var(--line)}
+.fc-front{background:var(--accent-soft)}
+.fc-front .t{font:700 1.6rem var(--sans)}
+.fc-front .h{font:.82rem var(--sans);color:var(--muted);margin-top:8px}
+.fc-back{background:var(--bg);transform:rotateY(180deg);font-size:.98rem;overflow:auto}
+.fc-ctrl{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px;font:.88rem var(--sans);color:var(--muted);flex-wrap:wrap}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+
+/* floating tools: key-term notes + return to top */
+.fab-stack{position:fixed;right:16px;bottom:16px;z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab{font:600 .9rem var(--serif);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);color:var(--fg);border-radius:999px;padding:10px 16px;box-shadow:var(--shadow);cursor:pointer}
+.fab:hover{border-color:var(--accent);color:var(--accent)}
+.fab.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.fab.primary:hover{filter:brightness(1.08);color:#fff}
+:root[data-theme="dark"] .fab.primary{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fab.primary{color:#16140f}}
+#totop{opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s,transform .25s}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#notes.open + .fab-stack #totop{opacity:0;pointer-events:none}
+#notes [hidden]{display:none!important}
+#notes{position:fixed;right:16px;bottom:76px;z-index:75;width:min(380px,calc(100vw - 32px));max-height:min(70vh,620px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.18);opacity:0;transform:translateY(12px) scale(.98);transform-origin:bottom right;pointer-events:none;transition:opacity .2s,transform .2s}
+#notes.open{opacity:1;transform:none;pointer-events:auto}
+#notes header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px 8px;border-bottom:1px solid var(--line)}
+#notes header h2{font-size:1.05rem;margin:0}
+#notes header p{margin:2px 0 0;font-size:.78rem;color:var(--muted)}
+#notes .x{border:none;background:none;font-size:1.4rem;line-height:1;color:var(--muted);cursor:pointer;padding:4px 6px}
+#notes .x:hover{color:var(--accent)}
+#notes input{margin:10px 16px 6px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:.9rem var(--serif)}
+#notes input:focus{outline:2px solid var(--accent);outline-offset:-1px}
+#notes .list{overflow:auto;padding:0 16px 14px}
+#notes .grp{font:700 .7rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:12px 0 2px}
+#notes .item{display:block;padding:7px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:.88rem;line-height:1.4}
+#notes .item:hover b{color:var(--accent)}
+#notes .item b{display:block;font-size:.92rem}
+#notes .empty{color:var(--muted);font-size:.88rem;padding:10px 0}
+@media (max-width:520px){#notes{right:8px;left:8px;width:auto;bottom:72px}.fab .lbl-long{display:none}}
+
+/* sources */
+.sources li{margin:6px 0;font-size:.94rem}
+footer.end{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font:.85rem var(--sans);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer.end a{color:var(--muted)}
+
+@media print{
+  nav.toc,.mobile-toc,#progress,.demo-ctrl,.fc-wrap,.btn,.fab-stack,#notes{display:none!important}
+  .shell{display:block} body{background:#fff;color:#000}
+  .reveal{opacity:1;transform:none}
+  details.q{border:none} details.q .a{display:block}
+  section.unit{break-inside:auto}
+}
+
+/* ---- unit 3 additions ---- */
+:root{--plum:#7a4f8f;--plum-soft:#efe5f3;--sea:#d7e3e7;--land:#ece5d8;--land-line:#bdb19c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--plum:#c39ad6;--plum-soft:#2c2232;--sea:#17222a;--land:#2a261f;--land-line:#4a4338}}
+:root[data-theme="dark"]{--plum:#c39ad6;--plum-soft:#2c2232;--sea:#17222a;--land:#2a261f;--land-line:#4a4338}
+h1 .ja{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+
+/* status hierarchy */
+.status{display:grid;gap:10px;margin:16px 0;grid-template-columns:1fr}
+@media (min-width:640px){.status{grid-template-columns:1.25fr 1fr 1fr}}
+.status .col{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.status .col h4{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.status .col.core h4{color:var(--accent)} .status .col.mid h4{color:var(--ink)} .status .col.out h4{color:var(--plum)}
+.tier{display:block;width:100%;text-align:left;font:600 .95rem var(--serif);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0;cursor:pointer;opacity:0;transform:translateX(-8px);transition:opacity .45s,transform .45s,border-color .2s,background .2s}
+.status.in .tier{opacity:1;transform:none}
+.tier small{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
+.core .tier:nth-child(2){margin-left:0}.core .tier:nth-child(3){margin-left:6%}.core .tier:nth-child(4){margin-left:12%}.core .tier:nth-child(5){margin-left:18%}
+.core .tier{width:auto}
+.tier:hover,.tier[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.mid .tier:hover,.mid .tier[aria-pressed="true"]{border-color:var(--ink);background:var(--ink-soft)}
+.out .tier:hover,.out .tier[aria-pressed="true"]{border-color:var(--plum);background:var(--plum-soft)}
+.status-cap{min-height:3.4em;margin:4px 0 16px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 8px 8px 0;font-size:.96rem}
+
+/* military class ladder */
+.mil{display:grid;gap:8px;margin:16px 0}
+.mil .r{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+@media (max-width:560px){.mil .r{grid-template-columns:1fr;gap:2px}}
+.mil .r b{font-size:1rem}
+.mil .r b small{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
+.mil .r p{margin:0;font-size:.94rem}
+.mil .r.top{border-left:4px solid var(--accent)} .mil .r.fu{border-left:4px solid var(--gold)} .mil .r.to{border-left:4px solid var(--ink)} .mil .r.ha{border-left:4px solid var(--green)}
+
+/* generic svg panel */
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:18px 0;box-shadow:var(--shadow)}
+.panel svg{width:100%;height:auto;display:block}
+.panel text{font-family:var(--serif);fill:var(--fg)}
+.panel .small{font-size:12px;fill:var(--muted)}
+.panel .box{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.panel .box.acc{fill:var(--accent-soft);stroke:var(--accent)}
+.panel .box.ink{fill:var(--ink-soft);stroke:var(--ink)}
+.panel .box.gold{fill:var(--gold-soft);stroke:var(--gold)}
+.panel .box.green{fill:var(--green-soft);stroke:var(--green)}
+.panel .road{fill:none;stroke:var(--line);stroke-width:10;stroke-linecap:round}
+.panel .roadline{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:6 8;opacity:.7}
+.ctrl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.ctrl .step{font:600 .82rem var(--serif);border:1px solid var(--line);background:var(--bg);color:var(--muted);padding:6px 11px;border-radius:999px;cursor:pointer}
+.ctrl .step:hover{color:var(--fg);border-color:var(--accent)}
+.ctrl .step[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .ctrl .step[aria-pressed="true"]{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ctrl .step[aria-pressed="true"]{color:#16140f}}
+.cap{min-height:4.4em;margin-top:10px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--bg);border-radius:0 8px 8px 0;font-size:.96rem}
+.cap b{display:block;font-size:1rem}
+
+/* sankin kotai */
+#sk .who{transition:transform 1.6s cubic-bezier(.45,.05,.3,1)}
+#sk .lord circle{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+#sk .fam circle{fill:var(--gold);stroke:var(--paper);stroke-width:2}
+#sk .ret circle{fill:var(--muted);stroke:var(--paper);stroke-width:1.5}
+#sk .lbl{font-size:12.5px}
+#sk .cost{font-size:12px;fill:var(--accent);opacity:0;transition:opacity .4s}
+#sk.moving .cost{opacity:1}
+#sk .coin{fill:var(--gold);opacity:0}
+#sk.moving .coin{animation:coin 1.6s ease-out}
+@keyframes coin{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(-26px)}}
+
+/* map of foreign contact */
+.mapbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:18px 0;box-shadow:var(--shadow)}
+.mapgrid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:720px){.mapgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:start}}
+.mapbox svg{width:100%;height:auto;display:block;border-radius:8px;background:var(--sea)}
+.mapbox .land{fill:var(--land);stroke:var(--land-line);stroke-width:.7}
+.mapbox text{font-family:var(--serif);fill:var(--fg);paint-order:stroke;stroke:var(--sea);stroke-width:4px;stroke-linejoin:round}
+.mapbox .cl{font-size:12px}
+.mapbox .rl{font-size:13px;font-weight:700;letter-spacing:.1em;fill:var(--muted)}
+.mapbox .city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.5}
+.mapbox .win{cursor:pointer}
+.mapbox .win circle.halo{fill:var(--accent);opacity:.18;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+.mapbox .win circle.core{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+.mapbox .win.on circle.core{fill:var(--ink)}
+.mapbox .win.on text{font-weight:700}
+.mapbox .route{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:5 6;opacity:.25;transition:opacity .3s}
+.mapbox .route.on{opacity:1;animation:dash 1.4s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-22}}
+@keyframes halo{0%{transform:scale(.6);opacity:.35}100%{transform:scale(2.2);opacity:0}}
+.windows{display:grid;gap:8px}
+.windows button{text-align:left;font:inherit;font-size:.94rem;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;color:var(--fg)}
+.windows button b{display:block;font-size:1rem}
+.windows button span{color:var(--muted);font-size:.86rem}
+.windows button[aria-pressed="true"]{border-left-color:var(--accent);background:var(--accent-soft)}
+.windows .detail{font-size:.95rem;padding:10px 12px;border-radius:10px;background:var(--paper);border:1px dashed var(--line)}
+
+/* flows (cycle, credit) */
+.panel .arrow{fill:none;stroke:var(--muted);stroke-width:1.6;marker-end:url(#ah)}
+.panel .pulse{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-dasharray:14 400;animation:run 3.2s linear infinite}
+.panel .pulse.g{stroke:var(--gold)}
+.panel .pulse.i{stroke:var(--ink)}
+@keyframes run{from{stroke-dashoffset:0}to{stroke-dashoffset:-414}}
+
+/* share bars */
+.share{margin:14px 0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.share h4{font:700 .95rem var(--serif);margin:0 0 10px}
+.share .row{display:grid;grid-template-columns:150px 1fr 70px;gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+@media (max-width:520px){.share .row{grid-template-columns:96px 1fr 58px}}
+.share .track{background:var(--line);height:20px;border-radius:5px;overflow:hidden}
+.share .fill{height:100%;width:0;background:var(--accent);border-radius:5px;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.share .fill.ink{background:var(--ink)} .share .fill.gold{background:var(--gold)} .share .fill.green{background:var(--green)}
+.share .v{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.share .note{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+/* thinkers board */
+.think{display:grid;gap:12px;margin:16px 0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.think .card{border-top:4px solid var(--line)}
+.think .card.a{border-top-color:var(--accent)} .think .card.b{border-top-color:var(--ink)} .think .card.c{border-top-color:var(--gold)} .think .card.d{border-top-color:var(--green)} .think .card.e{border-top-color:var(--plum)}
+.think .who{font:700 .98rem var(--serif);margin:10px 0 2px}
+.think .who:first-of-type{margin-top:4px}
+.think .card p{font-size:.92rem}
+.think .vs{display:inline-block;font:700 .72rem var(--serif);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+
+/* li / qi / xin */
+.lqx{display:grid;gap:10px;grid-template-columns:1fr;margin:16px 0}
+@media (min-width:620px){.lqx{grid-template-columns:1fr auto 1fr auto 1fr;align-items:center}}
+.lqx .card{text-align:center}
+.lqx .card .big{font:700 1.5rem var(--serif);color:var(--accent)}
+.lqx .op{font:700 1.2rem var(--serif);color:var(--muted);text-align:center}
+
+/* cause chain */
+.chain{list-style:none;padding:0;margin:14px 0;display:grid;gap:0}
+.chain li{position:relative;padding:10px 14px 10px 46px;background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:18px;font-size:.95rem}
+.chain li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);color:var(--muted);font-weight:700}
+.chain li .n{position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .8rem/24px var(--serif);text-align:center}
+.chain li:last-child{background:var(--accent-soft);border-color:var(--accent)}
+
+/* inheritance bars */
+.inh .row{grid-template-columns:170px 1fr 92px}
+@media (max-width:520px){.inh .row{grid-template-columns:100px 1fr 70px}}
+
+.wide{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.wide svg{min-width:600px}.wide::after{content:"← swipe to see the whole diagram →";display:block;font-size:.78rem;color:var(--muted);text-align:center;margin-top:4px}}
+/* ---- unit 3 · revision 2 ---- */
+.fn{font-weight:700;color:var(--accent);letter-spacing:.02em}
+figure.fig{margin:18px 0}
+table caption{caption-side:top;text-align:left;padding:10px 12px;font:.86rem/1.4 var(--serif);color:var(--muted);border-bottom:1px solid var(--line);background:var(--bg)}
+table caption b{color:var(--fg)}
+.lqx-fig figcaption{margin-top:0}
+
+/* sticky contents bar on small screens */
+@media (max-width:1039px){
+  html{scroll-padding-top:72px}
+  .mobile-toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:45;margin:0 -16px 8px;padding:8px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .mobile-toc summary{display:flex;align-items:center;gap:10px;list-style:none}
+  .mobile-toc summary::-webkit-details-marker{display:none}
+  .mobile-toc summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:transform .2s}
+  .mobile-toc[open] summary::after{transform:rotate(180deg)}
+  .mobile-toc .lbl{color:var(--muted);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;flex:none}
+  .mobile-toc .cur{color:var(--accent);font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobile-toc ol{max-height:min(60vh,460px);overflow-y:auto;overscroll-behavior:contain;list-style:none;padding:6px 0;margin:8px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+  .mobile-toc li{margin:0}
+  .mobile-toc li a{display:block;padding:7px 14px;border-left:3px solid transparent;color:var(--muted);text-decoration:none}
+  .mobile-toc li a.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft);font-weight:700}
+}
+nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
+
+/* status order: ranked column vs unranked groups */
+.status .col .hint{font-size:.76rem;color:var(--muted);margin:-4px 0 6px}
+.status .tier{width:100%;margin-left:0!important}
+.status .core{counter-reset:rk}
+.status .core .tier{display:flex;align-items:center;gap:10px}
+.status .core .tier::before{counter-increment:rk;content:counter(rk);flex:none;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .74rem/20px var(--serif);text-align:center}
+
+/* contrast pair with a pivot word */
+.contrast{display:grid;grid-template-columns:1fr;margin:18px 0;align-items:stretch}
+@media (min-width:640px){.contrast{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}}
+.contrast .cside{border-radius:12px;padding:16px 18px;border:1px solid var(--line);min-width:0}
+.contrast .cside.a{background:var(--ink-soft);border-color:var(--ink)}
+.contrast .cside.b{background:var(--accent-soft);border-color:var(--accent)}
+.contrast .cside .big{font:700 1.35rem var(--serif);margin-bottom:6px}
+.contrast .cside.a .big{color:var(--ink)} .contrast .cside.b .big{color:var(--accent)}
+.contrast .cside ul{margin:0;padding-left:20px}
+.contrast .cside li{margin:6px 0}
+.pivot{display:flex;align-items:center;justify-content:center;min-height:58px;background:linear-gradient(var(--line),var(--line)) center/76% 2px no-repeat}
+@media (min-width:640px){.contrast>.pivot{background-size:2px 84%}}
+.pivot span{font:italic 700 1.25rem/1 var(--serif);color:var(--fg);background:var(--bg);border:2px solid var(--fg);border-radius:999px;padding:8px 14px;box-shadow:var(--shadow)}
+
+/* paired change/strain rows */
+.pairs{margin:18px 0;display:grid;gap:14px}
+.pairs .head{display:none}
+@media (min-width:640px){.pairs .head{display:grid;grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);font:700 1.35rem var(--serif)}.pairs .head .a{color:var(--green)}.pairs .head .b{color:var(--accent)}}
+.pair{display:grid;grid-template-columns:1fr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+@media (min-width:640px){.pair{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}.pair .area{grid-column:1/-1}}
+.pair .area{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 2px 8px}
+.pair .c{border-radius:10px;padding:10px 12px;font-size:.96rem;min-width:0}
+.pair .c b.tag{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+@media (min-width:640px){.pair .c b.tag{display:none}}
+.pair .c.a{background:var(--green-soft);border-left:4px solid var(--green)} .pair .c.a b.tag{color:var(--green)}
+.pair .c.b{background:var(--accent-soft);border-left:4px solid var(--accent)} .pair .c.b b.tag{color:var(--accent)}
+.pair .pivot{min-height:44px}
+.pair .pivot span{font-size:1rem;padding:6px 11px}
+@media (min-width:640px){.pair>.pivot{background-size:84% 2px}}
+
+
+/* discussion questions: expand / collapse all */
+.q-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}
+.q-tools .btn[disabled]{opacity:.45;cursor:default;border-color:var(--line);color:var(--muted)}
+.q-tools .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.q-tools{display:none!important}}
+
+/* ---- unit 4 additions ---- */
+.note-l{font:.84rem/1.45 var(--serif);color:var(--muted);margin:-6px 0 16px}
+
+/* world trade map */
+.wmap svg{background:var(--sea)}
+.wmap .land{fill:var(--land);stroke:var(--land-line);stroke-width:.6}
+.wmap .route{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:6 6;opacity:.16;transition:opacity .35s}
+.wmap .route.pt{stroke:var(--accent)} .wmap .route.sp{stroke:var(--gold)} .wmap .route.nl{stroke:var(--ink)} .wmap .route.ag{stroke:var(--green);stroke-width:3.2}
+.wmap .route.ret{stroke-dasharray:2 6}
+.wmap .rt.on .route{opacity:1;animation:wdash 1.3s linear infinite}
+@keyframes wdash{to{stroke-dashoffset:-24}}
+.wmap .pl circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.2}
+.wmap .pl text{font-size:10.5px;paint-order:stroke;stroke:var(--sea);stroke-width:3.5px;stroke-linejoin:round;fill:var(--fg)}
+.wmap .pl.dim{opacity:.35;transition:opacity .3s}
+.wmap .ocean{font-size:11px;letter-spacing:.18em;fill:var(--muted);opacity:.7;stroke:none}
+.wmap .edge{font-size:10px;fill:var(--muted);font-style:italic}
+.wmap text{font-family:var(--serif)}
+#wctrl .step[data-r="pt"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+#wctrl .step[data-r="sp"][aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+#wctrl .step[data-r="nl"][aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+#wctrl .step[data-r="ag"][aria-pressed="true"]{background:var(--green);border-color:var(--green)}
+#wcap{border-left-color:var(--accent)}
+#wcap.sp{border-left-color:var(--gold)} #wcap.nl{border-left-color:var(--ink)} #wcap.ag{border-left-color:var(--green)}
+
+/* stats count-up */
+#silverstats .stat{opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+#silverstats.in .stat{opacity:1;transform:none}
+#silverstats.in .stat:nth-child(2){transition-delay:.12s}#silverstats.in .stat:nth-child(3){transition-delay:.24s}#silverstats.in .stat:nth-child(4){transition-delay:.36s}
+
+/* swimlanes */
+#lanes .lane{fill:var(--bg);stroke:var(--line)}
+#lanes .lname{font:700 13px var(--serif);fill:var(--fg)}
+#lanes .tick{stroke:var(--line)}
+#lanes .tl{font:11px var(--serif);fill:var(--muted)}
+#lanes .ban{fill:var(--gold);opacity:.28}
+#lanes .ev{cursor:pointer}
+#lanes .ev circle{stroke:var(--paper);stroke-width:2;transition:r .2s}
+#lanes .ev.c circle{fill:var(--ink)} #lanes .ev.r circle{fill:var(--accent)}
+#lanes .ev:hover circle,#lanes .ev.on circle{r:8}
+#lanes .ev.on circle{stroke:var(--fg)}
+#lanes .ev:focus{outline:none}
+#lanes .ev:focus-visible circle{stroke:var(--fg);stroke-width:3}
+#lanes-cap{border-left-color:var(--ink)}
+
+/* kinship bands */
+#kin text{font-family:var(--serif);fill:var(--fg);font-size:13px}
+#kin .small{font-size:11.5px;fill:var(--muted)}
+#kin .bl{font-size:12px;fill:var(--fg);paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#kin .bandp{fill:var(--accent-soft);stroke:var(--accent)}
+#kin .s-bi{stop-color:var(--ink-soft)} #kin .s-pa2{stop-color:var(--accent-soft)}
+.legend .sw{display:inline-block;width:14px;height:10px;border-radius:3px;vertical-align:middle;margin-right:2px}
+.legend .sw.bi{background:var(--ink-soft);border:1px solid var(--ink)} .legend .sw.pa{background:var(--accent-soft);border:1px solid var(--accent)}
+#kin rect{transform-origin:100px center;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+#kin.in rect{transform:none}
+#kin.in rect:nth-of-type(2){transition-delay:.15s}#kin.in rect:nth-of-type(3){transition-delay:.3s}
+.no-js #kin rect{transform:none}
+@media (prefers-reduced-motion:reduce){#kin rect{transform:none}}
+
+figure.tall img{max-height:560px;width:auto;margin:0 auto}
+figure.tall figcaption{max-width:620px;margin-left:auto;margin-right:auto}
+
+/* ---- shared: aspect ratio + justified text ---- */
+/* keep every image's aspect ratio (width/height attributes otherwise fix the height) */
+figure img{height:auto}
+figure.tall img{width:auto;max-width:100%}
+figure.port{max-width:320px;margin-inline:auto}
+/* justified running text */
+main p,main li,.gloss dd,.card p,.callout p,.cap{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyphens:manual}
+/* room for the pivot word */
+@media (min-width:640px){.contrast{grid-template-columns:minmax(0,1fr) 124px minmax(0,1fr)}}
+.contrast li,.versus p,.think .card p,.pair .c,.chain li{text-align:left;hyphens:manual}
+
+
+/* ---- unit 6 ---- */
+#summary .contrast{column-gap:16px;row-gap:12px}
+#summary .pivot span{white-space:normal;text-align:center;font-size:1rem;line-height:1.25;padding:8px 12px;max-width:124px;box-sizing:border-box}
+@media (min-width:640px){#summary .contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)}}
+.share .row{grid-template-columns:150px 1fr 76px}
+@media (max-width:520px){.share .row{grid-template-columns:104px 1fr 66px;font-size:.84rem}}
+#rep .fill{min-width:3px}
+.grid .card .big{font-weight:700;font-size:1.05rem;color:var(--accent);margin-bottom:4px}
+/* population chain */
+#chainsvg text{font-family:var(--serif);fill:var(--fg)} #chainsvg .small{font-size:12px;fill:var(--muted)}
+#chainsvg .arrow{color:var(--muted);stroke:var(--muted);marker-end:url(#ah6)}
+#chainsvg .ck{opacity:.28;transition:opacity .5s}
+#chainsvg .ck.on{opacity:1}
+#zeng .arrow{color:var(--muted);stroke:var(--muted);marker-end:url(#ah7)}
+#zeng text{font-family:var(--serif);fill:var(--fg)} #zeng .small{font-size:12px;fill:var(--muted)}
+/* stats */
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:12px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.callout .stat{background:var(--bg)}
+.stat b{display:block;font-size:1.25rem;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.2}
+.stat span{display:block;font-size:.86rem;color:var(--muted);line-height:1.35;margin-top:2px}
+/* biography */
+.bio{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px;margin:20px 0;box-shadow:var(--shadow)}
+.bio-h .label{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.bio-h h3{margin:4px 0 10px}
+.lifeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+.lifeline li{position:relative;margin:0 0 10px;padding-left:4px}
+.lifeline li::before{content:"";box-sizing:border-box;position:absolute;left:-24px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--gold)}
+.lifeline li b{display:block;font-size:.85rem;color:var(--gold)}
+/* pull quote */
+blockquote.pull{margin:0;padding:16px 18px;background:var(--accent-soft);border-radius:12px;font-size:1.12rem;font-style:italic;line-height:1.45;text-align:left}
+blockquote.pull cite{display:block;margin-top:8px;font-size:.82rem;font-style:normal;color:var(--muted)}
+/* tables */
+#litable tr.hide{display:none}
+table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:center;width:72px}
+/* hundred days stepper */
+.steps{display:grid;gap:10px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.hs{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;opacity:.35;transition:opacity .4s,border-color .4s,transform .4s}
+.hs.on{opacity:1;border-color:var(--accent);transform:translateY(-2px)}
+.hs.end.on{background:var(--accent-soft)}
+.hs .yr{display:block;font:700 .8rem var(--serif);color:var(--accent)}
+.hs b{display:block;margin:2px 0 4px}
+.hs p{margin:0;font-size:.88rem;line-height:1.4;text-align:left;hyphens:manual}
+@media (max-width:820px){.steps{grid-template-columns:1fr}.hs{opacity:.55}}
+/* conflict map */
+#cmap{min-width:0}
+#cmap .riv{fill:none;stroke:var(--ink);stroke-width:1.3;opacity:.55}
+#cmap .lyr{opacity:0;transition:opacity .45s;pointer-events:none}
+#cmap .lyr.on{opacity:1;pointer-events:auto}
+#cmap .area{stroke-width:1.5;opacity:.85}
+#cmap .area.tp{fill:var(--accent-soft);stroke:var(--accent)}
+#cmap .area.ni{fill:var(--gold-soft);stroke:var(--gold)}
+#cmap .area.mu{fill:var(--green-soft);stroke:var(--green)}
+#cmap .area.ru{fill:var(--ink-soft);stroke:var(--ink);stroke-dasharray:4 3}
+#cmap .area.fr{fill:var(--gold-soft);stroke:var(--gold);stroke-dasharray:4 3}
+#cmap .area.jp{fill:var(--accent-soft);stroke:var(--accent);stroke-dasharray:4 3}
+#cmap .area.fl{fill:var(--ink-soft);stroke:var(--ink)}
+#cmap .canal{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:7 5}
+#cmap .lyr.on .canal{animation:dash 1.6s linear infinite}
+#cmap .oldy{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 4}
+#cmap .newy{fill:none;stroke:var(--ink);stroke-width:2.6}
+#cmap .rail{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-dasharray:2 3}
+#cmap .move{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:6 5;marker-end:url(#mah)}
+#cmap .lyr.on .move{animation:dash 1.4s linear infinite}
+#cmap .move.ink{stroke:var(--ink)} #cmap .move.green{stroke:var(--green)}
+#cmap .city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.2}
+#cmap .city text{font-size:11px;fill:var(--muted);font-style:italic}
+#cmap .alab{font-size:12px;font-weight:700}
+#cmap .alab.tp{fill:var(--accent)} #cmap .alab.ni{fill:var(--gold)} #cmap .alab.mu{fill:var(--green)} #cmap .alab.ink{fill:var(--ink)}
+#cmap .ctry{font-size:14px;font-weight:700;letter-spacing:.2em;fill:var(--muted);opacity:.7}
+#cmap .sea{font-size:12px;font-style:italic;fill:var(--muted);letter-spacing:.06em}
+#cmap .ev{cursor:pointer;outline:none}
+#cmap .ev circle.core{stroke:var(--paper);stroke-width:1.6;fill:var(--accent)}
+#cmap .ev.ink circle.core{fill:var(--ink)} #cmap .ev.gold circle.core{fill:var(--gold)} #cmap .ev.green circle.core{fill:var(--green)}
+#cmap .ev circle.halo{fill:var(--accent);opacity:.2;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+#cmap .ev.ink circle.halo{fill:var(--ink)} #cmap .ev.gold circle.halo{fill:var(--gold)} #cmap .ev.green circle.halo{fill:var(--green)}
+#cmap .ev text{font-size:11.5px;font-weight:600}
+#cmap .ev:focus circle.core,#cmap .ev:hover circle.core{stroke:var(--fg)}
+#cmap .leg{font-size:11px;fill:var(--muted)}
+#mctrl .step[data-l="reb"][aria-pressed="true"]{background:var(--green);border-color:var(--green)}
+#mctrl .step[data-l="war"][aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+#mctrl .step[data-l="jp"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+#mctrl .step[data-l="home"][aria-pressed="true"],#mctrl .step[data-l="box"][aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+@media (prefers-reduced-motion:reduce){#cmap .ev circle.halo,#cmap .lyr.on .canal,#cmap .lyr.on .move{animation:none}}
+
+/* ---- unit 7 ---- */
+.grid .card ul.tight{margin:0;padding-left:18px}
+.card .big+ul.tight li{font-size:.94rem}
+/* identity cards (Kohei's lawsuit) */
+.idgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.idcard{position:relative;display:grid;text-align:left;font:inherit;color:var(--fg);background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:12px 14px 14px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .2s,background .2s}
+.idcard:hover{border-color:var(--gold)}
+.idcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.idcard .role{font:700 .7rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.idcard .a,.idcard .b{grid-area:2/1;font-size:.9rem;line-height:1.4;transition:opacity .35s,transform .35s}
+.idcard .a b,.idcard .b b{display:block;font-size:1rem;margin-bottom:2px}
+.idcard .b{opacity:0;transform:translateY(6px)}
+.idcard .b b{color:var(--accent)}
+.idcard[aria-pressed="true"]{background:var(--gold-soft);border-top-color:var(--accent)}
+.idcard[aria-pressed="true"] .a{opacity:0;transform:translateY(-6px)}
+.idcard[aria-pressed="true"] .b{opacity:1;transform:none}
+.idcard::after{content:"↻ other name";position:absolute;right:12px;top:10px;font-size:.72rem;color:var(--muted)}
+/* map tweaks for the Japan map */
+#cmap .ctry{letter-spacing:.16em}
+#cmap .ev text{font-size:11px}
+#cmap .alab{font-size:11px}
+#cmap .lyr[data-l="fall"] .ev text{font-size:9.5px}
+#cmap .lyr[data-l="fall"] .alab{font-size:9.5px}
+#chainsvg .arrow{fill:none}
+@media (prefers-reduced-motion:reduce){.idcard .a,.idcard .b{transition:none}}
+</style>
+</head>
+<body class="no-js">
+<div id="progress"></div>
+<div id="tip" role="tooltip"></div>
+<div id="lightbox" aria-hidden="true"><img alt=""></div>
+
+<aside id="notes" role="dialog" aria-modal="false" aria-labelledby="notes-title" aria-hidden="true">
+  <header>
+    <div><h2 id="notes-title">Key terms · quick notes</h2><p>Short versions. Tap a term for the full entry.</p></div>
+    <button class="x" id="notes-close" type="button" aria-label="Close key terms">×</button>
+  </header>
+  <input id="notes-search" type="search" placeholder="Filter terms…" aria-label="Filter key terms">
+  <div class="list" id="notes-list"></div>
+</aside>
+<div class="fab-stack">
+  <button class="fab" id="totop" type="button" aria-label="Return to top">↑ <span class="lbl-long">Return to top</span></button>
+  <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
+</div>
+
+<div class="shell">
+<nav class="toc" aria-label="Contents">
+  <a class="back" href="index.html">← All units</a>
+  <h2>Contents</h2>
+  <ol id="toc-list">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#terms">Key terms first</a></li>
+    <li><a href="#villages">1 · Trouble in the villages</a></li>
+    <li><a href="#domains">2 · Domains in debt, samurai in limbo</a></li>
+    <li><a href="#play">3 · Religion and play</a></li>
+    <li><a href="#ships">4 · Foreign ships and the closing of Japan</a></li>
+    <li><a href="#treaties">5 · Perry, Harris, and the unequal treaties</a></li>
+    <li><a href="#map">6 · Japan in turmoil: the map</a></li>
+    <li><a href="#debate">7 · Debating the foreign threat</a></li>
+    <li><a href="#travel">8 · From palanquin to rickshaw</a></li>
+    <li><a href="#turmoil">9 · Political turmoil, 1858–1864</a></li>
+    <li><a href="#fall">10 · The fall of the shogunate</a></li>
+    <li><a href="#meaning">11 · Coup or revolution?</a></li>
+    <li><a href="#summary">Summary: 1800 vs. 1868</a></li>
+    <li><a href="#review">Review kit</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+  <div class="tools">
+    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <p class="eyebrow">Unit 7 · Study guide · Japan</p>
+  <h1>The Fall of the Tokugawa <span class="ja" lang="ja">幕末</span></h1>
+  <p class="dek">Discontent at home, black ships offshore, and the end of military rule, 1800–1868</p>
+  <div class="meta">
+    <span class="chip"><b>Reading:</b> Ebrey &amp; Walthall, Ch. 19, "Japan in Turmoil (1800–1867)," pp. 333–346</span>
+    <span class="chip"><b>Before:</b> <a href="unit6.html">Unit 6 · The Qing in Crisis</a></span>
+    <span class="chip"><b>Next:</b> Unit 8 · The Meiji Transformation</span>
+  </div>
+</header>
+
+<details class="mobile-toc">
+  <summary><span class="lbl">Contents</span><span class="cur" id="mtoc-cur">Overview</span></summary>
+  <ol id="mtoc"></ol>
+</details>
+
+<!-- OVERVIEW -->
+<section class="unit" id="overview">
+  <div class="sec-num">Overview</div>
+  <h2>The unit in one paragraph</h2>
+  <p class="pages">pp. 333, 345–346</p>
+  <p>In the early 1800s many Japanese commoners prospered, but the laboring poor, low-ranking samurai, and debt-ridden daimyo did not. Villages fought over their headmen, domains neared bankruptcy, and capable samurai were stuck in dead-end posts. Then came fear of the West. After Perry's ships arrived in 1853, the shogunate signed <a class="term" href="#g-unequal">unequal treaties</a> and, unsure of itself, asked the daimyo and the <a class="term" href="#g-monarch">monarch</a> for their views. That opened a <a class="term" href="#g-public">public political realm</a> it could not close. Repression (1858–1860), compromise, and the terror of the <a class="term" href="#g-shishi">shishi</a> followed. Satsuma and Chōshū, humbled by Western guns, built modern armies and allied against the shogunate in 1866. At the end of 1867 the last shogun returned his office to the monarch, ending nearly 800 years of military government. <span class="cite">pp. 333, 345</span></p>
+
+  <div class="callout ink">
+    <div class="label">Questions historians ask (p. 333)</div>
+    <ul class="tight">
+      <li>What brought about the restoration of imperial rule under the Meiji emperor?</li>
+      <li>Was the fall of the shogunate a <a class="term" href="#g-coup">coup d'état</a>, one set of rulers replacing a similar set, or a revolution?</li>
+      <li>Was it mainly the result of changes inside Japan, or a reaction to foreign pressure?</li>
+    </ul>
+  </div>
+
+  <h3>Timeline at a glance</h3>
+  <figure class="fig">
+  <div class="timeline">
+    <div class="ev"><div class="yr">1793</div><div class="tx">Russian Adam Laxman reaches Nagasaki and is turned away</div></div>
+    <div class="ev"><div class="yr">1808</div><div class="tx">British warship <i>Phaeton</i> forces its way into Nagasaki bay</div></div>
+    <div class="ev major"><div class="yr">1825</div><div class="tx">Order to drive off all foreign ships; Aizawa's <i>New Theses</i></div></div>
+    <div class="ev"><div class="yr">1836–37</div><div class="tx">Famine; Ōshio Heihachirō leads farmers against Osaka</div></div>
+    <div class="ev"><div class="yr">1841–43</div><div class="tx">Shogunal reform; expulsion order relaxed</div></div>
+    <div class="ev major"><div class="yr">1853–54</div><div class="tx">Perry arrives; friendship treaty opens Shimoda and Hakodate</div></div>
+    <div class="ev major"><div class="yr">1858</div><div class="tx">Harris commercial treaty signed against the monarch's wishes; purge begins</div></div>
+    <div class="ev"><div class="yr">1859</div><div class="tx">Yokohama opens; Yoshida Shōin executed</div></div>
+    <div class="ev"><div class="yr">1860</div><div class="tx">Ii Naosuke assassinated outside Edo castle</div></div>
+    <div class="ev"><div class="yr">1863</div><div class="tx">Britain shells Kagoshima; Chōshū fires on ships at Shimonoseki</div></div>
+    <div class="ev"><div class="yr">1864</div><div class="tx">Chōshū radicals routed in Kyoto; foreign fleet strikes Chōshū</div></div>
+    <div class="ev major"><div class="yr">1866</div><div class="tx">Satsuma–Chōshū alliance; shogun's campaign fails; great riots</div></div>
+    <div class="ev major"><div class="yr">1867</div><div class="tx"><i>Ee ja nai ka</i> dances; Yoshinobu returns his office</div></div>
+    <div class="ev"><div class="yr">1868–69</div><div class="tx">Fighting near Kyoto, at Aizu, and finally Hakodate</div></div>
+  </div>
+  <figcaption><span class="fn">Figure 1.</span> Key events, 1793–1869. Filled dots mark turning points. Dates from pp. 333–345.</figcaption>
+  </figure>
+</section>
+
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Start here</div>
+  <h2>Key terms first</h2>
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-shishi">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from <a href="unit3.html">Unit 3</a> are repeated briefly where you need them.</p>
+
+  <h3 class="gloss-group">The Tokugawa order (review)</h3>
+  <dl class="gloss">
+    <div class="row" id="g-shogun" data-short="The military ruler in Edo; the shogunate (bakufu) was his government."><dt>Shogun · shogunate</dt><dd>The shogun was Japan's military ruler, based at Edo; the Tokugawa family held the office from 1603. His government, the shogunate, was later called the <i>bakufu</i> ("tent government"). It ran foreign policy, and a council of <a class="term" href="#g-senior">senior councilors</a> made its policy decisions. <span class="cite">pp. 289–290</span></dd></div>
+    <div class="row" id="g-monarch" data-short="The emperor in Kyoto, who reigned but did not rule; the book calls him 'monarch' until 1867."><dt>Monarch · emperor</dt><dd>The hereditary ruler who lived with his court in Kyoto, "above the clouds," with no say in government. The textbook calls him the <i>monarch</i> (Kōmei, before 1867) and uses <i>emperor</i> for the Meiji emperor, newly named as Japan's single ruler. <span class="cite">pp. 288, 333, 342</span><span class="needs">See also: shogun</span></dd></div>
+    <div class="row" id="g-daimyo" data-short="A lord with a domain of 10,000+ koku; 250–280 of them ruled their domains under the shogun."><dt>Daimyo · domain</dt><dd>A daimyo was a lord whose domain (territory) produced over 10,000 <i>koku</i> of rice; there were 250 to 280. Each ran his domain as he saw fit and kept a band of samurai retainers. <span class="cite">p. 289</span></dd></div>
+    <div class="row" id="g-fudai" data-short="Hereditary Tokugawa vassal lords; they staffed the shogun's top councils."><dt>Vassal daimyo (fudai)</dt><dd>Hereditary retainers of the Tokugawa who governed domains and served as the shogun's chief advisers. Senior councilors were chosen from them. <span class="cite">p. 289</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-tozama" data-short="'Outside lords,' once Ieyasu's rivals; shut out of policy. Satsuma, Chōshū, Tosa."><dt>Outside lords (tozama)</dt><dd>Daimyo who had been Ieyasu's rivals or peers. Fewer than the vassal daimyo, the largest ruled domains that worked almost like nations, but they were kept out of policymaking. Satsuma, Chōshū, and Tosa were tozama. <span class="cite">pp. 289, 338, 342</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-senior" data-short="The four or five vassal daimyo who made shogunal policy, rotating monthly."><dt>Senior councilors</dt><dd>Four or five vassal daimyo, rotating monthly, who made the shogunate's policy and personnel decisions and supervised the daimyo. In 1858 they insisted that choosing the next shogun was their decision alone. <span class="cite">pp. 289, 342</span><span class="needs">Builds on: vassal daimyo</span></dd></div>
+    <div class="row" id="g-sankin" data-short="Rule that daimyo spend alternate periods in Edo, leaving wife and heir as hostages."><dt>Alternate attendance (sankin kōtai)</dt><dd>The system, formalized in 1635, that made each daimyo spend half his time in Edo and keep his wife and heir there as hostages. It was costly for domains. In 1862† it was cut to 100 days every three years and the families went home. <span class="cite">pp. 290, 334, 342</span><span class="needs">Builds on: daimyo</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Villages and domains</h3>
+  <dl class="gloss">
+    <div class="row" id="g-outcast" data-short="People deemed polluted for work with dead animals; they protested insults and discrimination."><dt>Outcasts</dt><dd>People treated as polluted because their work dealt with dead animals. In the early 1800s they protested the discrimination, humiliation, and insults they faced. <span class="cite">pp. 289, 333</span></dd></div>
+    <div class="row" id="g-headman" data-short="The village leader who split the tax bill; often accused of mixing his business with village money."><dt>Village headman</dt><dd>The leader of a village, which paid its taxes as a group. Headmen were accused of mixing their own business expenses with village costs and of lording it over neighbors. Lawsuits followed; some villages rotated or even elected the post. <span class="cite">pp. 289, 333–334</span></dd></div>
+    <div class="row" id="g-leagues" data-short="Village officials' alliances across domain lines, for policing and joint petitions."><dt>Regional leagues</dt><dd>Alliances of village officials, a new layer between villages and rulers. Around Osaka they petitioned against trade restrictions; around Edo, headmen raised militias against gamblers and bandits. <span class="cite">p. 334</span><span class="needs">Builds on: village headman</span></dd></div>
+    <div class="row" id="g-mutual" data-short="Ninomiya Sontoku's low-interest loan groups for indebted farmers."><dt>Mutual aid associations</dt><dd>Groups started by the peasant sage Ninomiya Sontoku that lent indebted farmers money at low interest. He paired them with an ethic of diligence, fortitude, and frugality and with careful planning of land and labor. <span class="cite">p. 334</span></dd></div>
+    <div class="row" id="g-hirata" data-short="Followers of Hirata Atsutane, who found virtue in Japan's ancient past and saw the monarch as a living god."><dt>Hirata school</dt><dd>Followers of the scholar of Japan's ancient past Hirata Atsutane. They accepted the shogun's rule but looked to the monarch as a manifest god linking divine and human worlds, believed the dead watch over their descendants, and valued farming as communion with the gods. Village officials were their main disciples; their preachers later spread political news. <span class="cite">pp. 334, 340</span><span class="needs">See also: monarch</span></dd></div>
+    <div class="row" id="g-rural" data-short="Rich village commoners in trade and manufacturing who bought samurai privileges with loans."><dt>Rural entrepreneurs</dt><dd>Wealthy commoners in the countryside. To raise their prestige they married outside the village, educated their daughters, studied Chinese and Western learning, and took up swordsmanship. In return for loans to daimyo, some won the right to wear swords and use surnames. <span class="cite">pp. 334, 343</span></dd></div>
+    <div class="row" id="g-monopoly" data-short="A domain's sole control of a product's trade, used to raise money (Satsuma's sugar)."><dt>Domain monopoly</dt><dd>A domain's exclusive control over trade in a product. In the 1830s some domains created or tightened monopolies to raise money; Satsuma doubled its sugar profits. The shogunate tried to ban them in 1841–42. <span class="cite">pp. 334, 339</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-sumptuary" data-short="Laws limiting what each status could wear or spend, e.g., no silk for commoners."><dt>Sumptuary laws†</dt><dd>Laws regulating expenses by status, such as forbidding inferiors to wear silk or ornamental hairpins. Domains and the shogunate issued them to protect samurai privilege and curb spending. The textbook describes them; the term is standard in English. <span class="cite">pp. 334, 338</span></dd></div>
+    <div class="row" id="g-stipend" data-short="Pay cuts disguised as loans from samurai to their lord."><dt>"Borrowing" stipends</dt><dd>A domain's practice of cutting its samurai's pay while calling it a loan. It was the most common threat to samurai welfare; one band of guards went on strike over unpaid salaries. <span class="cite">p. 335</span></dd></div>
+    <div class="row" id="g-talent" data-short="Demand to promote capable men regardless of hereditary rank."><dt>Men of talent and ability</dt><dd>The call by low-ranking samurai to promote able men to decision-making posts instead of filling them by hereditary rank. Satsuma raised Saigō Takamori this way in 1854; the call returned in national reform after 1860. <span class="cite">pp. 335, 342</span></dd></div>
+    <div class="row" id="g-yonaoshi" data-short="'World renewal': the hope that gods would set right an unjust, hungry world."><dt>Yonaoshi (world renewal)</dt><dd>The idea that gods of world renewal would save people from hardship and political indifference. Commoners called on them during the famines of the 1830s. <span class="cite">p. 335</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Religion and play</h3>
+  <dl class="gloss">
+    <div class="row" id="g-newrel" data-short="Popular faiths of the 1800s promising a renewed world where all are equal."><dt>New religions</dt><dd>Faiths founded in the 1800s, often by commoners, that promised a world to come unlike the stratified, vertical order of the present, where the poor would be helped and men and women would be equal. <span class="cite">p. 335</span><span class="needs">Builds on: yonaoshi</span></dd></div>
+    <div class="row" id="g-tenri" data-short="New religion of Nakayama Miki (from 1838): trust the god of world renewal and help each other."><dt>Tenrikyō</dt><dd>The new religion begun when, in 1838, a spirit possessed the farm woman Nakayama Miki. Its "divine wisdom" (<i>tenri</i>) taught that shogun and daimyo were too remote to help; people should trust the god of world renewal and aid each other. <span class="cite">p. 335</span><span class="needs">Builds on: new religions</span></dd></div>
+    <div class="row" id="g-kabuki" data-short="Popular theater; in the 1830s full of commoner heroes, ghosts, and gory murders."><dt>Kabuki</dt><dd>The popular theater of the cities (see <a href="unit3.html">Unit 3</a>). In this period it staged ghost stories and gruesome murders, toured the countryside, and showed commoners acting by the logic of everyday life. <span class="cite">pp. 295, 335</span></dd></div>
+    <div class="row" id="g-tenpo" data-short="The shogunate's 1841–43 reform: morals crackdown, frugality, Western guns, end to monopolies."><dt>1841 reform (Tenpō reforms†)</dt><dd>The shogunate's reform drive of 1841–43. It closed unlicensed prostitution, banned mixed bathing, gambling, and tattoos, censored novels, attacked domain monopolies, began Western-style military training, and relaxed the order to fire on foreign ships. Historians name it after the era, Tenpō. <span class="cite">pp. 337–339</span><span class="needs">Builds on: domain monopoly, sumptuary laws</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The foreign threat</h3>
+  <dl class="gloss">
+    <div class="row" id="g-expel" data-short="1825: drive off every foreign ship but the Dutch, no questions asked. Japan's first truly isolationist policy."><dt>Order to drive off foreign ships (1825)</dt><dd>The shogunate's instruction that, except for Dutch ships at Nagasaki, every foreign ship be driven off without hesitation. The textbook calls it the shogunate's first truly isolationist policy. Relaxed in 1842. <span class="cite">pp. 338–339</span></dd></div>
+    <div class="row" id="g-mito" data-short="Scholars of the Mito domain: loyalty to lord rests on his loyalty to the monarch; Japan is superior."><dt>Mito school</dt><dd>Scholars of Mito, the domain of the shogun's relative Tokugawa Nariaki. They held that loyalty to one's lord rested on his loyalty to the monarch, and that Japan surpassed all countries, China included, because the monarch descended from the sun goddess. <span class="cite">p. 338</span><span class="needs">Builds on: monarch</span></dd></div>
+    <div class="row" id="g-kokutai" data-short="Japan's 'unique spiritual essence,' to be taught to the masses against foreign ideas."><dt>Kokutai</dt><dd>Japan's unique spiritual essence. Aizawa urged that the masses be educated in it to resist "barbarian teachings." <span class="cite">p. 338</span><span class="needs">Builds on: Mito school</span></dd></div>
+    <div class="row" id="g-shinron" data-short="Aizawa Seishisai's 1825 tract: trade weakens Japan; Christianity would 'conquer from within.'"><dt>New Theses (Shinron)</dt><dd>Aizawa Seishisai's 1825 work. Trade would drain precious metals and corrupt morals; worse, traders brought Christianity to turn commoners against their rulers. It urged military reform, farmer-soldiers, and teaching the kokutai. It shaped later nationalist thought. <span class="cite">p. 338</span><span class="needs">Builds on: Mito school, kokutai</span></dd></div>
+    <div class="row" id="g-furnace" data-short="Furnaces Mito and Saga built to cast iron cannon for coastal defense."><dt>Reverberatory furnace</dt><dd>A furnace for melting metal to cast cannon. Mito and Saga built them in the 1830s–40s to arm coastal defenses, defying limits on castle guns. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-kawaraban" data-short="Cheap, anonymous broadsheets that spread gossip about the treaty talks."><dt>Kawaraban</dt><dd>Broadsheets sold anonymously, mainly in cities, that reported gossip about the treaty negotiations. Travelers carried them to villages. <span class="cite">p. 340</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Treaties</h3>
+  <dl class="gloss">
+    <div class="row" id="g-unequal" data-short="A treaty forced under threat that gave the foreign power rights Japan did not get in return."><dt>Unequal treaty</dt><dd>A treaty imposed under threat of force that gave foreigners rights in Japan that Japanese did not have in their countries. Japan's began with the 1854 friendship treaty. See <a href="unit5.html">Unit 5</a>. <span class="cite">pp. 339, 345</span></dd></div>
+    <div class="row" id="g-kanagawa" data-short="Perry's 1854 friendship treaty: Shimoda and Hakodate open, a U.S. consul, most favored nation."><dt>Treaty of Kanagawa (1854)</dt><dd>The friendship treaty Perry obtained on his second visit. American ships could call at Shimoda and Hakodate for coal and supplies, shipwrecked sailors would be treated fairly, a U.S. consul could live at Shimoda, and the U.S. got most favored nation treatment. Japan made all the concessions. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-consul" data-short="A government's official agent living abroad; Harris at Shimoda from 1856."><dt>Consul</dt><dd>An official stationed in a foreign country to represent his government and its citizens. Townsend Harris became the first U.S. consul, at Shimoda, in 1856. <span class="cite">p. 339</span></dd></div>
+    <div class="row" id="g-port" data-short="A city opened by treaty to foreign residence and trade."><dt>Treaty port</dt><dd>A city opened by treaty to foreign residence and trade, as in China. The Harris treaty opened six; Yokohama opened in 1859, and Nagasaki became one too. <span class="cite">pp. 339, 342–343</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-tariff" data-short="A tax on imports; the treaties fixed Japan's low while U.S. tariffs on Japanese goods stayed high."><dt>Tariff</dt><dd>A tax on goods crossing a border. Japan had to accept low tariffs on imports while its own exports faced steep tariffs in the United States. <span class="cite">p. 339</span></dd></div>
+    <div class="row" id="g-extra" data-short="Foreigners in Japan answered only to their own country's laws and courts."><dt>Extraterritoriality</dt><dd>The privilege of foreign residents and visitors to be tried under their own country's laws, not Japan's. Granted in the 1858 treaty. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-mfn" data-short="Any right Japan gave one power went automatically to the others."><dt>Most favored nation</dt><dd>A treaty clause giving a power automatically any privilege Japan granted another power. <span class="cite">pp. 308–309</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-harris" data-short="1858 U.S. commercial treaty: diplomats, six open cities, low tariffs, extraterritoriality."><dt>Harris treaty (1858)</dt><dd>The commercial treaty signed on July 29, 1858, after Harris pointed to China's fate. Diplomats were exchanged; six cities opened as treaty ports; Japan accepted low import tariffs and extraterritoriality. Similar treaties with the Netherlands, Britain, France, and Russia followed. Signed against the monarch's wishes. <span class="cite">p. 339</span><span class="needs">Builds on: consul, treaty port, tariff, extraterritoriality</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Politics, 1858–1868</h3>
+  <dl class="gloss">
+    <div class="row" id="g-public" data-short="The new arena of debate about national affairs that drew in daimyo, samurai, and commoners."><dt>Public political realm</dt><dd>The space of open debate on national affairs that grew after the shogunate asked daimyo and the monarch for advice. People ignored laws against discussing current events and traded news by letter, diary, and broadsheet. <span class="cite">pp. 333, 340</span><span class="needs">Builds on: kawaraban</span></dd></div>
+    <div class="row" id="g-regent" data-short="One who governs for a ruler; Ii Naosuke for the boy shogun Iemochi."><dt>Regent (tairō†)</dt><dd>A person who governs on behalf of a ruler. In 1858 the vassal daimyo Ii Naosuke became regent for Iemochi and chief senior councilor; his title was <i>tairō</i>, "great elder." <span class="cite">p. 342</span><span class="needs">Builds on: senior councilors</span></dd></div>
+    <div class="row" id="g-purge" data-short="Ii's 1858–59 crackdown: rivals purged, 100+ agents arrested, exiled, or killed."><dt>Ansei Purge†</dt><dd>Ii Naosuke's crackdown on critics, 1858–59. He purged opposing daimyo and arrested, exiled, or executed over a hundred agents of daimyo and court nobles, including Yoshida Shōin. The name, from the era Ansei, is from outside the textbook. <span class="cite">p. 342</span><span class="needs">Builds on: regent</span></dd></div>
+    <div class="row" id="g-sonno" data-short="'Revere the monarch, expel the barbarian': Yoshida Shōin's slogan."><dt>Sonnō jōi</dt><dd>"Revere the monarch and expel the barbarian," the slogan Yoshida Shōin taught in Chōshū from 1854. He meant that the monarch should take part in policy and foreigners must be driven off. <span class="cite">p. 340</span><span class="needs">Builds on: monarch</span></dd></div>
+    <div class="row" id="g-fukoku" data-short="'Rich country, strong army': Yokoi Shōnan's slogan for engagement with the West."><dt>Fukoku kyōhei</dt><dd>"Rich country, strong army," a line from the Chinese classics that Yokoi Shōnan popularized. It stood for strengthening Japan through Western technology and trade. <span class="cite">p. 340</span></dd></div>
+    <div class="row" id="g-shishi" data-short="'Men of high purpose': young radical samurai who killed in the monarch's name."><dt>Shishi</dt><dd>"Men of high purpose," the young radicals who left their domains to study swordsmanship and the ideas of Aizawa and Yoshida, and who attacked foreigners and officials in the monarch's name. More effect on public opinion than on policy. <span class="cite">pp. 342–343</span><span class="needs">Builds on: sonnō jōi</span></dd></div>
+    <div class="row" id="g-yamato" data-short="'Japanese spirit,' the purity of purpose shishi prized."><dt>Yamato damashii</dt><dd>"Japanese spirit," which filled the shishi, who cared more for purity of purpose than for grooming. <span class="cite">p. 342</span><span class="needs">See also: shishi</span></dd></div>
+    <div class="row" id="g-kobu" data-short="'Union of court and military': the shogunate's compromise after 1860, sealed by a marriage."><dt>Kōbu gattai</dt><dd>"Union of court and military," the shogunate's compromise after Ii's death: advisory roles on foreign affairs for important tozama and Tokugawa relatives, purged daimyo restored, and Shogun Iemochi married to Kōmei's half-sister Kazunomiya in return for a promise to expel the barbarians. <span class="cite">p. 342</span><span class="needs">Builds on: tozama, monarch, shogun</span></dd></div>
+    <div class="row" id="g-satcho" data-short="Satsuma–Chōshū alliance of 1866 that brought down the shogunate."><dt>Sat-chō alliance</dt><dd>The alliance Satsuma and Chōshū formed in the first month of 1866. Both had bought arms through Nagasaki, sent men abroad, and built Western-style armies. Its forces led the new regime in 1868. <span class="cite">pp. 345–346</span><span class="needs">Builds on: tozama</span></dd></div>
+    <div class="row" id="g-eeja" data-short="1867 craze: amulets 'fell from heaven' and crowds danced chanting 'Ain't it great?'"><dt>Ee ja nai ka</dt><dd>"Ain't it great?": the 1867 movement in which people claimed amulets of the sun goddess had fallen from heaven and danced in the streets from the Inland Sea to Edo. In the east, dancers stoned foreigners and staged a mock funeral for the shogunate. <span class="cite">pp. 344–345</span><span class="needs">See also: yonaoshi</span></dd></div>
+    <div class="row" id="g-patent" data-short="The monarch's grant of the shogun's office; Yoshinobu handed it back in 1867."><dt>Patent of office</dt><dd>The formal grant by which the monarch appointed the shogun. When Yoshinobu returned it in 1867, military government ended. <span class="cite">p. 345</span><span class="needs">Builds on: shogun, monarch</span></dd></div>
+    <div class="row" id="g-restoration" data-short="1868: rule 'restored' to the emperor; shogun and regent offices abolished."><dt>Meiji Restoration</dt><dd>The "restoration" of imperial rule in 1868 in the name of the fifteen-year-old Meiji emperor. Sat-chō leaders abolished the offices of shogun and regent and created advisory posts for daimyo, court nobles, and men of talent. <span class="cite">pp. 333, 345–346</span><span class="needs">Builds on: patent of office, Sat-chō alliance</span></dd></div>
+    <div class="row" id="g-coup" data-short="A coup d'état replaces rulers with similar ones; a revolution changes the system."><dt>Coup d'état vs. revolution</dt><dd>A coup d'état is a seizure of power in which one set of rulers replaces another, similar set. A revolution changes the social and political order itself. Historians still debate which 1868 was. <span class="cite">pp. 333, 343, 362</span></dd></div>
+  </dl>
+</section>
+
+<!-- 1 VILLAGES -->
+<section class="unit reveal" id="villages">
+  <div class="sec-num">Part 1</div>
+  <h2>Trouble in the villages</h2>
+  <p class="pages">pp. 333–334</p>
+  <p>The village order built in the 1600s no longer fit how people lived. Three kinds of strain stand out. <span class="cite">pp. 333–334</span></p>
+  <div class="grid g3">
+    <div class="card"><div class="big">Against the headman</div><p>Farmers accused <a class="term" href="#g-headman">headmen</a> of charging their family business to the village and of lording it over neighbors, their gates and eaves marking higher status. Lawsuits dragged on for decades. Some villages rotated the post or let household heads elect it; a woman who headed a house could vote.</p></div>
+    <div class="card"><div class="big">Against discrimination</div><p><a class="term" href="#g-outcast">Outcasts</a>, held polluted because they handled dead animals, protested humiliation and insults.</p></div>
+    <div class="card"><div class="big">Against disorder</div><p>In the east, population fell and fields went to waste. Gamblers preyed on youths; bandits stole crops, goods, and women. Village officials formed <a class="term" href="#g-leagues">regional leagues</a> and hired unemployed swordsmen as militia. The shogunate sent patrols from 1805.</p></div>
+  </div>
+
+  <h3>Two answers from below <span class="cite">p. 334</span></h3>
+  <div class="versus">
+    <div class="card"><div class="big">Ninomiya Sontoku</div><p>The "peasant sage" revived villages by preaching diligence, fortitude, and frugality as repayment to the gods, planning land and labor rationally, and founding <a class="term" href="#g-mutual">mutual aid associations</a> for indebted farmers.</p></div>
+    <div class="vs">and</div>
+    <div class="card"><div class="big">Hirata Atsutane</div><p>The <a class="term" href="#g-hirata">Hirata school</a> sought virtue in Japan's ancient past, revered the monarch as a manifest god, and saw farming as communion with the gods. Village officials liked it because it renewed community without threatening their own place.</p></div>
+  </div>
+  <p class="note-l">Keep Hirata in mind: his preachers later carried political news across domain borders (Part 7), and his disciples rushed to serve the new government in 1868 (Part 10).</p>
+</section>
+
+<!-- 2 DOMAINS -->
+<section class="unit reveal" id="domains">
+  <div class="sec-num">Part 2</div>
+  <h2>Domains in debt, samurai in limbo</h2>
+  <p class="pages">pp. 334–335</p>
+  <p>Domain governments were close to bankruptcy. Farmers' protests had kept taxes flat for decades, while costs kept rising. <span class="cite">p. 334</span></p>
+
+  <figure class="fig">
+    <ol class="chain">
+      <li><span class="n">1</span><b>Income stuck:</b> farmers' protests had long since stopped tax revenue from covering costs.</li>
+      <li><span class="n">2</span><b>Costs grow:</b> unneeded retainers on the payroll, the daimyo's family living Edo-style, and the trips to and from Edo under <a class="term" href="#g-sankin">alternate attendance</a>.</li>
+      <li><span class="n">3</span><b>Borrow:</b> daimyo borrow from merchants against future taxes.</li>
+      <li><span class="n">4</span><b>Squeeze everyone:</b> sell sword-and-surname rights to <a class="term" href="#g-rural">rural entrepreneurs</a>; create <a class="term" href="#g-monopoly">monopolies</a>; push exports and curb imports (causing shortages); issue <a class="term" href="#g-sumptuary">sumptuary laws</a>; "borrow" samurai stipends.</li>
+      <li><span class="n">5</span><b>Result:</b> markets disrupted, status markers blurred, and samurai angry at their own lords.</li>
+    </ol>
+    <figcaption><span class="fn">Figure 2.</span> How the 1830s domain reforms tried to close the gap between flat income and rising costs. Based on pp. 334–335.</figcaption>
+  </figure>
+
+  <div class="grid g2">
+    <div class="callout gold">
+      <div class="label">Why low-ranking samurai were angry</div>
+      <p>Rich commoners now wore crested kimono and carried swords. Hereditary ranks kept educated, capable samurai in menial jobs. They demanded that <a class="term" href="#g-talent">men of talent and ability</a> be promoted; when domains tried, upper-ranking samurai fought to keep their privileges. Satsuma raised <b>Saigō Takamori</b> from rural administrator to adviser in 1854. <span class="cite">pp. 334–335</span></p>
+    </div>
+    <div class="callout">
+      <div class="label">Famine and Ōshio's uprising, 1836–37</div>
+      <p>Bad harvests in the 1830s recalled the famines of the 1780s. Commoners blamed greedy merchants, turned on village leaders, and called on the gods of <a class="term" href="#g-yonaoshi">world renewal</a>; women marched too. <b>Ōshio Heihachirō</b>, a retired shogunal policeman and student of Wang Yangming, petitioned the Osaka magistrate, sold his books to buy food, then led farmers against the city. A quarter of Osaka burned; he killed himself. <span class="cite">p. 335</span></p>
+    </div>
+  </div>
+  <p class="note-l">Wang Yangming taught that in a crisis a man must follow his intuition rather than bureaucratic procedure (see p. 335 and Ch. 14). Ōshio's revolt is that idea in action.</p>
+</section>
+
+<!-- 3 PLAY -->
+<section class="unit reveal" id="play">
+  <div class="sec-num">Part 3</div>
+  <h2>Religion and play</h2>
+  <p class="pages">pp. 335–338</p>
+  <p>Commoners answered hardship and political indifference in two very different ways. <span class="cite">p. 335</span></p>
+  <div class="contrast">
+    <div class="cside a"><div class="big">New religions</div><ul>
+      <li>1838: a spirit possesses <b>Nakayama Miki</b>, a long-suffering farm woman, calling her the "shogun of heaven."</li>
+      <li>She makes her family sell everything to help the poor.</li>
+      <li><a class="term" href="#g-tenri">Tenrikyō</a>: rulers are too remote; trust the god of world renewal and help one another.</li>
+      <li>A renewed world where men and women are equal.</li>
+    </ul></div>
+    <div class="pivot"><span>or</span></div>
+    <div class="cside b"><div class="big">Play</div><ul>
+      <li>Jippensha Ikku's travelogues: two irreverent commoners mock samurai, steal, seduce maids, laugh at farts.</li>
+      <li><a class="term" href="#g-kabuki">Kabuki</a> ghost plays by Tsuruya Namboku; in 1850 the peasant martyr Sakura Sōgorō appears on stage.</li>
+      <li>Ever bigger festivals; village kabuki stages; Asakusa's mix of prayer and play.</li>
+      <li>Play itself became a way to appeal to the gods.</li>
+    </ul></div>
+  </div>
+  <p class="cite" style="white-space:normal">p. 335</p>
+
+  <h3>Document: Kohei's Lawsuit (1849) <span class="cite">pp. 336–337</span></h3>
+  <p>A city court case over a master carpenter's estate shows how freely people crossed the "fixed" status lines. Everyone changed names with their occupation. Tap a card to see the other identity.</p>
+  <figure class="fig">
+    <div class="idgrid" id="ids">
+      <button class="idcard" type="button" aria-pressed="false"><span class="role">The deceased</span><span class="a"><b>Sawamura Gisaburō</b>master carpenter in service of the shogunate (from 1810)</span><span class="b"><b>"Heisuke"</b>tavern keeper, Sugamo-chō; in a second census register, 1812–1834</span></button>
+      <button class="idcard" type="button" aria-pressed="false"><span class="role">Adopted heir</span><span class="a"><b>Sawamura Kosuke</b>master carpenter on probation (1845), Gisaburō's attendant</span><span class="b"><b>"Utazō"</b>manager of a public bathhouse, Yanaka</span></button>
+      <button class="idcard" type="button" aria-pressed="false"><span class="role">Son-in-law</span><span class="a"><b>Nakamura Hanzaemon</b>said to be a guard for the shogun's banner magistrates</span><span class="b"><b>"Shōgorō"</b>dealer in socks, a shop tenant</span></button>
+      <button class="idcard" type="button" aria-pressed="false"><span class="role">Grandson</span><span class="a"><b>Yasuda Chōsuke</b>purveyor of goods and labor to the shogun's palace garden</span><span class="b"><b>"Toraichirō"</b>his earlier name; a registered houseowner</span></button>
+    </div>
+    <figcaption><span class="fn">Figure 3.</span> One family, many names. Gisaburō's other adopted son, the defendant Heisuke, also lent money to the household of the Lord of Kaga. The suit ended in compromise "since the issue utterly lacks proof." Based on the document, pp. 336–337 (from Wigmore, <i>Law and Justice in Tokugawa Japan</i>).</figcaption>
+  </figure>
+  <p class="cite" style="white-space:normal">Think about it (book's questions): What are the issues in this lawsuit? What kinds of people are involved? Why is the conflict over Gisaburō's personality (his personal property), not just his possessions?</p>
+
+  <h3>The shogunate cracks down, 1841 <span class="cite">pp. 337–338</span></h3>
+  <p>Prostitution had spread beyond the licensed quarters: commerce put money in customers' pockets and turned women's labor into a commodity. As part of the <a class="term" href="#g-tenpo">1841 reform</a>, the shogunate tried to curb what it saw as urban excess.</p>
+  <ul class="tight">
+    <li>Closed teahouses used for unlicensed prostitution; barred women from dressing men's hair, teaching them music, or performing on stage.</li>
+    <li>Banned mixed public baths, gambling, lotteries, and full-body tattoos.</li>
+    <li>Censored romances like Ryūtei Tanehiko's best-seller <i>The False Murasaki and the Rustic Genji</i>.</li>
+    <li>Ordered commoners not to dress, eat, or live above their station, making examples of violators, to little effect.</li>
+  </ul>
+</section>
+
+<!-- 4 SHIPS -->
+<section class="unit reveal" id="ships">
+  <div class="sec-num">Part 4</div>
+  <h2>Foreign ships and the closing of Japan</h2>
+  <p class="pages">pp. 338–339</p>
+  <p>The textbook's key point: Japan was not truly "closed" until 1825. The 1600s policy controlled contact (<a href="unit3.html#outside">Unit 3</a>); the 1825 order rejected it outright. <span class="cite">p. 338</span></p>
+
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 1.</span> <b>Knocking at the door, 1793–1846</b> (pp. 309, 338–339)</caption>
+    <thead><tr><th>Year</th><th>Who</th><th>What happened</th></tr></thead>
+    <tbody>
+      <tr><td class="yr">1793</td><td class="k">Russia</td><td>Adam Laxman reaches Nagasaki; rebuffed because respect for its ancestors barred the shogunate from new relations.</td></tr>
+      <tr><td class="yr">1798</td><td class="k">Japan</td><td>Expedition to Hokkaido; the shogunate decides to annex Hokkaido and Sakhalin but lacks an army to defend them.</td></tr>
+      <tr><td class="yr">1804–07</td><td class="k">Russia</td><td>Asks again to trade at Nagasaki; when refused, officers attack posts on Sakhalin and the Kurils.</td></tr>
+      <tr><td class="yr">1808</td><td class="k">Britain</td><td>Warship <i>Phaeton</i> barges into Nagasaki bay hunting Dutch ships and leaves with supplies.</td></tr>
+      <tr><td class="yr">1811–13</td><td class="k">Russia</td><td>Captain Vasilii Golovnin held at Hakodate for two years.</td></tr>
+      <tr><td class="yr">1824</td><td class="k">Britain</td><td>Whalers raid villages in Mito and in Satsuma.</td></tr>
+      <tr><td class="yr">1825</td><td class="k">Japan</td><td><a class="term" href="#g-expel">Order to drive off</a> all foreign ships except the Dutch.</td></tr>
+      <tr><td class="yr">1842</td><td class="k">Japan</td><td>After China's defeat in the Opium War, the order is relaxed: aid castaways and ships in need, then send them on.</td></tr>
+      <tr><td class="yr">1846</td><td class="k">U.S.</td><td>Commodore James Biddle seeks trade and is refused.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Aizawa Seishisai's <i>New Theses</i> (1825) <span class="cite">p. 338</span></h3>
+  <p>The decision to close the country also came from what scholars learned. The head of the shogunate's translation bureau (founded 1811) warned that Christianity could subvert "the gullible masses." Aizawa, adviser to <b>Tokugawa Nariaki</b> of Mito, had read about the West and questioned the British sailors who landed in 1824. His <a class="term" href="#g-shinron">New Theses</a> built on <a class="term" href="#g-mito">Mito school</a> ideas:</p>
+  <ol class="chain">
+    <li><span class="n">1</span>Beware foreigners even if they say they only want trade.</li>
+    <li><span class="n">2</span>Trade drains precious metals, and the taste for novelty and luxury erodes moral fiber.</li>
+    <li><span class="n">3</span>Worse, traders bring Christianity, to turn commoners against their rulers and "conquer from within."</li>
+    <li><span class="n">4</span>So reform the army, let daimyo recruit farmers as soldiers, and teach the masses Japan's <a class="term" href="#g-kokutai">kokutai</a>.</li>
+  </ol>
+
+  <h3>Defense, domain by domain <span class="cite">pp. 338–339</span></h3>
+  <div class="grid g2">
+    <div class="card"><div class="big">The domains</div><p>Mito and Saga built <a class="term" href="#g-furnace">reverberatory furnaces</a> to cast cannon; southwestern tozama bought mortars and field guns at Nagasaki, ignoring limits on guns. Militias manned lookouts. But domains defended their own land, not "Japan," and would not share warning systems. Coastal defense isolated them and weakened the shogun.</p></div>
+    <div class="card"><div class="big">The shogunate</div><p>Alarmed by Britain's victory over China, the 1841–42 reform trained a small unit in modern guns, tried to end domain monopolies, transfer daimyo, and outlaw domain coins and paper money. In 1843 the shogun made the daimyo supply a 150,000-man escort for his pilgrimage to his ancestors' shrine at Nikkō.</p></div>
+  </div>
+</section>
+
+<!-- 5 TREATIES -->
+<section class="unit reveal" id="treaties">
+  <div class="sec-num">Part 5</div>
+  <h2>Perry, Harris, and the unequal treaties</h2>
+  <p class="pages">pp. 339–340; Connections, p. 309 · covered regionally in <a href="unit5.html#japan">Unit 5</a></p>
+
+  <div class="side">
+    <div>
+      <p>On <b>July 8, 1853</b>, Commodore Matthew C. Perry sailed four ships into Edo Bay. The Dutch had warned the shogunate he was coming. Perry ignored the exclusion order and would not move until officials accepted President Millard Fillmore's letter to the monarch. He paraded his men, opened his gunports, and promised to return. <span class="cite">p. 339</span></p>
+      <p>He came back in 1854 with six ships. Intimidated, the shogunate signed a friendship treaty, the <a class="term" href="#g-kanagawa">Treaty of Kanagawa</a>. Perry's gifts showed off the Industrial Revolution: a Morse telegraph and a quarter-size steam locomotive with track. Crowds flocked to see the black ships. <span class="cite">pp. 339, 309</span></p>
+      <p>The shogunate chose tiny <b>Shimoda</b> for the American <a class="term" href="#g-consul">consul</a> to keep him isolated (Map 19.1). Townsend Harris arrived in 1856, bullied officials into talks in Edo, and, pointing to the gunboats that had devastated China's coast, got his commercial treaty in 1858. <span class="cite">p. 339</span></p>
+    </div>
+    <figure>
+      <img class="zoomable" src="assets/unit7/perry-uraga-print.jpg" alt="Black-and-white Japanese print: a grid of daimyo crests and spears above a map of a bay with six Western sailing ships among coastal villages" loading="lazy" width="610" height="765">
+      <figcaption><span class="fn">Figure 4.</span> Japanese print announcing that "a man called Perry" of the United States had come to Uraga. Above: crests of the daimyo assigned to guard the coast; below: the American ships in the bay. Undated†. Library of Congress (cropped).</figcaption>
+    </figure>
+  </div>
+
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 2.</span> <b>Two treaties with the United States</b> (pp. 309, 339)</caption>
+    <thead><tr><th></th><th>Friendship treaty (Kanagawa), 1854</th><th>Commercial treaty (Harris), 1858</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Ports</td><td>Shimoda and Hakodate, for coal and supplies</td><td>Six cities opened to foreign residence and trade (<a class="term" href="#g-port">treaty ports</a>)</td></tr>
+      <tr><td class="k">Officials</td><td>A U.S. consul at Shimoda</td><td>Exchange of diplomatic representatives</td></tr>
+      <tr><td class="k">Trade</td><td>None beyond supplies</td><td>Low <a class="term" href="#g-tariff">tariffs</a> on imports; steep U.S. tariffs on Japanese exports</td></tr>
+      <tr><td class="k">Law</td><td>Fair treatment of shipwrecked sailors</td><td><a class="term" href="#g-extra">Extraterritoriality</a> for foreigners</td></tr>
+      <tr><td class="k">Other powers</td><td><a class="term" href="#g-mfn">Most favored nation</a> treatment for the U.S.</td><td>Similar treaties with the Netherlands, Britain, France, Russia</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="side left">
+    <figure class="port">
+      <img class="zoomable" src="assets/unit7/sadahide-yokohama-1861.jpg" alt="Colorful woodblock print of a large black steamship with an American flag; sailors haul crates up a gangplank while Western men and women watch from the deck" loading="lazy" width="697" height="1024">
+      <figcaption><span class="fn">Figure 5.</span> Utagawa Sadahide, <b>Western Traders at Yokohama Transporting Merchandise</b>, 1861, left sheet of five. Library of Congress.</figcaption>
+    </figure>
+    <div>
+      <h3 style="margin-top:0">Why the treaties were "unequal" <span class="cite">pp. 339, 345</span></h3>
+      <p>Japan made the concessions, and foreigners gained rights that Japanese did not have abroad. The textbook's summary is that the shogunate left Meiji a set of treaties that opened Japan to trade, "though not on terms favorable to Japan." <span class="cite">p. 346</span></p>
+      <p><b>Yokohama</b> opened as a treaty port in 1859. Artists like Sadahide made a new kind of print showing the foreigners, their ships, and their goods (Figure 5). Within months, the port became the target of shishi violence (Part 9) and the site of a gold rush (Part 10). <span class="cite">pp. 342–343</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 MAP -->
+<section class="unit reveal" id="map">
+  <div class="sec-num">Part 6</div>
+  <h2>Japan in turmoil, on one map</h2>
+  <p class="pages">Map 19.1 (p. 339) and pp. 338–345</p>
+  <p>Step through the layers to see where each stage of the crisis struck. Tap a marker for a note. The layers advance on their own once the map is in view.</p>
+  <figure class="mapbox">
+    <div class="ctrl" id="mctrl">
+      <button class="step" type="button" data-l="ships" aria-pressed="true">1 · Foreign ships, 1793–1846</button>
+      <button class="step" type="button" data-l="treaty" aria-pressed="false">2 · Treaties, 1853–1859</button>
+      <button class="step" type="button" data-l="terror" aria-pressed="false">3 · Terror, 1858–1864</button>
+      <button class="step" type="button" data-l="fall" aria-pressed="false">4 · Collapse, 1863–1869</button>
+    </div>
+    <div class="wide" style="margin-top:10px"><svg id="cmap" viewBox="70 70 420 380" role="img" aria-labelledby="cmap-t"><title id="cmap-t">Map of Japan showing foreign incursions, treaty ports, political violence, and the civil war, 1793–1869</title><defs><marker id="mah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs><path class="land" d="M-14.2,547.3 L-12.9,548.5 L-13.7,548.7 L-13.7,551.5 L-15.0,552.7 L-15.1,555.9 L-17.4,558.8 L-18.6,561.8 L-18.1,563.3 L-20.8,575.3 L-20.8,531.2 L-19.1,531.1 L-16.6,534.3 L-12.6,535.4 L-12.1,537.8 L-10.3,538.3 L-12.4,539.6 L-14.1,542.0 L-14.2,547.3Z M-20.4,449.4 L-18.6,450.0 L-19.1,450.9 L-17.5,453.5 L-19.0,455.6 L-19.1,454.5 L-20.8,453.7 L-20.8,445.3 L-19.1,449.3 L-20.4,449.4Z M-20.8,438.5 L-17.3,441.2 L-18.0,441.7 L-17.4,442.1 L-18.6,443.7 L-20.8,444.3 L-20.8,438.5Z M-18.4,435.3 L-20.2,435.4 L-20.1,436.2 L-19.6,435.5 L-17.8,435.4 L-16.9,436.3 L-17.5,437.4 L-16.3,438.0 L-17.0,438.9 L-19.0,437.7 L-19.3,438.5 L-20.8,438.0 L-20.8,434.1 L-18.3,433.9 L-18.4,435.3Z M-13.1,433.0 L-11.4,432.9 L-11.7,435.1 L-12.7,434.9 L-13.1,433.0Z M-20.8,426.7 L-16.1,423.1 L-15.3,423.3 L-15.0,424.8 L-13.6,423.1 L-15.6,422.5 L-11.9,420.6 L-11.0,422.3 L-12.2,423.7 L-11.0,425.3 L-11.3,426.4 L-12.0,426.1 L-11.8,428.5 L-12.5,429.2 L-10.6,430.2 L-11.4,430.4 L-11.6,431.8 L-14.9,432.5 L-14.6,429.0 L-13.7,428.6 L-14.8,428.4 L-14.8,427.2 L-15.4,427.6 L-15.1,430.3 L-16.1,432.1 L-17.6,432.1 L-17.9,429.0 L-18.1,432.0 L-19.3,429.0 L-19.3,429.7 L-20.3,429.7 L-20.8,432.2 L-20.8,426.7Z M-7.7,419.8 L-8.5,418.3 L-9.6,418.5 L-9.0,417.0 L-8.0,416.7 L-6.5,419.6 L-7.7,419.8Z M-16.2,412.4 L-15.2,412.0 L-11.7,414.2 L-8.2,413.7 L-7.6,414.3 L-13.0,417.6 L-13.3,418.8 L-16.6,422.2 L-19.3,422.7 L-20.3,423.7 L-20.8,422.8 L-20.8,405.6 L-16.2,412.4Z M-2.8,415.2 L-2.8,414.0 L-3.7,412.9 L-3.3,412.3 L-1.9,412.7 L-2.2,415.6 L-2.8,415.2Z M-12.7,411.8 L-14.0,411.2 L-13.2,409.2 L-12.3,410.7 L-12.7,411.8Z M-5.3,412.1 L-8.8,410.9 L-10.2,411.3 L-11.2,407.7 L-8.6,407.6 L-4.4,409.6 L-3.6,410.7 L-4.3,413.0 L-5.3,412.1Z M-6.5,405.2 L-7.5,404.9 L-8.9,404.0 L-6.0,402.6 L-5.4,403.4 L-6.2,404.1 L-5.6,404.3 L-6.5,405.2Z M-4.6,400.3 L-4.6,399.1 L-3.4,399.7 L-2.7,399.2 L-1.6,400.8 L-4.6,400.3Z M-11.2,389.2 L-20.8,391.0 L-20.8,375.9 L-16.1,378.8 L-13.0,383.4 L-10.9,388.1 L-11.2,389.2Z M-19.0,374.8 L-16.1,375.7 L-15.0,377.7 L-19.0,374.8Z M-13.5,374.8 L-20.8,371.4 L-20.8,366.9 L-17.4,369.4 L-12.1,371.3 L-10.7,373.2 L-13.5,374.8Z M-14.1,361.8 L-12.0,366.8 L-12.2,368.0 L-14.2,368.4 L-20.4,366.1 L-20.8,357.8 L-17.6,359.0 L-14.1,361.8Z M-19.0,222.1 L-18.0,221.4 L-11.7,221.8 L-11.4,222.8 L-10.6,222.8 L-10.9,221.6 L-9.9,220.2 L-7.9,219.3 L-7.2,220.1 L-7.7,221.3 L-6.6,223.0 L-5.3,221.9 L-4.2,223.0 L3.8,223.1 L3.9,223.7 L1.5,224.9 L2.0,226.1 L1.0,225.5 L2.7,228.7 L1.5,228.9 L1.5,229.9 L0.2,229.7 L-0.6,230.8 L-1.0,229.7 L-0.9,231.9 L-2.0,233.1 L0.8,232.9 L0.4,236.1 L-0.0,235.2 L-2.0,235.6 L-1.3,236.9 L-3.7,238.1 L-6.5,237.4 L-6.3,236.2 L-4.9,236.2 L-7.0,235.0 L-6.9,233.2 L-7.4,235.0 L-8.4,234.9 L-9.7,236.2 L-9.4,234.1 L-11.9,233.8 L-11.4,235.2 L-14.9,236.4 L-16.1,237.8 L-17.9,237.9 L-18.2,240.2 L-18.8,239.5 L-20.8,239.5 L-18.6,237.5 L-20.8,238.4 L-20.8,221.9 L-18.9,222.8 L-17.1,222.5 L-19.0,222.1Z M24.6,556.5 L24.6,555.5 L25.8,555.6 L26.4,553.1 L29.8,554.4 L28.6,557.1 L24.6,556.5Z M34.9,555.2 L33.7,554.5 L34.2,553.9 L32.8,552.6 L33.9,551.8 L35.6,552.4 L37.9,548.7 L36.2,554.5 L34.9,555.2Z M57.3,544.6 L57.4,541.2 L59.5,543.8 L61.4,544.8 L58.2,545.3 L57.3,544.6Z M45.9,209.9 L44.6,210.1 L44.0,209.6 L44.2,208.7 L46.4,208.7 L46.3,209.6 L45.3,209.4 L45.9,209.9Z M48.2,170.2 L49.5,167.3 L50.5,167.5 L50.6,168.8 L48.2,170.2Z M92.5,323.0 L90.3,327.3 L84.6,329.3 L79.7,329.1 L78.4,330.2 L76.2,327.5 L79.3,323.4 L86.3,321.1 L89.9,321.0 L92.5,323.0Z M79.2,299.2 L76.9,300.8 L75.8,300.8 L76.0,299.9 L74.9,299.6 L77.5,296.4 L78.4,296.5 L78.0,295.2 L80.1,295.9 L80.7,297.1 L80.0,299.4 L79.2,299.2Z M74.0,282.8 L75.5,280.8 L76.2,280.7 L75.5,281.3 L75.8,282.3 L75.1,283.1 L74.0,282.8Z M80.7,247.7 L79.9,247.9 L80.4,247.0 L79.6,247.0 L79.3,244.2 L80.3,243.5 L81.8,248.6 L80.4,248.6 L80.7,247.7Z M84.9,221.2 L82.0,222.9 L80.2,221.8 L83.1,220.7 L83.5,220.0 L84.9,221.2Z M81.1,217.4 L80.5,213.7 L81.6,212.7 L83.5,214.1 L84.1,217.6 L83.2,218.5 L80.5,217.6 L81.1,217.4Z M77.5,214.3 L77.9,213.0 L79.9,213.5 L79.4,214.3 L77.5,214.3Z M121.4,492.7 L119.5,496.8 L117.6,497.4 L117.3,498.9 L115.6,498.9 L113.3,501.5 L111.3,501.7 L112.7,505.1 L110.8,504.9 L109.6,507.4 L109.7,508.2 L110.7,508.2 L110.2,509.4 L108.7,510.6 L107.2,510.8 L106.9,507.5 L109.0,504.8 L108.6,502.0 L110.3,501.6 L113.6,498.6 L113.5,497.8 L112.0,497.2 L111.9,495.3 L114.1,495.3 L114.3,496.7 L115.6,496.5 L119.1,492.6 L119.7,490.4 L121.4,492.7Z M129.1,476.1 L126.0,478.6 L125.3,477.4 L129.1,476.1Z M88.8,302.4 L86.2,301.2 L86.4,299.7 L87.8,300.1 L88.8,302.4Z M90.3,299.0 L90.7,299.8 L88.8,300.6 L88.5,300.0 L89.1,298.9 L90.3,299.0Z M96.5,299.0 L96.2,297.8 L98.7,298.0 L98.4,298.9 L96.5,299.0Z M109.7,295.0 L108.9,293.9 L109.9,291.5 L110.6,294.1 L109.7,295.0Z M115.6,292.1 L113.9,292.0 L113.1,290.3 L112.5,291.7 L111.7,291.5 L110.8,288.2 L111.8,286.3 L113.0,286.3 L112.4,287.7 L113.6,289.3 L115.8,289.1 L115.6,292.1Z M134.1,470.2 L133.0,469.0 L132.7,466.6 L133.0,464.9 L134.1,464.3 L135.8,467.9 L134.1,470.2Z M142.5,459.9 L139.8,459.6 L139.0,457.3 L140.8,457.7 L140.4,458.5 L142.5,459.9Z M148.5,451.8 L145.6,454.8 L144.5,454.7 L143.9,455.8 L144.9,456.7 L142.5,458.1 L143.0,459.1 L141.2,457.6 L140.8,456.3 L138.2,455.8 L140.8,455.7 L141.2,454.9 L139.9,454.4 L140.7,453.8 L145.1,451.4 L145.9,452.1 L148.2,449.9 L148.0,451.0 L148.6,451.0 L149.5,449.2 L150.2,451.1 L148.5,451.8Z M149.3,370.0 L148.8,369.2 L151.5,365.7 L151.8,367.0 L150.4,369.6 L149.3,370.0Z M160.0,352.4 L155.9,355.7 L156.2,354.2 L155.2,354.2 L157.3,352.8 L155.6,352.1 L156.6,348.3 L156.1,347.0 L158.9,346.7 L159.9,347.3 L160.0,352.4Z M130.8,344.1 L130.5,346.1 L129.7,345.2 L126.9,345.0 L128.0,343.6 L128.1,340.7 L129.0,341.7 L131.2,340.3 L132.1,341.7 L131.9,342.7 L133.1,344.2 L130.8,344.1Z M137.1,337.9 L137.2,338.8 L136.2,339.7 L136.2,337.5 L134.8,336.5 L136.3,335.7 L136.2,334.2 L136.9,334.6 L137.5,330.9 L137.2,335.5 L138.7,335.0 L139.0,335.6 L137.1,337.9Z M146.9,325.9 L143.8,330.6 L142.3,330.6 L142.5,329.8 L143.7,330.2 L143.1,329.7 L143.9,329.2 L144.4,326.3 L146.1,325.8 L146.1,324.9 L146.8,324.7 L146.9,325.9Z M150.2,317.5 L148.7,315.6 L149.5,315.9 L148.9,314.5 L149.5,313.1 L151.2,313.7 L151.8,316.1 L150.5,316.5 L150.2,317.5Z M142.3,302.3 L140.4,307.2 L138.8,307.1 L139.5,301.4 L139.9,302.3 L141.0,301.6 L141.7,302.7 L142.3,302.3Z M142.7,299.9 L143.4,299.4 L143.7,300.9 L142.4,302.2 L141.6,301.5 L142.4,301.5 L142.4,300.7 L141.5,301.1 L141.6,300.0 L141.2,301.0 L140.0,300.8 L140.9,300.2 L140.8,298.8 L141.7,298.1 L140.9,298.0 L142.0,296.2 L141.2,295.3 L141.9,293.3 L143.1,293.4 L144.9,292.0 L145.3,292.6 L145.2,294.0 L144.6,294.1 L145.0,295.1 L142.7,299.9Z M128.7,289.3 L128.1,290.6 L128.8,291.1 L126.5,291.9 L127.3,291.4 L126.1,289.9 L127.0,288.6 L125.4,289.3 L124.6,287.7 L126.3,286.7 L127.8,287.2 L127.1,285.5 L128.8,284.7 L129.0,283.6 L129.7,286.0 L129.3,287.5 L129.9,287.3 L129.4,288.4 L129.8,289.7 L128.7,289.3Z M165.1,405.3 L163.8,401.3 L164.8,401.2 L166.4,399.5 L170.0,401.8 L169.5,404.0 L168.0,405.4 L165.1,405.3Z M178.0,395.8 L176.4,398.2 L176.0,401.9 L174.1,402.6 L173.7,399.4 L175.3,397.6 L175.5,394.3 L178.1,390.0 L178.6,391.5 L178.0,395.8Z M158.8,357.6 L158.4,355.3 L159.9,355.6 L159.5,357.7 L158.8,357.6Z M163.4,349.8 L161.0,350.5 L160.4,349.1 L163.6,347.2 L165.5,347.2 L163.5,351.0 L163.4,349.8Z M190.0,350.5 L186.1,363.7 L186.3,365.1 L187.1,365.7 L186.3,370.2 L184.9,372.0 L183.8,376.5 L182.0,376.1 L181.2,374.4 L178.3,374.5 L177.1,376.7 L179.0,377.6 L178.3,378.8 L179.5,378.9 L177.0,380.3 L175.6,382.9 L169.7,385.9 L169.8,384.2 L171.4,382.9 L172.5,377.2 L170.6,374.3 L170.5,372.1 L168.3,371.1 L170.3,370.2 L171.0,371.7 L171.8,371.6 L172.9,369.4 L172.1,367.9 L169.4,367.8 L167.0,372.9 L166.7,374.4 L167.7,377.5 L169.7,379.1 L169.3,381.2 L168.2,382.0 L166.9,381.7 L165.4,379.6 L160.6,379.7 L159.7,377.6 L160.3,377.4 L158.5,375.6 L159.4,375.2 L160.7,376.3 L162.1,374.7 L163.0,371.7 L162.8,369.7 L159.6,365.9 L160.0,364.8 L160.9,365.2 L160.1,364.2 L160.6,362.4 L159.6,360.6 L160.2,359.3 L159.7,358.2 L161.2,357.2 L161.8,358.0 L162.6,357.6 L165.8,351.8 L166.7,352.0 L166.6,351.0 L167.9,349.1 L167.4,348.1 L168.5,347.7 L167.7,346.7 L169.9,344.1 L165.3,344.8 L169.0,342.7 L168.3,341.6 L168.7,340.6 L165.2,337.1 L164.7,333.0 L161.0,330.4 L158.7,332.1 L160.6,335.8 L159.9,337.3 L158.2,338.3 L159.2,339.2 L161.1,338.3 L163.1,338.8 L163.8,340.8 L163.5,343.1 L159.5,345.5 L158.7,343.2 L160.3,341.5 L159.7,340.4 L158.0,340.4 L155.8,341.6 L155.1,341.1 L153.8,343.7 L150.6,346.1 L152.1,343.7 L151.8,343.0 L153.1,342.2 L152.3,342.2 L151.2,339.9 L150.4,340.1 L148.5,337.0 L149.4,332.8 L151.0,334.0 L150.6,335.4 L151.1,334.7 L152.3,335.7 L152.0,337.3 L151.6,336.5 L151.7,338.4 L152.8,339.3 L153.6,338.3 L156.1,339.1 L154.6,337.0 L154.9,334.8 L153.5,333.6 L152.3,334.1 L151.8,333.2 L150.7,333.5 L151.0,331.6 L150.4,332.1 L150.0,331.0 L149.8,332.3 L149.1,332.6 L149.5,331.6 L148.8,330.3 L146.7,329.4 L147.5,328.0 L147.3,325.8 L148.6,326.0 L149.2,325.1 L149.8,326.2 L152.0,326.3 L152.9,328.1 L153.3,325.1 L151.6,323.6 L152.2,322.9 L153.3,323.9 L152.6,322.1 L152.9,321.1 L153.3,321.5 L154.8,321.7 L154.8,323.0 L156.4,323.9 L157.2,322.6 L159.5,321.6 L157.9,320.6 L160.3,318.3 L162.0,320.6 L164.1,319.8 L164.3,318.2 L163.3,318.9 L162.1,318.3 L162.1,317.7 L162.7,318.3 L164.0,318.0 L165.7,316.3 L165.4,314.8 L166.2,313.5 L169.2,312.8 L170.4,311.4 L173.2,311.3 L174.7,312.6 L176.9,310.6 L176.0,314.5 L176.9,314.5 L177.0,316.2 L178.9,319.3 L184.4,320.6 L185.5,320.4 L187.6,318.0 L190.7,318.2 L192.0,320.4 L192.1,322.9 L191.5,324.8 L190.1,324.6 L189.2,326.3 L187.3,326.0 L187.4,328.2 L193.9,329.0 L195.6,328.4 L193.6,331.9 L195.8,332.0 L194.9,332.8 L195.1,333.3 L196.4,332.8 L197.1,333.6 L197.5,332.8 L197.8,333.9 L196.1,334.0 L195.6,335.6 L196.8,336.6 L198.3,336.4 L199.3,336.9 L197.5,337.6 L196.7,339.6 L197.5,340.0 L195.2,340.7 L194.6,343.1 L193.9,342.7 L192.3,345.6 L191.5,345.8 L191.0,347.3 L192.1,348.1 L190.5,348.5 L191.1,349.9 L190.0,350.5Z M203.4,311.3 L204.4,312.4 L207.4,311.4 L205.6,312.5 L205.4,313.8 L204.2,312.7 L202.1,313.5 L201.8,311.2 L203.4,311.3Z M172.9,220.3 L174.8,219.7 L175.1,220.0 L174.3,222.0 L172.9,221.2 L172.9,220.3Z M332.6,-16.8 L329.7,-11.8 L329.6,-8.9 L326.6,-6.5 L324.5,-0.7 L323.1,1.1 L321.2,2.3 L315.6,10.3 L309.9,14.6 L304.6,21.0 L297.7,25.6 L297.0,27.7 L292.4,31.8 L292.3,33.1 L290.2,34.9 L290.0,35.9 L288.2,35.8 L287.2,37.0 L287.6,37.9 L285.7,39.3 L285.5,41.4 L284.2,43.3 L280.8,44.3 L277.4,46.7 L277.0,48.5 L273.6,51.6 L273.0,54.9 L271.3,55.8 L270.6,57.9 L269.6,57.1 L269.6,58.5 L270.8,58.9 L268.9,61.9 L265.7,63.8 L264.9,62.6 L263.8,63.2 L264.8,63.9 L264.7,64.9 L262.7,68.5 L259.5,69.6 L255.2,73.2 L248.2,77.2 L243.2,79.2 L237.7,84.2 L235.9,83.9 L233.3,85.9 L232.4,85.0 L230.7,85.0 L227.1,87.1 L223.3,87.8 L221.7,89.2 L218.9,88.9 L218.3,88.3 L220.0,87.6 L218.2,85.6 L216.3,85.9 L215.6,87.7 L214.6,87.4 L213.4,85.5 L213.5,83.6 L212.1,84.8 L209.6,85.3 L208.2,84.5 L208.1,83.2 L206.0,82.7 L204.8,83.8 L205.1,84.8 L204.1,85.2 L203.7,79.1 L204.7,77.9 L204.4,76.8 L205.5,76.4 L204.0,75.2 L204.8,73.7 L203.6,73.3 L202.3,75.4 L196.1,79.5 L195.2,79.1 L195.9,78.2 L194.5,78.7 L195.8,76.2 L197.5,75.2 L198.7,73.3 L196.9,74.4 L196.7,73.5 L194.4,73.5 L193.8,72.7 L191.8,75.9 L192.7,76.5 L191.2,76.1 L190.3,77.0 L191.2,76.8 L188.5,80.3 L188.6,81.3 L187.2,81.3 L187.1,82.7 L185.0,82.7 L185.1,84.5 L186.6,84.5 L184.7,85.5 L184.1,87.0 L182.5,86.9 L181.7,88.7 L182.3,89.4 L181.0,91.1 L181.7,91.7 L181.4,92.6 L180.3,92.0 L180.6,91.3 L179.4,91.0 L179.3,89.7 L174.5,91.4 L173.0,90.5 L175.4,90.9 L175.8,90.1 L172.4,90.0 L173.3,89.5 L173.2,88.9 L170.4,89.2 L169.7,90.3 L171.2,91.0 L171.2,91.9 L172.1,91.5 L174.2,93.2 L173.5,93.4 L173.4,94.7 L172.4,94.9 L170.6,99.2 L168.4,100.0 L168.4,99.1 L166.6,98.1 L164.5,98.4 L164.0,99.3 L164.3,100.5 L163.7,100.2 L162.4,102.0 L162.1,100.6 L160.2,102.2 L160.1,104.1 L159.3,104.8 L157.5,104.7 L156.7,106.8 L156.3,106.3 L155.6,107.1 L156.1,107.6 L155.3,109.2 L153.9,109.1 L152.9,112.6 L151.3,112.8 L148.7,118.1 L148.9,120.2 L152.0,122.5 L150.0,128.9 L150.3,132.6 L151.1,133.5 L150.1,136.2 L147.1,136.1 L142.5,138.5 L141.5,140.3 L140.1,139.5 L138.8,143.0 L136.8,145.4 L134.7,145.8 L132.3,148.0 L127.6,149.5 L127.2,150.5 L128.1,150.9 L128.2,152.3 L122.0,155.0 L121.2,156.7 L119.9,155.5 L119.3,156.7 L117.6,157.0 L114.5,156.3 L113.2,158.1 L112.5,157.8 L111.8,160.2 L109.9,160.3 L110.1,160.8 L108.1,161.3 L107.4,162.3 L106.6,161.7 L104.4,163.9 L104.3,166.3 L105.6,167.7 L104.4,169.9 L105.3,174.8 L104.5,174.8 L104.9,173.4 L103.9,171.8 L101.5,173.2 L103.4,174.0 L101.8,174.1 L101.3,176.7 L101.8,177.7 L103.0,178.6 L103.8,177.9 L104.7,179.1 L109.4,179.9 L114.7,186.4 L116.3,186.8 L118.8,189.7 L120.3,189.0 L121.6,190.5 L127.5,204.5 L136.5,216.4 L136.7,218.0 L142.1,226.4 L143.1,230.3 L144.1,231.8 L143.8,233.1 L145.1,240.4 L144.0,243.3 L144.4,248.6 L143.2,250.8 L143.2,253.9 L144.2,256.5 L143.1,257.9 L144.6,259.2 L146.7,256.9 L147.4,258.6 L146.3,260.5 L144.4,268.2 L144.9,269.2 L144.7,271.4 L143.8,272.4 L143.0,270.9 L143.4,272.3 L142.6,272.9 L142.7,275.4 L140.8,276.3 L140.0,279.3 L139.2,280.4 L137.7,280.6 L137.8,281.8 L136.5,281.3 L135.7,282.9 L135.1,282.5 L135.2,283.2 L134.5,283.3 L134.3,280.9 L133.5,282.3 L133.1,281.3 L132.7,282.3 L130.9,282.3 L130.6,281.6 L130.2,282.4 L129.0,282.0 L128.9,280.7 L128.5,281.4 L127.3,280.8 L126.9,279.0 L126.4,279.9 L128.0,282.8 L125.0,281.7 L122.5,283.1 L122.1,284.2 L124.6,283.1 L124.8,284.2 L123.1,284.8 L123.4,287.2 L124.3,287.2 L123.0,288.5 L122.4,288.1 L123.0,287.9 L121.2,287.2 L121.8,286.7 L121.4,285.7 L120.7,286.7 L119.1,286.0 L118.7,287.2 L115.6,286.1 L115.8,282.3 L114.4,283.5 L114.5,284.6 L113.4,284.9 L112.9,283.9 L112.1,285.7 L109.1,285.4 L108.6,284.6 L107.4,286.8 L105.9,285.8 L105.6,286.6 L107.3,289.2 L109.7,288.2 L109.0,291.4 L107.3,291.2 L106.6,292.1 L106.9,294.1 L105.3,293.0 L105.8,290.8 L104.4,287.2 L103.7,288.5 L101.2,288.9 L102.5,289.5 L101.0,290.5 L101.8,290.6 L102.0,292.0 L104.1,294.8 L100.9,294.9 L101.0,295.7 L102.7,296.1 L100.4,297.7 L100.7,298.5 L98.2,295.9 L97.3,296.7 L96.2,296.1 L98.0,293.6 L97.6,295.2 L98.7,295.0 L98.6,292.7 L99.3,291.9 L100.1,293.2 L101.0,292.1 L100.5,291.0 L99.6,291.5 L98.8,290.3 L97.8,292.2 L96.4,292.3 L93.8,294.2 L93.5,296.1 L92.3,297.2 L92.4,298.2 L91.4,298.4 L91.5,299.2 L89.6,298.3 L89.6,295.3 L89.0,294.9 L88.7,296.5 L88.1,296.7 L88.6,297.6 L87.5,298.4 L87.9,298.8 L86.0,299.7 L85.3,302.2 L83.6,302.3 L83.8,301.1 L82.8,300.9 L83.6,299.3 L82.5,297.8 L83.0,296.9 L84.1,296.7 L83.5,296.2 L84.0,295.5 L80.9,296.2 L80.0,294.9 L78.9,294.8 L79.5,294.3 L78.4,293.5 L78.8,290.7 L80.2,292.1 L80.5,294.3 L82.5,294.9 L81.5,293.2 L80.8,293.6 L80.7,291.7 L82.1,291.9 L82.2,292.7 L83.9,294.0 L83.6,293.3 L85.3,293.9 L85.8,293.8 L83.4,291.5 L80.4,290.8 L82.4,290.0 L83.9,290.8 L84.1,289.6 L86.6,289.3 L84.8,288.9 L84.6,286.9 L83.5,289.9 L82.9,289.1 L80.6,289.7 L81.6,287.2 L81.1,285.6 L81.9,284.9 L80.5,285.2 L80.4,286.2 L79.4,286.0 L79.1,285.1 L80.1,285.1 L80.6,284.0 L79.5,282.3 L78.8,283.0 L78.1,281.3 L78.8,280.9 L79.4,281.4 L79.9,280.4 L80.0,281.9 L81.4,282.8 L81.6,283.9 L82.2,281.8 L80.5,280.0 L80.4,278.3 L79.2,278.5 L80.6,278.0 L80.2,277.8 L81.4,275.0 L82.3,275.6 L81.5,274.4 L83.0,271.1 L86.2,269.8 L87.2,270.8 L86.7,269.4 L83.5,269.7 L82.4,269.1 L82.5,268.1 L85.2,266.3 L86.6,264.3 L89.1,265.1 L89.3,264.3 L87.4,262.8 L90.2,261.7 L85.5,261.8 L85.5,260.7 L83.7,260.5 L83.6,259.7 L88.3,259.3 L90.9,257.4 L87.2,259.0 L85.1,255.7 L83.8,255.1 L83.1,255.7 L83.9,254.6 L85.3,254.6 L83.9,253.4 L84.9,251.5 L83.5,250.8 L84.9,250.0 L83.6,249.5 L83.2,248.3 L85.6,247.0 L83.2,247.6 L82.9,246.4 L83.5,245.6 L82.6,245.3 L82.3,243.9 L83.6,243.1 L82.9,242.5 L83.4,242.0 L82.7,241.5 L83.2,240.7 L82.8,240.0 L81.9,240.8 L81.6,243.6 L80.4,243.0 L80.7,241.2 L79.9,240.2 L79.1,241.2 L79.9,243.5 L78.9,244.2 L78.5,240.7 L76.5,241.9 L76.1,241.2 L77.2,240.5 L76.1,239.7 L75.6,241.1 L75.5,239.7 L76.2,238.3 L77.2,239.2 L76.8,238.5 L77.8,238.3 L76.9,238.1 L76.8,236.5 L77.7,236.0 L77.6,236.8 L78.5,236.8 L79.2,234.4 L79.5,236.6 L78.7,238.6 L80.2,239.0 L79.6,237.5 L81.2,237.2 L80.6,236.7 L81.5,235.6 L80.2,234.7 L80.6,234.2 L79.8,233.9 L80.1,233.6 L82.1,233.5 L81.8,234.6 L82.8,235.2 L82.9,237.6 L83.6,234.9 L84.9,236.2 L83.1,233.7 L84.7,234.2 L83.2,232.2 L85.8,233.7 L85.9,235.9 L87.0,233.7 L89.4,234.7 L89.1,236.4 L90.1,235.9 L90.5,239.9 L90.8,237.9 L91.6,238.1 L90.7,236.9 L93.4,235.7 L93.5,234.4 L94.4,234.1 L93.2,234.1 L92.5,235.5 L91.0,234.9 L89.9,233.5 L91.7,233.2 L91.3,231.2 L90.5,232.7 L88.4,231.8 L89.0,230.2 L90.9,229.2 L90.1,229.6 L89.5,228.9 L87.4,230.4 L87.5,229.4 L86.7,229.5 L87.8,228.2 L86.9,228.1 L86.8,227.0 L88.8,227.2 L89.1,228.0 L89.8,226.6 L90.9,226.8 L87.1,225.2 L87.7,223.9 L86.1,224.4 L85.6,224.0 L86.1,223.1 L85.2,222.4 L85.4,221.3 L86.2,220.8 L85.3,220.7 L83.8,214.4 L86.3,214.2 L86.6,216.5 L88.5,217.4 L86.9,216.2 L87.4,212.5 L84.8,213.9 L80.7,211.0 L76.1,212.5 L76.1,215.0 L75.1,214.8 L74.1,213.2 L74.0,211.5 L73.1,211.9 L72.0,210.4 L72.5,212.7 L71.2,212.2 L68.7,209.4 L68.6,208.4 L64.4,207.4 L64.4,208.4 L66.0,208.8 L66.1,209.4 L67.0,209.4 L66.5,210.1 L67.4,210.1 L66.2,210.8 L65.1,210.1 L65.4,212.7 L64.7,213.1 L64.9,214.2 L63.0,214.0 L63.0,213.4 L61.9,215.0 L60.0,215.4 L59.2,216.5 L59.6,214.3 L61.3,213.9 L60.1,213.4 L62.9,212.8 L63.0,212.2 L62.0,211.8 L62.6,210.9 L60.8,210.4 L60.0,211.0 L61.3,212.2 L59.3,211.7 L59.8,212.2 L58.4,213.1 L57.0,212.7 L58.4,211.3 L57.4,209.9 L55.7,211.6 L52.3,210.6 L52.3,209.8 L51.6,210.1 L53.3,208.8 L55.6,209.0 L54.2,207.3 L56.2,207.0 L57.1,207.7 L57.5,206.2 L54.9,205.7 L52.3,206.6 L49.6,204.9 L47.7,205.7 L45.1,205.0 L49.0,202.5 L50.4,203.4 L51.9,202.5 L49.3,201.7 L49.5,199.4 L52.3,195.6 L51.7,193.2 L54.7,193.5 L54.6,191.3 L55.3,192.2 L55.7,191.2 L58.3,191.5 L61.6,190.3 L62.8,191.6 L63.3,191.0 L65.7,192.2 L62.0,189.7 L61.3,188.5 L60.5,189.0 L60.7,189.7 L58.3,189.6 L58.4,190.3 L57.8,190.4 L57.1,189.7 L57.6,189.0 L57.0,188.1 L55.9,189.5 L54.9,187.8 L56.1,183.2 L57.6,180.8 L59.0,180.7 L57.9,180.5 L58.0,179.0 L59.1,178.5 L59.1,177.4 L60.5,177.4 L60.2,176.6 L61.3,174.9 L60.4,173.6 L61.6,173.0 L59.4,172.7 L60.0,171.6 L59.1,171.8 L61.3,168.0 L57.9,169.6 L56.4,168.3 L56.7,167.8 L54.4,168.5 L54.0,167.5 L50.0,166.0 L49.5,164.9 L47.2,164.0 L46.7,162.9 L46.7,166.5 L44.5,167.8 L43.9,166.9 L44.7,165.1 L43.4,164.5 L42.9,162.1 L39.9,161.9 L37.9,159.6 L38.9,159.0 L39.6,156.7 L41.6,156.9 L39.7,156.5 L38.9,154.9 L38.7,157.1 L37.3,159.1 L33.7,161.7 L26.5,162.0 L23.8,160.5 L24.1,159.5 L22.7,162.9 L22.1,163.3 L21.1,162.6 L19.3,164.4 L19.1,161.9 L16.9,163.1 L15.5,162.2 L15.9,163.7 L14.6,163.9 L15.9,165.0 L14.0,165.9 L10.6,165.5 L9.7,167.3 L7.3,167.1 L3.9,169.7 L3.1,169.3 L1.8,171.0 L1.3,170.5 L-0.1,172.0 L-2.2,172.4 L-8.0,177.7 L-8.2,178.8 L-7.0,179.1 L-9.4,180.3 L-9.5,181.3 L-12.7,181.7 L-12.0,182.6 L-14.0,181.9 L-12.6,183.3 L-13.3,184.2 L-15.7,182.0 L-16.2,182.3 L-15.8,182.8 L-18.0,182.9 L-17.6,183.8 L-19.0,184.3 L-17.1,184.8 L-16.5,186.0 L-19.7,186.4 L-20.8,187.5 L-20.8,182.2 L-17.2,180.6 L-16.9,179.8 L-18.9,177.9 L-18.0,176.8 L-18.9,176.1 L-17.1,175.8 L-15.0,173.4 L-11.6,172.7 L-19.8,173.6 L-20.8,173.1 L-20.8,166.3 L-20.3,167.1 L-19.8,165.6 L-20.8,164.9 L-20.8,162.0 L-17.0,159.4 L-15.1,159.4 L-13.0,157.6 L-13.0,157.0 L-14.0,156.9 L-10.5,154.3 L-10.6,152.7 L-8.5,151.7 L-8.2,149.6 L-6.0,147.8 L-6.2,146.6 L-5.2,146.5 L-4.1,144.7 L-5.7,142.7 L-7.3,142.1 L-7.1,139.6 L-7.9,140.2 L-9.4,138.5 L-13.5,136.3 L-14.0,133.4 L-13.1,132.1 L-15.0,133.7 L-15.8,135.9 L-19.2,136.1 L-20.8,135.1 L-20.8,-25.4 L338.4,-25.4 L334.1,-21.1 L332.6,-16.8Z M192.5,81.5 L193.0,80.1 L194.7,80.3 L194.0,79.6 L196.0,81.1 L195.2,82.3 L192.5,81.5Z M251.3,315.8 L245.7,320.6 L244.3,323.5 L242.9,329.2 L237.6,322.6 L233.8,321.5 L231.0,322.1 L228.1,323.6 L227.5,325.0 L225.1,326.3 L224.5,325.9 L223.7,326.9 L224.0,328.6 L222.9,330.4 L223.1,331.1 L221.8,331.7 L220.4,334.6 L219.5,334.2 L218.4,335.5 L218.5,338.5 L217.5,338.9 L217.5,339.9 L219.0,341.8 L218.4,342.5 L216.6,340.8 L214.1,341.8 L212.4,340.5 L210.7,341.5 L210.6,340.3 L212.4,337.5 L209.2,336.8 L208.1,337.9 L207.4,336.9 L208.0,335.3 L207.4,334.1 L206.3,333.9 L205.6,334.7 L206.1,333.4 L207.0,333.8 L207.6,333.5 L206.9,332.3 L207.8,331.8 L206.8,331.6 L207.1,330.8 L205.8,330.0 L207.2,330.0 L207.7,330.9 L209.0,329.4 L208.9,328.5 L207.7,328.2 L208.5,327.2 L205.5,327.1 L206.2,326.5 L205.7,325.1 L206.4,323.9 L204.0,323.4 L200.3,325.9 L199.9,325.4 L197.8,326.3 L201.2,323.9 L206.2,321.6 L208.0,319.3 L211.7,317.0 L212.4,312.2 L213.3,312.1 L213.6,309.9 L216.7,308.0 L216.9,306.9 L216.3,306.7 L217.2,306.2 L221.0,311.5 L225.1,310.0 L229.0,310.7 L231.7,307.8 L231.7,305.1 L230.0,303.2 L233.0,303.9 L237.9,300.3 L240.9,301.0 L242.2,299.8 L242.7,301.5 L243.7,300.8 L244.8,301.6 L244.6,302.3 L248.3,304.5 L252.7,303.7 L251.8,305.1 L252.6,305.2 L251.7,309.5 L252.4,309.5 L253.8,311.4 L252.6,313.5 L254.8,314.0 L251.3,315.8Z M208.7,305.3 L209.1,307.0 L209.6,306.8 L209.5,307.9 L207.1,307.5 L208.7,305.3Z M217.8,303.4 L219.0,302.3 L219.5,304.1 L217.6,304.9 L218.2,303.9 L217.8,303.4Z M257.9,300.1 L259.1,302.9 L254.4,304.9 L253.8,304.2 L254.3,303.4 L253.1,303.0 L253.4,301.4 L254.2,301.4 L255.8,298.4 L260.1,294.3 L260.6,295.1 L257.9,300.1Z M245.6,298.5 L246.1,298.0 L244.3,299.2 L244.3,298.0 L242.7,298.0 L242.8,296.6 L246.8,295.7 L246.4,298.8 L245.6,298.5Z M219.1,257.6 L218.6,256.9 L218.3,258.0 L217.3,257.4 L219.2,255.7 L220.2,255.8 L219.1,257.6Z M225.5,254.6 L223.7,254.8 L222.4,253.8 L222.8,251.5 L224.5,250.3 L225.8,251.5 L226.3,253.7 L225.2,254.1 L225.5,254.6Z M359.6,333.7 L358.8,331.5 L361.5,333.0 L360.6,334.2 L359.6,333.7Z M350.5,291.5 L350.6,289.5 L351.5,289.8 L352.6,290.6 L352.7,292.3 L352.0,292.6 L350.5,291.5Z M300.5,231.1 L299.8,229.8 L302.6,229.7 L302.4,230.6 L300.5,231.1Z M224.0,301.6 L225.0,300.5 L223.8,300.1 L224.2,299.6 L223.5,299.0 L222.2,301.1 L222.7,302.0 L222.3,302.7 L220.0,303.2 L219.9,301.7 L220.8,300.9 L221.2,301.7 L221.9,300.8 L220.3,299.9 L219.6,301.3 L215.3,302.5 L215.0,301.9 L213.5,302.9 L213.6,303.8 L209.4,304.9 L208.1,302.5 L208.4,300.8 L204.8,300.9 L202.2,303.7 L202.7,305.5 L201.8,307.0 L202.0,310.0 L200.4,311.3 L201.0,313.8 L198.8,315.4 L199.2,314.0 L199.9,314.1 L199.7,313.0 L194.5,309.8 L194.0,310.7 L193.0,310.6 L193.9,309.1 L192.2,308.4 L189.1,308.8 L188.8,310.1 L186.8,309.0 L186.0,310.3 L185.0,310.1 L184.9,308.8 L183.7,310.7 L182.2,311.7 L181.3,311.0 L180.5,311.5 L178.9,309.0 L177.5,308.6 L175.0,312.0 L174.3,311.4 L175.1,309.5 L173.9,306.9 L175.2,305.1 L174.1,302.7 L174.6,301.1 L177.5,300.1 L175.4,299.7 L175.9,298.9 L179.6,299.3 L180.4,300.4 L180.4,298.9 L182.1,298.7 L182.6,299.4 L181.6,299.2 L181.1,300.4 L185.4,299.0 L186.3,296.6 L188.0,295.4 L188.4,294.2 L189.2,294.1 L189.2,293.0 L194.7,291.6 L195.0,290.5 L198.7,287.6 L198.9,286.7 L204.2,282.8 L206.1,279.9 L210.9,276.9 L211.6,274.6 L210.8,273.2 L217.8,271.3 L220.3,269.1 L221.7,270.1 L224.8,269.7 L223.7,270.8 L223.9,271.8 L226.7,272.9 L230.5,270.8 L233.6,271.6 L244.1,270.5 L250.4,267.3 L258.5,268.1 L261.7,265.6 L264.7,264.8 L266.4,267.3 L265.4,267.7 L263.9,270.5 L265.2,269.4 L265.6,270.1 L265.0,270.6 L267.0,271.5 L266.6,273.0 L267.3,272.0 L268.4,272.1 L267.0,270.7 L269.6,269.1 L270.0,271.1 L270.7,270.5 L271.0,271.9 L273.5,270.6 L273.9,270.8 L272.9,272.0 L275.1,271.9 L275.6,270.8 L274.4,270.5 L275.4,269.9 L276.5,270.9 L277.4,270.8 L276.7,269.8 L277.8,269.7 L276.9,268.1 L279.1,268.9 L280.4,268.4 L279.9,265.9 L281.2,265.0 L281.8,266.5 L281.4,267.1 L282.2,267.6 L282.9,264.7 L280.7,261.9 L280.0,259.0 L283.3,253.9 L283.4,252.6 L284.9,252.3 L288.8,249.1 L295.1,240.4 L296.6,236.9 L296.8,234.1 L295.8,232.2 L295.8,230.0 L294.7,229.8 L296.1,226.4 L295.8,225.3 L297.1,224.1 L300.2,223.5 L306.9,220.3 L308.9,220.8 L308.9,222.3 L306.9,222.7 L306.5,224.0 L307.1,225.0 L306.4,226.2 L303.9,226.4 L301.9,228.9 L300.6,227.7 L299.4,229.2 L298.7,231.7 L300.2,231.6 L301.2,232.4 L302.6,231.1 L302.7,234.5 L301.3,236.9 L301.7,237.8 L304.9,239.7 L307.8,239.8 L309.6,238.7 L310.9,235.3 L320.3,232.1 L324.4,229.3 L327.5,228.9 L333.9,224.0 L337.9,218.5 L340.2,212.6 L344.6,209.4 L347.7,208.5 L352.0,204.4 L353.4,196.7 L355.7,191.8 L359.3,187.5 L362.3,176.2 L363.9,174.5 L365.0,170.0 L365.2,164.4 L364.6,161.9 L362.4,160.0 L359.0,161.0 L357.7,157.7 L360.3,158.4 L361.2,157.8 L363.5,154.2 L364.2,151.5 L364.5,148.4 L362.9,146.8 L362.5,142.9 L361.1,142.0 L365.0,137.9 L366.5,138.5 L369.6,136.8 L370.7,131.3 L371.7,132.4 L371.7,131.5 L372.5,131.4 L370.8,131.0 L370.2,129.2 L369.2,128.9 L370.7,128.2 L371.1,125.3 L373.6,127.4 L375.4,126.3 L377.2,127.1 L377.3,131.0 L378.6,135.8 L380.6,136.1 L381.7,135.0 L382.1,133.4 L381.5,133.2 L382.5,131.8 L387.4,135.3 L389.5,132.4 L390.6,128.1 L389.1,125.3 L388.2,125.0 L387.9,126.0 L386.0,127.4 L384.3,127.0 L380.9,128.8 L379.9,128.4 L380.7,123.7 L382.7,119.8 L382.9,118.4 L387.0,120.3 L390.5,123.1 L392.7,122.6 L394.4,121.1 L392.8,131.3 L393.9,140.4 L395.0,143.2 L395.9,143.9 L396.8,143.7 L399.2,146.2 L402.1,151.1 L401.7,152.8 L403.0,153.9 L402.3,155.6 L404.6,157.5 L404.4,159.3 L405.7,163.2 L404.8,167.3 L406.4,166.6 L406.2,168.0 L407.1,168.9 L404.6,171.1 L406.8,171.0 L403.6,174.4 L405.2,173.9 L403.8,175.3 L404.2,175.8 L403.5,175.8 L403.5,176.5 L404.5,176.5 L404.1,177.4 L403.1,177.6 L403.8,178.5 L402.4,179.0 L403.8,180.3 L401.8,180.5 L402.9,181.2 L401.9,181.4 L402.4,182.3 L399.9,181.9 L400.0,184.1 L398.9,183.6 L399.2,182.9 L398.1,183.2 L398.8,186.6 L398.0,185.6 L397.0,185.8 L397.0,187.4 L395.7,188.7 L396.6,190.4 L394.4,191.4 L395.9,192.2 L394.5,193.8 L396.2,195.0 L396.1,196.0 L395.5,195.3 L395.4,196.9 L394.6,197.3 L394.9,198.3 L395.6,198.0 L396.2,198.4 L395.2,198.8 L396.1,200.5 L395.7,201.4 L394.4,200.6 L393.7,198.6 L391.1,197.9 L389.0,198.4 L388.3,200.0 L387.5,198.8 L386.5,199.1 L385.8,200.4 L386.5,200.7 L384.1,203.9 L383.1,209.1 L385.3,215.1 L385.7,224.0 L385.0,230.2 L384.0,234.5 L380.7,236.5 L379.4,239.5 L377.0,246.1 L376.8,250.4 L375.7,251.8 L376.0,254.9 L377.4,258.7 L382.3,266.1 L381.9,266.9 L381.2,266.3 L377.7,266.9 L374.1,270.0 L372.0,274.7 L372.6,276.7 L371.9,279.9 L371.3,279.8 L370.7,281.1 L366.8,281.3 L363.8,283.9 L362.5,286.7 L360.7,286.9 L358.9,285.5 L361.3,284.4 L360.6,283.7 L360.2,280.4 L361.2,278.1 L360.9,276.9 L359.4,276.3 L360.3,276.1 L360.8,274.8 L361.8,275.1 L361.9,273.6 L364.1,272.4 L366.1,270.0 L363.7,267.4 L362.3,267.6 L362.7,268.2 L361.9,268.8 L360.0,268.2 L359.6,269.1 L359.1,267.8 L359.6,271.4 L356.6,272.9 L357.5,273.4 L357.5,274.2 L356.4,274.2 L356.7,276.8 L358.7,278.1 L358.3,279.1 L357.1,279.5 L357.4,280.8 L356.0,281.0 L355.7,279.3 L356.2,279.0 L354.5,276.6 L351.8,276.3 L347.0,277.7 L346.2,278.4 L346.5,280.9 L345.7,280.6 L344.8,282.5 L345.4,283.1 L345.0,284.5 L346.2,285.9 L346.1,287.7 L343.2,291.2 L343.1,293.3 L342.0,293.0 L339.8,294.7 L337.9,292.2 L338.5,290.7 L338.1,287.5 L338.8,286.8 L338.2,284.9 L338.8,283.7 L341.3,283.6 L339.1,281.3 L336.9,280.9 L333.9,282.0 L332.8,283.6 L332.9,284.6 L333.5,284.0 L333.1,284.9 L330.0,286.5 L329.2,288.1 L329.5,288.8 L326.9,291.7 L326.4,293.5 L327.3,294.7 L321.7,292.9 L318.1,293.5 L313.0,292.6 L301.9,295.1 L303.1,292.9 L303.9,293.9 L307.5,291.2 L307.9,292.3 L308.0,291.4 L308.7,291.3 L307.4,289.3 L305.6,289.3 L305.2,290.4 L305.2,289.9 L302.0,289.9 L300.7,288.6 L301.2,286.3 L299.8,290.1 L301.0,292.1 L298.6,291.0 L298.8,288.5 L298.0,287.6 L297.9,285.5 L299.2,282.1 L298.5,283.4 L298.1,282.4 L298.3,283.6 L297.4,283.2 L297.4,283.8 L295.9,283.7 L294.5,284.8 L294.1,287.2 L291.9,290.3 L291.6,292.5 L292.3,294.5 L294.0,294.8 L299.9,298.8 L299.9,300.2 L299.0,300.4 L299.7,300.8 L299.2,301.4 L299.4,303.0 L298.2,303.5 L297.3,303.4 L296.9,302.8 L298.3,303.2 L298.4,302.0 L295.4,302.3 L295.5,301.3 L293.4,303.1 L291.7,302.8 L291.5,303.9 L287.8,305.1 L287.0,305.9 L287.2,307.5 L286.1,307.0 L285.3,307.9 L286.6,309.3 L286.5,310.5 L285.6,310.0 L285.1,310.5 L285.6,311.3 L283.0,312.5 L279.5,319.5 L280.0,320.1 L276.8,322.4 L275.8,324.2 L275.9,322.9 L269.3,321.2 L266.8,318.1 L268.1,317.1 L264.8,315.3 L262.5,312.5 L261.2,312.8 L262.1,310.9 L261.6,310.4 L263.4,309.1 L262.0,308.1 L262.6,306.3 L264.0,306.0 L262.5,303.6 L261.3,303.0 L262.2,301.7 L264.3,301.1 L267.7,297.5 L268.6,295.6 L268.6,292.2 L266.0,291.9 L265.3,292.6 L265.3,292.0 L264.6,292.2 L265.0,293.3 L263.9,292.6 L263.8,293.2 L261.0,293.9 L254.7,290.3 L250.0,290.5 L249.4,289.8 L246.6,291.9 L243.5,291.3 L245.0,292.1 L242.4,293.6 L243.1,293.6 L242.3,294.6 L240.9,295.0 L239.1,294.3 L237.9,294.9 L238.0,295.7 L239.2,294.7 L240.2,295.0 L237.9,298.3 L234.9,298.5 L233.0,296.4 L228.2,299.0 L229.3,297.5 L227.4,297.8 L225.5,300.9 L224.0,301.6Z M330.1,212.6 L326.9,213.1 L328.3,212.1 L328.4,210.6 L329.5,209.1 L328.9,208.3 L327.6,208.8 L327.3,206.9 L328.8,203.9 L333.1,200.0 L331.5,206.6 L334.4,206.3 L334.4,207.3 L332.5,211.0 L330.1,212.6Z M352.7,105.3 L351.7,102.7 L352.3,101.4 L354.9,100.8 L353.5,104.6 L352.7,105.3Z M485.2,71.8 L480.9,73.6 L479.0,77.0 L474.3,76.8 L470.9,78.0 L470.6,79.0 L471.5,79.2 L469.6,80.4 L468.1,80.1 L468.3,81.5 L465.9,81.8 L463.8,80.1 L462.5,81.8 L463.5,82.9 L462.6,83.2 L456.9,82.9 L453.9,81.2 L448.1,83.1 L444.8,85.2 L438.4,91.3 L433.7,98.5 L433.3,103.9 L431.4,108.5 L425.6,104.0 L415.2,99.8 L409.1,95.0 L406.9,94.7 L401.8,91.4 L398.0,91.0 L393.7,92.3 L386.7,96.7 L384.3,99.0 L383.4,98.3 L384.5,98.0 L383.1,97.2 L382.7,96.0 L379.3,92.3 L373.5,92.3 L370.8,95.7 L370.0,97.8 L370.1,100.1 L375.4,104.0 L378.8,103.3 L384.3,108.8 L387.0,109.9 L389.0,111.7 L384.9,114.0 L381.1,112.5 L378.7,113.1 L379.1,111.4 L377.7,111.0 L376.6,113.3 L373.4,114.7 L373.0,118.6 L369.7,119.8 L368.3,121.9 L364.8,120.8 L363.6,117.3 L365.7,111.7 L366.6,111.4 L367.0,107.1 L364.6,104.0 L362.5,103.1 L359.8,100.7 L359.2,98.8 L360.6,95.9 L360.5,91.7 L361.4,89.8 L364.8,89.2 L368.2,86.0 L369.9,87.4 L371.8,84.0 L374.8,81.3 L374.1,79.2 L371.0,75.9 L371.5,73.0 L373.0,72.9 L374.1,71.8 L380.6,76.3 L385.0,75.4 L385.3,76.8 L388.3,77.7 L391.1,76.2 L393.6,73.2 L393.9,70.9 L392.3,68.0 L392.9,66.6 L391.8,63.2 L392.8,61.2 L395.8,59.9 L398.1,57.4 L398.7,54.2 L398.4,48.8 L400.3,45.1 L401.4,39.6 L400.5,33.4 L397.0,26.3 L396.9,24.1 L398.3,21.8 L398.1,19.8 L398.6,19.0 L399.2,20.3 L401.9,19.7 L404.5,17.3 L416.8,30.0 L418.7,33.4 L426.0,41.0 L433.7,46.2 L434.8,47.8 L442.6,51.1 L440.6,51.2 L441.5,53.0 L445.9,53.4 L447.2,52.5 L449.7,52.6 L450.8,53.2 L449.4,55.1 L450.4,55.4 L452.3,52.8 L453.0,54.9 L455.1,57.0 L456.2,57.3 L459.1,57.8 L462.6,58.0 L464.5,57.3 L469.0,52.8 L472.2,50.6 L475.1,47.1 L475.7,49.5 L470.5,58.0 L469.6,62.1 L472.5,66.3 L474.5,71.9 L476.2,73.5 L473.4,72.7 L474.7,74.2 L478.8,75.4 L478.5,74.2 L481.8,71.6 L485.2,71.8Z M491.5,69.4 L490.5,68.1 L492.1,67.4 L493.6,67.8 L493.2,69.0 L491.5,69.4Z M507.8,60.9 L503.0,63.2 L501.3,62.6 L501.4,60.7 L506.4,59.0 L508.4,59.8 L507.8,60.9Z M499.5,46.6 L498.1,46.2 L495.1,48.7 L491.7,49.1 L487.4,52.8 L486.4,55.2 L484.9,55.7 L484.2,57.6 L480.2,59.7 L479.6,64.7 L479.5,63.1 L477.2,62.9 L476.5,60.0 L483.2,54.8 L484.5,52.0 L488.2,48.6 L491.3,43.0 L492.6,42.9 L496.4,45.1 L500.7,44.4 L499.5,46.6Z M534.9,25.5 L528.6,31.4 L525.6,31.9 L524.2,30.3 L523.2,30.6 L522.5,31.7 L523.0,32.8 L515.6,39.1 L514.3,41.1 L510.7,42.2 L508.7,45.2 L506.7,44.6 L507.0,43.4 L508.6,41.9 L508.3,40.0 L509.6,41.5 L510.4,40.7 L509.6,39.0 L511.5,39.7 L513.7,37.7 L513.8,36.7 L512.1,36.2 L511.9,34.9 L514.1,35.6 L515.1,33.8 L519.3,31.3 L520.2,28.3 L522.5,28.8 L525.3,25.8 L528.2,24.8 L527.5,21.5 L529.2,19.6 L530.5,23.3 L531.8,24.1 L536.9,23.5 L540.8,19.9 L540.8,23.5 L534.9,25.5Z M387.9,26.7 L387.5,25.1 L389.0,24.1 L391.8,26.5 L390.0,28.0 L387.9,26.7Z M385.5,23.7 L384.8,19.8 L384.1,18.7 L384.4,18.6 L386.2,19.2 L385.5,23.7Z M428.4,-17.2 L430.0,-16.8 L428.1,-15.6 L430.3,-12.8 L431.4,-13.1 L433.5,-12.3 L434.5,-12.9 L433.7,-13.9 L430.4,-14.7 L430.0,-15.6 L430.5,-16.3 L434.6,-15.1 L435.9,-16.5 L437.0,-14.5 L437.3,-9.8 L438.4,-6.3 L438.0,-5.0 L439.4,-4.4 L436.3,0.3 L436.3,2.9 L435.5,4.4 L435.2,-0.6 L433.4,-5.3 L433.3,-7.3 L434.2,-7.4 L434.6,-8.5 L432.1,-9.1 L432.9,-8.3 L432.4,-8.1 L429.7,-10.1 L422.2,-10.0 L420.4,-13.8 L415.1,-10.9 L411.5,-3.2 L409.8,4.3 L408.1,5.3 L407.6,7.5 L404.2,4.2 L401.8,-9.7 L406.8,-21.7 L406.6,-25.4 L427.0,-25.4 L427.1,-22.1 L428.9,-17.4 L428.4,-17.2Z"/><text class="ctry" x="305" y="248" style="font-size:11px">HONSHU</text><text class="ctry" x="128" y="402" style="font-size:11px">KYUSHU</text><text class="ctry" x="222" y="345" style="font-size:11px">SHIKOKU</text><text class="ctry" x="383" y="152" style="font-size:11px">HOKKAIDO</text><text class="ctry" x="100" y="250" style="font-size:11px">KOREA</text><text class="sea" x="225" y="200">Sea of Japan</text><text class="sea" x="380" y="350">Pacific Ocean</text><g class="lyr" data-l="ships"><path class="move ink" d="M470 80 L428 88"/><text class="alab ink" x="486" y="104" text-anchor="end">Kurils</text><g class="ev " data-i="0" tabindex="0" role="button" aria-label="Nagasaki, 1793–1808"><circle class="halo" cx="153.3" cy="341.5" r="5"/><circle class="core" cx="153.3" cy="341.5" r="4.4"/><text x="145.3" y="333.5" text-anchor="end">Nagasaki</text></g><g class="ev ink" data-i="1" tabindex="0" role="button" aria-label="Hokkaido and the north, 1798–1813"><circle class="halo" cx="415" cy="92" r="5"/><circle class="core" cx="415" cy="92" r="4.4"/><text x="409" y="82" text-anchor="end">Hokkaido &amp; Sakhalin</text></g><g class="ev " data-i="2" tabindex="0" role="button" aria-label="Mito coast, 1824"><circle class="halo" cx="372.8" cy="249.7" r="5"/><circle class="core" cx="372.8" cy="249.7" r="4.4"/><text x="381.8" y="253.7" text-anchor="start">Mito</text></g><g class="ev " data-i="3" tabindex="0" role="button" aria-label="Satsuma coast, 1824"><circle class="halo" cx="167.5" cy="370.7" r="5"/><circle class="core" cx="167.5" cy="370.7" r="4.4"/><text x="176.5" y="382.7" text-anchor="start">Satsuma</text></g><g class="ev gold" data-i="4" tabindex="0" role="button" aria-label="Edo, 1825 and 1842"><circle class="halo" cx="357.6" cy="266.9" r="5"/><circle class="core" cx="357.6" cy="266.9" r="4.4"/><text x="349.6" y="260.9" text-anchor="end">Edo</text></g><g class="ev gold" data-i="5" tabindex="0" role="button" aria-label="Saga"><circle class="halo" cx="162.0" cy="328.8" r="5"/><circle class="core" cx="162.0" cy="328.8" r="4.4"/><text x="154.0" y="322.8" text-anchor="end">Saga</text></g><g class="ev ink" data-i="6" tabindex="0" role="button" aria-label="Edo Bay, 1846"><circle class="halo" cx="358.2" cy="278.3" r="5"/><circle class="core" cx="358.2" cy="278.3" r="4.4"/><text x="366.2" y="292.3" text-anchor="start">Biddle, 1846</text></g></g><g class="lyr" data-l="treaty"><path class="move ink" d="M478 372 Q430 338 368 288"/><text class="alab ink" x="474" y="392" text-anchor="end">Perry's ships</text><g class="ev " data-i="7" tabindex="0" role="button" aria-label="Edo Bay, 1853–54"><circle class="halo" cx="358.2" cy="278.3" r="5"/><circle class="core" cx="358.2" cy="278.3" r="4.4"/><text x="367.2" y="282.3" text-anchor="start">Uraga (Perry)</text></g><g class="ev ink" data-i="8" tabindex="0" role="button" aria-label="Shimoda, 1854–58"><circle class="halo" cx="342.0" cy="292.5" r="5"/><circle class="core" cx="342.0" cy="292.5" r="4.4"/><text x="334.0" y="302.5" text-anchor="end">Shimoda</text></g><g class="ev ink" data-i="9" tabindex="0" role="button" aria-label="Hakodate, 1854"><circle class="halo" cx="379.3" cy="112.7" r="5"/><circle class="core" cx="379.3" cy="112.7" r="4.4"/><text x="371.3" y="106.7" text-anchor="end">Hakodate</text></g><g class="ev gold" data-i="10" tabindex="0" role="button" aria-label="Edo, 1858"><circle class="halo" cx="357.6" cy="266.9" r="5"/><circle class="core" cx="357.6" cy="266.9" r="4.4"/><text x="365.6" y="256.9" text-anchor="start">Edo</text></g><g class="ev green" data-i="11" tabindex="0" role="button" aria-label="Yokohama, 1859"><circle class="halo" cx="355.6" cy="273.3" r="5"/><circle class="core" cx="355.6" cy="273.3" r="4.4"/><text x="347.6" y="277.3" text-anchor="end">Yokohama</text></g><g class="ev green" data-i="12" tabindex="0" role="button" aria-label="Nagasaki, 1859"><circle class="halo" cx="153.3" cy="341.5" r="5"/><circle class="core" cx="153.3" cy="341.5" r="4.4"/><text x="145.3" y="333.5" text-anchor="end">Nagasaki</text></g><g class="ev " data-i="13" tabindex="0" role="button" aria-label="Kyoto, 1858"><circle class="halo" cx="276" cy="284.1" r="5"/><circle class="core" cx="276" cy="284.1" r="4.4"/><text x="268" y="276.1" text-anchor="end">Kyoto</text></g></g><g class="lyr" data-l="terror"><g class="ev " data-i="14" tabindex="0" role="button" aria-label="Edo, 1860"><circle class="halo" cx="357.6" cy="266.9" r="5"/><circle class="core" cx="357.6" cy="266.9" r="4.4"/><text x="349.6" y="260.9" text-anchor="end">Edo castle, 1860</text></g><g class="ev " data-i="15" tabindex="0" role="button" aria-label="Yokohama, from 1859"><circle class="halo" cx="355.6" cy="273.3" r="5"/><circle class="core" cx="355.6" cy="273.3" r="4.4"/><text x="347.6" y="288.3" text-anchor="end">Yokohama</text></g><g class="ev " data-i="16" tabindex="0" role="button" aria-label="Kyoto, 1862–64"><circle class="halo" cx="276" cy="284.1" r="5"/><circle class="core" cx="276" cy="284.1" r="4.4"/><text x="276" y="274.1" text-anchor="middle">Kyoto</text></g><g class="ev gold" data-i="17" tabindex="0" role="button" aria-label="Yamato foothills, 1863"><circle class="halo" cx="275.7" cy="292.5" r="5"/><circle class="core" cx="275.7" cy="292.5" r="4.4"/><text x="279.7" y="308.5" text-anchor="start">Yamato</text></g><g class="ev gold" data-i="18" tabindex="0" role="button" aria-label="Ikuno, 1863"><circle class="halo" cx="255.9" cy="280.4" r="5"/><circle class="core" cx="255.9" cy="280.4" r="4.4"/><text x="247.9" y="274.4" text-anchor="end">Ikuno</text></g><g class="ev ink" data-i="19" tabindex="0" role="button" aria-label="Tosa"><circle class="halo" cx="229.3" cy="321.0" r="5"/><circle class="core" cx="229.3" cy="321.0" r="4.4"/><text x="221.3" y="333.0" text-anchor="end">Tosa</text></g><g class="ev ink" data-i="20" tabindex="0" role="button" aria-label="Mito"><circle class="halo" cx="372.8" cy="249.7" r="5"/><circle class="core" cx="372.8" cy="249.7" r="4.4"/><text x="381.8" y="247.7" text-anchor="start">Mito</text></g><g class="ev " data-i="21" tabindex="0" role="button" aria-label="Chōshū"><circle class="halo" cx="185.0" cy="299.4" r="5"/><circle class="core" cx="185.0" cy="299.4" r="4.4"/><text x="179.0" y="291.4" text-anchor="end">Chōshū</text></g></g><g class="lyr" data-l="fall"><path class="canal" d="M262 296 L282 288 L300 282 L322 286 L342 284 L356 270"/><path class="move" d="M282 278 Q330 230 355 226"/><path class="move ink" d="M368 214 Q380 160 380 122"/><path class="move green" d="M172 362 Q168 335 180 312"/><text class="alab ni" x="162" y="340" text-anchor="end">Sat-chō</text><text class="alab tp" x="300" y="234" text-anchor="end">imperial armies north</text><g class="ev " data-i="22" tabindex="0" role="button" aria-label="Kagoshima, 1863"><circle class="halo" cx="167.5" cy="370.7" r="5"/><circle class="core" cx="167.5" cy="370.7" r="4.4"/><text x="176.5" y="382.7" text-anchor="start">Kagoshima, 1863</text></g><g class="ev " data-i="23" tabindex="0" role="button" aria-label="Shimonoseki, 1863–64"><circle class="halo" cx="175.4" cy="310.8" r="5"/><circle class="core" cx="175.4" cy="310.8" r="4.4"/><text x="165.4" y="326.8" text-anchor="end">Shimonoseki</text></g><g class="ev green" data-i="24" tabindex="0" role="button" aria-label="Chōshū, 1866"><circle class="halo" cx="185.0" cy="299.4" r="5"/><circle class="core" cx="185.0" cy="299.4" r="4.4"/><text x="179.0" y="291.4" text-anchor="end">Chōshū, 1866</text></g><g class="ev gold" data-i="25" tabindex="0" role="button" aria-label="Edo and Osaka, 1866"><circle class="halo" cx="270.4" cy="292.3" r="5"/><circle class="core" cx="270.4" cy="292.3" r="4.4"/><text x="262.4" y="306.3" text-anchor="end">Osaka riots</text></g><g class="ev " data-i="26" tabindex="0" role="button" aria-label="Kyoto, 1867–68"><circle class="halo" cx="276" cy="284.1" r="5"/><circle class="core" cx="276" cy="284.1" r="4.4"/><text x="268" y="276.1" text-anchor="end">Kyoto, 1867–68</text></g><g class="ev ink" data-i="27" tabindex="0" role="button" aria-label="Aizu, 1868"><circle class="halo" cx="362.6" cy="221.3" r="5"/><circle class="core" cx="362.6" cy="221.3" r="4.4"/><text x="370.6" y="217.3" text-anchor="start">Aizu, 1868</text></g><g class="ev ink" data-i="28" tabindex="0" role="button" aria-label="Hakodate, 1869"><circle class="halo" cx="379.3" cy="112.7" r="5"/><circle class="core" cx="379.3" cy="112.7" r="4.4"/><text x="371.3" y="106.7" text-anchor="end">Hakodate, 1869</text></g><g class="ev gold" data-i="29" tabindex="0" role="button" aria-label="Ee ja nai ka, 1867"><circle class="halo" cx="299.7" cy="279.9" r="5"/><circle class="core" cx="299.7" cy="279.9" r="4.4"/><text x="303.7" y="269.9" text-anchor="middle">Ee ja nai ka</text></g></g></svg></div>
+    <div class="cap" id="mcap"></div>
+    <figcaption><span class="fn">Figure 6.</span> Japan, 1793–1869. Events from pp. 309 and 338–345; Shimoda's isolation after Map 19.1 (p. 339). Base map drawn for this course from Natural Earth data (public domain); coastlines modern and approximate.</figcaption>
+  </figure>
+</section>
+
+<!-- 7 DEBATE -->
+<section class="unit reveal" id="debate">
+  <div class="sec-num">Part 7</div>
+  <h2>Debating the foreign threat</h2>
+  <p class="pages">pp. 339–341</p>
+  <p>Unnerved by the responsibility, the shogunate ended its 250-year monopoly on foreign policy. In <b>1854</b> it asked the leading daimyo for their opinions; in <b>1858</b> it asked the monarch <b>Kōmei</b> to approve the Harris treaty. Neither produced agreement. Kōmei rejected the treaty, told the shogun to consult the daimyo, and demanded the foreigners' expulsion. When the shogunate signed anyway, many called it treason. <span class="cite">pp. 339–340</span></p>
+
+  <figure class="fig">
+    <div class="think">
+      <div class="card b"><span class="vs">Engage the West</span>
+        <div class="who">Sakuma Shōzan</div><p>Strengthen Japan by acquiring Western military technology and fusing Western science with Japan's Confucian ethics. Only trade brings the knowledge and tools to compete.</p>
+        <div class="who">Yokoi Shōnan</div><p>Adviser to daimyo who popularized <a class="term" href="#g-fukoku">fukoku kyōhei</a>, "rich country, strong army."</p>
+        <p><i>Both were killed by anti-foreign assassins.</i></p>
+      </div>
+      <div class="card a"><span class="vs">Refuse the treaties</span>
+        <div class="who">Tokugawa Nariaki</div><p>Trade would cost Japan precious metals for trifles and infect it with Christianity. Only fighting, even a hopeless fight, could revive its martial spirit.</p>
+        <div class="who">Yoshida Shōin</div><p>Taught military science in Chōshū; from 1854 ran a school teaching <a class="term" href="#g-sonno">sonnō jōi</a>. Furious that the "spineless" treaties made Japan look weak.</p>
+      </div>
+    </div>
+    <figcaption><span class="fn">Figure 7.</span> The two camps. The textbook stresses that opponents of the treaties "had a rational basis for their position." Based on p. 340.</figcaption>
+  </figure>
+
+  <h3>The news spreads <span class="cite">p. 340</span></h3>
+  <p>The same networks that once carried news about farming methods and rice prices now carried politics, creating a <a class="term" href="#g-public">public political realm</a>.</p>
+  <ul class="tight">
+    <li>Doctors, merchants, and samurai in Edo wrote to friends in the countryside about Perry; readers copied the letters into diaries to discuss with neighbors.</li>
+    <li>Hirata preachers and swordsmanship teachers linked people across domain borders.</li>
+    <li><a class="term" href="#g-kawaraban">Kawaraban</a> broadsheets sold gossip about the treaty talks.</li>
+    <li>A few commoners sent coastal defense plans to their daimyo for the shogun, and traveled to Edo and Kyoto to see the changes for themselves.</li>
+  </ul>
+</section>
+
+<!-- 8 TRAVEL -->
+<section class="unit reveal" id="travel">
+  <div class="sec-num">Part 8 · Material culture</div>
+  <h2>From palanquin to rickshaw</h2>
+  <p class="pages">p. 341</p>
+  <p>Before railroads, most travelers walked. Up at 4:00 a.m. on straw sandals, they covered about thirty miles a day. Horses mostly carried packs, and boats on the Inland Sea and Lake Biwa had a name for capsizing. <span class="cite">p. 341</span></p>
+  <div class="stats">
+    <div class="stat"><b>4:00 a.m.</b><span>usual start of a day's walk</span></div>
+    <div class="stat"><b>≈30 miles</b><span>covered per day on foot</span></div>
+    <div class="stat"><b>2 men</b><span>carried most palanquins, with relays</span></div>
+    <div class="stat"><b>1869 → 1912</b><span>rickshaw invented → the taxi arrives</span></div>
+  </div>
+  <div class="grid g2">
+    <figure>
+      <img class="zoomable" src="assets/unit7/hiroshige-kusatsu.jpg" alt="Woodblock print: porters run with an open basket palanquin and a green enclosed palanquin past a busy roadside teahouse" loading="lazy" width="1024" height="701">
+      <figcaption><span class="fn">Figure 8.</span> Utagawa Hiroshige, <b>Kusatsu</b>, from <i>Fifty-Three Stations of the Tōkaidō</i>, 1833–36 (later printing). The textbook uses this print: at the Kusatsu teahouse, porters run with several kinds of palanquin. Library of Congress.</figcaption>
+    </figure>
+    <figure>
+      <img class="zoomable" src="assets/unit7/jinrikisha-1890.jpg" alt="Hand-colored photograph of a woman with a parasol in a two-wheeled rickshaw pulled by one man, with a second man walking ahead" loading="lazy" width="572" height="433">
+      <figcaption><span class="fn">Figure 9.</span> <b>Jinrikisha</b>, hand-colored photograph, c. 1890. A relief puller walks ahead. Library of Congress (cropped from the album page).</figcaption>
+    </figure>
+  </div>
+  <div class="versus">
+    <div class="card"><div class="big">Palanquin</div><p>Most travelers sat on a cushion in a wicker basket, gripping a strap. Rural entrepreneurs carried brides in enclosed palanquins; in cities these were for daimyo and high-ranking samurai only. Even the vehicle marked status.</p></div>
+    <div class="vs">→</div>
+    <div class="card"><div class="big">Rickshaw</div><p>Invented in 1869 by Izumi Yōsuke, a Tokyo restaurateur, to replace horse-drawn coaches with human power. Cheap, easy to make and repair, and nonpolluting, but brutal on its pullers. It spread from Japan to China and the rest of Asia.</p></div>
+  </div>
+</section>
+
+<!-- 9 TURMOIL -->
+<section class="unit reveal" id="turmoil">
+  <div class="sec-num">Part 9</div>
+  <h2>Political turmoil, 1858–1864</h2>
+  <p class="pages">pp. 342–343</p>
+  <p>Kōmei's rejection of the treaty and a fight over the next shogun paralyzed the shogunate. What followed swung from repression to compromise to terror. <span class="cite">p. 342</span></p>
+
+  <figure class="fig">
+  <ol class="chain">
+    <li><span class="n">1</span><b>Succession fight, 1858.</b> Satsuma, Mito, and other activist daimyo, with Kōmei, back Nariaki's capable son <b>Hitotsubashi Yoshinobu</b>. The <a class="term" href="#g-senior">senior councilors</a> refuse interference and choose <b>Tokugawa Iemochi</b>, closer by blood.</li>
+    <li><span class="n">2</span><b>Repression.</b> The vassal daimyo <b>Ii Naosuke</b> becomes <a class="term" href="#g-regent">regent</a>. In the <a class="term" href="#g-purge">Ansei Purge</a> he silences opposing daimyo and arrests, exiles, or executes over a hundred of their agents; Yoshida Shōin is executed in 1859.</li>
+    <li><span class="n">3</span><b>Assassination, 1860.</b> On a snowy morning in the third month, young samurai from Mito and Satsuma kill Ii outside Edo castle (at the Sakurada Gate†). They brand him a traitor for executing <a class="term" href="#g-shishi">shishi</a>. Worse for the shogunate, tozama Satsuma and Tokugawa Mito have now worked together.</li>
+    <li><span class="n">4</span><b>Compromise.</b> <a class="term" href="#g-kobu">Kōbu gattai</a>: tozama and Tokugawa relatives advise on foreign affairs, purged daimyo return, Iemochi weds Kōmei's half-sister <b>Kazunomiya</b>, and the shogunate promises to expel the barbarians.</li>
+    <li><span class="n">5</span><b>Reform, 1862†.</b> "Able" daimyo push for men of talent, Western technology, and stronger defense. To pay for it, the shogunate cuts costs and eases <a class="term" href="#g-sankin">alternate attendance</a> to 100 days every three years; women and servants leave Edo, the only city they had known.</li>
+    <li><span class="n">6</span><b>Terror.</b> Shishi attack foreigners in Yokohama from 1859 and kill advisers in Kyoto after the marriage. In the eighth month of 1863 they try to seize the palace to put Kōmei at the head of an army; Satsuma and the shogun drive them out. Uprisings in Yamato and at Ikuno are crushed, Mito falls into civil war, and in the seventh month of 1864 Chōshū's shishi are routed in Kyoto.</li>
+  </ol>
+  <figcaption><span class="fn">Figure 10.</span> From the treaty crisis to the 1864 battle in Kyoto, in six steps. Based on p. 342. The names Ansei Purge and Sakurada Gate, and the year 1862, are from outside the textbook.</figcaption>
+  </figure>
+
+  <div class="bio">
+    <div class="bio-h"><span class="label">Biography · p. 343</span><h3>Kusaka Genzui, radical samurai (1840–1864)</h3></div>
+    <ol class="lifeline">
+      <li><b>1840</b> Born in Chōshū, the year of the Opium War, into a low-ranking family of doctors, and trained to be one.</li>
+      <li><b>Age 17</b> Enters Yoshida Shōin's academy; is soon sent to Edo, so short of funds that he "never" visits courtesans.</li>
+      <li><b>1859</b> After Yoshida's execution, leads the academy and travels to Kyoto, sometimes without permission, meeting activists from other domains.</li>
+      <li><b>1862</b> Under house confinement, writes his key works: confine foreigners to three ports, let Japanese travel abroad, replace the shogun with the emperor but keep the domains, and give posts to capable men regardless of birth.</li>
+      <li><b>1864</b> Counsels patience as Chōshū's units march on Kyoto, but joins his friends. Wounded by rifle fire under the monarch's walls, he kills himself, becoming a hero for fighting a battle he knew he could not win.</li>
+    </ol>
+    <p class="cite" style="white-space:normal">Think about it (book's questions): How did Kusaka explain and justify his attacks on established institutions? Did he die a meaningful death?</p>
+  </div>
+
+  <div class="callout ink">
+    <div class="label">How much did the shishi matter? (pp. 342–343)</div>
+    <p>They changed opinion more than policy: they made the monarchy visible and broke the shogun–court alliance. But 60 percent of the people could not read, and most commoners stayed bystanders. The textbook adds that most daimyo and samurai did nothing either, out of loyalty, self-interest, or factional gridlock. <a class="term" href="#g-rural">Rural entrepreneurs</a>, who supplied traveling shishi, enrolled tenants in militias, and funded one side or the other, mattered more than most samurai.</p>
+  </div>
+</section>
+
+<!-- 10 FALL -->
+<section class="unit reveal" id="fall">
+  <div class="sec-num">Part 10</div>
+  <h2>The fall of the shogunate, 1864–1867</h2>
+  <p class="pages">pp. 343–346</p>
+
+  <h3>The radicals meet Western guns <span class="cite">pp. 343–344</span></h3>
+  <div class="grid g2">
+    <div class="card"><div class="big">Satsuma, 1863</div><p>When Satsuma refused to hand over the men who had killed a British merchant and to pay an indemnity, British ships bombarded Kagoshima in the seventh month. Despite its military reforms, Satsuma was no match; in the eleventh month it accepted Britain's demands.</p></div>
+    <div class="card"><div class="big">Chōshū, 1863–64</div><p>Obeying Kōmei's decree to expel the barbarians, Chōshū gunners fired on foreign ships at Shimonoseki in the fifth month of 1863. Over a year later the foreigners struck back; days earlier the shogunate had branded Chōshū an enemy of the court and massed daimyo troops at its border. Chōshū apologized, expelled radical nobles, and executed three officials.</p></div>
+  </div>
+
+  <h3>Trade turns the economy upside down <span class="cite">p. 344</span></h3>
+  <p>From 1859, foreign merchants at Nagasaki and Yokohama found that silver bought three times as much gold in Japan as in the West. Figure 11 shows the trade they ran.</p>
+  <figure class="panel">
+    <div class="wide">
+    <svg id="chainsvg" viewBox="0 0 760 300" role="img" aria-labelledby="gold-t"><title id="gold-t">How foreign merchants profited from Japan's gold-to-silver ratio</title>
+      <defs><marker id="ah6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+      <g class="ck" data-k="0"><rect class="box ink" x="10" y="100" width="160" height="80" rx="10"/><text x="90" y="133" text-anchor="middle" font-weight="700">Bring silver</text><text x="90" y="155" text-anchor="middle" class="small">to a treaty port</text></g>
+      <g class="ck" data-k="1"><rect class="box gold" x="205" y="15" width="190" height="85" rx="10"/><text x="300" y="42" text-anchor="middle" font-weight="700">Buy gold cheap</text><text x="300" y="63" text-anchor="middle" class="small">in Japan:</text><text x="300" y="80" text-anchor="middle" class="small">5 silver = 1 gold*</text></g>
+      <g class="ck" data-k="2"><rect class="box gold" x="395" y="150" width="190" height="85" rx="10"/><text x="490" y="177" text-anchor="middle" font-weight="700">Sell gold abroad</text><text x="490" y="198" text-anchor="middle" class="small">in the West:</text><text x="490" y="215" text-anchor="middle" class="small">1 gold = 15 silver*</text></g>
+      <g class="ck" data-k="3"><rect class="box acc" x="600" y="55" width="150" height="85" rx="10"/><text x="675" y="82" text-anchor="middle" font-weight="700">Three times</text><text x="675" y="103" text-anchor="middle" class="small">the silver;</text><text x="675" y="120" text-anchor="middle" class="small">then repeat</text></g>
+      <path class="arrow" d="M170 125 L203 85"/><path class="arrow" d="M340 100 L440 148"/><path class="arrow" d="M585 180 L640 142"/><path class="arrow" d="M675 140 L675 260 L90 260 L90 183"/>
+      <text x="380" y="252" class="small" text-anchor="middle">start again with the larger stock of silver</text>
+      <text x="380" y="290" class="small" text-anchor="middle">Ended only when the shogunate re-coined and devalued gold, silver, and copper</text>
+    </svg>
+    </div>
+    <figcaption><span class="fn">Figure 11.</span> The gold rush of 1859. *The ratios are illustrative; the textbook gives only that Japan's silver-to-gold ratio was one-third the West's. Boxes light up in sequence. Based on p. 344.</figcaption>
+  </figure>
+  <div class="grid g2">
+    <div class="card"><div class="big">Ripple effects</div><ul class="tight"><li>Daimyo were allowed to mint money; counterfeiters flooded the market; inflation soared.</li><li>Foreigners bought tea and silk for weapons; rice paddies turned to cash crops.</li><li>Weavers lost work, outbid by foreigners for silk thread.</li></ul></div>
+    <div class="card"><div class="big">Summer 1866</div><p>Unemployment, crop failures, inflation, and the shogunate's taxes on trade set off the most widespread riots of the Edo period, worst in the shogun's own stronghold of eastern Japan.</p></div>
+  </div>
+
+  <h3>The shogunate strikes back <span class="cite">pp. 344–345</span></h3>
+  <div class="side">
+    <div>
+      <p>The shogunate planned to fund military modernization with taxes on foreign trade. It imported thousands of weapons through Yokohama and drilled its retainers and farmer recruits in rifle companies. It sent missions abroad (1860, to sign a friendship treaty with the U.S.; later to study technology), opened a naval school at Hyōgo (1861), an ironworks at Yokohama, and a shipyard at Yokosuka (1865). It also won Kōmei's approval for the treaties, while keeping the tozama out of policymaking. <span class="cite">p. 344</span></p>
+      <p>But by reasserting itself it upset its balance with the daimyo and pushed old enemies together. The last shogun, <b>Hitotsubashi Yoshinobu</b>, reigned less than a year (Figure 12). <span class="cite">p. 345</span></p>
+    </div>
+    <figure class="port">
+      <img class="zoomable" src="assets/unit7/yoshinobu-sutton.jpg" alt="Hand-colored photograph of Tokugawa Yoshinobu seated in white court robes patterned with blue roundels, holding a fan, wearing a tall black court cap" loading="lazy" width="700" height="1171">
+      <figcaption><span class="fn">Figure 12.</span> Yoshinobu, "Tycoon of Japan, in full court costume." Photograph by F. W. Sutton, 1867–68†, copied by Felice Beato. Library of Congress (cropped from an album page).</figcaption>
+    </figure>
+  </div>
+
+  <h3>Countdown to the end <span class="cite">pp. 345–346</span></h3>
+  <figure class="panel">
+    <div class="steps" id="hd">
+      <div class="hs" data-i="0"><span class="yr">1st month 1866</span><b>Sat-chō alliance</b><p>Facing a second shogunal campaign, Chōshū and Satsuma ally. Both have bought arms at Nagasaki and built Western-style armies.</p></div>
+      <div class="hs" data-i="1"><span class="yr">1866</span><b>Campaign fails</b><p>Few domains answer the shogun's call; riots in Edo and Osaka tie down troops; the attack on Chōshū ends in humiliation. Iemochi's death gives a face-saving way out.</p></div>
+      <div class="hs" data-i="2"><span class="yr">5 months later</span><b>Kōmei dies</b><p>The shogunate loses its strongest supporter at court: Kōmei had backed a division of power that left government to the shogun.</p></div>
+      <div class="hs" data-i="3"><span class="yr">8th–10th month 1867</span><b>Dances and a secret decree</b><p><a class="term" href="#g-eeja">Ee ja nai ka</a> sweeps the Pacific coast. The court secretly orders Satsuma and Chōshū to overthrow the Tokugawa.</p></div>
+      <div class="hs" data-i="4"><span class="yr">End of 1867</span><b>Office returned</b><p>Yoshinobu returns his <a class="term" href="#g-patent">patent of office</a> to the monarch, ending nearly 800 years of military regimes.</p></div>
+      <div class="hs end" data-i="5"><span class="yr">1868–1869</span><b>Civil war</b><p>Declared a traitor, Yoshinobu loses rank and lands. His forces lose after four days near Kyoto; Aizu falls in the ninth month; Hakodate holds out until mid-1869.</p></div>
+    </div>
+    <div class="ctrl"><button class="step" id="hd-prev" type="button" aria-pressed="false">← Back</button><button class="step" id="hd-next" type="button" aria-pressed="true">Next →</button><span class="cite" id="hd-n"></span></div>
+    <figcaption><span class="fn">Figure 13.</span> From alliance to civil war, 1866–1869. Step through the stages. Based on pp. 345–346. Historians call the 1868–69 war the Boshin War†.</figcaption>
+  </figure>
+
+  <div class="grid g2">
+    <div class="callout">
+      <div class="label">The new regime, 1868</div>
+      <p>In the name of the fifteen-year-old <b>Meiji emperor</b>, Sat-chō leaders abolished the offices of shogun and regent and created advisory posts open to daimyo, court nobles, and "men of talent." The imperial armies, short of cash, had to demand loans from wealthy commoners as they moved north. <span class="cite">pp. 345–346</span></p>
+    </div>
+    <div class="callout green">
+      <div class="label">Why the war stayed short</div>
+      <p>Officials and public alike feared a long civil war would give foreign troops an excuse to invade, so uniting around the emperor seemed better. Yoshinobu and the daimyo of Aizu survived to join the new peerage. Hirata disciples rushed to serve; Edo watched its old masters replaced. <span class="cite">p. 345</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 MEANING -->
+<section class="unit reveal" id="meaning">
+  <div class="sec-num">Part 11</div>
+  <h2>Coup or revolution?</h2>
+  <p class="pages">pp. 333, 342–343, 346; Ch. 20, p. 362</p>
+  <p>The chapter opens with two linked debates. Use the evidence on each side when you write about the Restoration.</p>
+  <div class="pairs">
+    <div class="head"><span class="a">Domestic causes</span><span></span><span class="b">Foreign pressure</span></div>
+    <div class="pair"><div class="area">What brought the shogunate down?</div>
+      <div class="c a"><b class="tag">Domestic causes</b>Village conflict, bankrupt domains, frustrated samurai, new religions, and riots show the social order "came unglued" before Perry (pp. 333–335).</div>
+      <div class="pivot"><span>or</span></div>
+      <div class="c b"><b class="tag">Foreign pressure</b>The treaties forced the shogunate to consult others, split shogun and court, and set off the trade shocks of 1859–66 (pp. 339–344).</div>
+    </div>
+    <div class="pair"><div class="area">What kind of change was 1868?</div>
+      <div class="c a"><b class="tag">Coup d'état</b>Samurai of a few domains replaced the Tokugawa; most commoners were bystanders; old rulers joined the new peerage (pp. 342–343, 345).</div>
+      <div class="pivot"><span>or</span></div>
+      <div class="c b"><b class="tag">Revolution</b>Military rule ended; the next decades abolished status distinctions and limits on mobility and opened new political roles (p. 362, <a href="#g-coup">see term</a>).</div>
+    </div>
+  </div>
+  <div class="callout gold">
+    <div class="label">The textbook's twist (pp. 342–343)</div>
+    <p>Historians who say 1868 cannot be a "revolution from below" because commoners stayed on the sidelines overlook that most of the ruling class also did nothing. Weigh both kinds of inaction.</p>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section class="unit reveal" id="summary">
+  <div class="sec-num">Summary</div>
+  <h2>Japan in 1800 vs. 1868</h2>
+  <p class="pages">pp. 345–346</p>
+  <div class="contrast">
+    <div class="cside a"><h4>1800</h4><ul class="tight"><li>A 1600s order of fixed status and place.</li><li>The shogun alone handles foreign affairs.</li><li>Foreign contact limited to managed points.</li><li>The monarch removed from politics.</li></ul></div>
+    <div class="pivot"><span>seventy years of strain</span></div>
+    <div class="cside b"><h4>1868</h4><ul class="tight"><li>Commerce, travel, and news networks have worn down status and regional divisions.</li><li>A public political realm has drawn in many outside the government.</li><li>Unequal treaties have opened Japan to trade.</li><li>A new regime rules in the emperor's name.</li></ul></div>
+  </div>
+  <div class="callout green">
+    <div class="label">What the shogunate left behind (p. 346)</div>
+    <p>A dynamic economy, a pool of able administrators, a population well educated for its time, and a set of treaties that opened Japan to trade on unfavorable terms. Unit 8 picks up from here.</p>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="unit reveal" id="review">
+  <div class="sec-num">Review kit</div>
+  <h2>Test yourself</h2>
+
+  <h3>Flashcards</h3>
+  <div class="fc-wrap">
+    <div class="fc" id="fc" tabindex="0" role="button" aria-label="Flashcard: press to flip">
+      <div class="fc-inner">
+        <div class="fc-face fc-front"><div class="t" id="fc-term"></div><div class="h">Tap or press space to flip</div></div>
+        <div class="fc-face fc-back"><div id="fc-def"></div></div>
+      </div>
+    </div>
+    <div class="fc-ctrl">
+      <button class="btn" id="fc-prev" type="button">← Prev</button>
+      <span id="fc-count"></span>
+      <button class="btn" id="fc-next" type="button">Next →</button>
+      <button class="btn" id="fc-shuffle" type="button">Shuffle</button>
+    </div>
+  </div>
+
+  <h3>Who's who</h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 3.</span> <b>Who's who</b></caption>
+    <thead><tr><th>Person</th><th>Why they matter</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Ninomiya Sontoku</td><td>Peasant sage; revived villages through frugality, planning, and mutual aid</td></tr>
+      <tr><td class="k">Hirata Atsutane</td><td>Scholar of Japan's ancient past; the monarch as a manifest god</td></tr>
+      <tr><td class="k">Ōshio Heihachirō</td><td>Retired policeman; led farmers against Osaka in 1837</td></tr>
+      <tr><td class="k">Nakayama Miki</td><td>Farm woman possessed by a spirit in 1838; Tenrikyō</td></tr>
+      <tr><td class="k">Aizawa Seishisai</td><td>Mito scholar; <i>New Theses</i> (1825), kokutai</td></tr>
+      <tr><td class="k">Tokugawa Nariaki</td><td>Anti-foreign lord of Mito; father of Yoshinobu</td></tr>
+      <tr><td class="k">Matthew C. Perry</td><td>U.S. commodore; Edo Bay 1853, friendship treaty 1854</td></tr>
+      <tr><td class="k">Townsend Harris</td><td>First U.S. consul (Shimoda, 1856); commercial treaty 1858</td></tr>
+      <tr><td class="k">Kōmei</td><td>Monarch who rejected the Harris treaty; backed shared power; died 1866–67</td></tr>
+      <tr><td class="k">Sakuma Shōzan · Yokoi Shōnan</td><td>Advocates of Western technology and trade; assassinated</td></tr>
+      <tr><td class="k">Yoshida Shōin</td><td>Chōshū teacher of sonnō jōi; executed 1859</td></tr>
+      <tr><td class="k">Ii Naosuke</td><td>Regent who signed and purged; assassinated 1860</td></tr>
+      <tr><td class="k">Tokugawa Iemochi</td><td>Shogun from 1858; married Kazunomiya; died 1866</td></tr>
+      <tr><td class="k">Kusaka Genzui</td><td>Chōshū shishi; died in Kyoto, 1864</td></tr>
+      <tr><td class="k">Saigō Takamori</td><td>Satsuma samurai promoted for talent (1854)</td></tr>
+      <tr><td class="k">Hitotsubashi Yoshinobu</td><td>Last shogun; returned his office in 1867</td></tr>
+      <tr><td class="k">Meiji emperor</td><td>Kōmei's son, fifteen in 1868; in whose name Sat-chō ruled</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Key dates</h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 4.</span> <b>Key dates</b></caption>
+    <tbody>
+      <tr><td class="yr">1793 · 1808</td><td>Laxman at Nagasaki · the <i>Phaeton</i> incident</td></tr>
+      <tr><td class="yr">1825</td><td>Order to drive off foreign ships; <i>New Theses</i></td></tr>
+      <tr><td class="yr">1837</td><td>Ōshio's uprising in Osaka</td></tr>
+      <tr><td class="yr">1838</td><td>Nakayama Miki's possession (Tenrikyō)</td></tr>
+      <tr><td class="yr">1841–1843</td><td>Shogunal reform; Nikkō pilgrimage</td></tr>
+      <tr><td class="yr">1853 · 1854</td><td>Perry arrives · friendship treaty</td></tr>
+      <tr><td class="yr">1856</td><td>Harris at Shimoda</td></tr>
+      <tr><td class="yr">1858</td><td>Harris treaty; Ii becomes regent; purge</td></tr>
+      <tr><td class="yr">1859</td><td>Yokohama opens; gold rush; Yoshida executed</td></tr>
+      <tr><td class="yr">1860</td><td>Ii assassinated</td></tr>
+      <tr><td class="yr">1862†</td><td>Alternate attendance relaxed</td></tr>
+      <tr><td class="yr">1863</td><td>Kagoshima shelled; Shimonoseki firing; palace plot foiled</td></tr>
+      <tr><td class="yr">1864</td><td>Chōshū routed in Kyoto; Kusaka dies</td></tr>
+      <tr><td class="yr">1866</td><td>Sat-chō alliance; failed campaign; riots; Iemochi dies</td></tr>
+      <tr><td class="yr">1867</td><td><i>Ee ja nai ka</i>; Yoshinobu returns his office</td></tr>
+      <tr><td class="yr">1868 · 1869</td><td>Restoration; Aizu falls · Hakodate surrenders</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Discussion questions</h3>
+  <p class="cite" style="white-space:normal">Open each for points the reading gives you to work with.</p>
+  <div class="q-tools" role="group" aria-label="Discussion questions">
+    <button class="btn" id="q-expand" type="button">Expand all</button>
+    <button class="btn" id="q-collapse" type="button">Collapse all</button>
+  </div>
+  <details class="q"><summary>Was the shogunate's fall mainly the work of domestic change or foreign pressure?</summary>
+    <div class="a"><ul><li>Domestic: headman disputes, domain debt, samurai frustration, 1830s famines (pp. 333–335).</li><li>Foreign: Perry and Harris, the consultation of 1854 and 1858, the trade shocks (pp. 339–344).</li><li>Linked: the domains' military reforms began as coastal defense (p. 338).</li></ul></div></details>
+  <details class="q"><summary>Why did asking for advice weaken the shogunate so badly?</summary>
+    <div class="a"><ul><li>It ended a 250-year monopoly and produced no consensus (pp. 339–340).</li><li>Kōmei's refusal made signing look like treason.</li><li>It created a public political realm the shogunate could not shut down (p. 340).</li></ul></div></details>
+  <details class="q"><summary>Were the opponents of the treaties irrational?</summary>
+    <div class="a"><ul><li>The textbook says no (p. 340). What did Nariaki fear about precious metals?</li><li>Compare the 1859 gold rush and later inflation (p. 344).</li><li>Compare China's experience in <a href="unit5.html">Unit 5</a> and <a href="unit6.html">Unit 6</a>.</li></ul></div></details>
+  <details class="q"><summary>What does Kohei's lawsuit reveal about the Tokugawa status order?</summary>
+    <div class="a"><ul><li>Names, and so identities, changed with occupation (pp. 336–337).</li><li>Carpenters, tavern keepers, bathhouse managers, and guards in one family.</li><li>Commoners lent money to a great lord's household.</li></ul></div></details>
+  <details class="q"><summary>Did Kusaka Genzui die a meaningful death?</summary>
+    <div class="a"><ul><li>His proposals of 1862: what did he want to keep, and what to change (p. 343)?</li><li>Why did later young men see him as a hero?</li><li>Did the shishi change policy, or only opinion (p. 342)?</li></ul></div></details>
+  <details class="q"><summary>Who mattered more in 1868: samurai or rural entrepreneurs?</summary>
+    <div class="a"><ul><li>Most samurai stayed loyal and passive (p. 343).</li><li>Rural entrepreneurs supplied shishi, raised militias, and funded both sides; the imperial armies needed their loans (pp. 343, 345).</li></ul></div></details>
+  <details class="q"><summary>Why did Japan's domains build modern armies faster than the Qing state?</summary>
+    <div class="a"><ul><li>Satsuma and Chōshū each acted on their own after being defeated (pp. 343–345).</li><li>Compare Zeng Guofan's regional army and Self-Strengthening in <a href="unit6.html">Unit 6</a>.</li><li>Recall the textbook's warning about China's size and multiethnic empire (p. 330).</li></ul></div></details>
+</section>
+
+<!-- SOURCES -->
+<section class="unit" id="sources">
+  <div class="sec-num">Resources</div>
+  <h2>Sources and further reading</h2>
+  <ul class="sources">
+    <li><strong>Main text:</strong> Patricia Buckley Ebrey &amp; Anne Walthall, <em>Modern East Asia from 1600: A Cultural, Social, and Political History</em>, 3rd ed. (Cengage, 2013), Ch. 19, "Japan in Turmoil (1800–1867)," pp. 333–346, including Map 19.1 (p. 339), the Documents feature "Kohei's Lawsuit" (pp. 336–337), the Material Culture feature "From Palanquin to Rickshaw" (p. 341), and the Biography of Kusaka Genzui (p. 343). Background from Ch. 17 (pp. 288–295), Connections: Western Imperialism (pp. 308–309), and Ch. 20 (p. 362).</li>
+    <li><strong>Outside facts (marked †):</strong> the names "Tenpō reforms," "Ansei Purge," "Sakuradamon (Sakurada Gate) Incident," and "Boshin War," and the title <i>tairō</i>, are standard terms; see Encyclopaedia Britannica, <a href="https://www.britannica.com/event/Meiji-Restoration">"Meiji Restoration"</a>, <a href="https://www.britannica.com/biography/Ii-Naosuke">"Ii Naosuke"</a>, and <a href="https://www.britannica.com/biography/Tokugawa-Yoshinobu">"Tokugawa Yoshinobu"</a>. The term "sumptuary laws" is the usual English name for status-based spending rules. Image titles, dates, and photographers come from each image's Library of Congress catalog record.</li>
+    <li><strong>Explore further:</strong> MIT Visualizing Cultures, <a href="https://visualizingcultures.mit.edu/black_ships_and_samurai/index.html">"Black Ships &amp; Samurai: Commodore Perry and the Opening of Japan"</a> and <a href="https://visualizingcultures.mit.edu/yokohama/index.html">"Yokohama Boomtown: Foreigners in Treaty-Port Japan"</a>; Asia for Educators (Columbia University), <a href="http://afe.easia.columbia.edu/special/japan_1750_meiji.htm">"The Meiji Restoration and Modernization"</a>; Library of Congress, <a href="https://www.loc.gov/collections/japanese-prints-and-drawings/">"Japanese Prints and Drawings"</a> collection.</li>
+  </ul>
+  <h3>Image credits</h3>
+  <ul class="sources">
+    <li>[Kita-Amerika gasshūkoku: Peruri to yū mono Sōshū Uraga ni torai su], ink print, Chadbourne collection: no known restrictions, <a href="https://www.loc.gov/pictures/item/2002700114/">Library of Congress</a> (right panel, cropped).</li>
+    <li>Utagawa Sadahide, <em>Yokohama kōeki seiyōjin nimotsu unsō no zu</em>, 1861: no known restrictions, <a href="https://www.loc.gov/pictures/item/2002700230/">Library of Congress</a> (left section).</li>
+    <li>Andō (Utagawa) Hiroshige, <em>Kusatsu</em>, from <em>Tōkaidō gojūsan tsugi no uchi</em>, 1833–36, printed later: no known restrictions, <a href="https://www.loc.gov/pictures/item/2008660714/">Library of Congress</a>.</li>
+    <li><em>Jinrikisha</em>, hand-colored photograph, c. 1890: no known restrictions in the U.S., <a href="https://www.loc.gov/pictures/item/2009633087/">Library of Congress</a> (cropped).</li>
+    <li>F. W. Sutton, portrait of Tokugawa Yoshinobu, 1867–68, copy print by Felice Beato: no known restrictions in the U.S., <a href="https://www.loc.gov/pictures/item/2011649895/">Library of Congress</a> (cropped from a four-portrait album page).</li>
+    <li>Map: drawn for this course on <a href="https://www.naturalearthdata.com/">Natural Earth</a> land data (public domain).</li>
+  </ul>
+  <p class="cite" style="white-space:normal">Image titles and dates come from each image's catalog record, not from the textbook.</p>
+
+  <footer class="end">
+    <a href="index.html">← All units</a>
+    <span>Next: Unit 8 · The Meiji Transformation</span>
+  </footer>
+</section>
+</main>
+
+</div>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var root=document.documentElement;
+
+  // theme toggle
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  var tb=document.getElementById('theme-btn');
+  if(tb)tb.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+
+  // mobile toc copy
+  var mt=document.getElementById('mtoc');
+  document.querySelectorAll('#toc-list a').forEach(function(a){var li=document.createElement('li');var c=a.cloneNode(true);c.addEventListener('click',function(){mt.parentNode.removeAttribute('open')});li.appendChild(c);mt.appendChild(li);});
+
+  // progress + scrollspy
+  var bar=document.getElementById('progress');
+  var links=[].slice.call(document.querySelectorAll('#toc-list a'));
+  var mlinks=[].slice.call(document.querySelectorAll('#mtoc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var mcur=document.getElementById('mtoc-cur'),tocNav=document.querySelector('nav.toc'),last=-1;
+  function keepVisible(box,el){if(!box||!el||box.scrollHeight<=box.clientHeight)return;var bt=box.getBoundingClientRect(),et=el.getBoundingClientRect();if(et.top<bt.top+8)box.scrollTop-=bt.top+8-et.top;else if(et.bottom>bt.bottom-8)box.scrollTop+=et.bottom-bt.bottom+8;}
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
+    var cur=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*0.3)cur=i});
+    if(cur===last)return;last=cur;
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur)});
+    mlinks.forEach(function(a,i){a.classList.toggle('active',i===cur);if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    if(mcur)mcur.textContent=links[cur].textContent;
+    keepVisible(tocNav,links[cur]);keepVisible(document.getElementById('mtoc'),mlinks[cur]);
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  mt.parentNode.addEventListener('toggle',function(){if(mt.parentNode.open&&last>-1)keepVisible(mt,mlinks[last])});
+
+  // reveal + bars
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.06});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var bio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});bio.unobserve(e.target)}})},{threshold:0.4});
+  var bars=document.getElementById('bars');if(bars)bio.observe(bars);
+
+  // glossary tooltips
+  var tip=document.getElementById('tip');
+  function show(a){
+    var row=document.querySelector(a.getAttribute('href'));if(!row)return;
+    var dt=row.querySelector('dt'),dd=row.querySelector('dd').cloneNode(true);
+    dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    tip.innerHTML='';var b=document.createElement('b');b.textContent=dt.firstChild.textContent.trim();tip.appendChild(b);tip.appendChild(document.createTextNode(dd.textContent.trim()));
+    var r=a.getBoundingClientRect();tip.classList.add('on');
+    var w=tip.offsetWidth,left=Math.min(Math.max(8,r.left+scrollX+r.width/2-w/2),scrollX+document.documentElement.clientWidth-w-8);
+    var top=r.top+scrollY-tip.offsetHeight-8;if(r.top<tip.offsetHeight+16)top=r.bottom+scrollY+8;
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function hide(){tip.classList.remove('on')}
+  document.querySelectorAll('a.term').forEach(function(a){
+    a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('mouseleave',hide);
+    a.addEventListener('focus',function(){show(a)});a.addEventListener('blur',hide);
+    a.addEventListener('click',function(ev){if(matchMedia('(hover: none)').matches&&!a.dataset.shown){ev.preventDefault();document.querySelectorAll('a.term').forEach(function(x){delete x.dataset.shown});a.dataset.shown=1;show(a);}});
+  });
+  addEventListener('scroll',hide,{passive:true});
+
+
+  // key-term notes widget (short versions of the Key terms section)
+  var notes=document.getElementById('notes'),nb=document.getElementById('notes-btn'),nl=document.getElementById('notes-list'),ns=document.getElementById('notes-search');
+  document.querySelectorAll('#terms .gloss-group').forEach(function(g){
+    var dl=g.nextElementSibling,h=document.createElement('div');h.className='grp';h.textContent=g.textContent;nl.appendChild(h);
+    dl.querySelectorAll('.row').forEach(function(r){
+      var a=document.createElement('a');a.className='item';a.href='#'+r.id;
+      var b=document.createElement('b');b.textContent=r.querySelector('dt').firstChild.textContent.trim();
+      a.appendChild(b);a.appendChild(document.createTextNode(r.dataset.short));
+      a.addEventListener('click',function(){if(innerWidth<700)toggleNotes(false)});
+      nl.appendChild(a);
+    });
+  });
+  var empty=document.createElement('div');empty.className='empty';empty.textContent='No matching terms.';empty.hidden=true;nl.appendChild(empty);
+  function toggleNotes(open){
+    if(open===undefined)open=!notes.classList.contains('open');
+    notes.classList.toggle('open',open);notes.setAttribute('aria-hidden',!open);nb.setAttribute('aria-expanded',open);
+    if(open)setTimeout(function(){ns.focus({preventScroll:true})},50);
+  }
+  nb.addEventListener('click',function(){toggleNotes()});
+  document.getElementById('notes-close').addEventListener('click',function(){toggleNotes(false);nb.focus()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&notes.classList.contains('open')){toggleNotes(false);nb.focus()}});
+  ns.addEventListener('input',function(){
+    var q=ns.value.trim().toLowerCase(),any=false;
+    nl.querySelectorAll('.item').forEach(function(a){var m=!q||a.textContent.toLowerCase().indexOf(q)>-1;a.hidden=!m;if(m)any=true});
+    nl.querySelectorAll('.grp').forEach(function(g){var n=g.nextElementSibling,vis=false;while(n&&n.classList.contains('item')){if(!n.hidden)vis=true;n=n.nextElementSibling}g.hidden=!vis});
+    empty.hidden=any;
+  });
+
+  // return to top
+  var tt=document.getElementById('totop');
+  tt.addEventListener('click',function(){scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  function ttShow(){tt.classList.toggle('show',scrollY>600)}
+  addEventListener('scroll',ttShow,{passive:true});ttShow();
+
+
+
+  
+  
+    // ---- unit 7 additions ----
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function capSet(el,title,text){el.innerHTML='';var b=document.createElement('b');b.textContent=title;el.appendChild(b);el.appendChild(document.createTextNode(text));}
+
+  // identity cards
+  document.querySelectorAll('.idcard').forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')!=='true')})});
+
+  // gold loop: light boxes in sequence
+  var ch=document.getElementById('chainsvg');
+  if(ch){var cks=[].slice.call(ch.querySelectorAll('.ck'));
+    function ckSet(k){cks.forEach(function(g){g.classList.toggle('on',+g.dataset.k<=k)})}
+    if(RM){ckSet(3)}else{ckSet(0);var cio=new IntersectionObserver(function(es){if(es[0].isIntersecting){var k=0;var t=setInterval(function(){k++;ckSet(k);if(k>=3)clearInterval(t)},800);cio.disconnect()}},{threshold:0.5});cio.observe(ch);}
+  }
+
+  // map
+var EV=[["Nagasaki, 1793–1808", "Laxman is turned away (1793); Russians ask again to trade (1804); the British warship Phaeton barges in and leaves with supplies (1808). (p. 338)"], ["Hokkaido and the north, 1798–1813", "1798 expedition; the shogunate decides to annex Hokkaido and Sakhalin but cannot defend them. Russians attack posts on Sakhalin and the Kurils (1806–07); Golovnin is held at Hakodate (1811–13). (p. 338)"], ["Mito coast, 1824", "British whalers raid a Mito village. Aizawa questions the sailors; his New Theses follows in 1825. Mito builds furnaces to cast cannon. (p. 338)"], ["Satsuma coast, 1824", "British whalers raid southern Kyushu, in the tozama domain that dominated the Ryukyus. (p. 338)"], ["Edo, 1825 and 1842", "The shogunate orders every foreign ship but the Dutch driven off (1825), then relaxes the order after the Opium War (1842). (pp. 338–339)"], ["Saga", "Like Mito, Saga builds reverberatory furnaces to cast cannon for coastal defense. (p. 338)"], ["Edo Bay, 1846", "U.S. Commodore James Biddle seeks trade and is refused. (p. 309)"], ["Edo Bay, 1853–54", "Perry arrives with four ships on July 8, 1853, and returns with six in 1854; the friendship treaty follows. (p. 339)"], ["Shimoda, 1854–58", "Opened to U.S. ships; Harris arrives as consul in 1856. The shogunate chose this tiny port to isolate him (Map 19.1). (p. 339)"], ["Hakodate, 1854", "Second port opened to American ships for coal and supplies. (p. 339)"], ["Edo, 1858", "Harris bullies officials into talks in Edo; the commercial treaty is signed July 29, 1858. (p. 339)"], ["Yokohama, 1859", "Opens as a treaty port; foreign merchants buy gold cheaply with silver. (pp. 342, 344)"], ["Nagasaki, 1859", "A treaty port where foreign merchants also found the gold bargain. (p. 344)"], ["Kyoto, 1858", "The monarch Kōmei rejects the Harris treaty and demands expulsion of the foreigners. (p. 340)"], ["Edo, 1860", "Mito and Satsuma samurai assassinate Ii Naosuke outside Edo castle on a snowy morning. (p. 342)"], ["Yokohama, from 1859", "Shishi launch a reign of terror against foreign merchants, sailors, and officials. (p. 342)"], ["Kyoto, 1862–64", "Shishi assassinate advisers; in 1863 they try to seize the palace and are driven out; in 1864 Chōshū shishi return and are routed. Kusaka Genzui dies. (pp. 342–343)"], ["Yamato foothills, 1863", "A shishi-led uprising is brutally suppressed. (p. 342)"], ["Ikuno, 1863", "Another shishi uprising near the Japan Sea, also crushed. (p. 342)"], ["Tosa", "The daimyo forces his shishi to leave the domain or commit suicide. (p. 342)"], ["Mito", "Radical expulsionists and conservatives fight a civil war. (p. 342)"], ["Chōshū", "Refuge for shishi after 1863; home of Yoshida Shōin and Kusaka Genzui. (pp. 340, 342–343)"], ["Kagoshima, 1863", "British ships bombard Satsuma’s capital in the seventh month; Satsuma accepts Britain’s demands in the eleventh. (pp. 343–344)"], ["Shimonoseki, 1863–64", "Chōshū fires on foreign ships (fifth month, 1863); over a year later the foreigners retaliate and Chōshū backs down. (p. 344)"], ["Chōshū, 1866", "Allied with Satsuma, Chōshū defeats the shogun's second campaign. (p. 345)"], ["Edo and Osaka, 1866", "Riots tie down the shogun's garrisons; the most widespread riots of the Edo period hit eastern Japan. (pp. 344–345)"], ["Kyoto, 1867–68", "Yoshinobu returns his office; in the first days of 1868 his forces lose after four days of fighting outside Kyoto. (p. 345)"], ["Aizu, 1868", "Falls in the ninth month after heavy casualties among men and women. (p. 345)"], ["Hakodate, 1869", "The last shogunal stronghold surrenders in mid-1869. (p. 345)"], ["Ee ja nai ka, 1867", "Amulets \"fall from heaven\" and crowds dance along the Pacific coast from the Inland Sea to Edo. (pp. 344–345)"]];
+var LY={"ships": ["1 · Foreign ships, 1793–1846. ", "Russians probed the north and Nagasaki; British ships forced their way in. The 1825 order answered by closing the country. (pp. 338–339)"], "treaty": ["2 · Treaties, 1853–1859. ", "Perry came into Edo Bay; the treaties opened Shimoda and Hakodate, then Yokohama and other ports. Shimoda was chosen to keep the consul far from Edo. (p. 339)"], "terror": ["3 · Terror, 1858–1864. ", "Purge, assassination, and shishi violence from Edo to Kyoto, with uprisings crushed in Yamato, Ikuno, and Mito. (pp. 342–343)"], "fall": ["4 · Collapse, 1863–1869. ", "Western guns humbled Satsuma and Chōshū, which then allied and won. The new regime's armies moved north to Aizu and Hakodate. (pp. 343–345)"]};
+
+  var cm=document.getElementById('cmap');
+  if(cm){
+    var mb=[].slice.call(document.querySelectorAll('#mctrl .step')),lys=[].slice.call(cm.querySelectorAll('.lyr')),mcap=document.getElementById('mcap'),mt2=null;
+    function mSet(l){mb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});lys.forEach(function(g){g.classList.toggle('on',g.dataset.l===l)});capSet(mcap,LY[l][0],LY[l][1]);}
+    mb.forEach(function(b){b.addEventListener('click',function(){clearInterval(mt2);mSet(b.dataset.l)})});
+    cm.querySelectorAll('.ev').forEach(function(g){
+      function pick(){clearInterval(mt2);var e=EV[+g.dataset.i];capSet(mcap,e[0]+'. ',e[1]);}
+      g.addEventListener('click',pick);g.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();pick()}});
+    });
+    mSet('ships');
+    if(!RM){var seq=['ships','treaty','terror','fall'],mk=0;var mio=new IntersectionObserver(function(es){if(es[0].isIntersecting){mt2=setInterval(function(){mk++;mSet(seq[mk]);if(mk>=seq.length-1)clearInterval(mt2)},6500);mio.disconnect()}},{threshold:0.5});mio.observe(cm);}
+  }
+
+  // countdown stepper
+  var hd=document.getElementById('hd');
+  if(hd){var hs=[].slice.call(hd.querySelectorAll('.hs')),hi=0,hn=document.getElementById('hd-n'),hp=document.getElementById('hd-prev'),hx=document.getElementById('hd-next'),ht=null;
+    function hSet(i){hi=Math.max(0,Math.min(hs.length-1,i));hs.forEach(function(h,j){h.classList.toggle('on',j<=hi)});hn.textContent='Stage '+(hi+1)+' of '+hs.length;hp.disabled=hi===0;hx.disabled=hi===hs.length-1;}
+    hp.addEventListener('click',function(){clearInterval(ht);hSet(hi-1)});hx.addEventListener('click',function(){clearInterval(ht);hSet(hi+1)});
+    if(RM){hSet(hs.length-1)}else{hSet(0);var hio=new IntersectionObserver(function(es){if(es[0].isIntersecting){ht=setInterval(function(){if(hi>=hs.length-1){clearInterval(ht);return}hSet(hi+1)},2600);hio.disconnect()}},{threshold:0.4});hio.observe(hd);}
+  }
+
+  // lightbox
+  var lb=document.getElementById('lightbox'),lbi=lb.querySelector('img');
+  document.querySelectorAll('img.zoomable').forEach(function(img){img.addEventListener('click',function(){lbi.src=img.src;lbi.alt=img.alt;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  // flashcards from glossary
+  var cards=[].slice.call(document.querySelectorAll('.gloss .row')).map(function(r){
+    var dd=r.querySelector('dd').cloneNode(true);dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    return{t:r.querySelector('dt').firstChild.textContent.trim(),d:dd.textContent.trim()};});
+  var i=0,fc=document.getElementById('fc');
+  function render(){fc.classList.remove('flip');document.getElementById('fc-term').textContent=cards[i].t;document.getElementById('fc-def').textContent=cards[i].d;document.getElementById('fc-count').textContent=(i+1)+' / '+cards.length;}
+  fc.addEventListener('click',function(){fc.classList.toggle('flip')});
+  fc.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();fc.classList.toggle('flip')}else if(e.key==='ArrowRight'){i=(i+1)%cards.length;render()}else if(e.key==='ArrowLeft'){i=(i-1+cards.length)%cards.length;render()}});
+  document.getElementById('fc-next').addEventListener('click',function(){i=(i+1)%cards.length;render()});
+  document.getElementById('fc-prev').addEventListener('click',function(){i=(i-1+cards.length)%cards.length;render()});
+  document.getElementById('fc-shuffle').addEventListener('click',function(){for(var k=cards.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=cards[k];cards[k]=cards[j];cards[j]=t}i=0;render()});
+  render();
+})();
+</script>
+<script>
+(function(){
+  var qs=[].slice.call(document.querySelectorAll('details.q')),ex=document.getElementById('q-expand'),co=document.getElementById('q-collapse');
+  if(!qs.length||!ex||!co)return;
+  function sync(){var n=qs.filter(function(d){return d.open}).length;ex.disabled=n===qs.length;co.disabled=n===0;}
+  ex.addEventListener('click',function(){qs.forEach(function(d){d.open=true});sync();});
+  co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
+  qs.forEach(function(d){d.addEventListener('toggle',sync)});
+  sync();
+})();
+</script>
+</body>
+</html>
