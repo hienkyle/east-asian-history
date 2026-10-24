@@ -537,6 +537,33 @@ figure.tall figcaption{max-width:620px;margin-left:auto;margin-right:auto}
 /* justified running text */
 main p,main li,.gloss dd,.card p,.callout p,.cap{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .card p,.pair .c,.chain li{text-align:left;hyphens:manual}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -557,13 +584,17 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 4</b> · Europe Enters the Scene</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#arrival">1 · Why the Portuguese came</a></li>
     <li><a href="#silver">2 · Silver, silk &amp; global trade</a></li>
     <li><a href="#japan">3 · Missionaries in Japan</a></li>
@@ -575,11 +606,9 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <li><a href="#women">9 · Women's situations</a></li>
     <li><a href="#neo">10 · Neo-Confucianism compared</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
-  <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
-  </div>
 </nav>
 
 <main>
@@ -634,65 +663,6 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   </div>
   <figcaption><span class="fn">Figure 1.</span> Key events, 1511–1839. Filled dots mark turning points. Dates from pp. 265–269.</figcaption>
   </figure>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Start here</div>
-  <h2>Key terms first</h2>
-  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-macao">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
-
-  <h3 class="gloss-group">Trade and empire</h3>
-  <dl class="gloss">
-    <div class="row" id="g-route" data-short="Long-standing Asian sea routes Europeans joined rather than created."><dt>Indigenous trade routes</dt><dd>Trade routes between Northeast and Southeast Asia, and Muslim and Indian routes across the Indian Ocean, that flourished long before Europeans came. Europeans mostly fit into these networks. <span class="cite">pp. 265, 266</span></dd></div>
-    <div class="row" id="g-spice" data-short="The islands of Indonesia that produced spices; the goal of Portugal's eastward voyages."><dt>Spice Islands</dt><dd>The islands of Indonesia (the Moluccas) that produced spices. The Portuguese followed Muslim and Indian routes there from Goa. <span class="cite">p. 265</span></dd></div>
-    <div class="row" id="g-malacca" data-short="Trading center near the tip of the Malay Peninsula; captured by Portugal in 1511."><dt>Malacca</dt><dd>A Chinese trading center near the tip of the Malay Peninsula, controlling the strait into the South China Sea. Captured by the Portuguese in 1511 and used as their base for reaching China. <span class="cite">p. 265</span></dd></div>
-    <div class="row" id="g-macao" data-short="Portuguese trading post at the mouth of the Pearl River from 1557; first stop for Europeans going to China."><dt>Macao</dt><dd>A Portuguese trading post on vacant land near the mouth of the Pearl River, allowed by local Chinese officials in 1557 without informing Beijing. The first stop for all Europeans going to China until the 1800s; Portuguese until 1999. <span class="cite">p. 265</span></dd></div>
-    <div class="row" id="g-crops" data-short="Corn, sweet potatoes, chili peppers, tobacco: the main new things the Portuguese brought."><dt>New World crops</dt><dd>Corn, sweet potatoes, chili peppers, and tobacco from the Americas: the only significant new products Portuguese traders added to East Asian networks. <span class="cite">p. 265</span></dd></div>
-    <div class="row" id="g-silver" data-short="China's money system ran on silver, so it bought Japanese and New World silver for its silk and porcelain."><dt>Silver trade</dt><dd>China's monetary system depended on silver, and its own production had fallen after 1430. China bought Japanese silver carried by the Portuguese and half of all silver mined in Mexico and Bolivia, paying in silk, porcelain, and lacquer. <span class="cite">pp. 265, 267</span></dd></div>
-    <div class="row" id="g-manila" data-short="Spanish colony from 1571; New World silver from Mexico reached China through it."><dt>Manila · the Pacific route</dt><dd>Spain made the Philippines a colony and founded Manila in 1571. Once Andrés de Urdaneta found a sailing route back across the Pacific to Mexico, Spanish ships carried New World silver through Manila to China. <span class="cite">p. 267</span><span class="needs">Builds on: silver trade</span></dd></div>
-    <div class="row" id="g-monopoly" data-short="From 1550 the Japan trade belonged to the Portuguese crown; a captain major sent the ships each year."><dt>Royal monopoly · captain major</dt><dd>In 1550 the Portuguese viceroy at Goa made the Japan trade a monopoly of the crown. Each year a crown-appointed captain major sent ships to Japan, where warlords competed to attract them to their ports. <span class="cite">p. 267</span></dd></div>
-    <div class="row" id="g-eic" data-short="Chartered trading companies of Britain and the Netherlands, far better funded than Iberian merchants."><dt>East India companies</dt><dd>Trading companies set up by Britain and the Netherlands around 1600 that could raise far more capital than the merchants of Spain and Portugal. The Dutch and British who reached Japan came for these companies, not their governments. <span class="cite">pp. 268–269</span></dd></div>
-    <div class="row" id="g-maritime" data-short="Japan's 1635 order forbidding all Japanese to sail overseas."><dt>Maritime ban</dt><dd>Japan's 1635 order forbidding all Japanese to sail overseas and ordering those in Southeast Asia home or into permanent exile. Later the building of oceangoing ships was banned too. Contrast the Qing ban of 1655–1675, aimed at Ming loyalists on Taiwan. <span class="cite">pp. 268–269</span></dd></div>
-    <div class="row" id="g-dejima" data-short="Artificial island in Nagasaki bay where the Dutch were confined from 1641."><dt>Dejima</dt><dd>An artificial island in Nagasaki bay, first built for the Portuguese. From 1641 the Dutch were confined there. Their yearly ships brought news, kept Japan linked to Southeast Asian trade, and opened the door to Western science and medicine. <span class="cite">p. 269</span><span class="needs">Builds on: maritime ban</span></dd></div>
-    <div class="row" id="g-canton" data-short="After 1759 the only port where the Qing let foreigners trade by sea; tightly controlled."><dt>Canton (Guangzhou) system</dt><dd>After 1759 all Qing maritime trade, with Southeast Asia or Europe, was confined to Canton. Licensed Chinese merchants formed a guild and guaranteed that Europeans obeyed Qing rules. <span class="cite">pp. 268, 280</span></dd></div>
-    <div class="row" id="g-triangle" data-short="Korea–Japan route carrying Japanese copper, Korean ginseng, and Chinese silver."><dt>Triangular trade</dt><dd>The trade route between Korea and Japan that came to carry Japanese copper, Korean ginseng, and Chinese silver. British and Dutch traders tried and failed to break into it. <span class="cite">p. 269</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Missionaries and their reception</h3>
-  <dl class="gloss">
-    <div class="row" id="g-jesuit" data-short="Catholic order founded 1534 to promote scholarship and fight the Reformation; first missionaries to East Asia."><dt>Jesuits</dt><dd>Members of the Society of Jesus, the Catholic order founded by Ignatius Loyola in 1534 to promote Catholic scholarship and combat the Protestant Reformation. The first missionaries to East Asia; they insisted conversion was not to be a step toward conquest. <span class="cite">p. 267</span></dd></div>
-    <div class="row" id="g-mendicant" data-short="Monks who lived on alms (e.g., Dominicans); criticized Jesuits for courting the elite and adapting to Chinese ways."><dt>Mendicant orders</dt><dd>Catholic monks who lived by begging, such as the Dominicans. Allowed into China after 1633, they criticized the Jesuits for aiming at the ruling class and fitting Christianity into Chinese ideas instead of appealing to the masses. <span class="cite">pp. 267–268</span><span class="needs">Builds on: Jesuits</span></dd></div>
-    <div class="row" id="g-bull" data-short="A formal papal decree; one in the 1580s put Japan off limits to orders other than the Jesuits."><dt>Papal bull</dt><dd>A formal decree from the pope. The young Kyushu samurai who reached Rome helped the Jesuits obtain one closing Japan to other orders. It could not be enforced, and quarrels between orders hurt the missionaries' credibility. <span class="cite">p. 267</span><span class="needs">Builds on: Jesuits, mendicant orders</span></dd></div>
-    <div class="row" id="g-filial" data-short="Reverence for parents and ancestors; the key Confucian virtue, trained through ancestor rites."><dt>Filial piety · ancestral rites</dt><dd>Filial piety: reverence for parents, the key Confucian virtue. Ancestral rites, performed at a family altar holding ancestral tablets, honored the dead and trained this virtue. <span class="cite">pp. 268, 304</span></dd></div>
-    <div class="row" id="g-accom" data-short="Ricci's approach: present Christianity in literati style; treat ancestor rites as compatible, not worship."><dt>Accommodation</dt><dd>Matteo Ricci's approach: dress and study like Chinese literati, and treat Confucianism as compatible with Christianity, since both stressed morality and ancestral rites were not worship. <span class="cite">p. 268</span><span class="needs">Builds on: Jesuits, filial piety</span></dd></div>
-    <div class="row" id="g-rites" data-short="Dispute over whether converts could keep ancestral altars; Rome said no (1715), and Kangxi banned missionaries."><dt>Rites controversy</dt><dd>The dispute over whether Chinese converts could keep their ancestral altars. In 1715 Ricci's accommodation was deemed heretical; the angry Kangxi emperor banned missionary work, and the Qing came to view all Europeans with suspicion. <span class="cite">p. 268</span><span class="needs">Builds on: accommodation, mendicant orders</span></dd></div>
-    <div class="row" id="g-hidden" data-short="Japanese Christians who kept their faith in secret after the bans, e.g. Mary disguised as Kannon."><dt>Hidden Christians</dt><dd>Japanese Christians who kept practicing in secret after the bans, for example by making statues of the Virgin Mary in the guise of Kannon, the Buddhist goddess of mercy. <span class="cite">p. 267</span></dd></div>
-    <div class="row" id="g-western" data-short="Korean term lumping Christian theology and Western science together, learned from Jesuit books in Chinese."><dt>Western Learning</dt><dd>The single term Koreans used for both Christian theology and Western science, which reached Korea in Jesuit books in Chinese brought back from Beijing. <span class="cite">pp. 260, 269</span><span class="needs">Builds on: Jesuits</span></dd></div>
-    <div class="row" id="g-evil" data-short="What the Korean court called Christianity, because it seemed to defy filial piety."><dt>"Evil teaching"</dt><dd>The Korean court's name for Christianity, which it saw as running counter to filial piety. It executed three French priests and their converts on this charge in 1839. <span class="cite">p. 269</span><span class="needs">Builds on: filial piety, rites controversy</span></dd></div>
-    <div class="row" id="g-kowtow" data-short="Kneeling on both knees and bowing the head to the ground before the emperor; Macartney refused (1793)."><dt>Kowtow</dt><dd>Kneeling on both knees and bowing the head to the ground before the emperor. Lord Macartney objected to performing it in 1793. <span class="cite">p. 280</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Women's situations</h3>
-  <dl class="gloss">
-    <div class="row" id="g-patri" data-short="Patrilineal: descent traced through men. Patriarchal: authority held by men."><dt>Patrilineal · patriarchal</dt><dd>Patrilineal: kinship and descent traced through the male line. Patriarchal: authority in the family held by men. China's family was both from as far back as historians can trace. <span class="cite">p. 264</span></dd></div>
-    <div class="row" id="g-bilateral" data-short="Kinship traced through both men and women; early Korea and Japan."><dt>Bilateral kinship</dt><dd>Tracing kinship through both men and women, as in Silla and Goryeo Korea and Nara and Heian Japan, where newlyweds more often lived with the wife's family. Both later grew more patrilineal. <span class="cite">p. 264</span><span class="needs">Builds on: patrilineal</span></dd></div>
-    <div class="row" id="g-concubine" data-short="A secondary partner of a man, ranked below his wife; her sons had lesser standing."><dt>Concubine</dt><dd>A woman in a recognized but secondary union with a man, ranked below his wife. Men in all three countries could take concubines. <span class="cite">pp. 264, 304</span></dd></div>
-    <div class="row" id="g-vernacular" data-short="Writing that follows everyday speech, as opposed to classical literary Chinese."><dt>Vernacular vs. classical</dt><dd>Vernacular writing follows everyday speech; classical writing uses the elegant literary language of the Chinese classics. In Qing China fiction and drama used the vernacular, but women poets chose the classical language. <span class="cite">p. 264</span></dd></div>
-    <div class="row" id="g-kana" data-short="Japanese syllabary of the 800s that made writing Japanese easy; Heian women used it to write many books."><dt>Kana</dt><dd>A syllabary (signs for syllables) developed in the ninth century that made it much easier to write in Japanese. Heian women used it to write an astonishing number of books. <span class="cite">p. 264</span><span class="needs">Builds on: vernacular</span></dd></div>
-    <div class="row" id="g-hangul" data-short="Korean alphabet of the 1400s; women were among its early users."><dt>Hangul</dt><dd>The Korean alphabet invented in the fifteenth century, making it possible to write in Korean. Women predominated among its early users, and far more writings by women survive after it. See <a href="unit1.html">Unit 1</a>. <span class="cite">p. 264</span><span class="needs">Builds on: vernacular</span></dd></div>
-    <div class="row" id="g-footbinding" data-short="Binding girls' feet small; spread through Chinese society; not copied by Korea or Japan."><dt>Footbinding</dt><dd>Binding girls' feet to keep them small. Traced to the Song, it spread deeper into Chinese society later. Not copied by Korea, Japan, or most non-Han groups within China. <span class="cite">p. 264</span></dd></div>
-    <div class="row" id="g-widow" data-short="Ideal that widows never remarry; strong in China and Joseon Korea."><dt>Widow chastity</dt><dd>The ideal that a widow should never remarry. It spread in China and became the ideal in Joseon Korea, where sons of remarried widows were barred from the civil service exams. <span class="cite">pp. 264, 304</span></dd></div>
-    <div class="row" id="g-didactic" data-short="Texts written to teach morals, e.g. how women should behave."><dt>Didactic texts</dt><dd>Texts written to teach moral lessons, such as how women should behave. What they prescribe often differs from how women appear in fiction and their own writings. <span class="cite">p. 264</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Neo-Confucianism</h3>
-  <dl class="gloss">
-    <div class="row" id="g-li" data-short="Principle: the invisible pattern underlying everything."><dt>Li <small>principle</small></dt><dd>The invisible principle or pattern that informs everything and links all things; it differs in different objects. <span class="cite">p. 304</span></dd></div>
-    <div class="row" id="g-qi" data-short="Matter or physical force that gives things their form."><dt>Qi <small>matter · physical force</small></dt><dd>What makes things physical and different from one another. For Zhu Xi neither li nor qi could exist without the other. <span class="cite">p. 304</span><span class="needs">Builds on: li</span></dd></div>
-    <div class="row" id="g-xin" data-short="Mind-heart: links li and qi in people; pure, but clouded by desire."><dt>Xin <small>mind · heart</small></dt><dd>What links li and qi in a person: pure in its underlying form, clouded by desires and feelings in its physical form, so these must be regulated. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi</span></dd></div>
-    <div class="row" id="g-neo" data-short="Zhu Xi's philosophy of li and qi; regulated life through rites and filial piety."><dt>Neo-Confucianism</dt><dd>The philosophy systematized by Zhu Xi (1130–1200) explaining the universe and human nature through li and qi, and regulating behavior and family life with rites centered on filial piety. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi, xin, filial piety</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 ARRIVAL -->
@@ -1206,6 +1176,69 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <div class="a"><ul><li>Korea applied family rites most strictly; China made Zhu Xi the exam orthodoxy; Japan used it to legitimate rule.</li><li>In each case politics, older kinship systems, or Buddhism shaped how it was lived.</li></ul></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-macao">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
+
+  <h3 class="gloss-group">Trade and empire</h3>
+  <dl class="gloss">
+    <div class="row" id="g-route" data-short="Long-standing Asian sea routes Europeans joined rather than created."><dt>Indigenous trade routes</dt><dd>Trade routes between Northeast and Southeast Asia, and Muslim and Indian routes across the Indian Ocean, that flourished long before Europeans came. Europeans mostly fit into these networks. <span class="cite">pp. 265, 266</span></dd></div>
+    <div class="row" id="g-spice" data-short="The islands of Indonesia that produced spices; the goal of Portugal's eastward voyages."><dt>Spice Islands</dt><dd>The islands of Indonesia (the Moluccas) that produced spices. The Portuguese followed Muslim and Indian routes there from Goa. <span class="cite">p. 265</span></dd></div>
+    <div class="row" id="g-malacca" data-short="Trading center near the tip of the Malay Peninsula; captured by Portugal in 1511."><dt>Malacca</dt><dd>A Chinese trading center near the tip of the Malay Peninsula, controlling the strait into the South China Sea. Captured by the Portuguese in 1511 and used as their base for reaching China. <span class="cite">p. 265</span></dd></div>
+    <div class="row" id="g-macao" data-short="Portuguese trading post at the mouth of the Pearl River from 1557; first stop for Europeans going to China."><dt>Macao</dt><dd>A Portuguese trading post on vacant land near the mouth of the Pearl River, allowed by local Chinese officials in 1557 without informing Beijing. The first stop for all Europeans going to China until the 1800s; Portuguese until 1999. <span class="cite">p. 265</span></dd></div>
+    <div class="row" id="g-crops" data-short="Corn, sweet potatoes, chili peppers, tobacco: the main new things the Portuguese brought."><dt>New World crops</dt><dd>Corn, sweet potatoes, chili peppers, and tobacco from the Americas: the only significant new products Portuguese traders added to East Asian networks. <span class="cite">p. 265</span></dd></div>
+    <div class="row" id="g-silver" data-short="China's money system ran on silver, so it bought Japanese and New World silver for its silk and porcelain."><dt>Silver trade</dt><dd>China's monetary system depended on silver, and its own production had fallen after 1430. China bought Japanese silver carried by the Portuguese and half of all silver mined in Mexico and Bolivia, paying in silk, porcelain, and lacquer. <span class="cite">pp. 265, 267</span></dd></div>
+    <div class="row" id="g-manila" data-short="Spanish colony from 1571; New World silver from Mexico reached China through it."><dt>Manila · the Pacific route</dt><dd>Spain made the Philippines a colony and founded Manila in 1571. Once Andrés de Urdaneta found a sailing route back across the Pacific to Mexico, Spanish ships carried New World silver through Manila to China. <span class="cite">p. 267</span><span class="needs">Builds on: silver trade</span></dd></div>
+    <div class="row" id="g-monopoly" data-short="From 1550 the Japan trade belonged to the Portuguese crown; a captain major sent the ships each year."><dt>Royal monopoly · captain major</dt><dd>In 1550 the Portuguese viceroy at Goa made the Japan trade a monopoly of the crown. Each year a crown-appointed captain major sent ships to Japan, where warlords competed to attract them to their ports. <span class="cite">p. 267</span></dd></div>
+    <div class="row" id="g-eic" data-short="Chartered trading companies of Britain and the Netherlands, far better funded than Iberian merchants."><dt>East India companies</dt><dd>Trading companies set up by Britain and the Netherlands around 1600 that could raise far more capital than the merchants of Spain and Portugal. The Dutch and British who reached Japan came for these companies, not their governments. <span class="cite">pp. 268–269</span></dd></div>
+    <div class="row" id="g-maritime" data-short="Japan's 1635 order forbidding all Japanese to sail overseas."><dt>Maritime ban</dt><dd>Japan's 1635 order forbidding all Japanese to sail overseas and ordering those in Southeast Asia home or into permanent exile. Later the building of oceangoing ships was banned too. Contrast the Qing ban of 1655–1675, aimed at Ming loyalists on Taiwan. <span class="cite">pp. 268–269</span></dd></div>
+    <div class="row" id="g-dejima" data-short="Artificial island in Nagasaki bay where the Dutch were confined from 1641."><dt>Dejima</dt><dd>An artificial island in Nagasaki bay, first built for the Portuguese. From 1641 the Dutch were confined there. Their yearly ships brought news, kept Japan linked to Southeast Asian trade, and opened the door to Western science and medicine. <span class="cite">p. 269</span><span class="needs">Builds on: maritime ban</span></dd></div>
+    <div class="row" id="g-canton" data-short="After 1759 the only port where the Qing let foreigners trade by sea; tightly controlled."><dt>Canton (Guangzhou) system</dt><dd>After 1759 all Qing maritime trade, with Southeast Asia or Europe, was confined to Canton. Licensed Chinese merchants formed a guild and guaranteed that Europeans obeyed Qing rules. <span class="cite">pp. 268, 280</span></dd></div>
+    <div class="row" id="g-triangle" data-short="Korea–Japan route carrying Japanese copper, Korean ginseng, and Chinese silver."><dt>Triangular trade</dt><dd>The trade route between Korea and Japan that came to carry Japanese copper, Korean ginseng, and Chinese silver. British and Dutch traders tried and failed to break into it. <span class="cite">p. 269</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Missionaries and their reception</h3>
+  <dl class="gloss">
+    <div class="row" id="g-jesuit" data-short="Catholic order founded 1534 to promote scholarship and fight the Reformation; first missionaries to East Asia."><dt>Jesuits</dt><dd>Members of the Society of Jesus, the Catholic order founded by Ignatius Loyola in 1534 to promote Catholic scholarship and combat the Protestant Reformation. The first missionaries to East Asia; they insisted conversion was not to be a step toward conquest. <span class="cite">p. 267</span></dd></div>
+    <div class="row" id="g-mendicant" data-short="Monks who lived on alms (e.g., Dominicans); criticized Jesuits for courting the elite and adapting to Chinese ways."><dt>Mendicant orders</dt><dd>Catholic monks who lived by begging, such as the Dominicans. Allowed into China after 1633, they criticized the Jesuits for aiming at the ruling class and fitting Christianity into Chinese ideas instead of appealing to the masses. <span class="cite">pp. 267–268</span><span class="needs">Builds on: Jesuits</span></dd></div>
+    <div class="row" id="g-bull" data-short="A formal papal decree; one in the 1580s put Japan off limits to orders other than the Jesuits."><dt>Papal bull</dt><dd>A formal decree from the pope. The young Kyushu samurai who reached Rome helped the Jesuits obtain one closing Japan to other orders. It could not be enforced, and quarrels between orders hurt the missionaries' credibility. <span class="cite">p. 267</span><span class="needs">Builds on: Jesuits, mendicant orders</span></dd></div>
+    <div class="row" id="g-filial" data-short="Reverence for parents and ancestors; the key Confucian virtue, trained through ancestor rites."><dt>Filial piety · ancestral rites</dt><dd>Filial piety: reverence for parents, the key Confucian virtue. Ancestral rites, performed at a family altar holding ancestral tablets, honored the dead and trained this virtue. <span class="cite">pp. 268, 304</span></dd></div>
+    <div class="row" id="g-accom" data-short="Ricci's approach: present Christianity in literati style; treat ancestor rites as compatible, not worship."><dt>Accommodation</dt><dd>Matteo Ricci's approach: dress and study like Chinese literati, and treat Confucianism as compatible with Christianity, since both stressed morality and ancestral rites were not worship. <span class="cite">p. 268</span><span class="needs">Builds on: Jesuits, filial piety</span></dd></div>
+    <div class="row" id="g-rites" data-short="Dispute over whether converts could keep ancestral altars; Rome said no (1715), and Kangxi banned missionaries."><dt>Rites controversy</dt><dd>The dispute over whether Chinese converts could keep their ancestral altars. In 1715 Ricci's accommodation was deemed heretical; the angry Kangxi emperor banned missionary work, and the Qing came to view all Europeans with suspicion. <span class="cite">p. 268</span><span class="needs">Builds on: accommodation, mendicant orders</span></dd></div>
+    <div class="row" id="g-hidden" data-short="Japanese Christians who kept their faith in secret after the bans, e.g. Mary disguised as Kannon."><dt>Hidden Christians</dt><dd>Japanese Christians who kept practicing in secret after the bans, for example by making statues of the Virgin Mary in the guise of Kannon, the Buddhist goddess of mercy. <span class="cite">p. 267</span></dd></div>
+    <div class="row" id="g-western" data-short="Korean term lumping Christian theology and Western science together, learned from Jesuit books in Chinese."><dt>Western Learning</dt><dd>The single term Koreans used for both Christian theology and Western science, which reached Korea in Jesuit books in Chinese brought back from Beijing. <span class="cite">pp. 260, 269</span><span class="needs">Builds on: Jesuits</span></dd></div>
+    <div class="row" id="g-evil" data-short="What the Korean court called Christianity, because it seemed to defy filial piety."><dt>"Evil teaching"</dt><dd>The Korean court's name for Christianity, which it saw as running counter to filial piety. It executed three French priests and their converts on this charge in 1839. <span class="cite">p. 269</span><span class="needs">Builds on: filial piety, rites controversy</span></dd></div>
+    <div class="row" id="g-kowtow" data-short="Kneeling on both knees and bowing the head to the ground before the emperor; Macartney refused (1793)."><dt>Kowtow</dt><dd>Kneeling on both knees and bowing the head to the ground before the emperor. Lord Macartney objected to performing it in 1793. <span class="cite">p. 280</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Women's situations</h3>
+  <dl class="gloss">
+    <div class="row" id="g-patri" data-short="Patrilineal: descent traced through men. Patriarchal: authority held by men."><dt>Patrilineal · patriarchal</dt><dd>Patrilineal: kinship and descent traced through the male line. Patriarchal: authority in the family held by men. China's family was both from as far back as historians can trace. <span class="cite">p. 264</span></dd></div>
+    <div class="row" id="g-bilateral" data-short="Kinship traced through both men and women; early Korea and Japan."><dt>Bilateral kinship</dt><dd>Tracing kinship through both men and women, as in Silla and Goryeo Korea and Nara and Heian Japan, where newlyweds more often lived with the wife's family. Both later grew more patrilineal. <span class="cite">p. 264</span><span class="needs">Builds on: patrilineal</span></dd></div>
+    <div class="row" id="g-concubine" data-short="A secondary partner of a man, ranked below his wife; her sons had lesser standing."><dt>Concubine</dt><dd>A woman in a recognized but secondary union with a man, ranked below his wife. Men in all three countries could take concubines. <span class="cite">pp. 264, 304</span></dd></div>
+    <div class="row" id="g-vernacular" data-short="Writing that follows everyday speech, as opposed to classical literary Chinese."><dt>Vernacular vs. classical</dt><dd>Vernacular writing follows everyday speech; classical writing uses the elegant literary language of the Chinese classics. In Qing China fiction and drama used the vernacular, but women poets chose the classical language. <span class="cite">p. 264</span></dd></div>
+    <div class="row" id="g-kana" data-short="Japanese syllabary of the 800s that made writing Japanese easy; Heian women used it to write many books."><dt>Kana</dt><dd>A syllabary (signs for syllables) developed in the ninth century that made it much easier to write in Japanese. Heian women used it to write an astonishing number of books. <span class="cite">p. 264</span><span class="needs">Builds on: vernacular</span></dd></div>
+    <div class="row" id="g-hangul" data-short="Korean alphabet of the 1400s; women were among its early users."><dt>Hangul</dt><dd>The Korean alphabet invented in the fifteenth century, making it possible to write in Korean. Women predominated among its early users, and far more writings by women survive after it. See <a href="unit1.html">Unit 1</a>. <span class="cite">p. 264</span><span class="needs">Builds on: vernacular</span></dd></div>
+    <div class="row" id="g-footbinding" data-short="Binding girls' feet small; spread through Chinese society; not copied by Korea or Japan."><dt>Footbinding</dt><dd>Binding girls' feet to keep them small. Traced to the Song, it spread deeper into Chinese society later. Not copied by Korea, Japan, or most non-Han groups within China. <span class="cite">p. 264</span></dd></div>
+    <div class="row" id="g-widow" data-short="Ideal that widows never remarry; strong in China and Joseon Korea."><dt>Widow chastity</dt><dd>The ideal that a widow should never remarry. It spread in China and became the ideal in Joseon Korea, where sons of remarried widows were barred from the civil service exams. <span class="cite">pp. 264, 304</span></dd></div>
+    <div class="row" id="g-didactic" data-short="Texts written to teach morals, e.g. how women should behave."><dt>Didactic texts</dt><dd>Texts written to teach moral lessons, such as how women should behave. What they prescribe often differs from how women appear in fiction and their own writings. <span class="cite">p. 264</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Neo-Confucianism</h3>
+  <dl class="gloss">
+    <div class="row" id="g-li" data-short="Principle: the invisible pattern underlying everything."><dt>Li <small>principle</small></dt><dd>The invisible principle or pattern that informs everything and links all things; it differs in different objects. <span class="cite">p. 304</span></dd></div>
+    <div class="row" id="g-qi" data-short="Matter or physical force that gives things their form."><dt>Qi <small>matter · physical force</small></dt><dd>What makes things physical and different from one another. For Zhu Xi neither li nor qi could exist without the other. <span class="cite">p. 304</span><span class="needs">Builds on: li</span></dd></div>
+    <div class="row" id="g-xin" data-short="Mind-heart: links li and qi in people; pure, but clouded by desire."><dt>Xin <small>mind · heart</small></dt><dd>What links li and qi in a person: pure in its underlying form, clouded by desires and feelings in its physical form, so these must be regulated. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi</span></dd></div>
+    <div class="row" id="g-neo" data-short="Zhu Xi's philosophy of li and qi; regulated life through rites and filial piety."><dt>Neo-Confucianism</dt><dd>The philosophy systematized by Zhu Xi (1130–1200) explaining the universe and human nature through li and qi, and regulating behavior and family life with rites centered on filial piety. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi, xin, filial piety</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1455,6 +1488,21 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>

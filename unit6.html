@@ -631,6 +631,33 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
 #mctrl .step[data-l="jp"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
 #mctrl .step[data-l="home"][aria-pressed="true"],#mctrl .step[data-l="box"][aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
 @media (prefers-reduced-motion:reduce){#cmap .ev circle.halo,#cmap .lyr.on .canal,#cmap .lyr.on .move{animation:none}}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -651,13 +678,17 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 6</b> · The Qing in Crisis</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#fiscal">1 · Trouble at home</a></li>
     <li><a href="#opium">2 · The Opium War, revisited</a></li>
     <li><a href="#taiping">3 · The Taiping Rebellion</a></li>
@@ -672,11 +703,9 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
     <li><a href="#compare">12 · The Qing in comparison</a></li>
     <li><a href="#summary">Summary: 1800 vs. 1900</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
-  <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
-  </div>
 </nav>
 
 <main>
@@ -734,80 +763,6 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
   </div>
   <figcaption><span class="fn">Figure 1.</span> Key events, 1800–1901. Filled dots mark turning points. Dates from pp. 314–330.</figcaption>
   </figure>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Start here</div>
-  <h2>Key terms first</h2>
-  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-taiping">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
-
-  <h3 class="gloss-group">Decline at home</h3>
-  <dl class="gloss">
-    <div class="row" id="g-decline" data-short="The familiar signs that a dynasty is failing: peasant poverty, unrest, and an empty treasury."><dt>Dynastic decline</dt><dd>The pattern Chinese history taught people to expect as a dynasty weakened: peasant poverty, social unrest, and government bankruptcy. The Qing seemed to be slipping into it in the early 1800s. <span class="cite">pp. 314, 332</span></dd></div>
-    <div class="row" id="g-infanticide" data-short="Killing unwanted newborn girls; it rose in hard times and left too few women to marry."><dt>Female infanticide</dt><dd>Killing newborn daughters. Poor families who could raise only two or three children, and who saw sons as necessities, did this more in hard times. The result was a shortage of marriageable women. <span class="cite">p. 315</span></dd></div>
-    <div class="row" id="g-floating" data-short="Young men with no land or wife who drifted from job to job: boatmen, porters, beggars."><dt>Floating population</dt><dd>Young men who left home for work and never settled, taking seasonal farm jobs or working as boatmen, charcoal burners, sedan-chair carriers, beggars, or thieves. With few women to marry, they had little reason to stay home. <span class="cite">p. 315</span><span class="needs">Builds on: female infanticide</span></dd></div>
-    <div class="row" id="g-banners" data-short="The hereditary, Manchu-led military caste; useless in war by 1800 but too tied to Manchu identity to abolish."><dt>Banners · bannermen</dt><dd>The hereditary military force of the Qing, supported by state stipends (see <a href="unit2.html">Unit 2</a>). By 1800 it no longer worked in war, but because it was bound up with Manchu identity and privileges it could not simply be disbanded. <span class="cite">p. 315</span></dd></div>
-    <div class="row" id="g-green" data-short="The Qing's professional (not hereditary) army of Chinese recruits."><dt>Army of the Green Standard</dt><dd>A professional army of Chinese recruits. Along with local militias, it was what the Qing used against the late-1700s rebellions once the banners failed. <span class="cite">p. 315</span><span class="needs">Builds on: banners</span></dd></div>
-    <div class="row" id="g-taxgrain" data-short="Grain collected as tax in the southeast and shipped north to feed the capital."><dt>Tax grain</dt><dd>Part of the land tax paid in grain and shipped from the rich southeast to the capital. Most of it traveled on the Grand Canal. <span class="cite">p. 316</span></dd></div>
-    <div class="row" id="g-canal" data-short="1,747-km canal carrying tax grain to Beijing; silted up by 1824, largely abandoned by 1850."><dt>Grand Canal</dt><dd>The 1,747-km waterway linking Hangzhou to Beijing, with locks, dams, and sluice gates to climb 138 feet over the hills of Shandong. Over 50,000 boatmen and laborers moved <a class="term" href="#g-taxgrain">tax grain</a> on it. Neglect let silt block it in 1824; by 1850 it was largely abandoned. <span class="cite">p. 316</span><span class="needs">Builds on: tax grain</span></dd></div>
-    <div class="row" id="g-degrees" data-short="Juren: provincial exam degree. Jinshi: the top, capital-level degree. Bannermen had special quotas."><dt>Juren and jinshi degrees</dt><dd>Civil service examination degrees: the <i>juren</i> was earned at the provincial level, the <i>jinshi</i> at the capital and needed for high office. Manchu bannermen had special quotas, and degrees could also be given as rewards or honors. <span class="cite">pp. 277, 319, 322</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">The rebellions</h3>
-  <dl class="gloss">
-    <div class="row" id="g-hakka" data-short="A large Han Chinese group in the far south with its own dialect; Hong Xiuquan's people."><dt>Hakka</dt><dd>A large Han Chinese ethnic group with a distinct dialect, living mostly in the far south. Hong Xiuquan was Hakka, and his movement drew many Hakka followers. <span class="cite">p. 318</span></dd></div>
-    <div class="row" id="g-gws" data-short="Hong Xiuquan's sect: one God, Ten Commandments, communal prayer, no idols, opium, or footbinding."><dt>God Worshipping Society</dt><dd>The religious sect Hong Xiuquan founded after reading a Christian tract. It adopted the Ten Commandments, belief in one God, and communal prayer and hymns, and told followers to destroy idols and give up opium, alcohol, footbinding, and prostitution. <span class="cite">p. 318</span><span class="needs">Builds on: Hakka</span></dd></div>
-    <div class="row" id="g-queue" data-short="The Manchu hairstyle (shaved front, long braid) required of Chinese men; Taipings let their hair grow."><dt>Queue</dt><dd>The Manchu hairstyle that the Qing forced on all Chinese men: the front of the head shaved and the rest worn in a long braid. Taiping men let their hair grow long, an act of open rebellion. <span class="cite">pp. 273, 318</span></dd></div>
-    <div class="row" id="g-taiping" data-short="Hong Xiuquan's 'Heavenly Kingdom of Great Peace' (1851–1864), capital Nanjing; 20–30 million died."><dt>Taiping · Heavenly Kingdom of Great Peace</dt><dd>The state Hong Xiuquan proclaimed in 1851, with its capital at Nanjing from 1853. It promised equal landholding and equality of men and women. The Taiping Rebellion (1851–1864) cost some 20 to 30 million lives. <span class="cite">pp. 318–321</span><span class="needs">Builds on: God Worshipping Society, queue</span></dd></div>
-    <div class="row" id="g-regional" data-short="Zeng Guofan's new army: gentry officers recruited local farmers, paid from local taxes, loyal to Zeng."><dt>Zeng Guofan's army (a regional army)</dt><dd>The force Zeng Guofan raised in Hunan. Confucian-educated officers recruited farmers from their own area; local tax money paid them well. Soldiers were loyal to their officers and officers to Zeng, making it essentially a private army. It took 12 years and 120,000 troops to defeat the Taipings. <span class="cite">pp. 319–320</span><span class="needs">Builds on: banners, Army of the Green Standard</span></dd></div>
-    <div class="row" id="g-nian" data-short="Mounted bandit gangs of the north (1853–1868), swollen by canal unemployment and the 1855 Yellow River flood."><dt>Nian</dt><dd>Gangs of horse-riding bandits in north China who seized crops, robbed merchants, and kidnapped the rich. Unemployed canal boatmen and people made homeless by the 1855 Yellow River flood joined them. Their rebellion lasted 1853–1868. <span class="cite">pp. 316, 320–321</span><span class="needs">Builds on: Grand Canal</span></dd></div>
-    <div class="row" id="g-heterodox" data-short="Teachings the state judged to be outside approved orthodoxy, like the White Lotus or Taiping."><dt>Heterodox</dt><dd>Outside the beliefs the state accepted as correct (orthodox). Zuo Zongtang classed Sufis as heterodox, like the White Lotus and Taiping sects, and ordered them killed. <span class="cite">pp. 285, 321</span></dd></div>
-    <div class="row" id="g-sufi" data-short="A mystical school of Islam whose spread in Gansu lay behind the northwest Muslim revolt."><dt>Sufism</dt><dd>A mystical school of Islam. Its spread in the northwest (Gansu) was one root of the Muslim rebellion there, though much of the violence came from long Han–Muslim hostility. <span class="cite">p. 321</span><span class="needs">See also: heterodox</span></dd></div>
-    <div class="row" id="g-panthay" data-short="The sultanate Muslim rebels declared at Dali, Yunnan; the Qing regained the province in 1873."><dt>Panthay sultanate</dt><dd>The state Muslim rebels announced after taking Dali in Yunnan, where Han settlers had seized Muslim lands and mines. The Qing regained control in 1873 by playing Muslim factions against each other. <span class="cite">pp. 320–321</span></dd></div>
-    <div class="row" id="g-blackflags" data-short="Taiping remnants in Vietnam who fought French colonial expansion."><dt>Black Flags</dt><dd>Taiping armies that fled to Vietnam after Nanjing fell, where they fought against French colonial expansion. <span class="cite">p. 321</span><span class="needs">Builds on: Taiping</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Treaties and foreigners</h3>
-  <dl class="gloss">
-    <div class="row" id="g-unequal" data-short="A treaty forced at gunpoint that benefited the foreign power but not China."><dt>Unequal treaty</dt><dd>A treaty concluded at gunpoint that gave benefits to the foreign power but not to China, beginning with the Treaty of Nanjing (1842). See <a href="unit5.html">Unit 5</a>. <span class="cite">p. 317</span></dd></div>
-    <div class="row" id="g-extra" data-short="Foreigners in China answered only to their own country's laws and courts."><dt>Extraterritoriality</dt><dd>The treaty right of foreigners in China to be judged only by their own country's law, even in disputes with Chinese. German missionaries in Shandong claimed it for their converts too. <span class="cite">pp. 317, 328</span><span class="needs">Builds on: unequal treaty</span></dd></div>
-    <div class="row" id="g-mfn" data-short="Any new privilege China gave one power went automatically to the others."><dt>Most favored nation clause</dt><dd>A treaty clause that extended to a power any new privilege China granted another. <span class="cite">p. 317</span><span class="needs">Builds on: unequal treaty</span></dd></div>
-    <div class="row" id="g-indemnity" data-short="Money a defeated state is forced to pay the victor; 'the loser pays.'"><dt>Indemnity · reparations</dt><dd>Money China was forced to pay after each defeat or incident, from 21 million ounces of silver in 1842 to 450 million silver dollars in 1901. China borrowed abroad to pay, which made reform harder. <span class="cite">pp. 317, 325–326, 330</span></dd></div>
-    <div class="row" id="g-arrow" data-short="1856–1860 British-French war on China (named for the ship Arrow); ended with Beijing occupied."><dt>Arrow War · Second Opium War</dt><dd>The British and French attacks of 1856–1860, named after a ship, the <i>Arrow</i>, that gave Britain a pretext. It produced the 1858 treaties and the 1860 occupation of Beijing. <span class="cite">pp. 321–322</span><span class="needs">Builds on: unequal treaty</span></dd></div>
-    <div class="row" id="g-transit" data-short="Tax on foreign goods moving inside China, capped at 2.5% in 1858."><dt>Transit tariff</dt><dd>A tax on foreign goods as they moved within China. The 1858 treaties fixed it at no more than 2.5 percent. <span class="cite">p. 322</span><span class="needs">Builds on: Arrow War</span></dd></div>
-    <div class="row" id="g-port" data-short="A city opened by treaty to foreign trade and residence; about 100 by 1900."><dt>Treaty port</dt><dd>A city opened by treaty to foreign trade and residence. There were 100 by 1900, but only Shanghai, Tianjin, Hankou, Guangzhou, and Dalian became major centers of foreign life. (Hong Kong was a colony, not a treaty port.) <span class="cite">p. 325</span><span class="needs">Builds on: unequal treaty</span></dd></div>
-    <div class="row" id="g-concession" data-short="A district of a treaty port run by foreigners, with its own police, courts, and taxes."><dt>Foreign concession</dt><dd>An area carved out of a treaty-port city, with foreign police and law courts and its own taxes, even though most residents stayed Chinese. The Qing accepted this with little protest. <span class="cite">p. 325</span><span class="needs">Builds on: treaty port</span></dd></div>
-    <div class="row" id="g-customs" data-short="China's tariff office, staffed at the top by Westerners, which grew out of the Taiping years."><dt>Imperial Maritime Customs</dt><dd>When the Taiping war disrupted tariff collection, British and American consuls collected tariffs themselves. This became a permanent customs service, run at the top by Westerners, that also reported on trade and built telegraph and postal systems. <span class="cite">p. 325</span><span class="needs">Builds on: treaty port</span></dd></div>
-    <div class="row" id="g-gunboat" data-short="Sending warships to threaten retaliation, e.g., after attacks on missionaries."><dt>Gunboat diplomacy</dt><dd>Sending warships to the nearest port to threaten retaliation, as powers did when missionaries or their converts were attacked. <span class="cite">p. 325</span></dd></div>
-    <div class="row" id="g-tianjin" data-short="1870 riot at a French orphanage in Tianjin; about 20 foreigners and dozens of converts killed; China paid."><dt>Tianjin Massacre (1870)</dt><dd>A riot sparked by rumors about deaths at a French Catholic orphanage. After the French consul fired at two officials, a crowd killed him, twelve priests and nuns, seven other foreigners, and dozens of Chinese converts. China paid reparations and apologized. <span class="cite">pp. 325–326</span><span class="needs">See also: indemnity</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Reform</h3>
-  <dl class="gloss">
-    <div class="row" id="g-regent" data-short="Someone who rules for a child emperor."><dt>Regent · empress dowager</dt><dd>A regent rules on behalf of a ruler too young to govern. An empress dowager is the mother of a reigning emperor: Cixi was regent for her son Tongzhi (from 1861) and her nephew Guangxu (from 1875). <span class="cite">pp. 322, 324</span></dd></div>
-    <div class="row" id="g-selfstr" data-short="1860s–1890s effort to save the dynasty by adopting Western arms, industry, and learning."><dt>Self-Strengthening</dt><dd>The reform effort led by Zeng Guofan, Li Hongzhang, and Prince Gong after 1861: arsenals and shipyards, translated Western books, language schools, students sent abroad, a foreign office, and later mines, railways, and factories. Real, but never fundamental or fast enough. <span class="cite">pp. 322–324, 331</span></dd></div>
-    <div class="row" id="g-fo" data-short="China's first office for foreign affairs (1861), headed by Prince Gong."><dt>Foreign office (Zongli Yamen†)</dt><dd>The office set up to manage diplomacy, with Prince Gong in charge. By 1880 China had embassies in seven capitals, from London to Tokyo. Its Chinese name, <i>Zongli Yamen</i>, is from outside the textbook. <span class="cite">p. 323</span><span class="needs">Builds on: Self-Strengthening</span></dd></div>
-    <div class="row" id="g-arsenal" data-short="A state weapons factory, like the Jiangnan Arsenal at Shanghai (1865)."><dt>Arsenal</dt><dd>A factory that makes weapons. Li Hongzhang and Zeng Guofan founded the Jiangnan Arsenal at Shanghai in 1865, with a bureau to translate Western books. <span class="cite">p. 323</span><span class="needs">Builds on: Self-Strengthening</span></dd></div>
-    <div class="row" id="g-gsme" data-short="A business run by merchants under official supervision, e.g., China Merchants' Steam Navigation Company."><dt>Government-supervised merchant enterprise</dt><dd>A company run by merchants under official oversight. Li supported the China Merchants' Steam Navigation Company on this basis in 1872. <span class="cite">p. 323</span><span class="needs">Builds on: Self-Strengthening</span></dd></div>
-    <div class="row" id="g-tribute" data-short="Rules by which other rulers sent missions acknowledging the emperor; broken up under Cixi."><dt>Tribute system</dt><dd>The Qing way of dealing with foreign states through missions and rituals acknowledging the emperor's superiority. Korea, the Ryukyus, and Vietnam were loyal tributaries; Japan took the Ryukyus in the 1870s and France took Vietnam in the 1880s. <span class="cite">p. 324</span></dd></div>
-    <div class="row" id="g-scramble" data-short="The 1898 rush by European powers for ports, leaseholds, and railway rights in China."><dt>Scramble for concessions</dt><dd>The rush, at its height in 1898, by European powers to grab ports, leaseholds, and rights in China. For a time it looked as if China might be divided like Africa. <span class="cite">pp. 326–327</span></dd></div>
-    <div class="row" id="g-lease" data-short="Territory a power held and ran for a set term, like Russia's Liaodong Peninsula."><dt>Leasehold</dt><dd>Territory transferred to a foreign power for a set term rather than ceded outright. Russia secured one over the Liaodong Peninsula in 1898. <span class="cite">p. 327</span><span class="needs">Builds on: scramble for concessions</span></dd></div>
-    <div class="row" id="g-nationalism" data-short="Loyalty to China as a nation of its people, born of fear and outrage at repeated defeats."><dt>Nationalism</dt><dd>The new attitudes that grew from educated Chinese fear and outrage as China suffered blow after blow: a sense of national solidarity and of the people's part in the state. Kang Youwei and Liang Qichao gave them shape. <span class="cite">pp. 327, 331</span></dd></div>
-    <div class="row" id="g-study" data-short="Reform clubs founded from 1895; some ran newspapers, some voiced anti-Manchu views."><dt>Study societies</dt><dd>Reform clubs that Kang, Liang, and others began founding in 1895. Hunan alone had 14 in 1897–98. Some published newspapers; some voiced anti-Manchu feeling, which worried the court. <span class="cite">p. 327</span><span class="needs">Builds on: nationalism</span></dd></div>
-    <div class="row" id="g-constmon" data-short="A monarchy limited by a written constitution and elected assemblies."><dt>Constitutional monarchy</dt><dd>A monarchy whose powers are set by a constitution, with assemblies in which the people take part. Kang urged one on the Guangxu emperor in 1898. <span class="cite">p. 327</span></dd></div>
-    <div class="row" id="g-hundred" data-short="Guangxu's 1898 burst of 100+ reform decrees, reversed after about three months by Cixi's coup."><dt>Hundred Days (1898)</dt><dd>The reforms the Guangxu emperor issued after meeting Kang Youwei in June 1898: over a hundred decrees on examinations, schools, banking, post, and patents, aiming at a constitutional monarchy. After three months Cixi staged a coup, locked up the emperor, and revoked them all. <span class="cite">p. 327</span><span class="needs">Builds on: study societies, constitutional monarchy</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">The Boxers and after</h3>
-  <dl class="gloss">
-    <div class="row" id="g-boxers" data-short="Anti-foreign movement from flood-hit Shandong (1898–1900), known for martial arts and spirit possession."><dt>Boxers</dt><dd>Bands in Shandong who attacked missionaries and Chinese converts after the 1898 Yellow River flood. Foreigners named them for their martial arts. Driven out of Shandong in 1899, they spread to the capital, calling for the killing of foreigners. <span class="cite">pp. 328–329</span></dd></div>
-    <div class="row" id="g-possession" data-short="Letting a god enter one's body; Boxers used it to commune with gods and feel powerful."><dt>Spirit possession</dt><dd>A practice in which a god is believed to take over a person. It let Boxers communicate directly with their gods and gain a sense of personal power. <span class="cite">p. 329</span><span class="needs">See also: Boxers</span></dd></div>
-    <div class="row" id="g-legation" data-short="The district of Beijing where foreign diplomats lived; the Boxers besieged it in 1900."><dt>Legation quarter</dt><dd>The district of Beijing where foreign diplomatic missions (legations) were located. Foreigners barricaded themselves there and in the Northern Cathedral in 1900. <span class="cite">pp. 329–330</span></dd></div>
-    <div class="row" id="g-eight" data-short="The 20,000-strong force of eight powers, Japan included, that lifted the siege of Beijing."><dt>Eight-nation force</dt><dd>The army of eight foreign powers, including Japan, that sent 20,000 troops to lift the siege. By the end of 1900, 45,000 foreign troops were in north China. <span class="cite">p. 330</span><span class="needs">Builds on: legation quarter</span></dd></div>
-    <div class="row" id="g-protocol" data-short="1901 settlement: exams halted 5 years, officials executed, forts razed, 450 million silver dollars."><dt>Boxer Protocol</dt><dd>The 1901 settlement. China canceled the examinations for five years, executed the officials involved, destroyed forts and railway posts, and paid 450 million silver dollars. <span class="cite">p. 330</span><span class="needs">Builds on: indemnity, eight-nation force</span></dd></div>
-    <div class="row" id="g-westernizers" data-short="The elite split over whether to copy the West or hold to tradition, seen in all three land empires."><dt>Westernizers vs. traditionalists</dt><dd>The split within the elite of the Qing, Ottoman, and Russian empires over how to strengthen the state. Urban merchants usually accepted change more readily than the imperial elite. <span class="cite">p. 331</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 FISCAL -->
@@ -1462,6 +1417,84 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
     <div class="a"><ul><li>Think about the small number of county officials for a huge population (p. 315).</li><li>Consider what modern states did that the Qing did not (Table 3).</li></ul></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-taiping">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
+
+  <h3 class="gloss-group">Decline at home</h3>
+  <dl class="gloss">
+    <div class="row" id="g-decline" data-short="The familiar signs that a dynasty is failing: peasant poverty, unrest, and an empty treasury."><dt>Dynastic decline</dt><dd>The pattern Chinese history taught people to expect as a dynasty weakened: peasant poverty, social unrest, and government bankruptcy. The Qing seemed to be slipping into it in the early 1800s. <span class="cite">pp. 314, 332</span></dd></div>
+    <div class="row" id="g-infanticide" data-short="Killing unwanted newborn girls; it rose in hard times and left too few women to marry."><dt>Female infanticide</dt><dd>Killing newborn daughters. Poor families who could raise only two or three children, and who saw sons as necessities, did this more in hard times. The result was a shortage of marriageable women. <span class="cite">p. 315</span></dd></div>
+    <div class="row" id="g-floating" data-short="Young men with no land or wife who drifted from job to job: boatmen, porters, beggars."><dt>Floating population</dt><dd>Young men who left home for work and never settled, taking seasonal farm jobs or working as boatmen, charcoal burners, sedan-chair carriers, beggars, or thieves. With few women to marry, they had little reason to stay home. <span class="cite">p. 315</span><span class="needs">Builds on: female infanticide</span></dd></div>
+    <div class="row" id="g-banners" data-short="The hereditary, Manchu-led military caste; useless in war by 1800 but too tied to Manchu identity to abolish."><dt>Banners · bannermen</dt><dd>The hereditary military force of the Qing, supported by state stipends (see <a href="unit2.html">Unit 2</a>). By 1800 it no longer worked in war, but because it was bound up with Manchu identity and privileges it could not simply be disbanded. <span class="cite">p. 315</span></dd></div>
+    <div class="row" id="g-green" data-short="The Qing's professional (not hereditary) army of Chinese recruits."><dt>Army of the Green Standard</dt><dd>A professional army of Chinese recruits. Along with local militias, it was what the Qing used against the late-1700s rebellions once the banners failed. <span class="cite">p. 315</span><span class="needs">Builds on: banners</span></dd></div>
+    <div class="row" id="g-taxgrain" data-short="Grain collected as tax in the southeast and shipped north to feed the capital."><dt>Tax grain</dt><dd>Part of the land tax paid in grain and shipped from the rich southeast to the capital. Most of it traveled on the Grand Canal. <span class="cite">p. 316</span></dd></div>
+    <div class="row" id="g-canal" data-short="1,747-km canal carrying tax grain to Beijing; silted up by 1824, largely abandoned by 1850."><dt>Grand Canal</dt><dd>The 1,747-km waterway linking Hangzhou to Beijing, with locks, dams, and sluice gates to climb 138 feet over the hills of Shandong. Over 50,000 boatmen and laborers moved <a class="term" href="#g-taxgrain">tax grain</a> on it. Neglect let silt block it in 1824; by 1850 it was largely abandoned. <span class="cite">p. 316</span><span class="needs">Builds on: tax grain</span></dd></div>
+    <div class="row" id="g-degrees" data-short="Juren: provincial exam degree. Jinshi: the top, capital-level degree. Bannermen had special quotas."><dt>Juren and jinshi degrees</dt><dd>Civil service examination degrees: the <i>juren</i> was earned at the provincial level, the <i>jinshi</i> at the capital and needed for high office. Manchu bannermen had special quotas, and degrees could also be given as rewards or honors. <span class="cite">pp. 277, 319, 322</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The rebellions</h3>
+  <dl class="gloss">
+    <div class="row" id="g-hakka" data-short="A large Han Chinese group in the far south with its own dialect; Hong Xiuquan's people."><dt>Hakka</dt><dd>A large Han Chinese ethnic group with a distinct dialect, living mostly in the far south. Hong Xiuquan was Hakka, and his movement drew many Hakka followers. <span class="cite">p. 318</span></dd></div>
+    <div class="row" id="g-gws" data-short="Hong Xiuquan's sect: one God, Ten Commandments, communal prayer, no idols, opium, or footbinding."><dt>God Worshipping Society</dt><dd>The religious sect Hong Xiuquan founded after reading a Christian tract. It adopted the Ten Commandments, belief in one God, and communal prayer and hymns, and told followers to destroy idols and give up opium, alcohol, footbinding, and prostitution. <span class="cite">p. 318</span><span class="needs">Builds on: Hakka</span></dd></div>
+    <div class="row" id="g-queue" data-short="The Manchu hairstyle (shaved front, long braid) required of Chinese men; Taipings let their hair grow."><dt>Queue</dt><dd>The Manchu hairstyle that the Qing forced on all Chinese men: the front of the head shaved and the rest worn in a long braid. Taiping men let their hair grow long, an act of open rebellion. <span class="cite">pp. 273, 318</span></dd></div>
+    <div class="row" id="g-taiping" data-short="Hong Xiuquan's 'Heavenly Kingdom of Great Peace' (1851–1864), capital Nanjing; 20–30 million died."><dt>Taiping · Heavenly Kingdom of Great Peace</dt><dd>The state Hong Xiuquan proclaimed in 1851, with its capital at Nanjing from 1853. It promised equal landholding and equality of men and women. The Taiping Rebellion (1851–1864) cost some 20 to 30 million lives. <span class="cite">pp. 318–321</span><span class="needs">Builds on: God Worshipping Society, queue</span></dd></div>
+    <div class="row" id="g-regional" data-short="Zeng Guofan's new army: gentry officers recruited local farmers, paid from local taxes, loyal to Zeng."><dt>Zeng Guofan's army (a regional army)</dt><dd>The force Zeng Guofan raised in Hunan. Confucian-educated officers recruited farmers from their own area; local tax money paid them well. Soldiers were loyal to their officers and officers to Zeng, making it essentially a private army. It took 12 years and 120,000 troops to defeat the Taipings. <span class="cite">pp. 319–320</span><span class="needs">Builds on: banners, Army of the Green Standard</span></dd></div>
+    <div class="row" id="g-nian" data-short="Mounted bandit gangs of the north (1853–1868), swollen by canal unemployment and the 1855 Yellow River flood."><dt>Nian</dt><dd>Gangs of horse-riding bandits in north China who seized crops, robbed merchants, and kidnapped the rich. Unemployed canal boatmen and people made homeless by the 1855 Yellow River flood joined them. Their rebellion lasted 1853–1868. <span class="cite">pp. 316, 320–321</span><span class="needs">Builds on: Grand Canal</span></dd></div>
+    <div class="row" id="g-heterodox" data-short="Teachings the state judged to be outside approved orthodoxy, like the White Lotus or Taiping."><dt>Heterodox</dt><dd>Outside the beliefs the state accepted as correct (orthodox). Zuo Zongtang classed Sufis as heterodox, like the White Lotus and Taiping sects, and ordered them killed. <span class="cite">pp. 285, 321</span></dd></div>
+    <div class="row" id="g-sufi" data-short="A mystical school of Islam whose spread in Gansu lay behind the northwest Muslim revolt."><dt>Sufism</dt><dd>A mystical school of Islam. Its spread in the northwest (Gansu) was one root of the Muslim rebellion there, though much of the violence came from long Han–Muslim hostility. <span class="cite">p. 321</span><span class="needs">See also: heterodox</span></dd></div>
+    <div class="row" id="g-panthay" data-short="The sultanate Muslim rebels declared at Dali, Yunnan; the Qing regained the province in 1873."><dt>Panthay sultanate</dt><dd>The state Muslim rebels announced after taking Dali in Yunnan, where Han settlers had seized Muslim lands and mines. The Qing regained control in 1873 by playing Muslim factions against each other. <span class="cite">pp. 320–321</span></dd></div>
+    <div class="row" id="g-blackflags" data-short="Taiping remnants in Vietnam who fought French colonial expansion."><dt>Black Flags</dt><dd>Taiping armies that fled to Vietnam after Nanjing fell, where they fought against French colonial expansion. <span class="cite">p. 321</span><span class="needs">Builds on: Taiping</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Treaties and foreigners</h3>
+  <dl class="gloss">
+    <div class="row" id="g-unequal" data-short="A treaty forced at gunpoint that benefited the foreign power but not China."><dt>Unequal treaty</dt><dd>A treaty concluded at gunpoint that gave benefits to the foreign power but not to China, beginning with the Treaty of Nanjing (1842). See <a href="unit5.html">Unit 5</a>. <span class="cite">p. 317</span></dd></div>
+    <div class="row" id="g-extra" data-short="Foreigners in China answered only to their own country's laws and courts."><dt>Extraterritoriality</dt><dd>The treaty right of foreigners in China to be judged only by their own country's law, even in disputes with Chinese. German missionaries in Shandong claimed it for their converts too. <span class="cite">pp. 317, 328</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-mfn" data-short="Any new privilege China gave one power went automatically to the others."><dt>Most favored nation clause</dt><dd>A treaty clause that extended to a power any new privilege China granted another. <span class="cite">p. 317</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-indemnity" data-short="Money a defeated state is forced to pay the victor; 'the loser pays.'"><dt>Indemnity · reparations</dt><dd>Money China was forced to pay after each defeat or incident, from 21 million ounces of silver in 1842 to 450 million silver dollars in 1901. China borrowed abroad to pay, which made reform harder. <span class="cite">pp. 317, 325–326, 330</span></dd></div>
+    <div class="row" id="g-arrow" data-short="1856–1860 British-French war on China (named for the ship Arrow); ended with Beijing occupied."><dt>Arrow War · Second Opium War</dt><dd>The British and French attacks of 1856–1860, named after a ship, the <i>Arrow</i>, that gave Britain a pretext. It produced the 1858 treaties and the 1860 occupation of Beijing. <span class="cite">pp. 321–322</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-transit" data-short="Tax on foreign goods moving inside China, capped at 2.5% in 1858."><dt>Transit tariff</dt><dd>A tax on foreign goods as they moved within China. The 1858 treaties fixed it at no more than 2.5 percent. <span class="cite">p. 322</span><span class="needs">Builds on: Arrow War</span></dd></div>
+    <div class="row" id="g-port" data-short="A city opened by treaty to foreign trade and residence; about 100 by 1900."><dt>Treaty port</dt><dd>A city opened by treaty to foreign trade and residence. There were 100 by 1900, but only Shanghai, Tianjin, Hankou, Guangzhou, and Dalian became major centers of foreign life. (Hong Kong was a colony, not a treaty port.) <span class="cite">p. 325</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-concession" data-short="A district of a treaty port run by foreigners, with its own police, courts, and taxes."><dt>Foreign concession</dt><dd>An area carved out of a treaty-port city, with foreign police and law courts and its own taxes, even though most residents stayed Chinese. The Qing accepted this with little protest. <span class="cite">p. 325</span><span class="needs">Builds on: treaty port</span></dd></div>
+    <div class="row" id="g-customs" data-short="China's tariff office, staffed at the top by Westerners, which grew out of the Taiping years."><dt>Imperial Maritime Customs</dt><dd>When the Taiping war disrupted tariff collection, British and American consuls collected tariffs themselves. This became a permanent customs service, run at the top by Westerners, that also reported on trade and built telegraph and postal systems. <span class="cite">p. 325</span><span class="needs">Builds on: treaty port</span></dd></div>
+    <div class="row" id="g-gunboat" data-short="Sending warships to threaten retaliation, e.g., after attacks on missionaries."><dt>Gunboat diplomacy</dt><dd>Sending warships to the nearest port to threaten retaliation, as powers did when missionaries or their converts were attacked. <span class="cite">p. 325</span></dd></div>
+    <div class="row" id="g-tianjin" data-short="1870 riot at a French orphanage in Tianjin; about 20 foreigners and dozens of converts killed; China paid."><dt>Tianjin Massacre (1870)</dt><dd>A riot sparked by rumors about deaths at a French Catholic orphanage. After the French consul fired at two officials, a crowd killed him, twelve priests and nuns, seven other foreigners, and dozens of Chinese converts. China paid reparations and apologized. <span class="cite">pp. 325–326</span><span class="needs">See also: indemnity</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Reform</h3>
+  <dl class="gloss">
+    <div class="row" id="g-regent" data-short="Someone who rules for a child emperor."><dt>Regent · empress dowager</dt><dd>A regent rules on behalf of a ruler too young to govern. An empress dowager is the mother of a reigning emperor: Cixi was regent for her son Tongzhi (from 1861) and her nephew Guangxu (from 1875). <span class="cite">pp. 322, 324</span></dd></div>
+    <div class="row" id="g-selfstr" data-short="1860s–1890s effort to save the dynasty by adopting Western arms, industry, and learning."><dt>Self-Strengthening</dt><dd>The reform effort led by Zeng Guofan, Li Hongzhang, and Prince Gong after 1861: arsenals and shipyards, translated Western books, language schools, students sent abroad, a foreign office, and later mines, railways, and factories. Real, but never fundamental or fast enough. <span class="cite">pp. 322–324, 331</span></dd></div>
+    <div class="row" id="g-fo" data-short="China's first office for foreign affairs (1861), headed by Prince Gong."><dt>Foreign office (Zongli Yamen†)</dt><dd>The office set up to manage diplomacy, with Prince Gong in charge. By 1880 China had embassies in seven capitals, from London to Tokyo. Its Chinese name, <i>Zongli Yamen</i>, is from outside the textbook. <span class="cite">p. 323</span><span class="needs">Builds on: Self-Strengthening</span></dd></div>
+    <div class="row" id="g-arsenal" data-short="A state weapons factory, like the Jiangnan Arsenal at Shanghai (1865)."><dt>Arsenal</dt><dd>A factory that makes weapons. Li Hongzhang and Zeng Guofan founded the Jiangnan Arsenal at Shanghai in 1865, with a bureau to translate Western books. <span class="cite">p. 323</span><span class="needs">Builds on: Self-Strengthening</span></dd></div>
+    <div class="row" id="g-gsme" data-short="A business run by merchants under official supervision, e.g., China Merchants' Steam Navigation Company."><dt>Government-supervised merchant enterprise</dt><dd>A company run by merchants under official oversight. Li supported the China Merchants' Steam Navigation Company on this basis in 1872. <span class="cite">p. 323</span><span class="needs">Builds on: Self-Strengthening</span></dd></div>
+    <div class="row" id="g-tribute" data-short="Rules by which other rulers sent missions acknowledging the emperor; broken up under Cixi."><dt>Tribute system</dt><dd>The Qing way of dealing with foreign states through missions and rituals acknowledging the emperor's superiority. Korea, the Ryukyus, and Vietnam were loyal tributaries; Japan took the Ryukyus in the 1870s and France took Vietnam in the 1880s. <span class="cite">p. 324</span></dd></div>
+    <div class="row" id="g-scramble" data-short="The 1898 rush by European powers for ports, leaseholds, and railway rights in China."><dt>Scramble for concessions</dt><dd>The rush, at its height in 1898, by European powers to grab ports, leaseholds, and rights in China. For a time it looked as if China might be divided like Africa. <span class="cite">pp. 326–327</span></dd></div>
+    <div class="row" id="g-lease" data-short="Territory a power held and ran for a set term, like Russia's Liaodong Peninsula."><dt>Leasehold</dt><dd>Territory transferred to a foreign power for a set term rather than ceded outright. Russia secured one over the Liaodong Peninsula in 1898. <span class="cite">p. 327</span><span class="needs">Builds on: scramble for concessions</span></dd></div>
+    <div class="row" id="g-nationalism" data-short="Loyalty to China as a nation of its people, born of fear and outrage at repeated defeats."><dt>Nationalism</dt><dd>The new attitudes that grew from educated Chinese fear and outrage as China suffered blow after blow: a sense of national solidarity and of the people's part in the state. Kang Youwei and Liang Qichao gave them shape. <span class="cite">pp. 327, 331</span></dd></div>
+    <div class="row" id="g-study" data-short="Reform clubs founded from 1895; some ran newspapers, some voiced anti-Manchu views."><dt>Study societies</dt><dd>Reform clubs that Kang, Liang, and others began founding in 1895. Hunan alone had 14 in 1897–98. Some published newspapers; some voiced anti-Manchu feeling, which worried the court. <span class="cite">p. 327</span><span class="needs">Builds on: nationalism</span></dd></div>
+    <div class="row" id="g-constmon" data-short="A monarchy limited by a written constitution and elected assemblies."><dt>Constitutional monarchy</dt><dd>A monarchy whose powers are set by a constitution, with assemblies in which the people take part. Kang urged one on the Guangxu emperor in 1898. <span class="cite">p. 327</span></dd></div>
+    <div class="row" id="g-hundred" data-short="Guangxu's 1898 burst of 100+ reform decrees, reversed after about three months by Cixi's coup."><dt>Hundred Days (1898)</dt><dd>The reforms the Guangxu emperor issued after meeting Kang Youwei in June 1898: over a hundred decrees on examinations, schools, banking, post, and patents, aiming at a constitutional monarchy. After three months Cixi staged a coup, locked up the emperor, and revoked them all. <span class="cite">p. 327</span><span class="needs">Builds on: study societies, constitutional monarchy</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The Boxers and after</h3>
+  <dl class="gloss">
+    <div class="row" id="g-boxers" data-short="Anti-foreign movement from flood-hit Shandong (1898–1900), known for martial arts and spirit possession."><dt>Boxers</dt><dd>Bands in Shandong who attacked missionaries and Chinese converts after the 1898 Yellow River flood. Foreigners named them for their martial arts. Driven out of Shandong in 1899, they spread to the capital, calling for the killing of foreigners. <span class="cite">pp. 328–329</span></dd></div>
+    <div class="row" id="g-possession" data-short="Letting a god enter one's body; Boxers used it to commune with gods and feel powerful."><dt>Spirit possession</dt><dd>A practice in which a god is believed to take over a person. It let Boxers communicate directly with their gods and gain a sense of personal power. <span class="cite">p. 329</span><span class="needs">See also: Boxers</span></dd></div>
+    <div class="row" id="g-legation" data-short="The district of Beijing where foreign diplomats lived; the Boxers besieged it in 1900."><dt>Legation quarter</dt><dd>The district of Beijing where foreign diplomatic missions (legations) were located. Foreigners barricaded themselves there and in the Northern Cathedral in 1900. <span class="cite">pp. 329–330</span></dd></div>
+    <div class="row" id="g-eight" data-short="The 20,000-strong force of eight powers, Japan included, that lifted the siege of Beijing."><dt>Eight-nation force</dt><dd>The army of eight foreign powers, including Japan, that sent 20,000 troops to lift the siege. By the end of 1900, 45,000 foreign troops were in north China. <span class="cite">p. 330</span><span class="needs">Builds on: legation quarter</span></dd></div>
+    <div class="row" id="g-protocol" data-short="1901 settlement: exams halted 5 years, officials executed, forts razed, 450 million silver dollars."><dt>Boxer Protocol</dt><dd>The 1901 settlement. China canceled the examinations for five years, executed the officials involved, destroyed forts and railway posts, and paid 450 million silver dollars. <span class="cite">p. 330</span><span class="needs">Builds on: indemnity, eight-nation force</span></dd></div>
+    <div class="row" id="g-westernizers" data-short="The elite split over whether to copy the West or hold to tradition, seen in all three land empires."><dt>Westernizers vs. traditionalists</dt><dd>The split within the elite of the Qing, Ottoman, and Russian empires over how to strengthen the state. Urban merchants usually accepted change more readily than the imperial elite. <span class="cite">p. 331</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1678,6 +1711,21 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>

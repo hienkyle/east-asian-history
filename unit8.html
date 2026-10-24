@@ -793,6 +793,33 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
 .argue li::before{counter-increment:a;content:counter(a);position:absolute;left:0;top:7px;width:22px;height:22px;border-radius:50%;background:var(--ink-soft);color:var(--ink);font:700 .76rem/22px var(--serif);text-align:center}
 /* food stats in callout */
 .food{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:10px 0}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -813,13 +840,17 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 8</b> · The Meiji Transformation</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#state">1 · Building a new state</a></li>
     <li><a href="#reforms">2 · Reforms and resistance</a></li>
     <li><a href="#rights">3 · Popular rights and the constitution</a></li>
@@ -830,11 +861,9 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
     <li><a href="#meaning">8 · Transition or revolution?</a></li>
     <li><a href="#summary">Summary: 1868 vs. 1900</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
-  <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
-  </div>
 </nav>
 
 <main>
@@ -888,89 +917,6 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
   </div>
   <figcaption><span class="fn">Figure 1.</span> Key events, 1868–1899. Filled dots mark turning points. Dates from pp. 347–361.</figcaption>
   </figure>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Start here</div>
-  <h2>Key terms first</h2>
-  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-oligarchs">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from <a href="unit7.html">Unit 7</a> are repeated briefly where you need them.</p>
-
-  <h3 class="gloss-group">From Unit 7 (review)</h3>
-  <dl class="gloss">
-    <div class="row" id="g-daimyo" data-short="A lord ruling a domain under the shogun; 250–280 of them before 1871."><dt>Daimyo · domain</dt><dd>A daimyo was a lord whose domain (territory) produced over 10,000 <i>koku</i> of rice. Under the Tokugawa, each ran his domain as he saw fit and kept a band of samurai retainers. <span class="cite">pp. 289, 348–349</span></dd></div>
-    <div class="row" id="g-satcho" data-short="Satsuma and Chōshū, the two outside domains whose samurai led the new regime."><dt>Satsuma · Chōshū (Sat-chō)</dt><dd>Two large domains in the southwest, once kept out of Tokugawa policymaking, whose 1866 alliance overthrew the shogunate. Their samurai formed the core of the new leadership. <span class="cite">pp. 345–347</span><span class="needs">Builds on: daimyo</span></dd></div>
-    <div class="row" id="g-restoration" data-short="1868: rule 'restored' to the emperor, ending military government."><dt>Meiji Restoration</dt><dd>Making the Meiji emperor head of state in 1868. It is called a restoration because the new regime claimed to restore the emperor to the power his ancestors had held in the 700s. <span class="cite">pp. 346–347</span></dd></div>
-    <div class="row" id="g-unequal" data-short="Treaties forced on Japan in 1854–58: foreigners judged by their own courts, low tariffs."><dt>Unequal treaties</dt><dd>The treaties of 1854–58 imposed under threat of force. They gave foreigners <a class="term" href="#g-extra">extraterritoriality</a> and held Japan's tariffs (taxes on imports) low. Revising them was a main Meiji goal. <span class="cite">pp. 339, 349, 361</span></dd></div>
-    <div class="row" id="g-extra" data-short="Foreigners in Japan answered only to their own countries' laws and courts."><dt>Extraterritoriality</dt><dd>The right of foreigners to be tried under their own country's laws rather than the host country's. Japan won its end in the 1890s, then imposed it on others. <span class="cite">pp. 339, 359, 361</span><span class="needs">Builds on: unequal treaties</span></dd></div>
-    <div class="row" id="g-kokutai" data-short="Japan's 'national polity' or unique essence, centered on the emperor."><dt>Kokutai</dt><dd>Japan's "national polity," its unique spiritual essence centered on the emperor. Mito scholars coined the idea; the 1890 Rescript on Education asked students to be loyal to it. <span class="cite">pp. 338, 359</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">The new state</h3>
-  <dl class="gloss">
-    <div class="row" id="g-oligarchs" data-short="The small, self-selected group of men who held power in the emperor's name."><dt>Oligarchs</dt><dd>The small group of men, mostly samurai from Satsuma and Chōshū plus a few court nobles, who led the overthrow of the shogun and then ran the government in the emperor's name. They are called oligarchs because they monopolized power. They often disagreed with one another. <span class="cite">pp. 347–348</span><span class="needs">Builds on: Sat-chō</span></dd></div>
-    <div class="row" id="g-oath" data-short="The emperor's 1868 vow: public discussion, careers open to all, end old customs, learn from the world."><dt>Oath of 1868 (Charter Oath†)</dt><dd>The emperor's first pronouncement, sworn to the gods before nobles and daimyo. It promised unity for the nation's good, policy by public discussion, the chance for all to pursue their ambitions, an end to "uncivilized customs," and a search for knowledge worldwide. Its vague wording hid the oligarchs' disagreements. Usually called the Charter Oath. <span class="cite">p. 348</span><span class="needs">Builds on: oligarchs</span></dd></div>
-    <div class="row" id="g-five" data-short="Rules for commoners issued the day after the oath: obey, don't protest, shun Christianity, stay home."><dt>Five Injunctions</dt><dd>Orders to commoners issued the day after the oath: practice the Confucian virtues of loyalty, filial piety, chastity, obedience, and harmony; stop protests; shun Christianity; follow international law; and stay in Japan. <span class="cite">p. 348</span><span class="needs">See also: oath of 1868</span></dd></div>
-    <div class="row" id="g-shizoku" data-short="'Former samurai': the single class for all retainers above foot soldier."><dt>Shizoku</dt><dd>"Former samurai," the single category the government created for all retainers above the level of foot soldier. About 2 million lost their hereditary positions in 1871 and received only small stipends, later changed to government bonds. <span class="cite">p. 349</span></dd></div>
-    <div class="row" id="g-prefecture" data-short="1871: about 270 domains replaced by 72 (later 50) prefectures run from Tokyo."><dt>Abolition of domains · prefectures</dt><dd>In 1871 the oligarchs abolished some 270 domains and set up prefectures, centrally run provinces, first 72 and later 50, to centralize tax collection. The biggest daimyo became prefectural governors. <span class="cite">p. 349</span><span class="needs">Builds on: daimyo</span></dd></div>
-    <div class="row" id="g-koseki" data-short="Each household head registered a legal residence and reported births, deaths, marriages, divorces."><dt>Household registration</dt><dd>The 1871 system that made each household head register a legal residence and report births, deaths, marriages, and divorces. It also made it impossible for former outcasts to hide their past. <span class="cite">p. 349</span></dd></div>
-    <div class="row" id="g-iwakura" data-short="1871–73 delegation to the U.S. and Europe; came to revise treaties, ended up studying the West."><dt>Iwakura mission</dt><dd>The 1871 delegation of 49 officials, 58 students, and five girls, led by the former court noble Iwakura Tomomi. It went to revise the unequal treaties, was told reform must come first, and turned into a study tour of prisons, schools, factories, and ministries. <span class="cite">pp. 349–350</span><span class="needs">Builds on: unequal treaties</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Reforms and resistance</h3>
-  <dl class="gloss">
-    <div class="row" id="g-fukoku" data-short="'Rich country, strong army,' the slogan of the day."><dt>Rich Country, Strong Army</dt><dd>The era's slogan (<i>fukoku kyōhei</i>): build national wealth and military power together. It justified conscription and state industry, and later the costs borne by people near the Ashio mine. <span class="cite">pp. 340, 351, 357</span></dd></div>
-    <div class="row" id="g-conscription" data-short="1873: men over 20 owe 3 years' active duty plus 4 in reserve; ended samurai monopoly of arms."><dt>Conscription ordinance (1873)</dt><dd>Yamagata Aritomo's law, modeled on German and French practice, calling all men over 20 to three years of active duty and four in the reserves. Heads and heirs of family farms and businesses were exempt, and exemptions could be bought. By ending the samurai's monopoly of force, it did more than any other reform to erase status lines. <span class="cite">p. 351</span><span class="needs">Builds on: shizoku</span></dd></div>
-    <div class="row" id="g-blood" data-short="The ordinance's phrase for citizens' duty to sacrifice; some farmers took it literally."><dt>"Blood tax"</dt><dd>The conscription ordinance's term for every citizen's duty to sacrifice for the country. Some farmers took it literally and thought the government wanted their blood. <span class="cite">p. 351</span><span class="needs">Builds on: conscription ordinance</span></dd></div>
-    <div class="row" id="g-landtax" data-short="1873: one uniform cash tax on land value replaced domain taxes on harvests."><dt>Land tax (1873)</dt><dd>A single, uniform property tax on farmland, set at 3 percent of assessed value, replacing the old mix of domain taxes on changing harvests. It gave the state a steady income; protests cut it to 2.5 percent in 1876. It supplied nearly 80 percent of revenue through the 1880s. <span class="cite">pp. 351–353</span></dd></div>
-    <div class="row" id="g-goshi" data-short="Satsuma's 'rustic warriors,' who treated cultivators as tenants and lost out to the land tax."><dt>Gōshi</dt><dd>"Rustic warriors" in Satsuma who had assigned land to cultivators and treated them like tenants. The land tax took their income, status, and privilege, and they became the shock troops of the Satsuma Rebellion. <span class="cite">p. 352</span><span class="needs">Builds on: land tax</span></dd></div>
-    <div class="row" id="g-satsuma" data-short="1877 revolt led by Saigō; 65,000 troops and 8 months to suppress; the last samurai rising."><dt>Satsuma Rebellion (1877)</dt><dd>The largest and last of more than thirty samurai uprisings of 1874–77, led by Saigō Takamori after he lost the Korea debate. It took 65,000 conscript troops eight months to crush; Saigō killed himself. <span class="cite">p. 351</span><span class="needs">Builds on: shizoku, conscription</span></dd></div>
-    <div class="row" id="g-edcode" data-short="1872: compulsory schooling for all; exams to climb to middle school and university."><dt>Educational Code (1872)</dt><dd>The decree requiring eight years of school for all children (cut to four in 1879, raised to six in 1907), with exams to qualify for middle school and university. Communities had to pay for the schools. <span class="cite">pp. 350, 359</span></dd></div>
-    <div class="row" id="g-stateshinto" data-short="Shrines ranked under Ise and used to promote national goals; Buddhism pushed out."><dt>State Shinto</dt><dd>The 1870s system that grouped local shrines under the Ise shrine to the sun goddess, so people worshipped gods of national as well as local importance. It followed the 1868 order to separate Shinto from Buddhism. Yasukuni shrine (1869) housed the war dead. <span class="cite">p. 350</span></dd></div>
-    <div class="row" id="g-newcommoners" data-short="Former outcasts after status lines were abolished; resented by others and still discriminated against."><dt>"New commoners"</dt><dd>The name for former outcasts once status distinctions were erased. Their official equality set off protests by other commoners, and they lost their old monopoly over leatherwork. <span class="cite">p. 350</span></dd></div>
-    <div class="row" id="g-omoto" data-short="Deguchi Nao's new religion (1899): the corrupt world would be replaced by one of equality."><dt>Ōmoto-kyō</dt><dd>The sect organized in 1899 from the revelations of Deguchi Nao, a poor illiterate woman possessed by a god in 1892. It taught that the money-loving social order would be destroyed and replaced by divine harmony and equality, and it was repeatedly persecuted. <span class="cite">p. 352</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Constitution and Diet</h3>
-  <dl class="gloss">
-    <div class="row" id="g-prm" data-short="Movement of the late 1870s–80s demanding an elected national assembly and rights."><dt>Popular Rights Movement</dt><dd>The campaign for an elected national assembly, a constitution, and rights, set off by Itagaki's 1874 petition and the 1875 promise of a constitution. Former samurai, village officials, rural entrepreneurs, journalists, women speakers, and poor farmers took part. <span class="cite">p. 353</span></dd></div>
-    <div class="row" id="g-peace" data-short="Laws to curb the movement: press censorship (1875), police at meetings (1880)."><dt>Peace preservation laws</dt><dd>Laws that grew harsher in answer to the Popular Rights Movement: press censorship from 1875, and the 1880 Ordinance on Public Meetings, which put police at meetings to check that speakers kept to approved texts. <span class="cite">p. 353</span><span class="needs">Builds on: Popular Rights Movement</span></dd></div>
-    <div class="row" id="g-constitution" data-short="1889 constitution 'given' by the emperor: sovereign, sacred emperor; a two-house Diet."><dt>Meiji Constitution (1889)</dt><dd>The constitution drafted in secret by Itō Hirobumi after study in Berlin, and bestowed by the emperor on February 11, 1889. It defined the emperor as sovereign and sacred, created the Diet, and listed subjects' rights and duties, each limited by law. <span class="cite">pp. 353–354</span></dd></div>
-    <div class="row" id="g-diet" data-short="Japan's two-house national assembly from 1890: appointed peers above, elected house below."><dt>Imperial Diet</dt><dd>The two-chamber national assembly. The upper house was filled by the new peerage (oligarchs, former daimyo, court nobles); the lower house was elected. It could approve the budget, which gave it more power than the oligarchs intended. <span class="cite">pp. 353–354</span><span class="needs">Builds on: Meiji Constitution</span></dd></div>
-    <div class="row" id="g-cabinet" data-short="Prime minister and ministers who made policy; replaced the Council of State in 1885."><dt>Cabinet</dt><dd>The prime minister, appointed by the emperor, and the ministers who ran education, finance, foreign affairs, and other ministries. It replaced the Council of State in 1885 and made policy. <span class="cite">p. 353</span></dd></div>
-    <div class="row" id="g-privy" data-short="Advisory council headed by Itō that reviewed the draft constitution."><dt>Privy Council</dt><dd>A new advisory body, headed by Itō, that met to discuss the finished constitution before it was issued. <span class="cite">p. 353</span></dd></div>
-    <div class="row" id="g-genro" data-short="'Elder statesmen': the oligarchs' title for themselves after 1889; they chose cabinet ministers."><dt>Genrō</dt><dd>"Elder statesmen," the title the oligarchs gave themselves after the constitution was issued. Not mentioned in the constitution, they picked cabinet ministers for the emperor. <span class="cite">p. 353</span><span class="needs">Builds on: oligarchs, cabinet</span></dd></div>
-    <div class="row" id="g-suffrage" data-short="The right to vote; in 1890 only men paying 15+ yen in property tax, 1.1% of people."><dt>Suffrage</dt><dd>The right to vote. For the first Diet it was limited to men paying at least 15 yen a year in property taxes, just 1.1 percent of the population, most of them rural. Yamagata widened it to 2.2 percent in 1900. <span class="cite">pp. 354–355</span><span class="needs">Builds on: Imperial Diet</span></dd></div>
-    <div class="row" id="g-parties" data-short="Itagaki's Liberal Party, Ōkuma's Progressive Party, Itō's Friends of Government (1900)."><dt>Political parties</dt><dd>Groups organized to win Diet seats: the Liberal Party (Itagaki) and the Progressive Party (Ōkuma), both led by men pushed out of the oligarchs' circle; and in 1900 Itō's own Friends of Government (Seiyūkai). <span class="cite">pp. 354–355, 386</span><span class="needs">Builds on: Imperial Diet</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Economy and work</h3>
-  <dl class="gloss">
-    <div class="row" id="g-zaibatsu" data-short="Business groups like Mitsubishi that grew from state favors (term used from Unit 10)."><dt>Mitsubishi · Mitsui</dt><dd>Business houses that grew rich on government connections. Iwasaki Yatarō built Mitsubishi on a shipping line bought from Tosa plus cheap state loans; Fukuzawa advised both. They became the largest conglomerates, later called <i>zaibatsu</i>. <span class="cite">pp. 355, 357, 384–385</span></dd></div>
-    <div class="row" id="g-intermediate" data-short="Western machines adapted to Japanese conditions, like small water-powered silk mills."><dt>Intermediate technology</dt><dd>Western machines and methods scaled and adapted to Japanese conditions by entrepreneurs and artisans: cheaper matches for Asian markets, or small water-powered silk-spinning mills in mountain valleys near silk farms and young women workers. <span class="cite">p. 356</span></dd></div>
-    <div class="row" id="g-matsukata" data-short="1881–85 deflation: balanced budget, sound money, state industries sold off."><dt>Matsukata deflation</dt><dd>Finance Minister Matsukata Masayoshi's cure for the 1880 crisis: balance the budget, back the currency with gold and silver, sell state industries (except railroads, telegraph, and arms) at a loss, and shrink the money supply by 20 percent. Prices stabilized, but many farmers lost their land. <span class="cite">p. 356</span><span class="needs">Builds on: land tax</span></dd></div>
-    <div class="row" id="g-oyakata" data-short="Labor bosses who contracted jobs and ran the factory floor in heavy industry."><dt>Oyakata</dt><dd>Bosses who contracted for specific jobs in heavy industry. Because workers, not managers, ran the factory floor, skilled men kept a measure of independence and pride. <span class="cite">p. 357</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Ideas and culture</h3>
-  <dl class="gloss">
-    <div class="row" id="g-civ" data-short="Fukuzawa's slogan for Western-style progress in ideas, habits, dress, and institutions."><dt>Civilization and Enlightenment</dt><dd>The slogan, coined by Fukuzawa Yukichi, for remaking Japan along Western lines: schools, hospitals, newspapers, hygiene, dress, hairstyles, and ideas of self-help. Oligarchs, city intellectuals, and village notables all promoted it. <span class="cite">p. 357</span></dd></div>
-    <div class="row" id="g-meiji6" data-short="1873 Tokyo society of intellectuals whose journal debated government, language, religion, women."><dt>Meiji 6 Society</dt><dd>A group of intellectuals founded in Tokyo in 1873 (Meiji year 6). Its journal debated representative government, foreign affairs, reform of the language, ethics, religion, and roles for women. Fukuzawa was a leading member. <span class="cite">p. 357</span><span class="needs">See also: Civilization and Enlightenment</span></dd></div>
-    <div class="row" id="g-deercry" data-short="1883 Western-style hall for balls and parties; symbol of the 'dancing cabinet.'"><dt>Deer-Cry Pavilion (Rokumeikan†)</dt><dd>The two-story brick building with a ballroom, billiard room, and restaurant that the foreign minister built in 1883 for parties with foreigners, where husbands and wives danced together. Its style gave the late-1880s government the nickname "dancing cabinet." <span class="cite">p. 358</span></dd></div>
-    <div class="row" id="g-goodwife" data-short="The ideal that women serve the state by running the home and raising children."><dt>Good wives and wise mothers</dt><dd>The ideal, pressed by women's magazines and the schools, that women should be educated so they could serve the nation as wives and mothers, not as political actors. <span class="cite">pp. 358–359</span></dd></div>
-    <div class="row" id="g-socdarwin" data-short="Belief that nations must conquer or be conquered; used to justify empire."><dt>Social Darwinism</dt><dd>The application of "survival of the fittest" to nations: nations must conquer or be conquered. Japanese leaders and writers drew on it to justify both reform at home and expansion abroad. <span class="cite">pp. 313, 353, 359</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Conservatism and empire</h3>
-  <dl class="gloss">
-    <div class="row" id="g-rescript" data-short="1890 imperial message telling students to be filial, harmonious, law-abiding, and loyal."><dt>Imperial Rescript on Education (1890)</dt><dd>The emperor's statement urging students to practice filial piety, harmony, sincerity, and benevolence; respect the constitution; obey the laws; and be loyal to the <a class="term" href="#g-kokutai">kokutai</a>. It marked education's turn from practical knowledge to civic morality. <span class="cite">p. 359</span><span class="needs">Builds on: kokutai</span></dd></div>
-    <div class="row" id="g-civilcode" data-short="1898 law code: legal equality for men, but family property and authority to the male head."><dt>Civil Code (1898)</dt><dd>The law code that gave all men and single women legal equality, choice, and private property, while keeping the house's authority in its male head: eldest sons inherited everything and husbands controlled wives' land and buildings. <span class="cite">p. 359</span></dd></div>
-    <div class="row" id="g-internal" data-short="Hokkaido and the Ryukyus, absorbed and settled as parts of Japan."><dt>Internal colonies</dt><dd>Territories on Japan's edges, Hokkaido (land of the Ainu) and the Ryukyu Islands, that were absorbed as prefectures and ruled for Japan's benefit. <span class="cite">pp. 359–360, 362</span></dd></div>
-    <div class="row" id="g-lines" data-short="Yamagata, 1890: defend Japan's borders and a buffer zone; Korea lay in the buffer."><dt>Line of sovereignty · line of interest</dt><dd>Yamagata's 1890 doctrine: to stay independent, Japan must defend its own borders (line of sovereignty) and an outer ring of neighboring land (line of interest). Korea lay inside the line of interest. <span class="cite">p. 360</span></dd></div>
-    <div class="row" id="g-sinojp" data-short="1894–95 war with China over Korea; Japan won in nine months."><dt>Sino-Japanese War (1894–95)</dt><dd>The nine-month war with China fought over Korea. Japan drove China's army from Korea, sank its northern navy, and took Port Arthur and the Liaodong peninsula. <span class="cite">p. 361</span><span class="needs">Builds on: line of interest</span></dd></div>
-    <div class="row" id="g-shimonoseki" data-short="1895 peace: Taiwan, Pescadores, Liaodong, indemnity, and Korean 'autonomy' for Japan."><dt>Treaty of Shimonoseki (1895)</dt><dd>The April 1895 peace that gave Japan Taiwan, the Pescadores, Port Arthur and the Liaodong peninsula, and an indemnity (war payment), and made China promise to respect Korea's autonomy. <span class="cite">p. 361</span><span class="needs">Builds on: Sino-Japanese War</span></dd></div>
-    <div class="row" id="g-triple" data-short="Russia, France, and Germany forced Japan to hand Liaodong back (1895)."><dt>Triple Intervention</dt><dd>One week after Shimonoseki, Russia, France, and Germany "advised" Japan to give up its gains on the Chinese mainland. Japan had to comply; Russia then took Port Arthur and the Liaodong peninsula itself. <span class="cite">pp. 311, 361–362</span><span class="needs">Builds on: Treaty of Shimonoseki</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 STATE -->
@@ -1552,6 +1498,93 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
     <div class="a"><ul><li>Social Darwinism and "Leaving Asia" (pp. 359–361).</li><li>Japan imposed unequal treaties on China (1870) and Korea (1876) while seeking revision of its own (pp. 359–361).</li><li>Expansion as a source of national unity (p. 362). Compare China's Self-Strengthening in <a href="unit6.html">Unit 6</a>.</li></ul></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-oligarchs">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from <a href="unit7.html">Unit 7</a> are repeated briefly where you need them.</p>
+
+  <h3 class="gloss-group">From Unit 7 (review)</h3>
+  <dl class="gloss">
+    <div class="row" id="g-daimyo" data-short="A lord ruling a domain under the shogun; 250–280 of them before 1871."><dt>Daimyo · domain</dt><dd>A daimyo was a lord whose domain (territory) produced over 10,000 <i>koku</i> of rice. Under the Tokugawa, each ran his domain as he saw fit and kept a band of samurai retainers. <span class="cite">pp. 289, 348–349</span></dd></div>
+    <div class="row" id="g-satcho" data-short="Satsuma and Chōshū, the two outside domains whose samurai led the new regime."><dt>Satsuma · Chōshū (Sat-chō)</dt><dd>Two large domains in the southwest, once kept out of Tokugawa policymaking, whose 1866 alliance overthrew the shogunate. Their samurai formed the core of the new leadership. <span class="cite">pp. 345–347</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-restoration" data-short="1868: rule 'restored' to the emperor, ending military government."><dt>Meiji Restoration</dt><dd>Making the Meiji emperor head of state in 1868. It is called a restoration because the new regime claimed to restore the emperor to the power his ancestors had held in the 700s. <span class="cite">pp. 346–347</span></dd></div>
+    <div class="row" id="g-unequal" data-short="Treaties forced on Japan in 1854–58: foreigners judged by their own courts, low tariffs."><dt>Unequal treaties</dt><dd>The treaties of 1854–58 imposed under threat of force. They gave foreigners <a class="term" href="#g-extra">extraterritoriality</a> and held Japan's tariffs (taxes on imports) low. Revising them was a main Meiji goal. <span class="cite">pp. 339, 349, 361</span></dd></div>
+    <div class="row" id="g-extra" data-short="Foreigners in Japan answered only to their own countries' laws and courts."><dt>Extraterritoriality</dt><dd>The right of foreigners to be tried under their own country's laws rather than the host country's. Japan won its end in the 1890s, then imposed it on others. <span class="cite">pp. 339, 359, 361</span><span class="needs">Builds on: unequal treaties</span></dd></div>
+    <div class="row" id="g-kokutai" data-short="Japan's 'national polity' or unique essence, centered on the emperor."><dt>Kokutai</dt><dd>Japan's "national polity," its unique spiritual essence centered on the emperor. Mito scholars coined the idea; the 1890 Rescript on Education asked students to be loyal to it. <span class="cite">pp. 338, 359</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The new state</h3>
+  <dl class="gloss">
+    <div class="row" id="g-oligarchs" data-short="The small, self-selected group of men who held power in the emperor's name."><dt>Oligarchs</dt><dd>The small group of men, mostly samurai from Satsuma and Chōshū plus a few court nobles, who led the overthrow of the shogun and then ran the government in the emperor's name. They are called oligarchs because they monopolized power. They often disagreed with one another. <span class="cite">pp. 347–348</span><span class="needs">Builds on: Sat-chō</span></dd></div>
+    <div class="row" id="g-oath" data-short="The emperor's 1868 vow: public discussion, careers open to all, end old customs, learn from the world."><dt>Oath of 1868 (Charter Oath†)</dt><dd>The emperor's first pronouncement, sworn to the gods before nobles and daimyo. It promised unity for the nation's good, policy by public discussion, the chance for all to pursue their ambitions, an end to "uncivilized customs," and a search for knowledge worldwide. Its vague wording hid the oligarchs' disagreements. Usually called the Charter Oath. <span class="cite">p. 348</span><span class="needs">Builds on: oligarchs</span></dd></div>
+    <div class="row" id="g-five" data-short="Rules for commoners issued the day after the oath: obey, don't protest, shun Christianity, stay home."><dt>Five Injunctions</dt><dd>Orders to commoners issued the day after the oath: practice the Confucian virtues of loyalty, filial piety, chastity, obedience, and harmony; stop protests; shun Christianity; follow international law; and stay in Japan. <span class="cite">p. 348</span><span class="needs">See also: oath of 1868</span></dd></div>
+    <div class="row" id="g-shizoku" data-short="'Former samurai': the single class for all retainers above foot soldier."><dt>Shizoku</dt><dd>"Former samurai," the single category the government created for all retainers above the level of foot soldier. About 2 million lost their hereditary positions in 1871 and received only small stipends, later changed to government bonds. <span class="cite">p. 349</span></dd></div>
+    <div class="row" id="g-prefecture" data-short="1871: about 270 domains replaced by 72 (later 50) prefectures run from Tokyo."><dt>Abolition of domains · prefectures</dt><dd>In 1871 the oligarchs abolished some 270 domains and set up prefectures, centrally run provinces, first 72 and later 50, to centralize tax collection. The biggest daimyo became prefectural governors. <span class="cite">p. 349</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-koseki" data-short="Each household head registered a legal residence and reported births, deaths, marriages, divorces."><dt>Household registration</dt><dd>The 1871 system that made each household head register a legal residence and report births, deaths, marriages, and divorces. It also made it impossible for former outcasts to hide their past. <span class="cite">p. 349</span></dd></div>
+    <div class="row" id="g-iwakura" data-short="1871–73 delegation to the U.S. and Europe; came to revise treaties, ended up studying the West."><dt>Iwakura mission</dt><dd>The 1871 delegation of 49 officials, 58 students, and five girls, led by the former court noble Iwakura Tomomi. It went to revise the unequal treaties, was told reform must come first, and turned into a study tour of prisons, schools, factories, and ministries. <span class="cite">pp. 349–350</span><span class="needs">Builds on: unequal treaties</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Reforms and resistance</h3>
+  <dl class="gloss">
+    <div class="row" id="g-fukoku" data-short="'Rich country, strong army,' the slogan of the day."><dt>Rich Country, Strong Army</dt><dd>The era's slogan (<i>fukoku kyōhei</i>): build national wealth and military power together. It justified conscription and state industry, and later the costs borne by people near the Ashio mine. <span class="cite">pp. 340, 351, 357</span></dd></div>
+    <div class="row" id="g-conscription" data-short="1873: men over 20 owe 3 years' active duty plus 4 in reserve; ended samurai monopoly of arms."><dt>Conscription ordinance (1873)</dt><dd>Yamagata Aritomo's law, modeled on German and French practice, calling all men over 20 to three years of active duty and four in the reserves. Heads and heirs of family farms and businesses were exempt, and exemptions could be bought. By ending the samurai's monopoly of force, it did more than any other reform to erase status lines. <span class="cite">p. 351</span><span class="needs">Builds on: shizoku</span></dd></div>
+    <div class="row" id="g-blood" data-short="The ordinance's phrase for citizens' duty to sacrifice; some farmers took it literally."><dt>"Blood tax"</dt><dd>The conscription ordinance's term for every citizen's duty to sacrifice for the country. Some farmers took it literally and thought the government wanted their blood. <span class="cite">p. 351</span><span class="needs">Builds on: conscription ordinance</span></dd></div>
+    <div class="row" id="g-landtax" data-short="1873: one uniform cash tax on land value replaced domain taxes on harvests."><dt>Land tax (1873)</dt><dd>A single, uniform property tax on farmland, set at 3 percent of assessed value, replacing the old mix of domain taxes on changing harvests. It gave the state a steady income; protests cut it to 2.5 percent in 1876. It supplied nearly 80 percent of revenue through the 1880s. <span class="cite">pp. 351–353</span></dd></div>
+    <div class="row" id="g-goshi" data-short="Satsuma's 'rustic warriors,' who treated cultivators as tenants and lost out to the land tax."><dt>Gōshi</dt><dd>"Rustic warriors" in Satsuma who had assigned land to cultivators and treated them like tenants. The land tax took their income, status, and privilege, and they became the shock troops of the Satsuma Rebellion. <span class="cite">p. 352</span><span class="needs">Builds on: land tax</span></dd></div>
+    <div class="row" id="g-satsuma" data-short="1877 revolt led by Saigō; 65,000 troops and 8 months to suppress; the last samurai rising."><dt>Satsuma Rebellion (1877)</dt><dd>The largest and last of more than thirty samurai uprisings of 1874–77, led by Saigō Takamori after he lost the Korea debate. It took 65,000 conscript troops eight months to crush; Saigō killed himself. <span class="cite">p. 351</span><span class="needs">Builds on: shizoku, conscription</span></dd></div>
+    <div class="row" id="g-edcode" data-short="1872: compulsory schooling for all; exams to climb to middle school and university."><dt>Educational Code (1872)</dt><dd>The decree requiring eight years of school for all children (cut to four in 1879, raised to six in 1907), with exams to qualify for middle school and university. Communities had to pay for the schools. <span class="cite">pp. 350, 359</span></dd></div>
+    <div class="row" id="g-stateshinto" data-short="Shrines ranked under Ise and used to promote national goals; Buddhism pushed out."><dt>State Shinto</dt><dd>The 1870s system that grouped local shrines under the Ise shrine to the sun goddess, so people worshipped gods of national as well as local importance. It followed the 1868 order to separate Shinto from Buddhism. Yasukuni shrine (1869) housed the war dead. <span class="cite">p. 350</span></dd></div>
+    <div class="row" id="g-newcommoners" data-short="Former outcasts after status lines were abolished; resented by others and still discriminated against."><dt>"New commoners"</dt><dd>The name for former outcasts once status distinctions were erased. Their official equality set off protests by other commoners, and they lost their old monopoly over leatherwork. <span class="cite">p. 350</span></dd></div>
+    <div class="row" id="g-omoto" data-short="Deguchi Nao's new religion (1899): the corrupt world would be replaced by one of equality."><dt>Ōmoto-kyō</dt><dd>The sect organized in 1899 from the revelations of Deguchi Nao, a poor illiterate woman possessed by a god in 1892. It taught that the money-loving social order would be destroyed and replaced by divine harmony and equality, and it was repeatedly persecuted. <span class="cite">p. 352</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Constitution and Diet</h3>
+  <dl class="gloss">
+    <div class="row" id="g-prm" data-short="Movement of the late 1870s–80s demanding an elected national assembly and rights."><dt>Popular Rights Movement</dt><dd>The campaign for an elected national assembly, a constitution, and rights, set off by Itagaki's 1874 petition and the 1875 promise of a constitution. Former samurai, village officials, rural entrepreneurs, journalists, women speakers, and poor farmers took part. <span class="cite">p. 353</span></dd></div>
+    <div class="row" id="g-peace" data-short="Laws to curb the movement: press censorship (1875), police at meetings (1880)."><dt>Peace preservation laws</dt><dd>Laws that grew harsher in answer to the Popular Rights Movement: press censorship from 1875, and the 1880 Ordinance on Public Meetings, which put police at meetings to check that speakers kept to approved texts. <span class="cite">p. 353</span><span class="needs">Builds on: Popular Rights Movement</span></dd></div>
+    <div class="row" id="g-constitution" data-short="1889 constitution 'given' by the emperor: sovereign, sacred emperor; a two-house Diet."><dt>Meiji Constitution (1889)</dt><dd>The constitution drafted in secret by Itō Hirobumi after study in Berlin, and bestowed by the emperor on February 11, 1889. It defined the emperor as sovereign and sacred, created the Diet, and listed subjects' rights and duties, each limited by law. <span class="cite">pp. 353–354</span></dd></div>
+    <div class="row" id="g-diet" data-short="Japan's two-house national assembly from 1890: appointed peers above, elected house below."><dt>Imperial Diet</dt><dd>The two-chamber national assembly. The upper house was filled by the new peerage (oligarchs, former daimyo, court nobles); the lower house was elected. It could approve the budget, which gave it more power than the oligarchs intended. <span class="cite">pp. 353–354</span><span class="needs">Builds on: Meiji Constitution</span></dd></div>
+    <div class="row" id="g-cabinet" data-short="Prime minister and ministers who made policy; replaced the Council of State in 1885."><dt>Cabinet</dt><dd>The prime minister, appointed by the emperor, and the ministers who ran education, finance, foreign affairs, and other ministries. It replaced the Council of State in 1885 and made policy. <span class="cite">p. 353</span></dd></div>
+    <div class="row" id="g-privy" data-short="Advisory council headed by Itō that reviewed the draft constitution."><dt>Privy Council</dt><dd>A new advisory body, headed by Itō, that met to discuss the finished constitution before it was issued. <span class="cite">p. 353</span></dd></div>
+    <div class="row" id="g-genro" data-short="'Elder statesmen': the oligarchs' title for themselves after 1889; they chose cabinet ministers."><dt>Genrō</dt><dd>"Elder statesmen," the title the oligarchs gave themselves after the constitution was issued. Not mentioned in the constitution, they picked cabinet ministers for the emperor. <span class="cite">p. 353</span><span class="needs">Builds on: oligarchs, cabinet</span></dd></div>
+    <div class="row" id="g-suffrage" data-short="The right to vote; in 1890 only men paying 15+ yen in property tax, 1.1% of people."><dt>Suffrage</dt><dd>The right to vote. For the first Diet it was limited to men paying at least 15 yen a year in property taxes, just 1.1 percent of the population, most of them rural. Yamagata widened it to 2.2 percent in 1900. <span class="cite">pp. 354–355</span><span class="needs">Builds on: Imperial Diet</span></dd></div>
+    <div class="row" id="g-parties" data-short="Itagaki's Liberal Party, Ōkuma's Progressive Party, Itō's Friends of Government (1900)."><dt>Political parties</dt><dd>Groups organized to win Diet seats: the Liberal Party (Itagaki) and the Progressive Party (Ōkuma), both led by men pushed out of the oligarchs' circle; and in 1900 Itō's own Friends of Government (Seiyūkai). <span class="cite">pp. 354–355, 386</span><span class="needs">Builds on: Imperial Diet</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Economy and work</h3>
+  <dl class="gloss">
+    <div class="row" id="g-zaibatsu" data-short="Business groups like Mitsubishi that grew from state favors (term used from Unit 10)."><dt>Mitsubishi · Mitsui</dt><dd>Business houses that grew rich on government connections. Iwasaki Yatarō built Mitsubishi on a shipping line bought from Tosa plus cheap state loans; Fukuzawa advised both. They became the largest conglomerates, later called <i>zaibatsu</i>. <span class="cite">pp. 355, 357, 384–385</span></dd></div>
+    <div class="row" id="g-intermediate" data-short="Western machines adapted to Japanese conditions, like small water-powered silk mills."><dt>Intermediate technology</dt><dd>Western machines and methods scaled and adapted to Japanese conditions by entrepreneurs and artisans: cheaper matches for Asian markets, or small water-powered silk-spinning mills in mountain valleys near silk farms and young women workers. <span class="cite">p. 356</span></dd></div>
+    <div class="row" id="g-matsukata" data-short="1881–85 deflation: balanced budget, sound money, state industries sold off."><dt>Matsukata deflation</dt><dd>Finance Minister Matsukata Masayoshi's cure for the 1880 crisis: balance the budget, back the currency with gold and silver, sell state industries (except railroads, telegraph, and arms) at a loss, and shrink the money supply by 20 percent. Prices stabilized, but many farmers lost their land. <span class="cite">p. 356</span><span class="needs">Builds on: land tax</span></dd></div>
+    <div class="row" id="g-oyakata" data-short="Labor bosses who contracted jobs and ran the factory floor in heavy industry."><dt>Oyakata</dt><dd>Bosses who contracted for specific jobs in heavy industry. Because workers, not managers, ran the factory floor, skilled men kept a measure of independence and pride. <span class="cite">p. 357</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Ideas and culture</h3>
+  <dl class="gloss">
+    <div class="row" id="g-civ" data-short="Fukuzawa's slogan for Western-style progress in ideas, habits, dress, and institutions."><dt>Civilization and Enlightenment</dt><dd>The slogan, coined by Fukuzawa Yukichi, for remaking Japan along Western lines: schools, hospitals, newspapers, hygiene, dress, hairstyles, and ideas of self-help. Oligarchs, city intellectuals, and village notables all promoted it. <span class="cite">p. 357</span></dd></div>
+    <div class="row" id="g-meiji6" data-short="1873 Tokyo society of intellectuals whose journal debated government, language, religion, women."><dt>Meiji 6 Society</dt><dd>A group of intellectuals founded in Tokyo in 1873 (Meiji year 6). Its journal debated representative government, foreign affairs, reform of the language, ethics, religion, and roles for women. Fukuzawa was a leading member. <span class="cite">p. 357</span><span class="needs">See also: Civilization and Enlightenment</span></dd></div>
+    <div class="row" id="g-deercry" data-short="1883 Western-style hall for balls and parties; symbol of the 'dancing cabinet.'"><dt>Deer-Cry Pavilion (Rokumeikan†)</dt><dd>The two-story brick building with a ballroom, billiard room, and restaurant that the foreign minister built in 1883 for parties with foreigners, where husbands and wives danced together. Its style gave the late-1880s government the nickname "dancing cabinet." <span class="cite">p. 358</span></dd></div>
+    <div class="row" id="g-goodwife" data-short="The ideal that women serve the state by running the home and raising children."><dt>Good wives and wise mothers</dt><dd>The ideal, pressed by women's magazines and the schools, that women should be educated so they could serve the nation as wives and mothers, not as political actors. <span class="cite">pp. 358–359</span></dd></div>
+    <div class="row" id="g-socdarwin" data-short="Belief that nations must conquer or be conquered; used to justify empire."><dt>Social Darwinism</dt><dd>The application of "survival of the fittest" to nations: nations must conquer or be conquered. Japanese leaders and writers drew on it to justify both reform at home and expansion abroad. <span class="cite">pp. 313, 353, 359</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Conservatism and empire</h3>
+  <dl class="gloss">
+    <div class="row" id="g-rescript" data-short="1890 imperial message telling students to be filial, harmonious, law-abiding, and loyal."><dt>Imperial Rescript on Education (1890)</dt><dd>The emperor's statement urging students to practice filial piety, harmony, sincerity, and benevolence; respect the constitution; obey the laws; and be loyal to the <a class="term" href="#g-kokutai">kokutai</a>. It marked education's turn from practical knowledge to civic morality. <span class="cite">p. 359</span><span class="needs">Builds on: kokutai</span></dd></div>
+    <div class="row" id="g-civilcode" data-short="1898 law code: legal equality for men, but family property and authority to the male head."><dt>Civil Code (1898)</dt><dd>The law code that gave all men and single women legal equality, choice, and private property, while keeping the house's authority in its male head: eldest sons inherited everything and husbands controlled wives' land and buildings. <span class="cite">p. 359</span></dd></div>
+    <div class="row" id="g-internal" data-short="Hokkaido and the Ryukyus, absorbed and settled as parts of Japan."><dt>Internal colonies</dt><dd>Territories on Japan's edges, Hokkaido (land of the Ainu) and the Ryukyu Islands, that were absorbed as prefectures and ruled for Japan's benefit. <span class="cite">pp. 359–360, 362</span></dd></div>
+    <div class="row" id="g-lines" data-short="Yamagata, 1890: defend Japan's borders and a buffer zone; Korea lay in the buffer."><dt>Line of sovereignty · line of interest</dt><dd>Yamagata's 1890 doctrine: to stay independent, Japan must defend its own borders (line of sovereignty) and an outer ring of neighboring land (line of interest). Korea lay inside the line of interest. <span class="cite">p. 360</span></dd></div>
+    <div class="row" id="g-sinojp" data-short="1894–95 war with China over Korea; Japan won in nine months."><dt>Sino-Japanese War (1894–95)</dt><dd>The nine-month war with China fought over Korea. Japan drove China's army from Korea, sank its northern navy, and took Port Arthur and the Liaodong peninsula. <span class="cite">p. 361</span><span class="needs">Builds on: line of interest</span></dd></div>
+    <div class="row" id="g-shimonoseki" data-short="1895 peace: Taiwan, Pescadores, Liaodong, indemnity, and Korean 'autonomy' for Japan."><dt>Treaty of Shimonoseki (1895)</dt><dd>The April 1895 peace that gave Japan Taiwan, the Pescadores, Port Arthur and the Liaodong peninsula, and an indemnity (war payment), and made China promise to respect Korea's autonomy. <span class="cite">p. 361</span><span class="needs">Builds on: Sino-Japanese War</span></dd></div>
+    <div class="row" id="g-triple" data-short="Russia, France, and Germany forced Japan to hand Liaodong back (1895)."><dt>Triple Intervention</dt><dd>One week after Shimonoseki, Russia, France, and Germany "advised" Japan to give up its gains on the Chinese mainland. Japan had to comply; Russia then took Port Arthur and the Liaodong peninsula itself. <span class="cite">pp. 311, 361–362</span><span class="needs">Builds on: Treaty of Shimonoseki</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1778,6 +1811,21 @@ table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:c
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>

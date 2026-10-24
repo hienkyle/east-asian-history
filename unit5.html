@@ -601,6 +601,33 @@ main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyp
 #drain .row{grid-template-columns:130px 1fr 104px}
 @media (max-width:520px){#drain .row{grid-template-columns:96px 1fr 88px}}
 #opium .side{margin-bottom:18px}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -621,13 +648,17 @@ main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyp
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 5</b> · The Western Challenge</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#steam">1 · A new kind of empire</a></li>
     <li><a href="#opium">2 · Tea, opium &amp; silver</a></li>
     <li><a href="#war">3 · The Opium War</a></li>
@@ -638,11 +669,9 @@ main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyp
     <li><a href="#ports">8 · Treaty ports, compared</a></li>
     <li><a href="#wider">9 · The wider world</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
-  <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
-  </div>
 </nav>
 
 <main>
@@ -701,76 +730,6 @@ main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyp
   </div>
   <figcaption><span class="fn">Figure 1.</span> Key events, 1793–1899. Filled dots mark the main treaties. Dates from pp. 306–313, 317, 321, 338–339, 370–374.</figcaption>
   </figure>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Start here</div>
-  <h2>Key terms first</h2>
-  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-mfn">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
-
-  <h3 class="gloss-group">Empire and its ideas</h3>
-  <dl class="gloss">
-    <div class="row" id="g-industrial" data-short="Coal-fired steam engines and new weapons that let Europe project force thousands of miles."><dt>Industrial revolution · steam power</dt><dd>The shift to machine industry that freed Europe from relying on farm products. It produced coal-fueled steamships, better weapons, and states able to command men and resources far from home. <span class="cite">p. 306</span></dd></div>
-    <div class="row" id="g-sovereignty" data-short="A state's full authority over its own territory and people, including its laws and courts."><dt>Sovereignty</dt><dd>A state's full authority over its own territory, people, laws, and courts. The new European focus on nationhood demanded clear boundaries and sovereignty, so every piece of land had to "belong somewhere." <span class="cite">p. 306</span></dd></div>
-    <div class="row" id="g-greatpower" data-short="Rank as a leading nation; after 1815 it seemed to require colonies, spurring rivalry."><dt>Great Power status</dt><dd>Recognition as one of the leading nations. After Napoleon's defeat in 1815 it seemed to require colonies, so competition among European states drove imperialism. <span class="cite">p. 306</span></dd></div>
-    <div class="row" id="g-socdar" data-short="Spencer's idea that nations, like species, survive only by winning the struggle; used to justify conquest."><dt>Social Darwinism</dt><dd>The idea, developed by Herbert Spencer and others from Darwin, that nations as well as species face extinction unless they win a ceaseless competition. It gave Westerners a new justification for their sense of racial superiority. <span class="cite">p. 313</span><span class="needs">Builds on: Great Power status</span></dd></div>
-    <div class="row" id="g-tribute" data-short="Qing rules for foreign relations: other rulers sent missions and rituals acknowledging the emperor's superiority."><dt>Tribute system</dt><dd>The rules, largely inherited from the Ming, by which the Qing dealt with foreign states: rulers sent missions and performed rituals that affirmed the emperor's superiority. Korea was a Chinese tributary. <span class="cite">pp. 306–307, 315, 371</span></dd></div>
-    <div class="row" id="g-kowtow" data-short="Kneeling and touching the head to the ground before the emperor; British envoys refused it."><dt>Kowtow</dt><dd>Kneeling and bowing the head to the ground before the emperor, one of the tribute rituals. The British envoy of 1816 refused it, so the emperor would not see him. <span class="cite">p. 307</span><span class="needs">Builds on: tribute system</span></dd></div>
-    <div class="row" id="g-indemnity" data-short="Money a defeated state is forced to pay the victor to compensate for its losses."><dt>Indemnity</dt><dd>Compensation for the victor's losses, forced on the loser of a war. Burma paid one in the 1820s; China paid them after each defeat. <span class="cite">pp. 307, 317</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">China's trade and the Opium War</h3>
-  <dl class="gloss">
-    <div class="row" id="g-eic" data-short="British trading company that ruled Bengal and held a monopoly on Britain's China trade until 1834."><dt>British East India Company</dt><dd>The chartered British trading company that took over much of India, grew opium in Bengal, and held a monopoly on Britain's China trade until 1834. Abolished after the 1857 Indian Rebellion. <span class="cite">pp. 306–308, 315–316</span></dd></div>
-    <div class="row" id="g-canton" data-short="Before 1842, Europeans could trade only at Guangzhou (Canton), only through licensed Chinese merchants."><dt>Canton system</dt><dd>The Qing rule that Europeans could trade only at Guangzhou (Canton) and only through licensed Chinese merchants. See <a href="unit4.html">Unit 4</a>. <span class="cite">p. 315</span></dd></div>
-    <div class="row" id="g-cohong" data-short="The guild of licensed Chinese merchants responsible to the court for foreign trade at Guangzhou."><dt>Cohong</dt><dd>The merchant guild responsible to the Qing court for managing foreign trade at Guangzhou. British traders wanted its monopoly ended; the Treaty of Nanjing abolished it. <span class="cite">p. 308</span><span class="needs">Builds on: Canton system</span></dd></div>
-    <div class="row" id="g-opium" data-short="Addictive drug from poppy sap; smoked recreationally; China banned it in 1800 and 1813."><dt>Opium</dt><dd>A drug made from poppy sap, long used in China as medicine. Once people smoked pure sap in pipes it became an addictive recreational drug. China banned its import and production in 1800 and its smoking in 1813. <span class="cite">pp. 315–316</span></dd></div>
-    <div class="row" id="g-cash" data-short="China's copper coins; farmers earned cash but owed taxes counted in silver."><dt>Cash</dt><dd>China's everyday copper coins. Farmers were paid in cash, but their taxes were assessed in silver, so they had to buy silver with cash to pay. <span class="cite">p. 317</span></dd></div>
-    <div class="row" id="g-drain" data-short="Opium imports reversed the silver flow; as silver grew scarce, taxes cost farmers nearly twice as much cash."><dt>Silver drain</dt><dd>The outflow of silver from China to pay for opium, rising from about 2 million ounces a year in the 1820s to about 9 million in the 1830s. Silver grew dearer: one ounce cost 1,500 cash in 1800 but 2,700 in 1830, hurting taxpayers. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: opium, cash</span></dd></div>
-    <div class="row" id="g-commissioner" data-short="An official sent by the emperor with special powers for one task, like Lin Zexu in 1839."><dt>Imperial commissioner</dt><dd>An official sent by the emperor with special powers for a single task. Lin Zexu went to Guangzhou as imperial commissioner in 1839 to suppress the drug trade. <span class="cite">p. 308</span></dd></div>
-    <div class="row" id="g-freetrade" data-short="The British belief that 'civilized' nations traded freely and kept relations through envoys and treaties."><dt>"Free trade" and "normal" relations</dt><dd>The British view that all "civilized" nations practiced free trade and handled relations through envoys and treaties. By this standard China was out of step with the modern world. <span class="cite">p. 317</span></dd></div>
-    <div class="row" id="g-matchlock" data-short="An old gun fired by lighting each powder charge by hand; most Qing soldiers had only swords, spears, and arrows."><dt>Matchlock musket</dt><dd>An old firearm in which each load of gunpowder had to be ignited by hand. The minority of Qing soldiers with firearms had these; the British had rifles. <span class="cite">p. 318</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">The treaty system</h3>
-  <dl class="gloss">
-    <div class="row" id="g-unequal" data-short="A treaty forced at gunpoint that gave privileges to the foreign power but none in return."><dt>Unequal treaty</dt><dd>A treaty, usually concluded at gunpoint, that gave benefits to the foreign power but not to the East Asian state, which got no matching privileges abroad. The 1842 Treaty of Nanjing was the first. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: sovereignty, indemnity</span></dd></div>
-    <div class="row" id="g-port" data-short="A city opened by treaty to foreign residence and trade."><dt>Treaty port</dt><dd>A city opened by treaty to foreign residence and trade: five in China in 1842, more after 1858. Japan and Korea later had to open their own. <span class="cite">pp. 308, 317, 339, 373</span></dd></div>
-    <div class="row" id="g-tariff" data-short="An import tax set by treaty at a low rate (5% in China), so the country could not raise it."><dt>Fixed tariff</dt><dd>An import tax set by treaty instead of by the country itself: 5 percent in China after 1842. Japan's 1858 treaty also forced low tariffs on imports, while Japanese exports faced steep U.S. tariffs. <span class="cite">pp. 317, 339</span><span class="needs">Builds on: unequal treaty</span></dd></div>
-    <div class="row" id="g-extra" data-short="Foreigners answered only to their own country's laws and courts, even in disputes with locals."><dt>Extraterritoriality</dt><dd>The privilege that foreigners were subject only to their own country's laws, judges, courts, and prisons, even in disputes with local people. First granted to Americans in China (1844). An infringement on sovereignty. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: sovereignty</span></dd></div>
-    <div class="row" id="g-mfn" data-short="Any privilege granted to one power automatically went to every power holding this clause."><dt>Most favored nation clause</dt><dd>A treaty clause by which a power automatically received any privilege the country later granted to any other power. With extraterritoriality, it was a hallmark of the unequal treaty system. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: unequal treaty</span></dd></div>
-    <div class="row" id="g-multi" data-short="Historian Akira Iriye's term: through MFN, all the powers shared each other's gains."><dt>Multilateral imperialism</dt><dd>Historian Akira Iriye's term for the way, through the most favored nation clause, every Western power shared in whatever privileges any one of them won. <span class="cite">p. 308</span><span class="needs">Builds on: most favored nation clause</span></dd></div>
-    <div class="row" id="g-envoy" data-short="A foreign ambassador living in the capital; the Qing saw them as little better than spies."><dt>Resident ambassador</dt><dd>A foreign diplomat stationed permanently in the capital. The Qing resisted them, seeing them as little better than spies, until forced to accept them in 1858–1860. <span class="cite">pp. 309, 321</span></dd></div>
-    <div class="row" id="g-transit" data-short="A tax on goods moving inside China; after 1858 capped at 2.5% for foreign goods."><dt>Transit tariff</dt><dd>A tax on goods moving within China. The 1858 treaties capped it at 2.5 percent for foreign goods. <span class="cite">p. 321</span><span class="needs">Builds on: fixed tariff</span></dd></div>
-    <div class="row" id="g-arrow" data-short="The British and French name for the Second Opium War (1856–60), after a ship used as a pretext."><dt>Arrow War</dt><dd>The British and French name for the Second Opium War, from the name of a ship that gave Britain a pretext for war. It ended with the Treaties of Tianjin and the occupation of Beijing. <span class="cite">pp. 307, 321</span></dd></div>
-    <div class="row" id="g-sphere" data-short="An area of China where one power's officials and traders dominated, without making it a colony."><dt>Sphere of influence</dt><dd>A region where one power's officials and traders dominated without making it a colony. Late in the century the powers carved these out along China's coast and up the Yangzi. <span class="cite">p. 311</span></dd></div>
-    <div class="row" id="g-opendoor" data-short="U.S. call for spheres of influence not to shut out Americans."><dt>Open Door</dt><dd>U.S. Secretary of State John Hay's call for the powers not to use their spheres of influence to exclude Americans. The powers agreed, with reservations. <span class="cite">p. 311</span><span class="needs">Builds on: sphere of influence</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Japan</h3>
-  <dl class="gloss">
-    <div class="row" id="g-tozama" data-short="'Outside' daimyo whose ancestors were not Tokugawa allies, like Satsuma and Chōshū."><dt>Tozama domain</dt><dd>An "outside" domain, whose lord's family had not been a Tokugawa ally before 1600, such as Satsuma. See <a href="unit3.html">Unit 3</a>. <span class="cite">p. 338</span></dd></div>
-    <div class="row" id="g-expel" data-short="1825 order: drive off every foreign ship except the Dutch; Japan's first truly isolationist policy."><dt>1825 expulsion order</dt><dd>After British ships raided coastal villages, the shogunate ordered all foreign ships, except the Dutch at Nagasaki, driven off without hesitation. It was Japan's first truly isolationist policy; it was relaxed in 1842. <span class="cite">p. 338</span></dd></div>
-    <div class="row" id="g-shinron" data-short="Aizawa Seishisai's 1825 'New Theses': foreigners spread Christianity to conquer from within."><dt><i>Shinron</i> <small>New Theses</small></dt><dd>An 1825 treatise by the Mito scholar Aizawa Seishisai. It warned that trade drained precious metals and that traders spread Christianity to win over commoners and "conquer from within." It shaped later nationalist thought. <span class="cite">p. 338</span></dd></div>
-    <div class="row" id="g-kokutai" data-short="Japan's 'unique spiritual essence,' rooted in a monarch descended from the sun goddess."><dt><i>Kokutai</i></dt><dd>Japan's unique spiritual essence. Mito scholars held Japan superior to all countries because its monarch descended from the sun goddess; Aizawa wanted the masses taught this essence. <span class="cite">p. 338</span><span class="needs">Builds on: Shinron</span></dd></div>
-    <div class="row" id="g-kanagawa" data-short="1854 friendship treaty: Shimoda and Hakodate open to U.S. ships, a U.S. consul, MFN."><dt>Kanagawa treaty</dt><dd>The 1854 friendship treaty Perry obtained. It opened Shimoda and Hakodate to American ships for coal and supplies, promised fair treatment of shipwrecked sailors, allowed a U.S. consul at Shimoda, and gave most favored nation treatment. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: most favored nation clause</span></dd></div>
-    <div class="row" id="g-consul" data-short="An official stationed abroad to look after his country's trade and citizens."><dt>Consul</dt><dd>An official stationed in a foreign country to look after his nation's trade and citizens. Townsend Harris, the first U.S. consul in Japan, arrived at Shimoda in 1856. <span class="cite">p. 339</span></dd></div>
-    <div class="row" id="g-harris" data-short="1858 commercial treaty: diplomats, six cities opened, low tariffs, extraterritoriality."><dt>Harris treaty</dt><dd>The 1858 commercial treaty Townsend Harris won by pointing to China's fate. It exchanged diplomats, opened six cities to foreign residence and trade, imposed low tariffs, and granted extraterritoriality. Similar treaties followed with four European powers. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: treaty port, fixed tariff, extraterritoriality</span></dd></div>
-    <div class="row" id="g-kawaraban" data-short="Cheap broadsheets that spread news and gossip about Perry and the treaties."><dt><i>Kawaraban</i></dt><dd>Broadsheets, sold anonymously in cities, that reported news and gossip on the treaty negotiations. With letters and diaries they helped create a new public political realm. <span class="cite">p. 340</span></dd></div>
-    <div class="row" id="g-sonno" data-short="'Revere the monarch, expel the barbarian': Yoshida Shōin's slogan against the treaties."><dt><i>Sonnō jōi</i></dt><dd>"Revere the monarch and expel the barbarian": Yoshida Shōin's slogan. The monarch should share in policy, and foreigners must be driven off. <span class="cite">p. 340</span></dd></div>
-    <div class="row" id="g-fukoku" data-short="'Rich country, strong army': Yokoi Shōnan's slogan for engaging with the West."><dt><i>Fukoku kyōhei</i></dt><dd>"Rich country, strong army," a slogan from the Chinese classics popularized by Yokoi Shōnan for those who wanted to open Japan and gain Western knowledge and tools. <span class="cite">p. 340</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Korea</h3>
-  <dl class="gloss">
-    <div class="row" id="g-daewongun" data-short="Gojong's father and regent from 1864; domestic reform plus a refusal of all treaties."><dt>Daewongun</dt><dd>The father of King Gojong, who took the throne at twelve in 1864. He governed behind the king, combining domestic reform with isolationism: he rejected every foreign request for a treaty to avoid China's and Japan's fate. Forced into retirement in 1874. <span class="cite">pp. 369–370, 372</span></dd></div>
-    <div class="row" id="g-sherman" data-short="1866: a U.S.-flagged ship forcing its way toward Pyeongyang was burned and its crew killed."><dt><i>General Sherman</i> incident</dt><dd>In 1866 a ship under the U.S. flag sailed up the Daedong River near Pyeongyang demanding trade. Local people burned it and killed its crew; the U.S. used this as a reason for its 1871 attack. <span class="cite">p. 370</span></dd></div>
-    <div class="row" id="g-ganghwa-is" data-short="Island whose forts guarded the entrance to Seoul; attacked by France (1866), the U.S. (1871), and Japan (1875)."><dt>Ganghwa Island</dt><dd>An island whose forts guarded the entrance to Seoul. French troops landed there in 1866, U.S. marines in 1871, and Japanese troops in 1875. <span class="cite">pp. 309, 370, 373</span></dd></div>
-    <div class="row" id="g-ganghwa" data-short="1876: Korea's first modern treaty; opened Busan and two more ports to Japan, with extraterritoriality."><dt>Ganghwa Treaty</dt><dd>Korea's first modern treaty, forced by Japan in 1876. It opened Busan and two more ports to Japanese trade and imposed extraterritoriality. Japan gained the same privileges Westerners held in Japan. <span class="cite">pp. 311, 373</span><span class="needs">Builds on: unequal treaty, extraterritoriality</span></dd></div>
-    <div class="row" id="g-strategy" data-short="Huang Zunxian's 1880 advice that Korea sign treaties with all Western powers for protection."><dt>"Strategy for Korea"</dt><dd>A recommendation sent to King Gojong in 1880 by Huang Zunxian, a Chinese official in Tokyo, arguing that Korea should sign treaties with all the Western powers for self-protection. <span class="cite">p. 373</span></dd></div>
-    <div class="row" id="g-selfgov" data-short="Korea's 1882 claim to be both 'self-governing' and China's tributary."><dt>"Self-governing" tributary</dt><dd>The compromise in the 1882 U.S.–Korea treaty: King Gojong wrote to President Arthur that Korea was both self-governing and a Chinese tributary. The U.S. treated Korea as sovereign; Korea and China treated tribute as intact. <span class="cite">p. 374</span><span class="needs">Builds on: tribute system, sovereignty</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 STEAM -->
@@ -1273,6 +1232,80 @@ main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyp
     <div class="a"><ul><li>The book raises this question about China on p. 314.</li><li>Look at choices made in Asia: Lin's policy, Japan's debate, the Daewongun's isolation, Li Hongzhang's Korea policy.</li></ul></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-mfn">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook.</p>
+
+  <h3 class="gloss-group">Empire and its ideas</h3>
+  <dl class="gloss">
+    <div class="row" id="g-industrial" data-short="Coal-fired steam engines and new weapons that let Europe project force thousands of miles."><dt>Industrial revolution · steam power</dt><dd>The shift to machine industry that freed Europe from relying on farm products. It produced coal-fueled steamships, better weapons, and states able to command men and resources far from home. <span class="cite">p. 306</span></dd></div>
+    <div class="row" id="g-sovereignty" data-short="A state's full authority over its own territory and people, including its laws and courts."><dt>Sovereignty</dt><dd>A state's full authority over its own territory, people, laws, and courts. The new European focus on nationhood demanded clear boundaries and sovereignty, so every piece of land had to "belong somewhere." <span class="cite">p. 306</span></dd></div>
+    <div class="row" id="g-greatpower" data-short="Rank as a leading nation; after 1815 it seemed to require colonies, spurring rivalry."><dt>Great Power status</dt><dd>Recognition as one of the leading nations. After Napoleon's defeat in 1815 it seemed to require colonies, so competition among European states drove imperialism. <span class="cite">p. 306</span></dd></div>
+    <div class="row" id="g-socdar" data-short="Spencer's idea that nations, like species, survive only by winning the struggle; used to justify conquest."><dt>Social Darwinism</dt><dd>The idea, developed by Herbert Spencer and others from Darwin, that nations as well as species face extinction unless they win a ceaseless competition. It gave Westerners a new justification for their sense of racial superiority. <span class="cite">p. 313</span><span class="needs">Builds on: Great Power status</span></dd></div>
+    <div class="row" id="g-tribute" data-short="Qing rules for foreign relations: other rulers sent missions and rituals acknowledging the emperor's superiority."><dt>Tribute system</dt><dd>The rules, largely inherited from the Ming, by which the Qing dealt with foreign states: rulers sent missions and performed rituals that affirmed the emperor's superiority. Korea was a Chinese tributary. <span class="cite">pp. 306–307, 315, 371</span></dd></div>
+    <div class="row" id="g-kowtow" data-short="Kneeling and touching the head to the ground before the emperor; British envoys refused it."><dt>Kowtow</dt><dd>Kneeling and bowing the head to the ground before the emperor, one of the tribute rituals. The British envoy of 1816 refused it, so the emperor would not see him. <span class="cite">p. 307</span><span class="needs">Builds on: tribute system</span></dd></div>
+    <div class="row" id="g-indemnity" data-short="Money a defeated state is forced to pay the victor to compensate for its losses."><dt>Indemnity</dt><dd>Compensation for the victor's losses, forced on the loser of a war. Burma paid one in the 1820s; China paid them after each defeat. <span class="cite">pp. 307, 317</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">China's trade and the Opium War</h3>
+  <dl class="gloss">
+    <div class="row" id="g-eic" data-short="British trading company that ruled Bengal and held a monopoly on Britain's China trade until 1834."><dt>British East India Company</dt><dd>The chartered British trading company that took over much of India, grew opium in Bengal, and held a monopoly on Britain's China trade until 1834. Abolished after the 1857 Indian Rebellion. <span class="cite">pp. 306–308, 315–316</span></dd></div>
+    <div class="row" id="g-canton" data-short="Before 1842, Europeans could trade only at Guangzhou (Canton), only through licensed Chinese merchants."><dt>Canton system</dt><dd>The Qing rule that Europeans could trade only at Guangzhou (Canton) and only through licensed Chinese merchants. See <a href="unit4.html">Unit 4</a>. <span class="cite">p. 315</span></dd></div>
+    <div class="row" id="g-cohong" data-short="The guild of licensed Chinese merchants responsible to the court for foreign trade at Guangzhou."><dt>Cohong</dt><dd>The merchant guild responsible to the Qing court for managing foreign trade at Guangzhou. British traders wanted its monopoly ended; the Treaty of Nanjing abolished it. <span class="cite">p. 308</span><span class="needs">Builds on: Canton system</span></dd></div>
+    <div class="row" id="g-opium" data-short="Addictive drug from poppy sap; smoked recreationally; China banned it in 1800 and 1813."><dt>Opium</dt><dd>A drug made from poppy sap, long used in China as medicine. Once people smoked pure sap in pipes it became an addictive recreational drug. China banned its import and production in 1800 and its smoking in 1813. <span class="cite">pp. 315–316</span></dd></div>
+    <div class="row" id="g-cash" data-short="China's copper coins; farmers earned cash but owed taxes counted in silver."><dt>Cash</dt><dd>China's everyday copper coins. Farmers were paid in cash, but their taxes were assessed in silver, so they had to buy silver with cash to pay. <span class="cite">p. 317</span></dd></div>
+    <div class="row" id="g-drain" data-short="Opium imports reversed the silver flow; as silver grew scarce, taxes cost farmers nearly twice as much cash."><dt>Silver drain</dt><dd>The outflow of silver from China to pay for opium, rising from about 2 million ounces a year in the 1820s to about 9 million in the 1830s. Silver grew dearer: one ounce cost 1,500 cash in 1800 but 2,700 in 1830, hurting taxpayers. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: opium, cash</span></dd></div>
+    <div class="row" id="g-commissioner" data-short="An official sent by the emperor with special powers for one task, like Lin Zexu in 1839."><dt>Imperial commissioner</dt><dd>An official sent by the emperor with special powers for a single task. Lin Zexu went to Guangzhou as imperial commissioner in 1839 to suppress the drug trade. <span class="cite">p. 308</span></dd></div>
+    <div class="row" id="g-freetrade" data-short="The British belief that 'civilized' nations traded freely and kept relations through envoys and treaties."><dt>"Free trade" and "normal" relations</dt><dd>The British view that all "civilized" nations practiced free trade and handled relations through envoys and treaties. By this standard China was out of step with the modern world. <span class="cite">p. 317</span></dd></div>
+    <div class="row" id="g-matchlock" data-short="An old gun fired by lighting each powder charge by hand; most Qing soldiers had only swords, spears, and arrows."><dt>Matchlock musket</dt><dd>An old firearm in which each load of gunpowder had to be ignited by hand. The minority of Qing soldiers with firearms had these; the British had rifles. <span class="cite">p. 318</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The treaty system</h3>
+  <dl class="gloss">
+    <div class="row" id="g-unequal" data-short="A treaty forced at gunpoint that gave privileges to the foreign power but none in return."><dt>Unequal treaty</dt><dd>A treaty, usually concluded at gunpoint, that gave benefits to the foreign power but not to the East Asian state, which got no matching privileges abroad. The 1842 Treaty of Nanjing was the first. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: sovereignty, indemnity</span></dd></div>
+    <div class="row" id="g-port" data-short="A city opened by treaty to foreign residence and trade."><dt>Treaty port</dt><dd>A city opened by treaty to foreign residence and trade: five in China in 1842, more after 1858. Japan and Korea later had to open their own. <span class="cite">pp. 308, 317, 339, 373</span></dd></div>
+    <div class="row" id="g-tariff" data-short="An import tax set by treaty at a low rate (5% in China), so the country could not raise it."><dt>Fixed tariff</dt><dd>An import tax set by treaty instead of by the country itself: 5 percent in China after 1842. Japan's 1858 treaty also forced low tariffs on imports, while Japanese exports faced steep U.S. tariffs. <span class="cite">pp. 317, 339</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-extra" data-short="Foreigners answered only to their own country's laws and courts, even in disputes with locals."><dt>Extraterritoriality</dt><dd>The privilege that foreigners were subject only to their own country's laws, judges, courts, and prisons, even in disputes with local people. First granted to Americans in China (1844). An infringement on sovereignty. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: sovereignty</span></dd></div>
+    <div class="row" id="g-mfn" data-short="Any privilege granted to one power automatically went to every power holding this clause."><dt>Most favored nation clause</dt><dd>A treaty clause by which a power automatically received any privilege the country later granted to any other power. With extraterritoriality, it was a hallmark of the unequal treaty system. <span class="cite">pp. 308, 317</span><span class="needs">Builds on: unequal treaty</span></dd></div>
+    <div class="row" id="g-multi" data-short="Historian Akira Iriye's term: through MFN, all the powers shared each other's gains."><dt>Multilateral imperialism</dt><dd>Historian Akira Iriye's term for the way, through the most favored nation clause, every Western power shared in whatever privileges any one of them won. <span class="cite">p. 308</span><span class="needs">Builds on: most favored nation clause</span></dd></div>
+    <div class="row" id="g-envoy" data-short="A foreign ambassador living in the capital; the Qing saw them as little better than spies."><dt>Resident ambassador</dt><dd>A foreign diplomat stationed permanently in the capital. The Qing resisted them, seeing them as little better than spies, until forced to accept them in 1858–1860. <span class="cite">pp. 309, 321</span></dd></div>
+    <div class="row" id="g-transit" data-short="A tax on goods moving inside China; after 1858 capped at 2.5% for foreign goods."><dt>Transit tariff</dt><dd>A tax on goods moving within China. The 1858 treaties capped it at 2.5 percent for foreign goods. <span class="cite">p. 321</span><span class="needs">Builds on: fixed tariff</span></dd></div>
+    <div class="row" id="g-arrow" data-short="The British and French name for the Second Opium War (1856–60), after a ship used as a pretext."><dt>Arrow War</dt><dd>The British and French name for the Second Opium War, from the name of a ship that gave Britain a pretext for war. It ended with the Treaties of Tianjin and the occupation of Beijing. <span class="cite">pp. 307, 321</span></dd></div>
+    <div class="row" id="g-sphere" data-short="An area of China where one power's officials and traders dominated, without making it a colony."><dt>Sphere of influence</dt><dd>A region where one power's officials and traders dominated without making it a colony. Late in the century the powers carved these out along China's coast and up the Yangzi. <span class="cite">p. 311</span></dd></div>
+    <div class="row" id="g-opendoor" data-short="U.S. call for spheres of influence not to shut out Americans."><dt>Open Door</dt><dd>U.S. Secretary of State John Hay's call for the powers not to use their spheres of influence to exclude Americans. The powers agreed, with reservations. <span class="cite">p. 311</span><span class="needs">Builds on: sphere of influence</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Japan</h3>
+  <dl class="gloss">
+    <div class="row" id="g-tozama" data-short="'Outside' daimyo whose ancestors were not Tokugawa allies, like Satsuma and Chōshū."><dt>Tozama domain</dt><dd>An "outside" domain, whose lord's family had not been a Tokugawa ally before 1600, such as Satsuma. See <a href="unit3.html">Unit 3</a>. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-expel" data-short="1825 order: drive off every foreign ship except the Dutch; Japan's first truly isolationist policy."><dt>1825 expulsion order</dt><dd>After British ships raided coastal villages, the shogunate ordered all foreign ships, except the Dutch at Nagasaki, driven off without hesitation. It was Japan's first truly isolationist policy; it was relaxed in 1842. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-shinron" data-short="Aizawa Seishisai's 1825 'New Theses': foreigners spread Christianity to conquer from within."><dt><i>Shinron</i> <small>New Theses</small></dt><dd>An 1825 treatise by the Mito scholar Aizawa Seishisai. It warned that trade drained precious metals and that traders spread Christianity to win over commoners and "conquer from within." It shaped later nationalist thought. <span class="cite">p. 338</span></dd></div>
+    <div class="row" id="g-kokutai" data-short="Japan's 'unique spiritual essence,' rooted in a monarch descended from the sun goddess."><dt><i>Kokutai</i></dt><dd>Japan's unique spiritual essence. Mito scholars held Japan superior to all countries because its monarch descended from the sun goddess; Aizawa wanted the masses taught this essence. <span class="cite">p. 338</span><span class="needs">Builds on: Shinron</span></dd></div>
+    <div class="row" id="g-kanagawa" data-short="1854 friendship treaty: Shimoda and Hakodate open to U.S. ships, a U.S. consul, MFN."><dt>Kanagawa treaty</dt><dd>The 1854 friendship treaty Perry obtained. It opened Shimoda and Hakodate to American ships for coal and supplies, promised fair treatment of shipwrecked sailors, allowed a U.S. consul at Shimoda, and gave most favored nation treatment. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: most favored nation clause</span></dd></div>
+    <div class="row" id="g-consul" data-short="An official stationed abroad to look after his country's trade and citizens."><dt>Consul</dt><dd>An official stationed in a foreign country to look after his nation's trade and citizens. Townsend Harris, the first U.S. consul in Japan, arrived at Shimoda in 1856. <span class="cite">p. 339</span></dd></div>
+    <div class="row" id="g-harris" data-short="1858 commercial treaty: diplomats, six cities opened, low tariffs, extraterritoriality."><dt>Harris treaty</dt><dd>The 1858 commercial treaty Townsend Harris won by pointing to China's fate. It exchanged diplomats, opened six cities to foreign residence and trade, imposed low tariffs, and granted extraterritoriality. Similar treaties followed with four European powers. <span class="cite">pp. 309, 339</span><span class="needs">Builds on: treaty port, fixed tariff, extraterritoriality</span></dd></div>
+    <div class="row" id="g-kawaraban" data-short="Cheap broadsheets that spread news and gossip about Perry and the treaties."><dt><i>Kawaraban</i></dt><dd>Broadsheets, sold anonymously in cities, that reported news and gossip on the treaty negotiations. With letters and diaries they helped create a new public political realm. <span class="cite">p. 340</span></dd></div>
+    <div class="row" id="g-sonno" data-short="'Revere the monarch, expel the barbarian': Yoshida Shōin's slogan against the treaties."><dt><i>Sonnō jōi</i></dt><dd>"Revere the monarch and expel the barbarian": Yoshida Shōin's slogan. The monarch should share in policy, and foreigners must be driven off. <span class="cite">p. 340</span></dd></div>
+    <div class="row" id="g-fukoku" data-short="'Rich country, strong army': Yokoi Shōnan's slogan for engaging with the West."><dt><i>Fukoku kyōhei</i></dt><dd>"Rich country, strong army," a slogan from the Chinese classics popularized by Yokoi Shōnan for those who wanted to open Japan and gain Western knowledge and tools. <span class="cite">p. 340</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Korea</h3>
+  <dl class="gloss">
+    <div class="row" id="g-daewongun" data-short="Gojong's father and regent from 1864; domestic reform plus a refusal of all treaties."><dt>Daewongun</dt><dd>The father of King Gojong, who took the throne at twelve in 1864. He governed behind the king, combining domestic reform with isolationism: he rejected every foreign request for a treaty to avoid China's and Japan's fate. Forced into retirement in 1874. <span class="cite">pp. 369–370, 372</span></dd></div>
+    <div class="row" id="g-sherman" data-short="1866: a U.S.-flagged ship forcing its way toward Pyeongyang was burned and its crew killed."><dt><i>General Sherman</i> incident</dt><dd>In 1866 a ship under the U.S. flag sailed up the Daedong River near Pyeongyang demanding trade. Local people burned it and killed its crew; the U.S. used this as a reason for its 1871 attack. <span class="cite">p. 370</span></dd></div>
+    <div class="row" id="g-ganghwa-is" data-short="Island whose forts guarded the entrance to Seoul; attacked by France (1866), the U.S. (1871), and Japan (1875)."><dt>Ganghwa Island</dt><dd>An island whose forts guarded the entrance to Seoul. French troops landed there in 1866, U.S. marines in 1871, and Japanese troops in 1875. <span class="cite">pp. 309, 370, 373</span></dd></div>
+    <div class="row" id="g-ganghwa" data-short="1876: Korea's first modern treaty; opened Busan and two more ports to Japan, with extraterritoriality."><dt>Ganghwa Treaty</dt><dd>Korea's first modern treaty, forced by Japan in 1876. It opened Busan and two more ports to Japanese trade and imposed extraterritoriality. Japan gained the same privileges Westerners held in Japan. <span class="cite">pp. 311, 373</span><span class="needs">Builds on: unequal treaty, extraterritoriality</span></dd></div>
+    <div class="row" id="g-strategy" data-short="Huang Zunxian's 1880 advice that Korea sign treaties with all Western powers for protection."><dt>"Strategy for Korea"</dt><dd>A recommendation sent to King Gojong in 1880 by Huang Zunxian, a Chinese official in Tokyo, arguing that Korea should sign treaties with all the Western powers for self-protection. <span class="cite">p. 373</span></dd></div>
+    <div class="row" id="g-selfgov" data-short="Korea's 1882 claim to be both 'self-governing' and China's tributary."><dt>"Self-governing" tributary</dt><dd>The compromise in the 1882 U.S.–Korea treaty: King Gojong wrote to President Arthur that Korea was both self-governing and a Chinese tributary. The U.S. treated Korea as sovereign; Korea and China treated tribute as intact. <span class="cite">p. 374</span><span class="needs">Builds on: tribute system, sovereignty</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1517,6 +1550,21 @@ main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyp
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>

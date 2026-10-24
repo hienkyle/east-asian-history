@@ -476,6 +476,33 @@ nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
 /* justified running text */
 main p,main li,.gloss dd,.card p,.callout p,.cap{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .card p,.pair .c,.chain li{text-align:left;hyphens:manual}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -496,13 +523,17 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 3</b> · Tokugawa Japan</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#settlement">1 · The Tokugawa settlement</a></li>
     <li><a href="#government">2 · How the shogunate governed</a></li>
     <li><a href="#outside">3 · Controlling the outside world</a></li>
@@ -516,11 +547,9 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <li><a href="#conclusion">11 · What did peace change?</a></li>
     <li><a href="#compare">12 · Comparing Neo-Confucianism</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
-  <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
-  </div>
 </nav>
 
 <main>
@@ -581,93 +610,6 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <div class="label">How to use this guide</div>
     <p>Dotted-underlined words are defined in <a href="#terms">Key terms</a>: hover or tap for the definition, or open <b>✎ Key terms</b> at any time. Page numbers refer to the textbook; † marks a fact from an outside source, listed under <a href="#sources">Sources</a>. Pronunciations follow the textbook: <i>sankin kōtai</i> (SAHN-keen CO-tah-e), <i>hatamoto</i> (HAH-tah-moe-toe), <i>tozama</i> (TOE-zah-mah). A macron (ō, ū) means a long vowel.</p>
   </div>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Before you read</div>
-  <h2>Key terms first</h2>
-  <p class="pages">Ordered so each term only relies on terms above it. "Builds on" shows what to know first. Terms marked † use an outside source, listed under <a href="#sources">Sources</a>.</p>
-
-  <div class="gloss-group">Rulers &amp; ranks</div>
-  <dl class="gloss">
-    <div class="row" id="g-shogun" data-short="Japan's military ruler; the Tokugawa held the title 1603–1868, while the monarch's court stayed powerless in Kyoto."><dt>Shogun · shogunate</dt><dd>Japan's supreme military ruler; the shogunate is his government. The Tokugawa family held the post from 1603 to 1868†. The monarch and his court lived "above the clouds" in Kyoto, honored but without power. <span class="cite">p. 288; Britannica</span></dd></div>
-    <div class="row" id="g-samurai" data-short="Hereditary warrior class at the top of the status order; separated from the land and paid stipends."><dt>Samurai</dt><dd>The hereditary warrior class, at the top of the official status order. Separated from the land, they lived in castle towns and Edo on stipends. <span class="cite">pp. 288–289</span></dd></div>
-    <div class="row" id="g-retainer" data-short="A samurai who serves a lord in return for a fief or a stipend (a salary paid in rice)."><dt>Retainer · stipend</dt><dd>A retainer is a samurai serving a lord. He was paid either with a fief (land whose taxes he collected) or a stipend, a salary usually paid in rice from the lord's warehouses. <span class="cite">pp. 289, 300</span><span class="needs">Builds on: samurai</span></dd></div>
-    <div class="row" id="g-koku" data-short="Unit of rice: 5.1 bushels, enough to feed one man for a year; measured taxes and domain size."><dt>Koku</dt><dd>A measure of rice: 5.1 bushels, the amount needed to feed one man for a year. Taxes, domains, and incomes were all measured in koku. <span class="cite">p. 289</span></dd></div>
-    <div class="row" id="g-domain" data-short="Territory a lord governed, built up from villages; the shogun's own was about a quarter of Japan's farmland."><dt>Domain</dt><dd>The territory a lord governed, built up from villages. The shogun's own domain, mostly in eastern and central Japan, held about a quarter of the country's agricultural base. <span class="cite">p. 289</span><span class="needs">Builds on: koku</span></dd></div>
-    <div class="row" id="g-daimyo" data-short="A lord ruling a domain of over 10,000 koku; 250–280 of them, each with retainers to support."><dt>Daimyo</dt><dd>A lord ruling a domain. From 1634, only vassals with domains of more than 10,000 koku counted as daimyo. There were 250–280, each with a band of retainers to support and employ. <span class="cite">p. 289</span><span class="needs">Builds on: domain, koku, retainer</span></dd></div>
-    <div class="row" id="g-fudai" data-short="Hereditary vassal daimyo; the shogun's advisers and first line of defense."><dt>Vassal daimyo <small>fudai</small></dt><dd>Hereditary retainers of the Tokugawa who governed domains, served as the shogun's chief advisers, and were his first line of defense. <span class="cite">p. 289</span><span class="needs">Builds on: daimyo</span></dd></div>
-    <div class="row" id="g-tozama" data-short="'Outside lords': former rivals or peers of Ieyasu; fewer, but some had huge, nearly independent domains."><dt>Outside lords <small>tozama · TOE-zah-mah</small></dt><dd>Daimyo who had been Ieyasu's rivals or peers. Fewer than the vassal daimyo, but the mightiest ruled large domains that worked almost as nations. <span class="cite">p. 289</span><span class="needs">Builds on: daimyo</span></dd></div>
-    <div class="row" id="g-hatamoto" data-short="'Beneath the banner': shogun's retainers with fiefs under 10,000 koku; they staffed his government."><dt>Hatamoto <small>HAH-tah-moe-toe</small></dt><dd>"Beneath the banner": the shogun's own retainers whose fiefs were too small for daimyo status. They staffed his administration. Below them were thousands of housemen paid stipends. <span class="cite">pp. 289–290</span><span class="needs">Builds on: retainer, daimyo</span></dd></div>
-    <div class="row" id="g-primogeniture" data-short="Eldest son inherits everything; required for the military class to end succession fights."><dt>Primogeniture</dt><dd>Inheritance by the eldest son alone. The Tokugawa required it of the military class and confiscated domains torn apart by succession disputes, so loyalty attached to the office, not the person. <span class="cite">p. 288</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Society &amp; villages</div>
-  <dl class="gloss">
-    <div class="row" id="g-status" data-short="Official ranking: samurai, then farmers, artisans, merchants by usefulness; fixed in principle, fluid in practice."><dt>Status order</dt><dd>The official social ranking: samurai at the top, then commoners ranked by their contribution to society (farmers, artisans, merchants). In principle no one changed status or residence or married across lines; in reality boundaries were fluid. <span class="cite">pp. 288–289</span><span class="needs">Builds on: samurai</span></dd></div>
-    <div class="row" id="g-outcast" data-short="Groups below the status order: blind female entertainers, beggars, prostitutes, actors, 'non-humans' (hinin), 'polluted ones' (kawata)."><dt>Outcasts <small>hinin · kawata</small></dt><dd>Those below the core statuses: blind female entertainers, beggars, prostitutes, actors, "non-humans" (<i>hinin</i>), and "polluted ones" (<i>kawata</i>). The exclusive right to work animal skins made some outcasts wealthy. <span class="cite">p. 289</span><span class="needs">Builds on: status order</span></dd></div>
-    <div class="row" id="g-headman" data-short="Village leader, often from the founding family; with a council of elders, ran village affairs."><dt>Headman · council of elders</dt><dd>The village leader, usually from a dominant family descended from a warrior who returned to the land. A council of landholding elders advised him. The headman represented the village to samurai officials. <span class="cite">pp. 289, 301</span></dd></div>
-    <div class="row" id="g-village" data-short="Village as a collective unit, led by the headman, jointly responsible for paying taxes; contrast China's open villages."><dt>Corporate village</dt><dd>The village acted as a collective body under its headman: it divided up fields, regulated forests and wasteland, and was jointly responsible for taxes in rice. Contrast China's <a href="unit2.html#g-open">open villages</a>. <span class="cite">p. 289; Unit 2, p. 283</span><span class="needs">Builds on: headman, koku</span></dd></div>
-    <div class="row" id="g-stem" data-short="Grandparents, parents, and children on one plot, with one heir; replaced older extended families."><dt>Stem family</dt><dd>Grandparents, parents, and children living off a plot just big enough for one heir. It replaced the extended families of earlier times; adoption made it easy to find an heir. <span class="cite">p. 293</span></dd></div>
-    <div class="row" id="g-ainu" data-short="Indigenous people of Hokkaido; traded with the Matsumae family, fought a 1669 war, grew dependent on Japan."><dt>Ainu</dt><dd>Indigenous people of Hokkaido. Trade with them was monopolized by the Matsumae family. After a 1669 war to drive out the Japanese was crushed, they grew dependent on that trade; many became contract laborers in fisheries. <span class="cite">p. 291</span></dd></div>
-    <div class="row" id="g-ryukyu" data-short="Island kingdom south of Kyushu; invaded by Satsuma in 1609, lost control of diplomacy and trade."><dt>Ryukyu Islands</dt><dd>An independent island kingdom with tributary ties to both China and Japan. Satsuma invaded in 1609; the king survived but lost control of diplomacy and trade. <span class="cite">p. 290</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Government</div>
-  <dl class="gloss">
-    <div class="row" id="g-bakufu" data-short="'Tent government': later name for the shogun's elaborate bureaucracy."><dt>Bakufu</dt><dd>"Tent government": the name later given to the shogun's elaborate bureaucracy. <span class="cite">p. 289</span><span class="needs">Builds on: shogun</span></dd></div>
-    <div class="row" id="g-council" data-short="4–5 vassal daimyo rotating monthly who made policy and supervised the daimyo."><dt>Senior councilors</dt><dd>Four or five vassal daimyo, each worth at least 30,000 koku, rotating monthly. They decided policy and personnel and supervised the daimyo. <span class="cite">p. 289</span><span class="needs">Builds on: fudai, bakufu</span></dd></div>
-    <div class="row" id="g-magistrate" data-short="Hatamoto officials over finance, cities, temples and shrines."><dt>Magistrates</dt><dd>Hatamoto officials in charge of finances, cities, and temples and shrines. Finance magistrates oversaw the district officials who collected village taxes. <span class="cite">pp. 289–290</span><span class="needs">Builds on: hatamoto</span></dd></div>
-    <div class="row" id="g-ooku" data-short="'Great interior': the shogun's women's quarters, run as a female bureaucracy."><dt>Great interior <small>ōoku</small></dt><dd>The shogun's women's quarters, a female bureaucracy serving him, his wife, and his mother: yearly ceremonies and gift exchanges with the Kyoto court and daimyo. <span class="cite">p. 290</span></dd></div>
-    <div class="row" id="g-sankin" data-short="'Alternate attendance': daimyo split time between domain and Edo; wife and heir stayed in Edo as hostages."><dt>Sankin kōtai <small>alternate attendance</small></dt><dd>Formalized in 1635: each daimyo spent half his time in his domain and half in Edo, and his wife and heir lived in Edo as hostages. Meant to keep daimyo loyal and effective, it also boosted trade, travel, and cultural exchange. <span class="cite">p. 290</span><span class="needs">Builds on: daimyo</span></dd></div>
-    <div class="row" id="g-temple" data-short="Nationwide registration at temples, set up to enforce the ban on Christianity."><dt>Temple registration</dt><dd>A nationwide system set up to enforce the ban on Christianity. <span class="cite">p. 290</span></dd></div>
-    <div class="row" id="g-dejima" data-short="Artificial island in Nagasaki bay where the Dutch were confined from 1641."><dt>Dejima</dt><dd>An artificial island in Nagasaki bay, built for the Portuguese. From 1641 the Dutch, the only Westerners allowed to trade, were confined there. <span class="cite">p. 269</span></dd></div>
-    <div class="row" id="g-sakoku" data-short="'Closed country': the label for the 1630s seclusion edicts. †"><dt>Sakoku †</dt><dd>"National isolation": the name for the directives of the early 1600s that restricted foreign contact and banned Christianity. The textbook avoids the word and stresses that Japan was not sealed off. <span class="cite">Britannica; pp. 290, 303</span><span class="needs">Builds on: Dejima</span></dd></div>
-    <div class="row" id="g-kogi" data-short="'Public administration': rulers claiming to act for the realm, not private interest."><dt>Kōgi</dt><dd>"Public administration": Oda Nobunaga's claim that running his domain served the realm, not his private, selfish interests. <span class="cite">p. 291</span></dd></div>
-    <div class="row" id="g-tendo" data-short="'Way of heaven': natural, eternal, hierarchical order the shogunate claimed to follow."><dt>Way of heaven <small>tendō</small></dt><dd>Iemitsu's claim that the shogun's social order followed the way of heaven: natural, unchanging, eternal, and hierarchical. The ruler shows the Buddha's benevolence, warriors keep peace, commoners obey. <span class="cite">p. 291</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Economy</div>
-  <dl class="gloss">
-    <div class="row" id="g-cash" data-short="Crops grown to sell, e.g. cotton, rather than to eat."><dt>Cash crops</dt><dd>Crops grown for sale rather than for the family to eat, such as cotton. <span class="cite">p. 292</span></dd></div>
-    <div class="row" id="g-cottage" data-short="Household-based rural manufacturing (cloth, paper, lacquer); some call it proto-industrialization."><dt>Cottage industry · proto-industrialization</dt><dd>Manufacturing done by families in their homes, often with merchant capital: dyeing, weaving, paper, lacquer, silk. Some historians call this proto-industrialization, an early stage before factories. <span class="cite">pp. 288, 292–293</span><span class="needs">Builds on: cash crops</span></dd></div>
-    <div class="row" id="g-import" data-short="Making at home what was once imported: silk by the 1730s, sugar by the 1830s."><dt>Import substitution</dt><dd>Producing at home goods once bought abroad, to keep scarce precious metals in Japan: domestic silk replaced Chinese silk by the 1730s, sugar by the 1830s. <span class="cite">pp. 268, 292</span></dd></div>
-    <div class="row" id="g-consumption" data-short="Rising demand for more kinds of goods, as townspeople bought what they once made."><dt>Consumption revolution</dt><dd>Rising demand for a greater variety of goods, from carved transoms to saké and tobacco, as townspeople bought finished products and services they once made themselves. <span class="cite">p. 295</span></dd></div>
-    <div class="row" id="g-credit" data-short="Notes from Osaka merchants, cashable in Edo: Japan's first paper money."><dt>Letters of credit</dt><dd>Daimyo sold tax rice to Osaka merchants, who advanced money and letters of credit redeemable at their Edo branches: Japan's first paper money. <span class="cite">pp. 293–294</span><span class="needs">Builds on: sankin kōtai</span></dd></div>
-    <div class="row" id="g-nightsoil" data-short="Human waste used as fertilizer; by the late 1700s farmers paid towns for it."><dt>Night soil</dt><dd>Human waste, processed and used as fertilizer. By the late 1700s farmers had to pay townspeople for it, at prices that tracked status. <span class="cite">p. 294</span></dd></div>
-    <div class="row" id="g-devalue" data-short="Lowering a coin's metal content; 1690s devaluation fed inflation that hurt fixed stipends."><dt>Devaluation · inflation</dt><dd>Devaluation: reducing the precious metal in coins. Inflation: rising prices. The 1690s devaluation fed creeping inflation that shrank tax revenues and samurai stipends. <span class="cite">p. 300</span><span class="needs">Builds on: stipend</span></dd></div>
-    <div class="row" id="g-guild" data-short="Merchant groups granted a monopoly over one item in exchange for fees to the shogun."><dt>Guilds · monopolies</dt><dd>Under Tanuma Okitsugu, merchants were pushed to buy shares in guilds granted a monopoly over one item, paying "thank you" money to the shogun. Those shut out resented them. <span class="cite">p. 302</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Culture</div>
-  <dl class="gloss">
-    <div class="row" id="g-genroku" data-short="Era 1688–1704, the high point of townsman culture."><dt>Genroku era</dt><dd>1688–1704: the peak of urban prosperity and of townsman culture in art and literature. <span class="cite">p. 295</span></dd></div>
-    <div class="row" id="g-ukiyo" data-short="'Floating world' of brothel districts and theaters, celebrated in woodblock prints."><dt>Floating world <small>ukiyo</small></dt><dd>The pleasure zones of brothel districts and theaters, on the edges of respectable society, celebrated in woodblock prints of courtesans and actors. <span class="cite">p. 295</span><span class="needs">Builds on: Genroku era</span></dd></div>
-    <div class="row" id="g-yoshiwara" data-short="Edo's walled, licensed brothel district."><dt>Yoshiwara</dt><dd>Edo's licensed prostitution district, surrounded by a moat and walls; guards noted the men who entered and kept women from leaving. <span class="cite">p. 295</span><span class="needs">Builds on: floating world</span></dd></div>
-    <div class="row" id="g-kabuki" data-short="Popular theater; only adult men could act after 1629 bans; known for spectacle and female-role specialists."><dt>Kabuki</dt><dd>Theater that began on a Kyoto riverbank. Women were banned from the stage in 1629, then boys; mature men developed acting, song, dance, and spectacular sets. Plays could not discuss the shogunate or current samurai life. <span class="cite">pp. 295–296</span></dd></div>
-    <div class="row" id="g-puppet" data-short="The theater Chikamatsu wrote for: plays of social obligation vs. human feeling."><dt>Puppet theater</dt><dd>The theater for which Chikamatsu wrote scripts exploring the clash between social obligation and human feeling. <span class="cite">p. 295</span></dd></div>
-    <div class="row" id="g-haiku" data-short="17-syllable poem, raised to an art by Bashō."><dt>Haiku</dt><dd>A seventeen-syllable verse form. Matsuo Bashō made it a fine art and brought poetry to commoners. <span class="cite">p. 295</span></dd></div>
-    <div class="row" id="g-confraternity" data-short="Society pooling money to send a few members on pilgrimage each year."><dt>Confraternity</dt><dd>A society created for one purpose; many raised money to send a few members on pilgrimage each year. <span class="cite">p. 300</span></dd></div>
-    <div class="row" id="g-okage" data-short="Mass 'thanksgiving' pilgrimage to Ise, about every 60 years."><dt>Okage mairi</dt><dd>A mass thanksgiving pilgrimage to the inner shrine of the sun goddess at Ise, at roughly sixty-year intervals. Thousands left without permission; many never went home. <span class="cite">p. 301</span><span class="needs">Builds on: confraternity</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Ideas</div>
-  <dl class="gloss">
-    <div class="row" id="g-li" data-short="Principle: the invisible pattern underlying everything."><dt>Li <small>principle</small></dt><dd>The invisible principle or pattern that informs everything and links all things; it differs in different objects. <span class="cite">p. 304</span></dd></div>
-    <div class="row" id="g-qi" data-short="Matter or physical force that gives things their form."><dt>Qi <small>matter · physical force</small></dt><dd>What makes things physical and distinct. For Zhu Xi neither li nor qi could exist without the other. <span class="cite">p. 304</span><span class="needs">Builds on: li</span></dd></div>
-    <div class="row" id="g-xin" data-short="Mind-heart: links li and qi in people; pure, but clouded by desire."><dt>Xin <small>mind · heart</small></dt><dd>What links li and qi in a person. Pure in its underlying form, clouded by desires and feelings in its physical form, so these must be regulated. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi</span></dd></div>
-    <div class="row" id="g-neo" data-short="Zhu Xi's philosophy of li and qi; Tokugawa ideology of rule."><dt>Neo-Confucianism</dt><dd>A philosophy, systematized by Zhu Xi (1130–1200), seeking one explanation for the universe and human nature in li and qi, and regulating life through rites and filial piety. In Japan it served as the ideology of rule. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi, xin</span></dd></div>
-    <div class="row" id="g-vendetta" data-short="1703: 47 Akō retainers killed their dead lord's enemy, then had to commit suicide."><dt>Akō vendetta <small>Chūshingura</small></dt><dd>In 1703, forty-seven retainers from Akō killed their dead lord's enemy, saying honor left no choice. They were ordered to commit suicide for breaking the ban on private vendettas. Dramatized as <i>The Treasury of Loyal Retainers</i>. <span class="cite">p. 298</span><span class="needs">Builds on: retainer</span></dd></div>
-    <div class="row" id="g-shingaku" data-short="Ishida Baigan's 'study of the heart': merchants' profit is just, like a stipend."><dt>Shingaku</dt><dd>"Study of the heart," founded by Ishida Baigan: merchants deserve a just profit, as samurai deserve stipends, and should seek moral perfection through meditation, diligence, thrift, and fortitude. <span class="cite">p. 298</span><span class="needs">Builds on: stipend, xin</span></dd></div>
-    <div class="row" id="g-kokugaku" data-short="'National Learning': studying Japan's ancient texts to strip out foreign influences. †"><dt>Kokugaku † <small>National Learning</small></dt><dd>A movement studying Japan's classical texts and seeking to remove foreign influences such as Buddhism and Confucianism. Motoori Norinaga was a leading figure. The textbook describes him without naming the movement. <span class="cite">p. 298; Britannica</span></dd></div>
-    <div class="row" id="g-dutch" data-short="Japanese study of Western science via Dutch books, from 1720."><dt>Dutch studies</dt><dd>Study of Western learning through Dutch books, allowed after 1720 if they did not promote Christianity. Focused on practical matters: anatomy, astronomy, geography, military science. <span class="cite">p. 298</span><span class="needs">Builds on: Dejima</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Protest</div>
-  <dl class="gloss">
-    <div class="row" id="g-ikki" data-short="Mass marches by farmers stating grievances together."><dt>Ikki</dt><dd>What 18th-century farmers called their collective protests, marching together to state grievances. The word recalled the leagues of the 1500s. <span class="cite">p. 301</span><span class="needs">Builds on: corporate village</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 SETTLEMENT -->
@@ -1303,6 +1245,97 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <div class="a"><p>From the Document and Biography boxes (pp. 296–299): What should merchants do to prosper, and look for in a wife? Compare merchant and samurai inheritance. What opportunities and constraints did Makuzu face as a samurai daughter, and what did she think of her society?</p></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p class="pages">Ordered so each term only relies on terms above it. "Builds on" shows what to know first. Terms marked † use an outside source, listed under <a href="#sources">Sources</a>.</p>
+
+  <div class="gloss-group">Rulers &amp; ranks</div>
+  <dl class="gloss">
+    <div class="row" id="g-shogun" data-short="Japan's military ruler; the Tokugawa held the title 1603–1868, while the monarch's court stayed powerless in Kyoto."><dt>Shogun · shogunate</dt><dd>Japan's supreme military ruler; the shogunate is his government. The Tokugawa family held the post from 1603 to 1868†. The monarch and his court lived "above the clouds" in Kyoto, honored but without power. <span class="cite">p. 288; Britannica</span></dd></div>
+    <div class="row" id="g-samurai" data-short="Hereditary warrior class at the top of the status order; separated from the land and paid stipends."><dt>Samurai</dt><dd>The hereditary warrior class, at the top of the official status order. Separated from the land, they lived in castle towns and Edo on stipends. <span class="cite">pp. 288–289</span></dd></div>
+    <div class="row" id="g-retainer" data-short="A samurai who serves a lord in return for a fief or a stipend (a salary paid in rice)."><dt>Retainer · stipend</dt><dd>A retainer is a samurai serving a lord. He was paid either with a fief (land whose taxes he collected) or a stipend, a salary usually paid in rice from the lord's warehouses. <span class="cite">pp. 289, 300</span><span class="needs">Builds on: samurai</span></dd></div>
+    <div class="row" id="g-koku" data-short="Unit of rice: 5.1 bushels, enough to feed one man for a year; measured taxes and domain size."><dt>Koku</dt><dd>A measure of rice: 5.1 bushels, the amount needed to feed one man for a year. Taxes, domains, and incomes were all measured in koku. <span class="cite">p. 289</span></dd></div>
+    <div class="row" id="g-domain" data-short="Territory a lord governed, built up from villages; the shogun's own was about a quarter of Japan's farmland."><dt>Domain</dt><dd>The territory a lord governed, built up from villages. The shogun's own domain, mostly in eastern and central Japan, held about a quarter of the country's agricultural base. <span class="cite">p. 289</span><span class="needs">Builds on: koku</span></dd></div>
+    <div class="row" id="g-daimyo" data-short="A lord ruling a domain of over 10,000 koku; 250–280 of them, each with retainers to support."><dt>Daimyo</dt><dd>A lord ruling a domain. From 1634, only vassals with domains of more than 10,000 koku counted as daimyo. There were 250–280, each with a band of retainers to support and employ. <span class="cite">p. 289</span><span class="needs">Builds on: domain, koku, retainer</span></dd></div>
+    <div class="row" id="g-fudai" data-short="Hereditary vassal daimyo; the shogun's advisers and first line of defense."><dt>Vassal daimyo <small>fudai</small></dt><dd>Hereditary retainers of the Tokugawa who governed domains, served as the shogun's chief advisers, and were his first line of defense. <span class="cite">p. 289</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-tozama" data-short="'Outside lords': former rivals or peers of Ieyasu; fewer, but some had huge, nearly independent domains."><dt>Outside lords <small>tozama · TOE-zah-mah</small></dt><dd>Daimyo who had been Ieyasu's rivals or peers. Fewer than the vassal daimyo, but the mightiest ruled large domains that worked almost as nations. <span class="cite">p. 289</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-hatamoto" data-short="'Beneath the banner': shogun's retainers with fiefs under 10,000 koku; they staffed his government."><dt>Hatamoto <small>HAH-tah-moe-toe</small></dt><dd>"Beneath the banner": the shogun's own retainers whose fiefs were too small for daimyo status. They staffed his administration. Below them were thousands of housemen paid stipends. <span class="cite">pp. 289–290</span><span class="needs">Builds on: retainer, daimyo</span></dd></div>
+    <div class="row" id="g-primogeniture" data-short="Eldest son inherits everything; required for the military class to end succession fights."><dt>Primogeniture</dt><dd>Inheritance by the eldest son alone. The Tokugawa required it of the military class and confiscated domains torn apart by succession disputes, so loyalty attached to the office, not the person. <span class="cite">p. 288</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Society &amp; villages</div>
+  <dl class="gloss">
+    <div class="row" id="g-status" data-short="Official ranking: samurai, then farmers, artisans, merchants by usefulness; fixed in principle, fluid in practice."><dt>Status order</dt><dd>The official social ranking: samurai at the top, then commoners ranked by their contribution to society (farmers, artisans, merchants). In principle no one changed status or residence or married across lines; in reality boundaries were fluid. <span class="cite">pp. 288–289</span><span class="needs">Builds on: samurai</span></dd></div>
+    <div class="row" id="g-outcast" data-short="Groups below the status order: blind female entertainers, beggars, prostitutes, actors, 'non-humans' (hinin), 'polluted ones' (kawata)."><dt>Outcasts <small>hinin · kawata</small></dt><dd>Those below the core statuses: blind female entertainers, beggars, prostitutes, actors, "non-humans" (<i>hinin</i>), and "polluted ones" (<i>kawata</i>). The exclusive right to work animal skins made some outcasts wealthy. <span class="cite">p. 289</span><span class="needs">Builds on: status order</span></dd></div>
+    <div class="row" id="g-headman" data-short="Village leader, often from the founding family; with a council of elders, ran village affairs."><dt>Headman · council of elders</dt><dd>The village leader, usually from a dominant family descended from a warrior who returned to the land. A council of landholding elders advised him. The headman represented the village to samurai officials. <span class="cite">pp. 289, 301</span></dd></div>
+    <div class="row" id="g-village" data-short="Village as a collective unit, led by the headman, jointly responsible for paying taxes; contrast China's open villages."><dt>Corporate village</dt><dd>The village acted as a collective body under its headman: it divided up fields, regulated forests and wasteland, and was jointly responsible for taxes in rice. Contrast China's <a href="unit2.html#g-open">open villages</a>. <span class="cite">p. 289; Unit 2, p. 283</span><span class="needs">Builds on: headman, koku</span></dd></div>
+    <div class="row" id="g-stem" data-short="Grandparents, parents, and children on one plot, with one heir; replaced older extended families."><dt>Stem family</dt><dd>Grandparents, parents, and children living off a plot just big enough for one heir. It replaced the extended families of earlier times; adoption made it easy to find an heir. <span class="cite">p. 293</span></dd></div>
+    <div class="row" id="g-ainu" data-short="Indigenous people of Hokkaido; traded with the Matsumae family, fought a 1669 war, grew dependent on Japan."><dt>Ainu</dt><dd>Indigenous people of Hokkaido. Trade with them was monopolized by the Matsumae family. After a 1669 war to drive out the Japanese was crushed, they grew dependent on that trade; many became contract laborers in fisheries. <span class="cite">p. 291</span></dd></div>
+    <div class="row" id="g-ryukyu" data-short="Island kingdom south of Kyushu; invaded by Satsuma in 1609, lost control of diplomacy and trade."><dt>Ryukyu Islands</dt><dd>An independent island kingdom with tributary ties to both China and Japan. Satsuma invaded in 1609; the king survived but lost control of diplomacy and trade. <span class="cite">p. 290</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Government</div>
+  <dl class="gloss">
+    <div class="row" id="g-bakufu" data-short="'Tent government': later name for the shogun's elaborate bureaucracy."><dt>Bakufu</dt><dd>"Tent government": the name later given to the shogun's elaborate bureaucracy. <span class="cite">p. 289</span><span class="needs">Builds on: shogun</span></dd></div>
+    <div class="row" id="g-council" data-short="4–5 vassal daimyo rotating monthly who made policy and supervised the daimyo."><dt>Senior councilors</dt><dd>Four or five vassal daimyo, each worth at least 30,000 koku, rotating monthly. They decided policy and personnel and supervised the daimyo. <span class="cite">p. 289</span><span class="needs">Builds on: fudai, bakufu</span></dd></div>
+    <div class="row" id="g-magistrate" data-short="Hatamoto officials over finance, cities, temples and shrines."><dt>Magistrates</dt><dd>Hatamoto officials in charge of finances, cities, and temples and shrines. Finance magistrates oversaw the district officials who collected village taxes. <span class="cite">pp. 289–290</span><span class="needs">Builds on: hatamoto</span></dd></div>
+    <div class="row" id="g-ooku" data-short="'Great interior': the shogun's women's quarters, run as a female bureaucracy."><dt>Great interior <small>ōoku</small></dt><dd>The shogun's women's quarters, a female bureaucracy serving him, his wife, and his mother: yearly ceremonies and gift exchanges with the Kyoto court and daimyo. <span class="cite">p. 290</span></dd></div>
+    <div class="row" id="g-sankin" data-short="'Alternate attendance': daimyo split time between domain and Edo; wife and heir stayed in Edo as hostages."><dt>Sankin kōtai <small>alternate attendance</small></dt><dd>Formalized in 1635: each daimyo spent half his time in his domain and half in Edo, and his wife and heir lived in Edo as hostages. Meant to keep daimyo loyal and effective, it also boosted trade, travel, and cultural exchange. <span class="cite">p. 290</span><span class="needs">Builds on: daimyo</span></dd></div>
+    <div class="row" id="g-temple" data-short="Nationwide registration at temples, set up to enforce the ban on Christianity."><dt>Temple registration</dt><dd>A nationwide system set up to enforce the ban on Christianity. <span class="cite">p. 290</span></dd></div>
+    <div class="row" id="g-dejima" data-short="Artificial island in Nagasaki bay where the Dutch were confined from 1641."><dt>Dejima</dt><dd>An artificial island in Nagasaki bay, built for the Portuguese. From 1641 the Dutch, the only Westerners allowed to trade, were confined there. <span class="cite">p. 269</span></dd></div>
+    <div class="row" id="g-sakoku" data-short="'Closed country': the label for the 1630s seclusion edicts. †"><dt>Sakoku †</dt><dd>"National isolation": the name for the directives of the early 1600s that restricted foreign contact and banned Christianity. The textbook avoids the word and stresses that Japan was not sealed off. <span class="cite">Britannica; pp. 290, 303</span><span class="needs">Builds on: Dejima</span></dd></div>
+    <div class="row" id="g-kogi" data-short="'Public administration': rulers claiming to act for the realm, not private interest."><dt>Kōgi</dt><dd>"Public administration": Oda Nobunaga's claim that running his domain served the realm, not his private, selfish interests. <span class="cite">p. 291</span></dd></div>
+    <div class="row" id="g-tendo" data-short="'Way of heaven': natural, eternal, hierarchical order the shogunate claimed to follow."><dt>Way of heaven <small>tendō</small></dt><dd>Iemitsu's claim that the shogun's social order followed the way of heaven: natural, unchanging, eternal, and hierarchical. The ruler shows the Buddha's benevolence, warriors keep peace, commoners obey. <span class="cite">p. 291</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Economy</div>
+  <dl class="gloss">
+    <div class="row" id="g-cash" data-short="Crops grown to sell, e.g. cotton, rather than to eat."><dt>Cash crops</dt><dd>Crops grown for sale rather than for the family to eat, such as cotton. <span class="cite">p. 292</span></dd></div>
+    <div class="row" id="g-cottage" data-short="Household-based rural manufacturing (cloth, paper, lacquer); some call it proto-industrialization."><dt>Cottage industry · proto-industrialization</dt><dd>Manufacturing done by families in their homes, often with merchant capital: dyeing, weaving, paper, lacquer, silk. Some historians call this proto-industrialization, an early stage before factories. <span class="cite">pp. 288, 292–293</span><span class="needs">Builds on: cash crops</span></dd></div>
+    <div class="row" id="g-import" data-short="Making at home what was once imported: silk by the 1730s, sugar by the 1830s."><dt>Import substitution</dt><dd>Producing at home goods once bought abroad, to keep scarce precious metals in Japan: domestic silk replaced Chinese silk by the 1730s, sugar by the 1830s. <span class="cite">pp. 268, 292</span></dd></div>
+    <div class="row" id="g-consumption" data-short="Rising demand for more kinds of goods, as townspeople bought what they once made."><dt>Consumption revolution</dt><dd>Rising demand for a greater variety of goods, from carved transoms to saké and tobacco, as townspeople bought finished products and services they once made themselves. <span class="cite">p. 295</span></dd></div>
+    <div class="row" id="g-credit" data-short="Notes from Osaka merchants, cashable in Edo: Japan's first paper money."><dt>Letters of credit</dt><dd>Daimyo sold tax rice to Osaka merchants, who advanced money and letters of credit redeemable at their Edo branches: Japan's first paper money. <span class="cite">pp. 293–294</span><span class="needs">Builds on: sankin kōtai</span></dd></div>
+    <div class="row" id="g-nightsoil" data-short="Human waste used as fertilizer; by the late 1700s farmers paid towns for it."><dt>Night soil</dt><dd>Human waste, processed and used as fertilizer. By the late 1700s farmers had to pay townspeople for it, at prices that tracked status. <span class="cite">p. 294</span></dd></div>
+    <div class="row" id="g-devalue" data-short="Lowering a coin's metal content; 1690s devaluation fed inflation that hurt fixed stipends."><dt>Devaluation · inflation</dt><dd>Devaluation: reducing the precious metal in coins. Inflation: rising prices. The 1690s devaluation fed creeping inflation that shrank tax revenues and samurai stipends. <span class="cite">p. 300</span><span class="needs">Builds on: stipend</span></dd></div>
+    <div class="row" id="g-guild" data-short="Merchant groups granted a monopoly over one item in exchange for fees to the shogun."><dt>Guilds · monopolies</dt><dd>Under Tanuma Okitsugu, merchants were pushed to buy shares in guilds granted a monopoly over one item, paying "thank you" money to the shogun. Those shut out resented them. <span class="cite">p. 302</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Culture</div>
+  <dl class="gloss">
+    <div class="row" id="g-genroku" data-short="Era 1688–1704, the high point of townsman culture."><dt>Genroku era</dt><dd>1688–1704: the peak of urban prosperity and of townsman culture in art and literature. <span class="cite">p. 295</span></dd></div>
+    <div class="row" id="g-ukiyo" data-short="'Floating world' of brothel districts and theaters, celebrated in woodblock prints."><dt>Floating world <small>ukiyo</small></dt><dd>The pleasure zones of brothel districts and theaters, on the edges of respectable society, celebrated in woodblock prints of courtesans and actors. <span class="cite">p. 295</span><span class="needs">Builds on: Genroku era</span></dd></div>
+    <div class="row" id="g-yoshiwara" data-short="Edo's walled, licensed brothel district."><dt>Yoshiwara</dt><dd>Edo's licensed prostitution district, surrounded by a moat and walls; guards noted the men who entered and kept women from leaving. <span class="cite">p. 295</span><span class="needs">Builds on: floating world</span></dd></div>
+    <div class="row" id="g-kabuki" data-short="Popular theater; only adult men could act after 1629 bans; known for spectacle and female-role specialists."><dt>Kabuki</dt><dd>Theater that began on a Kyoto riverbank. Women were banned from the stage in 1629, then boys; mature men developed acting, song, dance, and spectacular sets. Plays could not discuss the shogunate or current samurai life. <span class="cite">pp. 295–296</span></dd></div>
+    <div class="row" id="g-puppet" data-short="The theater Chikamatsu wrote for: plays of social obligation vs. human feeling."><dt>Puppet theater</dt><dd>The theater for which Chikamatsu wrote scripts exploring the clash between social obligation and human feeling. <span class="cite">p. 295</span></dd></div>
+    <div class="row" id="g-haiku" data-short="17-syllable poem, raised to an art by Bashō."><dt>Haiku</dt><dd>A seventeen-syllable verse form. Matsuo Bashō made it a fine art and brought poetry to commoners. <span class="cite">p. 295</span></dd></div>
+    <div class="row" id="g-confraternity" data-short="Society pooling money to send a few members on pilgrimage each year."><dt>Confraternity</dt><dd>A society created for one purpose; many raised money to send a few members on pilgrimage each year. <span class="cite">p. 300</span></dd></div>
+    <div class="row" id="g-okage" data-short="Mass 'thanksgiving' pilgrimage to Ise, about every 60 years."><dt>Okage mairi</dt><dd>A mass thanksgiving pilgrimage to the inner shrine of the sun goddess at Ise, at roughly sixty-year intervals. Thousands left without permission; many never went home. <span class="cite">p. 301</span><span class="needs">Builds on: confraternity</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Ideas</div>
+  <dl class="gloss">
+    <div class="row" id="g-li" data-short="Principle: the invisible pattern underlying everything."><dt>Li <small>principle</small></dt><dd>The invisible principle or pattern that informs everything and links all things; it differs in different objects. <span class="cite">p. 304</span></dd></div>
+    <div class="row" id="g-qi" data-short="Matter or physical force that gives things their form."><dt>Qi <small>matter · physical force</small></dt><dd>What makes things physical and distinct. For Zhu Xi neither li nor qi could exist without the other. <span class="cite">p. 304</span><span class="needs">Builds on: li</span></dd></div>
+    <div class="row" id="g-xin" data-short="Mind-heart: links li and qi in people; pure, but clouded by desire."><dt>Xin <small>mind · heart</small></dt><dd>What links li and qi in a person. Pure in its underlying form, clouded by desires and feelings in its physical form, so these must be regulated. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi</span></dd></div>
+    <div class="row" id="g-neo" data-short="Zhu Xi's philosophy of li and qi; Tokugawa ideology of rule."><dt>Neo-Confucianism</dt><dd>A philosophy, systematized by Zhu Xi (1130–1200), seeking one explanation for the universe and human nature in li and qi, and regulating life through rites and filial piety. In Japan it served as the ideology of rule. <span class="cite">p. 304</span><span class="needs">Builds on: li, qi, xin</span></dd></div>
+    <div class="row" id="g-vendetta" data-short="1703: 47 Akō retainers killed their dead lord's enemy, then had to commit suicide."><dt>Akō vendetta <small>Chūshingura</small></dt><dd>In 1703, forty-seven retainers from Akō killed their dead lord's enemy, saying honor left no choice. They were ordered to commit suicide for breaking the ban on private vendettas. Dramatized as <i>The Treasury of Loyal Retainers</i>. <span class="cite">p. 298</span><span class="needs">Builds on: retainer</span></dd></div>
+    <div class="row" id="g-shingaku" data-short="Ishida Baigan's 'study of the heart': merchants' profit is just, like a stipend."><dt>Shingaku</dt><dd>"Study of the heart," founded by Ishida Baigan: merchants deserve a just profit, as samurai deserve stipends, and should seek moral perfection through meditation, diligence, thrift, and fortitude. <span class="cite">p. 298</span><span class="needs">Builds on: stipend, xin</span></dd></div>
+    <div class="row" id="g-kokugaku" data-short="'National Learning': studying Japan's ancient texts to strip out foreign influences. †"><dt>Kokugaku † <small>National Learning</small></dt><dd>A movement studying Japan's classical texts and seeking to remove foreign influences such as Buddhism and Confucianism. Motoori Norinaga was a leading figure. The textbook describes him without naming the movement. <span class="cite">p. 298; Britannica</span></dd></div>
+    <div class="row" id="g-dutch" data-short="Japanese study of Western science via Dutch books, from 1720."><dt>Dutch studies</dt><dd>Study of Western learning through Dutch books, allowed after 1720 if they did not promote Christianity. Focused on practical matters: anatomy, astronomy, geography, military science. <span class="cite">p. 298</span><span class="needs">Builds on: Dejima</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Protest</div>
+  <dl class="gloss">
+    <div class="row" id="g-ikki" data-short="Mass marches by farmers stating grievances together."><dt>Ikki</dt><dd>What 18th-century farmers called their collective protests, marching together to state grievances. The word recalled the leagues of the 1500s. <span class="cite">p. 301</span><span class="needs">Builds on: corporate village</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1521,6 +1554,21 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>

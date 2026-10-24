@@ -365,6 +365,33 @@ h1 .zh{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;verti
 /* justified running text */
 main p,main li,.gloss dd,.card p,.callout p,.cap{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .card p,.pair .c,.chain li{text-align:left;hyphens:manual}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -385,13 +412,17 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 2</b> · The Qing</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#manchus">1 · Who were the Manchus?</a></li>
     <li><a href="#conquest">2 · Conquest &amp; Ming loyalism</a></li>
     <li><a href="#empire">3 · Building the empire</a></li>
@@ -406,10 +437,10 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <li><a href="#disaffected">12 · Sects, societies, revolts</a></li>
     <li><a href="#conclusion">13 · 1600 vs. 1800</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
   <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
     <button class="btn" type="button" onclick="window.print()">Print</button>
   </div>
 </nav>
@@ -453,77 +484,6 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <div class="label">How to use this guide</div>
     <p>Dotted-underlined words are defined in <a href="#terms">Key terms</a>: hover or tap to see the definition, or open the <b>✎ Key terms</b> button at any time. Page numbers refer to the textbook. Pronunciations follow the textbook: Kangxi (kahng-shyee), Qianlong (chyen-lung), Jiangnan (jyahng-nahn), Xinjiang (shin-jyahng).</p>
   </div>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Before you read</div>
-  <h2>Key terms first</h2>
-  <p class="pages">Ordered so each term only relies on terms above it. "Builds on" shows what to know first. Terms marked † are defined from an outside source, listed under <a href="#sources">Sources</a>.</p>
-
-  <div class="gloss-group">Peoples &amp; places</div>
-  <dl class="gloss">
-    <div class="row" id="g-jurchen" data-short="Manchurian people who ruled north China as the Jin dynasty (1127–1234); ancestors of the Manchus."><dt>Jurchens</dt><dd>A people of Manchuria who ruled north China as the Jin dynasty (1127–1234). Their descendants lost the Jin written language but kept the Jurchen hairstyle. <span class="cite">p. 271</span></dd></div>
-    <div class="row" id="g-manchuria" data-short="Today's Liaoning, Jilin, Heilongjiang; Liaodong was the Ming prefecture in its south."><dt>Manchuria · Liaodong</dt><dd>Manchuria: roughly the modern provinces of Liaoning, Jilin, and Heilongjiang. Liaodong: a Ming prefecture in its more crowded south, where Manchus lived alongside Mongols, Koreans, and Chinese. <span class="cite">p. 271</span></dd></div>
-    <div class="row" id="g-manchu" data-short="Name the Jurchens took under Nurhaci; hunters, fishers, and farmers, not nomads."><dt>Manchus</dt><dd>The name Nurhaci gave the Jurchens he united. Not nomads but hunters, fishers, and farmers; excellent horsemen and archers, with a tribal, strongly hierarchical society that included slaves. Their language belongs to the Tungus family. <span class="cite">p. 271</span><span class="needs">Builds on: Jurchens, Manchuria</span></dd></div>
-    <div class="row" id="g-han" data-short="The Chinese majority, as distinct from Manchus, Mongols, Tibetans, Miao, and others."><dt>Han Chinese · non-Han</dt><dd>The Chinese majority, as distinct from the empire's other peoples (Manchus, Mongols, Tibetans, Uighurs, and southern groups such as the Miao). <span class="cite">p. 286</span></dd></div>
-    <div class="row" id="g-proper" data-short="The Ming's core provinces, as opposed to Manchuria, Mongolia, Tibet, Xinjiang."><dt>China proper</dt><dd>The core provinces the Ming had ruled, as opposed to the outer lands the Qing added: Manchuria, Mongolia, Tibet, and Xinjiang. <span class="cite">pp. 274, 277</span></dd></div>
-    <div class="row" id="g-xinjiang" data-short="'Chinese Turkestan,' won in the 1750s from Uighur and Dzungar Mongol forces."><dt>Xinjiang <small>shin-jyahng · Chinese Turkestan</small></dt><dd>The far northwest, won in the 1750s from Uighur and Dzungar Mongol forces. Han and Tang had loosely controlled it; Song and Ming had not tried. Ruled lightly: locals kept their religious leaders and did not wear the queue. <span class="cite">p. 276</span><span class="needs">Builds on: China proper</span></dd></div>
-    <div class="row" id="g-jiangnan" data-short="'South of the Yangzi': China's richest, most commercial, most bookish region."><dt>Jiangnan <small>jyahng-nahn</small></dt><dd>"South of the Yangzi River": the most advanced region, with the highest wealth and commerce and dense concentrations of books and scholars. <span class="cite">pp. 281, 283</span></dd></div>
-    <div class="row" id="g-miao" data-short="Miao, Yao, Zhuang: southern indigenous peoples pushed off their land; Hakka: a Han group of settlers."><dt>Miao · Yao · Zhuang · Hakka</dt><dd>Miao (myow), Yao, Zhuang: indigenous peoples of the south, often exploited and pushed out as Han settlers moved in. Hakka: a Han ethnic group of recent settlers on the Hunan–Guizhou border. <span class="cite">pp. 284, 286</span><span class="needs">Builds on: Han Chinese</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Rule &amp; government</div>
-  <dl class="gloss">
-    <div class="row" id="g-mandate" data-short="Belief that Heaven grants the emperor, 'Son of Heaven,' the authority to rule. †"><dt>Mandate of Heaven †</dt><dd>The Confucian belief that Heaven granted the emperor, the "Son of Heaven," direct authority to govern. Kangxi worked to persuade educated Chinese that the Manchus held it legitimately. <span class="cite">p. 274; Britannica</span></dd></div>
-    <div class="row" id="g-khan" data-short="Title of a steppe ruler; Nurhaci took it in 1616."><dt>Khan</dt><dd>Title of a ruler on the steppe, as Chinggis (Genghis) had been. Nurhaci declared war on the Ming in 1616 as khan of a revived Jin dynasty. <span class="cite">p. 271</span></dd></div>
-    <div class="row" id="g-regent" data-short="Someone who rules for a child monarch."><dt>Regent</dt><dd>Someone who rules on behalf of a child monarch. Dorgon was regent for the five-year-old Shunzhi emperor; Kangxi jailed his own regent at fourteen. <span class="cite">pp. 271, 274</span></dd></div>
-    <div class="row" id="g-banner" data-short="Manchu military-social units identified by colors: soldiers plus their families and slaves."><dt>Banners</dt><dd>Units Nurhaci created to replace tribal ties. Each was a set of military companies under hereditary captains, and included the soldiers' families and slaves. By 1644: 24 banners (8 Manchu, 8 Mongol, 8 Chinese). <span class="cite">p. 271</span><span class="needs">Builds on: Manchus</span></dd></div>
-    <div class="row" id="g-bannermen" data-short="Members of the banners: a privileged hereditary caste living in garrisons on state stipends."><dt>Bannermen · garrisons</dt><dd>Members of the banners. After the conquest they lived in 90+ walled garrisons, apart from Chinese, on state stipends. A hereditary, privileged caste, allowed to work only as soldiers or officials. <span class="cite">p. 277</span><span class="needs">Builds on: banners</span></dd></div>
-    <div class="row" id="g-queue" data-short="Manchu hairstyle: front shaved, rest in a long braid; forced on Chinese men from 1645."><dt>Queue</dt><dd>The Manchu male hairstyle: front of the head shaved, the rest in a long braid. Ordered for all Chinese men from 1645, which fed resistance. <span class="cite">pp. 271, 273</span></dd></div>
-    <div class="row" id="g-loyalism" data-short="Resisting the Qing out of loyalty to the fallen Ming, by arms or by refusing to serve."><dt>Ming loyalism</dt><dd>Resistance to the Qing out of loyalty to the fallen Ming: armed resistance (to 1661–62, and on Taiwan to 1683) and, more quietly, scholars refusing to serve. <span class="cite">pp. 272–273</span></dd></div>
-    <div class="row" id="g-pretender" data-short="A Ming prince claiming the throne after 1644."><dt>Ming pretender</dt><dd>A Ming prince claiming the throne after Beijing fell. The last was chased into Burma by Wu Sangui's armies. <span class="cite">p. 274</span><span class="needs">Builds on: Ming loyalism</span></dd></div>
-    <div class="row" id="g-feudatories" data-short="Wu Sangui and two other generals' huge southern fiefs; revolt 1673, crushed after 8 years."><dt>Three Feudatories</dt><dd>Huge southern territories given to Wu Sangui and two other Chinese generals as rewards; each was in effect a <i>satrap</i> (a governor ruling almost independently). When the Qing curbed them in 1673 they revolted; it took eight years to defeat them. <span class="cite">p. 274</span></dd></div>
-    <div class="row" id="g-exams" data-short="Exams on the Confucian classics that selected officials; the Qing kept the Ming system."><dt>Civil service examinations</dt><dd>Exams on the Confucian classics used to pick officials, held at prefectural, provincial, and national levels. The Qing kept the Ming system largely unchanged. <span class="cite">p. 274; Britannica</span></dd></div>
-    <div class="row" id="g-jinshi" data-short="The highest exam degree, sat in Beijing after passing the provincial exams."><dt>Jinshi</dt><dd>The highest examination degree, taken in Beijing after passing the provincial exams. Manchu quotas won them more than 5% of jinshi degrees. <span class="cite">pp. 273, 277</span><span class="needs">Builds on: civil service examinations</span></dd></div>
-    <div class="row" id="g-tribute" data-short="Diplomacy in which neighbors sent envoys to Beijing; the Qing kept the Ming model."><dt>Tributary system</dt><dd>The diplomatic system, modeled on the Ming's, in which countries such as Korea, Ryukyu, Vietnam, and many Southeast Asian states sent envoys to the court in Beijing. Europeans were only marginal players. <span class="cite">p. 280</span></dd></div>
-    <div class="row" id="g-kowtow" data-short="Kneeling on both knees and bowing the head to the ground."><dt>Kowtow</dt><dd>Kneeling on both knees and bowing the head to the ground before the emperor. Macartney objected to performing it. <span class="cite">p. 280</span><span class="needs">Builds on: tributary system</span></dd></div>
-    <div class="row" id="g-fourtreasuries" data-short="Qianlong's project to catalogue nearly every book in China."><dt>Complete Books of the Four Treasuries</dt><dd>Qianlong's project to catalogue nearly all books in China. <span class="cite">p. 276</span></dd></div>
-    <div class="row" id="g-inquisition" data-short="Qianlong's hunt for anti-Manchu books; 2,000+ titles destroyed."><dt>Literary inquisition</dt><dd>During the Four Treasuries project, Qianlong ordered searches for books disparaging the Manchus or earlier alien conquerors. Passages were cut or rewritten, whole books destroyed: no copies survive of over 2,000 titles. <span class="cite">p. 276</span><span class="needs">Builds on: Four Treasuries</span></dd></div>
-    <div class="row" id="g-cangue" data-short="A large wooden collar worn as punishment."><dt>Cangue</dt><dd>A large wooden collar worn as a punishment. A Manchu might wear it for 60 days where a Chinese got life exile for the same crime. <span class="cite">p. 278</span></dd></div>
-    <div class="row" id="g-monopoly" data-short="Government claims sole right to a trade (e.g., salt) and licenses merchants."><dt>Salt monopoly</dt><dd>The government claimed sole right to salt and licensed merchants to move and sell it. Head salt merchants, centered in Yangzhou, could grow exceptionally rich. <span class="cite">p. 275</span></dd></div>
-    <div class="row" id="g-bondservant" data-short="Hereditary servants of the ruling house who managed its enterprises."><dt>Bondservants</dt><dd>Hereditary servants of the ruling house, who could win wealth and power managing enterprises for it. Cao Xueqin's family were bondservants. <span class="cite">p. 282</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Religion &amp; ideas</div>
-  <dl class="gloss">
-    <div class="row" id="g-shaman" data-short="Manchu spirit-mediums, men or women, who had 'died' and been reborn spiritually."><dt>Shamans</dt><dd>In the Manchus' native religion, men or women who had experienced a spiritual death and rebirth and so could travel to and influence the spirit world. <span class="cite">p. 271</span></dd></div>
-    <div class="row" id="g-lamaist" data-short="Tibetan Buddhism, which the Manchus took from the Mongols."><dt>Lamaist (Tibetan) Buddhism</dt><dd>Buddhism originally from Tibet. The Manchus adopted it from the Mongols, alongside their shamanism; Qianlong was a major patron. <span class="cite">pp. 271, 276</span></dd></div>
-    <div class="row" id="g-dalai" data-short="Leader of the dominant school of Tibetan Buddhism. †"><dt>Dalai Lama †</dt><dd>Leader of the dominant (Gelug) order of Tibetan Buddhism. The textbook says Qianlong had child Dalai Lamas raised and educated in Beijing. <span class="cite">p. 276; Britannica</span><span class="needs">Builds on: Lamaist Buddhism</span></dd></div>
-    <div class="row" id="g-cakravartin" data-short="'Wheel-turning king': a Buddhist ruler whose conquests advance salvation."><dt>Cakravartin</dt><dd>"Wheel-turning king": the Buddhist ideal of a ruler whose conquests move the world toward its next stage of universal salvation. Qianlong made much of it. <span class="cite">p. 276</span><span class="needs">Builds on: Lamaist Buddhism</span></dd></div>
-    <div class="row" id="g-jesuits" data-short="Catholic order; served the Qing court as astronomers, mapmakers, painters."><dt>Jesuits</dt><dd>Catholic religious order (founded 1534). Jesuits served the Qing court as astronomers, cartographers, translators, and painters, and tried to fit Christianity to Chinese ways. <span class="cite">pp. 267–268, 276</span></dd></div>
-    <div class="row" id="g-rites" data-short="Dispute over whether Chinese Christians could keep ancestral altars; led Kangxi to ban missionaries."><dt>Rites controversy</dt><dd>The dispute over whether Chinese converts could keep ancestral altars. When the pope sided with the Dominicans and Franciscans against it (1715), Kangxi objected to the pope directing Chinese behavior and outlawed missionaries, keeping Jesuit scientists and painters in Beijing. <span class="cite">pp. 268, 276</span><span class="needs">Builds on: Jesuits</span></dd></div>
-    <div class="row" id="g-zhuwang" data-short="Zhu Xi: outside, objective moral standards. Wang Yangming: look within; emotion and spontaneity."><dt>Zhu Xi vs. Wang Yangming</dt><dd>Two schools of Neo-Confucianism (see <a href="unit1.html#g-neo">Unit 1</a>). Zhu Xi stressed textual study and objective standards outside the individual; Wang Yangming taught that anyone could find what is right by looking within, validating emotion and spontaneity. <span class="cite">p. 281; Unit 1, p. 251</span></dd></div>
-    <div class="row" id="g-conservative" data-short="After the Ming fell, a return to Zhu Xi: stricter morals, banned novels, widow chastity."><dt>Conservative turn</dt><dd>Many scholars blamed the Ming's fall on moral laxity encouraged by Wang Yangming's followers and returned to Zhu Xi. Results: harsher laws against homosexuality, theaters closed, novels banned, and the cult of widow chastity. <span class="cite">p. 281</span><span class="needs">Builds on: Zhu Xi vs. Wang Yangming</span></dd></div>
-    <div class="row" id="g-chastity" data-short="Ideal that widows never remarry, even 'widows' whose fiancés died before marriage."><dt>Widow chastity</dt><dd>The ideal that a widow should never remarry. It reached new heights: some women lived as celibate "widows" of fiancés who died before they had even met. <span class="cite">pp. 281, 286</span><span class="needs">Builds on: conservative turn</span></dd></div>
-    <div class="row" id="g-textual" data-short="Rigorous checking of the classics against verifiable facts; thrived in Jiangnan."><dt>Textual research</dt><dd>Rigorous textual analysis of the classics: going back to Han-dynasty commentaries or the classics alone and sticking to verifiable facts, to strip out Buddhist and Daoist ideas. It needed big libraries, so it thrived in Jiangnan. <span class="cite">p. 281</span><span class="needs">Builds on: conservative turn, Jiangnan</span></dd></div>
-    <div class="row" id="g-syncretic" data-short="Blending teachings from different religions."><dt>Syncretic</dt><dd>Blending teachings from different religions; one reason regular Buddhist clergy rejected the White Lotus. <span class="cite">p. 285</span></dd></div>
-    <div class="row" id="g-millenarian" data-short="Belief that the present age will soon end in catastrophe, followed by an era of peace."><dt>Millenarian · Maitreya</dt><dd>Millenarian: expecting the present age to end soon in catastrophe, followed by a new era. Maitreya: the Future Buddha who will usher in an era of peace. <span class="cite">p. 285</span></dd></div>
-    <div class="row" id="g-whitelotus" data-short="Folk Buddhist sect: Eternal Mother, Maitreya, martial arts; rebelled 1774 and 1796–1804."><dt>White Lotus Society</dt><dd>A folk Buddhist sect dating to the Song, syncretic and millenarian (drawing also on Manichaeism, a dualistic religion from Persia†). Its central deity, the Eternal Mother, sends Buddhas to bring her lost children home; the faithless will be destroyed. It welcomed women equally and rose in revolt in 1774 and 1796. <span class="cite">pp. 285–286</span><span class="needs">Builds on: syncretic, millenarian</span></dd></div>
-    <div class="row" id="g-triads" data-short="Brotherhood for rootless men; 'overthrow the Qing, restore the Ming.'"><dt>Heaven and Earth Society (Triads)</dt><dd>The best-known brotherhood or secret society, appearing in the 1760s. It gave marginal men mutual aid, used secret signals, and preached overthrowing the Qing and restoring the Ming; many lodges ran gambling, narcotics, prostitution, and smuggling. <span class="cite">p. 285</span></dd></div>
-  </dl>
-
-  <div class="gloss-group">Economy &amp; society</div>
-  <dl class="gloss">
-    <div class="row" id="g-newworld" data-short="Sweet and white potatoes, peanuts, tobacco, corn: let farmers use hilly, poor land."><dt>New World crops</dt><dd>Crops from the Americas (sweet potatoes, white potatoes, peanuts, tobacco) that let farmers use land once too hilly or infertile; one reason for population growth. <span class="cite">pp. 273, 283</span></dd></div>
-    <div class="row" id="g-partible" data-short="Dividing family land among all sons; shrank farms as population grew."><dt>Partible inheritance</dt><dd>Dividing family property among all sons. With a growing population, it multiplied farms too small to support a family. <span class="cite">p. 284; Unit 1, p. 262</span></dd></div>
-    <div class="row" id="g-open" data-short="Chinese villages held no common land and couldn't control land sales (unlike Japan)."><dt>Open villages</dt><dd>Chinese villages held no land in common and had little say over who bought or sold land, so family fortunes varied widely. Contrast Japan's closed corporate villages. <span class="cite">p. 283</span></dd></div>
-    <div class="row" id="g-lineage" data-short="Descent group from one male ancestor; single-surname villages centered on its hall."><dt>Lineage · single-surname village</dt><dd>A lineage is a group of males descended from one ancestor. Where all villagers shared his surname, the lineage ancestral hall was the center of village life; elsewhere, a local god's temple was. <span class="cite">p. 284</span></dd></div>
-    <div class="row" id="g-granary" data-short="State grain stores opened in famines; Qing relief curbed death tolls."><dt>Granaries &amp; famine relief</dt><dd>Government grain stores and direct relief. Careful Qing management curbed famine deaths, which helped the population rise. <span class="cite">p. 284</span></dd></div>
-    <div class="row" id="g-eic" data-short="British trading company (founded 1600) that dominated trade with China."><dt>British East India Company</dt><dd>British trading company founded in 1600. It made great fortunes trading with China; by the 1790s the British government grew suspicious of it. <span class="cite">pp. 268, 280</span></dd></div>
-    <div class="row" id="g-canton" data-short="All European trade confined to Guangzhou (from 1759) under strict rules. †"><dt>Canton (Guangzhou) system †</dt><dd>From 1759, all maritime trade was confined to Guangzhou (Canton). A guild of Chinese merchants guaranteed that Europeans obeyed Qing rules; Europeans paid cash, stayed outside the walled city, and could not learn Chinese. Britannica dates the system 1759–1842. <span class="cite">pp. 268, 280; Britannica</span><span class="needs">Builds on: British East India Company</span></dd></div>
-    <div class="row" id="g-balance" data-short="Gap between a country's imports and exports; Britain bought far more tea than China bought from Britain."><dt>Balance of trade</dt><dd>The difference in value between what a country imports and exports. As British tea purchases rose, it grew "more lopsided": Chinese merchants wanted few British goods. <span class="cite">p. 280</span><span class="needs">Builds on: Canton system</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 MANCHUS -->
@@ -1175,6 +1135,81 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
     <div class="a"><p>From the Biography and Document boxes (pp. 275, 279): Why did biographers dwell on how a merchant spent money? Why was meeting the emperor such an honor? What gave Fang Bao the courage to report on prisons, and what made reform hard?</p></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p class="pages">Ordered so each term only relies on terms above it. "Builds on" shows what to know first. Terms marked † are defined from an outside source, listed under <a href="#sources">Sources</a>.</p>
+
+  <div class="gloss-group">Peoples &amp; places</div>
+  <dl class="gloss">
+    <div class="row" id="g-jurchen" data-short="Manchurian people who ruled north China as the Jin dynasty (1127–1234); ancestors of the Manchus."><dt>Jurchens</dt><dd>A people of Manchuria who ruled north China as the Jin dynasty (1127–1234). Their descendants lost the Jin written language but kept the Jurchen hairstyle. <span class="cite">p. 271</span></dd></div>
+    <div class="row" id="g-manchuria" data-short="Today's Liaoning, Jilin, Heilongjiang; Liaodong was the Ming prefecture in its south."><dt>Manchuria · Liaodong</dt><dd>Manchuria: roughly the modern provinces of Liaoning, Jilin, and Heilongjiang. Liaodong: a Ming prefecture in its more crowded south, where Manchus lived alongside Mongols, Koreans, and Chinese. <span class="cite">p. 271</span></dd></div>
+    <div class="row" id="g-manchu" data-short="Name the Jurchens took under Nurhaci; hunters, fishers, and farmers, not nomads."><dt>Manchus</dt><dd>The name Nurhaci gave the Jurchens he united. Not nomads but hunters, fishers, and farmers; excellent horsemen and archers, with a tribal, strongly hierarchical society that included slaves. Their language belongs to the Tungus family. <span class="cite">p. 271</span><span class="needs">Builds on: Jurchens, Manchuria</span></dd></div>
+    <div class="row" id="g-han" data-short="The Chinese majority, as distinct from Manchus, Mongols, Tibetans, Miao, and others."><dt>Han Chinese · non-Han</dt><dd>The Chinese majority, as distinct from the empire's other peoples (Manchus, Mongols, Tibetans, Uighurs, and southern groups such as the Miao). <span class="cite">p. 286</span></dd></div>
+    <div class="row" id="g-proper" data-short="The Ming's core provinces, as opposed to Manchuria, Mongolia, Tibet, Xinjiang."><dt>China proper</dt><dd>The core provinces the Ming had ruled, as opposed to the outer lands the Qing added: Manchuria, Mongolia, Tibet, and Xinjiang. <span class="cite">pp. 274, 277</span></dd></div>
+    <div class="row" id="g-xinjiang" data-short="'Chinese Turkestan,' won in the 1750s from Uighur and Dzungar Mongol forces."><dt>Xinjiang <small>shin-jyahng · Chinese Turkestan</small></dt><dd>The far northwest, won in the 1750s from Uighur and Dzungar Mongol forces. Han and Tang had loosely controlled it; Song and Ming had not tried. Ruled lightly: locals kept their religious leaders and did not wear the queue. <span class="cite">p. 276</span><span class="needs">Builds on: China proper</span></dd></div>
+    <div class="row" id="g-jiangnan" data-short="'South of the Yangzi': China's richest, most commercial, most bookish region."><dt>Jiangnan <small>jyahng-nahn</small></dt><dd>"South of the Yangzi River": the most advanced region, with the highest wealth and commerce and dense concentrations of books and scholars. <span class="cite">pp. 281, 283</span></dd></div>
+    <div class="row" id="g-miao" data-short="Miao, Yao, Zhuang: southern indigenous peoples pushed off their land; Hakka: a Han group of settlers."><dt>Miao · Yao · Zhuang · Hakka</dt><dd>Miao (myow), Yao, Zhuang: indigenous peoples of the south, often exploited and pushed out as Han settlers moved in. Hakka: a Han ethnic group of recent settlers on the Hunan–Guizhou border. <span class="cite">pp. 284, 286</span><span class="needs">Builds on: Han Chinese</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Rule &amp; government</div>
+  <dl class="gloss">
+    <div class="row" id="g-mandate" data-short="Belief that Heaven grants the emperor, 'Son of Heaven,' the authority to rule. †"><dt>Mandate of Heaven †</dt><dd>The Confucian belief that Heaven granted the emperor, the "Son of Heaven," direct authority to govern. Kangxi worked to persuade educated Chinese that the Manchus held it legitimately. <span class="cite">p. 274; Britannica</span></dd></div>
+    <div class="row" id="g-khan" data-short="Title of a steppe ruler; Nurhaci took it in 1616."><dt>Khan</dt><dd>Title of a ruler on the steppe, as Chinggis (Genghis) had been. Nurhaci declared war on the Ming in 1616 as khan of a revived Jin dynasty. <span class="cite">p. 271</span></dd></div>
+    <div class="row" id="g-regent" data-short="Someone who rules for a child monarch."><dt>Regent</dt><dd>Someone who rules on behalf of a child monarch. Dorgon was regent for the five-year-old Shunzhi emperor; Kangxi jailed his own regent at fourteen. <span class="cite">pp. 271, 274</span></dd></div>
+    <div class="row" id="g-banner" data-short="Manchu military-social units identified by colors: soldiers plus their families and slaves."><dt>Banners</dt><dd>Units Nurhaci created to replace tribal ties. Each was a set of military companies under hereditary captains, and included the soldiers' families and slaves. By 1644: 24 banners (8 Manchu, 8 Mongol, 8 Chinese). <span class="cite">p. 271</span><span class="needs">Builds on: Manchus</span></dd></div>
+    <div class="row" id="g-bannermen" data-short="Members of the banners: a privileged hereditary caste living in garrisons on state stipends."><dt>Bannermen · garrisons</dt><dd>Members of the banners. After the conquest they lived in 90+ walled garrisons, apart from Chinese, on state stipends. A hereditary, privileged caste, allowed to work only as soldiers or officials. <span class="cite">p. 277</span><span class="needs">Builds on: banners</span></dd></div>
+    <div class="row" id="g-queue" data-short="Manchu hairstyle: front shaved, rest in a long braid; forced on Chinese men from 1645."><dt>Queue</dt><dd>The Manchu male hairstyle: front of the head shaved, the rest in a long braid. Ordered for all Chinese men from 1645, which fed resistance. <span class="cite">pp. 271, 273</span></dd></div>
+    <div class="row" id="g-loyalism" data-short="Resisting the Qing out of loyalty to the fallen Ming, by arms or by refusing to serve."><dt>Ming loyalism</dt><dd>Resistance to the Qing out of loyalty to the fallen Ming: armed resistance (to 1661–62, and on Taiwan to 1683) and, more quietly, scholars refusing to serve. <span class="cite">pp. 272–273</span></dd></div>
+    <div class="row" id="g-pretender" data-short="A Ming prince claiming the throne after 1644."><dt>Ming pretender</dt><dd>A Ming prince claiming the throne after Beijing fell. The last was chased into Burma by Wu Sangui's armies. <span class="cite">p. 274</span><span class="needs">Builds on: Ming loyalism</span></dd></div>
+    <div class="row" id="g-feudatories" data-short="Wu Sangui and two other generals' huge southern fiefs; revolt 1673, crushed after 8 years."><dt>Three Feudatories</dt><dd>Huge southern territories given to Wu Sangui and two other Chinese generals as rewards; each was in effect a <i>satrap</i> (a governor ruling almost independently). When the Qing curbed them in 1673 they revolted; it took eight years to defeat them. <span class="cite">p. 274</span></dd></div>
+    <div class="row" id="g-exams" data-short="Exams on the Confucian classics that selected officials; the Qing kept the Ming system."><dt>Civil service examinations</dt><dd>Exams on the Confucian classics used to pick officials, held at prefectural, provincial, and national levels. The Qing kept the Ming system largely unchanged. <span class="cite">p. 274; Britannica</span></dd></div>
+    <div class="row" id="g-jinshi" data-short="The highest exam degree, sat in Beijing after passing the provincial exams."><dt>Jinshi</dt><dd>The highest examination degree, taken in Beijing after passing the provincial exams. Manchu quotas won them more than 5% of jinshi degrees. <span class="cite">pp. 273, 277</span><span class="needs">Builds on: civil service examinations</span></dd></div>
+    <div class="row" id="g-tribute" data-short="Diplomacy in which neighbors sent envoys to Beijing; the Qing kept the Ming model."><dt>Tributary system</dt><dd>The diplomatic system, modeled on the Ming's, in which countries such as Korea, Ryukyu, Vietnam, and many Southeast Asian states sent envoys to the court in Beijing. Europeans were only marginal players. <span class="cite">p. 280</span></dd></div>
+    <div class="row" id="g-kowtow" data-short="Kneeling on both knees and bowing the head to the ground."><dt>Kowtow</dt><dd>Kneeling on both knees and bowing the head to the ground before the emperor. Macartney objected to performing it. <span class="cite">p. 280</span><span class="needs">Builds on: tributary system</span></dd></div>
+    <div class="row" id="g-fourtreasuries" data-short="Qianlong's project to catalogue nearly every book in China."><dt>Complete Books of the Four Treasuries</dt><dd>Qianlong's project to catalogue nearly all books in China. <span class="cite">p. 276</span></dd></div>
+    <div class="row" id="g-inquisition" data-short="Qianlong's hunt for anti-Manchu books; 2,000+ titles destroyed."><dt>Literary inquisition</dt><dd>During the Four Treasuries project, Qianlong ordered searches for books disparaging the Manchus or earlier alien conquerors. Passages were cut or rewritten, whole books destroyed: no copies survive of over 2,000 titles. <span class="cite">p. 276</span><span class="needs">Builds on: Four Treasuries</span></dd></div>
+    <div class="row" id="g-cangue" data-short="A large wooden collar worn as punishment."><dt>Cangue</dt><dd>A large wooden collar worn as a punishment. A Manchu might wear it for 60 days where a Chinese got life exile for the same crime. <span class="cite">p. 278</span></dd></div>
+    <div class="row" id="g-monopoly" data-short="Government claims sole right to a trade (e.g., salt) and licenses merchants."><dt>Salt monopoly</dt><dd>The government claimed sole right to salt and licensed merchants to move and sell it. Head salt merchants, centered in Yangzhou, could grow exceptionally rich. <span class="cite">p. 275</span></dd></div>
+    <div class="row" id="g-bondservant" data-short="Hereditary servants of the ruling house who managed its enterprises."><dt>Bondservants</dt><dd>Hereditary servants of the ruling house, who could win wealth and power managing enterprises for it. Cao Xueqin's family were bondservants. <span class="cite">p. 282</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Religion &amp; ideas</div>
+  <dl class="gloss">
+    <div class="row" id="g-shaman" data-short="Manchu spirit-mediums, men or women, who had 'died' and been reborn spiritually."><dt>Shamans</dt><dd>In the Manchus' native religion, men or women who had experienced a spiritual death and rebirth and so could travel to and influence the spirit world. <span class="cite">p. 271</span></dd></div>
+    <div class="row" id="g-lamaist" data-short="Tibetan Buddhism, which the Manchus took from the Mongols."><dt>Lamaist (Tibetan) Buddhism</dt><dd>Buddhism originally from Tibet. The Manchus adopted it from the Mongols, alongside their shamanism; Qianlong was a major patron. <span class="cite">pp. 271, 276</span></dd></div>
+    <div class="row" id="g-dalai" data-short="Leader of the dominant school of Tibetan Buddhism. †"><dt>Dalai Lama †</dt><dd>Leader of the dominant (Gelug) order of Tibetan Buddhism. The textbook says Qianlong had child Dalai Lamas raised and educated in Beijing. <span class="cite">p. 276; Britannica</span><span class="needs">Builds on: Lamaist Buddhism</span></dd></div>
+    <div class="row" id="g-cakravartin" data-short="'Wheel-turning king': a Buddhist ruler whose conquests advance salvation."><dt>Cakravartin</dt><dd>"Wheel-turning king": the Buddhist ideal of a ruler whose conquests move the world toward its next stage of universal salvation. Qianlong made much of it. <span class="cite">p. 276</span><span class="needs">Builds on: Lamaist Buddhism</span></dd></div>
+    <div class="row" id="g-jesuits" data-short="Catholic order; served the Qing court as astronomers, mapmakers, painters."><dt>Jesuits</dt><dd>Catholic religious order (founded 1534). Jesuits served the Qing court as astronomers, cartographers, translators, and painters, and tried to fit Christianity to Chinese ways. <span class="cite">pp. 267–268, 276</span></dd></div>
+    <div class="row" id="g-rites" data-short="Dispute over whether Chinese Christians could keep ancestral altars; led Kangxi to ban missionaries."><dt>Rites controversy</dt><dd>The dispute over whether Chinese converts could keep ancestral altars. When the pope sided with the Dominicans and Franciscans against it (1715), Kangxi objected to the pope directing Chinese behavior and outlawed missionaries, keeping Jesuit scientists and painters in Beijing. <span class="cite">pp. 268, 276</span><span class="needs">Builds on: Jesuits</span></dd></div>
+    <div class="row" id="g-zhuwang" data-short="Zhu Xi: outside, objective moral standards. Wang Yangming: look within; emotion and spontaneity."><dt>Zhu Xi vs. Wang Yangming</dt><dd>Two schools of Neo-Confucianism (see <a href="unit1.html#g-neo">Unit 1</a>). Zhu Xi stressed textual study and objective standards outside the individual; Wang Yangming taught that anyone could find what is right by looking within, validating emotion and spontaneity. <span class="cite">p. 281; Unit 1, p. 251</span></dd></div>
+    <div class="row" id="g-conservative" data-short="After the Ming fell, a return to Zhu Xi: stricter morals, banned novels, widow chastity."><dt>Conservative turn</dt><dd>Many scholars blamed the Ming's fall on moral laxity encouraged by Wang Yangming's followers and returned to Zhu Xi. Results: harsher laws against homosexuality, theaters closed, novels banned, and the cult of widow chastity. <span class="cite">p. 281</span><span class="needs">Builds on: Zhu Xi vs. Wang Yangming</span></dd></div>
+    <div class="row" id="g-chastity" data-short="Ideal that widows never remarry, even 'widows' whose fiancés died before marriage."><dt>Widow chastity</dt><dd>The ideal that a widow should never remarry. It reached new heights: some women lived as celibate "widows" of fiancés who died before they had even met. <span class="cite">pp. 281, 286</span><span class="needs">Builds on: conservative turn</span></dd></div>
+    <div class="row" id="g-textual" data-short="Rigorous checking of the classics against verifiable facts; thrived in Jiangnan."><dt>Textual research</dt><dd>Rigorous textual analysis of the classics: going back to Han-dynasty commentaries or the classics alone and sticking to verifiable facts, to strip out Buddhist and Daoist ideas. It needed big libraries, so it thrived in Jiangnan. <span class="cite">p. 281</span><span class="needs">Builds on: conservative turn, Jiangnan</span></dd></div>
+    <div class="row" id="g-syncretic" data-short="Blending teachings from different religions."><dt>Syncretic</dt><dd>Blending teachings from different religions; one reason regular Buddhist clergy rejected the White Lotus. <span class="cite">p. 285</span></dd></div>
+    <div class="row" id="g-millenarian" data-short="Belief that the present age will soon end in catastrophe, followed by an era of peace."><dt>Millenarian · Maitreya</dt><dd>Millenarian: expecting the present age to end soon in catastrophe, followed by a new era. Maitreya: the Future Buddha who will usher in an era of peace. <span class="cite">p. 285</span></dd></div>
+    <div class="row" id="g-whitelotus" data-short="Folk Buddhist sect: Eternal Mother, Maitreya, martial arts; rebelled 1774 and 1796–1804."><dt>White Lotus Society</dt><dd>A folk Buddhist sect dating to the Song, syncretic and millenarian (drawing also on Manichaeism, a dualistic religion from Persia†). Its central deity, the Eternal Mother, sends Buddhas to bring her lost children home; the faithless will be destroyed. It welcomed women equally and rose in revolt in 1774 and 1796. <span class="cite">pp. 285–286</span><span class="needs">Builds on: syncretic, millenarian</span></dd></div>
+    <div class="row" id="g-triads" data-short="Brotherhood for rootless men; 'overthrow the Qing, restore the Ming.'"><dt>Heaven and Earth Society (Triads)</dt><dd>The best-known brotherhood or secret society, appearing in the 1760s. It gave marginal men mutual aid, used secret signals, and preached overthrowing the Qing and restoring the Ming; many lodges ran gambling, narcotics, prostitution, and smuggling. <span class="cite">p. 285</span></dd></div>
+  </dl>
+
+  <div class="gloss-group">Economy &amp; society</div>
+  <dl class="gloss">
+    <div class="row" id="g-newworld" data-short="Sweet and white potatoes, peanuts, tobacco, corn: let farmers use hilly, poor land."><dt>New World crops</dt><dd>Crops from the Americas (sweet potatoes, white potatoes, peanuts, tobacco) that let farmers use land once too hilly or infertile; one reason for population growth. <span class="cite">pp. 273, 283</span></dd></div>
+    <div class="row" id="g-partible" data-short="Dividing family land among all sons; shrank farms as population grew."><dt>Partible inheritance</dt><dd>Dividing family property among all sons. With a growing population, it multiplied farms too small to support a family. <span class="cite">p. 284; Unit 1, p. 262</span></dd></div>
+    <div class="row" id="g-open" data-short="Chinese villages held no common land and couldn't control land sales (unlike Japan)."><dt>Open villages</dt><dd>Chinese villages held no land in common and had little say over who bought or sold land, so family fortunes varied widely. Contrast Japan's closed corporate villages. <span class="cite">p. 283</span></dd></div>
+    <div class="row" id="g-lineage" data-short="Descent group from one male ancestor; single-surname villages centered on its hall."><dt>Lineage · single-surname village</dt><dd>A lineage is a group of males descended from one ancestor. Where all villagers shared his surname, the lineage ancestral hall was the center of village life; elsewhere, a local god's temple was. <span class="cite">p. 284</span></dd></div>
+    <div class="row" id="g-granary" data-short="State grain stores opened in famines; Qing relief curbed death tolls."><dt>Granaries &amp; famine relief</dt><dd>Government grain stores and direct relief. Careful Qing management curbed famine deaths, which helped the population rise. <span class="cite">p. 284</span></dd></div>
+    <div class="row" id="g-eic" data-short="British trading company (founded 1600) that dominated trade with China."><dt>British East India Company</dt><dd>British trading company founded in 1600. It made great fortunes trading with China; by the 1790s the British government grew suspicious of it. <span class="cite">pp. 268, 280</span></dd></div>
+    <div class="row" id="g-canton" data-short="All European trade confined to Guangzhou (from 1759) under strict rules. †"><dt>Canton (Guangzhou) system †</dt><dd>From 1759, all maritime trade was confined to Guangzhou (Canton). A guild of Chinese merchants guaranteed that Europeans obeyed Qing rules; Europeans paid cash, stayed outside the walled city, and could not learn Chinese. Britannica dates the system 1759–1842. <span class="cite">pp. 268, 280; Britannica</span><span class="needs">Builds on: British East India Company</span></dd></div>
+    <div class="row" id="g-balance" data-short="Gap between a country's imports and exports; Britain bought far more tea than China bought from Britain."><dt>Balance of trade</dt><dd>The difference in value between what a country imports and exports. As British tea purchases rose, it grew "more lopsided": Chinese merchants wanted few British goods. <span class="cite">p. 280</span><span class="needs">Builds on: Canton system</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1371,6 +1406,21 @@ main p.pages,main p.cite,figcaption,.share .note,.contrast li,.versus p,.think .
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>

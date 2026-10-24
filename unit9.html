@@ -856,6 +856,33 @@ figure.wideprint img{width:100%}
 
 .mapgrid .wide svg{min-width:0}
 .mapgrid .wide::after{display:none}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
 </style>
 </head>
 <body class="no-js">
@@ -876,13 +903,17 @@ figure.wideprint img{width:100%}
   <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
 </div>
 
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 9</b> · Korea in the Nineteenth Century</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
 <div class="shell">
 <nav class="toc" aria-label="Contents">
-  <a class="back" href="index.html">← All units</a>
   <h2>Contents</h2>
   <ol id="toc-list">
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#terms">Key terms first</a></li>
     <li><a href="#inlaws">1 · Child kings, in-law rule</a></li>
     <li><a href="#society">2 · Status, slaves, Catholics</a></li>
     <li><a href="#culture">3 · Ferment and popular culture</a></li>
@@ -897,11 +928,9 @@ figure.wideprint img{width:100%}
     <li><a href="#slavery">12 · Comparing slavery</a></li>
     <li><a href="#summary">Summary: 1800 vs. 1895</a></li>
     <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
     <li><a href="#sources">Sources</a></li>
   </ol>
-  <div class="tools">
-    <button class="btn" id="theme-btn" type="button">Toggle dark</button>
-  </div>
 </nav>
 
 <main>
@@ -954,87 +983,6 @@ figure.wideprint img{width:100%}
   </div>
   <figcaption><span class="fn">Figure 1.</span> Key events, 1800–1895. Filled dots mark turning points. Dates from pp. 363–378.</figcaption>
   </figure>
-</section>
-
-<!-- TERMS -->
-<section class="unit" id="terms">
-  <div class="sec-num">Start here</div>
-  <h2>Key terms first</h2>
-  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-yangban">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from earlier units are repeated briefly where you need them.</p>
-
-  <h3 class="gloss-group">From earlier units (review)</h3>
-  <dl class="gloss">
-    <div class="row" id="g-yangban" data-short="Korea's hereditary aristocracy, who monopolized high office through the civil service exams."><dt>Yangban</dt><dd>Korea's hereditary elite. They had to pass the Confucian civil service examinations to hold office, but they nearly monopolized those offices and owned most of the land and slaves. By 1800 the yangban were split between a national office-holding elite and poorer local yangban. <span class="cite">pp. 250–251, 263; <a href="unit1.html">Unit 1</a></span></dd></div>
-    <div class="row" id="g-factions" data-short="Hereditary court parties (Patriarchs, Southerners, etc.) that purged each other."><dt>Factions</dt><dd>Hereditary groups of officials, such as the Patriarchs and Southerners, that competed for control of the court and purged their rivals. In 1801 the Southerners, many of them Catholic, were driven from office for half a century. <span class="cite">pp. 252–256, 364</span><span class="needs">Builds on: yangban</span></dd></div>
-    <div class="row" id="g-tributary" data-short="Korea's ritual submission to the Chinese emperor; China did not, before 1882, run Korea's affairs."><dt>Tributary system</dt><dd>The arrangement by which Korea's king sent envoys and gifts to the Chinese emperor and acknowledged him as superior. Before 1882 the Qing never interfered in Korea's domestic affairs or its dealings with Japan. Korea ended the relationship in 1894. <span class="cite">pp. 254–255, 371, 374, 377</span></dd></div>
-    <div class="row" id="g-unequal" data-short="Treaties imposed by force: foreigners judged by their own courts, ports opened on foreign terms."><dt>Unequal treaties</dt><dd>Treaties forced on East Asian states that opened ports on foreign terms and gave foreigners <a class="term" href="#g-extra">extraterritoriality</a>. Korea's first was the Ganghwa Treaty with Japan (1876). <span class="cite">p. 373; <a href="unit5.html">Unit 5</a></span></dd></div>
-    <div class="row" id="g-extra" data-short="Foreigners answer only to their own country's laws and courts."><dt>Extraterritoriality</dt><dd>The right of foreigners to be tried under their own country's laws rather than the host country's. The Ganghwa Treaty let Japanese in Korea's treaty ports run their own affairs. <span class="cite">pp. 373–374</span><span class="needs">Builds on: unequal treaties</span></dd></div>
-    <div class="row" id="g-ganghwa" data-short="1876: Korea's first modern treaty; opened Busan and two more ports to Japan."><dt>Ganghwa Treaty (1876)</dt><dd>The treaty Japan forced on Korea after its survey ship drew fire from shore batteries in 1875. It opened Busan and two more ports to Japanese trade and imposed extraterritoriality. <span class="cite">p. 373; <a href="unit5.html">Unit 5</a></span><span class="needs">Builds on: unequal treaties</span></dd></div>
-    <div class="row" id="g-selfstr" data-short="Adopting Western weapons and technology while keeping Confucian values."><dt>Self-strengthening</dt><dd>The program, led in China by Li Hongzhang, of adopting Western weapons and technology while keeping Confucian values. Korean reformers took the same formula from Zheng Guanying's <i>Simple Talk</i>. <span class="cite">pp. 322–323, 370, 374; <a href="unit6.html">Unit 6</a></span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Kings and in-laws</h3>
-  <dl class="gloss">
-    <div class="row" id="g-dowager" data-short="The eldest widowed queen, who ruled for a child king or chose the next king."><dt>Dowager queen · dowager regent</dt><dd>A dowager is a widowed queen. When a child became king, the eldest living dowager ruled for him as regent until she stepped down or he chose to rule himself. When there was no crown prince, she chose the next king. <span class="cite">p. 363</span></dd></div>
-    <div class="row" id="g-inlaw" data-short="Government dominated by the clans of the dowager and the king's wife."><dt>In-law government</dt><dd>Rule by the relatives of royal women. Male kin of the dowager regent and the queen were appointed to high office, and clans competed to be tied to the eldest dowager and to supply the king's wife. It lasted from 1800 to the end of the century. <span class="cite">p. 363</span><span class="needs">Builds on: dowager regent</span></dd></div>
-    <div class="row" id="g-daewongun" data-short="'Grand prince,' title of Gojong's father; de facto regent 1863–1874."><dt>Daewongun</dt><dd>"Grand prince," the title for the father of a king who had never been king himself. Gojong's father held it and ran the government as unofficial regent from 1863 to 1874, then returned to power briefly in 1882 and 1895. <span class="cite">pp. 363–364, 374, 378</span><span class="needs">Builds on: dowager regent</span></dd></div>
-    <div class="row" id="g-min" data-short="Gojong's queen (1851–1895); her clan ruled after 1874; murdered by Japanese agents."><dt>Queen Min</dt><dd>King Gojong's wife, from a weak branch of the Yeoheung Min clan. She persuaded Gojong to rule for himself in 1874, put her relatives in power until 1894, and steered between China, Japan, and finally Russia. Japanese agents killed her in 1895. Later titled Empress Myeongseong. <span class="cite">pp. 372–373</span><span class="needs">Builds on: in-law government, Daewongun</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Society and culture</h3>
-  <dl class="gloss">
-    <div class="row" id="g-secondary" data-short="Hereditary groups between yangban and commoners: jungin, hyangni, seoeol, and others."><dt>Secondary status groups</dt><dd>Hereditary groups ranked between the yangban and commoners. Like the yangban, they married among themselves and held on to particular jobs. They were blocked from high office, and they drove much of the century's new thinking and reform. <span class="cite">pp. 364, 379</span><span class="needs">Builds on: yangban</span></dd></div>
-    <div class="row" id="g-jungin" data-short="'Middle people': technical specialists in languages, law, medicine, finance."><dt>Jungin</dt><dd>"Middle people": hereditary specialists in foreign languages, law, medicine, and finance. <span class="cite">pp. 251, 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
-    <div class="row" id="g-hyangni" data-short="Hereditary clerks in local government."><dt>Hyangni</dt><dd>Hereditary clerks in local administration, barred since early Joseon from promotion into the central bureaucracy. <span class="cite">pp. 250, 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
-    <div class="row" id="g-seoeol" data-short="Children and descendants of concubines; barred from the civil exams."><dt>Seoeol</dt><dd>Children and descendants of concubines. They could not take the civil service examinations. <span class="cite">pp. 250, 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
-    <div class="row" id="g-muban" data-short="Military officials, yangban in name, allowed only the military exam."><dt>Military officials (muhan / muban†)</dt><dd>Officials classed as yangban but allowed to take only the military examination, not the civil one, and treated as inferior. The textbook spells the term <i>muhan</i>; it is usually romanized <i>muban</i>.† <span class="cite">p. 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
-    <div class="row" id="g-official" data-short="Slaves owned by the government; most freed in 1801. Private slaves stayed enslaved."><dt>Official vs. private slaves</dt><dd>Official slaves belonged to the government; private slaves belonged to individuals, mostly yangban. In 1801 the regent freed most of the 67,000 official slaves. Hereditary slavery for several million private slaves lasted until 1886, and slavery itself was abolished in 1894. <span class="cite">pp. 364, 380</span></dd></div>
-    <div class="row" id="g-surveil" data-short="1801: groups of five households made to watch each other for Christians."><dt>Five-family mutual surveillance</dt><dd>The 1801 system that grouped households in fives to report on each other, used to find Christians in the Southerner faction. <span class="cite">p. 364</span><span class="needs">Builds on: factions</span></dd></div>
-    <div class="row" id="g-practical" data-short="Scholarship based on observation and comparing texts; challenged court orthodoxy."><dt>Practical learning</dt><dd>A school of scholarship built on observation and careful comparison of texts, which challenged the Confucian orthodoxy promoted at court. It blossomed in the early 1800s. Often called by its Korean name, <i>silhak</i>.† <span class="cite">p. 365</span></dd></div>
-    <div class="row" id="g-pansori" data-short="Stories sung to a drum; popular with commoners, often mocking yangban."><dt>Pansori</dt><dd>Long stories sung or chanted to drum accompaniment. A countryside tradition from the 1700s, it often mocked the yangban. Sin Jaehyo wrote lyrics for it in the 1800s. <span class="cite">pp. 260, 366</span></dd></div>
-    <div class="row" id="g-masked" data-short="Plays mixing dance, song, and story; satirized the yangban."><dt>Masked drama</dt><dd>Plays combining dance, song, and narrative, performed in masks. A famous passage has a commoner boast of eating his yangban masters. <span class="cite">pp. 260, 366</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Economy and rebellion</h3>
-  <dl class="gloss">
-    <div class="row" id="g-gye" data-short="Mutual-aid credit club: members pool money and take turns using it."><dt>Gye</dt><dd>A voluntary mutual-aid association. Members paid into a common fund and took turns using the money, first for funerals and weddings, later to survive hard times or fix shared irrigation. Gye still give Korean women and immigrants abroad access to credit. <span class="cite">p. 366</span></dd></div>
-    <div class="row" id="g-clothtax" data-short="Tax paid in cloth in place of military service; yangban were exempt until 1864."><dt>Military cloth tax</dt><dd>A tax paid in cloth by commoners in place of serving in the army. The Daewongun made yangban households pay it for the first time, in their slaves' names to spare them embarrassment. <span class="cite">pp. 258, 369–370</span></dd></div>
-    <div class="row" id="g-grainloan" data-short="State loans of grain to farmers, run by district magistrates and often abused."><dt>Grain loans</dt><dd>Grain lent by the state to farmers, run by district magistrates and their clerks. Abuses helped cause the 1862 rebellions; the Daewongun cancelled past-due loans and handed the program to local elders. <span class="cite">pp. 369–370</span></dd></div>
-    <div class="row" id="g-hong" data-short="1811 northwest rebellion led by a fallen yangban; protested discrimination against northerners."><dt>Hong Gyeongrae Rebellion (1811)</dt><dd>A major rebellion in Pyeongan province in the northwest, led by Hong Gyeongrae, a fallen yangban and professional geomancer. Its causes were unfair taxes and the central government's discrimination against northerners. It was quickly suppressed. <span class="cite">p. 369</span><span class="needs">Builds on: secondary status groups</span></dd></div>
-    <div class="row" id="g-1862" data-short="Leaderless risings across the south against corrupt tax and loan officials."><dt>Rebellions of 1862</dt><dd>Dozens of spontaneous uprisings, mostly in the three southern provinces, against corruption in the land tax, the military cloth tax, and grain loans. Commoners led them, killing officials and burning government buildings. The state answered by punishing corrupt magistrates, not by force. <span class="cite">p. 369</span><span class="needs">Builds on: military cloth tax, grain loans</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Religion</h3>
-  <dl class="gloss">
-    <div class="row" id="g-donghak" data-short="'Eastern Learning': Choe Jeu's new religion (1860), a Korean answer to Christianity."><dt>Donghak</dt><dd>"Eastern Learning," Korea's first new religion, founded by Choe Jeu after his 1860 vision. It mixed Confucian ethics, Buddhist faith, the Daoist search for long life, geomancy, talismans, and shamanist appeals to spirits, and was meant to counter Western Learning and Christianity. It taught that all men were equal in serving the Lord of Heaven. Later renamed Cheondogyo.† <span class="cite">pp. 368–369</span></dd></div>
-    <div class="row" id="g-hanulnim" data-short="The Lord of Heaven, who Choe Jeu believed spoke to him in 1860."><dt>Hanulnim</dt><dd>The Lord of Heaven, the supreme being who, Choe Jeu said, appeared to him and gave him a talisman and an incantation to heal people and spread virtue. <span class="cite">pp. 368–369</span><span class="needs">See also: Donghak</span></dd></div>
-    <div class="row" id="g-heterodox" data-short="Teaching that departs from Confucian orthodoxy; preaching it was a capital crime."><dt>Heterodox teaching</dt><dd>Doctrine that departs from Confucian orthodoxy. Preaching it was punishable by death, the charge that brought Choe Jeu's execution in 1864. <span class="cite">pp. 369, 376</span></dd></div>
-    <div class="row" id="g-protestant" data-short="American missionaries from 1884–85 who opened hospitals and schools, including Ewha."><dt>Protestant missions</dt><dd>American Presbyterians and Methodists who arrived from 1884, winning acceptance through good works: Horace Allen's hospital (1885), Appenzeller's boys' school, and Mary Scranton's girls' school, Ewha. <span class="cite">p. 376</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Reform and diplomacy, 1864–1885</h3>
-  <dl class="gloss">
-    <div class="row" id="g-academies" data-short="Provincial Confucian schools and shrines that had become bases of yangban factions."><dt>Private academies</dt><dd>Confucian schools in the provinces, many dedicated to worthies of the dominant factions, that had become centers of yangban factional interest. The Daewongun closed all but 47. Korean name: <i>seowon</i>.† <span class="cite">pp. 369–370</span><span class="needs">Builds on: factions</span></dd></div>
-    <div class="row" id="g-100cash" data-short="The Daewongun's high-value coin; it caused inflation."><dt>100-cash coin</dt><dd>The first multiple-denomination coin in Korean history, minted by the Daewongun to pay for his projects. It caused inflation. <span class="cite">p. 370</span></dd></div>
-    <div class="row" id="g-isolation" data-short="The Daewongun's refusal of all treaties, to avoid the unequal treaty system."><dt>Isolationism</dt><dd>The Daewongun's policy of rejecting every foreign request for a treaty, to keep Korea out of the unequal treaty system. Confucian scholars backed it with the slogan "Defend Confucian correctness against foreign perversity." <span class="cite">p. 370</span><span class="needs">Builds on: unequal treaties</span></dd></div>
-    <div class="row" id="g-strategy" data-short="1880 memo by Huang Zunxian: sign treaties with all Western powers for protection."><dt>"Strategy for Korea" (1880)</dt><dd>A recommendation sent to Gojong by Huang Zunxian, a Chinese official in Tokyo, arguing that Korea should sign treaties with all the Western powers to protect itself. It matched Li Hongzhang's policy of using rival powers to check Russia and Japan. <span class="cite">p. 373</span></dd></div>
-    <div class="row" id="g-mfn" data-short="A promise that one treaty partner gets any privilege later given to another."><dt>Most-favored-nation clause</dt><dd>A treaty clause guaranteeing that a power would receive any advantage that Korea later granted another power. It was part of the 1882 treaty with the United States. <span class="cite">p. 374</span><span class="needs">Builds on: unequal treaties</span></dd></div>
-    <div class="row" id="g-shufeldt" data-short="1882 U.S.–Korea treaty negotiated through Li Hongzhang."><dt>Shufeldt treaty (1882)</dt><dd>The treaty of amity and trade between the United States and Korea, arranged by Li Hongzhang and Commodore Robert Shufeldt and signed in May 1882. It included extraterritoriality and a most-favored-nation clause. Gojong's letter to President Arthur called Korea both self-governing and a Chinese tributary. <span class="cite">p. 374</span><span class="needs">Builds on: tributary system, most-favored-nation clause</span></dd></div>
-    <div class="row" id="g-mutiny" data-short="1882 revolt of old guard units; China then kidnapped the Daewongun."><dt>Soldiers' mutiny of 1882 (Imo Incident†)</dt><dd>A revolt by the old capital guard units, angry at unpaid salaries and the favored Japanese-trained unit. They killed a Japanese instructor, burned the Japanese legation, and returned the Daewongun to power. China sent 4,500 troops and carried the Daewongun off to China. Usually called the Imo Incident.† <span class="cite">pp. 372, 374</span><span class="needs">Builds on: Daewongun</span></dd></div>
-    <div class="row" id="g-gapsin" data-short="Dec. 4, 1884: pro-Japan radicals seize the palace; crushed by Chinese troops."><dt>Gapsin Coup (1884)</dt><dd>The failed seizure of power on December 4, 1884, by the radical reform faction under Kim Okgyun, using Japanese legation guards. They held the king and killed high officials, but Chinese troops under Yuan Shikai drove them and the Japanese envoy out. <span class="cite">pp. 374–376</span></dd></div>
-    <div class="row" id="g-tianjin" data-short="1885 China–Japan deal: both withdraw troops; each warns the other before sending more."><dt>Convention of Tianjin (1885)</dt><dd>The agreement between Li Hongzhang and Japan after the Gapsin Coup. Both sides withdrew their troops, agreed not to train Korean soldiers, and promised to notify each other before sending troops to Korea. <span class="cite">p. 375</span><span class="needs">Builds on: Gapsin Coup</span></dd></div>
-    <div class="row" id="g-resident" data-short="Yuan Shikai, China's overseer in Seoul 1885–94."><dt>Resident commissioner</dt><dd>The post Li Hongzhang created for Yuan Shikai in 1885: the first Chinese overseer on Korean soil since the Mongols. For a decade Yuan blocked Korean moves toward independence, even stopping Gojong from sending ambassadors abroad. <span class="cite">p. 375</span><span class="needs">Builds on: tributary system</span></dd></div>
-  </dl>
-
-  <h3 class="gloss-group">Rebellion, war, and reform, 1894–1895</h3>
-  <dl class="gloss">
-    <div class="row" id="g-dhrebellion" data-short="1894 rising of Donghak believers and farmers; the largest in Korean history."><dt>Donghak Rebellion (1894)</dt><dd>The largest uprising in Korean history, led militarily by Jeon Bongjun. Donghak believers and farmers rose against corrupt officials, the Min faction, foreigners, and Christianity. It gave China and Japan reasons to send troops. <span class="cite">pp. 376–377</span><span class="needs">Builds on: Donghak</span></dd></div>
-    <div class="row" id="g-sinojapanese" data-short="1894–95 war fought over Korea; Japan's victory ended China's role there."><dt>Sino-Japanese War (1894–95)</dt><dd>The war Japan forced on China over Korea, attacking without a declaration and holding Korea's king and queen in the palace. Japan's victory ended Chinese influence in Korea. <span class="cite">pp. 361, 377; <a href="unit8.html">Unit 8</a></span><span class="needs">Builds on: Donghak Rebellion</span></dd></div>
-    <div class="row" id="g-gabo" data-short="1894–96 Japan-backed reform cabinet: ended exams, status, slavery; lasted 16 months."><dt>Gabo reforms</dt><dd>The reforms of the pro-Japanese cabinet installed in 1894 and led by Pak Yeonghyo and Seo Gwangbeom, exiles from the 1884 coup. They ended the Confucian exams, legal status differences, and slavery, and set up modern courts, police, and schools. The cabinet lasted 16 months. <span class="cite">pp. 377–378</span><span class="needs">Builds on: Gapsin Coup, Sino-Japanese War</span></dd></div>
-    <div class="row" id="g-sinecure" data-short="An office with a salary but little or no work."><dt>Sinecure</dt><dd>An office that pays a salary but requires little or no work. The Gabo cabinet set out to abolish them. <span class="cite">p. 377</span></dd></div>
-    <div class="row" id="g-triple" data-short="1895: Russia, France, Germany force Japan to give back Liaodong."><dt>Triple Intervention (1895)</dt><dd>The demand by Russia, France, and Germany in April 1895 that Japan give up its gains from China. It weakened Japan's position in Korea and led a court faction around the queen to look to Russia. <span class="cite">pp. 361, 378</span></dd></div>
-    <div class="row" id="g-topknot" data-short="1895 order for men to cut their topknots; set off revolts."><dt>Topknot decree (1895)</dt><dd>The Gabo cabinet's order, issued in the king's name, for all adult men to cut off their topknots, the traditional sign of adulthood. Men attacked officials across the country. <span class="cite">p. 378</span><span class="needs">Builds on: Gabo reforms</span></dd></div>
-  </dl>
 </section>
 
 <!-- 1 IN-LAWS -->
@@ -1662,6 +1610,91 @@ figure.wideprint img{width:100%}
     <div class="a"><ul><li>Hereditary status codified in 1037; about 30% of the population (p. 380).</li><li>Runaways, renting land, hired labor, military service (pp. 257–258).</li><li>Abolition in law (1894) vs. masters' lasting power (p. 364).</li></ul></div></details>
 </section>
 
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-yangban">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from earlier units are repeated briefly where you need them.</p>
+
+  <h3 class="gloss-group">From earlier units (review)</h3>
+  <dl class="gloss">
+    <div class="row" id="g-yangban" data-short="Korea's hereditary aristocracy, who monopolized high office through the civil service exams."><dt>Yangban</dt><dd>Korea's hereditary elite. They had to pass the Confucian civil service examinations to hold office, but they nearly monopolized those offices and owned most of the land and slaves. By 1800 the yangban were split between a national office-holding elite and poorer local yangban. <span class="cite">pp. 250–251, 263; <a href="unit1.html">Unit 1</a></span></dd></div>
+    <div class="row" id="g-factions" data-short="Hereditary court parties (Patriarchs, Southerners, etc.) that purged each other."><dt>Factions</dt><dd>Hereditary groups of officials, such as the Patriarchs and Southerners, that competed for control of the court and purged their rivals. In 1801 the Southerners, many of them Catholic, were driven from office for half a century. <span class="cite">pp. 252–256, 364</span><span class="needs">Builds on: yangban</span></dd></div>
+    <div class="row" id="g-tributary" data-short="Korea's ritual submission to the Chinese emperor; China did not, before 1882, run Korea's affairs."><dt>Tributary system</dt><dd>The arrangement by which Korea's king sent envoys and gifts to the Chinese emperor and acknowledged him as superior. Before 1882 the Qing never interfered in Korea's domestic affairs or its dealings with Japan. Korea ended the relationship in 1894. <span class="cite">pp. 254–255, 371, 374, 377</span></dd></div>
+    <div class="row" id="g-unequal" data-short="Treaties imposed by force: foreigners judged by their own courts, ports opened on foreign terms."><dt>Unequal treaties</dt><dd>Treaties forced on East Asian states that opened ports on foreign terms and gave foreigners <a class="term" href="#g-extra">extraterritoriality</a>. Korea's first was the Ganghwa Treaty with Japan (1876). <span class="cite">p. 373; <a href="unit5.html">Unit 5</a></span></dd></div>
+    <div class="row" id="g-extra" data-short="Foreigners answer only to their own country's laws and courts."><dt>Extraterritoriality</dt><dd>The right of foreigners to be tried under their own country's laws rather than the host country's. The Ganghwa Treaty let Japanese in Korea's treaty ports run their own affairs. <span class="cite">pp. 373–374</span><span class="needs">Builds on: unequal treaties</span></dd></div>
+    <div class="row" id="g-ganghwa" data-short="1876: Korea's first modern treaty; opened Busan and two more ports to Japan."><dt>Ganghwa Treaty (1876)</dt><dd>The treaty Japan forced on Korea after its survey ship drew fire from shore batteries in 1875. It opened Busan and two more ports to Japanese trade and imposed extraterritoriality. <span class="cite">p. 373; <a href="unit5.html">Unit 5</a></span><span class="needs">Builds on: unequal treaties</span></dd></div>
+    <div class="row" id="g-selfstr" data-short="Adopting Western weapons and technology while keeping Confucian values."><dt>Self-strengthening</dt><dd>The program, led in China by Li Hongzhang, of adopting Western weapons and technology while keeping Confucian values. Korean reformers took the same formula from Zheng Guanying's <i>Simple Talk</i>. <span class="cite">pp. 322–323, 370, 374; <a href="unit6.html">Unit 6</a></span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Kings and in-laws</h3>
+  <dl class="gloss">
+    <div class="row" id="g-dowager" data-short="The eldest widowed queen, who ruled for a child king or chose the next king."><dt>Dowager queen · dowager regent</dt><dd>A dowager is a widowed queen. When a child became king, the eldest living dowager ruled for him as regent until she stepped down or he chose to rule himself. When there was no crown prince, she chose the next king. <span class="cite">p. 363</span></dd></div>
+    <div class="row" id="g-inlaw" data-short="Government dominated by the clans of the dowager and the king's wife."><dt>In-law government</dt><dd>Rule by the relatives of royal women. Male kin of the dowager regent and the queen were appointed to high office, and clans competed to be tied to the eldest dowager and to supply the king's wife. It lasted from 1800 to the end of the century. <span class="cite">p. 363</span><span class="needs">Builds on: dowager regent</span></dd></div>
+    <div class="row" id="g-daewongun" data-short="'Grand prince,' title of Gojong's father; de facto regent 1863–1874."><dt>Daewongun</dt><dd>"Grand prince," the title for the father of a king who had never been king himself. Gojong's father held it and ran the government as unofficial regent from 1863 to 1874, then returned to power briefly in 1882 and 1895. <span class="cite">pp. 363–364, 374, 378</span><span class="needs">Builds on: dowager regent</span></dd></div>
+    <div class="row" id="g-min" data-short="Gojong's queen (1851–1895); her clan ruled after 1874; murdered by Japanese agents."><dt>Queen Min</dt><dd>King Gojong's wife, from a weak branch of the Yeoheung Min clan. She persuaded Gojong to rule for himself in 1874, put her relatives in power until 1894, and steered between China, Japan, and finally Russia. Japanese agents killed her in 1895. Later titled Empress Myeongseong. <span class="cite">pp. 372–373</span><span class="needs">Builds on: in-law government, Daewongun</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Society and culture</h3>
+  <dl class="gloss">
+    <div class="row" id="g-secondary" data-short="Hereditary groups between yangban and commoners: jungin, hyangni, seoeol, and others."><dt>Secondary status groups</dt><dd>Hereditary groups ranked between the yangban and commoners. Like the yangban, they married among themselves and held on to particular jobs. They were blocked from high office, and they drove much of the century's new thinking and reform. <span class="cite">pp. 364, 379</span><span class="needs">Builds on: yangban</span></dd></div>
+    <div class="row" id="g-jungin" data-short="'Middle people': technical specialists in languages, law, medicine, finance."><dt>Jungin</dt><dd>"Middle people": hereditary specialists in foreign languages, law, medicine, and finance. <span class="cite">pp. 251, 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
+    <div class="row" id="g-hyangni" data-short="Hereditary clerks in local government."><dt>Hyangni</dt><dd>Hereditary clerks in local administration, barred since early Joseon from promotion into the central bureaucracy. <span class="cite">pp. 250, 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
+    <div class="row" id="g-seoeol" data-short="Children and descendants of concubines; barred from the civil exams."><dt>Seoeol</dt><dd>Children and descendants of concubines. They could not take the civil service examinations. <span class="cite">pp. 250, 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
+    <div class="row" id="g-muban" data-short="Military officials, yangban in name, allowed only the military exam."><dt>Military officials (muhan / muban†)</dt><dd>Officials classed as yangban but allowed to take only the military examination, not the civil one, and treated as inferior. The textbook spells the term <i>muhan</i>; it is usually romanized <i>muban</i>.† <span class="cite">p. 364</span><span class="needs">Builds on: secondary status groups</span></dd></div>
+    <div class="row" id="g-official" data-short="Slaves owned by the government; most freed in 1801. Private slaves stayed enslaved."><dt>Official vs. private slaves</dt><dd>Official slaves belonged to the government; private slaves belonged to individuals, mostly yangban. In 1801 the regent freed most of the 67,000 official slaves. Hereditary slavery for several million private slaves lasted until 1886, and slavery itself was abolished in 1894. <span class="cite">pp. 364, 380</span></dd></div>
+    <div class="row" id="g-surveil" data-short="1801: groups of five households made to watch each other for Christians."><dt>Five-family mutual surveillance</dt><dd>The 1801 system that grouped households in fives to report on each other, used to find Christians in the Southerner faction. <span class="cite">p. 364</span><span class="needs">Builds on: factions</span></dd></div>
+    <div class="row" id="g-practical" data-short="Scholarship based on observation and comparing texts; challenged court orthodoxy."><dt>Practical learning</dt><dd>A school of scholarship built on observation and careful comparison of texts, which challenged the Confucian orthodoxy promoted at court. It blossomed in the early 1800s. Often called by its Korean name, <i>silhak</i>.† <span class="cite">p. 365</span></dd></div>
+    <div class="row" id="g-pansori" data-short="Stories sung to a drum; popular with commoners, often mocking yangban."><dt>Pansori</dt><dd>Long stories sung or chanted to drum accompaniment. A countryside tradition from the 1700s, it often mocked the yangban. Sin Jaehyo wrote lyrics for it in the 1800s. <span class="cite">pp. 260, 366</span></dd></div>
+    <div class="row" id="g-masked" data-short="Plays mixing dance, song, and story; satirized the yangban."><dt>Masked drama</dt><dd>Plays combining dance, song, and narrative, performed in masks. A famous passage has a commoner boast of eating his yangban masters. <span class="cite">pp. 260, 366</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Economy and rebellion</h3>
+  <dl class="gloss">
+    <div class="row" id="g-gye" data-short="Mutual-aid credit club: members pool money and take turns using it."><dt>Gye</dt><dd>A voluntary mutual-aid association. Members paid into a common fund and took turns using the money, first for funerals and weddings, later to survive hard times or fix shared irrigation. Gye still give Korean women and immigrants abroad access to credit. <span class="cite">p. 366</span></dd></div>
+    <div class="row" id="g-clothtax" data-short="Tax paid in cloth in place of military service; yangban were exempt until 1864."><dt>Military cloth tax</dt><dd>A tax paid in cloth by commoners in place of serving in the army. The Daewongun made yangban households pay it for the first time, in their slaves' names to spare them embarrassment. <span class="cite">pp. 258, 369–370</span></dd></div>
+    <div class="row" id="g-grainloan" data-short="State loans of grain to farmers, run by district magistrates and often abused."><dt>Grain loans</dt><dd>Grain lent by the state to farmers, run by district magistrates and their clerks. Abuses helped cause the 1862 rebellions; the Daewongun cancelled past-due loans and handed the program to local elders. <span class="cite">pp. 369–370</span></dd></div>
+    <div class="row" id="g-hong" data-short="1811 northwest rebellion led by a fallen yangban; protested discrimination against northerners."><dt>Hong Gyeongrae Rebellion (1811)</dt><dd>A major rebellion in Pyeongan province in the northwest, led by Hong Gyeongrae, a fallen yangban and professional geomancer. Its causes were unfair taxes and the central government's discrimination against northerners. It was quickly suppressed. <span class="cite">p. 369</span><span class="needs">Builds on: secondary status groups</span></dd></div>
+    <div class="row" id="g-1862" data-short="Leaderless risings across the south against corrupt tax and loan officials."><dt>Rebellions of 1862</dt><dd>Dozens of spontaneous uprisings, mostly in the three southern provinces, against corruption in the land tax, the military cloth tax, and grain loans. Commoners led them, killing officials and burning government buildings. The state answered by punishing corrupt magistrates, not by force. <span class="cite">p. 369</span><span class="needs">Builds on: military cloth tax, grain loans</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Religion</h3>
+  <dl class="gloss">
+    <div class="row" id="g-donghak" data-short="'Eastern Learning': Choe Jeu's new religion (1860), a Korean answer to Christianity."><dt>Donghak</dt><dd>"Eastern Learning," Korea's first new religion, founded by Choe Jeu after his 1860 vision. It mixed Confucian ethics, Buddhist faith, the Daoist search for long life, geomancy, talismans, and shamanist appeals to spirits, and was meant to counter Western Learning and Christianity. It taught that all men were equal in serving the Lord of Heaven. Later renamed Cheondogyo.† <span class="cite">pp. 368–369</span></dd></div>
+    <div class="row" id="g-hanulnim" data-short="The Lord of Heaven, who Choe Jeu believed spoke to him in 1860."><dt>Hanulnim</dt><dd>The Lord of Heaven, the supreme being who, Choe Jeu said, appeared to him and gave him a talisman and an incantation to heal people and spread virtue. <span class="cite">pp. 368–369</span><span class="needs">See also: Donghak</span></dd></div>
+    <div class="row" id="g-heterodox" data-short="Teaching that departs from Confucian orthodoxy; preaching it was a capital crime."><dt>Heterodox teaching</dt><dd>Doctrine that departs from Confucian orthodoxy. Preaching it was punishable by death, the charge that brought Choe Jeu's execution in 1864. <span class="cite">pp. 369, 376</span></dd></div>
+    <div class="row" id="g-protestant" data-short="American missionaries from 1884–85 who opened hospitals and schools, including Ewha."><dt>Protestant missions</dt><dd>American Presbyterians and Methodists who arrived from 1884, winning acceptance through good works: Horace Allen's hospital (1885), Appenzeller's boys' school, and Mary Scranton's girls' school, Ewha. <span class="cite">p. 376</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Reform and diplomacy, 1864–1885</h3>
+  <dl class="gloss">
+    <div class="row" id="g-academies" data-short="Provincial Confucian schools and shrines that had become bases of yangban factions."><dt>Private academies</dt><dd>Confucian schools in the provinces, many dedicated to worthies of the dominant factions, that had become centers of yangban factional interest. The Daewongun closed all but 47. Korean name: <i>seowon</i>.† <span class="cite">pp. 369–370</span><span class="needs">Builds on: factions</span></dd></div>
+    <div class="row" id="g-100cash" data-short="The Daewongun's high-value coin; it caused inflation."><dt>100-cash coin</dt><dd>The first multiple-denomination coin in Korean history, minted by the Daewongun to pay for his projects. It caused inflation. <span class="cite">p. 370</span></dd></div>
+    <div class="row" id="g-isolation" data-short="The Daewongun's refusal of all treaties, to avoid the unequal treaty system."><dt>Isolationism</dt><dd>The Daewongun's policy of rejecting every foreign request for a treaty, to keep Korea out of the unequal treaty system. Confucian scholars backed it with the slogan "Defend Confucian correctness against foreign perversity." <span class="cite">p. 370</span><span class="needs">Builds on: unequal treaties</span></dd></div>
+    <div class="row" id="g-strategy" data-short="1880 memo by Huang Zunxian: sign treaties with all Western powers for protection."><dt>"Strategy for Korea" (1880)</dt><dd>A recommendation sent to Gojong by Huang Zunxian, a Chinese official in Tokyo, arguing that Korea should sign treaties with all the Western powers to protect itself. It matched Li Hongzhang's policy of using rival powers to check Russia and Japan. <span class="cite">p. 373</span></dd></div>
+    <div class="row" id="g-mfn" data-short="A promise that one treaty partner gets any privilege later given to another."><dt>Most-favored-nation clause</dt><dd>A treaty clause guaranteeing that a power would receive any advantage that Korea later granted another power. It was part of the 1882 treaty with the United States. <span class="cite">p. 374</span><span class="needs">Builds on: unequal treaties</span></dd></div>
+    <div class="row" id="g-shufeldt" data-short="1882 U.S.–Korea treaty negotiated through Li Hongzhang."><dt>Shufeldt treaty (1882)</dt><dd>The treaty of amity and trade between the United States and Korea, arranged by Li Hongzhang and Commodore Robert Shufeldt and signed in May 1882. It included extraterritoriality and a most-favored-nation clause. Gojong's letter to President Arthur called Korea both self-governing and a Chinese tributary. <span class="cite">p. 374</span><span class="needs">Builds on: tributary system, most-favored-nation clause</span></dd></div>
+    <div class="row" id="g-mutiny" data-short="1882 revolt of old guard units; China then kidnapped the Daewongun."><dt>Soldiers' mutiny of 1882 (Imo Incident†)</dt><dd>A revolt by the old capital guard units, angry at unpaid salaries and the favored Japanese-trained unit. They killed a Japanese instructor, burned the Japanese legation, and returned the Daewongun to power. China sent 4,500 troops and carried the Daewongun off to China. Usually called the Imo Incident.† <span class="cite">pp. 372, 374</span><span class="needs">Builds on: Daewongun</span></dd></div>
+    <div class="row" id="g-gapsin" data-short="Dec. 4, 1884: pro-Japan radicals seize the palace; crushed by Chinese troops."><dt>Gapsin Coup (1884)</dt><dd>The failed seizure of power on December 4, 1884, by the radical reform faction under Kim Okgyun, using Japanese legation guards. They held the king and killed high officials, but Chinese troops under Yuan Shikai drove them and the Japanese envoy out. <span class="cite">pp. 374–376</span></dd></div>
+    <div class="row" id="g-tianjin" data-short="1885 China–Japan deal: both withdraw troops; each warns the other before sending more."><dt>Convention of Tianjin (1885)</dt><dd>The agreement between Li Hongzhang and Japan after the Gapsin Coup. Both sides withdrew their troops, agreed not to train Korean soldiers, and promised to notify each other before sending troops to Korea. <span class="cite">p. 375</span><span class="needs">Builds on: Gapsin Coup</span></dd></div>
+    <div class="row" id="g-resident" data-short="Yuan Shikai, China's overseer in Seoul 1885–94."><dt>Resident commissioner</dt><dd>The post Li Hongzhang created for Yuan Shikai in 1885: the first Chinese overseer on Korean soil since the Mongols. For a decade Yuan blocked Korean moves toward independence, even stopping Gojong from sending ambassadors abroad. <span class="cite">p. 375</span><span class="needs">Builds on: tributary system</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Rebellion, war, and reform, 1894–1895</h3>
+  <dl class="gloss">
+    <div class="row" id="g-dhrebellion" data-short="1894 rising of Donghak believers and farmers; the largest in Korean history."><dt>Donghak Rebellion (1894)</dt><dd>The largest uprising in Korean history, led militarily by Jeon Bongjun. Donghak believers and farmers rose against corrupt officials, the Min faction, foreigners, and Christianity. It gave China and Japan reasons to send troops. <span class="cite">pp. 376–377</span><span class="needs">Builds on: Donghak</span></dd></div>
+    <div class="row" id="g-sinojapanese" data-short="1894–95 war fought over Korea; Japan's victory ended China's role there."><dt>Sino-Japanese War (1894–95)</dt><dd>The war Japan forced on China over Korea, attacking without a declaration and holding Korea's king and queen in the palace. Japan's victory ended Chinese influence in Korea. <span class="cite">pp. 361, 377; <a href="unit8.html">Unit 8</a></span><span class="needs">Builds on: Donghak Rebellion</span></dd></div>
+    <div class="row" id="g-gabo" data-short="1894–96 Japan-backed reform cabinet: ended exams, status, slavery; lasted 16 months."><dt>Gabo reforms</dt><dd>The reforms of the pro-Japanese cabinet installed in 1894 and led by Pak Yeonghyo and Seo Gwangbeom, exiles from the 1884 coup. They ended the Confucian exams, legal status differences, and slavery, and set up modern courts, police, and schools. The cabinet lasted 16 months. <span class="cite">pp. 377–378</span><span class="needs">Builds on: Gapsin Coup, Sino-Japanese War</span></dd></div>
+    <div class="row" id="g-sinecure" data-short="An office with a salary but little or no work."><dt>Sinecure</dt><dd>An office that pays a salary but requires little or no work. The Gabo cabinet set out to abolish them. <span class="cite">p. 377</span></dd></div>
+    <div class="row" id="g-triple" data-short="1895: Russia, France, Germany force Japan to give back Liaodong."><dt>Triple Intervention (1895)</dt><dd>The demand by Russia, France, and Germany in April 1895 that Japan give up its gains from China. It weakened Japan's position in Korea and led a court faction around the queen to look to Russia. <span class="cite">pp. 361, 378</span></dd></div>
+    <div class="row" id="g-topknot" data-short="1895 order for men to cut their topknots; set off revolts."><dt>Topknot decree (1895)</dt><dd>The Gabo cabinet's order, issued in the king's name, for all adult men to cut off their topknots, the traditional sign of adulthood. Men attacked officials across the country. <span class="cite">p. 378</span><span class="needs">Builds on: Gabo reforms</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
 <!-- SOURCES -->
 <section class="unit" id="sources">
   <div class="sec-num">Resources</div>
@@ -1913,6 +1946,21 @@ figure.wideprint img{width:100%}
   co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
   qs.forEach(function(d){d.addEventListener('toggle',sync)});
   sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
 })();
 </script>
 </body>
