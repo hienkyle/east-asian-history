@@ -503,6 +503,9 @@ details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
 details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
 details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
 details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
+
+/* icon-only floating buttons */
+.fab.icon{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%;font-size:1.25rem;line-height:1}
 </style>
 </head>
 <body class="no-js">
@@ -519,8 +522,8 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
   <div class="list" id="notes-list"></div>
 </aside>
 <div class="fab-stack">
-  <button class="fab" id="totop" type="button" aria-label="Return to top">↑ <span class="lbl-long">Return to top</span></button>
-  <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
+  <button class="fab icon" id="totop" type="button" aria-label="Return to top" title="Return to top">↑</button>
+  <button class="fab primary icon" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes" aria-label="Key terms" title="Key terms">✎</button>
 </div>
 
 <header class="topbar" role="banner">
@@ -608,7 +611,7 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
 
   <div class="callout ink">
     <div class="label">How to use this guide</div>
-    <p>Dotted-underlined words are defined in <a href="#terms">Key terms</a>: hover or tap for the definition, or open <b>✎ Key terms</b> at any time. Page numbers refer to the textbook; † marks a fact from an outside source, listed under <a href="#sources">Sources</a>. Pronunciations follow the textbook: <i>sankin kōtai</i> (SAHN-keen CO-tah-e), <i>hatamoto</i> (HAH-tah-moe-toe), <i>tozama</i> (TOE-zah-mah). A macron (ō, ū) means a long vowel.</p>
+    <p>Dotted-underlined words are defined in <a href="#terms">Key terms</a>: hover or tap for the definition, or open <b>✎</b> at any time. Page numbers refer to the textbook; † marks a fact from an outside source, listed under <a href="#sources">Sources</a>. Pronunciations follow the textbook: <i>sankin kōtai</i> (SAHN-keen CO-tah-e), <i>hatamoto</i> (HAH-tah-moe-toe), <i>tozama</i> (TOE-zah-mah). A macron (ō, ū) means a long vowel.</p>
   </div>
 </section>
 

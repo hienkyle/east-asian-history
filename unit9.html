@@ -883,6 +883,9 @@ details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
 details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
 details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
 details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
+
+/* icon-only floating buttons */
+.fab.icon{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%;font-size:1.25rem;line-height:1}
 </style>
 </head>
 <body class="no-js">
@@ -899,8 +902,8 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
   <div class="list" id="notes-list"></div>
 </aside>
 <div class="fab-stack">
-  <button class="fab" id="totop" type="button" aria-label="Return to top">↑ <span class="lbl-long">Return to top</span></button>
-  <button class="fab primary" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes">✎ Key terms</button>
+  <button class="fab icon" id="totop" type="button" aria-label="Return to top" title="Return to top">↑</button>
+  <button class="fab primary icon" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes" aria-label="Key terms" title="Key terms">✎</button>
 </div>
 
 <header class="topbar" role="banner">
@@ -1616,7 +1619,7 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
   <details class="terms-box" id="terms-box">
     <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
     <div class="terms-body">
-  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-yangban">dotted term</a> in the text for a quick definition, or open <b>✎ Key terms</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from earlier units are repeated briefly where you need them.</p>
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-yangban">dotted term</a> in the text for a quick definition, or open <b>✎</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from earlier units are repeated briefly where you need them.</p>
 
   <h3 class="gloss-group">From earlier units (review)</h3>
   <dl class="gloss">
