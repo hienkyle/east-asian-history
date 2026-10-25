@@ -893,6 +893,11 @@ h1 .ja{font-family:var(--serif)}
 #income .step{font-variant-numeric:tabular-nums}
 #inc-ctrl .step{padding:5px 9px}
 .share .row span:first-child{text-align:left}
+
+/* keep the page inside the screen on phones: grid children may shrink below their content width */
+body{overflow-x:clip}
+.share .track{display:block;margin:0}
+.side>*,.grid>*,.think>*,.versus>*,.contrast>*,.mapgrid>*,.stats>*,.pair-fig>*,.pairs>*,.pair>*,.idgrid>*,.status>*,.windows>*{min-width:0}
 </style>
 </head>
 <body class="no-js">

@@ -631,6 +631,11 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
 
 /* icon-only floating buttons */
 .fab.icon{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%;font-size:1.25rem;line-height:1}
+
+/* keep the page inside the screen on phones: grid children may shrink below their content width */
+body{overflow-x:clip}
+.share .track{display:block;margin:0}
+.side>*,.grid>*,.think>*,.versus>*,.contrast>*,.mapgrid>*,.stats>*,.pair-fig>*,.pairs>*,.pair>*,.idgrid>*,.status>*,.windows>*{min-width:0}
 </style>
 </head>
 <body class="no-js">
