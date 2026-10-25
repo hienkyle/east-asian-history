@@ -1095,7 +1095,7 @@ h1 .ja{font-family:var(--serif)}
   <h3>A dual structure <span class="cite">pp. 384–385</span></h3>
   <p>Conglomerates called <a class="term" href="#g-zaibatsu">zaibatsu</a> ("financial cliques") dominated the most modern sectors: mining, shipbuilding, machinery, steel, and chemicals. Each member company ran one business and was legally separate, but the group's bank, a central advisory committee, and interlocking boards of directors tied them together. Some zaibatsu formed <a class="term" href="#g-cartel">cartels</a>, as in textiles and shipping. Zaibatsu chairmen had access to bureaucrats and cabinet ministers, who steered public investment their way. The other side of this <a class="term" href="#g-dual">dual structure</a> was small firms making processed food, housing, clothing, and ceramics and toys for export, often as suppliers and subcontractors to the big firms.</p>
   <figure class="panel">
-    <div class="wide"><svg id="zaibatsu" viewBox="0 0 720 330" role="img" aria-labelledby="zb-t"><title id="zb-t">A zaibatsu bank and advisory committee tie legally separate companies together through capital and interlocking boards; officials steer investment to them; small firms below act as suppliers and subcontractors</title></svg></div>
+    <div class="wide"><svg id="zaibatsu" viewBox="0 0 720 346" role="img" aria-labelledby="zb-t"><title id="zb-t">A zaibatsu bank and advisory committee tie legally separate companies together through capital and interlocking boards; officials steer investment to them; small firms below act as suppliers and subcontractors</title></svg></div>
     <figcaption><span class="fn">Figure 4.</span> How a zaibatsu held its companies together, and where small firms fit. Diagram drawn for this guide from pp. 384–385.</figcaption>
   </figure>
 
@@ -1114,7 +1114,7 @@ h1 .ja{font-family:var(--serif)}
 
   <h3>The numbers: who produced Japan's income <span class="cite">p. 386</span></h3>
   <figure class="panel">
-    <div class="wide"><svg id="income" viewBox="0 0 720 340" role="img" aria-labelledby="inc-t"><title id="inc-t">Stacked area chart of Japan's real national income, 1878–1936: the total rose from 1,117 to 16,133 million yen, and secondary and tertiary industry grew much faster than primary industry</title></svg></div>
+    <div class="wide"><svg id="income" viewBox="0 0 720 330" role="img" aria-labelledby="inc-t"><title id="inc-t">Stacked area chart of Japan's real national income, 1878–1936: the total rose from 1,117 to 16,133 million yen, and secondary and tertiary industry grew much faster than primary industry</title></svg></div>
     <div class="ctrl" id="inc-ctrl" role="group" aria-label="Choose a year">
     </div>
     <div class="cap" id="inc-cap"></div>
@@ -1758,26 +1758,46 @@ h1 .ja{font-family:var(--serif)}
   (function(){
     var s=document.getElementById('zaibatsu');if(!s)return;
     var defs=el('defs',{},s);
-    [['zI','var(--ink)'],['zG','var(--gold)'],['zN','var(--green)']].forEach(function(m){var mk=el('marker',{id:m[0],viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},defs);el('path',{d:'M0 0 L10 5 L0 10 z',fill:m[1]},mk);});
+    // arrowheads: the tip sits exactly on the path's end point
+    [['zI','var(--ink)'],['zG','var(--gold)'],['zN','var(--green)']].forEach(function(m){var mk=el('marker',{id:m[0],viewBox:'0 0 10 10',refX:10,refY:5,markerWidth:9,markerHeight:9,markerUnits:'userSpaceOnUse',orient:'auto'},defs);el('path',{d:'M0 0 L10 5 L0 10 z',fill:m[1]},mk);});
     function box(x,y,w,h,cls,lines){el('rect',{x:x,y:y,width:w,height:h,rx:8,class:'box '+cls},s);lines.forEach(function(t,i){el('text',{x:x+w/2,y:y+h/2+(i-(lines.length-1)/2)*16+5,'text-anchor':'middle','font-size':i?11.5:13.5,'font-weight':i?400:700,class:i?'small':''},s,t)});}
-    box(20,14,180,52,'ink',['Zaibatsu bank','supplies capital']);
-    box(240,14,220,52,'ink',['Central advisory committee','policy and long-term goals']);
-    box(500,14,200,52,'gold',['Bureaucrats · ministers','steer public investment']);
-    el('path',{d:'M500 40 H464',stroke:'var(--gold)','stroke-width':1.6,fill:'none','marker-end':'url(#zG)'},s);
-    var cos=['Mining','Shipbuilding','Machinery','Steel','Chemicals'],cw=118,gap=17,sx=20,cy=128;
-    cos.forEach(function(c,i){var x=sx+i*(cw+gap);
-      el('path',{d:'M110 66 C110 96 '+(x+cw/2)+' 96 '+(x+cw/2)+' '+(cy-2),stroke:'var(--ink)','stroke-width':1.2,fill:'none','marker-end':'url(#zI)',opacity:.8},s);
-      el('path',{d:'M350 66 C350 100 '+(x+cw/2)+' 100 '+(x+cw/2)+' '+(cy-2),stroke:'var(--ink)','stroke-width':1,'stroke-dasharray':'2 3',fill:'none',opacity:.6},s);
-      box(x,cy,cw,46,'',[c,'legally separate']);});
-    el('path',{d:'M'+(sx+cw/2)+' '+(cy+56)+' H'+(sx+4*(cw+gap)+cw/2),stroke:'var(--accent)','stroke-width':1.6,'stroke-dasharray':'5 4',fill:'none'},s);
-    el('text',{x:360,y:cy+74,'text-anchor':'middle','font-size':12,fill:'var(--accent)'},s,'interlocking boards of directors · cartels divide materials and markets');
-    el('line',{x1:20,y1:228,x2:700,y2:228,stroke:'var(--line)'},s);
-    el('text',{x:20,y:222,'font-size':10.5,class:'small'},s,'MODERN SECTOR ▲');
-    el('text',{x:20,y:244,'font-size':10.5,class:'small'},s,'▼ SMALL FIRMS');
-    ['Processed food','Clothing','Housing','Ceramics · toys'].forEach(function(t,i){var x=60+i*160;
-      el('path',{d:'M'+(x+65)+' 262 V'+(cy+60),stroke:'var(--green)','stroke-width':1.2,fill:'none','marker-end':'url(#zN)',opacity:.75},s);
-      box(x,264,130,44,'green',[t,'small firm']);});
-    el('text',{x:700,y:322,'text-anchor':'end','font-size':11.5,fill:'var(--green)'},s,'suppliers and subcontractors; exports through the zaibatsu');
+    function line(d,c,extra){var a={d:d,stroke:c,'stroke-width':1.6,fill:'none','stroke-linejoin':'round'};for(var k in extra)a[k]=extra[k];return el('path',a,s);}
+    var X0=130,X1=700;
+    // sector labels and divider
+    el('text',{x:20,y:118,'font-size':10.5,'font-weight':700,class:'small'},s,'MODERN');
+    el('text',{x:20,y:132,'font-size':10.5,'font-weight':700,class:'small'},s,'SECTOR');
+    el('text',{x:20,y:308,'font-size':10.5,'font-weight':700,class:'small'},s,'SMALL');
+    el('text',{x:20,y:322,'font-size':10.5,'font-weight':700,class:'small'},s,'FIRMS');
+    el('line',{x1:20,y1:240,x2:X1,y2:240,stroke:'var(--line)','stroke-width':1.2,'stroke-dasharray':'6 4'},s);
+    // level 1: the zaibatsu head (bank + committee) and the state
+    el('rect',{x:X0,y:10,width:340,height:68,rx:10,fill:'none',stroke:'var(--ink)','stroke-dasharray':'4 3',opacity:.7},s);
+    box(142,22,148,44,'ink',['Zaibatsu bank','supplies capital']);
+    box(302,22,156,44,'ink',['Advisory committee','sets policy and goals']);
+    box(520,22,180,44,'gold',['Bureaucrats · ministers','steer public investment']);
+    line('M520 44 H471','var(--gold)',{'marker-end':'url(#zG)'});
+    // level 1 -> level 2: one trunk, one bus, a straight drop to each company
+    var cw=102,gap=15,cy=142,ch=46,cx=[];for(var i=0;i<5;i++)cx.push(X0+cw/2+i*(cw+gap));
+    var busY=112;
+    line('M300 78 V'+busY,'var(--ink)');
+    line('M'+cx[0]+' '+busY+' H'+cx[4],'var(--ink)');
+    cx.forEach(function(x){line('M'+x+' '+busY+' V'+cy,'var(--ink)',{'marker-end':'url(#zI)'})});
+    el('circle',{cx:300,cy:busY,r:3,fill:'var(--ink)'},s);
+    el('text',{x:308,y:98,'font-size':11.5},s,'capital and policy').style.fill='var(--ink)';
+    // level 2: companies, linked side by side by interlocking boards
+    ['Mining','Shipbuilding','Machinery','Steel','Chemicals'].forEach(function(c,i){box(cx[i]-cw/2,cy,cw,ch,'',[c,'legally separate'])});
+    for(var k=0;k<4;k++)line('M'+(cx[k]+cw/2)+' '+(cy+ch/2)+' H'+(cx[k+1]-cw/2),'var(--accent)',{'stroke-width':2.2,'stroke-dasharray':'3 2'});
+    line('M130 214 H158','var(--accent)',{'stroke-width':2.2,'stroke-dasharray':'3 2'});
+    el('text',{x:166,y:218,'font-size':11.5},s,'interlocking boards of directors; cartels share markets').style.fill='var(--accent)';
+    // bracket under all five companies
+    line('M'+cx[0]+' '+(cy+ch)+' V200 H'+cx[4]+' V'+(cy+ch),'var(--green)',{'stroke-width':1.2});
+    // level 3: small firms -> one bus -> one arrow up to the bracket
+    var bw=127,bg=20,fy=290,fx=[];for(var j=0;j<4;j++)fx.push(X0+bw/2+j*(bw+bg));
+    var b2=268,ax=cx[4];
+    line('M'+fx[0]+' '+b2+' H'+fx[3],'var(--green)');
+    fx.forEach(function(x){line('M'+x+' '+fy+' V'+b2,'var(--green)')});
+    line('M'+fx[3]+' '+b2+' H'+ax+' V201','var(--green)',{'marker-end':'url(#zN)'});
+    el('text',{x:ax-10,y:258,'text-anchor':'end','font-size':11.5},s,'small firms supply parts, subcontract, and export through the zaibatsu firms').style.fill='var(--green)';
+    ['Processed food','Clothing','Housing','Ceramics · toys'].forEach(function(t,i){box(fx[i]-bw/2,fy,bw,44,'green',[t,'small firm'])});
   })();
 
   // income chart (Figure 6 + Table 1)
@@ -1786,19 +1806,19 @@ h1 .ja{font-family:var(--serif)}
     var D=[[1878,1117,691,95,331],[1890,2308,1429,224,655],[1900,3640,1671,818,1151],[1914,5665,2127,1354,2184],[1920,6316,2147,1686,2483],[1925,9268,2779,2216,4273],[1929,10962,2740,2911,5311],[1930,12715,2477,3550,6688],[1931,13726,2372,3716,7638],[1932,13843,2594,3987,7262],[1936,16133,3149,5096,7888]];
     var tb=document.querySelector('#income-table tbody');
     D.forEach(function(r){var tr=document.createElement('tr');tr.innerHTML='<td class="yr">'+r[0]+'</td><td><b>'+fmt(r[1])+'</b></td><td>'+fmt(r[2])+'</td><td>'+fmt(r[3])+'</td><td>'+fmt(r[4])+'</td>';tb.appendChild(tr);});
-    var L=64,R=700,T=34,B=292,xa=1875,xb=1938,ym=17000;function X(v){return L+(v-xa)/(xb-xa)*(R-L)}function Y(v){return B-v/ym*(B-T)}
+    var L=64,R=700,T=58,B=300,xa=1875,xb=1938,ym=17000;function X(v){return L+(v-xa)/(xb-xa)*(R-L)}function Y(v){return B-v/ym*(B-T)}
     for(var v=0;v<=16000;v+=4000){el('line',{x1:L,y1:Y(v),x2:R,y2:Y(v),stroke:'var(--line)'},s);el('text',{x:L-8,y:Y(v)+4,'text-anchor':'end','font-size':11,class:'small'},s,fmt(v));}
     [1880,1890,1900,1910,1920,1930].forEach(function(t){el('text',{x:X(t),y:B+18,'text-anchor':'middle','font-size':11,class:'small'},s,t)});
     el('rect',{x:X(1914),y:T,width:X(1918)-X(1914),height:B-T,fill:'var(--gold)',opacity:.1},s);
     el('text',{x:X(1916),y:T-8,'text-anchor':'middle','font-size':10.5,fill:'var(--gold)'},s,'WWI');
     el('line',{x1:X(1923.67),y1:T,x2:X(1923.67),y2:B,stroke:'var(--gold)','stroke-dasharray':'3 3'},s);
-    el('text',{x:X(1923.67)-4,y:T+12,'text-anchor':'end','font-size':10.5,fill:'var(--gold)'},s,'1923 earthquake');
+    el('text',{x:X(1923.67),y:T-8,'text-anchor':'middle','font-size':10.5,fill:'var(--gold)'},s,'1923 earthquake');
     var ser=[[2,'Primary','var(--gold)'],[3,'Secondary','var(--ink)'],[4,'Tertiary','var(--green)']],base=D.map(function(){return 0});
     ser.forEach(function(sr){var top=D.map(function(r,i){return base[i]+r[sr[0]]});
       var up=D.map(function(r,i){return X(r[0])+' '+Y(top[i])}).join(' L'),dn=D.map(function(r,i){return X(r[0])+' '+Y(base[i])}).reverse().join(' L');
       el('path',{d:'M'+up+' L'+dn+' Z',fill:sr[2],'fill-opacity':.25},s);el('path',{d:'M'+up,fill:'none',stroke:sr[2],'stroke-width':2},s);
       D.forEach(function(r,i){base[i]=top[i]});});
-    ser.forEach(function(sr,i){el('rect',{x:L+12+i*112,y:T+4,width:12,height:12,rx:2,fill:sr[2],'fill-opacity':.7},s);el('text',{x:L+30+i*112,y:T+14,'font-size':12.5},s,sr[1])});
+    ser.forEach(function(sr,i){el('rect',{x:L+i*112,y:10,width:12,height:12,rx:2,fill:sr[2],'fill-opacity':.7},s);el('text',{x:L+18+i*112,y:20,'font-size':12.5},s,sr[1])});
     var vl=el('line',{y1:T,y2:B,stroke:'var(--fg)','stroke-dasharray':'2 2',opacity:0},s);
     var dots=D.map(function(r){return el('circle',{cx:X(r[0]),cy:Y(r[1]),r:4,fill:'var(--fg)',stroke:'var(--paper)','stroke-width':1.5},s)});
     var ctrl=document.getElementById('inc-ctrl'),cap=document.getElementById('inc-cap'),btns=[];
