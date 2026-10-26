@@ -976,8 +976,10 @@ figure.narrow{max-width:520px}
 /* democratic centralism */
 #dcsvg text{font-family:var(--serif);fill:var(--fg)}
 #dcsvg .small{fill:var(--muted)}
-#dcsvg .dcf{fill:none;stroke-width:2.4;stroke-dasharray:7 6;animation:dash 1.4s linear infinite}
-#dcsvg .dcf.up{stroke:var(--green)} #dcsvg .dcf.dn{stroke:var(--accent);animation-direction:normal}
+#dcsvg .dcf{fill:none;stroke-width:2;stroke-linecap:round}
+#dcsvg .dcf.up,#dcsvg .dcrail.up{stroke:var(--green)} #dcsvg .dcf.dn,#dcsvg .dcrail.dn{stroke:var(--accent)}
+#dcsvg .dcrail{stroke-width:2;stroke-dasharray:6 6;opacity:.55;animation:dash 1.6s linear infinite}
+#dcsvg .dcbus{stroke:var(--line);stroke-width:1.5}
 #dcsvg .dcl.up{fill:var(--green)} #dcsvg .dcl.dn{fill:var(--accent)}
 @media (max-width:640px){#dc .wide svg{min-width:520px}}
 /* class ladder as buttons */
@@ -1080,7 +1082,7 @@ figure.port img{width:100%;height:auto}
   <div class="meta">
     <span class="chip"><b>Reading:</b> Ebrey &amp; Walthall, Ch. 25, "War and Revolution, China (1927–1949)," pp. 439–454</span>
     <span class="chip"><b>Before:</b> <a href="unit12.html">Unit 12 · Remaking China</a></span>
-    <span class="chip"><b>Next:</b> <a href="unit14.html">Unit 14 · The Asia-Pacific War</a></span>
+    <span class="chip"><b>Next:</b> Unit 14 · The Asia-Pacific War</span>
   </div>
 </header>
 
@@ -1150,7 +1152,7 @@ figure.port img{width:100%;height:auto}
   <h3>Democratic centralism <span class="cite">p. 440</span></h3>
   <p>The Comintern taught <a class="term" href="#g-demcent">"democratic centralism,"</a> the secret of party discipline. A cell could debate a decision, but once it was made, everyone had to obey. This gave a degree of discipline and centralization beyond anything in earlier Chinese organizations.</p>
   <figure class="panel" id="dc">
-    <div class="wide"><svg id="dcsvg" viewBox="0 0 640 300" role="img" aria-labelledby="dc-t"><title id="dc-t">Diagram of democratic centralism: local cells elect delegates up to the national party congress, its central executive committee, and the standing committee, while decisions flow back down</title></svg></div>
+    <div class="wide"><svg id="dcsvg" viewBox="0 0 640 320" role="img" aria-labelledby="dc-t"><title id="dc-t">Diagram of democratic centralism: local cells elect delegates up to the national party congress, its central executive committee, and the standing committee, while decisions flow back down</title></svg></div>
     <figcaption><span class="fn">Figure 2.</span> "Delegates flowed up, and decisions flowed down" (p. 440). Diagram drawn for this guide from the text.</figcaption>
   </figure>
 
@@ -1804,7 +1806,7 @@ figure.port img{width:100%;height:auto}
   <footer class="end">
     <a href="unit12.html">← Unit 12 · Remaking China</a>
     <a href="index.html">All units</a>
-    <a href="unit14.html">Next: Unit 14 · The Asia-Pacific War →</a>
+    <span>Next: Unit 14 · The Asia-Pacific War</span>
   </footer>
 </section>
 </main>
@@ -1923,20 +1925,27 @@ figure.port img{width:100%;height:auto}
   // Figure 2: democratic centralism (p. 440)
   (function(){
     var s=document.getElementById('dcsvg');if(!s)return;
-    var defs=el('defs',{},s),m=el('marker',{id:'dcah',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse'},defs);
-    el('path',{d:'M0 0L10 5L0 10z',fill:'context-stroke'},m);
-    var tiers=[{y:22,t:'Standing committee',c:'acc',w:200},{y:92,t:'Central executive committee',c:'ink',w:260},{y:162,t:'National party congress',c:'gold',w:300}];
-    tiers.forEach(function(r){var x=320-r.w/2;el('rect',{x:x,y:r.y,width:r.w,height:40,rx:8,class:'box '+r.c},s);el('text',{x:320,y:r.y+25,'text-anchor':'middle','font-weight':700,'font-size':14},s,r.t)});
-    for(var i=0;i<5;i++){var x=120+i*90;el('rect',{x:x-36,y:240,width:72,height:36,rx:8,class:'box green'},s);el('text',{x:x,y:263,'text-anchor':'middle','font-size':12.5},s,'Local cell')}
-    // up (left) and down (right)
-    var up=[['M150 238 L235 204'],['M200 160 L230 134'],['M245 90 L260 64']],dn=[['M380 64 L395 90'],['M410 134 L440 160'],['M405 204 L490 238']];
-    up.forEach(function(d){el('path',{d:d[0],class:'dcf up','marker-end':'url(#dcah)'},s)});
-    dn.forEach(function(d){el('path',{d:d[0],class:'dcf dn','marker-end':'url(#dcah)'},s)});
-    el('text',{x:40,y:150,'font-size':13,'font-weight':700,class:'dcl up'},s,'Delegates');
-    el('text',{x:40,y:166,'font-size':12,class:'small'},s,'elected upward');
-    el('text',{x:600,y:150,'text-anchor':'end','font-size':13,'font-weight':700,class:'dcl dn'},s,'Decisions');
-    el('text',{x:600,y:166,'text-anchor':'end','font-size':12,class:'small'},s,'binding downward');
-    el('text',{x:320,y:296,'text-anchor':'middle','font-size':12,class:'small'},s,'Debate is allowed inside a cell; once a decision is reached, all must obey.');
+    var defs=el('defs',{},s);
+    [['dcup','var(--green)'],['dcdn','var(--accent)']].forEach(function(m){var mk=el('marker',{id:m[0],viewBox:'0 0 10 10',refX:5,refY:5,markerWidth:9,markerHeight:9,markerUnits:'userSpaceOnUse',orient:'auto'},defs);el('path',{d:'M1 1L9 5L1 9z',style:'fill:'+m[1]},mk)});
+    var T=[{y:24,t:'Standing committee',c:'acc',w:220},{y:92,t:'Central executive committee',c:'ink',w:280},{y:160,t:'National party congress',c:'gold',w:340}],H=38;
+    T.forEach(function(r){el('rect',{x:320-r.w/2,y:r.y,width:r.w,height:H,rx:8,class:'box '+r.c},s);el('text',{x:320,y:r.y+24,'text-anchor':'middle','font-weight':700,'font-size':14},s,r.t)});
+    // cells and bus
+    var cy=246,bus=222;
+    el('line',{x1:140,y1:bus,x2:500,y2:bus,class:'dcbus'},s);
+    for(var i=0;i<5;i++){var x=140+i*90;el('line',{x1:x,y1:bus,x2:x,y2:cy,class:'dcbus'},s);el('rect',{x:x-38,y:cy,width:76,height:34,rx:8,class:'box green'},s);el('text',{x:x,y:cy+22,'text-anchor':'middle','font-size':12.5},s,'Local cell')}
+    // paired arrows in each gap: up on the left, down on the right
+    var gaps=[[bus,T[2].y+H],[T[2].y,T[1].y+H],[T[1].y,T[0].y+H]];
+    gaps.forEach(function(g){var lo=g[0],hi=g[1];
+      el('line',{x1:300,y1:lo-3,x2:300,y2:hi+7,class:'dcf up','marker-end':'url(#dcup)'},s);
+      el('line',{x1:340,y1:hi+3,x2:340,y2:lo-7,class:'dcf dn','marker-end':'url(#dcdn)'},s);});
+    // side rails with labels
+    el('line',{x1:62,y1:262,x2:62,y2:34,class:'dcrail up','marker-end':'url(#dcup)'},s);
+    el('text',{x:76,y:140,'font-size':13,'font-weight':700,class:'dcl up'},s,'Delegates');
+    el('text',{x:76,y:156,'font-size':12,class:'small'},s,'elected upward');
+    el('line',{x1:578,y1:34,x2:578,y2:262,class:'dcrail dn','marker-end':'url(#dcdn)'},s);
+    el('text',{x:564,y:140,'text-anchor':'end','font-size':13,'font-weight':700,class:'dcl dn'},s,'Decisions');
+    el('text',{x:564,y:156,'text-anchor':'end','font-size':12,class:'small'},s,'binding downward');
+    el('text',{x:320,y:306,'text-anchor':'middle','font-size':12,class:'small'},s,'Debate is allowed inside a cell; once a decision is reached, all must obey.');
   })();
 
   // Figure 4: Mao's Xunwu classes (p. 442)
