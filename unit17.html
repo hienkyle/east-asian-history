@@ -1,0 +1,2141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 17 · Japan from Occupation to the "Lost Decades"</title>
+<meta name="description" content="Study guide for Unit 17: Japan from 1945 to 2011: the U.S. occupation and its reforms, the reverse course, LDP rule, high-speed growth, the 1960 treaty protests, pollution and citizens' movements, the shocks of the 1970s, the bubble economy, and two decades of stagnation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf7f2; --paper:#fffdf9; --fg:#1f1d1a; --muted:#6b645a; --line:#e6dfd3;
+  --accent:#a23b2a; --accent-soft:#f6e4de; --ink:#2c5d8a; --ink-soft:#e2ecf5;
+  --gold:#a8822e; --gold-soft:#f5ecd6; --green:#3f6b4a; --green-soft:#e3eee5;
+  --shadow:0 1px 2px rgba(60,40,20,.06),0 4px 16px rgba(60,40,20,.06);
+  --serif:"Source Serif 4","Noto Serif JP",Georgia,"Times New Roman",serif;
+  /* one typeface across the page; Noto Serif JP only supplies Japanese glyphs */
+  --sans:var(--serif);
+  --kr:var(--serif);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+    --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+    --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16140f; --paper:#1f1c16; --fg:#ece6dc; --muted:#a59d90; --line:#352f26;
+  --accent:#e07a62; --accent-soft:#3a2420; --ink:#7fb0dc; --ink-soft:#1d2a36;
+  --gold:#d8b46a; --gold-soft:#332a18; --green:#8cc29a; --green-soft:#1d2a20;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+img{max-width:100%;display:block}
+.sans{font-family:var(--sans)}
+
+/* progress bar */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:50}
+
+/* layout */
+.shell{display:grid;grid-template-columns:1fr;max-width:1180px;margin:0 auto;padding:0 16px}
+@media (min-width:1040px){.shell{grid-template-columns:240px minmax(0,1fr);gap:56px;padding:0 32px}}
+main{max-width:760px;min-width:0;padding-bottom:80px}
+
+/* toc */
+nav.toc{display:none}
+@media (min-width:1040px){
+  nav.toc{display:block;position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;padding:40px 0 24px;font-family:var(--sans);font-size:.88rem}
+}
+.toc .back{display:inline-block;margin-bottom:18px;color:var(--muted);text-decoration:none}
+.toc .back:hover{color:var(--accent)}
+.toc h2{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:700}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+.toc li a{display:block;padding:5px 10px;border-left:2px solid var(--line);color:var(--muted);text-decoration:none;line-height:1.35}
+.toc li a:hover{color:var(--fg)}
+.toc li a.active{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+.toc .tools{margin-top:20px;display:flex;gap:8px;flex-wrap:wrap}
+.btn{font:600 .82rem var(--sans);border:1px solid var(--line);background:var(--paper);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.mobile-toc{margin:0 0 8px}
+@media (min-width:1040px){.mobile-toc{display:none}}
+.mobile-toc summary{font:600 .9rem var(--sans);cursor:pointer;padding:10px 14px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.mobile-toc ol{font-family:var(--sans);font-size:.92rem;margin:8px 0 0;padding-left:22px}
+.mobile-toc li{margin:4px 0}
+
+/* hero */
+header.hero{padding:48px 0 24px}
+.eyebrow{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.01em}
+h1 .kr{font-family:var(--kr);font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+.dek{font-size:1.2rem;color:var(--muted);margin:0 0 20px;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--sans);font-size:.85rem}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.chip b{color:var(--fg)}
+
+/* sections */
+section.unit{padding-top:36px;margin-top:36px;border-top:1px solid var(--line)}
+section.unit:first-of-type{border-top:none;margin-top:8px}
+.sec-num{font:700 .78rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:1.85rem;line-height:1.2;margin:4px 0 6px}
+.pages{font:.82rem var(--sans);color:var(--muted);margin:0 0 18px}
+h3{font:700 1.08rem var(--sans);margin:28px 0 8px}
+p{margin:0 0 14px}
+ul.tight{margin:0 0 14px;padding-left:20px}
+ul.tight li{margin:4px 0}
+.cite{font:.78rem var(--sans);color:var(--muted);white-space:nowrap}
+p.cite{white-space:normal}
+
+/* glossary links */
+a.term{color:inherit;text-decoration:underline dotted var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px;cursor:help}
+a.term:hover{color:var(--accent)}
+#tip{position:absolute;z-index:60;max-width:320px;background:var(--fg);color:var(--bg);font:.88rem/1.45 var(--sans);padding:10px 12px;border-radius:8px;box-shadow:var(--shadow);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
+#tip.on{opacity:1;transform:none}
+#tip b{display:block;margin-bottom:2px}
+
+/* callouts */
+.callout{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0;box-shadow:var(--shadow)}
+.callout .label{font:700 .72rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.callout.ink{border-left-color:var(--ink)} .callout.ink .label{color:var(--ink)}
+.callout.gold{border-left-color:var(--gold)} .callout.gold .label{color:var(--gold)}
+.callout.green{border-left-color:var(--green)} .callout.green .label{color:var(--green)}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+.bigq{font-size:1.35rem;line-height:1.35;font-style:italic;margin:4px 0 0}
+
+/* glance grid */
+.grid{display:grid;gap:12px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.card h4{font:700 1rem var(--sans);margin:0 0 4px}
+.card .sub{font:.8rem var(--sans);color:var(--muted);margin-bottom:6px}
+.card p,.card ul{font-size:.95rem;margin:0}
+.card ul{padding-left:18px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .n{font:700 1.9rem/1 var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.stat .l{font:.86rem/1.35 var(--sans);color:var(--muted);margin-top:6px}
+
+/* glossary */
+dl.gloss{margin:12px 0 0}
+.gloss .row{display:grid;grid-template-columns:1fr;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+@media (min-width:640px){.gloss .row{grid-template-columns:180px 1fr;gap:16px}}
+.gloss dt{font:700 .98rem var(--sans)}
+.gloss dt small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.gloss dd{margin:0;font-size:.96rem}
+.gloss .needs{display:block;font:.78rem var(--sans);color:var(--muted);margin-top:3px}
+.gloss .row:target{background:var(--gold-soft);border-radius:8px;padding-left:10px;padding-right:10px}
+.gloss-group{font:700 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:22px 0 2px}
+
+/* timeline: equal rows so nodes sit at even intervals; the axis runs dot to dot */
+.timeline{position:relative;margin:18px 0 18px 6px;padding-left:26px;display:grid;grid-auto-rows:1fr;row-gap:14px}
+.timeline .ev{position:relative;margin:0}
+.timeline .ev::before{content:"";position:absolute;z-index:1;box-sizing:border-box;left:-33px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.timeline .ev:not(:last-child)::after{content:"";position:absolute;z-index:0;left:-28px;top:13px;width:2px;height:calc(100% + 14px);background:var(--line)}
+.timeline .ev.major::before{background:var(--accent)}
+.timeline .yr{font:700 .92rem var(--sans);color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline .tx{font-size:.97rem}
+
+/* figures */
+figure{margin:20px 0}
+figure img{border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+figcaption{font:.84rem/1.45 var(--sans);color:var(--muted);margin-top:8px}
+figcaption b{color:var(--fg)}
+.side{display:grid;gap:20px;align-items:start}
+@media (min-width:700px){.side{grid-template-columns:minmax(0,1fr) 260px}.side.left{grid-template-columns:260px minmax(0,1fr)}}
+.side figure{margin:0}
+.zoomable{cursor:zoom-in}
+#lightbox{position:fixed;inset:0;background:rgba(10,8,6,.88);display:none;align-items:center;justify-content:center;z-index:80;padding:16px;cursor:zoom-out}
+#lightbox.on{display:flex}
+#lightbox img{max-height:92vh;max-width:96vw;width:auto;border-radius:6px}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font:.92rem/1.45 var(--sans)}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--bg);font-weight:700;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+tbody tr:last-child td{border-bottom:none}
+td.yr{font-weight:700;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.k{font-weight:600;white-space:nowrap}
+
+/* versus */
+.versus{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0;align-items:stretch}
+@media (min-width:600px){.versus{grid-template-columns:1fr auto 1fr}}
+.versus .vs{align-self:center;justify-self:center;font:700 .9rem var(--sans);color:var(--muted)}
+.versus .card .big{font:700 1.3rem var(--sans);color:var(--accent)}
+.versus .card:last-child .big{color:var(--ink)}
+
+/* bars */
+.bars{margin:16px 0;display:grid;gap:16px}
+.barset h4{font:700 .9rem var(--sans);margin:0 0 6px}
+.bar{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;font:.88rem var(--sans);margin:5px 0}
+.bar .track{background:var(--line);border-radius:6px;height:26px;overflow:hidden}
+.bar .fill{height:100%;width:0;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-weight:700;font-size:.82rem;white-space:nowrap;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.bar .fill.ink{background:var(--ink)}
+:root[data-theme="dark"] .bar .fill{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bar .fill{color:#16140f}}
+
+/* factions svg */
+.tree{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:16px 0}
+.tree svg{width:100%;height:auto;display:block}
+.tree .node rect{fill:var(--bg);stroke:var(--line)}
+.tree .node.root rect{fill:var(--accent-soft);stroke:var(--accent)}
+.tree text{font-family:var(--sans);fill:var(--fg);font-size:14px}
+.tree text.small{font-size:11px;fill:var(--muted);paint-order:stroke;stroke:var(--paper);stroke-width:5px;stroke-linejoin:round}
+.tree .edge{stroke:var(--muted);stroke-width:1.5;fill:none}
+.tree .edge.ext{stroke-dasharray:5 4}
+.legend{font:.8rem var(--sans);color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;padding:4px 6px 0}
+
+/* quotes */
+blockquote{margin:16px 0;padding:6px 0 6px 18px;border-left:3px solid var(--gold);font-style:italic;font-size:1.08rem}
+blockquote footer{font:normal .84rem var(--sans);color:var(--muted);margin-top:6px}
+
+/* self check */
+details.q{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 16px}
+details.q summary{cursor:pointer;padding:12px 0;font-weight:600;list-style:none;display:flex;gap:10px}
+details.q summary::-webkit-details-marker{display:none}
+details.q summary::before{content:"+";font:700 1.1rem var(--sans);color:var(--accent);width:14px;flex:none}
+details.q[open] summary::before{content:"–"}
+details.q .a{padding:0 0 14px 24px;font-size:.96rem}
+details.q .a ul{margin:0;padding-left:18px}
+
+/* flashcards */
+.fc-wrap{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+.fc{perspective:1000px;height:220px;cursor:pointer;margin:0 auto;max-width:520px}
+.fc-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.fc.flip .fc-inner{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid var(--line)}
+.fc-front{background:var(--accent-soft)}
+.fc-front .t{font:700 1.6rem var(--sans)}
+.fc-front .h{font:.82rem var(--sans);color:var(--muted);margin-top:8px}
+.fc-back{background:var(--bg);transform:rotateY(180deg);font-size:.98rem;overflow:auto}
+.fc-ctrl{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px;font:.88rem var(--sans);color:var(--muted);flex-wrap:wrap}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+
+/* floating tools: key-term notes + return to top */
+.fab-stack{position:fixed;right:16px;bottom:16px;z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.fab{font:600 .9rem var(--serif);display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);color:var(--fg);border-radius:999px;padding:10px 16px;box-shadow:var(--shadow);cursor:pointer}
+.fab:hover{border-color:var(--accent);color:var(--accent)}
+.fab.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.fab.primary:hover{filter:brightness(1.08);color:#fff}
+:root[data-theme="dark"] .fab.primary{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fab.primary{color:#16140f}}
+#totop{opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s,transform .25s}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#notes.open + .fab-stack #totop{opacity:0;pointer-events:none}
+#notes [hidden]{display:none!important}
+#notes{position:fixed;right:16px;bottom:76px;z-index:75;width:min(380px,calc(100vw - 32px));max-height:min(70vh,620px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.18);opacity:0;transform:translateY(12px) scale(.98);transform-origin:bottom right;pointer-events:none;transition:opacity .2s,transform .2s}
+#notes.open{opacity:1;transform:none;pointer-events:auto}
+#notes header{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px 8px;border-bottom:1px solid var(--line)}
+#notes header h2{font-size:1.05rem;margin:0}
+#notes header p{margin:2px 0 0;font-size:.78rem;color:var(--muted)}
+#notes .x{border:none;background:none;font-size:1.4rem;line-height:1;color:var(--muted);cursor:pointer;padding:4px 6px}
+#notes .x:hover{color:var(--accent)}
+#notes input{margin:10px 16px 6px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font:.9rem var(--serif)}
+#notes input:focus{outline:2px solid var(--accent);outline-offset:-1px}
+#notes .list{overflow:auto;padding:0 16px 14px}
+#notes .grp{font:700 .7rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:12px 0 2px}
+#notes .item{display:block;padding:7px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:.88rem;line-height:1.4}
+#notes .item:hover b{color:var(--accent)}
+#notes .item b{display:block;font-size:.92rem}
+#notes .empty{color:var(--muted);font-size:.88rem;padding:10px 0}
+@media (max-width:520px){#notes{right:8px;left:8px;width:auto;bottom:72px}.fab .lbl-long{display:none}}
+
+/* sources */
+.sources li{margin:6px 0;font-size:.94rem}
+footer.end{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font:.85rem var(--sans);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer.end a{color:var(--muted)}
+
+@media print{
+  nav.toc,.mobile-toc,#progress,.demo-ctrl,.fc-wrap,.btn,.fab-stack,#notes{display:none!important}
+  .shell{display:block} body{background:#fff;color:#000}
+  .reveal{opacity:1;transform:none}
+  details.q{border:none} details.q .a{display:block}
+  section.unit{break-inside:auto}
+}
+
+/* ---- unit 3 additions ---- */
+:root{--plum:#7a4f8f;--plum-soft:#efe5f3;--sea:#d7e3e7;--land:#ece5d8;--land-line:#bdb19c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--plum:#c39ad6;--plum-soft:#2c2232;--sea:#17222a;--land:#2a261f;--land-line:#4a4338}}
+:root[data-theme="dark"]{--plum:#c39ad6;--plum-soft:#2c2232;--sea:#17222a;--land:#2a261f;--land-line:#4a4338}
+h1 .ja{font-weight:600;font-size:.55em;color:var(--muted);margin-left:.3em;vertical-align:.25em}
+
+/* status hierarchy */
+.status{display:grid;gap:10px;margin:16px 0;grid-template-columns:1fr}
+@media (min-width:640px){.status{grid-template-columns:1.25fr 1fr 1fr}}
+.status .col{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.status .col h4{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.status .col.core h4{color:var(--accent)} .status .col.mid h4{color:var(--ink)} .status .col.out h4{color:var(--plum)}
+.tier{display:block;width:100%;text-align:left;font:600 .95rem var(--serif);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:6px 0;cursor:pointer;opacity:0;transform:translateX(-8px);transition:opacity .45s,transform .45s,border-color .2s,background .2s}
+.status.in .tier{opacity:1;transform:none}
+.tier small{display:block;font-weight:400;color:var(--muted);font-size:.78rem}
+.core .tier:nth-child(2){margin-left:0}.core .tier:nth-child(3){margin-left:6%}.core .tier:nth-child(4){margin-left:12%}.core .tier:nth-child(5){margin-left:18%}
+.core .tier{width:auto}
+.tier:hover,.tier[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.mid .tier:hover,.mid .tier[aria-pressed="true"]{border-color:var(--ink);background:var(--ink-soft)}
+.out .tier:hover,.out .tier[aria-pressed="true"]{border-color:var(--plum);background:var(--plum-soft)}
+.status-cap{min-height:3.4em;margin:4px 0 16px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--paper);border-radius:0 8px 8px 0;font-size:.96rem}
+
+/* military class ladder */
+.mil{display:grid;gap:8px;margin:16px 0}
+.mil .r{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+@media (max-width:560px){.mil .r{grid-template-columns:1fr;gap:2px}}
+.mil .r b{font-size:1rem}
+.mil .r b small{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
+.mil .r p{margin:0;font-size:.94rem}
+.mil .r.top{border-left:4px solid var(--accent)} .mil .r.fu{border-left:4px solid var(--gold)} .mil .r.to{border-left:4px solid var(--ink)} .mil .r.ha{border-left:4px solid var(--green)}
+
+/* generic svg panel */
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:18px 0;box-shadow:var(--shadow)}
+.panel svg{width:100%;height:auto;display:block}
+.panel text{font-family:var(--serif);fill:var(--fg)}
+.panel .small{font-size:12px;fill:var(--muted)}
+.panel .box{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.panel .box.acc{fill:var(--accent-soft);stroke:var(--accent)}
+.panel .box.ink{fill:var(--ink-soft);stroke:var(--ink)}
+.panel .box.gold{fill:var(--gold-soft);stroke:var(--gold)}
+.panel .box.green{fill:var(--green-soft);stroke:var(--green)}
+.panel .road{fill:none;stroke:var(--line);stroke-width:10;stroke-linecap:round}
+.panel .roadline{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:6 8;opacity:.7}
+.ctrl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.ctrl .step{font:600 .82rem var(--serif);border:1px solid var(--line);background:var(--bg);color:var(--muted);padding:6px 11px;border-radius:999px;cursor:pointer}
+.ctrl .step:hover{color:var(--fg);border-color:var(--accent)}
+.ctrl .step[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .ctrl .step[aria-pressed="true"]{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ctrl .step[aria-pressed="true"]{color:#16140f}}
+.cap{min-height:4.4em;margin-top:10px;padding:10px 14px;border-left:3px solid var(--accent);background:var(--bg);border-radius:0 8px 8px 0;font-size:.96rem}
+.cap b{display:block;font-size:1rem}
+
+/* sankin kotai */
+#sk .who{transition:transform 1.6s cubic-bezier(.45,.05,.3,1)}
+#sk .lord circle{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+#sk .fam circle{fill:var(--gold);stroke:var(--paper);stroke-width:2}
+#sk .ret circle{fill:var(--muted);stroke:var(--paper);stroke-width:1.5}
+#sk .lbl{font-size:12.5px}
+#sk .cost{font-size:12px;fill:var(--accent);opacity:0;transition:opacity .4s}
+#sk.moving .cost{opacity:1}
+#sk .coin{fill:var(--gold);opacity:0}
+#sk.moving .coin{animation:coin 1.6s ease-out}
+@keyframes coin{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(-26px)}}
+
+/* map of foreign contact */
+.mapbox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin:18px 0;box-shadow:var(--shadow)}
+.mapgrid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:720px){.mapgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:start}}
+.mapbox svg{width:100%;height:auto;display:block;border-radius:8px;background:var(--sea)}
+.mapbox .land{fill:var(--land);stroke:var(--land-line);stroke-width:.7}
+.mapbox text{font-family:var(--serif);fill:var(--fg);paint-order:stroke;stroke:var(--sea);stroke-width:4px;stroke-linejoin:round}
+.mapbox .cl{font-size:12px}
+.mapbox .rl{font-size:13px;font-weight:700;letter-spacing:.1em;fill:var(--muted)}
+.mapbox .city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.5}
+.mapbox .win{cursor:pointer}
+.mapbox .win circle.halo{fill:var(--accent);opacity:.18;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+.mapbox .win circle.core{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+.mapbox .win.on circle.core{fill:var(--ink)}
+.mapbox .win.on text{font-weight:700}
+.mapbox .route{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:5 6;opacity:.25;transition:opacity .3s}
+.mapbox .route.on{opacity:1;animation:dash 1.4s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-22}}
+@keyframes halo{0%{transform:scale(.6);opacity:.35}100%{transform:scale(2.2);opacity:0}}
+.windows{display:grid;gap:8px}
+.windows button{text-align:left;font:inherit;font-size:.94rem;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;color:var(--fg)}
+.windows button b{display:block;font-size:1rem}
+.windows button span{color:var(--muted);font-size:.86rem}
+.windows button[aria-pressed="true"]{border-left-color:var(--accent);background:var(--accent-soft)}
+.windows .detail{font-size:.95rem;padding:10px 12px;border-radius:10px;background:var(--paper);border:1px dashed var(--line)}
+
+/* flows (cycle, credit) */
+.panel .arrow{fill:none;stroke:var(--muted);stroke-width:1.6;marker-end:url(#ah)}
+.panel .pulse{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-dasharray:14 400;animation:run 3.2s linear infinite}
+.panel .pulse.g{stroke:var(--gold)}
+.panel .pulse.i{stroke:var(--ink)}
+@keyframes run{from{stroke-dashoffset:0}to{stroke-dashoffset:-414}}
+
+/* share bars */
+.share{margin:14px 0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.share h4{font:700 .95rem var(--serif);margin:0 0 10px}
+.share .row{display:grid;grid-template-columns:150px 1fr 70px;gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+@media (max-width:520px){.share .row{grid-template-columns:96px 1fr 58px}}
+.share .track{background:var(--line);height:20px;border-radius:5px;overflow:hidden}
+.share .fill{height:100%;width:0;background:var(--accent);border-radius:5px;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.share .fill.ink{background:var(--ink)} .share .fill.gold{background:var(--gold)} .share .fill.green{background:var(--green)}
+.share .v{font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.share .note{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+/* thinkers board */
+.think{display:grid;gap:12px;margin:16px 0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.think .card{border-top:4px solid var(--line)}
+.think .card.a{border-top-color:var(--accent)} .think .card.b{border-top-color:var(--ink)} .think .card.c{border-top-color:var(--gold)} .think .card.d{border-top-color:var(--green)} .think .card.e{border-top-color:var(--plum)}
+.think .who{font:700 .98rem var(--serif);margin:10px 0 2px}
+.think .who:first-of-type{margin-top:4px}
+.think .card p{font-size:.92rem}
+.think .vs{display:inline-block;font:700 .72rem var(--serif);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+
+/* li / qi / xin */
+.lqx{display:grid;gap:10px;grid-template-columns:1fr;margin:16px 0}
+@media (min-width:620px){.lqx{grid-template-columns:1fr auto 1fr auto 1fr;align-items:center}}
+.lqx .card{text-align:center}
+.lqx .card .big{font:700 1.5rem var(--serif);color:var(--accent)}
+.lqx .op{font:700 1.2rem var(--serif);color:var(--muted);text-align:center}
+
+/* cause chain */
+.chain{list-style:none;padding:0;margin:14px 0;display:grid;gap:0}
+.chain li{position:relative;padding:10px 14px 10px 46px;background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:18px;font-size:.95rem}
+.chain li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-19px;transform:translateX(-50%);color:var(--muted);font-weight:700}
+.chain li .n{position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .8rem/24px var(--serif);text-align:center}
+.chain li:last-child{background:var(--accent-soft);border-color:var(--accent)}
+
+/* inheritance bars */
+.inh .row{grid-template-columns:170px 1fr 92px}
+@media (max-width:520px){.inh .row{grid-template-columns:100px 1fr 70px}}
+
+.wide{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.wide svg{min-width:600px}.wide::after{content:"← swipe to see the whole diagram →";display:block;font-size:.78rem;color:var(--muted);text-align:center;margin-top:4px}}
+/* ---- unit 3 · revision 2 ---- */
+.fn{font-weight:700;color:var(--accent);letter-spacing:.02em}
+figure.fig{margin:18px 0}
+table caption{caption-side:top;text-align:left;padding:10px 12px;font:.86rem/1.4 var(--serif);color:var(--muted);border-bottom:1px solid var(--line);background:var(--bg)}
+table caption b{color:var(--fg)}
+.lqx-fig figcaption{margin-top:0}
+
+/* sticky contents bar on small screens */
+@media (max-width:1039px){
+  html{scroll-padding-top:72px}
+  .mobile-toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:45;margin:0 -16px 8px;padding:8px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .mobile-toc summary{display:flex;align-items:center;gap:10px;list-style:none}
+  .mobile-toc summary::-webkit-details-marker{display:none}
+  .mobile-toc summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:transform .2s}
+  .mobile-toc[open] summary::after{transform:rotate(180deg)}
+  .mobile-toc .lbl{color:var(--muted);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;flex:none}
+  .mobile-toc .cur{color:var(--accent);font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobile-toc ol{max-height:min(60vh,460px);overflow-y:auto;overscroll-behavior:contain;list-style:none;padding:6px 0;margin:8px 0 0;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+  .mobile-toc li{margin:0}
+  .mobile-toc li a{display:block;padding:7px 14px;border-left:3px solid transparent;color:var(--muted);text-decoration:none}
+  .mobile-toc li a.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft);font-weight:700}
+}
+nav.toc{overscroll-behavior:contain;scrollbar-width:thin}
+
+/* status order: ranked column vs unranked groups */
+.status .col .hint{font-size:.76rem;color:var(--muted);margin:-4px 0 6px}
+.status .tier{width:100%;margin-left:0!important}
+.status .core{counter-reset:rk}
+.status .core .tier{display:flex;align-items:center;gap:10px}
+.status .core .tier::before{counter-increment:rk;content:counter(rk);flex:none;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:700 .74rem/20px var(--serif);text-align:center}
+
+/* contrast pair with a pivot word */
+.contrast{display:grid;grid-template-columns:1fr;margin:18px 0;align-items:stretch}
+@media (min-width:640px){.contrast{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}}
+.contrast .cside{border-radius:12px;padding:16px 18px;border:1px solid var(--line);min-width:0}
+.contrast .cside.a{background:var(--ink-soft);border-color:var(--ink)}
+.contrast .cside.b{background:var(--accent-soft);border-color:var(--accent)}
+.contrast .cside .big{font:700 1.35rem var(--serif);margin-bottom:6px}
+.contrast .cside.a .big{color:var(--ink)} .contrast .cside.b .big{color:var(--accent)}
+.contrast .cside ul{margin:0;padding-left:20px}
+.contrast .cside li{margin:6px 0}
+.pivot{display:flex;align-items:center;justify-content:center;min-height:58px;background:linear-gradient(var(--line),var(--line)) center/76% 2px no-repeat}
+@media (min-width:640px){.contrast>.pivot{background-size:2px 84%}}
+.pivot span{font:italic 700 1.25rem/1 var(--serif);color:var(--fg);background:var(--bg);border:2px solid var(--fg);border-radius:999px;padding:8px 14px;box-shadow:var(--shadow)}
+
+/* paired change/strain rows */
+.pairs{margin:18px 0;display:grid;gap:14px}
+.pairs .head{display:none}
+@media (min-width:640px){.pairs .head{display:grid;grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);font:700 1.35rem var(--serif)}.pairs .head .a{color:var(--green)}.pairs .head .b{color:var(--accent)}}
+.pair{display:grid;grid-template-columns:1fr;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+@media (min-width:640px){.pair{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr)}.pair .area{grid-column:1/-1}}
+.pair .area{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 2px 8px}
+.pair .c{border-radius:10px;padding:10px 12px;font-size:.96rem;min-width:0}
+.pair .c b.tag{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+@media (min-width:640px){.pair .c b.tag{display:none}}
+.pair .c.a{background:var(--green-soft);border-left:4px solid var(--green)} .pair .c.a b.tag{color:var(--green)}
+.pair .c.b{background:var(--accent-soft);border-left:4px solid var(--accent)} .pair .c.b b.tag{color:var(--accent)}
+.pair .pivot{min-height:44px}
+.pair .pivot span{font-size:1rem;padding:6px 11px}
+@media (min-width:640px){.pair>.pivot{background-size:84% 2px}}
+
+
+/* discussion questions: expand / collapse all */
+.q-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:4px 0 10px}
+.q-tools .btn[disabled]{opacity:.45;cursor:default;border-color:var(--line);color:var(--muted)}
+.q-tools .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.q-tools{display:none!important}}
+
+/* ---- unit 4 additions ---- */
+.note-l{font:.84rem/1.45 var(--serif);color:var(--muted);margin:-6px 0 16px}
+
+/* world trade map */
+.wmap svg{background:var(--sea)}
+.wmap .land{fill:var(--land);stroke:var(--land-line);stroke-width:.6}
+.wmap .route{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:6 6;opacity:.16;transition:opacity .35s}
+.wmap .route.pt{stroke:var(--accent)} .wmap .route.sp{stroke:var(--gold)} .wmap .route.nl{stroke:var(--ink)} .wmap .route.ag{stroke:var(--green);stroke-width:3.2}
+.wmap .route.ret{stroke-dasharray:2 6}
+.wmap .rt.on .route{opacity:1;animation:wdash 1.3s linear infinite}
+@keyframes wdash{to{stroke-dashoffset:-24}}
+.wmap .pl circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.2}
+.wmap .pl text{font-size:10.5px;paint-order:stroke;stroke:var(--sea);stroke-width:3.5px;stroke-linejoin:round;fill:var(--fg)}
+.wmap .pl.dim{opacity:.35;transition:opacity .3s}
+.wmap .ocean{font-size:11px;letter-spacing:.18em;fill:var(--muted);opacity:.7;stroke:none}
+.wmap .edge{font-size:10px;fill:var(--muted);font-style:italic}
+.wmap text{font-family:var(--serif)}
+#wctrl .step[data-r="pt"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+#wctrl .step[data-r="sp"][aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+#wctrl .step[data-r="nl"][aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+#wctrl .step[data-r="ag"][aria-pressed="true"]{background:var(--green);border-color:var(--green)}
+#wcap{border-left-color:var(--accent)}
+#wcap.sp{border-left-color:var(--gold)} #wcap.nl{border-left-color:var(--ink)} #wcap.ag{border-left-color:var(--green)}
+
+/* stats count-up */
+#silverstats .stat{opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+#silverstats.in .stat{opacity:1;transform:none}
+#silverstats.in .stat:nth-child(2){transition-delay:.12s}#silverstats.in .stat:nth-child(3){transition-delay:.24s}#silverstats.in .stat:nth-child(4){transition-delay:.36s}
+
+/* swimlanes */
+#lanes .lane{fill:var(--bg);stroke:var(--line)}
+#lanes .lname{font:700 13px var(--serif);fill:var(--fg)}
+#lanes .tick{stroke:var(--line)}
+#lanes .tl{font:11px var(--serif);fill:var(--muted)}
+#lanes .ban{fill:var(--gold);opacity:.28}
+#lanes .ev{cursor:pointer}
+#lanes .ev circle{stroke:var(--paper);stroke-width:2;transition:r .2s}
+#lanes .ev.c circle{fill:var(--ink)} #lanes .ev.r circle{fill:var(--accent)}
+#lanes .ev:hover circle,#lanes .ev.on circle{r:8}
+#lanes .ev.on circle{stroke:var(--fg)}
+#lanes .ev:focus{outline:none}
+#lanes .ev:focus-visible circle{stroke:var(--fg);stroke-width:3}
+#lanes-cap{border-left-color:var(--ink)}
+
+/* kinship bands */
+#kin text{font-family:var(--serif);fill:var(--fg);font-size:13px}
+#kin .small{font-size:11.5px;fill:var(--muted)}
+#kin .bl{font-size:12px;fill:var(--fg);paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+#kin .bandp{fill:var(--accent-soft);stroke:var(--accent)}
+#kin .s-bi{stop-color:var(--ink-soft)} #kin .s-pa2{stop-color:var(--accent-soft)}
+.legend .sw{display:inline-block;width:14px;height:10px;border-radius:3px;vertical-align:middle;margin-right:2px}
+.legend .sw.bi{background:var(--ink-soft);border:1px solid var(--ink)} .legend .sw.pa{background:var(--accent-soft);border:1px solid var(--accent)}
+#kin rect{transform-origin:100px center;transform:scaleX(0);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+#kin.in rect{transform:none}
+#kin.in rect:nth-of-type(2){transition-delay:.15s}#kin.in rect:nth-of-type(3){transition-delay:.3s}
+.no-js #kin rect{transform:none}
+@media (prefers-reduced-motion:reduce){#kin rect{transform:none}}
+
+figure.tall img{max-height:560px;width:auto;margin:0 auto}
+figure.tall figcaption{max-width:620px;margin-left:auto;margin-right:auto}
+
+/* ---- shared: aspect ratio + justified text ---- */
+/* keep every image's aspect ratio (width/height attributes otherwise fix the height) */
+figure img{height:auto}
+figure.tall img{width:auto;max-width:100%}
+figure.port{max-width:320px;margin-inline:auto}
+/* justified running text */
+main p,main li,.gloss dd,.card p,.callout p,.cap{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+main p.pages,main p.cite,figcaption,.share .note,.mfn .chip2{text-align:left;hyphens:manual}
+/* room for the pivot word */
+@media (min-width:640px){.contrast{grid-template-columns:minmax(0,1fr) 124px minmax(0,1fr)}}
+.contrast li,.versus p,.think .card p,.pair .c,.chain li{text-align:left;hyphens:manual}
+
+
+/* ---- unit 6 ---- */
+#summary .contrast{column-gap:16px;row-gap:12px}
+#summary .pivot span{white-space:normal;text-align:center;font-size:1rem;line-height:1.25;padding:8px 12px;max-width:124px;box-sizing:border-box}
+@media (min-width:640px){#summary .contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)}}
+.share .row{grid-template-columns:150px 1fr 76px}
+@media (max-width:520px){.share .row{grid-template-columns:104px 1fr 66px;font-size:.84rem}}
+#rep .fill{min-width:3px}
+.grid .card .big{font-weight:700;font-size:1.05rem;color:var(--accent);margin-bottom:4px}
+/* population chain */
+#chainsvg text{font-family:var(--serif);fill:var(--fg)} #chainsvg .small{font-size:12px;fill:var(--muted)}
+#chainsvg .arrow{color:var(--muted);stroke:var(--muted);marker-end:url(#ah6)}
+#chainsvg .ck{opacity:.28;transition:opacity .5s}
+#chainsvg .ck.on{opacity:1}
+#zeng .arrow{color:var(--muted);stroke:var(--muted);marker-end:url(#ah7)}
+#zeng text{font-family:var(--serif);fill:var(--fg)} #zeng .small{font-size:12px;fill:var(--muted)}
+/* stats */
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:12px 0}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.callout .stat{background:var(--bg)}
+.stat b{display:block;font-size:1.25rem;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.2}
+.stat span{display:block;font-size:.86rem;color:var(--muted);line-height:1.35;margin-top:2px}
+/* biography */
+.bio{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px;margin:20px 0;box-shadow:var(--shadow)}
+.bio-h .label{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.bio-h h3{margin:4px 0 10px}
+.lifeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+.lifeline li{position:relative;margin:0 0 10px;padding-left:4px}
+.lifeline li::before{content:"";box-sizing:border-box;position:absolute;left:-24px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--gold)}
+.lifeline li b{display:block;font-size:.85rem;color:var(--gold)}
+/* pull quote */
+blockquote.pull{margin:0;padding:16px 18px;background:var(--accent-soft);border-radius:12px;font-size:1.12rem;font-style:italic;line-height:1.45;text-align:left}
+blockquote.pull cite{display:block;margin-top:8px;font-size:.82rem;font-style:normal;color:var(--muted)}
+/* tables */
+#litable tr.hide{display:none}
+table.checks td:not(:first-child),table.checks th:not(:first-child){text-align:center;width:72px}
+/* hundred days stepper */
+.steps{display:grid;gap:10px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.hs{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;opacity:.35;transition:opacity .4s,border-color .4s,transform .4s}
+.hs.on{opacity:1;border-color:var(--accent);transform:translateY(-2px)}
+.hs.end.on{background:var(--accent-soft)}
+.hs .yr{display:block;font:700 .8rem var(--serif);color:var(--accent)}
+.hs b{display:block;margin:2px 0 4px}
+.hs p{margin:0;font-size:.88rem;line-height:1.4;text-align:left;hyphens:manual}
+@media (max-width:820px){.steps{grid-template-columns:1fr}.hs{opacity:.55}}
+/* conflict map */
+#cmap{min-width:0}
+#cmap .riv{fill:none;stroke:var(--ink);stroke-width:1.3;opacity:.55}
+#cmap .lyr{opacity:0;transition:opacity .45s;pointer-events:none}
+#cmap .lyr.on{opacity:1;pointer-events:auto}
+#cmap .area{stroke-width:1.5;opacity:.85}
+#cmap .area.tp{fill:var(--accent-soft);stroke:var(--accent)}
+#cmap .area.ni{fill:var(--gold-soft);stroke:var(--gold)}
+#cmap .area.mu{fill:var(--green-soft);stroke:var(--green)}
+#cmap .area.ru{fill:var(--ink-soft);stroke:var(--ink);stroke-dasharray:4 3}
+#cmap .area.fr{fill:var(--gold-soft);stroke:var(--gold);stroke-dasharray:4 3}
+#cmap .area.jp{fill:var(--accent-soft);stroke:var(--accent);stroke-dasharray:4 3}
+#cmap .area.fl{fill:var(--ink-soft);stroke:var(--ink)}
+#cmap .canal{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:7 5}
+#cmap .lyr.on .canal{animation:dash 1.6s linear infinite}
+#cmap .oldy{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 4}
+#cmap .newy{fill:none;stroke:var(--ink);stroke-width:2.6}
+#cmap .rail{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-dasharray:2 3}
+#cmap .move{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:6 5;marker-end:url(#mah)}
+#cmap .lyr.on .move{animation:dash 1.4s linear infinite}
+#cmap .move.ink{stroke:var(--ink)} #cmap .move.green{stroke:var(--green)}
+#cmap .city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.2}
+#cmap .city text{font-size:11px;fill:var(--muted);font-style:italic}
+#cmap .alab{font-size:12px;font-weight:700}
+#cmap .alab.tp{fill:var(--accent)} #cmap .alab.ni{fill:var(--gold)} #cmap .alab.mu{fill:var(--green)} #cmap .alab.ink{fill:var(--ink)}
+#cmap .ctry{font-size:14px;font-weight:700;letter-spacing:.2em;fill:var(--muted);opacity:.7}
+#cmap .sea{font-size:12px;font-style:italic;fill:var(--muted);letter-spacing:.06em}
+#cmap .ev{cursor:pointer;outline:none}
+#cmap .ev circle.core{stroke:var(--paper);stroke-width:1.6;fill:var(--accent)}
+#cmap .ev.ink circle.core{fill:var(--ink)} #cmap .ev.gold circle.core{fill:var(--gold)} #cmap .ev.green circle.core{fill:var(--green)}
+#cmap .ev circle.halo{fill:var(--accent);opacity:.2;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+#cmap .ev.ink circle.halo{fill:var(--ink)} #cmap .ev.gold circle.halo{fill:var(--gold)} #cmap .ev.green circle.halo{fill:var(--green)}
+#cmap .ev text{font-size:11.5px;font-weight:600}
+#cmap .ev:focus circle.core,#cmap .ev:hover circle.core{stroke:var(--fg)}
+#cmap .leg{font-size:11px;fill:var(--muted)}
+#mctrl .step[data-l="reb"][aria-pressed="true"]{background:var(--green);border-color:var(--green)}
+#mctrl .step[data-l="war"][aria-pressed="true"]{background:var(--ink);border-color:var(--ink)}
+#mctrl .step[data-l="jp"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+#mctrl .step[data-l="home"][aria-pressed="true"],#mctrl .step[data-l="box"][aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+@media (prefers-reduced-motion:reduce){#cmap .ev circle.halo,#cmap .lyr.on .canal,#cmap .lyr.on .move{animation:none}}
+
+/* ---- unit 7 ---- */
+.grid .card ul.tight{margin:0;padding-left:18px}
+.card .big+ul.tight li{font-size:.94rem}
+/* identity cards (Kohei's lawsuit) */
+.idgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.idcard{position:relative;display:grid;text-align:left;font:inherit;color:var(--fg);background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:12px 14px 14px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .2s,background .2s}
+.idcard:hover{border-color:var(--gold)}
+.idcard:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.idcard .role{font:700 .7rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.idcard .a,.idcard .b{grid-area:2/1;font-size:.9rem;line-height:1.4;transition:opacity .35s,transform .35s}
+.idcard .a b,.idcard .b b{display:block;font-size:1rem;margin-bottom:2px}
+.idcard .b{opacity:0;transform:translateY(6px)}
+.idcard .b b{color:var(--accent)}
+.idcard[aria-pressed="true"]{background:var(--gold-soft);border-top-color:var(--accent)}
+.idcard[aria-pressed="true"] .a{opacity:0;transform:translateY(-6px)}
+.idcard[aria-pressed="true"] .b{opacity:1;transform:none}
+.idcard::after{content:"↻ other name";position:absolute;right:12px;top:10px;font-size:.72rem;color:var(--muted)}
+/* map tweaks for the Japan map */
+#cmap .ctry{letter-spacing:.16em}
+#cmap .ev text{font-size:11px}
+#cmap .alab{font-size:11px}
+#cmap .lyr[data-l="fall"] .ev text{font-size:9.5px}
+#cmap .lyr[data-l="fall"] .alab{font-size:9.5px}
+#chainsvg .arrow{fill:none}
+@media (prefers-reduced-motion:reduce){.idcard .a,.idcard .b{transition:none}}
+
+/* empire map reuses the unit 6/7 map styles */
+#emap{min-width:0}
+#emap .riv{fill:none;stroke:var(--ink);stroke-width:1.3;opacity:.55}
+#emap .lyr{opacity:0;transition:opacity .45s;pointer-events:none}
+#emap .lyr.on{opacity:1;pointer-events:auto}
+#emap .area{stroke-width:1.5;opacity:.85}
+#emap .area.tp{fill:var(--accent-soft);stroke:var(--accent)}
+#emap .area.ni{fill:var(--gold-soft);stroke:var(--gold)}
+#emap .area.mu{fill:var(--green-soft);stroke:var(--green)}
+#emap .area.ru{fill:var(--ink-soft);stroke:var(--ink);stroke-dasharray:4 3}
+#emap .area.fr{fill:var(--gold-soft);stroke:var(--gold);stroke-dasharray:4 3}
+#emap .area.jp{fill:var(--accent-soft);stroke:var(--accent);stroke-dasharray:4 3}
+#emap .area.fl{fill:var(--ink-soft);stroke:var(--ink)}
+#emap .canal{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:7 5}
+#emap .lyr.on .canal{animation:dash 1.6s linear infinite}
+#emap .oldy{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:3 4}
+#emap .newy{fill:none;stroke:var(--ink);stroke-width:2.6}
+#emap .rail{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-dasharray:2 3}
+#emap .move{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:6 5;marker-end:url(#mah)}
+#emap .lyr.on .move{animation:dash 1.4s linear infinite}
+#emap .move.ink{stroke:var(--ink)} #emap .move.green{stroke:var(--green)}
+#emap .city circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.2}
+#emap .city text{font-size:11px;fill:var(--muted);font-style:italic}
+#emap .alab{font-size:12px;font-weight:700}
+#emap .alab.tp{fill:var(--accent)} #emap .alab.ni{fill:var(--gold)} #emap .alab.mu{fill:var(--green)} #emap .alab.ink{fill:var(--ink)}
+#emap .ctry{font-size:14px;font-weight:700;letter-spacing:.2em;fill:var(--muted);opacity:.7}
+#emap .sea{font-size:12px;font-style:italic;fill:var(--muted);letter-spacing:.06em}
+#emap .ev{cursor:pointer;outline:none}
+#emap .ev circle.core{stroke:var(--paper);stroke-width:1.6;fill:var(--accent)}
+#emap .ev.ink circle.core{fill:var(--ink)} #emap .ev.gold circle.core{fill:var(--gold)} #emap .ev.green circle.core{fill:var(--green)}
+#emap .ev circle.halo{fill:var(--accent);opacity:.2;transform-box:fill-box;transform-origin:center;animation:halo 2.4s ease-out infinite}
+#emap .ev.ink circle.halo{fill:var(--ink)} #emap .ev.gold circle.halo{fill:var(--gold)} #emap .ev.green circle.halo{fill:var(--green)}
+#emap .ev text{font-size:11.5px;font-weight:600}
+#emap .ev:focus circle.core,#emap .ev:hover circle.core{stroke:var(--fg)}
+#emap .leg{font-size:11px;fill:var(--muted)}
+@media (prefers-reduced-motion:reduce){#emap .ev circle.halo,#emap .lyr.on .canal,#emap .lyr.on .move{animation:none}}
+#emap .ctry{letter-spacing:.16em}
+#emap .ev text{font-size:11px}
+#emap .alab{font-size:11px}
+#emap .lyr[data-l="fall"] .ev text{font-size:9.5px}
+#emap .lyr[data-l="fall"] .alab{font-size:9.5px}
+
+/* ---- unit 8 ---- */
+/* oath vs injunctions */
+.oath{display:grid;gap:12px;grid-template-columns:1fr;margin:16px 0}
+@media (min-width:640px){.oath{grid-template-columns:1fr 1fr}}
+.oath .card h4{font:700 1rem var(--serif);margin:0 0 2px}
+.oath .card .sub{margin-bottom:8px}
+.oath ol{margin:0;padding-left:22px;font-size:.95rem}
+.oath ol li{margin:5px 0;text-align:left;hyphens:manual}
+.oath .card.a{border-top:4px solid var(--ink)} .oath .card.b{border-top:4px solid var(--accent)}
+/* winners / losers ledger */
+.ledger{display:grid;gap:10px;margin:16px 0}
+.ledger .r{display:grid;grid-template-columns:150px 1fr 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+@media (max-width:600px){.ledger .r{grid-template-columns:1fr;gap:4px}}
+.ledger .r b{font-size:1rem}
+.ledger .r .g,.ledger .r .l{font-size:.93rem;text-align:left;hyphens:manual}
+.ledger .r .g::before{content:"Gained · ";font-weight:700;color:var(--green)}
+.ledger .r .l::before{content:"Lost · ";font-weight:700;color:var(--accent)}
+/* reform cards with an opposition strip */
+.reform .card{display:flex;flex-direction:column}
+.reform .card .opp{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem;color:var(--muted);text-align:left;hyphens:manual}
+.reform .card .opp b{color:var(--accent)}
+/* constitution diagram */
+#const .node{cursor:pointer;outline:none}
+#const .node rect{fill:var(--bg);stroke:var(--line);stroke-width:1.4;transition:fill .2s,stroke .2s}
+#const .node.emp rect{fill:var(--gold-soft);stroke:var(--gold)}
+#const .node.ext rect{stroke-dasharray:5 4}
+#const .node:hover rect,#const .node:focus rect,#const .node.on rect{stroke:var(--accent);fill:var(--accent-soft)}
+#const text{font-family:var(--serif);fill:var(--fg)}
+#const .t{font-size:15px;font-weight:700}
+#const .s{font-size:11.5px;fill:var(--muted)}
+#const .ln{fill:none;stroke:var(--muted);stroke-width:1.5;marker-end:url(#ah8)}
+#const .ln.dash{stroke-dasharray:5 4}
+#const .vote{fill:none;stroke:var(--ink);stroke-width:2;marker-end:url(#ah8b)}
+#const .dot{fill:var(--ink)}
+#const .lbl{font-size:11px;fill:var(--muted);font-style:italic}
+/* rights vs powers */
+.powers{display:grid;gap:12px;grid-template-columns:1fr;margin:16px 0}
+@media (min-width:640px){.powers{grid-template-columns:1.1fr .9fr}}
+.powers .card h4{margin-bottom:6px}
+.powers .card.emp{border-top:4px solid var(--gold)} .powers .card.sub{border-top:4px solid var(--ink)}
+.powers ul{margin:0;padding-left:18px;font-size:.94rem}
+.powers li{margin:4px 0;text-align:left;hyphens:manual}
+/* voters dot grid */
+.voters{display:grid;grid-template-columns:repeat(50,1fr);gap:2px;max-width:460px;margin:12px 0 4px}
+.voters i{display:block;aspect-ratio:1;border-radius:50%;background:var(--line)}
+.voters i.v{background:var(--accent)}
+.voters i.v2{background:var(--gold)}
+/* tax bars */
+.taxyr{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;margin:10px 0}
+.taxyr .yr{font:700 .9rem var(--serif);color:var(--fg);font-variant-numeric:tabular-nums}
+.taxyr .stack{display:flex;height:26px;border-radius:6px;overflow:hidden;background:var(--line)}
+.taxyr .seg{height:100%;width:0;display:flex;align-items:center;justify-content:center;font:700 .76rem var(--serif);color:#fff;white-space:nowrap;overflow:hidden;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.taxyr .seg.land{background:var(--accent)} .taxyr .seg.liq{background:var(--gold)} .taxyr .seg.cus{background:var(--ink)} .taxyr .seg.oth{background:var(--muted)}
+:root[data-theme="dark"] .taxyr .seg{color:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .taxyr .seg{color:#16140f}}
+.legend .sw.land{background:var(--accent)} .legend .sw.liq{background:var(--gold)} .legend .sw.cus{background:var(--ink)} .legend .sw.oth{background:var(--muted)}
+/* education ladder */
+.ladder{display:grid;gap:8px;margin:16px 0}
+.ladder .rung{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:9px 14px;font-size:.93rem}
+@media (max-width:560px){.ladder .rung{grid-template-columns:1fr;gap:2px}}
+.ladder .rung b{font-size:.98rem}
+.ladder .rung span{text-align:left;hyphens:manual}
+.ladder .rung.u{border-left-color:var(--accent);margin:0 0 0 0}
+.ladder .rung.h{border-left-color:var(--gold);margin-left:4%}
+.ladder .rung.m{border-left-color:var(--ink);margin-left:8%}
+.ladder .rung.p{border-left-color:var(--green);margin-left:12%}
+@media (max-width:560px){.ladder .rung{margin-left:0!important}}
+/* treaty revision track */
+.track{list-style:none;margin:16px 0;padding:0;display:grid;gap:0;grid-template-columns:1fr}
+@media (min-width:700px){.track{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.track li{position:relative;padding:12px 14px;background:var(--paper);border:1px solid var(--line);font-size:.92rem;text-align:left;hyphens:manual}
+@media (min-width:700px){.track li{border-right:none}.track li:first-child{border-radius:10px 0 0 10px}.track li:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0;background:var(--green-soft)}}
+@media (max-width:699px){.track li{border-bottom:none}.track li:first-child{border-radius:10px 10px 0 0}.track li:last-child{border-bottom:1px solid var(--line);border-radius:0 0 10px 10px;background:var(--green-soft)}}
+.track li b{display:block;color:var(--accent);font-variant-numeric:tabular-nums}
+.track li:last-child b{color:var(--green)}
+/* empire map */
+#emap .area.jp{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.4}
+#emap .area.cn{fill:var(--gold-soft);stroke:var(--gold);stroke-width:1.4;stroke-dasharray:4 3}
+#emap .area.ru{fill:var(--ink-soft);stroke:var(--ink);stroke-width:1.4;stroke-dasharray:4 3}
+#emap .line{fill:none;stroke-width:2;stroke-dasharray:3 4}
+#emap .line.sov{stroke:var(--accent);stroke-dasharray:none;stroke-width:2.2}
+#emap .line.int{stroke:var(--ink)}
+#emap .lyr[data-l="lines"] .line{animation:dash 1.6s linear infinite}
+@media (prefers-reduced-motion:reduce){#emap .lyr .line{animation:none}}
+/* document box */
+.docbox{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:12px;padding:14px 18px;margin:20px 0;box-shadow:var(--shadow)}
+.docbox .label{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.docbox h3{margin:4px 0 10px}
+.argue{list-style:none;margin:0 0 12px;padding:0;counter-reset:a}
+.argue li{position:relative;padding:6px 0 6px 34px;border-top:1px solid var(--line);font-size:.95rem}
+.argue li::before{counter-increment:a;content:counter(a);position:absolute;left:0;top:7px;width:22px;height:22px;border-radius:50%;background:var(--ink-soft);color:var(--ink);font:700 .76rem/22px var(--serif);text-align:center}
+/* food stats in callout */
+.food{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:10px 0}
+
+/* ---- unit 9 ---- */
+h1 .kr{font-family:var(--kr);font-weight:600}
+/* in-law cycle */
+#cycle text{font-family:var(--serif);fill:var(--fg)}
+#cycle .t{font-size:15px;font-weight:700}
+#cycle .small{font-size:12px;fill:var(--muted)}
+#cycle .ring{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:4 6}
+#cycle .pulse{stroke-dasharray:18 382;animation:run 6s linear infinite}
+#cycle .cn .box{transition:fill .35s,stroke .35s}
+#cycle .cn.on .box{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.6}
+.kings{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.kings .k{font-size:.85rem;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.kings .k b{color:var(--fg);margin-right:4px}
+/* status ranks */
+.ranks{display:grid;gap:10px;grid-template-columns:1fr;margin:8px 0}
+@media (min-width:640px){.ranks{grid-template-columns:.8fr 1.3fr .9fr}}
+.ranks .col{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow);min-width:0}
+.ranks .col h4{font:700 .74rem var(--serif);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.ranks .top h4{color:var(--accent)} .ranks .mid h4{color:var(--ink)} .ranks .out h4{color:var(--plum)}
+.ranks .tier{opacity:1;transform:none;width:100%}
+.ranks .mid .tier:hover,.ranks .mid .tier[aria-pressed="true"]{border-color:var(--ink);background:var(--ink-soft)}
+.ranks .out .tier:hover,.ranks .out .tier[aria-pressed="true"]{border-color:var(--plum);background:var(--plum-soft)}
+.ranks .top .tier:hover,.ranks .top .tier[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+/* gye */
+#gye text{font-family:var(--serif);fill:var(--fg)}
+#gye .t{font-size:13px;font-weight:700}
+#gye .small{font-size:11px;fill:var(--muted)}
+#gye .ringl{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:3 5}
+#gye .pot{fill:var(--gold-soft);stroke:var(--gold);stroke-width:1.5}
+#gye .mem circle{fill:var(--bg);stroke:var(--line);stroke-width:1.5;transition:fill .3s,stroke .3s}
+#gye .mem.got circle{fill:var(--accent-soft);stroke:var(--accent)}
+#gye .mem.now circle{fill:var(--accent);stroke:var(--accent)}
+#gye .mem.now text{fill:#fff;font-weight:700}
+:root[data-theme="dark"] #gye .mem.now text{fill:#16140f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #gye .mem.now text{fill:#16140f}}
+#gye .mem text{font-size:11px}
+#gye .coin{fill:var(--gold)}
+/* blend */
+#blend text{font-family:var(--serif);fill:var(--fg);font-size:13px}
+#blend .t{font-size:17px;font-weight:700}
+#blend .small{font-size:11.5px;fill:var(--muted)}
+#blend .arrow{fill:none;stroke:var(--muted);stroke-width:1.5;marker-end:url(#ah9b)}
+#blend .arrow.vs{stroke-dasharray:4 4}
+/* steppers (gimchi, coup) */
+.stepper{margin-top:4px}
+.ctrl .step[disabled]{opacity:.4;cursor:default}
+/* korea map */
+#emap .land{fill:var(--land);stroke:var(--land-line);stroke-width:.7}
+#emap .rv{fill:none;stroke:var(--ink);stroke-width:1.1;opacity:.5}
+#emap .riv{fill:none;stroke:var(--ink);stroke-width:1.1;opacity:.5;stroke-dasharray:3 2}
+#emap text{font-family:var(--serif);fill:var(--fg);paint-order:stroke;stroke:var(--sea);stroke-width:3.5px;stroke-linejoin:round}
+#emap .city text{font-size:11px;fill:var(--muted);font-style:italic}
+#emap .area.tp{fill:var(--accent-soft);stroke:var(--accent);stroke-dasharray:4 3;opacity:.75}
+#emap .area.ni{fill:var(--gold-soft);stroke:var(--gold);stroke-dasharray:4 3;opacity:.85}
+.mapbox .mapgrid .cap{margin-top:0}
+@media (min-width:720px){.mapbox .mapgrid{grid-template-columns:minmax(0,1fr) minmax(0,.85fr)}}
+#emap{max-height:620px;width:100%}
+/* full-width war print */
+figure.wideprint img{width:100%}
+
+.mapgrid .wide svg{min-width:0}
+.mapgrid .wide::after{display:none}
+
+/* ---- sticky top bar (index + theme) ---- */
+:root{--topbar-h:52px}
+.topbar{position:sticky;top:0;z-index:55;height:var(--topbar-h);display:flex;align-items:center;gap:12px;padding:0 16px;background:var(--bg);background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.9rem}
+@media (min-width:1040px){.topbar{padding:0 32px}}
+.topbar .tb-home{flex:none;display:inline-flex;align-items:center;gap:6px;color:var(--fg);text-decoration:none;font-weight:600;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.topbar .tb-home:hover{border-color:var(--accent);color:var(--accent)}
+.topbar .tb-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+.topbar .tb-title b{color:var(--fg);font-weight:600}
+.topbar .btn{flex:none;margin:0}
+@media (max-width:420px){.topbar .tb-title{font-size:.82rem}}
+#progress{z-index:56}
+html{scroll-padding-top:calc(var(--topbar-h) + 24px)}
+@media (min-width:1040px){nav.toc{top:var(--topbar-h);max-height:calc(100vh - var(--topbar-h))}}
+@media (max-width:1039px){html{scroll-padding-top:calc(var(--topbar-h) + 72px)}.mobile-toc{top:var(--topbar-h)}}
+@media print{.topbar{display:none!important}}
+
+/* ---- collapsible key terms (end of page) ---- */
+details.terms-box>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+details.terms-box>summary::-webkit-details-marker{display:none}
+details.terms-box>summary:hover{border-color:var(--accent)}
+details.terms-box>summary h2{margin:0;display:flex;align-items:center;gap:10px}
+details.terms-box>summary h2::before{content:"▸";color:var(--accent);font-size:.8em;transition:transform .2s}
+details.terms-box[open]>summary h2::before{transform:rotate(90deg)}
+details.terms-box>summary .terms-hint{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+details.terms-box[open]>summary{border-radius:12px 12px 0 0;border-bottom-color:transparent}
+details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;border-radius:0 0 12px 12px;padding:4px 18px 18px;background:var(--paper)}
+
+/* icon-only floating buttons */
+.fab.icon{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%;font-size:1.25rem;line-height:1}
+
+/* ---- unit 10 ---- */
+h1 .ja{font-family:var(--serif)}
+.chain li b{display:inline}
+#income .step{font-variant-numeric:tabular-nums}
+#inc-ctrl .step{padding:5px 9px}
+.share .row span:first-child{text-align:left}
+
+/* ---- unit 11 additions ---- */
+.figrow{align-items:start;margin:18px 0}
+.figrow figure{margin:0}
+.figrow figure img{width:100%;height:auto}
+.rmap .mapgrid{grid-template-columns:1fr!important}
+.rmap .windows{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rmap .windows .detail{grid-column:1/-1}
+.rmap .city.dim{opacity:.35}
+.rmap .city.hl circle{fill:var(--accent)}
+.rmap .city.hl text{font-weight:700}
+.rmap .route{stroke-width:2.4}
+.rmap .rt .route:not(.on){opacity:0}
+.side.left .callout{margin-bottom:0}
+.share .track{display:block;margin:0}
+
+/* keep the page inside the screen on phones: grid children may shrink below their content width */
+body{overflow-x:clip}
+.side>*,.grid>*,.think>*,.versus>*,.contrast>*,.mapgrid>*,.stats>*,.pair-fig>*,.pairs>*,.pair>*,.idgrid>*,.status>*,.windows>*{min-width:0}
+
+/* ---- unit 12 additions ---- */
+h1 .zh{font-family:"Noto Serif SC",var(--serif);font-weight:600;font-size:.5em;color:var(--muted);margin-left:.3em;vertical-align:.25em;letter-spacing:.04em}
+.share .grp{font:700 .8rem var(--serif);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:12px 0 2px}
+.share .grp:first-of-type{margin-top:0}
+.share h4 + .row{margin-top:0}
+.share h4:not(:first-child){margin-top:14px}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+th.barcol{width:40%}
+.mini{display:block;height:12px;width:var(--w);background:var(--accent);border-radius:4px;opacity:.85}
+.figrow figure{display:flex;flex-direction:column}
+.figrow figure img{max-height:420px;width:auto!important;max-width:100%;margin:0 auto}
+.gwgrid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.gwgrid{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);align-items:center}}
+.gwgrid>*{min-width:0}
+#gwsvg{max-width:320px;min-width:0!important;margin:0 auto}
+figure.narrow{max-width:520px}
+.gw .wide::after{display:none}
+#gwsvg .fl{cursor:pointer}
+#gwsvg .fl rect{fill:var(--bg);stroke:var(--line);stroke-width:1.4;transition:fill .25s}
+#gwsvg .fl:hover rect{stroke:var(--accent)}
+#gwsvg .fl.on rect{fill:var(--accent-soft);stroke:var(--accent)}
+#gwsvg .fl:focus{outline:none}
+#gwsvg .fl:focus-visible rect{stroke:var(--ink);stroke-width:2.5}
+#gwsvg .win{fill:var(--gold-soft);stroke:var(--gold);stroke-width:1}
+#gwsvg .fl.on .win{fill:var(--gold);animation:flick 1.6s ease-in-out infinite alternate}
+#gwsvg .tower{fill:var(--paper);stroke:var(--muted);stroke-width:1.4}
+#gwsvg .street{stroke:var(--muted);stroke-width:2}
+#gwsvg text{font-family:var(--serif);fill:var(--fg)}
+#gwsvg .flab{font-size:13px;font-weight:700}
+@keyframes flick{from{opacity:.55}to{opacity:1}}
+.gw .ctrl .step{font-variant-numeric:tabular-nums}
+.wmap2 .mapgrid{grid-template-columns:1fr!important}
+.wmap2 .windows{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.wmap2 .windows .detail,.wmap2 .legend2{grid-column:1/-1}
+.wmap2{--sea:var(--ink-soft);--land:var(--paper);--land-line:var(--line)}
+.wmap2 .bord{fill:none;stroke:var(--muted);stroke-width:.6;stroke-dasharray:3 3;opacity:.6}
+.wmap2 .zone circle.area{stroke-width:1.5;fill-opacity:.2;transition:opacity .3s}
+.wmap2 .zone.wl circle.area{fill:var(--gold);stroke:var(--gold)}
+.wmap2 .zone.gmd circle.area{fill:var(--accent);stroke:var(--accent)}
+.wmap2 .zone.sov circle.area{fill:var(--green);stroke:var(--green)}
+.wmap2 .zone.aut circle.area{fill:var(--muted);stroke:var(--muted)}
+.wmap2 .zone text{font-size:11.5px;font-weight:700}
+.wmap2 .zone text.sub{font-size:10px;font-weight:400;fill:var(--muted)}
+.wmap2.mode-route .zone{opacity:.35}
+.wmap2 .xp{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;opacity:0}
+.wmap2 .xp.later{stroke-dasharray:6 6;stroke-width:2.2}
+.wmap2.mode-route .xp{opacity:1}
+.wmap2.mode-route .xp.draw{animation:drawx 2.4s ease forwards}
+@keyframes drawx{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.wmap2 .stop{opacity:0;transition:opacity .4s}
+.wmap2.mode-route .stop{opacity:1}
+.wmap2 .stop circle{fill:var(--accent);stroke:var(--paper);stroke-width:2}
+.wmap2 .stop text{font-size:12px;font-weight:700}
+.wmap2 .legend2{display:flex;flex-wrap:wrap;gap:10px 14px;font-size:.82rem;color:var(--muted);padding:2px 2px 0}
+.wmap2 .legend2 i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px;opacity:.7}
+@media (prefers-reduced-motion:reduce){.wmap2.mode-route .xp.draw{animation:none;stroke-dashoffset:0}}
+
+
+/* ---- unit 13 additions ---- */
+.note-l{font:.84rem/1.45 var(--serif);color:var(--muted);margin:-6px 0 16px}
+/* democratic centralism */
+#dcsvg text{font-family:var(--serif);fill:var(--fg)}
+#dcsvg .small{fill:var(--muted)}
+#dcsvg .dcf{fill:none;stroke-width:2.4;stroke-dasharray:7 6;animation:dash 1.4s linear infinite}
+#dcsvg .dcf.up{stroke:var(--green)} #dcsvg .dcf.dn{stroke:var(--accent);animation-direction:normal}
+#dcsvg .dcl.up{fill:var(--green)} #dcsvg .dcl.dn{fill:var(--accent)}
+@media (max-width:640px){#dc .wide svg{min-width:520px}}
+/* class ladder as buttons */
+.mil button.r{font:inherit;color:inherit;text-align:left;cursor:pointer;width:100%;transition:background .2s,transform .2s}
+.mil button.r:hover{background:var(--bg)}
+.mil button.r[aria-pressed="true"]{background:var(--accent-soft);transform:translateX(4px)}
+.mil button.r:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mil .r p{text-align:left}
+#classes .r:nth-child(1){margin-right:0}
+/* qipao */
+#qp .gwgrid>div:first-child{max-width:240px;margin:0 auto;width:100%}
+#qpsvg{width:100%;height:auto;display:block}
+#qpsvg .dress{fill:var(--accent-soft);stroke:var(--accent);stroke-width:2}
+#qpsvg .collar{fill:var(--accent-soft);stroke:var(--accent);stroke-width:2}
+#qpsvg .seam{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:4 3}
+#qpsvg .knot{fill:var(--gold)}
+#qpsvg .slit{stroke:var(--bg);stroke-width:4}
+#qpsvg .hot{cursor:pointer;outline:none}
+#qpsvg .hot circle{fill:var(--paper);stroke:var(--ink);stroke-width:2;transition:fill .2s}
+#qpsvg .hot text{font:700 12px var(--serif);fill:var(--ink)}
+#qpsvg .hot.on circle{fill:var(--ink)} #qpsvg .hot.on text{fill:var(--paper)}
+#qpsvg .hot:focus-visible circle{stroke-width:3.5}
+/* china map 1927-49 */
+#cmap13 .lyr{opacity:0;transition:opacity .45s;pointer-events:none}
+#cmap13 .lyr.on{opacity:1}
+#cmap13 text{font-family:var(--serif);fill:var(--fg);font-size:11px;paint-order:stroke;stroke:var(--sea);stroke-width:3.5px;stroke-linejoin:round}
+#cmap13 text.sub{font-size:10px;fill:var(--muted)}
+#cmap13 .zl{font-size:11.5px;font-weight:700}
+#cmap13 .zl.sov{fill:var(--green)} #cmap13 .zl.red{fill:var(--accent)}
+#cmap13 .zone-c{stroke-width:1.5;fill-opacity:.22}
+#cmap13 .zone-c.sov{fill:var(--green);stroke:var(--green)}
+#cmap13 .occ{fill:var(--accent);fill-opacity:.16;stroke:var(--accent);stroke-width:1.2;stroke-dasharray:4 3}
+#cmap13 .pt circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.4}
+#cmap13 .pt.sov circle{fill:var(--green)} #cmap13 .pt.red circle{fill:var(--accent)} #cmap13 .pt.gmd circle{fill:var(--ink)}
+#cmap13 .pt text{font-weight:700}
+#cmap13 .lm{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+#cmap13 .lm.draw{animation:drawx 3.2s ease forwards}
+#cmap13 .mv{fill:none;stroke-width:2.4;stroke-dasharray:6 5;animation:dash 1.4s linear infinite}
+#cmap13 .mv.gmd{stroke:var(--ink)} #cmap13 .mv.pla{stroke:var(--green);stroke-width:3}
+@media (prefers-reduced-motion:reduce){#cmap13 .mv,#dcsvg .dcf{animation:none}#cmap13 .lm.draw{animation:none;stroke-dashoffset:0}}
+.wmap2 .windows{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+/* flip cards: four in a row on wide screens */
+#causes{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:12px 0}
+#causes .idcard::after{content:"↻ flip"}
+/* photo figures */
+figure.port img{width:100%;height:auto}
+#causes .idcard{align-content:start}
+
+
+/* ---- unit 16 additions ---- */
+.note-l{font:.84rem/1.45 var(--serif);color:var(--muted);margin:-6px 0 16px}
+.side3{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:640px){.side3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.side3 .card h4{margin:0 0 4px;font-size:.98rem}
+.side3 .card p{font-size:.92rem;text-align:left;hyphens:manual}
+figure.port img{width:100%;height:auto}
+table.cmp td:first-child{font-weight:700}
+table.cmp small{font-weight:400;color:var(--muted)}
+/* status strata */
+#strata{display:grid;gap:6px;margin:6px 0 4px}
+#strata .tier{opacity:1;transform:none;display:block;margin:0 auto;text-align:center;border-radius:10px;padding:8px 12px;border:1px solid var(--line);background:var(--paper);font-size:.92rem;line-height:1.35;cursor:pointer;color:var(--fg);font-family:var(--serif)}
+#strata .tier b{display:block;font-size:.98rem}
+#strata .tier small{color:var(--muted)}
+#strata .tier:hover,#strata .tier[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+#strata .t1{width:min(100%,300px);border-top:4px solid var(--accent)}
+#strata .t3{width:min(100%,430px);border-top:4px solid var(--gold)}
+#strata .t5{width:100%;border-top:4px solid var(--muted)}
+/* north korean economy stepper */
+#nkcoll .stagebar{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;margin:4px 0 10px}
+#nkcoll .stagebar i{height:10px;border-radius:5px;background:var(--line);transition:background .3s}
+#nkcoll .stagebar i.on{background:var(--accent)}
+#nkcoll .stagebar i.done{background:var(--gold)}
+#nkcoll .facts{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:8px}
+#nkcoll .facts div{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.88rem;line-height:1.35;text-align:left}
+#nkcoll .facts div b{display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+/* presidents gantt */
+#rulers .mult-h{margin:0 0 10px;font-size:1rem}
+.gantt{display:grid;gap:6px}
+.gl{display:grid;grid-template-columns:118px 1fr 92px;align-items:center;gap:10px;font-size:.88rem}
+.gl .gn{font-weight:700}
+.gl .gy{color:var(--muted);font-variant-numeric:tabular-nums;font-size:.82rem}
+.gl .gt{position:relative;height:14px;background:var(--bg);border-radius:7px;border:1px solid var(--line)}
+.gl .gt i{position:absolute;top:1px;bottom:1px;left:calc(var(--s) / 65 * 100%);width:calc((var(--e) - var(--s)) / 65 * 100%);border-radius:6px;transform-origin:left;transform:scaleX(0);transition:transform .7s ease}
+#rulers.in .gt i,.no-js .gl .gt i{transform:none}
+.gl .gt i.dict,.mkey i.dict{background:var(--accent)}
+.gl .gt i.trans,.mkey i.trans{background:var(--gold)}
+.gl .gt i.demo,.mkey i.demo{background:var(--ink)}
+.gl.axis .gt{background:none;border:0;height:16px}
+.gl.axis .gt b{position:absolute;left:calc(var(--s) / 65 * 100%);transform:translateX(-50%);font:400 .74rem var(--serif);color:var(--muted)}
+.gl.axis .gt b:first-child{transform:none}.gl.axis .gt b:last-child{transform:translateX(-100%)}
+#rulers .mkey{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:.8rem;color:var(--muted)}
+#rulers .mkey i{display:inline-block;width:12px;height:12px;margin-right:5px;vertical-align:-1px;border-radius:3px}
+@media (max-width:480px){.gl{grid-template-columns:88px 1fr 70px;font-size:.8rem;gap:6px}}
+/* table bars */
+td.barcell{min-width:120px}
+td.barcell .tb{height:12px;border-radius:6px;background:var(--accent);opacity:.75;width:0;transition:width 1s ease;margin:2px 0}
+td.barcell .tb.b57{background:var(--muted);opacity:.6}
+td.barcell .tb.sk{background:var(--ink)}
+td.barcell.lab{font-size:.8rem;color:var(--muted)}
+.in td.barcell .tb,.no-js td.barcell .tb{width:var(--w)}
+/* flip cards */
+#provoke{margin:12px 0}
+#provoke .idcard::after{content:"↻ flip"}
+#provoke .idcard{align-content:start}
+/* map */
+#kmap16{width:100%;max-width:500px;height:auto;background:var(--sea);border-radius:12px;display:block;margin:0 auto}
+#kmap16 .land{fill:var(--land);stroke:var(--land-line);stroke-width:.7}
+#kmap16 .rv{fill:none;stroke:var(--ink);stroke-width:1.1;opacity:.45}
+#kmap16 .lyr{opacity:0;transition:opacity .45s;pointer-events:none}
+#kmap16 .lyr.on{opacity:1}
+#kmap16 text{font-family:var(--serif);fill:var(--fg);font-size:11px;paint-order:stroke;stroke:var(--sea);stroke-width:3.5px;stroke-linejoin:round}
+#kmap16 .land-lab text,#kmap16 text.on-land{stroke:var(--land)}
+#kmap16 text.sub{font-size:10px;fill:var(--muted)}
+#kmap16 text.rl{font-size:12px;font-weight:700;letter-spacing:.1em;fill:var(--muted)}
+#kmap16 text.sea{font-size:11px;font-style:italic;fill:var(--muted)}
+#kmap16 .zl{font-size:11.5px;font-weight:700}
+#kmap16 .zl.red{fill:var(--accent)} #kmap16 .zl.ink{fill:var(--ink)} #kmap16 .zl.gold{fill:var(--gold)} #kmap16 .zl.green{fill:var(--green)}
+#kmap16 .zone-c{stroke-width:1.5;fill-opacity:.18}
+#kmap16 .zone-c.gold{fill:var(--gold);stroke:var(--gold)} #kmap16 .zone-c.red{fill:var(--accent);stroke:var(--accent)} #kmap16 .zone-c.ink{fill:var(--ink);stroke:var(--ink)}
+#kmap16 .area{stroke-width:1.5;fill-opacity:.16;stroke-linejoin:round}
+#kmap16 .area.red{fill:var(--accent);stroke:var(--accent)} #kmap16 .area.ink{fill:var(--ink);stroke:var(--ink)} #kmap16 .area.gold{fill:var(--gold);stroke:var(--gold)}
+#kmap16 .pt circle{fill:var(--fg);stroke:var(--paper);stroke-width:1.4}
+#kmap16 .pt.red circle{fill:var(--accent)} #kmap16 .pt.ink circle{fill:var(--ink)} #kmap16 .pt.green circle{fill:var(--green)} #kmap16 .pt.gold circle{fill:var(--gold)}
+#kmap16 .pt text{font-weight:700}
+#kmap16 .pt text.sub{font-weight:400}
+#kmap16 .mv{fill:none;stroke-width:2.6;stroke-dasharray:6 5;animation:dash 1.4s linear infinite}
+#kmap16 .mv.red{stroke:var(--accent)} #kmap16 .mv.ink{stroke:var(--ink)} #kmap16 .mv.gold{stroke:var(--gold)}
+#kmap16 .par{stroke:var(--muted);stroke-width:1.3;stroke-dasharray:3 3;fill:none}
+#kmap16 .line{fill:none;stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+#kmap16 .line.red{stroke:var(--accent)} #kmap16 .line.ink{stroke:var(--ink)} #kmap16 .line.gold{stroke:var(--gold)} #kmap16 .line.fg{stroke:var(--fg)}
+#kmap16 .line.dash{stroke-dasharray:5 4}
+@media (prefers-reduced-motion:reduce){#kmap16 .mv{animation:none}}
+.wmap2 .legend2{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;color:var(--muted)}
+.wmap2 .legend2 i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+@media (max-width:480px){.gl.axis .gt b:nth-child(2){display:none}}
+
+
+/* ---- unit 17 additions ---- */
+/* comparison pill in Part 9: same treatment as the summary comparisons (gap from the boxes, wrapped and centered text) */
+#seventies .contrast{column-gap:16px;row-gap:12px}
+#seventies .pivot span{white-space:normal;text-align:center;font-size:1rem;line-height:1.25;padding:8px 12px;max-width:124px;box-sizing:border-box}
+@media (min-width:640px){#seventies .contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)}}
+</style>
+</head>
+<body class="no-js">
+<div id="progress"></div>
+<div id="tip" role="tooltip"></div>
+<div id="lightbox" aria-hidden="true"><img alt=""></div>
+
+<aside id="notes" role="dialog" aria-modal="false" aria-labelledby="notes-title" aria-hidden="true">
+  <header>
+    <div><h2 id="notes-title">Key terms · quick notes</h2><p>Short versions. Tap a term for the full entry.</p></div>
+    <button class="x" id="notes-close" type="button" aria-label="Close key terms">×</button>
+  </header>
+  <input id="notes-search" type="search" placeholder="Filter terms…" aria-label="Filter key terms">
+  <div class="list" id="notes-list"></div>
+</aside>
+<div class="fab-stack">
+  <button class="fab icon" id="totop" type="button" aria-label="Return to top" title="Return to top">↑</button>
+  <button class="fab primary icon" id="notes-btn" type="button" aria-expanded="false" aria-controls="notes" aria-label="Key terms" title="Key terms">✎</button>
+</div>
+
+<header class="topbar" role="banner">
+  <a class="tb-home" href="index.html" aria-label="Back to all units">← All units</a>
+  <span class="tb-title"><b>Unit 17</b> · Japan from Occupation to the "Lost Decades"</span>
+  <button class="btn" id="theme-btn" type="button">Toggle dark</button>
+</header>
+
+<div class="shell">
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <ol id="toc-list">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#defeat">1 · Defeat and occupation goals</a></li>
+    <li><a href="#reforms">2 · Occupation reforms</a></li>
+    <li><a href="#reverse">3 · Economy and the reverse course</a></li>
+    <li><a href="#ldp">4 · The LDP settlement</a></li>
+    <li><a href="#protest60">5 · Protest, 1952–1964</a></li>
+    <li><a href="#growth">6 · High-speed growth</a></li>
+    <li><a href="#culture">7 · Postwar culture and the Olympics</a></li>
+    <li><a href="#pollution">8 · Protest and pollution</a></li>
+    <li><a href="#seventies">9 · Strains of the 1970s</a></li>
+    <li><a href="#minorities">10 · Women and minorities</a></li>
+    <li><a href="#eighties">11 · The roaring 1980s</a></li>
+    <li><a href="#lost">12 · Twenty years without progress</a></li>
+    <li><a href="#social">13 · Social problems today</a></li>
+    <li><a href="#summary">Summary: 1931 to 2011</a></li>
+    <li><a href="#review">Review kit</a></li>
+    <li><a href="#terms">Key terms</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+
+<main>
+<header class="hero">
+  <p class="eyebrow">Unit 17 · Study guide · Japan</p>
+  <h1>Japan from Occupation to the "Lost Decades" <span class="ja" lang="ja">戦後日本</span></h1>
+  <p class="dek">Defeat, reform, miracle, and stagnation, 1945 to 2011</p>
+  <div class="meta">
+    <span class="chip"><b>Reading:</b> Ebrey &amp; Walthall, Ch. 26, "War and Aftermath in Japan," pp. 461–471 (Occupation to 1964), and Ch. 29, "Contemporary Japan (1965 to the Present)," pp. 510–523</span>
+    <span class="chip"><b>Before:</b> <a href="unit16.html">Unit 16 · Korea Divided</a></span>
+    <span class="chip"><b>Next:</b> Unit 18 · China Since Mao</span>
+  </div>
+</header>
+
+<details class="mobile-toc">
+  <summary><span class="lbl">Contents</span><span class="cur" id="mtoc-cur">Overview</span></summary>
+  <ol id="mtoc"></ol>
+</details>
+
+<!-- OVERVIEW -->
+<section class="unit" id="overview">
+  <div class="sec-num">Overview</div>
+  <h2>The unit in one paragraph</h2>
+  <p class="pages">pp. 461, 471, 510</p>
+  <p>Japan surrendered in August 1945 hungry, bombed out, and occupied. The <a class="term" href="#g-scap">American occupation</a> first set out to demilitarize and democratize the country: a new constitution with the <a class="term" href="#g-article9">no-war clause</a>, <a class="term" href="#g-landreform">land reform</a>, a new civil code, and legal labor unions. When the Cold War began, it shifted toward building Japan up as an anticommunist ally (the <a class="term" href="#g-reverse">reverse course</a>). After independence in 1952 the <a class="term" href="#g-ldp">Liberal Democratic Party</a> governed almost without a break and made economic growth its top goal. By the 1964 Tokyo Olympics, Japan had returned to the world. Then came the costs of growth, protest, the shocks of the 1970s, a speculative <a class="term" href="#g-bubble">bubble</a> in the 1980s, and two decades of stagnation in an aging society. <span class="cite">pp. 461, 471, 510</span></p>
+
+  <div class="callout ink">
+    <div class="label">The chapter's questions (p. 510)</div>
+    <ul class="tight">
+      <li>Why did the Japanese economy rise so far and fall so fast?</li>
+      <li>Did protests and demonstrations have any impact, given the power of the LDP and the bureaucrats?</li>
+      <li>Which social trends will prove enduring, and which will prove beneficial?</li>
+    </ul>
+  </div>
+
+  <div class="versus">
+    <div class="card"><div class="big">1945</div><p>About 3 million dead, cities burned, 6.6 million Japanese stranded abroad, food and coal rationed below survival levels, the economy at a standstill. <span class="cite">pp. 461–462</span></p></div>
+    <div class="vs">→</div>
+    <div class="card"><div class="big">1988</div><p>Per capita GNP above that of the United States; the world's largest lender and aid donor; land in Tokyo valued at three times all the land in the United States. <span class="cite">pp. 517, 520</span></p></div>
+  </div>
+
+  <h3>Timeline at a glance</h3>
+  <figure class="fig">
+  <div class="timeline">
+    <div class="ev major"><div class="yr">1945–1947</div><div class="tx">Surrender (Aug. 15) and occupation under <a class="term" href="#g-macarthur">MacArthur</a> (Aug. 30, 1945); emperor denies divinity (Jan. 1946); women vote (April 1946); new constitution issued (Nov. 3, 1946); general strike called off (Feb. 1947)</div></div>
+    <div class="ev"><div class="yr">1948–1952</div><div class="tx"><a class="term" href="#g-dodge">Dodge Line</a> (1949); <a class="term" href="#g-redpurge">Red Purge</a>; Korean War boom (1950–53); peace and security treaties (1951); occupation ends (1952)</div></div>
+    <div class="ev major"><div class="yr">1955–1960</div><div class="tx">LDP formed; <a class="term" href="#g-bll">Buraku Liberation League</a> founded (1955); <a class="term" href="#g-anpo">security-treaty protests</a> and <a class="term" href="#g-miike">Miike strike</a>; Kishi resigns (1960)</div></div>
+    <div class="ev major"><div class="yr">1964</div><div class="tx">Tokyo Olympics; <a class="term" href="#g-shinkansen">Shinkansen</a> opens; Kōmeitō founded</div></div>
+    <div class="ev"><div class="yr">1968–1973</div><div class="tx">Tokyo University strike (1968–69); Mishima's suicide (1970); <a class="term" href="#g-nixonshocks">Nixon shocks</a> (1971–72); Okinawa returned (1972); <a class="term" href="#g-minamata">Minamata</a> verdict and first <a class="term" href="#g-oilshock">oil shock</a> (1973)</div></div>
+    <div class="ev"><div class="yr">1982–1987</div><div class="tx"><a class="term" href="#g-nakasone">Nakasone</a> prime minister; textbook controversy (1982); dollar devalued and <a class="term" href="#g-eeoa">Equal Employment Opportunity Act</a> (1985); JNR privatized</div></div>
+    <div class="ev major"><div class="yr">1988–1993</div><div class="tx">Per capita GNP passes the U.S. (1988); Shōwa emperor dies, <a class="term" href="#g-recruit">Recruit scandal</a> (1989); bubble bursts (1990); LDP loses power (1993)</div></div>
+    <div class="ev"><div class="yr">1995–2009</div><div class="tx">Kobe earthquake and <a class="term" href="#g-aum">Aum Shinrikyō</a> gas attack (1995); Asian financial crisis (1997); <a class="term" href="#g-koizumi">Koizumi</a> (2001); Democratic Party defeats the LDP (2009)</div></div>
+    <div class="ev major"><div class="yr">2011</div><div class="tx">March 11 earthquake, tsunami, and <a class="term" href="#g-fukushima">Fukushima</a> meltdown</div></div>
+  </div>
+  <figcaption><span class="fn">Figure 1.</span> Main events of the unit. Dates from Chs. 26 and 29.</figcaption>
+  </figure>
+</section>
+
+<!-- 1 DEFEAT -->
+<section class="unit reveal" id="defeat">
+  <div class="sec-num">Part 1</div>
+  <h2>Defeat and the goals of the occupation</h2>
+  <p class="pages">pp. 461–463</p>
+
+  <h3>Despair <span class="cite">pp. 461–462</span></h3>
+  <p>Defeat did not end hardship. Everyone was short of food. The suburban middle class had been spared the firestorms that wiped out the urban poor; farmers were better off but stunned by a defeat that called loyalty and patriotism into question. The war had stranded 6.6 million Japanese soldiers and civilians abroad:</p>
+  <div class="stats">
+    <div class="stat"><b>575,000</b><span>soldiers and adult male civilians sent by the Soviets to Siberian labor camps</span></div>
+    <div class="stat"><b>50%</b><span>of Japanese settlers in Manchuria died at the end of the war</span></div>
+    <div class="stat"><b>1970s</b><span>when the last soldiers came home from Pacific islands</span></div>
+  </div>
+  <p>Returnees met a cold welcome. War widows, orphans, maimed veterans, and above all the radiation-sick survivors of Hiroshima and Nagasaki became social outcasts. The winter of 1945–46 was worse than any wartime winter: rations of coal and food could not prevent freezing and starvation. City women traded heirlooms for food in the countryside, and a <b>black market</b> run by gangsters flourished at every train station. <span class="cite">p. 462</span></p>
+
+  <h3>Liberation <span class="cite">p. 462</span></h3>
+  <p>For some, defeat meant freedom. Dazai Osamu's 1947 novel <i>The Setting Sun</i> mourned the loss of prewar values and suggested the only choice left was to live for oneself. Small factories made pots instead of helmets; ex-soldiers went into business. Popular culture turned to eroticism; prostitutes who served GIs (called "pan-pan girls") flaunted Western dresses and makeup. In the book's phrase, the body replaced the <a class="term" href="#g-kokutai">kokutai</a> (the body politic). Prewar Marxists and socialists hoped to build a just society out of the rubble.</p>
+
+  <h3>What the occupiers wanted <span class="cite">pp. 461–462</span></h3>
+  <p>General <a class="term" href="#g-macarthur">Douglas MacArthur</a>, as <a class="term" href="#g-scap">Supreme Commander of the Allied Powers (SCAP)</a>, meant to demilitarize Japan and install democracy by working through existing institutions. The United States kept its allies out: the Soviets got the islands north of Hokkaido, and the rest sat on the <a class="term" href="#g-fec">Far East Commission</a> in Washington. Only the judges at the Tokyo War Crimes Trials represented countries Japan had attacked.</p>
+  <div class="side3">
+    <div class="card"><h4>Faction 1: punish</h4><p>Restrict Japan's trade and send its remaining factories to its victims as reparations, perhaps returning Japan to farming.</p></div>
+    <div class="card"><h4>Faction 2: rebuild</h4><p>Economists and lawyers ready for social engineering: land reform, new schools, unions, women's rights, limits on police, a new constitution.</p></div>
+    <div class="card"><h4>After 1947–49</h4><p>With the Cold War and the communist victory in China (1949), the priority became keeping Japan in the "free world."</p></div>
+  </div>
+
+  <h3>The emperor question <span class="cite">pp. 462–463</span></h3>
+  <div class="side">
+    <div>
+      <p>The <a class="term" href="#g-showa">Shōwa emperor</a> did not sign the surrender (September 2, 1945); a general and a diplomat did. His court distanced him from every wartime decision except the final one to end the war, and MacArthur talked him out of admitting even moral responsibility. Britain wanted him tried as a war criminal, but MacArthur saw him as a <b>bulwark against communism</b> once the military was gone. By refusing responsibility, the emperor also alienated far-right militarists.</p>
+      <p>On January 1, 1946, he announced he was a human being, not a manifest god. The new constitution made him a <a class="term" href="#g-symbol">symbol of the state</a>, and he still embodies a national identity built on ethnic homogeneity. His war responsibility remains a sore point at home and with Japan's neighbors.</p>
+    </div>
+    <figure class="port" id="fig-macarthur">
+      <img class="zoomable" src="assets/unit17/macarthur-hirohito-1945.jpg" width="960" height="1184" alt="General MacArthur, tall, hands on hips, in open-collar uniform, beside the shorter emperor in formal morning dress" loading="lazy">
+      <figcaption><span class="fn">Figure 2.</span> MacArthur and the Shōwa emperor at their first meeting, U.S. Embassy, Tokyo, September 27, 1945†. Photo: Lt. Gaetano Faillace, U.S. Army; public domain.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2 REFORMS -->
+<section class="unit reveal" id="reforms">
+  <div class="sec-num">Part 2</div>
+  <h2>Occupation reforms</h2>
+  <p class="pages">pp. 463–464</p>
+
+  <h3>Writing the constitution <span class="cite">p. 463</span></h3>
+  <ol class="chain">
+    <li><span class="n">1</span><b>Oct. 13, 1945.</b> At SCAP's urging the prime minister names a committee to consider revising the Meiji constitution. Parties, socialist groups, scholars, and think tanks draft their own versions; the committee ignores them.</li>
+    <li><span class="n">2</span><b>Feb. 1946.</b> The committee proposes only minor changes, so MacArthur orders his <b>Government Section</b> to write a draft, fearing that a grassroots constitutional convention would bring too much democracy and an attack on the emperor. The work is hidden from Washington, Tokyo, the FEC, and the rest of SCAP.</li>
+    <li><span class="n">3</span><b>March 1946.</b> After talks with cabinet representatives the draft is published and sent to the <a class="term" href="#g-diet">Diet</a>. SCAP repeatedly steps in to limit debate and block major revision.</li>
+    <li><span class="n">4</span><b>Nov. 3, 1946.</b> Passed as an amendment to the Meiji constitution, it is issued by the emperor. It took effect on May 3, 1947†.</li>
+  </ol>
+
+  <h3>What the constitution says <span class="cite">p. 463</span></h3>
+  <div class="grid g2">
+    <div class="card"><h4>Rights</h4><p>Life, liberty, and the pursuit of happiness, defined as rights to education, health care, police protection, work, and a minimum standard of living. Women's suffrage. Freedom of assembly, speech, and religion; no arbitrary arrest or unwarranted search; a right to counsel.</p></div>
+    <div class="card"><h4>Government</h4><p><b>Popular sovereignty</b> exercised through the Diet, now the sole lawmaker. The Privy Council is abolished; an elected House of Councilors replaces the House of Peers, and the lower House of Representatives is stronger. A no-confidence vote can dissolve the cabinet. Courts become independent.</p></div>
+    <div class="card"><h4>More than America had</h4><p>Clauses MacArthur would have deplored at home: workers' right to organize and bargain collectively, academic freedom, and equal rights for women.</p></div>
+    <div class="card"><h4><a class="term" href="#g-article9">Article 9</a></h4><p>Japan renounces war as a sovereign right and will not maintain land, sea, or air forces. Later read as allowing forces for self-defense; an FEC clause requiring a civilian cabinet was taken to imply a military.</p></div>
+  </div>
+  <div class="callout gold">
+    <div class="label">From Police Reserve to Self-Defense Force · p. 463</div>
+    <p>In 1950 SCAP wanted Japan to raise an army to fight in Korea. Prime Minister <a class="term" href="#g-yoshida">Yoshida Shigeru</a> refused, creating a <b>Police Reserve</b> instead. It soon became the <a class="term" href="#g-sdf">Self-Defense Force</a>.</p>
+  </div>
+
+  <h3>Social reforms <span class="cite">pp. 463–464</span></h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 1.</span> <b>Occupation reforms and who they hit</b> (pp. 463–464)</caption>
+    <thead><tr><th>Reform</th><th>What changed</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td class="k">New <a class="term" href="#g-civilcode">civil code</a></td><td>Sexual equality and individual dignity; patriarchal household authority abolished; free marriage; all children share the family estate</td><td>No burden for the middle class, whose wealth was their children's education; shopkeepers, restaurateurs, and farmers often had to sell inherited property to pay heavy inheritance taxes</td></tr>
+      <tr><td class="k"><a class="term" href="#g-landreform">Land reform</a></td><td>Landlords forced to sell to the government for resale to tenants. Absentee landlords lost everything; resident landlords kept what they farmed plus about five acres</td><td>The most radical reform. Backed by the Agriculture Ministry; many landlords were glad to sell but mourned their way of life. By 1950 owner-farmers worked <b>90%</b> of farmland</td></tr>
+      <tr><td class="k">Education</td><td>U.S.-style single track (primary, middle, high school); compulsory schooling extended to nine years; civic virtues in the curriculum; elected school boards; PTAs; new junior colleges and universities</td><td>Wider access to higher education, but entrance exams remained and none rivaled Tokyo University. Later, boards chose texts from an Education Ministry list</td></tr>
+      <tr><td class="k">Labor</td><td><a class="term" href="#g-tul">Trade Union Law</a>, Dec. 1945</td><td>By mid-1948 more than half the nonfarm workforce was unionized</td></tr>
+      <tr><td class="k">Trust-busting</td><td>Holding companies of the ten largest <a class="term" href="#g-zaibatsu">conglomerates</a> dissolved; Mitsui and Mitsubishi trading firms broken up; families forced to sell stock; 1,500 executives purged</td><td>Halted during the reverse course (Part 3)</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout">
+    <div class="label">SCAP above the law · p. 464</div>
+    <p>The occupation did not always follow its own rules. Despite the separation of church and state, MacArthur let Christian missionaries use U.S. government equipment and encouraged the emperor and empress to take Christian instruction. Censorship continued, with left-wing writing that criticized capitalism checked before publication. Films could not show sword fighting or criticize the emperor, but romance was in: the first screen kiss made headlines.</p>
+  </div>
+</section>
+
+<!-- 3 REVERSE -->
+<section class="unit reveal" id="reverse">
+  <div class="sec-num">Part 3</div>
+  <h2>The economy and the reverse course</h2>
+  <p class="pages">pp. 464–465</p>
+
+  <h3>Inflation and the Dodge Line <span class="cite">p. 464</span></h3>
+  <p>Bureaucrats let government stocks of building materials and machinery vanish into the black market or into the hands of business cronies, and the Finance Ministry printed money to cover the deficit and a run on savings. Official prices soared <b>539 percent</b> in the occupation's first year; black-market prices ran 14 to 34 times higher. At the end of 1948 Washington sent Detroit banker <b>Joseph Dodge</b>. His <a class="term" href="#g-dodge">Dodge Line</a> made the government collect more in taxes than it spent; cut subsidies, public works, welfare, and education; and fixed the exchange rate at <b>¥360 to the dollar</b> to promote exports. Deflation bankrupted small businesses.</p>
+
+  <h3>Rescued by the Korean War <span class="cite">p. 464</span></h3>
+  <p>The Korean War pulled Japan back from the brink of depression. U.S. procurement orders poured in for vehicles, uniforms, sandbags, medicines, electrical goods, building materials, liquor, paper, and food; despite the ban on war materiel, firms made munitions and repaired tanks and aircraft. Companies reinvested profits in equipment and licensed U.S. technology, and adopted the <a class="term" href="#g-qc">quality-control</a> methods that statistician W. Edwards Deming had introduced in 1949. By the war's end, food consumption was back to prewar levels and consumers could buy household goods and still save.</p>
+
+  <h3>Labor and the reverse course <span class="cite">pp. 464–465</span></h3>
+  <p>With the <a class="term" href="#g-jcpjsp">Japan Communist and Socialist parties</a> now legal, workers organized; others seized businesses in <b>production control</b> movements, accusing owners of sabotage. Workers wanted food, support for working mothers, equal pay, and democratic elections. Before the April 10, 1946, election, the first in which women voted, a Tokyo rally drew workers, farmers, Koreans, and citizens; May Day brought nationwide demonstrations; women marched for food deliveries and students for self-government. The backlash is called the <a class="term" href="#g-reverse">reverse course</a>:</p>
+  <ol class="chain">
+    <li><span class="n">1</span><b>Jan.–Feb. 1947.</b> The prime minister threatens to fire striking government workers; MacArthur calls off the general strike planned for February 1.</li>
+    <li><span class="n">2</span><b>1948.</b> SCAP has the government forbid public employees to strike.</li>
+    <li><span class="n">3</span><b>Cold War.</b> The United States now sees its former enemy as an ally. SCAP lists "reds" to purge, first from government and then, during the Korean War, from private firms: the <a class="term" href="#g-redpurge">Red Purge</a>. About 22,000 workers lose their jobs; most JCP leaders go underground.</li>
+    <li><span class="n">4</span><b>Rehabilitation.</b> Purged politicians, bureaucrats, and business leaders return; the breakup of the conglomerates stops.</li>
+    <li><span class="n">5</span><b>Bureaucratic power.</b> The Diet gives bureaucrats more control over trade and investment than in wartime. <a class="term" href="#g-miti">MITI</a> channels postal savings to firms through the Japan Development Bank, advises the Bank of Japan, approves technology imports, and gives "administrative guidance." The Finance Ministry limits money leaving the country.</li>
+  </ol>
+
+  <h3>Ending the occupation <span class="cite">p. 465</span></h3>
+  <div class="side left">
+    <figure class="port" id="fig-sf">
+      <img class="zoomable" src="assets/unit17/yoshida-sf-treaty-1951.jpg" width="579" height="479" alt="A seated man in a dark suit signs a document at a white desk while other Japanese delegates stand behind him" loading="lazy">
+      <figcaption><span class="fn">Figure 3.</span> Yoshida Shigeru signs the peace treaty at San Francisco, September 8, 1951†. Public domain.</figcaption>
+    </figure>
+    <div>
+      <p>Before the occupation ended, the U.S. Senate had Japan sign a treaty with the Nationalist Chinese on Taiwan, blocking recognition of and trade with the People's Republic. The 1951 <a class="term" href="#g-sectreaty">peace and security treaties</a> with the United States, the book says, continued the occupation under another name. After SCAP was dismantled in 1952, about 100,000 Americans plus dependents stayed at bases protected by extraterritoriality, beyond Japanese courts and oversight. <b>Okinawa</b> stayed under U.S. military rule until 1972.</p>
+      <p>Under the U.S. security umbrella Japan was free to pursue growth but had to follow the U.S. lead abroad. On <b>Bloody May Day 1952</b>, 400,000 workers, students, and housewives denounced the treaty, rearmament, Okinawa's status, and an "anti-subversive" bill. The left wanted neutrality and demilitarization; conservatives backed the U.S. alliance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 LDP -->
+<section class="unit reveal" id="ldp">
+  <div class="sec-num">Part 4</div>
+  <h2>The LDP settlement, 1952–1964</h2>
+  <p class="pages">pp. 465–466</p>
+  <h3>One-party rule <span class="cite">p. 465</span></h3>
+  <p>In the 1946 election many parties competed. <a class="term" href="#g-yoshida">Yoshida Shigeru</a> formed a conservative coalition but resigned when the 1947 election gave the Socialists (JSP) a large share. Exploiting the JSP's failure to handle economic crises, he returned in 1948 and stayed until 1954, recruiting ex-bureaucrats skilled at building factions. The JSP split over the peace treaty and reunited in October 1955. At the end of <b>1955</b> the two conservative parties merged into the <a class="term" href="#g-ldp">Liberal Democratic Party (LDP)</a>, which, except for brief interludes, dominated the Diet and cabinet into the twenty-first century. Faction heads chose the prime minister, who rewarded supporters with ministries.</p>
+
+  <h3>How the LDP kept power <span class="cite">pp. 465–466</span></h3>
+  <div class="side3">
+    <div class="card"><h4>Growth for everyone</h4><p>Made economic growth the nation's top goal, mainly to wean workers from socialism. Higher wages and living standards from the late 1950s; national health insurance in 1958.</p></div>
+    <div class="card"><h4>Farmers</h4><p>Factories in rural areas, mechanization, chemical fertilizer, consolidated plots, rice import limits and subsidies, roads and sewers, and outright vote buying: a lock on rural districts. Small businesses gave urban votes.</p></div>
+    <div class="card"><h4>Bureaucrats and business</h4><p>Advisory councils of businessmen, bankers, consumers, and unions; ex-bureaucrats ran for office or joined the firms they had guided; cash flowed from business to politicians to voters.</p></div>
+  </div>
+  <p>At the end of the 1950s the government announced an <a class="term" href="#g-incomedoubling">Income Doubling Plan</a>. Prosperity reached city and countryside, but it did not make people passively accept an increasingly exclusive political system. <span class="cite">p. 471</span></p>
+</section>
+
+<!-- 5 PROTEST 1950s-60s -->
+<section class="unit reveal" id="protest60">
+  <div class="sec-num">Part 5</div>
+  <h2>Political and social protest, 1952–1964</h2>
+  <p class="pages">pp. 466–467</p>
+  <p>Opposition parties had so little power in the Diet that citizens with grievances took to the streets. Demonstrations against U.S. bases and nuclear testing broke out through the 1950s. The <b>Japan Teachers' Union</b> resisted the Education Ministry's 1955 centralization of policy and personnel; <a class="term" href="#g-sohyo">Sōhyō</a>, the General Council of Trade Unions, opposed the Japan Productivity Center that business set up with U.S. help. <span class="cite">p. 466</span></p>
+
+  <h3>The Miike strike, 1960 <span class="cite">p. 466</span></h3>
+  <p>When the government switched Japan's main energy source from coal to oil, Mitsui Mining asked 6,000 workers at its Miike mine in Kyushu to retire early. The union struck for 113 days, with violence and deaths. The lessons: workers learned that radical class struggle undercut job security; managers learned it was cheaper to transfer surplus workers than to fire them.</p>
+
+  <h3>The security treaty crisis, 1959–1960 <span class="cite">p. 466</span></h3>
+  <div class="side">
+    <div>
+      <p>The largest political demonstrations in Japanese history (late 1959 to June 1960) opposed revising and extending the U.S.–Japan security treaty: the <a class="term" href="#g-anpo">Anpo protests</a>. The revision dropped the clause letting U.S. troops put down internal disturbances, but the bases stayed off-limits to Japanese scrutiny.</p>
+      <ol class="chain">
+        <li><span class="n">1</span>Prime Minister <a class="term" href="#g-kishi">Kishi Nobusuke</a> (indicted but never tried as a war criminal; a former minister in Manchuria) uses police to evict the JCP and JSP and rams the treaty through the lower house.</li>
+        <li><span class="n">2</span>Sōhyō coordinates strikes; <a class="term" href="#g-zengakuren">Zengakuren</a> students organize weeks of agitation; 134 groups, including farmers and housewives, join.</li>
+        <li><span class="n">3</span>President Eisenhower cancels his visit. On June 18 several hundred thousand people surround the Diet, but the treaty is ratified automatically at midnight.</li>
+        <li><span class="n">4</span>Kishi resigns five days later.</li>
+      </ol>
+    </div>
+    <figure class="port" id="fig-anpo">
+      <img class="zoomable" src="assets/unit17/anpo-protests-1960.jpg" width="900" height="899" alt="Aerial view of huge crowds filling the streets around the domed National Diet Building" loading="lazy">
+      <figcaption><span class="fn">Figure 4.</span> Crowds surround the National Diet Building, June 18, 1960†. Public domain.</figcaption>
+    </figure>
+  </div>
+  <p>The divide between conservatives in power and progressives outside kept the 1960s turbulent: the left protested the 1965 peace treaty with South Korea for excluding North Korea and the PRC, and fears that the United States was bringing nuclear weapons into its bases or using Japan as a staging area for Vietnam set off repeated demonstrations. <span class="cite">p. 466</span></p>
+
+  <h3>Burakumin and women <span class="cite">pp. 466–467</span></h3>
+  <div class="grid g2">
+    <div class="card"><h4><a class="term" href="#g-burakumin">Burakumin</a></h4><p>The new constitution and civil code spurred descendants of hereditary outcast groups to renew their fight. The <a class="term" href="#g-bll">Buraku Liberation League</a> (1955) allied with the JCP and JSP and joined the treaty protests. A 1965 government report blamed their problems on discrimination; the Diet's 1969 <b>Special Measures Law</b> denounced discrimination without stopping it, so the BLL turned to <a class="term" href="#g-denounce">denunciation campaigns</a>, sometimes violent, that silenced public discussion.</p></div>
+    <div class="card"><h4>Women's organizations</h4><p>Worked to protect children and honor mothers; joined campaigns against nuclear testing and for peace and clean elections; elected women to the Diet. The 1956 <b>Prostitution Prevention Law</b> (effective 1958) achieved a prewar goal by removing legal protection for prostitution, though not sex work. Women grounded their activism in both family responsibility and constitutional rights.</p></div>
+  </div>
+</section>
+
+<!-- 6 GROWTH -->
+<section class="unit reveal" id="growth">
+  <div class="sec-num">Part 6</div>
+  <h2>High-speed economic growth</h2>
+  <p class="pages">pp. 467–468</p>
+  <h3>Why the economy grew <span class="cite">pp. 467–468</span></h3>
+  <div class="grid g2">
+    <div class="card"><h4>The world</h4><p>The <a class="term" href="#g-potsdam">Potsdam Declaration</a> guaranteed access to raw materials Japan once took from colonies; exchange rates were stable until 1971; an open, growing world market wanted manufactured goods.</p></div>
+    <div class="card"><h4>Prewar legacies</h4><p>Some infrastructure, but above all <b>human resources</b>: trained engineers, accountants, and workers, and a commitment to achievement through education.</p></div>
+    <div class="card"><h4>Workers and firms</h4><p>High-school graduates trained on the job and worked long hours for their companies. Company unions demonstrated in the yearly "spring offensive" but rarely disrupted production. Higher base wages, <a class="term" href="#g-lifetime">lifetime employment</a>, and seniority raises gave workers middle-class lives.</p></div>
+    <div class="card"><h4>The state</h4><p>Low-cost financing made Japan the world's largest shipbuilder in the 1950s. MITI protected carmakers by forbidding foreign investment and setting tariffs up to 40 percent. Matsushita and Sony grew with less help; subcontractors supplied quality parts.</p></div>
+  </div>
+
+  <div class="share" id="growthbars">
+    <h4>Average annual growth of Japan's economy <span class="cite">pp. 468, 521</span></h4>
+    <div class="row"><span>1947–1952</span><div class="track"><div class="fill" data-w="92"></div></div><span class="v">11.5%</span></div>
+    <div class="row"><span>1954–1971</span><div class="track"><div class="fill" data-w="82"></div></div><span class="v">&gt;10%</span></div>
+    <div class="row"><span>1992–1995</span><div class="track"><div class="fill ink" data-w="8"></div></div><span class="v">≈1%</span></div>
+    <div class="row"><span>1997</span><div class="track"><div class="fill ink" data-w="0"></div></div><span class="v">negative</span></div>
+    <p class="note"><span class="fn">Figure 5.</span> From miracle to stagnation. By 1971 Japan ranked second only to the United States among free-market economies (p. 468); the book gives no exact figure for 1997, only that growth "went negative" (p. 521).</p>
+  </div>
+
+  <h3>Consumers drive the boom <span class="cite">p. 468</span></h3>
+  <p>Rising domestic consumption powered high-speed growth: in these years <b>90 percent</b> of production went to the home market. SCAP had advertised American prosperity through the comic strip <i>Blondie</i>, department-store exhibits, and magazine ads. Once food improved, people wanted fashionable clothes, and every household wanted a washing machine, refrigerator, and vacuum cleaner. TV broadcasting began in <b>1953</b> because the owner of the <i>Yomiuri</i> newspaper and key bureaucrats thought national pride required the latest technology. The 1959 wedding of Crown Prince Akihito to Shōda Michiko, an industrialist's daughter, emptied stores of TV sets as viewers celebrated a marriage based on love. From 1955 a mass exodus from farms to cities set off a boom in suburban apartment blocks.</p>
+
+  <div class="side left">
+    <figure class="port" id="fig-tr55">
+      <img class="zoomable" src="assets/unit17/sony-tr55.jpg" width="960" height="720" alt="A small turquoise and white transistor radio in a museum display case with a label in Japanese" loading="lazy">
+      <figcaption><span class="fn">Figure 6.</span> Sony's TR-55, on sale from August 1955†, on display. Photo: ブルーノ・プラス, CC0.</figcaption>
+    </figure>
+    <div class="callout gold">
+      <div class="label">Material culture: the transistor · p. 469</div>
+      <p>Bell Labs invented the transistor in 1948, but early ones were too fragile for consumer goods. Sony's researchers spent months finding usable materials. Its first transistor radio (January 1955) melted in summer heat; the second sold at home thanks to long battery life. Only in 1957, with a tiny "pocketable" radio built on a germanium breakthrough, could Sony compete with American radios. By 1960 transistor radios were Japan's second-largest export after ships. Sony introduced the first all-transistor TV in 1960.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 CULTURE -->
+<section class="unit reveal" id="culture">
+  <div class="sec-num">Part 7</div>
+  <h2>Postwar culture and the Tokyo Olympics</h2>
+  <p class="pages">pp. 468–471</p>
+  <h3>Mass culture and its critics <span class="cite">p. 468</span></h3>
+  <p>Commercial TV stations demanded endless programs; the state broadcaster NHK ran one channel for news, drama, and sumo and another for education. Publishers wrote freely without prewar censorship.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Kurosawa Akira</h4><p><i>Ikiru</i> (<i>To Live</i>) criticized bureaucratic arrogance. <i>Rashomon</i> (1951), questioning whether truth can be known, won the top prize at Venice and brought Japanese film world fame.</p></div>
+    <div class="card"><h4><i>Godzilla</i> (from 1954)</h4><p>A monster roused from the deep by a nuclear explosion; it drew on Japan's sense of victimhood.</p></div>
+    <div class="card"><h4>Misora Hibari</h4><p>Songs of parting and loss that spoke to the will to survive that carried women through war and occupation.</p></div>
+  </div>
+  <p>Public intellectuals such as <b>Maruyama Masao</b> and <b>Mishima Yukio</b> asked what it meant to be Japanese if the nation's only goal was economic success, and where responsibility for wartime aggression lay.</p>
+
+  <h3>New religions <span class="cite">p. 468</span></h3>
+  <p><a class="term" href="#g-newrel">New religions</a> offered one answer. <a class="term" href="#g-sokagakkai">Sōka Gakkai</a> ("value-creating society"), founded in 1930 and suppressed in the war, was the largest by the 1960s. Its political arm, <a class="term" href="#g-komeito">Kōmeitō</a> (Clean Government Party, 1964), became Japan's third-largest party. It helps members find spouses, jobs, loans, and schooling and offers community and group therapy. It teaches that life's purpose is happiness, which comes from beauty, gain, and goodness, and that virtue comes from following the medieval monk Nichiren and the Lotus Sutra. Religious freedom and the move from country to town multiplied such religions; though critical of consumerism, they appeal partly through promises of material benefit.</p>
+
+  <h3>The 1964 Tokyo Olympics <span class="cite">p. 469</span></h3>
+  <p>The Olympics marked the climax of high-speed growth and a turning point. Tokyo paved and cleaned streets; rebuilt stores, schools, and offices; built stadiums at Yoyogi Park, subways, roads, and new hotels (Japan's first postwar high-rises); and linked a renovated Haneda Airport to the city by monorail. The centerpiece was the <a class="term" href="#g-shinkansen">Shinkansen</a> (bullet train), which ran Tokyo to Osaka in 3 hours 10 minutes, the fastest, most reliable, and safest train in the world. Japan had joined the United Nations in 1956; worldwide coverage of the games showed a peaceful modern state, and Ichikawa Kon's documentary turned them into art.</p>
+  <div class="side">
+    <figure class="fig" id="fig-shinkansen" style="margin:0">
+      <img class="zoomable" src="assets/unit17/shinkansen-0-series.jpg" width="960" height="720" alt="A white and blue bullet train with a rounded nose at a station platform" loading="lazy">
+      <figcaption><span class="fn">Figure 7.</span> A 0 Series Shinkansen, the original bullet-train design of 1964, still running in 2008†. Photo: Nadate, CC BY 3.0.</figcaption>
+    </figure>
+    <figure class="port" id="fig-torch" style="margin:0">
+      <img class="zoomable" src="assets/unit17/sakai-torch-1964.jpg" width="691" height="926" alt="A young runner in white carries the Olympic torch up the stadium steps before a packed crowd" loading="lazy">
+      <figcaption><span class="fn">Figure 8.</span> Sakai Yoshinori carries the flame at the opening ceremony, October 10, 1964†. He was born near Hiroshima on the day of the atomic bombing†. Photo: <i>Asahi Shimbun</i>; public domain.</figcaption>
+    </figure>
+  </div>
+
+  <div class="bio">
+    <div class="bio-h"><span class="label">Biography · p. 470</span><h3>Daimatsu Hirobumi, soldier and volleyball coach (1921–1978)</h3></div>
+    <ol class="lifeline">
+      <li><b>War.</b> Drafted after Pearl Harbor; officer school in China; fought in China and Southeast Asia; survived Burma on raw bamboo shoots through willpower.</li>
+      <li><b>Prisoner.</b> Twenty-two months as a POW of the British in Rangoon, subjected to deliberately humiliating labor in revenge for Japanese treatment of British prisoners.</li>
+      <li><b>Coach.</b> Coached women workers' volleyball at the Nichibō textile company; the team won Japan's major titles (1958) and the world championship (1962).</li>
+      <li><b>Methods.</b> Brutal: hurling balls until players collapsed, play through injury, three and a half hours of sleep before the Olympics. Also step-by-step improvement much like quality-control circles. He expected players to sacrifice everything for the company and the nation, as he had in war.</li>
+      <li><b>1964.</b> 85% of Japan's TVs watched his team beat the Soviet Union for gold. He won an upper-house Diet seat in 1968 but lost re-election.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8 POLLUTION -->
+<section class="unit reveal" id="pollution">
+  <div class="sec-num">Part 8</div>
+  <h2>Political protest and environmental pollution</h2>
+  <p class="pages">pp. 510–512</p>
+  <p>The protests of the 1960s, provoked by public policy and industrial pollution, showed that the costs of LDP dominance and high-speed growth could no longer be ignored. <span class="cite">p. 510</span></p>
+
+  <h3>Students, farmers, and radicals <span class="cite">pp. 510–511</span></h3>
+  <div class="idgrid" id="provoke">
+    <button type="button" class="idcard" aria-pressed="false"><span class="role">1968–1969</span><span class="a"><b>Tokyo University</b>Why did students strike, and how did it end?</span><span class="b"><b>Strike and siege</b>Medical students struck over a top-down reform; others barricaded the main building, and the 1969 entrance exams were cancelled. 8,500 riot police retook it live on TV (Jan. 1969).</span></button>
+    <button type="button" class="idcard" aria-pressed="false"><span class="role">1965–1978</span><span class="a"><b>Narita Airport</b>Why did farmers fight a new airport?</span><span class="b"><b>Land and secrecy</b>A site chosen in secret took farmers' land. They built forts and chained themselves to fences, joined by students and activists. Six years to build became twelve; three runways became one.</span></button>
+    <button type="button" class="idcard" aria-pressed="false"><span class="role">1970</span><span class="a"><b>Mishima Yukio</b>What did the novelist do at SDF headquarters?</span><span class="b"><b>A call to revolt</b>He urged soldiers to honor the war dead and overthrow the government. When they laughed, he committed samurai-style suicide.</span></button>
+    <button type="button" class="idcard" aria-pressed="false"><span class="role">1970–1972</span><span class="a"><b>The Red Army</b>What did these student radicals do?</span><span class="b"><b>Violence abroad</b>Robbed banks, hijacked a plane to North Korea, and attacked travelers at Tel Aviv's Lod airport in the name of Maoist revolution.</span></button>
+  </div>
+  <p class="note-l"><span class="fn">Figure 9.</span> Flip cards on the protests of 1965–1972, pp. 510–511.</p>
+  <figure class="fig" id="fig-sanrizuka">
+    <img class="zoomable" src="assets/unit17/sanrizuka-1985.png" width="953" height="530" alt="Rows of riot police with helmets and shields face protesters amid smoke and flames" loading="lazy">
+    <figcaption><span class="fn">Figure 10.</span> Clashes near Sanrizuka, by Narita Airport, October 20, 1985†: the struggle continued long after the airport opened. Photo: National Police Agency, CC BY 4.0. Having learned its lesson, the government later built an Osaka airport on an artificial island (p. 511; see the fact-check notes).</figcaption>
+  </figure>
+
+  <h3>Citizens' movements and Minamata <span class="cite">p. 511</span></h3>
+  <p>Less dramatic but longer lasting were <a class="term" href="#g-citizens">citizens' movements</a> against pollution. Local governments in the 1950s had spread industry from cities to towns and made Japan the most polluted nation on earth; by the early 1970s about half the population said they suffered from pollution. Normally apolitical residents signed petitions, visited plants, and ran education drives to keep polluters out, refusing to trust company promises or to accept that defending their quality of life was selfish.</p>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 2.</span> <b>The <a class="term" href="#g-minamata">Minamata disease</a> case</b> (p. 511)</caption>
+    <thead><tr><th>Year</th><th>Event</th></tr></thead>
+    <tbody>
+      <tr><td class="yr">1932–1968</td><td>A Chisso factory at Minamata, southern Kyushu, makes acetaldehyde for plastics and dumps the by-product, methyl mercury, into the sea. It builds up in fish and attacks the brain cells of animals and people, leading to a vegetative state and death.</td></tr>
+      <tr><td class="yr">1959</td><td>A Kumamoto University team traces the disease to Chisso and loses its government funding. With MITI support, Chisso hires researchers who "prove" mercury is not at fault; workers and local leaders blame victims' diet and hygiene.</td></tr>
+      <tr><td class="yr">1965</td><td>A second outbreak at Niigata, traced to another chemical plant, strengthens the Minamata case despite official efforts to discredit investigators.</td></tr>
+      <tr><td class="yr">1971–1973</td><td>Backed by doctors, lawyers, filmmakers, journalists, and academics, victims sue Chisso; the 1973 verdict pushes it to the edge of bankruptcy.</td></tr>
+      <tr><td class="yr">1995</td><td>The Environment Agency had refused the court's call to settle; the cabinet finally accepts an out-of-court settlement that denies state responsibility.</td></tr>
+      <tr><td class="yr">2004</td><td>The Supreme Court holds the national government and Kumamoto prefecture responsible for failing to prevent the disease; local officials still urge victims not to apply for compensation.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="side">
+    <div class="callout green">
+      <div class="label">Did protest work? · pp. 511–512</div>
+      <p>Pollution diseases exposed the costs of growth and how politicians and bureaucrats had insulated themselves from citizens. Because of protest launched <i>outside</i> normal political channels, the government imposed strict pollution controls in the 1970s and spent a larger share of GNP on them than any other developed nation. By 1978 air and water pollution had declined, and manufacturers had learned to profit from clean technology.</p>
+    </div>
+    <figure class="port" id="fig-minamata" style="margin:0">
+      <img class="zoomable" src="assets/unit17/minamata-museum.jpg" width="960" height="720" alt="A modern concrete museum building with a cylindrical tower under a clear blue sky" loading="lazy">
+      <figcaption><span class="fn">Figure 11.</span> The Minamata Disease Municipal Museum, Minamata. Photo: hyolee2, CC BY-SA 3.0.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 9 SEVENTIES -->
+<section class="unit reveal" id="seventies">
+  <div class="sec-num">Part 9</div>
+  <h2>Strains of the 1970s</h2>
+  <p class="pages">pp. 512–514</p>
+  <h3>Scandal <span class="cite">p. 512</span></h3>
+  <p>To keep its majority, the LDP catered to supporters to the point of scandal. Prime Minister <a class="term" href="#g-tanaka">Tanaka Kakuei</a> had Japan National Railways build a bullet-train line through the mountains to his Niigata district at $60 million a mile, enriching construction cronies and real-estate developers. Public outcry drove him out in 1974. The LDP still held on, because voters thought the opposition too ideological and fragmented to govern.</p>
+
+  <h3>Four shocks <span class="cite">pp. 512–513</span></h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 3.</span> <b>The international shocks of the 1970s</b> (pp. 512–513)</caption>
+    <thead><tr><th>Shock</th><th>What happened</th><th>How Japan adjusted</th></tr></thead>
+    <tbody>
+      <tr><td class="k"><a class="term" href="#g-nixonshocks">Nixon shock</a> 1 (1971)</td><td>The U.S. stops accepting fixed exchange rates; the yen rises 14% to make Japanese exports dearer</td><td>Firms use cheaper imported raw materials</td></tr>
+      <tr><td class="k">Nixon shock 2 (1972)</td><td>Nixon opens relations with the PRC without telling Japan in advance (see fact-check notes)</td><td>Tanaka follows to China seven months later; peace and friendship treaty, 1978</td></tr>
+      <tr><td class="k"><a class="term" href="#g-oilshock">Oil shock</a> (1973)</td><td>OPEC embargoes countries that backed Israel; Japan depends on oil for 80% of its energy</td><td>Inflation, production cuts, consumers stop spending; Japan builds nuclear power plants</td></tr>
+      <tr><td class="k">Second oil shock (1978–80)</td><td>OPEC raises prices again</td><td>Firms have rationalized energy use so well that they now beat less efficient rivals</td></tr>
+    </tbody>
+  </table></div>
+  <p>Industry restructured. A 1979 European report sneered that the Japanese were work maniacs living in "rabbit hutches"; Nixon demanded voluntary limits on textile exports. Shipbuilding consolidated and moved into ocean drilling platforms, with state wage subsidies, retraining, and relocation help; steel shifted to high-value specialty products for cars and electrical goods. In <b>1980 Japan produced more cars than any other country.</b> <span class="cite">p. 513</span></p>
+
+  <h3>Company and family <span class="cite">pp. 513–514</span></h3>
+  <div class="contrast">
+    <div class="cside a"><div class="big">The salaryman</div><ul class="tight"><li><a class="term" href="#g-lifetime">Lifetime employment</a> covered <b>less than half</b> the workforce. Toyota's permanent workers got seniority raises and benefits; temporary workers and 200-plus subcontractors had no security.</li><li>White-collar recruits joined straight from college, lived in company dorms, worked and drank with coworkers.</li><li>Only family men were promoted, so most married, perhaps an <a class="term" href="#g-ol">"office lady"</a>. The film series <i>It's Tough Being a Man</i> (from 1969) mocked this conformity.</li></ul></div>
+    <div class="pivot"><span>separate worlds</span></div>
+    <div class="cside b"><div class="big">The professional housewife</div><ul class="tight"><li>Ran the household and did repairs; received her husband's paycheck, gave him an allowance, and saved the rest.</li><li>As a <a class="term" href="#g-kyoikumama">kyōiku mama</a> ("education mother") she devoted herself to her children's schooling: teachers, PTA, nutrition, homework, after-school cram schools.</li><li>Her child was her most important product. In the countryside, only 2–5% of men farmed full time; wives, parents, and children did the farming.</li></ul></div>
+  </div>
+  <div class="callout ink">
+    <div class="label">Documents · Fujita Mariko, "It's All Mother's Fault" (1989) · pp. 514–515</div>
+    <p>A university lecturer and working mother describes life in a government apartment complex in Nara where nearly every mother of young children stayed home. Neighbors assumed she was a housewife; at the playground the other mothers politely ignored her and later asked if she even lived there. A day-care director had never heard of paid sitters for sick children. Once neighbors learned she spent two nights a week away, they blamed her son's frequent illnesses on her absence and pitied his father, even though the dates did not match. The essay shows how women themselves policed the ideal of the full-time mother, set out in a 1970 government Family Charter that called mothers their children's best educators.</p>
+  </div>
+</section>
+
+<!-- 10 MINORITIES -->
+<section class="unit reveal" id="minorities">
+  <div class="sec-num">Part 10</div>
+  <h2>Women, minorities, and "Japaneseness"</h2>
+  <p class="pages">pp. 514–516</p>
+  <h3>Women at work <span class="cite">pp. 514–515</span></h3>
+  <p>Until the mid-1980s almost 90 percent of companies rejected women with four-year degrees, since hiring them would mean a management track. Women were hired as clerks or assembly workers on the understanding that they would quit at marriage or at thirty. In the late 1960s courts ruled this sex discrimination; in the early 1970s they banned forced retirement for pregnancy, childbirth, or at a younger age than men. Women also objected to protective limits on their hours and jobs. The Diet's <a class="term" href="#g-eeoa">Equal Employment Opportunity Act</a> (1985) urged equal treatment but carried no sanctions.</p>
+  <div class="share" id="wagebars">
+    <h4>Women's earnings as a share of men's <span class="cite">p. 515</span></h4>
+    <div class="row"><span>1976</span><div class="track"><div class="fill gold" data-w="56"></div></div><span class="v">56%</span></div>
+    <div class="row"><span>1988</span><div class="track"><div class="fill gold" data-w="50"></div></div><span class="v">50%</span></div>
+    <p class="note"><span class="fn">Figure 12.</span> The gap widened. Full responsibility for home and children made it hard to work past childbirth; most working women were married and over thirty-five, in part-time or temporary jobs at small firms.</p>
+  </div>
+
+  <h3>Minorities <span class="cite">pp. 515–516</span></h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 4.</span> <b>Minorities and their struggles</b> (pp. 515–516)</caption>
+    <thead><tr><th>Group</th><th>Conditions</th><th>Key developments</th></tr></thead>
+    <tbody>
+      <tr><td class="k"><a class="term" href="#g-burakumin">Burakumin</a></td><td>In 1977, 28.5% of Osaka burakumin were unemployed (national rate about 3%); jobs were temporary, low-paid, in small firms</td><td>The 1969 assimilation law funded sewers, paved streets, housing, schools, hospitals. In 1976 access to family registers was restricted, but detective agencies sold lists of burakumin addresses to big companies</td></tr>
+      <tr><td class="k"><a class="term" href="#g-ainu">Ainu</a></td><td>Ignored in the 1968 centennial of Hokkaido's colonization</td><td><a class="term" href="#g-kayano">Kayano Shigeru</a> opened a museum (1972), wrote on Ainu language and folktales, and became the first Ainu Diet member (1994); activists revived seasonal ceremonies</td></tr>
+      <tr><td class="k">Okinawans</td><td>Returned to Japan in 1972, but U.S. bases stayed</td><td>Economy depends on the bases and tourists; music, dance, and crafts popular on the mainland; karate its most famous export</td></tr>
+      <tr><td class="k"><a class="term" href="#g-zainichi">Resident Koreans</a></td><td>637,000 in 1999. Citizens under the empire, they became permanent resident aliens: taxed but unable to vote, fingerprinted for alien cards</td><td>Fingerprinting changed and local voting allowed in 1991; still refused marriage, jobs, and housing; split between supporters of North and South</td></tr>
+    </tbody>
+  </table></div>
+  <p>Burakumin, Ainu, and Okinawans have had higher poverty and dropout rates than the national average, and the state hires minorities only in low-level jobs. <span class="cite">p. 516</span></p>
+
+  <h3>Nihonjinron and the middle-class nation <span class="cite">p. 516</span></h3>
+  <p>Nationalists ignored this diversity and praised a uniquely homogeneous race. The <a class="term" href="#g-nihonjinron">Nihonjinron</a> ("Japaneseness") debate arose in response to the late-1960s protests, universal social-science theories, and foreign criticism of Japan's trade. The more Japanese lived like everyone else in the developed world, the more they were told they were exceptional: a language outsiders cannot understand, a natural love of consensus and harmony, the group above the individual, even intestines supposedly unsuited to Australian beef.</p>
+  <div class="stats">
+    <div class="stat"><b>90%</b><span>of people called themselves middle class by the mid-1970s</span></div>
+    <div class="stat"><b>Narrow</b><span>income gaps; the industrial world's highest savings rate</span></div>
+    <div class="stat"><b>Meat and spaghetti</b><span>for the young; rice, vegetables, and fish for their elders</span></div>
+  </div>
+</section>
+
+<!-- 11 EIGHTIES -->
+<section class="unit reveal" id="eighties">
+  <div class="sec-num">Part 11</div>
+  <h2>The roaring 1980s</h2>
+  <p class="pages">pp. 516–520</p>
+  <h3>Trade friction <span class="cite">pp. 516–517</span></h3>
+  <ol class="chain">
+    <li><span class="n">1</span><b>Cars.</b> Japan answered the oil and pollution crises with fuel-efficient, cleaner cars. When stricter emission rules, demand for quality, and gas prices caught Detroit by surprise, Japanese automakers seized the American market.</li>
+    <li><span class="n">2</span><b>1985.</b> To make Japanese goods dearer, the Reagan administration drove the dollar down (the <a class="term" href="#g-plaza">Plaza Accord</a>†), which the book says made Japan "twice as rich." The yen bought twice as much oil, and Japan's streamlined firms needed half the inputs of U.S. rivals.</li>
+    <li><span class="n">3</span><b>Market access.</b> U.S. negotiators demanded more imports. Japan's tariffs on manufactures were low, but it protected farmers and had <a class="term" href="#g-ntb">non-tariff barriers</a>: safety rules, a multilayered distribution system, and zoning that favored small shops. Slowly, Australian cheese, McDonald's, Kentucky Fried Chicken, Seven-Eleven, and Tokyo Disneyland (1983) arrived.</li>
+    <li><span class="n">4</span><b>Capital abroad.</b> Surpluses and a strong yen exported capital: labor-intensive plants in low-wage Asia; high-tech plants in rich countries to get around quotas. Toyota went multinational. Japan financed U.S. debt, became the largest lender to developing countries and the chief aid donor, and supplied half of the World Bank's lendable capital.</li>
+    <li><span class="n">5</span><b>Dumping.</b> U.S. chipmakers accused Japan of selling below cost (1985); Japan accepted voluntary quotas (1986). Firms then formed joint ventures, such as Toyota with General Motors.</li>
+  </ol>
+
+  <h3>History and the neighbors <span class="cite">p. 518</span></h3>
+  <p>Japanese investment deepened ties with Asia; critics said Japan had finally built its Greater East Asia Co-Prosperity Sphere. Nationalism strained relations. In 1982 the Education Ministry approved a textbook that minimized aggression in China, drawing protests from China, both Koreas, and others; aggression and the suffering of Korean women forced into military brothels were still issues in the 2005 textbooks. Prime ministers' visits to <a class="term" href="#g-yasukuni">Yasukuni Shrine</a>, where war criminals are enshrined, drew criticism. When South Korea's president first visited Japan in 1984, Seoul erupted in protest.</p>
+
+  <h3>Nakasone and privatization <span class="cite">pp. 518–519</span></h3>
+  <p>Deficit spending since 1973 had been fed by farm subsidies, the public corporations <b>JNR</b> (railways) and <b>NTT</b> (telephones), and national health insurance, free for the elderly from 1972. Following Thatcher, a 1981 commission proposed privatization, partly to break the railway union (which had shut JNR for eight days in 1975 to win the right to strike). <a class="term" href="#g-nakasone">Nakasone Yasuhiro</a> (prime minister 1982–1987) privatized JNR and NTT, got the state out of tobacco, made the elderly pay for health care, urged family values and the young's duty to care for elders, credited Japan's success to ethnic homogeneity, and called for "internationalization" to ease trade friction.</p>
+
+  <h3>The good life <span class="cite">pp. 518–519</span></h3>
+  <div class="grid g2">
+    <div class="card"><h4>Things</h4><p>Bread-making machines, 3D TV, self-heating canned saké; Itami Jūzō's satirical films; 1.45 billion books and 4.01 billion magazines sold in 1987, many of them <a class="term" href="#g-manga">manga</a>.</p></div>
+    <div class="card"><h4>Writers</h4><p>Murakami Haruki on the absurdity of modern life (<i>A Wild Sheep Chase</i>; later <i>1Q84</i>); Yoshimoto Banana's <i>Kitchen</i>; nostalgia for occupation days in Kuroyanagi Tetsuko's <i>Totto-chan</i> (4 million copies).</p></div>
+    <div class="card"><h4>Roots</h4><p>A search for the <a class="term" href="#g-furusato">furusato</a> (home village): JNR's "Discover Japan" campaign, revived village festivals and daimyo processions for tourists, invented folk crafts to sell as souvenirs.</p></div>
+    <div class="card"><h4>Youth</h4><p>The Harajuku "bamboo shoot tribe" (1978), biker gangs, school bullying (reported from 1985). A "new breed" rejected their elders' work ethic, took part-time jobs, lived with parents, and spent on clothes and travel.</p></div>
+  </div>
+  <div class="callout gold">
+    <div class="label">Material culture: manga · p. 519</div>
+    <p>Manga took their modern form in 1959 as cheap entertainment for all ages. The first postwar generation kept reading them into adulthood: escapist (often violent and pornographic) fantasy for commuting salarymen, science fiction for the young, history for exam-takers (<i>Barefoot Gen</i> on Hiroshima), and even economics (<i>Japan Inc.</i>, 1986, over a million copies). Sales peaked in 1994, when manga were a third of all publishing; since then readers have turned to phones and handheld games.</p>
+  </div>
+
+  <h3>The bubble <span class="cite">p. 520</span></h3>
+  <div class="stats">
+    <div class="stat"><b>1988</b><span>Japan's per capita GNP passes that of the United States</span></div>
+    <div class="stat"><b>3×</b><span>Tokyo land valued at three times all the land in the United States</span></div>
+    <div class="stat"><b>3×</b><span>the stock market triples, inflating a speculative bubble</span></div>
+  </div>
+  <p>In 1989 Sony's Morita Akio and Ishihara Shintarō (later mayor of Tokyo) published <i>The Japan That Can Say No</i>, blaming "Japan bashing" on racism while also scolding Japan's government and people. Banks pushed loans on borrowers; Japanese bought Western art; Mitsubishi bought Rockefeller Center and Sony bought Columbia Pictures.</p>
+</section>
+
+<!-- 12 LOST -->
+<section class="unit reveal" id="lost">
+  <div class="sec-num">Part 12</div>
+  <h2>Twenty years without progress</h2>
+  <p class="pages">pp. 520–521</p>
+  <h3>Japan's world role <span class="cite">p. 520</span></h3>
+  <p>The United States grumbled when Japan sent no troops to the 1991 Gulf War, though its military spending ranked third in the world. Japan paid $10 billion toward the war, later sent minesweepers amid constitutional debate, joined peacekeeping in Cambodia and East Timor, and after September 11, 2001, passed an anti-terrorism law that allowed rear-echelon support in Iraq (2004).</p>
+
+  <h3>The LDP stumbles <span class="cite">pp. 520–521</span></h3>
+  <ol class="chain">
+    <li><span class="n">1</span><b>1989.</b> The Shōwa emperor dies; the new era is named <a class="term" href="#g-heisei">Heisei</a>. Prime Minister Takeshita brings in a 3% value-added tax, then resigns over 150 million yen from <a class="term" href="#g-recruit">Recruit Cosmo</a>. A successor lasts six weeks. The JSP under <b>Doi Takako</b>, running many women, wins the upper house.</li>
+    <li><span class="n">2</span><b>1993.</b> Younger politicians split the LDP; the Japan New Party picks the prime minister after the LDP loses the lower house. The worst rice harvest in two centuries forces the first rice imports since the war.</li>
+    <li><span class="n">3</span><b>1995.</b> Two more non-LDP prime ministers fail to handle the economy or the Kobe earthquake of January 17.</li>
+    <li><span class="n">4</span><b>1996–2001.</b> A chastened LDP returns; in 2001 faction bosses choose <a class="term" href="#g-koizumi">Koizumi Jun'ichirō</a>, who promises structural reform to liberals and revision of the pacifist constitution to conservatives.</li>
+    <li><span class="n">5</span><b>2009.</b> Fed up with weak leaders, voters choose the new <b>Democratic Party</b>, which promises to cut public works and ministry budgets.</li>
+  </ol>
+  <figure class="fig" id="fig-kobe">
+    <img class="zoomable" src="assets/unit17/kobe-1995-route43.jpg" width="960" height="640" alt="A collapsed elevated expressway lies tipped over beside a city street, with a crushed bus among the debris" loading="lazy">
+    <figcaption><span class="fn">Figure 13.</span> The toppled Hanshin Expressway along Route 43, Nada Ward, Kobe, January 17, 1995†. Photo: City of Kobe, CC BY 2.1 JP. The earthquake killed 6,434 people† (see the fact-check notes).</figcaption>
+  </figure>
+
+  <h3>Why the bubble burst and stayed burst <span class="cite">p. 521</span></h3>
+  <ul class="tight">
+    <li><b>The crash.</b> A recession in the developed world cut sales, and low-wage competitors took market share. Firms that had borrowed to buy land or expand found debts larger than assets.</li>
+    <li><b>1997.</b> The Asian financial crisis, set off by speculators dumping Asian currencies, brought another recession; two brokerages and a bank failed. Growth, barely 1% a year in 1992–95, went negative; deflation set in.</li>
+    <li><b>Failed cures.</b> Culture halls and crafts in the 1980s, then dams, roads, and postmodern buildings in the 1990s; near-zero interest rates and support for bad loans; bureaucratic reform blocked by inertia.</li>
+    <li><b>Koizumi.</b> Halted a swamp-reclamation project, paid farmers not to plant rice, and moved to privatize the post office, threatening the Finance Ministry's off-budget control of <b>$3 trillion</b> in postal savings.</li>
+    <li><b>Debt.</b> By 2009 gross public debt was twice the size of the $5 trillion economy, the highest in the industrialized world.</li>
+  </ul>
+  <div class="share" id="stockbars">
+    <h4>The stock market after the peak (peak = 100) <span class="cite">p. 521</span></h4>
+    <div class="row"><span>Peak</span><div class="track"><div class="fill ink" data-w="100"></div></div><span class="v">100</span></div>
+    <div class="row"><span>End of 1990</span><div class="track"><div class="fill ink" data-w="60"></div></div><span class="v">≈60</span></div>
+    <div class="row"><span>Aug. 1992</span><div class="track"><div class="fill ink" data-w="35"></div></div><span class="v">35</span></div>
+    <p class="note"><span class="fn">Figure 14.</span> Values derived from the book's figures: the market lost nearly 40% of its peak value in 1990 and 65% by August 1992.</p>
+  </div>
+
+  <h3>March 11, 2011 <span class="cite">p. 521</span></h3>
+  <div class="side">
+    <div>
+      <p>An earthquake off northeastern Japan killed nearly 20,000 people and destroyed more than 125,000 buildings. The tsunami swept up to six miles inland and caused a meltdown at the <a class="term" href="#g-fukushima">Fukushima</a> nuclear plant; nearly 90,000 people were evacuated from a twelve-mile zone. Many devastated villages had aging populations: should they be rebuilt if the young will not return? Leaders argue land-poor Japan must clean up the zone, not abandon it as the Soviets did at Chernobyl, the only larger nuclear disaster; critics doubt it will work and say Japan cannot afford it.</p>
+    </div>
+    <figure class="port" id="fig-otsuchi" style="margin:0">
+      <img class="zoomable" src="assets/unit17/otsuchi-2011.jpg" width="960" height="638" alt="Aerial view of a coastal town reduced to debris and bare foundations beside the harbor" loading="lazy">
+      <figcaption><span class="fn">Figure 15.</span> Otsuchi, Iwate, four days after the tsunami, March 15, 2011†. U.S. Navy photo; public domain.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 13 SOCIAL -->
+<section class="unit reveal" id="social">
+  <div class="sec-num">Part 13</div>
+  <h2>Social problems for the twenty-first century</h2>
+  <p class="pages">pp. 521–523</p>
+  <div class="stats">
+    <div class="stat"><b>23%</b><span>aged 65 or older in 2010, the oldest population in the industrial world</span></div>
+    <div class="stat"><b>1.3</b><span>children per woman, against 2.2 needed; population falling since 2005</span></div>
+    <div class="stat"><b>79 · 86</b><span>life expectancy of men and women, 2011</span></div>
+    <div class="stat"><b>5.6%</b><span>unemployment in 2009, a record high</span></div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h4>Schools <span class="cite">pp. 521–522</span></h4><p>Americans praised Japan's schools in the 1980s; Japanese critics feared they produced "soulless automatons" lacking creativity and national identity.</p></div>
+    <div class="card"><h4>Foreign workers <span class="cite">p. 522</span></h4><p>Labor shortages in the 1980s brought workers from Taiwan, the Philippines, Iran, and elsewhere, about half illegally. Latin Americans of Japanese descent were welcomed as easy to assimilate. In 1999, 1.56 million legal foreigners lived among 126.6 million people.</p></div>
+    <div class="card"><h4>Work <span class="cite">p. 522</span></h4><p>Firms kept middle-aged men employed and stopped competing for graduates; "pay for performance" began to replace seniority. Young people who saw college no longer led to permanent jobs were dismissed as <a class="term" href="#g-parasite">"parasite singles"</a>; homelessness grew from the late 1980s.</p></div>
+    <div class="card"><h4>Meaning <span class="cite">p. 522</span></h4><p>Right-wing sound trucks attacked the <i>Asahi</i> for disrespecting the emperor. In March 1995 <a class="term" href="#g-aum">Aum Shinrikyō</a> released poison gas in the Tokyo subway, killing twelve; Sōka Gakkai's party blocked tighter state oversight of religions.</p></div>
+    <div class="card"><h4>Family <span class="cite">pp. 522–523</span></h4><p>The LDP urged more babies; couples limited families anyway because of costs. The state wants children to care for parents, but women prefer to care for their own, so eldest sons struggle to marry; some farmers marry brides from the Philippines.</p></div>
+    <div class="card"><h4>Women <span class="cite">pp. 522–523</span></h4><p>Women's mean age at marriage rose from 22 (1950) to over 29 (2011). Most now take four-year degrees; some seek careers abroad; some divorce husbands after retirement.</p></div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section class="unit reveal" id="summary">
+  <div class="sec-num">Summary</div>
+  <h2>What changed, 1931 to 2011?</h2>
+  <p class="pages">pp. 471, 523</p>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 5.</span> <b>Japan at three moments</b> (pp. 471, 523)</caption>
+    <thead><tr><th></th><th>1931</th><th>1964</th><th>About 2011</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Power</td><td>Overseas empire; proud army</td><td>Lost even Okinawa; SDF specializes in domestic disaster relief</td><td>Critics want a "normal nation" with a recognized military</td></tr>
+      <tr><td class="k">Emperor</td><td>Citizens trained in patriotism</td><td>Academics free to criticize him</td><td>Politicians calling him a living god anger neighbors</td></tr>
+      <tr><td class="k">Economy</td><td>Prewar foundations being laid</td><td>GDP above its prewar peak; consumer electronics drive exports</td><td>Third-largest economy, but stagnant; Japan "became rich before it became old"</td></tr>
+      <tr><td class="k">Society</td><td>Rural majority</td><td>Mass migration to cities</td><td>Clean, safe cities; persisting discrimination; fewer babies</td></tr>
+    </tbody>
+  </table></div>
+  <p>Japan recovered thanks to the changing international climate of the late 1940s and early 1950s, the occupation's reforms, the U.S. security umbrella, and U.S. recognition that democracy needed economic stability, but also, the book stresses, the bureaucratic, educational, and industrial foundation laid before the war. <span class="cite">p. 471</span></p>
+  <p>Since the 1960s Japan has become a mature industrial democracy and a major cultural presence (Japanese food, fashion, popular music, and karaoke, introduced in 1980). After the 1970s shocks it mended relations with China, learned to live with a strong yen, and cut energy use while building nuclear plants, at least until Fukushima. Protest and citizens' movements are largely things of the past. Diplomacy has been rougher: memories of war and wariness of China's rise persist, even though Japan now trades more with China than with the United States. <span class="cite">p. 523</span></p>
+  <div class="callout green">
+    <div class="label">What carries forward</div>
+    <p>Unit 18 turns to China after Mao, whose Special Economic Zones Japanese capital dominated (p. 518). Unit 19 takes up aging populations, regional economic ties, and the unresolved history disputes (textbooks, Yasukuni) that this unit introduces.</p>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="unit reveal" id="review">
+  <div class="sec-num">Review kit</div>
+  <h2>Test yourself</h2>
+
+  <h3>Flashcards</h3>
+  <div class="fc-wrap">
+    <div class="fc" id="fc" tabindex="0" role="button" aria-label="Flashcard: press to flip">
+      <div class="fc-inner">
+        <div class="fc-face fc-front"><div class="t" id="fc-term"></div><div class="h">Tap or press space to flip</div></div>
+        <div class="fc-face fc-back"><div id="fc-def"></div></div>
+      </div>
+    </div>
+    <div class="fc-ctrl">
+      <button class="btn" id="fc-prev" type="button">← Prev</button>
+      <span id="fc-count"></span>
+      <button class="btn" id="fc-next" type="button">Next →</button>
+      <button class="btn" id="fc-shuffle" type="button">Shuffle</button>
+    </div>
+  </div>
+
+  <h3>Who's who</h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 6.</span> <b>Who's who</b></caption>
+    <thead><tr><th>Person</th><th>Why they matter</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Douglas MacArthur</td><td>SCAP, 1945–1951†; demilitarization, the constitution, land reform; shielded the emperor; called off the 1947 general strike</td></tr>
+      <tr><td class="k">Shōwa emperor (Hirohito)</td><td>Renounced divinity (1946); became "symbol of the state"; war responsibility never settled; died 1989</td></tr>
+      <tr><td class="k">Joseph Dodge</td><td>Detroit banker whose 1949 austerity plan fixed ¥360 to the dollar</td></tr>
+      <tr><td class="k">W. Edwards Deming</td><td>U.S. statistician who brought quality-control methods to Japan (1949)</td></tr>
+      <tr><td class="k">Yoshida Shigeru</td><td>Prime minister 1946–47 and 1948–54; refused to raise an army, created the Police Reserve; signed the 1951 treaties</td></tr>
+      <tr><td class="k">Kishi Nobusuke</td><td>Unindicted war-crimes suspect; forced the 1960 treaty through the Diet; resigned after the Anpo protests</td></tr>
+      <tr><td class="k">Daimatsu Hirobumi</td><td>Ex-POW whose brutal coaching won women's volleyball gold in 1964</td></tr>
+      <tr><td class="k">Kurosawa Akira · Misora Hibari</td><td>Director of <i>Rashomon</i> and <i>Ikiru</i> · singer of songs of loss and survival</td></tr>
+      <tr><td class="k">Mishima Yukio</td><td>Novelist who questioned postwar identity and killed himself after calling on the SDF to revolt (1970)</td></tr>
+      <tr><td class="k">Tanaka Kakuei</td><td>Prime minister; pork-barrel bullet train to Niigata; followed Nixon to China; forced out 1974</td></tr>
+      <tr><td class="k">Kayano Shigeru</td><td>Ainu cultural activist; first Ainu Diet member (1994)</td></tr>
+      <tr><td class="k">Fujita Mariko</td><td>Author of the document on working mothers in Nara</td></tr>
+      <tr><td class="k">Nakasone Yasuhiro</td><td>Prime minister 1982–87; privatized JNR and NTT; family values and "internationalization"</td></tr>
+      <tr><td class="k">Morita Akio · Ishihara Shintarō</td><td>Authors of <i>The Japan That Can Say No</i> (1989)</td></tr>
+      <tr><td class="k">Murakami Haruki · Yoshimoto Banana</td><td>Novelists of 1980s and later Japan</td></tr>
+      <tr><td class="k">Takeshita Noboru · Doi Takako</td><td>Prime minister brought down by the Recruit scandal (1989) · JSP leader who won the upper house that year</td></tr>
+      <tr><td class="k">Koizumi Jun'ichirō</td><td>Prime minister from 2001; structural reform and post office privatization</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Key dates</h3>
+  <div class="tablewrap"><table>
+    <caption><span class="fn">Table 7.</span> <b>Key dates</b></caption>
+    <tbody>
+      <tr><td class="yr">1945</td><td>Surrender (Aug. 15); occupation begins (Aug. 30); Trade Union Law (Dec.)</td></tr>
+      <tr><td class="yr">1946</td><td>Emperor denies divinity (Jan. 1); women vote (Apr. 10); constitution issued (Nov. 3)</td></tr>
+      <tr><td class="yr">1947 · 1948</td><td>General strike called off · public employees banned from striking; Yoshida returns; Dodge sent</td></tr>
+      <tr><td class="yr">1949 · 1950</td><td>Deming introduces quality control; China goes communist · Korean War; Police Reserve</td></tr>
+      <tr><td class="yr">1951 · 1952</td><td>Peace and security treaties · occupation ends; Bloody May Day</td></tr>
+      <tr><td class="yr">1953 · 1955</td><td>TV broadcasts begin · LDP formed; JSP reunites; BLL founded; Sony transistor radio</td></tr>
+      <tr><td class="yr">1956 · 1958</td><td>UN membership; Prostitution Prevention Law · national health insurance</td></tr>
+      <tr><td class="yr">1959 · 1960</td><td>Crown prince's wedding; Minamata cause found · Anpo protests; Miike strike; Kishi resigns</td></tr>
+      <tr><td class="yr">1964</td><td>Tokyo Olympics; Shinkansen; Kōmeitō founded</td></tr>
+      <tr><td class="yr">1965</td><td>Treaty with South Korea; Narita site chosen; Niigata mercury outbreak</td></tr>
+      <tr><td class="yr">1968–69 · 1970</td><td>Tokyo University strike; Special Measures Law (1969) · Mishima's suicide</td></tr>
+      <tr><td class="yr">1971 · 1972</td><td>Nixon ends fixed rates; Minamata suit · Nixon to China; Okinawa returned; free elder care</td></tr>
+      <tr><td class="yr">1973 · 1974</td><td>Oil shock; Minamata verdict · Tanaka resigns</td></tr>
+      <tr><td class="yr">1978 · 1980</td><td>Treaty with China; Narita opens† · Japan leads the world in car production</td></tr>
+      <tr><td class="yr">1982 · 1983</td><td>Nakasone; textbook controversy · Tokyo Disneyland</td></tr>
+      <tr><td class="yr">1985 · 1986</td><td>Dollar devalued; EEOA; chip "dumping" charge · voluntary chip quotas</td></tr>
+      <tr><td class="yr">1988 · 1989</td><td>Per capita GNP passes the U.S. · Shōwa emperor dies; Recruit scandal; JSP wins upper house</td></tr>
+      <tr><td class="yr">1990–92 · 1991</td><td>Stock market collapses · Gulf War; Koreans' fingerprinting ends</td></tr>
+      <tr><td class="yr">1993 · 1994</td><td>LDP loses power; rice imports · first Ainu Diet member; manga sales peak</td></tr>
+      <tr><td class="yr">1995 · 1997</td><td>Kobe earthquake; Aum gas attack; Minamata settlement · Asian financial crisis; negative growth</td></tr>
+      <tr><td class="yr">2001 · 2004</td><td>Koizumi · troops support Iraq; Supreme Court Minamata ruling</td></tr>
+      <tr><td class="yr">2009 · 2011</td><td>Democratic Party wins; 5.6% unemployment · March 11 earthquake and Fukushima</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Discussion questions</h3>
+  <p class="cite" style="white-space:normal">Open each for points the reading gives you to work with. The first three are Chapter 29's opening questions; the next two come from Chapter 26's summary; the rest are the textbook's questions on its Biography and Documents features.</p>
+  <div class="q-tools" role="group" aria-label="Discussion questions">
+    <button class="btn" id="q-expand" type="button">Expand all</button>
+    <button class="btn" id="q-collapse" type="button">Collapse all</button>
+  </div>
+  <details class="q"><summary>Why did the Japanese economy rise so far and fall so fast?</summary>
+    <div class="a"><ul><li>Rise: Korean War procurement; licensed U.S. technology and quality control; trained workers and education; open world markets and stable exchange rates; MITI protection and cheap credit; domestic consumer demand (pp. 464, 467–468).</li><li>Adjustment: energy efficiency after the oil shocks; fuel-efficient cars took the U.S. market (pp. 513, 516).</li><li>Fall: the post-1985 yen and easy credit inflated land and stocks; recession abroad and low-wage rivals cut sales; debts outran assets; 1997 crisis; stimulus and near-zero rates failed (pp. 520–521).</li></ul></div></details>
+  <details class="q"><summary>Did protests and demonstrations have any impact, given the power of the LDP and the bureaucrats?</summary>
+    <div class="a"><ul><li>Yes, partly: Anpo did not stop the treaty but forced Kishi out and Eisenhower's visit off (p. 466); Minamata and citizens' movements produced strict pollution laws (pp. 511–512); Narita shrank to one runway and changed later airport planning (p. 511); women won court rulings on forced retirement (pp. 514–515).</li><li>No, or little: the EEOA and the 1969 Special Measures Law lacked teeth (pp. 466, 515); the LDP kept power.</li></ul></div></details>
+  <details class="q"><summary>Which social trends will prove enduring, and which will prove beneficial?</summary>
+    <div class="a"><ul><li>Enduring: aging and low birth rates, later marriage, women's education, part-time and insecure work, foreign workers (pp. 522–523).</li><li>Mixed: decline of lifetime employment and seniority pay; youth rejecting the work ethic; growing cosmopolitanism alongside persistent discrimination.</li></ul></div></details>
+  <details class="q"><summary>What impact did World War II have on Japan, and what was the war's legacy?</summary>
+    <div class="a"><ul><li>Destroyed lives, infrastructure, and for a time belief in the Japanese spirit (p. 471).</li><li>Legacies: no empire, Article 9 and the SDF, U.S. bases, unresolved emperor and war-responsibility questions, textbook and Yasukuni disputes (pp. 463, 518).</li><li>But wartime bureaucracy, industry, and training underpinned recovery (p. 471).</li></ul></div></details>
+  <details class="q"><summary>Was the occupation a democratic revolution, or did the reverse course undo it?</summary>
+    <div class="a"><ul><li>Lasting change: constitution, women's vote, land reform, civil code, schools (pp. 463–464).</li><li>Reversal: strike bans, the Red Purge, rehabilitated purgees, halted trust-busting, stronger bureaucrats (p. 465).</li><li>Contradictions: SCAP drafted democracy in secret, censored, and favored Christianity (pp. 463–464).</li></ul></div></details>
+  <details class="q"><summary>Biography: What did Daimatsu Hirobumi remember of his wartime experience?</summary>
+    <div class="a"><ul><li>Starvation in Burma, survived by willpower; humiliation as a British POW (p. 470).</li></ul></div></details>
+  <details class="q"><summary>Biography: What effect did the war have on the rest of his life?</summary>
+    <div class="a"><ul><li>He carried the ethic of total sacrifice into coaching, demanding that players give everything for company and nation (p. 470).</li></ul></div></details>
+  <details class="q"><summary>Biography: What do his training methods tell you about company culture in postwar Japan?</summary>
+    <div class="a"><ul><li>Company teams, loyalty to the firm, step-by-step improvement like quality-control circles, and acceptance of extreme demands (p. 470).</li></ul></div></details>
+  <details class="q"><summary>Documents: What are the conflicts between working and being a mother?</summary>
+    <div class="a"><ul><li>Neighbors assumed mothers stayed home; childcare for sick children was unavailable; absence was blamed for a child's illness (pp. 514–515).</li></ul></div></details>
+  <details class="q"><summary>Documents: How do women interact across the work divide?</summary>
+    <div class="a"><ul><li>Working and nonworking mothers formed separate circles; housewives ignored and then criticized the working mother (p. 515).</li></ul></div></details>
+  <details class="q"><summary>Documents: What roles are fathers expected to play in child rearing?</summary>
+    <div class="a"><ul><li>Little: when the father cared for the sick child, neighbors pitied him as unduly burdened (p. 515).</li></ul></div></details>
+</section>
+
+<!-- TERMS -->
+<section class="unit" id="terms">
+  <div class="sec-num">Reference</div>
+  <details class="terms-box" id="terms-box">
+    <summary><h2>Key terms</h2><span class="terms-hint">Click to expand</span></summary>
+    <div class="terms-body">
+  <p>Terms are grouped by topic. Where a term depends on another, the entry says what it <i>builds on</i>, so read those first. Hover or tap any <a class="term" href="#g-scap">dotted term</a> in the text for a quick definition, or open <b>✎</b> at the bottom right. † marks a term or fact from outside the textbook. Terms from earlier units are repeated briefly where you need them.</p>
+
+  <h3 class="gloss-group">From earlier units (review)</h3>
+  <dl class="gloss">
+    <div class="row" id="g-kokutai" data-short="The prewar 'national body' centered on the emperor."><dt>Kokutai</dt><dd>The "national body" or polity centered on the divine emperor, prewar Japan's core ideology. After defeat, popular culture replaced it with the physical body. <span class="cite">p. 462; <a href="unit14.html">Unit 14</a></span></dd></div>
+    <div class="row" id="g-showa" data-short="Hirohito, emperor 1926–1989."><dt>Shōwa emperor</dt><dd>Hirohito, emperor from 1926 until his death in 1989. Protected from trial by MacArthur; renounced divinity in 1946. <span class="cite">pp. 462–463, 520; <a href="unit14.html">Unit 14</a></span></dd></div>
+    <div class="row" id="g-potsdam" data-short="1945 Allied surrender terms."><dt>Potsdam Declaration</dt><dd>The 1945 Allied terms for Japan's surrender; it guaranteed Japan access to raw materials. <span class="cite">p. 467; <a href="unit14.html">Unit 14</a></span></dd></div>
+    <div class="row" id="g-diet" data-short="Japan's parliament."><dt>Diet</dt><dd>Japan's parliament, created under the Meiji constitution; made the sole lawmaking body in 1946. <span class="cite">p. 463; <a href="unit8.html">Unit 8</a></span></dd></div>
+    <div class="row" id="g-zaibatsu" data-short="Family-run business conglomerates."><dt>Conglomerates (zaibatsu†)</dt><dd>Family-controlled business groups such as Mitsui and Mitsubishi. SCAP broke up their holding companies, then stopped. <span class="cite">pp. 464–465; <a href="unit10.html">Unit 10</a></span></dd></div>
+    <div class="row" id="g-burakumin" data-short="Descendants of hereditary outcast groups."><dt>Burakumin</dt><dd>Descendants of hereditary outcast groups, the "new commoners" of 1871; still face job and marriage discrimination. <span class="cite">pp. 466, 515; <a href="unit10.html">Unit 10</a></span></dd></div>
+    <div class="row" id="g-ainu" data-short="Indigenous people of Hokkaido."><dt>Ainu</dt><dd>The indigenous people of Hokkaido, who launched a pride movement in the 1970s. <span class="cite">p. 515; <a href="unit10.html">Unit 10</a></span></dd></div>
+    <div class="row" id="g-newrel" data-short="Popular faiths founded since the 1800s."><dt>New religions</dt><dd>Religions founded since the nineteenth century; they multiplied after 1945 with religious freedom and urbanization. <span class="cite">pp. 468, 522; <a href="unit10.html">Unit 10</a></span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">The occupation</h3>
+  <dl class="gloss">
+    <div class="row" id="g-macarthur" data-short="U.S. general who ran the occupation."><dt>Douglas MacArthur</dt><dd>U.S. general who headed the occupation from August 30, 1945. <span class="cite">p. 461</span></dd></div>
+    <div class="row" id="g-scap" data-short="MacArthur and his occupation bureaucracy."><dt>SCAP</dt><dd>Supreme Commander of the Allied Powers: MacArthur's title, and shorthand for the occupation bureaucracy. <span class="cite">p. 462</span><span class="needs">Builds on: MacArthur</span></dd></div>
+    <div class="row" id="g-fec" data-short="Allied body in Washington that oversaw SCAP."><dt>Far East Commission (FEC)</dt><dd>The Allied body in Washington that oversaw SCAP policy, used to keep the Allies out of Japan. <span class="cite">p. 462</span></dd></div>
+    <div class="row" id="g-symbol" data-short="The emperor's role under the 1946 constitution."><dt>Symbol of the state</dt><dd>The emperor's role under the new constitution, after he declared himself human (Jan. 1, 1946). <span class="cite">p. 463</span><span class="needs">Builds on: Shōwa emperor</span></dd></div>
+    <div class="row" id="g-article9" data-short="Constitutional clause renouncing war and armed forces."><dt>Article 9</dt><dd>The constitution's no-war clause: Japan renounces war and will not maintain armed forces. Later read to allow self-defense. <span class="cite">p. 463</span></dd></div>
+    <div class="row" id="g-sdf" data-short="Japan's armed forces, from the 1950 Police Reserve."><dt>Self-Defense Force (SDF)</dt><dd>Japan's military, grown from Yoshida's 1950 Police Reserve. <span class="cite">p. 463</span><span class="needs">Builds on: Article 9</span></dd></div>
+    <div class="row" id="g-civilcode" data-short="1947 code of sexual equality and equal inheritance."><dt>New civil code</dt><dd>Abolished patriarchal household authority and required that all children share the estate. <span class="cite">p. 463</span></dd></div>
+    <div class="row" id="g-landreform" data-short="Forced sale of landlords' land to tenants."><dt>Land reform</dt><dd>SCAP's most radical reform: landlords sold land to the state for resale to tenants. By 1950 owner-farmers worked 90% of farmland. <span class="cite">p. 463</span></dd></div>
+    <div class="row" id="g-tul" data-short="December 1945 law legalizing unions."><dt>Trade Union Law</dt><dd>SCAP law of December 1945 that let workers organize; over half of nonfarm workers were unionized by 1948. <span class="cite">p. 464</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Economy and the reverse course</h3>
+  <dl class="gloss">
+    <div class="row" id="g-dodge" data-short="1949 austerity plan; ¥360 = $1."><dt>Dodge Line</dt><dd>Banker Joseph Dodge's austerity plan against inflation: a surplus budget, cuts, and a ¥360 rate. <span class="cite">p. 464</span></dd></div>
+    <div class="row" id="g-qc" data-short="Deming's methods for improving quality."><dt>Quality control</dt><dd>Statistical methods introduced by W. Edwards Deming in 1949 and adopted by export industries. <span class="cite">p. 464</span></dd></div>
+    <div class="row" id="g-jcpjsp" data-short="The main left-wing parties."><dt>JCP and JSP</dt><dd>Japan Communist Party and Japan Socialist Party, legal after 1945; they fostered unions and led the opposition. <span class="cite">p. 464</span></dd></div>
+    <div class="row" id="g-reverse" data-short="Shift from democratization to anticommunism."><dt>Reverse course</dt><dd>The occupation's turn against labor activism and toward building Japan as a Cold War ally. <span class="cite">p. 465</span><span class="needs">Builds on: SCAP, JCP and JSP</span></dd></div>
+    <div class="row" id="g-redpurge" data-short="Firing of about 22,000 suspected communists."><dt>Red Purge</dt><dd>SCAP's purge of "reds," first from the public sector, then during the Korean War from private firms. <span class="cite">p. 465</span><span class="needs">Builds on: Reverse course</span></dd></div>
+    <div class="row" id="g-miti" data-short="Ministry steering capital and technology to industry."><dt>MITI</dt><dd>Ministry of International Trade and Industry; channeled postal savings to firms, approved technology imports, and gave "administrative guidance." <span class="cite">pp. 465, 468</span></dd></div>
+    <div class="row" id="g-sectreaty" data-short="1951 treaties ending the occupation and keeping U.S. bases."><dt>Peace and security treaties</dt><dd>The 1951 agreements that ended the occupation (1952) but kept U.S. bases with extraterritoriality. <span class="cite">p. 465</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Politics and protest, 1952–1972</h3>
+  <dl class="gloss">
+    <div class="row" id="g-yoshida" data-short="Postwar prime minister, 1946–47 and 1948–54."><dt>Yoshida Shigeru</dt><dd>Conservative prime minister who refused to raise an army and signed the 1951 treaties. <span class="cite">pp. 463, 465</span></dd></div>
+    <div class="row" id="g-ldp" data-short="Conservative party that ruled from 1955."><dt>Liberal Democratic Party (LDP)</dt><dd>Formed in 1955 from two conservative parties; ruled almost continuously, with faction bosses choosing prime ministers. <span class="cite">p. 465</span></dd></div>
+    <div class="row" id="g-incomedoubling" data-short="Late-1950s government growth plan."><dt>Income Doubling Plan</dt><dd>Government plan announced at the end of the 1950s to spread prosperity. <span class="cite">p. 471</span><span class="needs">Builds on: LDP</span></dd></div>
+    <div class="row" id="g-sohyo" data-short="General Council of Trade Unions."><dt>Sōhyō</dt><dd>The General Council of Japanese Trade Unions; led opposition to the Productivity Center and the security treaty. <span class="cite">p. 466</span></dd></div>
+    <div class="row" id="g-zengakuren" data-short="Radical national student federation."><dt>Zengakuren</dt><dd>All Japan Federation of Student Self-Government Associations; active in the Anpo and Narita protests. <span class="cite">pp. 466, 511</span></dd></div>
+    <div class="row" id="g-miike" data-short="113-day strike at Mitsui's coal mine, 1960."><dt>Miike strike</dt><dd>Violent strike against layoffs at Mitsui's Miike coal mine as Japan switched to oil. <span class="cite">p. 466</span></dd></div>
+    <div class="row" id="g-kishi" data-short="Prime minister who forced through the 1960 treaty."><dt>Kishi Nobusuke</dt><dd>Prime minister, indicted but never tried as a war criminal; resigned after the 1960 protests. <span class="cite">p. 466</span></dd></div>
+    <div class="row" id="g-anpo" data-short="1959–60 protests against the security treaty."><dt>Anpo protests†</dt><dd>The largest demonstrations in Japanese history, against revising the U.S.–Japan security treaty. ("Anpo" is the Japanese short name for the treaty†.) <span class="cite">p. 466</span><span class="needs">Builds on: Peace and security treaties, Kishi</span></dd></div>
+    <div class="row" id="g-bll" data-short="Burakumin rights organization, 1955."><dt>Buraku Liberation League (BLL)</dt><dd>Founded 1955; allied with the JCP and JSP to publicize discrimination. <span class="cite">p. 466</span><span class="needs">Builds on: Burakumin</span></dd></div>
+    <div class="row" id="g-denounce" data-short="BLL tactic of public denunciation."><dt>Denunciation campaigns</dt><dd>BLL confrontations with discriminators, sometimes violent, used because the 1969 law had no teeth. <span class="cite">pp. 466–467</span><span class="needs">Builds on: BLL</span></dd></div>
+    <div class="row" id="g-citizens" data-short="Grassroots local movements, mostly against pollution."><dt>Citizens' movements</dt><dd>Local campaigns by ordinary residents outside party politics, especially against pollution. <span class="cite">p. 511</span></dd></div>
+    <div class="row" id="g-minamata" data-short="Mercury poisoning from Chisso's factory waste."><dt>Minamata disease</dt><dd>Methyl-mercury poisoning from the Chisso factory at Minamata; the landmark pollution case. <span class="cite">p. 511</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Growth, culture, and society</h3>
+  <dl class="gloss">
+    <div class="row" id="g-lifetime" data-short="Job for life with seniority pay at big firms."><dt>Lifetime employment</dt><dd>Permanent employment with seniority raises at large firms; covered less than half the workforce. <span class="cite">pp. 467, 513</span></dd></div>
+    <div class="row" id="g-shinkansen" data-short="Bullet train opened for the 1964 Olympics."><dt>Shinkansen</dt><dd>The bullet train, Tokyo to Osaka in 3 hours 10 minutes, centerpiece of the 1964 Olympics. <span class="cite">p. 469</span></dd></div>
+    <div class="row" id="g-sokagakkai" data-short="Largest new religion, Nichiren Buddhist."><dt>Sōka Gakkai</dt><dd>"Value-creating society," a lay Nichiren Buddhist new religion, the largest by the 1960s. <span class="cite">p. 468</span><span class="needs">Builds on: New religions</span></dd></div>
+    <div class="row" id="g-komeito" data-short="Sōka Gakkai's party, 1964."><dt>Kōmeitō</dt><dd>The Clean Government Party, Sōka Gakkai's political arm, founded 1964; Japan's third-largest party. <span class="cite">p. 468</span><span class="needs">Builds on: Sōka Gakkai</span></dd></div>
+    <div class="row" id="g-ol" data-short="Female office worker expected to quit at marriage."><dt>Office lady (OL)</dt><dd>A woman clerical worker expected to put the company first and retire at marriage. <span class="cite">p. 513</span></dd></div>
+    <div class="row" id="g-kyoikumama" data-short="'Education mother.'"><dt>Kyōiku mama</dt><dd>"Education mother," obsessed with her children's educational success. <span class="cite">p. 514</span></dd></div>
+    <div class="row" id="g-eeoa" data-short="1985 equal-treatment law with no sanctions."><dt>Equal Employment Opportunity Act</dt><dd>1985 law urging employers to treat women like men, with no penalties. <span class="cite">p. 515</span></dd></div>
+    <div class="row" id="g-kayano" data-short="Ainu activist and Diet member."><dt>Kayano Shigeru</dt><dd>Ainu cultural activist; opened a museum (1972) and became the first Ainu Diet member (1994). <span class="cite">p. 515</span><span class="needs">Builds on: Ainu</span></dd></div>
+    <div class="row" id="g-zainichi" data-short="Koreans living in Japan as resident aliens."><dt>Resident Koreans (zainichi†)</dt><dd>Koreans who stayed in Japan after 1945 and became permanent resident aliens, without the vote until 1991's local-election change. <span class="cite">p. 516</span></dd></div>
+    <div class="row" id="g-nihonjinron" data-short="Theories of Japanese uniqueness."><dt>Nihonjinron</dt><dd>"Theories of Japaneseness" claiming a uniquely homogeneous, harmonious people. <span class="cite">p. 516</span></dd></div>
+    <div class="row" id="g-manga" data-short="Japanese comics for all ages."><dt>Manga</dt><dd>Japanese comics, in their modern form from 1959; sales peaked in 1994. <span class="cite">p. 519</span></dd></div>
+    <div class="row" id="g-furusato" data-short="The 'home village' as source of identity."><dt>Furusato</dt><dd>"Home village," idealized in the 1980s as the root of Japanese identity. <span class="cite">p. 519</span></dd></div>
+  </dl>
+
+  <h3 class="gloss-group">Shocks, boom, and stagnation</h3>
+  <dl class="gloss">
+    <div class="row" id="g-tanaka" data-short="Prime minister forced out over pork-barrel excess, 1974."><dt>Tanaka Kakuei</dt><dd>LDP prime minister; built a bullet-train line to his district; went to China in 1972; resigned in 1974. <span class="cite">pp. 512</span></dd></div>
+    <div class="row" id="g-nixonshocks" data-short="1971 end of fixed rates; 1972 China opening."><dt>Nixon shocks</dt><dd>The 1971 end of fixed exchange rates and Nixon's 1972 China opening without warning Japan. <span class="cite">p. 512</span></dd></div>
+    <div class="row" id="g-oilshock" data-short="1973 OPEC embargo."><dt>Oil shock</dt><dd>OPEC's 1973 embargo; Japan relied on oil for 80% of its energy. A second shock came in 1978–80. <span class="cite">pp. 512–513</span></dd></div>
+    <div class="row" id="g-nakasone" data-short="Prime minister 1982–87; privatization."><dt>Nakasone Yasuhiro</dt><dd>Prime minister 1982–1987; privatized JNR and NTT; family values and "internationalization." <span class="cite">p. 518</span></dd></div>
+    <div class="row" id="g-plaza" data-short="1985 G5 deal to lower the dollar†."><dt>Plaza Accord†</dt><dd>The September 1985 agreement of five major economies to bring down the dollar; the yen roughly doubled. The book describes it as Reagan devaluing the dollar. <span class="cite">p. 517</span></dd></div>
+    <div class="row" id="g-ntb" data-short="Rules and systems that keep imports out."><dt>Non-tariff barriers</dt><dd>Quality rules, layered distribution, and zoning that limited imports without tariffs. <span class="cite">p. 517</span></dd></div>
+    <div class="row" id="g-yasukuni" data-short="Shrine to war dead, including war criminals."><dt>Yasukuni Shrine</dt><dd>Shrine where war criminals are enshrined; prime ministers' visits anger Asian neighbors. <span class="cite">p. 518</span></dd></div>
+    <div class="row" id="g-bubble" data-short="Late-1980s speculative boom in land and stocks."><dt>Bubble economy</dt><dd>Speculative boom in land and stocks that collapsed from 1990. <span class="cite">pp. 520–521</span><span class="needs">Builds on: Plaza Accord</span></dd></div>
+    <div class="row" id="g-heisei" data-short="Era name from 1989."><dt>Heisei</dt><dd>The era name taken in 1989, translatable as "achieving peace." <span class="cite">p. 520</span></dd></div>
+    <div class="row" id="g-recruit" data-short="1989 bribery scandal."><dt>Recruit scandal</dt><dd>Prime Minister Takeshita resigned over 150 million yen from Recruit Cosmo. <span class="cite">p. 520</span></dd></div>
+    <div class="row" id="g-koizumi" data-short="Prime minister from 2001; reforms."><dt>Koizumi Jun'ichirō</dt><dd>LDP prime minister from 2001; structural reform and post office privatization. <span class="cite">pp. 520–521</span></dd></div>
+    <div class="row" id="g-aum" data-short="Cult behind the 1995 subway gas attack."><dt>Aum Shinrikyō</dt><dd>New religion whose followers released poison gas in the Tokyo subway in March 1995. <span class="cite">p. 522</span><span class="needs">Builds on: New religions</span></dd></div>
+    <div class="row" id="g-parasite" data-short="Label for young adults living with parents."><dt>Parasite singles</dt><dd>Critics' label for young people living with parents and avoiding permanent jobs. <span class="cite">p. 522</span></dd></div>
+    <div class="row" id="g-fukushima" data-short="Nuclear plant that melted down in 2011."><dt>Fukushima</dt><dd>Nuclear plant destroyed by the March 11, 2011, tsunami; second only to Chernobyl. <span class="cite">p. 521</span></dd></div>
+  </dl>
+    </div>
+  </details>
+</section>
+
+<!-- SOURCES -->
+<section class="unit" id="sources">
+  <div class="sec-num">Resources</div>
+  <h2>Sources and further reading</h2>
+  <ul class="sources">
+    <li><strong>Main text:</strong> Patricia Buckley Ebrey &amp; Anne Walthall, <em>Modern East Asia from 1600: A Cultural, Social, and Political History</em>, 3rd ed. (Cengage, 2013), Ch. 26, "War and Aftermath in Japan (1931–1964)," pp. 461–471, including Material Culture: "The Transistor" (p. 469) and Biography: "Daimatsu Hirobumi, Soldier and Volleyball Coach" (p. 470); and Ch. 29, "Contemporary Japan (1965 to the Present)," pp. 510–523, including Documents: Fujita Mariko, "'It's All Mother's Fault'" (pp. 514–515) and Material Culture: "Manga" (p. 519).</li>
+    <li><strong>Outside facts (marked †):</strong> the hero heading 戦後日本 ("postwar Japan"); the words <i>zaibatsu</i>, <i>zainichi</i>, and "Anpo"; the constitution's effective date; the name "Plaza Accord"; the date of Narita's opening (1978); and all photo dates and details, which come from each image's catalog record.</li>
+    <li><strong>Explore further:</strong> Wikipedia, <a href="https://en.wikipedia.org/wiki/Occupation_of_Japan">"Occupation of Japan"</a>, <a href="https://en.wikipedia.org/wiki/Anpo_protests">"Anpo protests"</a>, <a href="https://en.wikipedia.org/wiki/Minamata_disease">"Minamata disease"</a>, <a href="https://en.wikipedia.org/wiki/Japanese_asset_price_bubble">"Japanese asset price bubble"</a>, and <a href="https://en.wikipedia.org/wiki/Lost_Decades">"Lost Decades"</a>, for background (follow the textbook where they differ).</li>
+    <li><strong>Books cited in the chapters:</strong> Dale M. Hellegers, <i>We, the Japanese People: World War II and the Origins of the Japanese Constitution</i> (2002); Yoshikuni Igarashi, <i>Bodies of Memory: Narratives of War in Postwar Japan</i> (2000); Mary C. Brinton, <i>Women and the Economic Miracle</i> (1992); Fujita Mariko, <i>Journal of Japanese Studies</i> 15:1 (1989).</li>
+  </ul>
+
+  <h3>Fact-check notes</h3>
+  <p>Every statement in this guide was checked against Chs. 26 and 29. A few of the book's statements differ from other standard references; the guide keeps the book's version in the text and notes the differences here.</p>
+  <ul class="sources">
+    <li><b>Kobe earthquake deaths (p. 521).</b> The book says the January 17, 1995, earthquake "killed more than 520,000 people." The official toll is <b>6,434 dead</b>†, per the Fire and Disaster Management Agency (<a href="https://www.data.jma.go.jp/eqev/data/1995_01_17_hyogonanbu/gaiyo.html">Japan Meteorological Agency summary</a>; <a href="https://www.nippon.com/en/japan-data/h00629/25-years-after-disaster-looking-back-on-the-great-hanshin-awaji-earthquake.html">nippon.com</a>). The book's figure appears to be a typo.</li>
+    <li><b>The island airport (p. 511).</b> The book calls it "Osaka International Airport." The airport built on an artificial island in Osaka Bay is <b>Kansai International Airport</b>, opened September 4, 1994†; Osaka International (Itami) is the older inland airport (<a href="https://earthobservatory.nasa.gov/images/4215/kansai-airport">NASA Earth Observatory</a>).</li>
+    <li><b>"Reagan devalued the dollar in 1985" (p. 517).</b> This was the <b>Plaza Accord</b> of September 22, 1985†, a joint agreement by the United States, Japan, West Germany, France, and Britain. The yen rose from about ¥240 to about ¥127 to the dollar within three years† (<a href="https://www.jbic.go.jp/en/information/today/today_202310/jtd_202310_column1.html">Japan Bank for International Cooperation</a>).</li>
+    <li><b>"Nixon recognized the People's Republic of China" (p. 512).</b> Nixon <i>visited</i> China in February 1972; formal U.S. recognition came only in January 1979†. Japan normalized relations with the PRC in September 1972† after Tanaka's visit.</li>
+    <li><b>Aum deaths (p. 522).</b> The book gives twelve; later official counts are thirteen or fourteen, as injured victims died†.</li>
+    <li><b>"World's third largest economy" (p. 523)</b> was true when the book appeared (2012). Japan has since slipped to fourth, behind Germany (2023 data)†.</li>
+  </ul>
+
+  <h3>Image credits</h3>
+  <ul class="sources" id="credits">
+    <li>MacArthur and the emperor, September 27, 1945, Lt. Gaetano Faillace, U.S. Army: public domain, <a href="https://commons.wikimedia.org/wiki/File:Macarthur_hirohito.jpg">Wikimedia Commons</a>.</li>
+    <li>Yoshida signs the San Francisco Peace Treaty, September 8, 1951: public domain, <a href="https://commons.wikimedia.org/wiki/File:Yoshida_signs_San_Francisco_Peace_Treaty.jpg">Wikimedia Commons</a>.</li>
+    <li>Protesters around the National Diet, June 18, 1960: public domain, <a href="https://commons.wikimedia.org/wiki/File:The_Anpo_protests.jpg">Wikimedia Commons</a>.</li>
+    <li>Sony TR-55 transistor radio, 2018, ブルーノ・プラス: CC0, <a href="https://commons.wikimedia.org/wiki/File:Transistor_radio_TR-55_by_sony.jpg">Wikimedia Commons</a>.</li>
+    <li>0 Series Shinkansen at Higashi-Hiroshima Station, 2008, Nadate (Japanese Wikipedia): CC BY 3.0, <a href="https://commons.wikimedia.org/wiki/File:Shinkansen_Series0_R67_JNRcolor.jpg">Wikimedia Commons</a>.</li>
+    <li>Sakai Yoshinori at the 1964 opening ceremony, <i>Asahi Shimbun</i>: public domain, <a href="https://commons.wikimedia.org/wiki/File:Yoshinori_Sakai_1964c.jpg">Wikimedia Commons</a>.</li>
+    <li>Clashes near Sanrizuka, October 20, 1985, National Police Agency: CC BY 4.0, <a href="https://commons.wikimedia.org/wiki/File:Sanrizuka-Struggle.png">Wikimedia Commons</a>.</li>
+    <li>Minamata Disease Municipal Museum, hyolee2: CC BY-SA 3.0, <a href="https://commons.wikimedia.org/wiki/File:Minamata_Disease_Municipal_Museum_01.JPG">Wikimedia Commons</a>.</li>
+    <li>Hanshin Expressway near Iwaya, Nada Ward, January 17, 1995, City of Kobe: CC BY 2.1 JP, <a href="https://commons.wikimedia.org/wiki/File:Hanshin_Expressway_Nada_b059.jpg">Wikimedia Commons</a>.</li>
+    <li>Otsuchi, Iwate, March 15, 2011, MC3 Alexander Tidd, U.S. Navy: public domain, <a href="https://commons.wikimedia.org/wiki/File:US_Navy_110315-N-5503T-307_An_aerial_view_of_damage_to_Otsuchi,_Japan,_after_a_9.0_magnitude_earthquake_and_subsequent_tsunami_devastated_the_area_in_northern_Japan.jpg">Wikimedia Commons</a>.</li>
+    <li>All other figures (charts, timeline, cards): drawn for this guide from the textbook's text.</li>
+  </ul>
+  <p class="cite" style="white-space:normal">Image titles and dates come from each image's catalog record, not from the textbook.</p>
+
+  <footer class="end">
+    <a href="unit16.html">← Unit 16 · Korea Divided</a>
+    <a href="index.html">All units</a>
+    <span>Next: Unit 18 · China Since Mao (coming soon)</span>
+  </footer>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  var root=document.documentElement;
+
+  // theme toggle
+  try{var saved=localStorage.getItem('theme');if(saved)root.setAttribute('data-theme',saved);}catch(e){}
+  var tb=document.getElementById('theme-btn');
+  if(tb)tb.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+
+  // mobile toc copy
+  var mt=document.getElementById('mtoc');
+  document.querySelectorAll('#toc-list a').forEach(function(a){var li=document.createElement('li');var c=a.cloneNode(true);c.addEventListener('click',function(){mt.parentNode.removeAttribute('open')});li.appendChild(c);mt.appendChild(li);});
+
+  // progress + scrollspy
+  var bar=document.getElementById('progress');
+  var links=[].slice.call(document.querySelectorAll('#toc-list a'));
+  var mlinks=[].slice.call(document.querySelectorAll('#mtoc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var mcur=document.getElementById('mtoc-cur'),tocNav=document.querySelector('nav.toc'),last=-1;
+  function keepVisible(box,el){if(!box||!el||box.scrollHeight<=box.clientHeight)return;var bt=box.getBoundingClientRect(),et=el.getBoundingClientRect();if(et.top<bt.top+8)box.scrollTop-=bt.top+8-et.top;else if(et.bottom>bt.bottom-8)box.scrollTop+=et.bottom-bt.bottom+8;}
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?scrollY/h*100:0)+'%';
+    var cur=0;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*0.3)cur=i});
+    if(cur===last)return;last=cur;
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur)});
+    mlinks.forEach(function(a,i){a.classList.toggle('active',i===cur);if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    if(mcur)mcur.textContent=links[cur].textContent;
+    keepVisible(tocNav,links[cur]);keepVisible(document.getElementById('mtoc'),mlinks[cur]);
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  mt.parentNode.addEventListener('toggle',function(){if(mt.parentNode.open&&last>-1)keepVisible(mt,mlinks[last])});
+
+  // reveal + bars
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.06});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var bio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'});bio.unobserve(e.target)}})},{threshold:0.4});
+  var bars=document.getElementById('bars');if(bars)bio.observe(bars);
+
+  // glossary tooltips
+  var tip=document.getElementById('tip');
+  function show(a){
+    var row=document.querySelector(a.getAttribute('href'));if(!row)return;
+    var dt=row.querySelector('dt'),dd=row.querySelector('dd').cloneNode(true);
+    dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    tip.innerHTML='';var b=document.createElement('b');b.textContent=dt.firstChild.textContent.trim();tip.appendChild(b);tip.appendChild(document.createTextNode(dd.textContent.trim()));
+    var r=a.getBoundingClientRect();tip.classList.add('on');
+    var w=tip.offsetWidth,left=Math.min(Math.max(8,r.left+scrollX+r.width/2-w/2),scrollX+document.documentElement.clientWidth-w-8);
+    var top=r.top+scrollY-tip.offsetHeight-8;if(r.top<tip.offsetHeight+16)top=r.bottom+scrollY+8;
+    tip.style.left=left+'px';tip.style.top=top+'px';
+  }
+  function hide(){tip.classList.remove('on')}
+  document.querySelectorAll('a.term').forEach(function(a){
+    a.addEventListener('mouseenter',function(){show(a)});a.addEventListener('mouseleave',hide);
+    a.addEventListener('focus',function(){show(a)});a.addEventListener('blur',hide);
+    a.addEventListener('click',function(ev){if(matchMedia('(hover: none)').matches&&!a.dataset.shown){ev.preventDefault();document.querySelectorAll('a.term').forEach(function(x){delete x.dataset.shown});a.dataset.shown=1;show(a);}});
+  });
+  addEventListener('scroll',hide,{passive:true});
+
+
+  // key-term notes widget (short versions of the Key terms section)
+  var notes=document.getElementById('notes'),nb=document.getElementById('notes-btn'),nl=document.getElementById('notes-list'),ns=document.getElementById('notes-search');
+  document.querySelectorAll('#terms .gloss-group').forEach(function(g){
+    var dl=g.nextElementSibling,h=document.createElement('div');h.className='grp';h.textContent=g.textContent;nl.appendChild(h);
+    dl.querySelectorAll('.row').forEach(function(r){
+      var a=document.createElement('a');a.className='item';a.href='#'+r.id;
+      var b=document.createElement('b');b.textContent=r.querySelector('dt').firstChild.textContent.trim();
+      a.appendChild(b);a.appendChild(document.createTextNode(r.dataset.short));
+      a.addEventListener('click',function(){if(innerWidth<700)toggleNotes(false)});
+      nl.appendChild(a);
+    });
+  });
+  var empty=document.createElement('div');empty.className='empty';empty.textContent='No matching terms.';empty.hidden=true;nl.appendChild(empty);
+  function toggleNotes(open){
+    if(open===undefined)open=!notes.classList.contains('open');
+    notes.classList.toggle('open',open);notes.setAttribute('aria-hidden',!open);nb.setAttribute('aria-expanded',open);
+    if(open)setTimeout(function(){ns.focus({preventScroll:true})},50);
+  }
+  nb.addEventListener('click',function(){toggleNotes()});
+  document.getElementById('notes-close').addEventListener('click',function(){toggleNotes(false);nb.focus()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&notes.classList.contains('open')){toggleNotes(false);nb.focus()}});
+  ns.addEventListener('input',function(){
+    var q=ns.value.trim().toLowerCase(),any=false;
+    nl.querySelectorAll('.item').forEach(function(a){var m=!q||a.textContent.toLowerCase().indexOf(q)>-1;a.hidden=!m;if(m)any=true});
+    nl.querySelectorAll('.grp').forEach(function(g){var n=g.nextElementSibling,vis=false;while(n&&n.classList.contains('item')){if(!n.hidden)vis=true;n=n.nextElementSibling}g.hidden=!vis});
+    empty.hidden=any;
+  });
+
+  // return to top
+  var tt=document.getElementById('totop');
+  tt.addEventListener('click',function(){scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  function ttShow(){tt.classList.toggle('show',scrollY>600)}
+  addEventListener('scroll',ttShow,{passive:true});ttShow();
+
+
+  // ---- shared helpers ----
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function onSeen(el,fn,th){if(!el)return;if(RM||!('IntersectionObserver' in window)){fn();return}var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){fn();o.disconnect()}},{threshold:th||0.4});o.observe(el);}
+  var NS='http://www.w3.org/2000/svg';
+  function el(tag,at,par,txt){var e=document.createElementNS(NS,tag);for(var k in at)e.setAttribute(k,at[k]);if(txt!=null)e.textContent=txt;if(par)par.appendChild(e);return e}
+  function capSet(cap,title,text){cap.innerHTML='';var b=document.createElement('b');b.textContent=title;cap.appendChild(b);cap.appendChild(document.createTextNode(text));}
+
+  // share bars
+  document.querySelectorAll('.share').forEach(function(sh){onSeen(sh,function(){sh.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'})})});
+
+
+  // ---- unit 17 ----
+  // no unit-specific scripts: the share bars (Figures 5, 12, 14) use the shared helper above
+
+  // flip cards
+  document.querySelectorAll('.idcard').forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true')})});
+
+  // lightbox
+  var lb=document.getElementById('lightbox'),lbi=lb.querySelector('img');
+  document.querySelectorAll('img.zoomable').forEach(function(img){img.addEventListener('click',function(){lbi.src=img.src;lbi.alt=img.alt;lb.classList.add('on')})});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+  addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+  // flashcards from glossary
+  var cards=[].slice.call(document.querySelectorAll('.gloss .row')).map(function(r){
+    var dd=r.querySelector('dd').cloneNode(true);dd.querySelectorAll('.cite,.needs').forEach(function(n){n.remove()});
+    return{t:r.querySelector('dt').firstChild.textContent.trim(),d:dd.textContent.trim()};});
+  var i=0,fc=document.getElementById('fc');
+  function render(){fc.classList.remove('flip');document.getElementById('fc-term').textContent=cards[i].t;document.getElementById('fc-def').textContent=cards[i].d;document.getElementById('fc-count').textContent=(i+1)+' / '+cards.length;}
+  fc.addEventListener('click',function(){fc.classList.toggle('flip')});
+  fc.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();fc.classList.toggle('flip')}else if(e.key==='ArrowRight'){i=(i+1)%cards.length;render()}else if(e.key==='ArrowLeft'){i=(i-1+cards.length)%cards.length;render()}});
+  document.getElementById('fc-next').addEventListener('click',function(){i=(i+1)%cards.length;render()});
+  document.getElementById('fc-prev').addEventListener('click',function(){i=(i-1+cards.length)%cards.length;render()});
+  document.getElementById('fc-shuffle').addEventListener('click',function(){for(var k=cards.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=cards[k];cards[k]=cards[j];cards[j]=t}i=0;render()});
+  render();
+})();
+</script>
+<script>
+(function(){
+  var qs=[].slice.call(document.querySelectorAll('details.q')),ex=document.getElementById('q-expand'),co=document.getElementById('q-collapse');
+  if(!qs.length||!ex||!co)return;
+  function sync(){var n=qs.filter(function(d){return d.open}).length;ex.disabled=n===qs.length;co.disabled=n===0;}
+  ex.addEventListener('click',function(){qs.forEach(function(d){d.open=true});sync();});
+  co.addEventListener('click',function(){qs.forEach(function(d){d.open=false});sync();});
+  qs.forEach(function(d){d.addEventListener('toggle',sync)});
+  sync();
+})();
+</script>
+<script>
+// collapsible key terms: open automatically when a link points into it, and for printing
+(function(){
+  var box=document.getElementById('terms-box');if(!box)return;
+  var hint=box.querySelector('.terms-hint');
+  function label(){if(hint)hint.textContent=box.querySelectorAll('.gloss .row').length+' terms · '+(box.open?'click to collapse':'click to expand');}
+  function openFor(h){if(!h||h.charAt(0)!=='#'||h.length<2)return;var t;try{t=document.getElementById(decodeURIComponent(h.slice(1)))}catch(e){return}
+    if(t&&(t===box.parentNode||box.contains(t))&&!box.open)box.open=true;}
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  addEventListener('hashchange',function(){openFor(location.hash)});
+  addEventListener('beforeprint',function(){box.open=true});
+  box.addEventListener('toggle',label);
+  openFor(location.hash);label();
+})();
+</script>
+</body>
+</html>
