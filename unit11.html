@@ -912,6 +912,13 @@ h1 .ja{font-family:var(--serif)}
 /* keep the page inside the screen on phones: grid children may shrink below their content width */
 body{overflow-x:clip}
 .side>*,.grid>*,.think>*,.versus>*,.contrast>*,.mapgrid>*,.stats>*,.pair-fig>*,.pairs>*,.pair>*,.idgrid>*,.status>*,.windows>*{min-width:0}
+
+/* ---- equal image sets: figures shown together share one width and one crop ---- */
+.eqset.eqset{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);align-items:start;margin:18px 0}
+@media (min-width:640px){.eqset.eqset.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.eqset.eqset.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.eqset.eqset>figure{margin:0!important;max-width:none!important;width:auto}
+.eqset.eqset>figure img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ar,3/2);object-fit:cover}
+.eqset.eqset.portrait{max-width:560px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="no-js">
@@ -1116,9 +1123,9 @@ body{overflow-x:clip}
     <li><span class="n">8</span><b>1909.</b> Itō travels to Manchuria to win Russia's consent to annexation. The Korean patriot <b>An Junggeun</b> assassinates him in Harbin. The new resident general, Terauchi Masatake, silences all criticism.</li>
     <li><span class="n">9</span><b>August 22, 1910.</b> Korea becomes Japan's colony, as announced to Koreans on August 29.</li>
   </ol>
-  <div class="grid g3 figrow">
+  <div class="grid g3 figrow eqset c3" style="--ar:1/1">
     <figure>
-      <img class="zoomable" src="assets/unit11/hague-emissaries-1907.jpg" width="1200" height="906" alt="Three Korean men in Western suits posed together" loading="lazy">
+      <img style="object-position:50% 30%" class="zoomable" src="assets/unit11/hague-emissaries-1907.jpg" width="1200" height="906" alt="Three Korean men in Western suits posed together" loading="lazy">
       <figcaption><span class="fn">Figure 4.</span> Gojong's envoys to The Hague, 1907: Yi Jun, Yi Sangseol, and Yi Wijong†. Photographer unknown. Public domain.</figcaption>
     </figure>
     <figure>
@@ -1126,7 +1133,7 @@ body{overflow-x:clip}
       <figcaption><span class="fn">Figure 5.</span> Korean guerrillas of the "Righteous Army"† after the army was dissolved, photographed by F. A. McKenzie, 1907. Public domain.</figcaption>
     </figure>
     <figure>
-      <img class="zoomable" src="assets/unit11/an-jung-geun.jpg" width="393" height="500" alt="Portrait photograph of An Junggeun, seated, in a dark jacket" loading="lazy">
+      <img style="object-position:50% 15%" class="zoomable" src="assets/unit11/an-jung-geun.jpg" width="393" height="500" alt="Portrait photograph of An Junggeun, seated, in a dark jacket" loading="lazy">
       <figcaption><span class="fn">Figure 6.</span> An Junggeun, who killed Itō Hirobumi in 1909. Photograph before 1910. Public domain.</figcaption>
     </figure>
   </div>

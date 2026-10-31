@@ -1120,6 +1120,13 @@ td.barcell.lab{font-size:.8rem;color:var(--muted)}
 #seventies .contrast{column-gap:16px;row-gap:12px}
 #seventies .pivot span{white-space:normal;text-align:center;font-size:1rem;line-height:1.25;padding:8px 12px;max-width:124px;box-sizing:border-box}
 @media (min-width:640px){#seventies .contrast{grid-template-columns:minmax(0,1fr) 132px minmax(0,1fr)}}
+
+/* ---- equal image sets: figures shown together share one width and one crop ---- */
+.eqset.eqset{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);align-items:start;margin:18px 0}
+@media (min-width:640px){.eqset.eqset.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.eqset.eqset.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.eqset.eqset>figure{margin:0!important;max-width:none!important;width:auto}
+.eqset.eqset>figure img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ar,3/2);object-fit:cover}
+.eqset.eqset.portrait{max-width:560px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="no-js">
@@ -1179,7 +1186,7 @@ td.barcell.lab{font-size:.8rem;color:var(--muted)}
   <div class="meta">
     <span class="chip"><b>Reading:</b> Ebrey &amp; Walthall, Ch. 26, "War and Aftermath in Japan," pp. 461–471 (Occupation to 1964), and Ch. 29, "Contemporary Japan (1965 to the Present)," pp. 510–523</span>
     <span class="chip"><b>Before:</b> <a href="unit16.html">Unit 16 · Korea Divided</a></span>
-    <span class="chip"><b>Next:</b> Unit 18 · China Since Mao</span>
+    <span class="chip"><b>Next:</b> <a href="unit18.html">Unit 18 · China Since Mao</a></span>
   </div>
 </header>
 
@@ -1454,13 +1461,13 @@ td.barcell.lab{font-size:.8rem;color:var(--muted)}
 
   <h3>The 1964 Tokyo Olympics <span class="cite">p. 469</span></h3>
   <p>The Olympics marked the climax of high-speed growth and a turning point. Tokyo paved and cleaned streets; rebuilt stores, schools, and offices; built stadiums at Yoyogi Park, subways, roads, and new hotels (Japan's first postwar high-rises); and linked a renovated Haneda Airport to the city by monorail. The centerpiece was the <a class="term" href="#g-shinkansen">Shinkansen</a> (bullet train), which ran Tokyo to Osaka in 3 hours 10 minutes, the fastest, most reliable, and safest train in the world. Japan had joined the United Nations in 1956; worldwide coverage of the games showed a peaceful modern state, and Ichikawa Kon's documentary turned them into art.</p>
-  <div class="side">
+  <div class="side eqset c2" style="--ar:1/1">
     <figure class="fig" id="fig-shinkansen" style="margin:0">
-      <img class="zoomable" src="assets/unit17/shinkansen-0-series.jpg" width="960" height="720" alt="A white and blue bullet train with a rounded nose at a station platform" loading="lazy">
+      <img style="object-position:65% 50%" class="zoomable" src="assets/unit17/shinkansen-0-series.jpg" width="960" height="720" alt="A white and blue bullet train with a rounded nose at a station platform" loading="lazy">
       <figcaption><span class="fn">Figure 7.</span> A 0 Series Shinkansen, the original bullet-train design of 1964, still running in 2008†. Photo: Nadate, CC BY 3.0.</figcaption>
     </figure>
     <figure class="port" id="fig-torch" style="margin:0">
-      <img class="zoomable" src="assets/unit17/sakai-torch-1964.jpg" width="691" height="926" alt="A young runner in white carries the Olympic torch up the stadium steps before a packed crowd" loading="lazy">
+      <img style="object-position:50% 40%" class="zoomable" src="assets/unit17/sakai-torch-1964.jpg" width="691" height="926" alt="A young runner in white carries the Olympic torch up the stadium steps before a packed crowd" loading="lazy">
       <figcaption><span class="fn">Figure 8.</span> Sakai Yoshinori carries the flame at the opening ceremony, October 10, 1964†. He was born near Hiroshima on the day of the atomic bombing†. Photo: <i>Asahi Shimbun</i>; public domain.</figcaption>
     </figure>
   </div>
@@ -1969,7 +1976,7 @@ td.barcell.lab{font-size:.8rem;color:var(--muted)}
   <footer class="end">
     <a href="unit16.html">← Unit 16 · Korea Divided</a>
     <a href="index.html">All units</a>
-    <span>Next: Unit 18 · China Since Mao (coming soon)</span>
+    <a href="unit18.html">Next: Unit 18 · China Since Mao →</a>
   </footer>
 </section>
 </main>

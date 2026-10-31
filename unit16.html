@@ -1114,6 +1114,13 @@ td.barcell.lab{font-size:.8rem;color:var(--muted)}
 .wmap2 .legend2 i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
 @media (max-width:480px){.gl.axis .gt b:nth-child(2){display:none}}
 
+
+/* ---- equal image sets: figures shown together share one width and one crop ---- */
+.eqset.eqset{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);align-items:start;margin:18px 0}
+@media (min-width:640px){.eqset.eqset.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.eqset.eqset.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.eqset.eqset>figure{margin:0!important;max-width:none!important;width:auto}
+.eqset.eqset>figure img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ar,3/2);object-fit:cover}
+.eqset.eqset.portrait{max-width:560px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="no-js">
@@ -1296,7 +1303,7 @@ td.barcell.lab{font-size:.8rem;color:var(--muted)}
     <figcaption><span class="fn">Figure 2.</span> Korea in five layers. Places and dates come from the text of Ch. 28 and the textbook's Map 28.1, "Korean War" (p. 493); lines and arrows are approximate. Base map drawn for this guide from Natural Earth coastlines (the same base as <a href="unit9.html">Unit 9</a>).</figcaption>
   </figure>
 
-  <div class="side">
+  <div class="side eqset c2 portrait" style="--ar:4/5">
     <figure class="port" id="fig-incheon">
       <img class="zoomable" src="assets/unit16/incheon-seawall-1950.jpg" width="960" height="1202" alt="Marines climbing a ladder over a stone seawall from a landing craft" loading="lazy">
       <figcaption><span class="fn">Figure 3.</span> U.S. Marines climb the seawall at Incheon's Red Beach, September 15, 1950. U.S. Marine Corps photo; public domain.</figcaption>

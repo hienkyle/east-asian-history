@@ -891,6 +891,13 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
 body{overflow-x:clip}
 .share .track{display:block;margin:0}
 .side>*,.grid>*,.think>*,.versus>*,.contrast>*,.mapgrid>*,.stats>*,.pair-fig>*,.pairs>*,.pair>*,.idgrid>*,.status>*,.windows>*{min-width:0}
+
+/* ---- equal image sets: figures shown together share one width and one crop ---- */
+.eqset.eqset{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);align-items:start;margin:18px 0}
+@media (min-width:640px){.eqset.eqset.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.eqset.eqset.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.eqset.eqset>figure{margin:0!important;max-width:none!important;width:auto}
+.eqset.eqset>figure img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ar,3/2);object-fit:cover}
+.eqset.eqset.portrait{max-width:560px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="no-js">
@@ -1436,9 +1443,9 @@ body{overflow-x:clip}
     <li><span class="n">6</span><b>Japan forces war anyway.</b> It sends more troops than China, makes impossible demands, attacks China without declaring war, surrounds the palace, and keeps the king and queen in custody.</li>
     <li><span class="n">7</span><b>A second rising.</b> Angry at Japan's takeover and the return of the 1884 "traitors," Jeon's Donghak rise to drive Japan out and are defeated by Japanese troops with modern weapons and units of the Korean army.</li>
   </ol>
-  <div class="grid g2">
+  <div class="grid g2 eqset c2" style="--ar:3/2">
     <figure id="jeonfig" style="margin:0">
-      <img class="zoomable" src="assets/unit9/jeon-bongjun-1895.jpg" width="960" height="679" alt="Jeon Bongjun, injured, sits in a litter carried by two men while Japanese guards stand by in the snow" loading="lazy">
+      <img style="object-position:50% 55%" class="zoomable" src="assets/unit9/jeon-bongjun-1895.jpg" width="960" height="679" alt="Jeon Bongjun, injured, sits in a litter carried by two men while Japanese guards stand by in the snow" loading="lazy">
       <figcaption><span class="fn">Figure 14.</span> Jeon Bongjun (1854–1895), leader of the Donghak rebel army, being carried under guard after his capture. Photograph by Murakami Tenshin, Seoul, February 27, 1895.† The textbook prints the same photograph (p. 377). Public domain.</figcaption>
     </figure>
     <figure style="margin:0">

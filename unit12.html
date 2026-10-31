@@ -970,6 +970,13 @@ figure.narrow{max-width:520px}
 .wmap2 .legend2 i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px;opacity:.7}
 @media (prefers-reduced-motion:reduce){.wmap2.mode-route .xp.draw{animation:none;stroke-dashoffset:0}}
 
+
+/* ---- equal image sets: figures shown together share one width and one crop ---- */
+.eqset.eqset{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);align-items:start;margin:18px 0}
+@media (min-width:640px){.eqset.eqset.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.eqset.eqset.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.eqset.eqset>figure{margin:0!important;max-width:none!important;width:auto}
+.eqset.eqset>figure img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ar,3/2);object-fit:cover}
+.eqset.eqset.portrait{max-width:560px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="no-js">
@@ -1240,13 +1247,13 @@ figure.narrow{max-width:520px}
   <p class="pages">pp. 420–422</p>
   <p>Young people with modern educations felt they had inherited the literati's duty to advise the powerful, and that their schooling uniquely fitted them to "save" China. The 1911 revolution had dashed their hopes. The newly reorganized <a class="term" href="#g-beida">Beijing University</a> became the center of the <a class="term" href="#g-newculture">New Culture movement</a>. <span class="cite">p. 420</span></p>
 
-  <div class="figrow grid g2">
+  <div class="figrow grid g2 eqset c2 portrait" style="--ar:2/3">
     <figure>
-      <img class="zoomable" src="assets/unit12/new-youth-cover.jpg" width="406" height="583" alt="Magazine cover with the red title New Youth in Chinese, La Jeunesse in Latin letters, and a framed table of contents" loading="lazy">
+      <img style="object-position:50% 0%" class="zoomable" src="assets/unit12/new-youth-cover.jpg" width="406" height="583" alt="Magazine cover with the red title New Youth in Chinese, La Jeunesse in Latin letters, and a framed table of contents" loading="lazy">
       <figcaption><span class="fn">Figure 7.</span> Cover of <i>New Youth</i> (<i>La Jeunesse</i>), vol. 2, no. 1, "edited by Mr. Chen Duxiu" (1916†), Peking University Library. Public domain.</figcaption>
     </figure>
     <figure>
-      <img class="zoomable" src="assets/unit12/chen-duxiu.jpg" width="314" height="481" alt="Head-and-shoulders photograph of Chen Duxiu in a Western suit" loading="lazy">
+      <img style="object-position:50% 0%" class="zoomable" src="assets/unit12/chen-duxiu.jpg" width="314" height="481" alt="Head-and-shoulders photograph of Chen Duxiu in a Western suit" loading="lazy">
       <figcaption><span class="fn">Figure 8.</span> Chen Duxiu, c. 1919. From <i>Saishin Shina yōjinden</i> (Tokyo, 1941). Public domain.</figcaption>
     </figure>
   </div>

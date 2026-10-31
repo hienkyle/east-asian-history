@@ -636,6 +636,13 @@ details.terms-box>.terms-body{border:1px solid var(--line);border-top:none;borde
 body{overflow-x:clip}
 .share .track{display:block;margin:0}
 .side>*,.grid>*,.think>*,.versus>*,.contrast>*,.mapgrid>*,.stats>*,.pair-fig>*,.pairs>*,.pair>*,.idgrid>*,.status>*,.windows>*{min-width:0}
+
+/* ---- equal image sets: figures shown together share one width and one crop ---- */
+.eqset.eqset{display:grid;gap:20px;grid-template-columns:minmax(0,1fr);align-items:start;margin:18px 0}
+@media (min-width:640px){.eqset.eqset.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.eqset.eqset.c3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.eqset.eqset>figure{margin:0!important;max-width:none!important;width:auto}
+.eqset.eqset>figure img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;aspect-ratio:var(--ar,3/2);object-fit:cover}
+.eqset.eqset.portrait{max-width:560px;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="no-js">
@@ -1076,7 +1083,7 @@ body{overflow-x:clip}
   <h3>Japan opens Korea <span class="cite">pp. 371–373</span></h3>
   <p>In 1868 the new Meiji government sent a note in its emperor's name asking for a treaty. The Daewongun would not even accept it: there was only one legitimate emperor, the Qing. The insult nearly led to a Japanese invasion in 1873.</p>
   <p>Once Queen Min's faction persuaded Gojong to rule for himself (1874), Korea softened. Japan seized the chance: in 1875 it sent a survey ship up the coast expecting the shore batteries to fire. They did. Japan landed troops on Ganghwa Island and threatened war unless Gojong signed.</p>
-  <div class="pair-fig">
+  <div class="pair-fig eqset c2" style="--ar:3/2">
     <figure>
       <img class="zoomable" src="assets/unit5/unyo-ganghwa-1875.jpg" alt="Colorful Japanese print of soldiers with a rising-sun flag storming a smoking Korean fort" loading="lazy" width="1400" height="694">
       <figcaption><span class="fn">Figure 13.</span> <i>Soldiers of the Warship Un'yō Fighting at Ganghwa, Korea</i> (title translated from the print's cartouche). Japanese woodblock print, Meiji era; artist and date not recorded. Public domain, Wikimedia Commons.</figcaption>
